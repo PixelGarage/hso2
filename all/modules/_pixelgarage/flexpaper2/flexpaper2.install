@@ -1,0 +1,70 @@
+<?php
+/**
+ * @file
+ * Check that needed library is here
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function flexpaper2_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  // only for report status page
+  if ($phase == 'runtime') {
+    $library = libraries_detect('flexpaper');
+
+    $requirements['flexpaper'] = array(
+      'title' => $t('FlexPaper PDF Viewer'),
+    );
+    if ($library['installed']) {
+      $requirements['flexpaper']['value'] = $t('Flexpaper library installed');
+      $requirements['flexpaper']['severity'] = REQUIREMENT_OK;
+
+      // check for server publishing
+      if (flexpaper2_server_publishing_available()) {
+        $requirements['flexpaper']['description'] =
+          $t('Flexpaper2 module supports Server Publishing of PDF files. Alternatively you can publish a PDF locally with the FlexPaper Desktop Publisher Zine application and upload the resulting folder (archived).');
+      }
+      else {
+        $requirements['flexpaper']['description'] =
+          $t('Flexpaper2 module does NOT support Server Publishing due to missing command line tools. Go to Flexpaper2 settings to define paths to needed tools.');
+      }
+    }
+    else {
+      $requirements['flexpaper']['value'] = $t('Flexpaper library not installed');
+      $requirements['flexpaper']['description'] =
+        $t('Flexpaper2 module only supports upload of locally published PDF files (archives). To enhance module with Flexpaper server publishing capabilities, please read the !readme for installation instructions.',
+          array('!readme' => l($t('README.txt'), drupal_get_path('module', 'flexpaper2') . '/README.txt')));
+      $requirements['flexpaper']['severity'] = REQUIREMENT_WARNING;
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ */
+function flexpaper2_install() {
+  // Creates directory, where we will store all files for flexpaper work.
+  $files_directory = file_default_scheme() . '://flexpaper';
+  file_prepare_directory($files_directory, FILE_CREATE_DIRECTORY);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function flexpaper2_uninstall() {
+  // remove variables
+  variable_del('flexpaper2_path_to_pdf2swf');
+  variable_del('flexpaper2_path_to_pdf2json');
+  variable_del('flexpaper2_path_to_swfrender');
+  variable_del('flexpaper2_path_to_pdftk');
+  variable_del('flexpaper2_license_key');
+
+  // Removes directory for flexpaper files.
+  $files_directory = file_default_scheme() . '://flexpaper';
+  file_unmanaged_delete_recursive($files_directory);
+}

@@ -1,0 +1,7 @@
+name = TCPDF Document
+description = "Provides a pdf document class based on the famous tcpdf library. It simplifies the creation of PDF document dramatically."
+core = 7.x
+package = Pixelgarage
+version = "7.x-1.1"
+
+dependencies[] = libraries (>=2.x)

@@ -1,0 +1,10 @@
+name = Flexpaper2
+description = "Provides a flexpaper formatter for the file field."
+package = Pixelgarage
+core = 7.x
+dependencies[] = libraries
+dependencies[] = file
+dependencies[] = jquery_update
+configure = admin/config/flexpaper
+version = "7.x-1.1"
+

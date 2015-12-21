@@ -1,0 +1,66 @@
+.field-items .flexpaper-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vw;
+}
+
+@media screen and (min-width: 480px) {
+  .field-items .flexpaper-container {
+    height: 90vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .field-items .flexpaper-container {
+    height: 85vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .field-items .flexpaper-container {
+    height: 75vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .field-items .flexpaper-container {
+    height: 67vw;
+  }
+}
+
+.field-items .flexpaper-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.field-items .flexpaper-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+}
+
+.field-items .flexpaper-link-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  text-align: right;
+}
+
+.field-items .flexpaper_viewer_container {
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  background: rgb(212, 220, 220) none;
+}
+
+.field-items .flexpaper_viewer {
+  height: 90% !important;
+}
+
+#flashContent {
+  display: none;
+}
