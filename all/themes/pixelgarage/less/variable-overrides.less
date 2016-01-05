@@ -7,7 +7,12 @@
 
 //== Colors
 //
-
+@pxl-color-hso-main: rgb(204, 51, 51);
+@pxl-color-hso-sec:  rgb(240, 240, 235);
+@pxl-color-hso-kv: rgb(149, 186, 64);
+@pxl-color-hso-hs: rgb(232, 116, 49);
+@pxl-color-hso-ks: rgb(120, 114, 159);
+@pxl-color-hso-ex: rgb(177, 168, 149);
 
 //== Scaffolding
 //
@@ -19,7 +24,8 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 @text-color:            @gray-dark;
-@text-color-disabled:   @gray;
+@text-color-light:      @gray;
+@text-color-disabled:   @gray-light;
 
 @font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25));
@@ -84,12 +90,12 @@
 @container-sm:                 @container-tablet;
 
 // Medium screen / desktop
-@container-desktop:            (940px + @grid-gutter-width);
+@container-desktop:            (930px + @grid-gutter-width);
 //** For `@screen-md-min` and up.
 @container-md:                 @container-desktop;
 
 // Large screen / wide desktop
-@container-large-desktop:      (1140px + @grid-gutter-width);
+@container-large-desktop:      (930px + @grid-gutter-width);
 //** For `@screen-lg-min` and up.
 @container-lg:                 @container-large-desktop;
 

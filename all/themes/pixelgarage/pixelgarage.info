@@ -14,6 +14,7 @@ regions[content] = Content
 regions[sidebar_first] = Primary
 regions[sidebar_second] = Secondary
 regions[footer] = Footer
+regions[subfooter] = Sub-Footer
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
 
@@ -42,7 +43,7 @@ scripts[] = bootstrap/js/transition.js
 ; ========================================
 ; Pixelgarage Scripts
 ; ========================================
-scripts[] = js/pxlTest.js
+;scripts[] = js/pxlTest.js
 scripts[] = js/pxlBehaviors.js
 scripts[] = js/smartmenu/jquery.smartmenus.js
 scripts[] = js/smartmenu/jquery.smartmenus.bootstrap.js

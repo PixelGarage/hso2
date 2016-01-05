@@ -24,22 +24,26 @@ body.navbar-is-fixed-top {
 
 
 header#navbar {
-  border-bottom: none;
+  position: relative;
+  border: none;
   background: transparent none;
 
+  a.logo {
+    margin: 10px 20px;
+    padding: 0;
+
+    img {
+      display: inline-block;
+      max-height: 60px;
+      width: auto;
+    }
+  }
+
   .container {
-    padding: @grid-gutter-width @grid-gutter-width / 2 10px;
+    padding: 50px @grid-gutter-width / 2 0;
 
     .navbar-header {
       // header (branding)
-      a.logo {
-        img {
-          display: none;
-          max-height: 50px;
-          width: auto;
-        }
-      }
-
       a.navbar-brand {
         padding: 0;
         font-family: @pxl-text-font-medium;
@@ -56,22 +60,81 @@ header#navbar {
 
     // collapse part
     .navbar-collapse {
-      // main menu
       nav {
-        ul.navbar-nav {
-          margin: 0;
+        // main menu
+        ul.menu {
+          display: inline-block;
+          margin: 0 0 -6px;
+          float: right;
+          z-index: 10;
 
           li {
-            height: 40px;
-
             a {
-              padding: 7px 15px;
-              font-family: @pxl-text-font;
-              font-size: @font-size-base;
+              padding: 7px 40px 7px 10px;
+              font-family: @pxl-text-font-light;
+              font-size: 18px;
+              color: @text-color;
               line-height: 1;
+            }
+
+            &.menu-kv {
+              border-bottom: 6px solid @pxl-color-hso-kv;
+
+              a:hover, a.active {
+                color: #fff;
+                background-color: @pxl-color-hso-kv;
+              }
+            }
+            &.menu-hs {
+              border-bottom: 6px solid @pxl-color-hso-hs;
+
+              a:hover, a.active {
+                color: #fff;
+                background-color: @pxl-color-hso-hs;
+              }
+            }
+            &.menu-ks {
+              border-bottom: 6px solid @pxl-color-hso-ks;
+
+              a:hover, a.active {
+                color: #fff;
+                background-color: @pxl-color-hso-ks;
+              }
+            }
+            &.menu-ex {
+              border-bottom: 6px solid @pxl-color-hso-ex;
+
+              a:hover, a.active {
+                color: #fff;
+                background-color: @pxl-color-hso-ex;
+              }
+            }
+          }
+
+        }
+        // meta-menu
+        ul.menu.secondary {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+
+          li {
+            a {
+              padding: 0 10px 2px;
+              font-family: @pxl-text-font;
+              font-size: 14px;
+              line-height: 1;
+              color: @text-color-light;
+              border-right: 1px solid @text-color-light;
 
               &:hover,
               &.active {
+              }
+            }
+
+            &.last {
+              a {
+                border: none;
               }
             }
           }
