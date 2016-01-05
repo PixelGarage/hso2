@@ -15,16 +15,6 @@
 @fa-font-path: '@{pxl-font-path}/font-awesome/fonts'; // override fa font path (lazy loading)
 
 //
-// responsive font sizes
-@resp-font-size:          2.8vw;
-@resp-font-size-min:      13px;
-@resp-font-size-max:      17px;
-@resp-font-size-large:    5vw;
-@resp-font-size-large-min:20px;
-@resp-font-size-large-max:30px;
-
-
-//
 // Define customer specific fonts
 @pxl-font-path: '../fonts';
 @pxl-bs-path: '../bootstrap';
@@ -33,16 +23,16 @@
 @pxl-icon-font: 'fontawesome';
 
 // title font
-@pxl-title-font: 'CallunaBold';
+@pxl-title-font: 'SohoGothicProBold';
 
 // text fonts
-@pxl-text-font: 'CallunaRegular', serif;
-@pxl-text-font-light: @pxl-text-font, serif;
-@pxl-text-font-medium: @pxl-text-font, serif;
-@pxl-text-font-bold: 'CallunaRegular', serif;
-@pxl-text-font-italics: 'CallunaRegular'serif;
-@pxl-text-font-light-italics: 'CallunaRegular'serif;
-@pxl-text-font-bold-italics: 'CallunaRegular'serif;
+@pxl-text-font: 'SohoGothicProRegular', serif;
+@pxl-text-font-light: 'SohoGothicProLight', serif;
+@pxl-text-font-medium: 'SohoGothicProMedium', serif;
+@pxl-text-font-bold: 'SohoGothicProBold', serif;
+@pxl-text-font-italics: 'SohoGothicProThin'serif;
+@pxl-text-font-light-italics: 'SohoGothicProLightItalic'serif;
+@pxl-text-font-bold-italics: 'SohoGothicProExtraBold'serif;
 
 // overrides
 @font-family-base: @pxl-text-font;
@@ -57,13 +47,73 @@
 
 // text fonts
 @font-face {
-  font-family: 'CallunaRegular';
-  src: url('@{pxl-font-path}/CallunaRegular/CallunaRegular.eot');
-  src: url('@{pxl-font-path}/CallunaRegular/CallunaRegular.eot') format('embedded-opentype'),
-  url('@{pxl-font-path}/CallunaRegular/CallunaRegular.woff2') format('woff2'),
-  url('@{pxl-font-path}/CallunaRegular/CallunaRegular.woff') format('woff'),
-  url('@{pxl-font-path}/CallunaRegular/CallunaRegular.ttf') format('truetype'),
-  url('@{pxl-font-path}/CallunaRegular/CallunaRegular.svg#CallunaRegular') format('svg');
+  font-family: 'SohoGothicProThin';
+  src: url('@{pxl-font-path}/SohoGothicProThin/SohoGothicProThin.eot');
+  src: url('@{pxl-font-path}/SohoGothicProThin/SohoGothicProThin.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProThin/SohoGothicProThin.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProThin/SohoGothicProThin.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProThin/SohoGothicProThin.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProThin/SohoGothicProThin.svg#SohoGothicProThin') format('svg');
+}
+
+@font-face {
+  font-family: 'SohoGothicProRegular';
+  src: url('@{pxl-font-path}/SohoGothicProRegular/SohoGothicProRegular.eot');
+  src: url('@{pxl-font-path}/SohoGothicProRegular/SohoGothicProRegular.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProRegular/SohoGothicProRegular.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProRegular/SohoGothicProRegular.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProRegular/SohoGothicProRegular.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProRegular/SohoGothicProRegular.svg#SohoGothicProRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'SohoGothicProMedium';
+  src: url('@{pxl-font-path}/SohoGothicProMedium/SohoGothicProMedium.eot');
+  src: url('@{pxl-font-path}/SohoGothicProMedium/SohoGothicProMedium.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProMedium/SohoGothicProMedium.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProMedium/SohoGothicProMedium.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProMedium/SohoGothicProMedium.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProMedium/SohoGothicProMedium.svg#SohoGothicProMedium') format('svg');
+}
+
+@font-face {
+  font-family: 'SohoGothicProBold';
+  src: url('@{pxl-font-path}/SohoGothicProBold/SohoGothicProBold.eot');
+  src: url('@{pxl-font-path}/SohoGothicProBold/SohoGothicProBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProBold/SohoGothicProBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProBold/SohoGothicProBold.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProBold/SohoGothicProBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProBold/SohoGothicProBold.svg#SohoGothicProBold') format('svg');
+}
+
+@font-face {
+  font-family: 'SohoGothicProExtraBold';
+  src: url('@{pxl-font-path}/SohoGothicProExtraBold/SohoGothicProExtraBold.eot');
+  src: url('@{pxl-font-path}/SohoGothicProExtraBold/SohoGothicProExtraBold.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProExtraBold/SohoGothicProExtraBold.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProExtraBold/SohoGothicProExtraBold.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProExtraBold/SohoGothicProExtraBold.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProExtraBold/SohoGothicProExtraBold.svg#SohoGothicProExtraBold') format('svg');
+}
+
+@font-face {
+  font-family: 'SohoGothicProLight';
+  src: url('@{pxl-font-path}/SohoGothicProLight/SohoGothicProLight.eot');
+  src: url('@{pxl-font-path}/SohoGothicProLight/SohoGothicProLight.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProLight/SohoGothicProLight.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProLight/SohoGothicProLight.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProLight/SohoGothicProLight.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProLight/SohoGothicProLight.svg#SohoGothicProLight') format('svg');
+}
+
+@font-face {
+  font-family: 'SohoGothicProLightItalic';
+  src: url('@{pxl-font-path}/SohoGothicProLightItalic/SohoGothicProLightItalic.eot');
+  src: url('@{pxl-font-path}/SohoGothicProLightItalic/SohoGothicProLightItalic.eot') format('embedded-opentype'),
+  url('@{pxl-font-path}/SohoGothicProLightItalic/SohoGothicProLightItalic.woff2') format('woff2'),
+  url('@{pxl-font-path}/SohoGothicProLightItalic/SohoGothicProLightItalic.woff') format('woff'),
+  url('@{pxl-font-path}/SohoGothicProLightItalic/SohoGothicProLightItalic.ttf') format('truetype'),
+  url('@{pxl-font-path}/SohoGothicProLightItalic/SohoGothicProLightItalic.svg#SohoGothicProLightItalic') format('svg');
 }
 
 

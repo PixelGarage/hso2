@@ -1061,7 +1061,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
@@ -5799,7 +5799,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.4;
@@ -5906,7 +5906,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6536,6 +6536,12 @@ button.close {
     display: none !important;
   }
 }
+/**
+ * Variable Overrides.
+ *
+ * Modify this file to override the Bootstrap Framework variables. You can copy
+ * these variables directly from ../bootstrap/less/variables.less to this file.
+ */
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
 }
@@ -6616,9 +6622,6 @@ body #admin-menu {
 body #admin-menu .dropdown li {
   line-height: normal;
 }
-.navbar.container {
-  margin-top: 20px;
-}
 @media screen and (min-width: 768px) {
   .navbar.container {
     max-width: 720px;
@@ -6634,7 +6637,12 @@ body #admin-menu .dropdown li {
     max-width: 1140px;
   }
 }
-.navbar.container > .container {
+.navbar.container,
+.navbar.container-fluid {
+  margin-top: 20px;
+}
+.navbar.container > .container,
+.navbar.container-fluid > .container-fluid {
   margin: 0;
   padding: 0;
   width: auto;
@@ -6719,6 +6727,9 @@ form#search-block-form {
     float: right;
   }
 }
+.navbar #block-search-form .input-group-btn {
+  width: auto;
+}
 .navbar-search .control-group {
   margin-bottom: 0px;
 }
@@ -6774,8 +6785,50 @@ fieldset .panel-heading a.panel-title:hover {
 .form-actions {
   clear: both;
 }
+.managed-files.table td:first-child {
+  width: 100%;
+}
+div.image-widget-data {
+  float: none;
+  overflow: hidden;
+}
+table.sticky-header {
+  z-index: 1;
+}
 .resizable-textarea textarea {
   border-radius: 4px 4px 0 0;
+}
+.text-format-wrapper {
+  margin-bottom: 15px;
+}
+.text-format-wrapper > .form-type-textarea,
+.text-format-wrapper .filter-wrapper {
+  margin-bottom: 0;
+}
+.filter-wrapper {
+  border-radius: 0 0 4px 4px;
+}
+.filter-wrapper .panel-body {
+  padding: 7px;
+}
+.filter-wrapper .form-type-select {
+  min-width: 30%;
+}
+.filter-wrapper .form-type-select .filter-list {
+  width: 100%;
+}
+.filter-help {
+  margin-top: 5px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .filter-help {
+    float: right;
+  }
+}
+.filter-help .glyphicon {
+  margin: 0 5px 0 0;
+  vertical-align: text-top;
 }
 .radio:first-child,
 .checkbox:first-child {
@@ -6855,20 +6908,27 @@ ul li.leaf {
 .form-type-password-confirm {
   position: relative;
 }
-.form-type-password-confirm .form-type-password {
-  clear: left;
-}
 .form-type-password-confirm label {
   display: block;
 }
 .form-type-password-confirm label .label {
   float: right;
 }
-.form-type-password-confirm .help-block {
-  border-left: 1px solid #dddddd;
-  display: inline-block;
-  margin-left: 2em;
+.form-type-password-confirm .password-help {
   padding-left: 2em;
+}
+@media (min-width: 768px) {
+  .form-type-password-confirm .password-help {
+    border-left: 1px solid #dddddd;
+    left: 50%;
+    margin-left: 15px;
+    position: absolute;
+  }
+}
+@media (min-width: 992px) {
+  .form-type-password-confirm .password-help {
+    left: 33.33333333%;
+  }
 }
 .form-type-password-confirm .progress {
   background: transparent;
@@ -6880,10 +6940,16 @@ ul li.leaf {
   height: 4px;
   margin: -5px 0px 0;
 }
+.form-type-password-confirm .form-type-password {
+  clear: left;
+}
 .form-type-password-confirm .form-control-feedback {
   right: 15px;
 }
-.pagination ul > li > a.progress-disabled {
+.form-type-password-confirm .help-block {
+  clear: both;
+}
+ul.pagination li > a.progress-disabled {
   float: left;
 }
 .form-autocomplete .glyphicon {
@@ -6896,9 +6962,24 @@ ul li.leaf {
 .form-autocomplete .input-group-addon {
   background-color: #ffffff;
 }
-.ajax-progress .glyphicon {
-  font-size: 90%;
-  margin: 0 -0.25em 0 0.5em;
+.ajax-progress-bar {
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #cccccc;
+  margin: -1px 0 0;
+  padding: 6px 12px;
+  width: 100%;
+}
+.ajax-progress-bar .progress {
+  height: 8px;
+  margin: 0;
+}
+.ajax-progress-bar .percentage,
+.ajax-progress-bar .message {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1em;
+  margin: 5px 0 0;
+  padding: 0;
 }
 .glyphicon-spin {
   display: inline-block;
@@ -6950,13 +7031,6 @@ a .glyphicon-spin {
   100% {
     transform: rotate(359deg);
   }
-}
-.glyphicon-refresh {
-  -webkit-transform-origin: 50% 45%;
-  -moz-transform-origin: 50% 45%;
-  -ms-transform-origin: 50% 45%;
-  -o-transform-origin: 50% 45%;
-  transform-origin: 50% 45%;
 }
 /**
  * Missing Bootstrap 2 tab styling.
@@ -7199,6 +7273,38 @@ div.features-export-list .form-type-checkbox {
 fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox],
 div.features-export-list .form-type-checkbox input[type=checkbox] {
   margin-top: 0;
+}
+body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top {
+  top: 79px;
+}
+body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top {
+  top: 39px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
+    left: 240px;
+    left: 24rem;
+  }
+}
+.navbar-administration #navbar-administration.navbar-oriented .navbar-bar {
+  z-index: 1032;
+}
+.navbar-administration #navbar-administration .navbar-tray {
+  z-index: 1031;
+}
+body.navbar-is-fixed-top.navbar-administration {
+  padding-top: 103px!important;
+}
+body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open {
+  padding-top: 143px!important;
+}
+body.navbar-tray-open.navbar-vertical.navbar-fixed {
+  margin-left: 240px;
+  margin-left: 24rem;
+}
+#navbar-administration.navbar-oriented .navbar-tray-vertical {
+  width: 24rem;
 }
 /* --------------------------------------------------
  * Pixelgarage fonts
@@ -8542,29 +8648,39 @@ div.features-export-list .form-type-checkbox input[type=checkbox] {
   content: "\f196";
 }
 @font-face {
-  font-family: 'CallunaSansBold';
-  src: url('../fonts/CallunaSansBold/CallunaSansBold.eot');
-  src: url('../fonts/CallunaSansBold/CallunaSansBold.eot') format('embedded-opentype'), url('../fonts/CallunaSansBold/CallunaSansBold.woff2') format('woff2'), url('../fonts/CallunaSansBold/CallunaSansBold.woff') format('woff'), url('../fonts/CallunaSansBold/CallunaSansBold.ttf') format('truetype'), url('../fonts/CallunaSansBold/CallunaSansBold.svg#CallunaSansBold') format('svg');
+  font-family: 'SohoGothicProThin';
+  src: url('../fonts/SohoGothicProThin/SohoGothicProThin.eot');
+  src: url('../fonts/SohoGothicProThin/SohoGothicProThin.eot') format('embedded-opentype'), url('../fonts/SohoGothicProThin/SohoGothicProThin.woff2') format('woff2'), url('../fonts/SohoGothicProThin/SohoGothicProThin.woff') format('woff'), url('../fonts/SohoGothicProThin/SohoGothicProThin.ttf') format('truetype'), url('../fonts/SohoGothicProThin/SohoGothicProThin.svg#SohoGothicProThin') format('svg');
 }
 @font-face {
-  font-family: 'CallunaRegular';
-  src: url('../fonts/CallunaRegular/CallunaRegular.eot');
-  src: url('../fonts/CallunaRegular/CallunaRegular.eot') format('embedded-opentype'), url('../fonts/CallunaRegular/CallunaRegular.woff2') format('woff2'), url('../fonts/CallunaRegular/CallunaRegular.woff') format('woff'), url('../fonts/CallunaRegular/CallunaRegular.ttf') format('truetype'), url('../fonts/CallunaRegular/CallunaRegular.svg#CallunaRegular') format('svg');
+  font-family: 'SohoGothicProRegular';
+  src: url('../fonts/SohoGothicProRegular/SohoGothicProRegular.eot');
+  src: url('../fonts/SohoGothicProRegular/SohoGothicProRegular.eot') format('embedded-opentype'), url('../fonts/SohoGothicProRegular/SohoGothicProRegular.woff2') format('woff2'), url('../fonts/SohoGothicProRegular/SohoGothicProRegular.woff') format('woff'), url('../fonts/SohoGothicProRegular/SohoGothicProRegular.ttf') format('truetype'), url('../fonts/SohoGothicProRegular/SohoGothicProRegular.svg#SohoGothicProRegular') format('svg');
 }
 @font-face {
-  font-family: 'CallunaIt';
-  src: url('../fonts/CallunaIt/CallunaIt.eot');
-  src: url('../fonts/CallunaIt/CallunaIt.eot') format('embedded-opentype'), url('../fonts/CallunaIt/CallunaIt.woff2') format('woff2'), url('../fonts/CallunaIt/CallunaIt.woff') format('woff'), url('../fonts/CallunaIt/CallunaIt.ttf') format('truetype'), url('../fonts/CallunaIt/CallunaIt.svg#CallunaIt') format('svg');
+  font-family: 'SohoGothicProMedium';
+  src: url('../fonts/SohoGothicProMedium/SohoGothicProMedium.eot');
+  src: url('../fonts/SohoGothicProMedium/SohoGothicProMedium.eot') format('embedded-opentype'), url('../fonts/SohoGothicProMedium/SohoGothicProMedium.woff2') format('woff2'), url('../fonts/SohoGothicProMedium/SohoGothicProMedium.woff') format('woff'), url('../fonts/SohoGothicProMedium/SohoGothicProMedium.ttf') format('truetype'), url('../fonts/SohoGothicProMedium/SohoGothicProMedium.svg#SohoGothicProMedium') format('svg');
 }
 @font-face {
-  font-family: 'CallunaBold';
-  src: url('../fonts/CallunaBold/CallunaBold.eot');
-  src: url('../fonts/CallunaBold/CallunaBold.eot') format('embedded-opentype'), url('../fonts/CallunaBold/CallunaBold.woff2') format('woff2'), url('../fonts/CallunaBold/CallunaBold.woff') format('woff'), url('../fonts/CallunaBold/CallunaBold.ttf') format('truetype'), url('../fonts/CallunaBold/CallunaBold.svg#CallunaBold') format('svg');
+  font-family: 'SohoGothicProBold';
+  src: url('../fonts/SohoGothicProBold/SohoGothicProBold.eot');
+  src: url('../fonts/SohoGothicProBold/SohoGothicProBold.eot') format('embedded-opentype'), url('../fonts/SohoGothicProBold/SohoGothicProBold.woff2') format('woff2'), url('../fonts/SohoGothicProBold/SohoGothicProBold.woff') format('woff'), url('../fonts/SohoGothicProBold/SohoGothicProBold.ttf') format('truetype'), url('../fonts/SohoGothicProBold/SohoGothicProBold.svg#SohoGothicProBold') format('svg');
 }
 @font-face {
-  font-family: 'CallunaSansRegular';
-  src: url('../fonts/CallunaSansRegular/CallunaSansRegular.eot');
-  src: url('../fonts/CallunaSansRegular/CallunaSansRegular.eot') format('embedded-opentype'), url('../fonts/CallunaSansRegular/CallunaSansRegular.woff2') format('woff2'), url('../fonts/CallunaSansRegular/CallunaSansRegular.woff') format('woff'), url('../fonts/CallunaSansRegular/CallunaSansRegular.ttf') format('truetype'), url('../fonts/CallunaSansRegular/CallunaSansRegular.svg#CallunaSansRegular') format('svg');
+  font-family: 'SohoGothicProExtraBold';
+  src: url('../fonts/SohoGothicProExtraBold/SohoGothicProExtraBold.eot');
+  src: url('../fonts/SohoGothicProExtraBold/SohoGothicProExtraBold.eot') format('embedded-opentype'), url('../fonts/SohoGothicProExtraBold/SohoGothicProExtraBold.woff2') format('woff2'), url('../fonts/SohoGothicProExtraBold/SohoGothicProExtraBold.woff') format('woff'), url('../fonts/SohoGothicProExtraBold/SohoGothicProExtraBold.ttf') format('truetype'), url('../fonts/SohoGothicProExtraBold/SohoGothicProExtraBold.svg#SohoGothicProExtraBold') format('svg');
+}
+@font-face {
+  font-family: 'SohoGothicProLight';
+  src: url('../fonts/SohoGothicProLight/SohoGothicProLight.eot');
+  src: url('../fonts/SohoGothicProLight/SohoGothicProLight.eot') format('embedded-opentype'), url('../fonts/SohoGothicProLight/SohoGothicProLight.woff2') format('woff2'), url('../fonts/SohoGothicProLight/SohoGothicProLight.woff') format('woff'), url('../fonts/SohoGothicProLight/SohoGothicProLight.ttf') format('truetype'), url('../fonts/SohoGothicProLight/SohoGothicProLight.svg#SohoGothicProLight') format('svg');
+}
+@font-face {
+  font-family: 'SohoGothicProLightItalic';
+  src: url('../fonts/SohoGothicProLightItalic/SohoGothicProLightItalic.eot');
+  src: url('../fonts/SohoGothicProLightItalic/SohoGothicProLightItalic.eot') format('embedded-opentype'), url('../fonts/SohoGothicProLightItalic/SohoGothicProLightItalic.woff2') format('woff2'), url('../fonts/SohoGothicProLightItalic/SohoGothicProLightItalic.woff') format('woff'), url('../fonts/SohoGothicProLightItalic/SohoGothicProLightItalic.ttf') format('truetype'), url('../fonts/SohoGothicProLightItalic/SohoGothicProLightItalic.svg#SohoGothicProLightItalic') format('svg');
 }
 /* --------------------------------------------------
  * Pixelgarage Mixins library
@@ -8941,7 +9057,7 @@ form#user-login {
  * --------------------------------------------------*/
 #block-locale-language {
   display: inline-block;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
 }
 #block-locale-language ul.language-switcher-locale-url {
@@ -8974,7 +9090,7 @@ form#user-login {
 }
 #block-locale-language ul.language-switcher-locale-url > li a.language-link.active,
 #block-locale-language ul.language-switcher-locale-url > li a.language-link:hover {
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   text-decoration: none;
 }
 #block-locale-language ul.language-switcher-locale-url > li span.locale-untranslated {
@@ -8987,7 +9103,7 @@ form#user-login {
   width: 100%;
 }
 .node-page div.col-sm-12 .field-name-title h2 {
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 20px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -9009,7 +9125,7 @@ form#user-login {
 .node-page div.col-sm-12 .field-name-body h4,
 .node-page div.col-sm-12 .field-name-body h5,
 .node-page div.col-sm-12 .field-name-body h6 {
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
 @media screen and (min-width: 480px) {
@@ -9053,7 +9169,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-body p,
 .node-page div.col-sm-12 .field-name-body tbody td {
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
   -ms-word-break: break-all;
   word-break: break-word;
@@ -9077,7 +9193,7 @@ form#user-login {
 }
 .node-page div.col-sm-12 .field-name-body pre,
 .node-page div.col-sm-12 .field-name-body address {
-  font-family: 'CallunaIt';
+  font-family: 'SohoGothicProLightItalic' serif;
   font-size: 13px;
 }
 @media screen and (min-width: 480px) {
@@ -9143,7 +9259,7 @@ ul.webform-submission-actions li {
 }
 ul.webform-submission-actions li a {
   padding: 5px 10px;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   color: #333333;
   text-decoration: none;
@@ -9201,7 +9317,7 @@ form.webform-client-form fieldset.panel .panel-heading {
 }
 form.webform-client-form fieldset.panel .panel-heading .panel-title {
   display: block;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   color: #333333;
   text-align: center;
   font-size: 26px;
@@ -9244,7 +9360,7 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -9282,7 +9398,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -9313,7 +9429,7 @@ form.webform-client-form .webform-component .control-label {
   margin: 5px 10px 10px 0;
   padding: 0;
   width: auto;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.5em;
@@ -9327,14 +9443,14 @@ form.webform-client-form .webform-component div.description {
   display: block;
   margin: 0;
   padding: 5px 0 10px;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
 }
 form.webform-client-form .webform-component input,
 form.webform-client-form .webform-component textarea {
   padding: 5px 10px;
   height: auto;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProLight', serif;
   font-size: 18px;
   line-height: 1.5em;
   text-align: left;
@@ -9358,7 +9474,7 @@ form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
 form.webform-client-form .webform-component select {
   padding: 5px 10px;
   height: auto;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProLight', serif;
   font-size: 18px;
   line-height: 1.2em;
   text-align: left;
@@ -9397,7 +9513,7 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -9422,14 +9538,14 @@ form.webform-client-form .webform-component.webform-component-markup {
   padding-top: 15px;
 }
 form.webform-client-form .webform-component.webform-component-markup h2 {
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 1em;
   text-align: left;
 }
 form.webform-client-form .webform-component.webform-component-markup p {
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProLight', serif;
   font-size: 13px;
   line-height: 22px;
   text-align: left;
@@ -9485,7 +9601,7 @@ form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
@@ -9528,7 +9644,7 @@ header#navbar .container .navbar-header a.logo img {
 }
 header#navbar .container .navbar-header a.navbar-brand {
   padding: 0;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProMedium', serif;
   font-size: 41px;
   color: #222222;
   line-height: 1;
@@ -9544,7 +9660,7 @@ header#navbar .container .navbar-collapse nav ul.navbar-nav li {
 }
 header#navbar .container .navbar-collapse nav ul.navbar-nav li a {
   padding: 7px 15px;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -9572,12 +9688,12 @@ body {
 }
 body .main-container .container #page-header .region-header h2.block-title {
   margin: 20px 0 10px;
-  font-family: 'CallunaRegular';
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 24px;
 }
 body .main-container .container .row section h1.page-header {
   margin: 20px 0 10px;
-  font-family: 'CallunaBold';
+  font-family: 'SohoGothicProBold', serif;
   font-size: 41px;
 }
 body .main-container .container .row section .messages {

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SohoGothicProMedium';
+    src: url('fonts/SohoGothicProMedium.eot');
+    src: url('fonts/SohoGothicProMedium.eot') format('embedded-opentype'),
+         url('fonts/SohoGothicProMedium.woff2') format('woff2'),
+         url('fonts/SohoGothicProMedium.woff') format('woff'),
+         url('fonts/SohoGothicProMedium.ttf') format('truetype'),
+         url('fonts/SohoGothicProMedium.svg#SohoGothicProMedium') format('svg');
+}
