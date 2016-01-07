@@ -1,0 +1,155 @@
+/*
+ *  View locations component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-location-count: 9;
+@pxl-li-vertical-height: 34px;
+
+@pxl-arrow-width: 12px;
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+//
+// footer location block
+.view-locations.view-display-id-block {
+  .view-content {
+    .views-bootstrap-tab-plugin-style {
+      ul.nav-tabs {
+        display: block;
+        border: none;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          float: none;
+          margin: 0 5px 5px 0;
+
+          a {
+            padding: 8px 20px 10px;
+            width: 100%;
+            font-family: @pxl-text-font;
+            font-size: 16px;
+            line-height: 1;
+            color: @pxl-color-footer;
+            #pxl-mixins.border-radius(3px);
+            border: 1px solid @pxl-color-footer;
+          }
+
+          &:hover,
+          &.active {
+            a {
+              color: #fff;
+              background-color: @pxl-color-footer;
+            }
+          }
+        }
+
+        @media @tablet {
+          display: inline-block;
+          vertical-align: top;
+          width: 40%;
+
+          li {
+            display: block;
+            margin: 0;
+            width: 100%;
+            height: @pxl-li-vertical-height;
+            z-index: 10;
+
+            a {
+              display: inline-block;
+              vertical-align: top;
+              margin: 0;
+              width: 85%;
+              text-align: center;
+              #pxl-mixins.border-radius(0);
+              border: none;
+            }
+
+            &.active:after {
+              // arrow right
+              content: '';
+              display: inline-block;
+              margin: 0 -3px;
+              width: 0;
+              height: 0;
+              border-top: (@pxl-li-vertical-height / 2) solid transparent;
+              border-bottom: (@pxl-li-vertical-height / 2) solid transparent;
+              border-left: @pxl-arrow-width solid @pxl-color-footer;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        display: block;
+        border: none;
+
+        .tab-pane {
+          padding: 25px;
+          font-family: @pxl-text-font-light;
+          font-size: 16px;
+          line-height: 1;
+          color: #fff;
+
+          .views-field-field-address {
+            .field-content {
+              .organisation-block {
+                margin-bottom: 10px;
+                font-weight: bold;
+              }
+              .street-block {
+                margin-bottom: 5px;
+              }
+              .locality-block {
+                margin-bottom: 20px;
+              }
+              .addressfield-phone-block {
+                margin-bottom: 20px;
+
+                .phone-number {
+                  margin-bottom: 5px;
+
+                  span {
+                    display: inline-block;
+                    text-indent: -9999px;
+                  }
+                }
+              }
+            }
+          }
+
+          .views-field-field-email {
+            .field-content {
+              a {
+
+              }
+            }
+          }
+        }
+
+        @media @tablet {
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 0 0 -6.8%;
+          width: 59%;
+          height: (@pxl-li-vertical-height * @pxl-location-count);
+          border: 1px solid @pxl-color-footer-border;
+
+          .tab-pane {
+            font-size: 14px;
+          }
+        }
+
+      }
+    }
+  }
+}

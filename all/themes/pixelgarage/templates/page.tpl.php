@@ -177,11 +177,17 @@
   </div>
 </div>
 
-<?php if (!empty($page['footer']) || !empty($page['subfooter'])): ?>
+<?php if (!empty($page['footer'])): ?>
   <footer class="footer">
     <div class="<?php print $container_class; ?>">
       <?php print render($page['footer']); ?>
-      <?php print render($page['subfooter']); ?>
     </div>
   </footer>
+<?php endif; ?>
+<?php if (!empty($page['subfooter'])): ?>
+  <div class="subfooter">
+    <div class="<?php print $container_class; ?>">
+      <?php print render($page['subfooter']); ?>
+    </div>
+  </div>
 <?php endif; ?>

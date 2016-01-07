@@ -182,9 +182,9 @@ function theme_hso_mods_formatter_hso_mods_date_vom_bis($element) {
   $has_end_date = ($date_start[0] != $date_end[0]);
 
   if ($has_end_date) {
-    $string = '<strong>' . t('Since') . '</strong> ';
+    $string = '<strong>' . t('Vom') . '</strong> ';
   } else {
-    $string = '<strong>' . t('On') . '</strong> ';
+    $string = '<strong>' . t('Am') . '</strong> ';
   }
 	if (date('H:i', $from_date) == '00:00') {
 		$string .= date('d.m.Y', $from_date);
@@ -192,7 +192,7 @@ function theme_hso_mods_formatter_hso_mods_date_vom_bis($element) {
 		$string .= date('d.m.Y, H:i', $from_date);
 	}
 	if ($has_end_date) {
-		$string .= ' <strong>' . t('Until') . '</strong> ' . date('d.m.Y', strtotime($element['element']['value2']));
+		$string .= ' <strong>' . t('bis') . '</strong> ' . date('d.m.Y', strtotime($element['element']['value2']));
 	}
   return $string;
 }
@@ -205,7 +205,7 @@ function theme_hso_mods_formatter_hso_mods_date_start_ende($element) {
 		$string .= date('d.m.Y, H:i', $from_date);
 	}
 	if ($element['element']['value2']) {
-		$string .= '<br />' . t('End') . ': ' . date('d.m.Y', strtotime($element['element']['value2']));
+		$string .= '<br />' . t('Ende') . ': ' . date('d.m.Y', strtotime($element['element']['value2']));
 	}
   return $string;
 }
@@ -263,9 +263,7 @@ function hso_mods_block_view($delta = '') {
 * Implements hook_form_alter().
 */
 function hso_mods_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'webform_client_form_1301') {
-  	$form['#suffix'] = '<p style="text-align: center;">News Feed abonnieren</p><p style="text-align: center;"><a class="rss social" target="_blank" href="' . url('rss.xml') . '">RSS</a></p>';
-  } elseif ($form_id == 'views_exposed_form') {
+  if ($form_id == 'views_exposed_form') {
   	if (in_array('views_exposed_form__blog__panel_pane_1', $form['#theme'])) {
 			$form['#action'] = url('blog');
 			$form['keys']['#attributes']['placeholder'] = 'HSO dursuchen';

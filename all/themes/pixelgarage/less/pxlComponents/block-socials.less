@@ -8,7 +8,7 @@
 @ss-sub-font: "Circle"; // supported sub-fonts are "Circle" and "Regular"
 @ss-sub-font-hover: "Regular";
 @pxl-share-color: #fff;
-@pxl-follow-color: @gray-light;
+@pxl-follow-color: #fff;
 
 
 // Social icon Fonts
@@ -106,30 +106,50 @@
 //
 // Follow site block settings
 // --------------------------
-#block-follow-site {
-  .follow-links {
-    .follow-link-wrapper {
-      margin: 0;
+.follow-links {
+  .follow-link-wrapper {
+    display: inline-block;
+    margin: 0 10px 0 0;
 
-      a.follow-link {
-        padding: 0 10px;
-        .ss-social(@ss-sub-font);
-        font-size: @font-size-larger;
-        color: @pxl-follow-color;
-        background-image: none !important;
+    a.follow-link {
+      padding: 2px 0;
+      height: 38px;
+      width: 38px;
+      font-family: @pxl-icon-font;
+      font-size: @font-size-larger;
+      color: @pxl-follow-color;
+      background-image: none !important;
+      text-decoration: none;
+      text-align: center;
 
-        &:hover {
-          .ss-social(@ss-sub-font-hover);
-        }
-
-        &.follow-link-facebook:before {
-          content: "\f610";
-        }
-        &.follow-link-twitter:before {
-          content: "\f611";
-        }
-
+      &.follow-link-facebook:before {
+        content: "\f09a";
       }
+      &.follow-link-twitter:before {
+        content: "\f099";
+      }
+      &.follow-link-googleplus:before {
+        content: "\f0d5";
+      }
+      &.follow-link-youtube:before {
+        content: "\f167";
+      }
+      &.follow-link-xing:before {
+        content: "\f168";
+      }
+      &.follow-link-linkedin:before {
+        content: "\f0e1";
+      }
+      &.follow-link-this-site:before {
+        content: "\f09e";
+      }
+
+      &:hover {
+        padding: 0;
+        #pxl-mixins.border-radius(50%);
+        border: 2px solid #fff;
+      }
+
     }
   }
 }

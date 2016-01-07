@@ -9009,48 +9009,48 @@ form#user-login {
 .st_pinterest_large .stButton .stLarge:before {
   content: "\f650";
 }
-#block-follow-site .follow-links .follow-link-wrapper {
-  margin: 0;
+.follow-links .follow-link-wrapper {
+  display: inline-block;
+  margin: 0 10px 0 0;
 }
-#block-follow-site .follow-links .follow-link-wrapper a.follow-link {
-  padding: 0 10px;
-  font-family: "SSSocial-Circle";
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
+.follow-links .follow-link-wrapper a.follow-link {
+  padding: 2px 0;
+  height: 38px;
+  width: 38px;
+  font-family: 'fontawesome';
   font-size: 24px;
-  color: #777777;
+  color: #ffffff;
   background-image: none !important;
-}
-#block-follow-site .follow-links .follow-link-wrapper a.follow-link:hover {
-  font-family: "SSSocial-Regular";
-  font-style: normal;
-  font-weight: normal;
   text-decoration: none;
-  text-rendering: optimizeLegibility;
-  white-space: nowrap;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  -o-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
+  text-align: center;
 }
-#block-follow-site .follow-links .follow-link-wrapper a.follow-link.follow-link-facebook:before {
-  content: "\f610";
+.follow-links .follow-link-wrapper a.follow-link.follow-link-facebook:before {
+  content: "\f09a";
 }
-#block-follow-site .follow-links .follow-link-wrapper a.follow-link.follow-link-twitter:before {
-  content: "\f611";
+.follow-links .follow-link-wrapper a.follow-link.follow-link-twitter:before {
+  content: "\f099";
+}
+.follow-links .follow-link-wrapper a.follow-link.follow-link-googleplus:before {
+  content: "\f0d5";
+}
+.follow-links .follow-link-wrapper a.follow-link.follow-link-youtube:before {
+  content: "\f167";
+}
+.follow-links .follow-link-wrapper a.follow-link.follow-link-xing:before {
+  content: "\f168";
+}
+.follow-links .follow-link-wrapper a.follow-link.follow-link-linkedin:before {
+  content: "\f0e1";
+}
+.follow-links .follow-link-wrapper a.follow-link.follow-link-this-site:before {
+  content: "\f09e";
+}
+.follow-links .follow-link-wrapper a.follow-link:hover {
+  padding: 0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 /*
  *  Language block component
@@ -9094,7 +9094,7 @@ form#user-login {
   text-decoration: none;
 }
 #block-locale-language ul.language-switcher-locale-url > li span.locale-untranslated {
-  color: #777777;
+  color: #eeeeee;
 }
 /*
  *  Node page component
@@ -9360,24 +9360,24 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'SohoGothicProBold', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #ffffff;
+  border: none;
   background-color: #777777;
   font-size: 14px;
 }
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:hover,
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:focus {
   color: #777777;
-  border: 2px solid #777777;
+  border: none;
   background: #ffffff;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file {
@@ -9398,17 +9398,17 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'SohoGothicProBold', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #ffffff;
+  border: none;
   background-color: #777777;
   font-size: 16px;
   z-index: 10;
@@ -9416,7 +9416,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:hover,
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:focus {
   color: #777777;
-  border: 2px solid #777777;
+  border: none;
   background: #ffffff;
 }
 form.webform-client-form .webform-component {
@@ -9465,8 +9465,8 @@ form.webform-client-form .webform-component textarea {
 form.webform-client-form .webform-component input:focus,
 form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #337ab7;
-  -webkit-box-shadow: 0 0 3px #eeeeee;
-  box-shadow: 0 0 3px #eeeeee;
+  -webkit-box-shadow: 0 0 3px #333333;
+  box-shadow: 0 0 3px #333333;
 }
 form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
   display: none;
@@ -9513,24 +9513,24 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'SohoGothicProBold', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #ffffff;
+  border: none;
   background-color: #777777;
   z-index: 10;
 }
 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
   color: #777777;
-  border: 2px solid #777777;
+  border: none;
   background: #ffffff;
 }
 form.webform-client-form .webform-component.webform-component-markup {
@@ -9601,25 +9601,134 @@ form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0;
   padding: 0.3em 1em;
-  font-family: 'SohoGothicProBold', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 18px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #ffffff;
+  border: none;
   background-color: #777777;
   padding: 15px 20px;
 }
 form.webform-client-form div.form-actions button.webform-submit:hover,
 form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #777777;
-  border: 2px solid #777777;
+  border: none;
   background: #ffffff;
+}
+/*
+ *  View locations component
+ * --------------------------------------------------*/
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs {
+  display: block;
+  border: none;
+  text-align: center;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li {
+  display: inline-block;
+  float: none;
+  margin: 0 5px 5px 0;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li a {
+  padding: 8px 20px 10px;
+  width: 100%;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #999999;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #999999;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a,
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active a {
+  color: #fff;
+  background-color: #999999;
+}
+@media screen and (min-width: 768px) {
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+  }
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 34px;
+    z-index: 10;
+  }
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li a {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    width: 85%;
+    text-align: center;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: none;
+  }
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active:after {
+    content: '';
+    display: inline-block;
+    margin: 0 -3px;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 12px solid #999999;
+  }
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content {
+  display: block;
+  border: none;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
+  padding: 25px;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .organisation-block {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .street-block {
+  margin-bottom: 5px;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .locality-block {
+  margin-bottom: 20px;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .addressfield-phone-block {
+  margin-bottom: 20px;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .addressfield-phone-block .phone-number {
+  margin-bottom: 5px;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .addressfield-phone-block .phone-number span {
+  display: inline-block;
+  text-indent: -9999px;
+}
+@media screen and (min-width: 768px) {
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 -6.8%;
+    width: 59%;
+    height: 306px;
+    border: 1px solid #666666;
+  }
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
+    font-size: 14px;
+  }
 }
 /*
  *  Header section (navigation)
@@ -9712,8 +9821,8 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   line-height: 1;
-  color: #555555;
-  border-right: 1px solid #555555;
+  color: #777777;
+  border-right: 1px solid #777777;
 }
 header#navbar .container .navbar-collapse nav ul.menu.secondary li.last a {
   border: none;
@@ -9724,9 +9833,6 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li.last a {
 .outer-container {
   margin: 0 auto;
   max-width: 1280px;
-  background-color: #fff;
-}
-.container {
   background-color: #fff;
 }
 .container a {
@@ -9744,7 +9850,7 @@ body {
   position: relative;
   height: 100%;
   min-height: 320px;
-  background: #ededed none;
+  background: #f0f0eb none;
 }
 body .main-container .container #page-header .region-header h2.block-title {
   margin: 20px 0 10px;
@@ -9812,3 +9918,142 @@ body .main-container .fading.fading-bottom {
 /*
  *  Footer section
  * --------------------------------------------------*/
+.footer {
+  margin: 0;
+  padding: 20px 0 0;
+  border: none;
+  background-color: #39393e;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field .block-title {
+  margin: 10px 0 30px;
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 0;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0);
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component .control-label {
+  display: none;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component input.form-text {
+  padding: 10px;
+  height: auto;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 16px;
+  line-height: 1;
+  text-align: left;
+  color: #999999;
+  box-shadow: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  background-color: #eeeeee;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component input:focus {
+  -webkit-box-shadow: inset 0 0 0.3em #333333;
+  box-shadow: inset 0 0 0.3em #333333;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions button.webform-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  color: #eee;
+  outline: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  background-color: #999999;
+}
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions button.webform-submit:hover,
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions button.webform-submit:focus {
+  color: #999999;
+  border: none;
+  background: #eee;
+}
+@media screen and (min-width: 480px) {
+  .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 -3px;
+    width: 60%;
+  }
+  .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component input.form-text {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 -3px;
+    width: 40%;
+    text-align: left;
+  }
+  .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions button.webform-submit {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+.footer .container .region-footer .block-menu-block {
+  display: block;
+  margin-top: 30px;
+  padding: 30px 0;
+  width: 100%;
+  border-top: 1px solid #999999;
+}
+.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu {
+  text-align: center;
+}
+.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li {
+  display: inline-block;
+}
+.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a {
+  padding: 0 10px 2px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #999999;
+  border-right: 1px solid #666666;
+}
+.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a:hover,
+.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a.active {
+  text-decoration: underline;
+  background: none;
+}
+.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li.last a {
+  border: none;
+}
+.subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates {
+  display: block;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates {
+    text-align: right;
+  }
+}
+.subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates .field-name-body .field-item a {
+  display: inline-block;
+}
+.subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates .field-name-body .field-item a img {
+  max-height: 60px;
+  width: auto;
+}
