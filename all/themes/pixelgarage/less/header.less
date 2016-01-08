@@ -4,6 +4,7 @@
 
 // Variables
 // -------------------------
+@pxl-menu-border-thickness:   6px;
 
 
 // Mixins
@@ -25,12 +26,15 @@ body.navbar-is-fixed-top {
 
 header#navbar {
   position: relative;
+  margin: 0;
   border: none;
   background: transparent none;
+  z-index: 5;
 
   a.logo {
     margin: 10px 20px;
     padding: 0;
+    outline: none;
 
     img {
       display: inline-block;
@@ -40,7 +44,11 @@ header#navbar {
   }
 
   .container {
-    padding: 50px @grid-gutter-width / 2 0;
+    padding: 10px @grid-gutter-width / 2 0;
+
+    @media @tablet {
+      padding-top: 50px;
+    }
 
     .navbar-header {
       // header (branding)
@@ -55,30 +63,81 @@ header#navbar {
       .navbar-toggle {
         // navbar toggle with burger
         padding: 5px 10px;
+        border: none;
+        background: none;
+
+        span.glyphicon {
+          font-size: 30px;
+          color: @pxl-color-footer-bg;
+        }
+
+        &:hover, &:focus {
+          span.glyphicon {
+            color: @pxl-color-hso-main;
+          }
+        }
       }
     }
 
     // collapse part
     .navbar-collapse {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: auto;
+      background-color: rgba(255,255,255, 1.0);
+      z-index: 10;  // higher than header
+
+      .navbar-toggle-2 {
+        // navbar toggle with arrow
+        position: absolute;
+        top: 20px;
+        left: 10%;
+        display: none;
+        padding: 5px 10px;
+        border: none;
+        background: none;
+
+        span.fa {
+          font-size: 30px;
+          color: @pxl-color-footer-bg;
+        }
+
+        &:hover, &:focus {
+          span.fa {
+            color: @pxl-color-hso-main;
+          }
+        }
+      }
+
+      &.in {
+        .navbar-toggle-2 {
+          display: block;
+        }
+      }
+
       nav {
         // main menu
         ul.menu {
-          display: inline-block;
-          margin: 0 0 -6px;
-          float: right;
-          z-index: 10;
+          display: block;
+          margin: 70px 0 0;
+          float: none;
 
           li {
+            margin: 5px auto;
+            width: 80%;
+
             a {
-              padding: 7px 40px 7px 10px;
+              padding: 7px 0;
               font-family: @pxl-text-font-light;
-              font-size: 18px;
+              font-size: 20px;
               color: @text-color;
               line-height: 1;
             }
 
             &.menu-kv {
-              border-bottom: 6px solid @pxl-color-hso-kv;
+              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-kv;
 
               a:hover, a.active {
                 color: #fff;
@@ -86,7 +145,7 @@ header#navbar {
               }
             }
             &.menu-hs {
-              border-bottom: 6px solid @pxl-color-hso-hs;
+              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-hs;
 
               a:hover, a.active {
                 color: #fff;
@@ -94,7 +153,7 @@ header#navbar {
               }
             }
             &.menu-ks {
-              border-bottom: 6px solid @pxl-color-hso-ks;
+              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-ks;
 
               a:hover, a.active {
                 color: #fff;
@@ -102,7 +161,7 @@ header#navbar {
               }
             }
             &.menu-ex {
-              border-bottom: 6px solid @pxl-color-hso-ex;
+              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-ex;
 
               a:hover, a.active {
                 color: #fff;
@@ -114,27 +173,99 @@ header#navbar {
         }
         // meta-menu
         ul.menu.secondary {
-          position: absolute;
-          top: 10px;
-          right: 20px;
+          position: relative;
+          top: auto;
+          right: auto;
+          margin: 20px 0;
 
           li {
             a {
-              padding: 0 10px 2px;
-              font-family: @pxl-text-font;
-              font-size: 14px;
+              padding: 7px 0;
+              font-family: @pxl-text-font-light;
+              font-size: 20px;
               line-height: 1;
-              color: @text-color-light;
-              border-right: 1px solid @text-color-light;
+              color: @text-color;
+              border-right: none;
+              border-bottom: 1px solid @text-color;
 
               &:hover,
               &.active {
+                background-color: @pxl-color-hso-sec;
               }
             }
+          }
+        }
+      }
 
-            &.last {
+      // menus shown permanently
+      @media @tablet {
+        position: static;
+        top: auto;
+        right: auto;
+        width: 100%;
+        background: none;
+
+        &.in {
+          .navbar-toggle-2 {
+            display: none;
+          }
+        }
+
+        nav {
+          ul.menu {
+            display: inline-block;
+            margin: 0 0 -@pxl-menu-border-thickness;
+            float: right;
+
+            li {
+              margin: 0;
+              width: auto;
+
               a {
-                border: none;
+                padding: 7px 30px 7px 10px;
+                font-size: 16px;
+              }
+            }
+          }
+          // meta menu
+          ul.menu.secondary {
+            position: absolute;
+            margin: 0;
+            top: 10px;
+            right: 10px;
+
+            li {
+              a {
+                padding: 0 10px 2px;
+                font-size: 14px;
+                color: @text-color-light;
+                border-right: 1px solid @text-color-light;
+                border-bottom: none;
+
+                &:hover,
+                &.active {
+                  color: @text-color;
+                  background: none;
+                }
+              }
+
+              &.last {
+                a {
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media @normal {
+        nav {
+          ul.menu {
+            li {
+              a {
+                padding: 7px 40px 7px 10px;
+                font-size: 18px;
               }
             }
           }

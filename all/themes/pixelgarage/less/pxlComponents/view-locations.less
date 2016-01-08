@@ -62,6 +62,7 @@
             margin: 0;
             width: 100%;
             height: @pxl-li-vertical-height;
+            text-align: left;
             z-index: 10;
 
             a {
@@ -98,6 +99,7 @@
           font-family: @pxl-text-font-light;
           font-size: 16px;
           line-height: 1;
+          text-align: center;
           color: #fff;
 
           .views-field-field-address {
@@ -130,6 +132,12 @@
           .views-field-field-email {
             .field-content {
               a {
+                text-decoration: none;
+                color: #fff;
+
+                &:hover, &:focus {
+                  text-decoration: underline;
+                }
 
               }
             }
@@ -146,6 +154,7 @@
 
           .tab-pane {
             font-size: 14px;
+            text-align: left;
           }
         }
 

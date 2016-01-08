@@ -9,7 +9,6 @@
   /**
    * This behavior adds shadow to header on scroll.
    *
-   */
   Drupal.behaviors.addHeaderShadow = {
     attach: function (context) {
       $(window).on("scroll", function () {
@@ -22,6 +21,7 @@
       });
     }
   };
+   */
 
   /**
    * Allows full size clickable items.

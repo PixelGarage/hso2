@@ -1,7 +1,10 @@
 <?php
 /**
-* Implements hook_init().
-*/
+ * Implements hook_init().
+ *
+ * Used to implement the Search Engine Referrer, showing all site elements tagged
+ * with one of the search terms given in a search engine (e.g. Google).
+ */
 function hso_mods_init() {
 	if (drupal_is_front_page() && $search_info = serapi_get_search()) {
 		$keywords = strtolower($search_info['string']);
@@ -28,20 +31,32 @@ function hso_mods_init() {
 		}
 	}
 }
+
 /**
-* Implements hook_entity_info_alter().
-*/
+ * Implements hook_entity_info_alter().
+ */
 function hso_mods_entity_info_alter(&$info) {
   $info['field_collection_item']['metatags'] = FALSE;
 }
+
+/* --------------------------------------------------
+ * Set specific contexts for nodes and views
+ * --------------------------------------------------*/
+
 /**
- * Implements of hook_node_view
+ * Implements hook_node_view
+ *
+ * If a node is shown in full mode and is related to a segment, set a new segment
+ * context (namespace = HSO, attribute = current_segment) to the segment term id.
  */
 function hso_mods_node_view($node, $view_mode, $langcode) {
+  // set special context only for the following nodes
+  if (!in_array($node->type, array('course', 'course_times', 'news', 'page', 'video', 'webform', 'youtube_playlist'))) return;
+
   if ($view_mode == 'full') {
-		if (in_array($node->type, array('banner', 'block', 'contact', 'fachwissen', 'location', 'media', 'segment_blocks', 'segment_sidebar_block', 'testimonial'))) return;
   	$node_to_check = $node;
   	if ($node->type == 'course_times') {
+      // get the segment from the related course
   		if (!empty($node->field_course)) {
   			$node_to_check = node_load($node->field_course[LANGUAGE_NONE][0]['target_id']);
   		}
@@ -53,6 +68,7 @@ function hso_mods_node_view($node, $view_mode, $langcode) {
 			}
   	}
   	$ctid = FALSE;
+    /* no centers anymore)
   	if ($node_to_check->type == 'news' && !empty($node_to_check->field_centers)) {
 	  	$ctid = $node_to_check->field_centers[LANGUAGE_NONE][0]['tid'];
   		context_set('hso', 'current_segment_center', $ctid);
@@ -60,9 +76,10 @@ function hso_mods_node_view($node, $view_mode, $langcode) {
 	  	$ctid = $node_to_check->field_center[LANGUAGE_NONE][0]['tid'];
   		context_set('hso', 'current_segment_center', $ctid);
   	}
+    */
   	if (isset($node_to_check->field_segment) && !empty($node_to_check->field_segment)) {
   		$tid = $node_to_check->field_segment[LANGUAGE_NONE][0]['tid'];
-  		$tid = $tid == 5 ? 2 : $tid;
+  		$tid = $tid == 5 ? 2 : $tid;  // Informatikschule -> Handelsschule
   		context_set('hso', 'current_segment', $tid);
   		if (!$ctid) {
 	  		context_set('hso', 'current_segment_center', $tid);
@@ -70,7 +87,7 @@ function hso_mods_node_view($node, $view_mode, $langcode) {
   		_hso_mods_trigger_context($tid);
   	} elseif (isset($node_to_check->field_segments) && !empty($node_to_check->field_segments)) {
   		$tid = $node_to_check->field_segments[LANGUAGE_NONE][0]['tid'];
-  		$tid = $tid == 5 ? 2 : $tid;
+  		$tid = $tid == 5 ? 2 : $tid;  // Informatikschule -> Handelsschule
   		context_set('hso', 'current_segment', $tid);
   		if (!$ctid) {
 	  		context_set('hso', 'current_segment_center', $tid);
@@ -79,6 +96,35 @@ function hso_mods_node_view($node, $view_mode, $langcode) {
   	}
   }
 }
+
+/**
+ * Implements of hook_taxonomy_term_view
+ *
+ * If a segment page is shown, set a new segment context
+ * (namespace = HSO, attribute = current_segment) to the segment term id.
+ */
+function hso_mods_taxonomy_term_view($term, $view_mode, $langcode) {
+  if ($term->vid == 1 && $view_mode == 'full') {
+    // set segment Handelsschule for Informatikschule
+    $tid = $term->tid == 5 ? 2 : $term->tid;
+    context_set('hso', 'current_segment', $tid);
+    //context_set('hso', 'current_segment_center', $tid);
+  }
+}
+
+/**
+ * Internal function to set all contexts with a given segment condition.
+ * @param $segment_id
+ */
+function _hso_mods_trigger_context($segment_id) {
+  $contexts = context_enabled_contexts();
+  foreach ($contexts as $context_name => $data) {
+    if (array_key_exists('node_taxonomy', $data->conditions) && in_array($segment_id, $data->conditions['node_taxonomy']['values'])) {
+      context_condition_met($data, 'node_taxonomy');
+    }
+  }
+}
+
 /**
 * Implements ctools_render_alter().
 *
@@ -99,25 +145,11 @@ function hso_mods_ctools_render_alter($info, $page, $context) {
   	hso_mods_node_view($context['contexts']['argument_entity_id:node_1']->data, 'full', LANGUAGE_NONE);
 	}
 }
-/**
- * Implements of hook_taxonomy_term_view
- */
-function hso_mods_taxonomy_term_view($term, $view_mode, $langcode) {
-	if ($term->vid == 1 && $view_mode == 'full') {
-		$tid = $term->tid == 5 ? 2 : $term->tid;
-		context_set('hso', 'current_segment', $tid);
-  	context_set('hso', 'current_segment_center', $tid);
-	}
-}
 
-function _hso_mods_trigger_context($segment_id) {
-	$contexts = context_enabled_contexts();
-  foreach ($contexts as $context_name => $data) {
-  	if (array_key_exists('node_taxonomy', $data->conditions) && in_array($segment_id, $data->conditions['node_taxonomy']['values'])) {
-  		context_condition_met($data, 'node_taxonomy');
-  	}
-  }
-}
+
+/* --------------------------------------------------
+ * Themes and field formatters for date-time ranges
+ * --------------------------------------------------*/
 /**
  * Implements hook_field_formatter_info().
  */
@@ -210,7 +242,10 @@ function theme_hso_mods_formatter_hso_mods_date_start_ende($element) {
   return $string;
 }
 
-/*
+/* --------------------------------------------------
+ * HSO Pager with prev/next
+ * --------------------------------------------------*/
+/**
  * Implements hook_block_info
  */
 function hso_mods_block_info() {
@@ -221,7 +256,8 @@ function hso_mods_block_info() {
 
   return $blocks;
 }
-/*
+
+/**
  * Implements hook_block_view
  */
 function hso_mods_block_view($delta = '') {
@@ -259,9 +295,12 @@ function hso_mods_block_view($delta = '') {
 	}
   return $block;
 }
+
 /**
-* Implements hook_form_alter().
-*/
+ * Implements hook_form_alter().
+ *
+ * Adapts search form blocks.
+ */
 function hso_mods_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'views_exposed_form') {
   	if (in_array('views_exposed_form__blog__panel_pane_1', $form['#theme'])) {

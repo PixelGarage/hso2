@@ -87,7 +87,7 @@
       <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+      <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
@@ -97,6 +97,10 @@
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
       <div class="navbar-collapse collapse">
+        <button type="button" class="navbar-toggle-2" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-long-arrow-right" aria-hidden="true"></span>
+        </button>
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
@@ -108,13 +112,14 @@
       </div>
     <?php endif; ?>
   </div>
+</header>
+
+<div class="main-container">
   <!-- Slider region -->
   <?php if (!empty($page['navigation'])): ?>
     <?php print render($page['navigation']); ?>
   <?php endif; ?>
-</header>
 
-<div class="main-container">
   <div class="fading fading-top"></div>
   <div class="fading fading-bottom"></div>
   <div class="<?php print $container_class; ?>">

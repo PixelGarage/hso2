@@ -12,6 +12,12 @@
 // Newsletter form
 // ---------------
 .inline-webform() {
+  text-align: center;
+
+  @media @tablet {
+    text-align: left;
+  }
+
   .webform-component {
     display: block;
     margin: 0 auto 20px;
@@ -87,6 +93,7 @@
       vertical-align: top;
       margin: 0 -3px;
       width: 40%;
+      max-width: 140px;
       text-align: left;
 
       button.webform-submit {
@@ -103,7 +110,7 @@
 // -------------------------
 .footer {
   margin: 0;
-  padding: 20px 0 0;
+  padding: 0;
   border: none;
   background-color: @pxl-color-footer-bg;
 
@@ -116,18 +123,33 @@
             .col-sm-6 {
               .field {
                 .block-title {
-                  margin: 10px 0 30px;
+                  margin: 30px 0;
                   font-family: @pxl-text-font-medium;
-                  font-size: 20px;
+                  font-size: 16px;
                   line-height: 1;
+                  letter-spacing: 1.2px;
+                  text-transform: capitalize;
+                  text-align: center;
                   color: #fff;
+
+                  @media @tablet {
+                    text-align: left;
+                  }
                 }
+              }
+
+              .field-name-locations {
+                // see view-locations
               }
 
               .field-name-newsletter {
                 form#webform-client-form-1301 {
                   .inline-webform;
                 }
+              }
+
+              .field-name-follow-site {
+                // see block-socials
               }
             }
           }
