@@ -69,10 +69,14 @@ body {
         section { // column(s)
 
           h1.page-header {
-            display: none;
-            margin: 20px 0 10px;
-            font-family: @pxl-text-font-bold;
+            //display: none;
+            margin: 50px 0 0;
+            padding: 0;
+            font-family: @pxl-text-font-light;
             font-size: @font-size-h1;
+            color: @text-color;
+            line-height: 1;
+            border: none;
           }
 
           .messages {
@@ -109,7 +113,6 @@ body {
         // main content region
         .region-content {
           #block-system-main {
-            padding: 0 10px;
           }
         }
       }
@@ -135,5 +138,59 @@ body {
       }
     }
   } // main-container
+
+  &.kvcollege_section {
+    .main-container {
+      .container {
+        .row {
+          section {
+            h1.page-header {
+              color: @pxl-color-hso-kv;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.hscollege_section {
+    .main-container {
+      .container {
+        .row {
+          section {
+            h1.page-header {
+              color: @pxl-color-hso-hs;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.kscollege_section {
+    .main-container {
+      .container {
+        .row {
+          section {
+            h1.page-header {
+              display: none;
+              color: @pxl-color-hso-ks;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.excollege_section {
+    .main-container {
+      .container {
+        .row {
+          section {
+            h1.page-header {
+              color: @pxl-color-hso-ex;
+            }
+          }
+        }
+      }
+    }
+  }
 
 }

@@ -132,10 +132,14 @@ function _hso_mods_trigger_context($segment_id) {
 */
 function hso_mods_ctools_render_alter($info, $page, $context) {
   if ($page && is_array($context['subtask']) && $context['subtask']['name'] == 'course_anmeldung') {
-  	hso_mods_node_view($context['contexts']['argument_entity_id:node_1']->data, 'full', LANGUAGE_NONE);
+    //
+    // set all context conditions for the specific course time,
+    // for which the anmeldungs webform is displayed.
+    $course_time = $context['contexts']['argument_entity_id:node_1']->data;
+  	hso_mods_node_view($course_time, 'full', LANGUAGE_NONE);
   	$contexts = context_enabled_contexts();
 		foreach ($contexts as $context_name => $data) {
-			if (array_key_exists('node', $data->conditions) && in_array($context['contexts']['argument_entity_id:node_1']->data->type, $data->conditions['node']['values'])) {
+			if (array_key_exists('node', $data->conditions) && in_array($course_time->type, $data->conditions['node']['values'])) {
 				context_condition_met($data, 'node');
 			}
 		}

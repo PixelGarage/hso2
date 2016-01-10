@@ -9781,6 +9781,139 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
   }
 }
 /*
+ *  View courses component
+ * --------------------------------------------------*/
+.view.view-courses .view-content {
+  margin: 50px 0;
+}
+.view.view-courses .view-content .panel-group {
+  margin: 0;
+}
+.view.view-courses .view-content .panel-group .main-title h1 {
+  margin: 50px 0 0;
+  padding: 0;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 41px;
+  color: #333333;
+  line-height: 1;
+}
+body.kvcollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+  color: #95ba40;
+}
+body.hscollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+  color: #e87431;
+}
+body.kscollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+  color: #78729f;
+}
+body.excollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+  color: #b1a895;
+}
+.view.view-courses .view-content .panel-group .course-subject h2 {
+  margin: 30px 0 0;
+  padding: 10px 0;
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1;
+  border-top: 1px solid #ccc;
+}
+.view.view-courses .view-content .panel-group .panel {
+  margin: 0;
+  border: none;
+  background: transparent none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading {
+  position: relative;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: 'SohoGothicProLight', serif;
+  color: #fff;
+  line-height: 1;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading .panel-title {
+  display: inline-block;
+  width: 100%;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
+  display: block;
+  padding: 10px 10px 12px;
+  font-size: 16px;
+  color: #777777;
+  text-decoration: none;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading span.short-description {
+  cursor: pointer;
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 100px;
+  padding: 10px 15px 12px;
+  color: #fff;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading span.details {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading span.details a {
+  display: block;
+  padding: 10px 15px 12px;
+  color: #fff;
+  text-decoration: none;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading span.details a:hover,
+.view.view-courses .view-content .panel-group .panel .panel-heading span.details a.active {
+  color: #fff;
+}
+.view.view-courses .view-content .panel-group .panel .panel-heading:hover .panel-title a {
+  color: #fff;
+}
+body.kvcollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+  background-color: #95ba40;
+}
+body.hscollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+  background-color: #e87431;
+}
+body.kscollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+  background-color: #78729f;
+}
+body.excollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+  background-color: #b1a895;
+}
+.view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+  margin: 10px 40px;
+  padding: 10px 0 20px;
+  font-family: 'SohoGothicProLight', serif;
+  color: #777777;
+  border: none;
+}
+body.kvcollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+  border-top: 1px solid #95ba40;
+  border-bottom: 1px solid #95ba40;
+}
+body.hscollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+  border-top: 1px solid #e87431;
+  border-bottom: 1px solid #e87431;
+}
+body.kscollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+  border-top: 1px solid #78729f;
+  border-bottom: 1px solid #78729f;
+}
+body.excollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+  border-top: 1px solid #b1a895;
+  border-bottom: 1px solid #b1a895;
+}
+/*
  *  Header section (navigation)
  * --------------------------------------------------*/
 body.navbar-is-fixed-top {
@@ -9838,6 +9971,7 @@ header#navbar .container .navbar-collapse {
   position: absolute;
   top: 0;
   right: 0;
+  padding: 0;
   width: 60%;
   height: auto;
   background-color: #ffffff;
@@ -10016,10 +10150,13 @@ body .main-container .container #page-header .region-header h2.block-title {
   font-size: 24px;
 }
 body .main-container .container .row section h1.page-header {
-  display: none;
-  margin: 20px 0 10px;
-  font-family: 'SohoGothicProBold', serif;
+  margin: 50px 0 0;
+  padding: 0;
+  font-family: 'SohoGothicProLight', serif;
   font-size: 41px;
+  color: #333333;
+  line-height: 1;
+  border: none;
 }
 body .main-container .container .row section .messages {
   margin-top: 20px;
@@ -10046,9 +10183,6 @@ body .main-container .container .row section ul.action-links li a {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
 }
-body .main-container .container .row .region-content #block-system-main {
-  padding: 0 10px;
-}
 body .main-container .fading {
   display: none;
   position: absolute;
@@ -10072,6 +10206,19 @@ body .main-container .fading.fading-bottom {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
+}
+body.kvcollege_section .main-container .container .row section h1.page-header {
+  color: #95ba40;
+}
+body.hscollege_section .main-container .container .row section h1.page-header {
+  color: #e87431;
+}
+body.kscollege_section .main-container .container .row section h1.page-header {
+  display: none;
+  color: #78729f;
+}
+body.excollege_section .main-container .container .row section h1.page-header {
+  color: #b1a895;
 }
 /*
  *  Footer section

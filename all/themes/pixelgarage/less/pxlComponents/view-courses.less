@@ -1,0 +1,168 @@
+/*
+ *  View courses component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view.view-courses {
+  .view-content {
+    margin: 50px 0;
+
+    .panel-group {
+      margin: 0;
+
+      .main-title {
+        h1 {
+          margin: 50px 0 0;
+          padding: 0;
+          font-family: @pxl-text-font-light;
+          font-size: @font-size-h1;
+          color: @text-color;
+          line-height: 1;
+
+          body.kvcollege_section & {
+            color: @pxl-color-hso-kv;
+          }
+          body.hscollege_section & {
+            color: @pxl-color-hso-hs;
+          }
+          body.kscollege_section & {
+            color: @pxl-color-hso-ks;
+          }
+          body.excollege_section & {
+            color: @pxl-color-hso-ex;
+          }
+        }
+      }
+
+      .course-subject {
+        h2 {
+          margin: 30px 0 0;
+          padding: 10px 0;
+          font-family: @pxl-text-font-medium;
+          font-size: @font-size-base;
+          color: @text-color;
+          line-height: 1;
+          border-top: 1px solid #ccc;
+        }
+      }
+
+      .panel {
+        margin: 0;
+        border: none;
+        background: transparent none;
+        #pxl-mixins.box-shadow(none);
+
+        .panel-heading {
+          position: relative;
+          margin-bottom: 0;
+          padding: 0;
+          font-family: @pxl-text-font-light;
+          color: #fff;
+          line-height: 1;
+          #pxl-mixins.border-radius(0);
+          background-color: transparent;
+
+          .panel-title {
+            display: inline-block;
+            width: 100%;
+
+            a {
+              display: block;
+              padding: 10px 10px 12px;
+              font-size: @font-size-base;
+              color: @text-color-light;
+              text-decoration: none;
+            }
+          }
+
+          span.short-description {
+            cursor: pointer;
+            pointer-events: none;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 100px;
+            padding: 10px 15px 12px;
+            color: #fff;
+          }
+
+          span.details {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            a {
+              display: block;
+              padding: 10px 15px 12px;
+              color: #fff;
+              text-decoration: none;
+
+              &:hover, &.active {
+                color: #fff;
+              }
+            }
+          }
+
+          &:hover {
+            .panel-title {
+              a {
+                color: #fff;
+              }
+            }
+          }
+          body.kvcollege_section &:hover {
+            background-color: @pxl-color-hso-kv;
+          }
+          body.hscollege_section &:hover {
+            background-color: @pxl-color-hso-hs;
+          }
+          body.kscollege_section &:hover {
+            background-color: @pxl-color-hso-ks;
+          }
+          body.excollege_section &:hover {
+            background-color: @pxl-color-hso-ex;
+          }
+
+        }
+
+        .panel-collapse {
+          .panel-body {
+            margin: 10px 40px;
+            padding: 10px 0 20px;
+            font-family: @pxl-text-font-light;
+            color: @text-color-light;
+            border: none;
+
+            body.kvcollege_section & {
+              border-top: 1px solid @pxl-color-hso-kv;
+              border-bottom: 1px solid @pxl-color-hso-kv;
+            }
+            body.hscollege_section & {
+              border-top: 1px solid @pxl-color-hso-hs;
+              border-bottom: 1px solid @pxl-color-hso-hs;
+            }
+            body.kscollege_section & {
+              border-top: 1px solid @pxl-color-hso-ks;
+              border-bottom: 1px solid @pxl-color-hso-ks;
+            }
+            body.excollege_section & {
+              border-top: 1px solid @pxl-color-hso-ex;
+              border-bottom: 1px solid @pxl-color-hso-ex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
