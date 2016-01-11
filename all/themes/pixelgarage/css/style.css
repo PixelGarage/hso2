@@ -9626,6 +9626,73 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ffffff;
 }
 /*
+ *  Course content type
+ * --------------------------------------------------*/
+.node.node-course .row .col-sm-12 .field-name-body p {
+  display: none;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock {
+  margin: 30px 0 50px;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody {
+  padding: 0 20px;
+  font-size: 16px;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th {
+  padding: 10px 10px 10px 0;
+  width: 50% !important;
+  font-family: 'SohoGothicProMedium', serif;
+  border-top: 1px solid #cccccc;
+  vertical-align: top;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td {
+  padding: 10px 0 10px 10px;
+  width: 50% !important;
+  font-family: 'SohoGothicProRegular', serif;
+  border-top: 1px solid #cccccc;
+  vertical-align: top;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child th,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child td {
+  border-bottom: 1px solid #cccccc;
+}
+body.kvcollege_section .node.node-course .row .col-sm-12 a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section .node.node-course .row .col-sm-12 a:hover,
+body.kvcollege_section .node.node-course .row .col-sm-12 a.active,
+body.kvcollege_section .node.node-course .row .col-sm-12 a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section .node.node-course .row .col-sm-12 a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section .node.node-course .row .col-sm-12 a:hover,
+body.hscollege_section .node.node-course .row .col-sm-12 a.active,
+body.hscollege_section .node.node-course .row .col-sm-12 a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section .node.node-course .row .col-sm-12 a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section .node.node-course .row .col-sm-12 a:hover,
+body.kscollege_section .node.node-course .row .col-sm-12 a.active,
+body.kscollege_section .node.node-course .row .col-sm-12 a:focus {
+  text-decoration: underline;
+}
+body.excollege_section .node.node-course .row .col-sm-12 a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section .node.node-course .row .col-sm-12 a:hover,
+body.excollege_section .node.node-course .row .col-sm-12 a.active,
+body.excollege_section .node.node-course .row .col-sm-12 a:focus {
+  text-decoration: underline;
+}
+/*
  *  Banners view (navigation)
  * --------------------------------------------------*/
 .view-banners .view-content .carousel {
@@ -9793,9 +9860,19 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
   margin: 50px 0 0;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 41px;
+  font-size: 25.625px;
   color: #333333;
   line-height: 1;
+}
+@media screen and (min-width: 480px) {
+  .view.view-courses .view-content .panel-group .main-title h1 {
+    font-size: 5.33854167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-courses .view-content .panel-group .main-title h1 {
+    font-size: 41px;
+  }
 }
 body.kvcollege_section .view.view-courses .view-content .panel-group .main-title h1 {
   color: #95ba40;
@@ -9844,19 +9921,20 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
   display: block;
+  width: 80%;
   padding: 10px 10px 12px;
-  font-size: 16px;
+  font-size: 14px;
   color: #777777;
   text-decoration: none;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading span.short-description {
   cursor: pointer;
   pointer-events: none;
-  display: inline-block;
+  display: none;
   position: absolute;
   top: 0;
   right: 100px;
-  padding: 10px 15px 12px;
+  padding: 10px 10px 12px;
   color: #fff;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading span.details {
@@ -9867,13 +9945,34 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading span.details a {
   display: block;
-  padding: 10px 15px 12px;
+  padding: 10px 10px 12px;
+  font-size: 14px;
   color: #fff;
   text-decoration: none;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading span.details a:hover,
 .view.view-courses .view-content .panel-group .panel .panel-heading span.details a.active {
   color: #fff;
+}
+@media screen and (min-width: 480px) {
+  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
+    font-size: 15px;
+  }
+  .view.view-courses .view-content .panel-group .panel .panel-heading span.details {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
+    width: 100%;
+    font-size: 16px;
+  }
+  .view.view-courses .view-content .panel-group .panel .panel-heading span.short-description {
+    display: inline-block;
+  }
+  .view.view-courses .view-content .panel-group .panel .panel-heading span.details {
+    font-size: 16px;
+  }
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading:hover .panel-title a {
   color: #fff;
@@ -9912,6 +10011,201 @@ body.kscollege_section .view.view-courses .view-content .panel-group .panel .pan
 body.excollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
   border-top: 1px solid #b1a895;
   border-bottom: 1px solid #b1a895;
+}
+/*
+ *  View Course-tabs component
+ * --------------------------------------------------*/
+.view.view-course-tabs .view-content ul.nav-tabs {
+  margin: 0;
+}
+.view.view-course-tabs .view-content .tab-content {
+  border: 1px solid #ddd;
+  border-top: none;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
+    font-size: 17px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
+  font-size: 13.75px;
+}
+@media screen and (min-width: 480px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
+    font-size: 2.86458333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
+    font-size: 22px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 480px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
+    font-size: 16px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body pre,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
+  font-family: 'SohoGothicProLightItalic' serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body pre,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
+    font-size: 1.953125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body pre,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
+    font-size: 15px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body img,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body embed,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body video,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body audio,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-header {
+  padding: 30px 15px;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-header p {
+  margin: 0 auto;
+  width: 80%;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  text-align: center;
+  color: #777777;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content {
+  padding: 0 15px;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table {
+  width: 100%;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table thead th {
+  padding: 5px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr {
+  border: none;
+  padding: 0;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td {
+  padding: 5px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td a {
+  font-family: 'SohoGothicProRegular', serif;
+  color: #000;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-course-date {
+  white-space: nowrap;
+  line-height: 1;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-location {
+  text-align: center;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-body p {
+  font-size: 16px;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-brand {
+  text-align: center;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-brand img {
+  height: 30px;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing {
+  text-align: right;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
+  display: inline-block;
+  padding: 7px 15px 10px;
+  min-width: 110px;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+body.kvcollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
+  background-color: #95ba40;
+}
+body.hscollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
+  background-color: #e87431;
+}
+body.kscollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
+  background-color: #78729f;
+}
+body.excollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
+  background-color: #b1a895;
 }
 /*
  *  Header section (navigation)
@@ -10141,71 +10435,35 @@ body {
   min-height: 320px;
   background: #f0f0eb none;
 }
-body .main-container .region-navigation {
+.main-container {
+  margin: 0 0 50px;
+}
+.main-container .region-navigation {
   margin-bottom: 20px;
 }
-body .main-container .container #page-header .region-header h2.block-title {
+.main-container .container #page-header .region-header h2.block-title {
   margin: 20px 0 10px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 24px;
 }
-body .main-container .container .row section h1.page-header {
+.main-container .container .row section h1.page-header {
   margin: 50px 0 0;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 41px;
+  font-size: 25.625px;
   color: #333333;
   line-height: 1;
   border: none;
 }
-body .main-container .container .row section .messages {
-  margin-top: 20px;
+@media screen and (min-width: 480px) {
+  .main-container .container .row section h1.page-header {
+    font-size: 5.33854167vw;
+  }
 }
-body .main-container .container .row section ul.nav-tabs {
-  margin: 20px 0 5px;
-}
-body .main-container .container .row section ul.nav-tabs li {
-  float: right;
-}
-body .main-container .container .row section ul.nav-tabs li a {
-  padding: 5px 10px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 14px;
-  border-radius: 0;
-}
-body .main-container .container .row section ul.action-links {
-  margin: 0;
-}
-body .main-container .container .row section ul.action-links li {
-  float: right;
-}
-body .main-container .container .row section ul.action-links li a {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 14px;
-}
-body .main-container .fading {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 20px;
-  z-index: 10;
-}
-body .main-container .fading.fading-top {
-  top: 0;
-  background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#00ffffff', GradientType=0);
-}
-body .main-container .fading.fading-bottom {
-  bottom: 0;
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
+@media screen and (min-width: 768px) {
+  .main-container .container .row section h1.page-header {
+    font-size: 41px;
+  }
 }
 body.kvcollege_section .main-container .container .row section h1.page-header {
   color: #95ba40;
@@ -10214,11 +10472,62 @@ body.hscollege_section .main-container .container .row section h1.page-header {
   color: #e87431;
 }
 body.kscollege_section .main-container .container .row section h1.page-header {
-  display: none;
   color: #78729f;
+}
+body.kscollege_section.page-taxonomy-term-3 .main-container .container .row section h1.page-header {
+  display: none;
 }
 body.excollege_section .main-container .container .row section h1.page-header {
   color: #b1a895;
+}
+.main-container .container .row section .messages {
+  margin-top: 20px;
+}
+.main-container .container .row section ul.tabs--primary.nav-tabs {
+  margin: 20px 0 5px;
+}
+.main-container .container .row section ul.tabs--primary.nav-tabs li {
+  float: right;
+}
+.main-container .container .row section ul.tabs--primary.nav-tabs li a {
+  padding: 5px 10px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  border-radius: 0;
+}
+.main-container .container .row section ul.action-links {
+  margin: 0;
+}
+.main-container .container .row section ul.action-links li {
+  float: right;
+}
+.main-container .container .row section ul.action-links li a {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+}
+.main-container .fading {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: 10;
+}
+.main-container .fading.fading-top {
+  top: 0;
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#00ffffff', GradientType=0);
+}
+.main-container .fading.fading-bottom {
+  bottom: 0;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffffff', GradientType=0);
 }
 /*
  *  Footer section

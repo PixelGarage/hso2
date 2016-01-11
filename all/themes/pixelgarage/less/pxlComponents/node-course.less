@@ -1,0 +1,85 @@
+/*
+ *  Course content type
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-border-color: #ccc;
+
+
+// Mixins
+// -------------------------
+.links(@seg-color) {
+  a {
+    color: @seg-color;
+    text-decoration: none;
+
+    &:hover, &.active, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+// General settings
+// -------------------------
+.node.node-course{
+  .row {
+    .col-sm-12 {
+      .field-name-body {
+        p {
+          display: none;
+        }
+
+        table.aufeinenblock{
+          margin: 30px 0 50px;
+
+          tbody {
+            padding: 0 20px;
+            font-size: @font-size-base;
+
+            tr {
+              th {
+                padding: 10px 10px 10px 0;
+                width: 50% !important;
+                font-family: @pxl-text-font-medium;
+                border-top: 1px solid @pxl-border-color;
+                vertical-align: top;
+              }
+
+              td {
+                padding: 10px 0 10px 10px;
+                width: 50% !important;
+                font-family: @pxl-text-font;
+                border-top: 1px solid @pxl-border-color;
+                vertical-align: top;
+              }
+
+              &:last-child th,
+              &:last-child td {
+                border-bottom: 1px solid @pxl-border-color;
+              }
+            }
+          }
+        }
+      }
+
+      .field-name-course-tab {
+
+      }
+
+      body.kvcollege_section & {
+        .links(@pxl-color-hso-kv);
+      }
+      body.hscollege_section & {
+        .links(@pxl-color-hso-hs);
+      }
+      body.kscollege_section & {
+        .links(@pxl-color-hso-ks);
+      }
+      body.excollege_section & {
+        .links(@pxl-color-hso-ex);
+      }
+
+    }
+  }
+}

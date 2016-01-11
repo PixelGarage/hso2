@@ -41,156 +41,121 @@ body {
   height: 100%;
   min-height: 320px;
   background: @pxl-color-hso-sec none;
+}
 
-  .main-container {
-    .region-navigation {
-      // contains banners
-      margin-bottom: 20px;
-    }
+.main-container {
+  margin: 0 0 50px;
 
-    .container {
-      //
-      // Page header
-      #page-header {
-        .region-header {
-          // block title
-          h2.block-title {
-            margin: 20px 0 10px;
-            font-family: @pxl-text-font;
-            font-size: @font-size-larger;
-          }
+  .region-navigation {
+    // contains banners
+    margin-bottom: 20px;
+  }
 
+  .container {
+    //
+    // Page header
+    #page-header {
+      .region-header {
+        // block title
+        h2.block-title {
+          margin: 20px 0 10px;
+          font-family: @pxl-text-font;
+          font-size: @font-size-larger;
         }
-      }
 
-      //
-      // Frames of: Page title, Messages, Admin tabs, Action links and Main content
-      .row {
-        section { // column(s)
-
-          h1.page-header {
-            //display: none;
-            margin: 50px 0 0;
-            padding: 0;
-            font-family: @pxl-text-font-light;
-            font-size: @font-size-h1;
-            color: @text-color;
-            line-height: 1;
-            border: none;
-          }
-
-          .messages {
-            margin-top: 20px;
-          }
-
-          //
-          // Admin tabs and action links
-          ul.nav-tabs {
-            margin: 20px 0 5px;
-            li {
-              float: right;
-              a {
-                padding: 5px 10px;
-                font-family: @font-family-monospace;
-                font-size: @font-size-small;
-                border-radius: 0;
-              }
-            }
-          }
-          ul.action-links {
-            margin: 0;
-            li {
-              float: right;
-              a {
-                font-family: @font-family-monospace;
-                font-size: @font-size-small;
-              }
-            }
-          }
-        } // section
-
-        //
-        // main content region
-        .region-content {
-          #block-system-main {
-          }
-        }
       }
     }
 
     //
-    // fading area on top and bottom of main container
-    .fading {
-      display: none; // will be enabled via event
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: @pxl-content-fading-height;
-      z-index: 10;
+    // Frames of: Page title, Messages, Admin tabs, Action links and Main content
+    .row {
+      section { // column(s)
 
-      &.fading-top {
-        top: 0;
-        #gradient.vertical(#fff, rgba(255,255,255,0));
-      }
-      &.fading-bottom {
-        bottom: 0;
-        #gradient.vertical(rgba(255,255,255,0), #fff);
-      }
-    }
-  } // main-container
+        h1.page-header {
+          //display: none;
+          margin: 50px 0 0;
+          padding: 0;
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-h1);
+          color: @text-color;
+          line-height: 1;
+          border: none;
 
-  &.kvcollege_section {
-    .main-container {
-      .container {
-        .row {
-          section {
-            h1.page-header {
-              color: @pxl-color-hso-kv;
+          body.kvcollege_section & {
+            color: @pxl-color-hso-kv;
+          }
+          body.hscollege_section & {
+            color: @pxl-color-hso-hs;
+          }
+          body.kscollege_section & {
+            color: @pxl-color-hso-ks;
+          }
+          body.kscollege_section.page-taxonomy-term-3 & {
+            // don't show title on KS segment page
+            display: none;
+          }
+          body.excollege_section & {
+            color: @pxl-color-hso-ex;
+          }
+        }
+
+        .messages {
+          margin-top: 20px;
+        }
+
+        //
+        // Admin tabs and action links
+        ul.tabs--primary.nav-tabs {
+          margin: 20px 0 5px;
+          li {
+            float: right;
+            a {
+              padding: 5px 10px;
+              font-family: @font-family-monospace;
+              font-size: @font-size-small;
+              border-radius: 0;
             }
           }
         }
-      }
-    }
-  }
-  &.hscollege_section {
-    .main-container {
-      .container {
-        .row {
-          section {
-            h1.page-header {
-              color: @pxl-color-hso-hs;
+        ul.action-links {
+          margin: 0;
+          li {
+            float: right;
+            a {
+              font-family: @font-family-monospace;
+              font-size: @font-size-small;
             }
           }
         }
-      }
-    }
-  }
-  &.kscollege_section {
-    .main-container {
-      .container {
-        .row {
-          section {
-            h1.page-header {
-              display: none;
-              color: @pxl-color-hso-ks;
-            }
-          }
-        }
-      }
-    }
-  }
-  &.excollege_section {
-    .main-container {
-      .container {
-        .row {
-          section {
-            h1.page-header {
-              color: @pxl-color-hso-ex;
-            }
-          }
+      } // section
+
+      //
+      // main content region
+      .region-content {
+        #block-system-main {
         }
       }
     }
   }
 
-}
+  //
+  // fading area on top and bottom of main container
+  .fading {
+    display: none; // will be enabled via event
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: @pxl-content-fading-height;
+    z-index: 10;
+
+    &.fading-top {
+      top: 0;
+      #gradient.vertical(#fff, rgba(255,255,255,0));
+    }
+    &.fading-bottom {
+      bottom: 0;
+      #gradient.vertical(rgba(255,255,255,0), #fff);
+    }
+  }
+} // main-container
+

@@ -115,8 +115,6 @@ function pixelgarage_preprocess_page(&$vars) {
  */
 function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
   $view = &$vars['view'];
-  if ($view->name != 'courses' && $view->current_display != 'block_segment_courses') return;
-
   //
   // add some additional variables for the segment courses accordion view
   $title_field = $vars['options']['title_field'];
