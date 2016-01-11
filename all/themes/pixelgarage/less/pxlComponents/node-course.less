@@ -20,13 +20,15 @@
   }
 }
 
+
+
 // General settings
 // -------------------------
 .node.node-course{
   .row {
     .col-sm-12 {
       .field-name-body {
-        p {
+        p, caption {
           display: none;
         }
 
@@ -61,23 +63,23 @@
             }
           }
         }
+
+        body.kvcollege_section & {
+          .links(@pxl-color-hso-kv);
+        }
+        body.hscollege_section & {
+          .links(@pxl-color-hso-hs);
+        }
+        body.kscollege_section & {
+          .links(@pxl-color-hso-ks);
+        }
+        body.excollege_section & {
+          .links(@pxl-color-hso-ex);
+        }
       }
 
       .field-name-course-tab {
-
-      }
-
-      body.kvcollege_section & {
-        .links(@pxl-color-hso-kv);
-      }
-      body.hscollege_section & {
-        .links(@pxl-color-hso-hs);
-      }
-      body.kscollege_section & {
-        .links(@pxl-color-hso-ks);
-      }
-      body.excollege_section & {
-        .links(@pxl-color-hso-ex);
+        // see view-course-tabs
       }
 
     }

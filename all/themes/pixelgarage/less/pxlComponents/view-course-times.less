@@ -1,0 +1,113 @@
+/*
+ *  View Course-times component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-color-bg-button: #FA5050;
+
+// Mixins
+// -------------------------
+
+
+// General settings
+// -------------------------
+.view.view-course-times {
+  .view-header {
+    // intro text
+    padding: 30px 15px;
+
+    p {
+      margin: 0 auto;
+      width: 80%;
+      font-family: @pxl-text-font;
+      font-size: @font-size-base;
+      text-align: center;
+      color: @text-color-light;
+    }
+  }
+
+  .view-content {
+    // course times table
+    padding: 0 15px;
+
+    table {
+      width: 100%;
+
+      thead {
+        tr {
+          th {
+            padding: 5px 5px 10px;
+            font-family: @pxl-text-font;
+            font-size: @font-size-base;
+            border: none;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          padding: 0;
+          border: none;
+
+          &.even {
+            background-color: #fff;
+          }
+
+          &.odd {
+            background-color: @pxl-color-hso-gray;
+          }
+
+          td {
+            padding: 8px;
+            vertical-align: middle;
+            font-family: @pxl-text-font-light;
+            font-size: @font-size-base;
+            border: none;
+
+            a {
+              color: @text-color;
+            }
+
+            &.views-field-field-course-date {
+              white-space: nowrap;
+              line-height: 1.2;
+            }
+
+            &.views-field-field-location {
+              text-align: center;
+            }
+
+            &.views-field-body p {
+              font-size: @font-size-base;
+            }
+
+            &.views-field-field-brand {
+              text-align: center;
+
+              img {
+                height: 30px;
+              }
+            }
+
+            &.views-field-nothing {
+              text-align: right;
+
+              a {
+                display: inline-block;
+                padding: 7px 15px 10px;
+                min-width: 110px;
+                line-height: 1;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                #pxl-mixins.border-radius(3px);
+                background-color: @pxl-color-bg-button;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

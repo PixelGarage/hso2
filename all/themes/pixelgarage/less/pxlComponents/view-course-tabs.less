@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-
+@pxl-color-border: #ddd;
 
 // Mixins
 // -------------------------
@@ -19,13 +19,32 @@
 
       li {
         a {
+          margin: 0;
+          padding: 10px 15px;
+          color: @text-color-light;
+          #pxl-mixins.border-radius(0);
+          border-right: 1px solid @pxl-color-border;
+          background-color: @pxl-color-hso-gray;
+        }
 
+        &:last-child {
+          a {
+            border-right: transparent;
+          }
+        }
+
+        &.active, &:hover, &:focus {
+          a {
+            color: @text-color;
+            border: 1px solid @pxl-color-border;
+            background-color: #fff;
+          }
         }
       }
     }
 
     .tab-content {
-      border: 1px solid #ddd;
+      border: 1px solid @pxl-color-border;
       border-top: none;
 
       .tab-pane {
@@ -39,104 +58,7 @@
           }
         }
 
-        .view-course-times {
-          .view-header {
-            padding: 30px 15px;
-
-            p {
-              margin: 0 auto;
-              width: 80%;
-              font-family: @pxl-text-font;
-              font-size: @font-size-base;
-              text-align: center;
-              color: @text-color-light;
-            }
-          }
-
-          .view-content {
-            padding: 0 15px;
-
-            table {
-              width: 100%;
-
-              thead {
-                th {
-                  padding: 5px;
-                  font-family: @pxl-text-font;
-                  font-size: @font-size-base;
-                }
-              }
-
-              tbody {
-                tr {
-                  border: none;
-                  padding: 0;
-
-                  td {
-                    padding: 5px;
-                    vertical-align: middle;
-                    font-size: @font-size-base;
-
-                    a {
-                      font-family: @pxl-text-font;
-                      color: #000;
-                    }
-
-                    &.views-field-field-course-date {
-                      white-space: nowrap;
-                      line-height: 1;
-                    }
-
-                    &.views-field-field-location {
-                      text-align: center;
-                    }
-
-                    &.views-field-body p {
-                      font-size: @font-size-base;
-                    }
-
-                    &.views-field-field-brand {
-                      text-align: center;
-
-                      img {
-                        height: 30px;
-                      }
-                    }
-
-                    &.views-field-nothing {
-                      text-align: right;
-
-                      a {
-                        display: inline-block;
-                        padding: 7px 15px 10px;
-                        min-width: 110px;
-                        line-height: 1;
-                        color: #fff;
-                        text-align: center;
-                        text-decoration: none;
-                        #pxl-mixins.border-radius(4px);
-
-                        body.kvcollege_section & {
-                          background-color: @pxl-color-hso-kv;
-                        }
-                        body.hscollege_section & {
-                          background-color: @pxl-color-hso-hs;
-                        }
-                        body.kscollege_section & {
-                          background-color: @pxl-color-hso-ks;
-                        }
-                        body.excollege_section & {
-                          background-color: @pxl-color-hso-ex;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-
+        // see view-course-times
       }
     }
   }

@@ -9628,7 +9628,8 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
 /*
  *  Course content type
  * --------------------------------------------------*/
-.node.node-course .row .col-sm-12 .field-name-body p {
+.node.node-course .row .col-sm-12 .field-name-body p,
+.node.node-course .row .col-sm-12 .field-name-body caption {
   display: none;
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock {
@@ -9656,40 +9657,40 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child td {
   border-bottom: 1px solid #cccccc;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 a {
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #95ba40;
   text-decoration: none;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 a:hover,
-body.kvcollege_section .node.node-course .row .col-sm-12 a.active,
-body.kvcollege_section .node.node-course .row .col-sm-12 a:focus {
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 a {
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #e87431;
   text-decoration: none;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 a:hover,
-body.hscollege_section .node.node-course .row .col-sm-12 a.active,
-body.hscollege_section .node.node-course .row .col-sm-12 a:focus {
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 a {
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #78729f;
   text-decoration: none;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 a:hover,
-body.kscollege_section .node.node-course .row .col-sm-12 a.active,
-body.kscollege_section .node.node-course .row .col-sm-12 a:focus {
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.excollege_section .node.node-course .row .col-sm-12 a {
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #b1a895;
   text-decoration: none;
 }
-body.excollege_section .node.node-course .row .col-sm-12 a:hover,
-body.excollege_section .node.node-course .row .col-sm-12 a.active,
-body.excollege_section .node.node-course .row .col-sm-12 a:focus {
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
 /*
@@ -10018,8 +10019,28 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-tabs .view-content ul.nav-tabs {
   margin: 0;
 }
+.view.view-course-tabs .view-content ul.nav-tabs li a {
+  margin: 0;
+  padding: 10px 15px;
+  color: #777777;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-right: 1px solid #dddddd;
+  background-color: #ebebeb;
+}
+.view.view-course-tabs .view-content ul.nav-tabs li:last-child a {
+  border-right: transparent;
+}
+.view.view-course-tabs .view-content ul.nav-tabs li.active a,
+.view.view-course-tabs .view-content ul.nav-tabs li:hover a,
+.view.view-course-tabs .view-content ul.nav-tabs li:focus a {
+  color: #333333;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+}
 .view.view-course-tabs .view-content .tab-content {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-top: none;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
@@ -10129,10 +10150,13 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   height: 0;
   padding-bottom: 56.25%;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-header {
+/*
+ *  View Course-times component
+ * --------------------------------------------------*/
+.view.view-course-times .view-header {
   padding: 30px 15px;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-header p {
+.view.view-course-times .view-header p {
   margin: 0 auto;
   width: 80%;
   font-family: 'SohoGothicProRegular', serif;
@@ -10140,50 +10164,58 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   text-align: center;
   color: #777777;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content {
+.view.view-course-times .view-content {
   padding: 0 15px;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table {
+.view.view-course-times .view-content table {
   width: 100%;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table thead th {
-  padding: 5px;
+.view.view-course-times .view-content table thead tr th {
+  padding: 5px 5px 10px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
-}
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr {
   border: none;
+}
+.view.view-course-times .view-content table tbody tr {
   padding: 0;
+  border: none;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td {
-  padding: 5px;
+.view.view-course-times .view-content table tbody tr.even {
+  background-color: #fff;
+}
+.view.view-course-times .view-content table tbody tr.odd {
+  background-color: #ebebeb;
+}
+.view.view-course-times .view-content table tbody tr td {
+  padding: 8px;
   vertical-align: middle;
+  font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
+  border: none;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td a {
-  font-family: 'SohoGothicProRegular', serif;
-  color: #000;
+.view.view-course-times .view-content table tbody tr td a {
+  color: #333333;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-course-date {
+.view.view-course-times .view-content table tbody tr td.views-field-field-course-date {
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1.2;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-location {
+.view.view-course-times .view-content table tbody tr td.views-field-field-location {
   text-align: center;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-body p {
+.view.view-course-times .view-content table tbody tr td.views-field-body p {
   font-size: 16px;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-brand {
+.view.view-course-times .view-content table tbody tr td.views-field-field-brand {
   text-align: center;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-field-brand img {
+.view.view-course-times .view-content table tbody tr td.views-field-field-brand img {
   height: 30px;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing {
+.view.view-course-times .view-content table tbody tr td.views-field-nothing {
   text-align: right;
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
+.view.view-course-times .view-content table tbody tr td.views-field-nothing a {
   display: inline-block;
   padding: 7px 15px 10px;
   min-width: 110px;
@@ -10191,21 +10223,10 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   color: #fff;
   text-align: center;
   text-decoration: none;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-}
-body.kvcollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
-  background-color: #95ba40;
-}
-body.hscollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
-  background-color: #e87431;
-}
-body.kscollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
-  background-color: #78729f;
-}
-body.excollege_section .view.view-course-tabs .view-content .tab-content .tab-pane .view-course-times .view-content table tbody tr td.views-field-nothing a {
-  background-color: #b1a895;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fa5050;
 }
 /*
  *  Header section (navigation)

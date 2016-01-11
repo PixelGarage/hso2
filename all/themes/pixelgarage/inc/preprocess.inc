@@ -96,16 +96,16 @@ function pixelgarage_preprocess_page(&$vars) {
 
   // set segment logo
   $contexts = context_active_contexts();
-  if (array_key_exists('kv-college', $contexts)) {
+  if (array_key_exists('kv-college', $contexts) || array_key_exists('kv-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'kv_logo.png', $vars['logo']);
   }
-  if (array_key_exists('hs-college', $contexts)) {
+  if (array_key_exists('hs-college', $contexts) || array_key_exists('hs-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'hs_logo.png', $vars['logo']);
   }
-  if (array_key_exists('ks-college', $contexts)) {
+  if (array_key_exists('ks-college', $contexts) || array_key_exists('ks-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
   }
-  if (array_key_exists('ex-college', $contexts)) {
+  if (array_key_exists('ex-college', $contexts) || array_key_exists('ex-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'ex_logo.png', $vars['logo']);
   }
 }
