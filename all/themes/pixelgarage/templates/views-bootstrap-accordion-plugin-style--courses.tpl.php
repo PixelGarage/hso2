@@ -15,20 +15,15 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a class="accordion-toggle"
-             data-toggle="collapse"
-             href="#collapse<?php print $key ?>">
-            <?php print $titles[$key] ?>
-          </a>
+          <?php print $titles[$key] ?>
         </h4>
-          <span class="button short-description">
-            <?php print $label_short_desc ?>
-          </span>
-        <?php if (!empty($details[$key])): ?>
-          <span class="button details">
-            <?php print $details[$key] ?>
-          </span>
-        <?php endif; ?>
+        <span class="button short-description">
+          <a class="accordion-toggle"
+              data-toggle="collapse"
+              href="#collapse<?php print $key ?>">
+             <?php print $label_short_desc ?>
+          </a>
+        </span>
       </div>
 
       <div id="collapse<?php print $key ?>" class="panel-collapse collapse">

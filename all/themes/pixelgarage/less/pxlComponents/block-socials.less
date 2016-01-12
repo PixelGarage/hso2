@@ -118,12 +118,12 @@
     margin: 0 10px 0 0;
 
     a.follow-link {
-      padding: 2px 0;
+      padding: 0;
       height: 38px;
       width: 38px;
       font-family: @pxl-icon-font;
       font-size: @font-size-larger;
-      color: @pxl-follow-color;
+      color: #fff;
       background-image: none !important;
       text-decoration: none;
       text-align: center;
@@ -151,9 +151,9 @@
       }
 
       &:hover {
-        padding: 0;
-        #pxl-mixins.border-radius(50%);
-        border: 2px solid #fff;
+        //#pxl-mixins.border-radius(50%);
+        //border: 2px solid @pxl-color-footer;
+        color: @pxl-color-footer;
       }
 
     }

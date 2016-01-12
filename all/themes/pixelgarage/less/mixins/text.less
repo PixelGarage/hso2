@@ -35,7 +35,7 @@
     font-size: @min-size;
 
     @media @narrow {
-      font-size: unit(@max-size/6, vw);
+      font-size: unit(@max-size/7.68, vw);
     }
     @media @tablet {
       font-size: @max-size;
@@ -66,6 +66,11 @@
       font-family: @pxl-text-font;
       .font-size-responsive(@font-size-base);
       .hyphenate;
+    }
+
+    li {
+      font-family: @pxl-text-font;
+      .font-size-responsive(@font-size-base);
     }
 
     pre, address {

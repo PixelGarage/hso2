@@ -70,7 +70,7 @@
           color: #fff;
           line-height: 1;
           #pxl-mixins.border-radius(0);
-          background-color: transparent;
+          background: none;
 
           .panel-title {
             display: inline-block;
@@ -78,7 +78,7 @@
 
             a {
               display: block;
-              width: 80%;
+              width: 100%;
               padding: 10px 10px 12px;
               font-size: 14px;
               color: @text-color-light;
@@ -86,62 +86,42 @@
             }
           }
 
-          span.short-description {
-            cursor: pointer;
-            pointer-events: none;
+          .short-description {
             display: none;
             position: absolute;
-            top: 0;
-            right: 100px;
-            padding: 10px 10px 12px;
-            color: #fff;
-          }
-
-          span.details {
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            right: 0;
+            top: 5px;
+            right: 5px;
+            padding: 0;
+            #pxl-mixins.border-radius(3px);
+            border: 1px solid #fff;
 
             a {
               display: block;
-              padding: 10px 10px 12px;
+              padding: 5px 10px 7px;
               font-size: 14px;
               color: #fff;
               text-decoration: none;
-
-              &:hover, &.active {
-                color: #fff;
-              }
             }
           }
 
           @media @narrow {
-            .panel-title {
+            .panel-title,
+            .short-description {
               a {
                 font-size: 15px;
               }
             }
 
-            span.details {
-              font-size: 15px;
-            }
           }
 
           @media @tablet {
-            .panel-title {
+            .panel-title,
+            .short-description {
+              display: inline-block;
+
               a {
-                width: 100%;
                 font-size: @font-size-base;
               }
-            }
-
-            span.short-description {
-              display: inline-block;
-            }
-
-            span.details {
-              font-size: @font-size-base;
             }
           }
 

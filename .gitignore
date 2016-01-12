@@ -3,6 +3,7 @@ default/settings*.php
 
 # Ignore paths that contain user-generated content.
 default/files/
+default/files_private/anmeldung
 default/files_private/tmp
 default/files_private/backup_migrate/scheduled
 

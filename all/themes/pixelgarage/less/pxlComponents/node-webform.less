@@ -7,15 +7,15 @@
 @webform-max-width: 100%;
 @webform-inline-input-width: 58.333333%;
 
-@webform-color-label: @body-bg;
-@webform-color-text: @text-color;
-@webform-color-border: @gray-light;
+@webform-color-label: @text-color;
+@webform-color-border: @pxl-color-hso-gray;
 @webform-color-border-active: @brand-primary;
-@webform-bg-color-input: #eee;
-@webform-color-shadow: @text-color;
+@webform-color-input: @text-color;
+@webform-bg-color-input: #fff;
+@webform-color-input-shadow: @text-color;
 
-@webform-color-submit: @text-color;
-@webform-bg-color-submit: @gray-lighter;
+@webform-color-submit: #fff;
+@webform-bg-color-submit: @pxl-color-bg-button;
 
 @webform-success-badge-dim: 60px;
 
@@ -23,28 +23,39 @@
 
 // Mixins
 // -------------------------
+.links(@seg-color) {
+  a {
+    color: @seg-color;
+    text-decoration: none;
+
+    &:hover, &.active, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
 .form-label() {
   margin: 5px 10px 10px 0;
   padding: 0;
   width: auto;
-  font-family: @pxl-text-font-bold;
-  font-size: 18px;
+  font-family: @pxl-text-font;
+  font-size: @font-size-base;
   font-weight: normal;
   line-height: 1.5em;
   text-align: left;
   color: @webform-color-label;
 
   span.form-required {
-    color: @webform-color-text;
+    color: @webform-color-input;
   }
 }
 
 .resp-submit-button(@color: #fff; @bg-color: @gray-light; @radius: @border-radius-small) {
   display: inline-block;
   margin: 0;
-  padding: 0.3em 1em;
+  padding: 15px 20px;
   font-family: @pxl-text-font;
-  font-size: 18px;
+  font-size: @font-size-large;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: capitalize;
@@ -68,15 +79,6 @@
 .node-webform {
   padding-bottom: 30px;
 
-  body.node-type-webform & {
-    // full page webforms
-    padding: 20px 0 100px;
-
-    @media @narrow {
-      padding: 20px 30px 100px;
-    }
-  }
-
   div.col-sm-12 {
     width: 100%;
 
@@ -84,7 +86,7 @@
       //display: none;
     }
 
-    // see webform-client-form for form style
+    // see webform-client-form for form styling
 
   }
 
@@ -138,57 +140,55 @@ ul.webform-submission-actions {
 // Confirmation settings
 // -------------------------
 .webform-confirmation {
-  text-align: center;
-
-  .fa {
-    margin: 0;
-    padding: 0;
-    width: @webform-success-badge-dim;
-    height: @webform-success-badge-dim;
-    font-size: (@webform-success-badge-dim - 20px);
-    line-height: @webform-success-badge-dim;
-    #pxl-mixins.border-radius(@webform-success-badge-dim/2);
-
-    &.fa-check {
-      color: @brand-success;
-      border: 2px solid @brand-success;
-    }
-    &.fa-times {
-      color: @brand-danger;
-      border: 2px solid @brand-danger;
-    }
-    &.fa-exclamation {
-      color: @brand-warning;
-      border: 2px solid @brand-warning;
-    }
-  }
-
-  .confirmation-message {
-    p {
-      margin-top: 20px;
-    }
-  }
+  text-align: left;
+  #pxl-mixins.wysiwyg-body;
 }
 
 // Webform settings
 // -------------------------
 form.webform-client-form {
+  //
+  // all links
+  body.kvcollege_section & {
+    .links(@pxl-color-hso-kv);
+  }
+  body.hscollege_section & {
+    .links(@pxl-color-hso-hs);
+  }
+  body.kscollege_section & {
+    .links(@pxl-color-hso-ks);
+  }
+  body.excollege_section & {
+    .links(@pxl-color-hso-ex);
+  }
+
+  //
   // all fieldsets
   fieldset.panel {
+    margin: 0 0 30px;
+    border: none;
+    box-shadow: none;
+
     .panel-heading {
+      padding: 0;
+      border: none;
+      #pxl-mixins.border-radius(0);
+      border-top: 1px solid #ccc;
       background: none;
-      border-bottom: none;
 
       .panel-title {
-        display: block;
-        font-family: @pxl-text-font-bold;
+        padding: 10px 0;
+        font-family: @pxl-text-font-medium;
+        font-size: @font-size-base;
         color: @text-color;
-        text-align: center;
-        font-size: 26px;
+        line-height: 1;
       }
     }
 
     .panel-body {
+      padding: 20px 0;
+      border: none;
+
       .help-block {
         display: none;
       }
@@ -268,26 +268,32 @@ form.webform-client-form {
     max-width: @webform-max-width;
     background-color: #fff;
 
+    //
+    // field labels
     .control-label {
       .form-label;
     }
 
+    //
+    // field description
     div.description {
       display: block;
       margin: 0;
       padding: 5px 0 10px;
-      font-family: @pxl-text-font;
+      font-family: @pxl-text-font-light;
       font-size: 14px;
     }
 
+    //
+    // input fields and text areas
     input, textarea {
       padding: 5px 10px;
       height: auto;
       font-family: @pxl-text-font-light;
-      font-size: 18px;
+      font-size: @font-size-base;
       line-height: 1.5em;
       text-align: left;
-      color: @webform-color-text;
+      color: @webform-color-input;
       box-shadow: none;
       #pxl-mixins.border-radius(@border-radius-small);
       border: 1px solid @webform-color-border;
@@ -295,8 +301,22 @@ form.webform-client-form {
     }
     input:focus,
     textarea:focus {
-      border: 1px solid @webform-color-border-active;
-      .box-shadow(0 0 3px @webform-color-shadow);
+      body.kvcollege_section & {
+        border: 1px solid @pxl-color-hso-kv;
+        .box-shadow(inset 0 0 3px @pxl-color-hso-kv);
+      }
+      body.hscollege_section & {
+        border: 1px solid @pxl-color-hso-hs;
+        .box-shadow(inset 0 0 3px @pxl-color-hso-hs);
+      }
+      body.kscollege_section & {
+        border: 1px solid @pxl-color-hso-ks;
+        .box-shadow(inset 0 0 3px @pxl-color-hso-ks);
+      }
+      body.excollege_section & {
+        border: 1px solid @pxl-color-hso-ex;
+        .box-shadow(inset 0 0 3px @pxl-color-hso-ex);
+      }
     }
 
     .form-textarea-wrapper {
@@ -305,14 +325,16 @@ form.webform-client-form {
       }
     }
 
+    //
+    // select boxes
     select {
       padding: 5px 10px;
       height: auto;
       font-family: @pxl-text-font-light;
-      font-size: 18px;
+      font-size: @font-size-base;
       line-height: 1.2em;
       text-align: left;
-      color: @webform-color-text;
+      color: @webform-color-input;
       #pxl-mixins.border-radius(@border-radius-small);
       border: 1px solid @webform-color-border;
       background-color: @webform-bg-color-input;
@@ -320,9 +342,44 @@ form.webform-client-form {
 
       &:focus, &:active {
         outline: none;
+        body.kvcollege_section & {
+          border: 1px solid @pxl-color-hso-kv;
+        }
+        body.hscollege_section & {
+          border: 1px solid @pxl-color-hso-hs;
+        }
+        body.kscollege_section & {
+          border: 1px solid @pxl-color-hso-ks;
+        }
+        body.excollege_section & {
+          border: 1px solid @pxl-color-hso-ex;
+        }
       }
     }
 
+    //
+    // radios and checkboxes
+    .form-radios, .form-checkboxes {
+      .form-item {
+        display: block;
+
+        label {
+          input {
+            display: inline-block;
+            position: relative;
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+    }
+    .form-radios {
+      .form-item label input {
+        margin-left: 20px;
+      }
+    }
+
+    //
+    // file upload components
     .form-managed-file {
       display: block;
       position: relative;
@@ -349,12 +406,14 @@ form.webform-client-form {
       }
     }
 
+    //
+    // markup components
     &.webform-component-markup {
       margin-bottom: 25px;
       padding-top: 15px;
 
       h2 {
-        font-family: @pxl-text-font-bold;
+        font-family: @pxl-text-font-medium;
         font-weight: normal;
         font-size: @font-size-base;
         line-height: 1em;
@@ -362,12 +421,13 @@ form.webform-client-form {
       }
       p {
         font-family: @pxl-text-font-light;
-        #pxl-mixins.font-size-responsive(15px);
+        #pxl-mixins.font-size-responsive(16px);
         line-height: 22px;
         text-align: left;
-        color: @webform-color-text;
+        color: @webform-color-input;
       }
     }
+
 
     //
     // inline components
@@ -393,6 +453,41 @@ form.webform-client-form {
           width: @webform-inline-input-width;
         }
       }
+
+      //
+      // Specific components
+      //
+      // Anrede radios
+      &.webform-component--adresse--anrede {
+        .form-radios {
+          .radio {
+            display: inline-block;
+          }
+        }
+      }
+
+      //
+      // date selects
+      &.webform-component--personliche-angaben--gebdate {
+        .webform-container-inline {
+          position: relative;
+          right: auto;
+          width: 100%;
+
+          select {
+            position: static;
+            display: inline-block;
+            margin: 0 -2px;
+            width: 33.33333%;
+          }
+
+          @media @narrow {
+            position: absolute;
+            right: 0;
+            width: @webform-inline-input-width;
+          }
+        }
+      }
     }
 
   }
@@ -410,8 +505,19 @@ form.webform-client-form {
 
     button.webform-submit {
       min-width: 50%;
-      .resp-submit-button;
-      padding: 15px 20px;
+
+      body.kvcollege_section & {
+        .resp-submit-button(#fff, @pxl-color-hso-kv);
+      }
+      body.hscollege_section & {
+        .resp-submit-button(#fff, @pxl-color-hso-hs);
+      }
+      body.kscollege_section & {
+        .resp-submit-button(#fff, @pxl-color-hso-ks);
+      }
+      body.excollege_section & {
+        .resp-submit-button(#fff, @pxl-color-hso-ex);
+      }
     }
   }
 }

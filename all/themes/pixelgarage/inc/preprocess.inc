@@ -122,20 +122,15 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
   $vars['classes_array'][] = 'panel-group';
   $vars['label_short_desc'] = t('In Kürze');
 
-  // Get titles and detail links.
+  // Get titles with course link.
   if (isset($view->field[$title_field])) {
     foreach ($vars['view']->result as $key => $field) {
       $title = $view->style_plugin->get_field($key, $title_field);
-      $vars['titles'][$key] = strip_tags($title);
-
-      // create detail links
-      if ($pos = strpos($title, '>')) {
-        $vars['details'][$key] = substr($title, 0, $pos+1) . t('Details') . '</a>';
-      }
+      $vars['titles'][$key] = $title;
     }
   }
 
-  // get course subjects
+  // add course subject titles and main titles, if any
   $active_course_subject = '';
   foreach ($vars['view']->result as $key => $field) {
     $course_subject = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));

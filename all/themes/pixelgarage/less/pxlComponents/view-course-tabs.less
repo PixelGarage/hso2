@@ -15,9 +15,21 @@
 .view.view-course-tabs {
   .view-content {
     ul.nav-tabs {
-      margin: 0;
+      // responsive tab scrolling
+      margin: 0 0 -1px;
+      padding: 2px 2px 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      border: 1px solid @pxl-color-border;
+      border-bottom: none;
+      background-color: @pxl-color-hso-gray;
 
-      li {
+      >li {
+        display: inline-block;
+        float:none;
+        margin: 0 -2px -1px 0;
+
         a {
           margin: 0;
           padding: 10px 15px;

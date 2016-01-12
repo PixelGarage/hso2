@@ -8737,6 +8737,133 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  * Pixelgarage Components
  * --------------------------------------------------*/
 /*
+ *  Panel structure
+ * --------------------------------------------------*/
+.panel-display .panel-panel .panel-separator {
+  margin-top: 30px;
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
+    font-size: 17px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
+  font-size: 13.75px;
+}
+@media screen and (min-width: 480px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
+    font-size: 2.86458333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
+    font-size: 22px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content p,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 480px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content p,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content p,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
+    font-size: 16px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content li {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content li {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content li {
+    font-size: 16px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content pre,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content address {
+  font-family: 'SohoGothicProLightItalic' serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content pre,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content address {
+    font-size: 1.953125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content pre,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content address {
+    font-size: 15px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content img,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content embed,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content video,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content audio,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+/*
  *  Login form component
  *  (see inc/login.inc for login form alteration)
  * --------------------------------------------------*/
@@ -9018,12 +9145,12 @@ form#user-login {
   margin: 0 10px 0 0;
 }
 .follow-links .follow-link-wrapper a.follow-link {
-  padding: 2px 0;
+  padding: 0;
   height: 38px;
   width: 38px;
   font-family: 'fontawesome';
   font-size: 24px;
-  color: #ffffff;
+  color: #fff;
   background-image: none !important;
   text-decoration: none;
   text-align: center;
@@ -9050,11 +9177,7 @@ form#user-login {
   content: "\f09e";
 }
 .follow-links .follow-link-wrapper a.follow-link:hover {
-  padding: 0;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid #fff;
+  color: #999999;
 }
 /*
  *  Language block component
@@ -9195,6 +9318,20 @@ form#user-login {
     font-size: 16px;
   }
 }
+.node-page div.col-sm-12 .field-name-body li {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .node-page div.col-sm-12 .field-name-body li {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-page div.col-sm-12 .field-name-body li {
+    font-size: 16px;
+  }
+}
 .node-page div.col-sm-12 .field-name-body pre,
 .node-page div.col-sm-12 .field-name-body address {
   font-family: 'SohoGothicProLightItalic' serif;
@@ -9235,14 +9372,6 @@ form#user-login {
  * --------------------------------------------------*/
 .node-webform {
   padding-bottom: 30px;
-}
-body.node-type-webform .node-webform {
-  padding: 20px 0 100px;
-}
-@media screen and (min-width: 480px) {
-  body.node-type-webform .node-webform {
-    padding: 20px 30px 100px;
-  }
 }
 .node-webform div.col-sm-12 {
   width: 100%;
@@ -9287,44 +9416,225 @@ ul.webform-submission-actions li a:active {
   }
 }
 .webform-confirmation {
-  text-align: center;
+  text-align: left;
 }
-.webform-confirmation .fa {
-  margin: 0;
-  padding: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 40px;
-  line-height: 60px;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
+.webform-confirmation h1,
+.webform-confirmation h2,
+.webform-confirmation h3,
+.webform-confirmation h4,
+.webform-confirmation h5,
+.webform-confirmation h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
 }
-.webform-confirmation .fa.fa-check {
-  color: #5cb85c;
-  border: 2px solid #5cb85c;
+@media screen and (min-width: 480px) {
+  .webform-confirmation h1,
+  .webform-confirmation h2,
+  .webform-confirmation h3,
+  .webform-confirmation h4,
+  .webform-confirmation h5,
+  .webform-confirmation h6 {
+    font-size: 2.21354167vw;
+  }
 }
-.webform-confirmation .fa.fa-times {
-  color: #d9534f;
-  border: 2px solid #d9534f;
+@media screen and (min-width: 768px) {
+  .webform-confirmation h1,
+  .webform-confirmation h2,
+  .webform-confirmation h3,
+  .webform-confirmation h4,
+  .webform-confirmation h5,
+  .webform-confirmation h6 {
+    font-size: 17px;
+  }
 }
-.webform-confirmation .fa.fa-exclamation {
-  color: #f0ad4e;
-  border: 2px solid #f0ad4e;
+.webform-confirmation h1,
+.webform-confirmation h2,
+.webform-confirmation h3 {
+  font-size: 13.75px;
 }
-.webform-confirmation .confirmation-message p {
-  margin-top: 20px;
+@media screen and (min-width: 480px) {
+  .webform-confirmation h1,
+  .webform-confirmation h2,
+  .webform-confirmation h3 {
+    font-size: 2.86458333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation h1,
+  .webform-confirmation h2,
+  .webform-confirmation h3 {
+    font-size: 22px;
+  }
+}
+.webform-confirmation p,
+.webform-confirmation tbody td {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 480px) {
+  .webform-confirmation p,
+  .webform-confirmation tbody td {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation p,
+  .webform-confirmation tbody td {
+    font-size: 16px;
+  }
+}
+.webform-confirmation li {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .webform-confirmation li {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation li {
+    font-size: 16px;
+  }
+}
+.webform-confirmation pre,
+.webform-confirmation address {
+  font-family: 'SohoGothicProLightItalic' serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .webform-confirmation pre,
+  .webform-confirmation address {
+    font-size: 1.953125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation pre,
+  .webform-confirmation address {
+    font-size: 15px;
+  }
+}
+.webform-confirmation hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
+.webform-confirmation img,
+.webform-confirmation embed,
+.webform-confirmation video,
+.webform-confirmation audio,
+.webform-confirmation iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+body.kvcollege_section form.webform-client-form a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section form.webform-client-form a:hover,
+body.kvcollege_section form.webform-client-form a.active,
+body.kvcollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.kvcollege_section form.webform-client-form a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section form.webform-client-form a:hover,
+body.kvcollege_section form.webform-client-form a.active,
+body.kvcollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section form.webform-client-form a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section form.webform-client-form a:hover,
+body.hscollege_section form.webform-client-form a.active,
+body.hscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section form.webform-client-form a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section form.webform-client-form a:hover,
+body.hscollege_section form.webform-client-form a.active,
+body.hscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section form.webform-client-form a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section form.webform-client-form a:hover,
+body.kscollege_section form.webform-client-form a.active,
+body.kscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section form.webform-client-form a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section form.webform-client-form a:hover,
+body.kscollege_section form.webform-client-form a.active,
+body.kscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.excollege_section form.webform-client-form a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section form.webform-client-form a:hover,
+body.excollege_section form.webform-client-form a.active,
+body.excollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.excollege_section form.webform-client-form a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section form.webform-client-form a:hover,
+body.excollege_section form.webform-client-form a.active,
+body.excollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+form.webform-client-form fieldset.panel {
+  margin: 0 0 30px;
+  border: none;
+  box-shadow: none;
 }
 form.webform-client-form fieldset.panel .panel-heading {
+  padding: 0;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-top: 1px solid #ccc;
   background: none;
-  border-bottom: none;
 }
 form.webform-client-form fieldset.panel .panel-heading .panel-title {
-  display: block;
-  font-family: 'SohoGothicProBold', serif;
+  padding: 10px 0;
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 16px;
   color: #333333;
-  text-align: center;
-  font-size: 26px;
+  line-height: 1;
+}
+form.webform-client-form fieldset.panel .panel-body {
+  padding: 20px 0;
+  border: none;
 }
 form.webform-client-form fieldset.panel .panel-body .help-block {
   display: none;
@@ -9363,9 +9673,9 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   height: auto;
   display: inline-block;
   margin: 0;
-  padding: 0.3em 1em;
+  padding: 15px 20px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: capitalize;
@@ -9401,9 +9711,9 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button {
   display: inline-block;
   margin: 0;
-  padding: 0.3em 1em;
+  padding: 15px 20px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: capitalize;
@@ -9433,12 +9743,12 @@ form.webform-client-form .webform-component .control-label {
   margin: 5px 10px 10px 0;
   padding: 0;
   width: auto;
-  font-family: 'SohoGothicProBold', serif;
-  font-size: 18px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.5em;
   text-align: left;
-  color: #ffffff;
+  color: #333333;
 }
 form.webform-client-form .webform-component .control-label span.form-required {
   color: #333333;
@@ -9447,7 +9757,7 @@ form.webform-client-form .webform-component div.description {
   display: block;
   margin: 0;
   padding: 5px 0 10px;
-  font-family: 'SohoGothicProRegular', serif;
+  font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
 form.webform-client-form .webform-component input,
@@ -9455,7 +9765,7 @@ form.webform-client-form .webform-component textarea {
   padding: 5px 10px;
   height: auto;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5em;
   text-align: left;
   color: #333333;
@@ -9463,14 +9773,32 @@ form.webform-client-form .webform-component textarea {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #777777;
-  background-color: #eeeeee;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
 }
-form.webform-client-form .webform-component input:focus,
-form.webform-client-form .webform-component textarea:focus {
-  border: 1px solid #337ab7;
-  -webkit-box-shadow: 0 0 3px #333333;
-  box-shadow: 0 0 3px #333333;
+body.kvcollege_section form.webform-client-form .webform-component input:focus,
+body.kvcollege_section form.webform-client-form .webform-component textarea:focus {
+  border: 1px solid #95ba40;
+  -webkit-box-shadow: inset 0 0 3px #95ba40;
+  box-shadow: inset 0 0 3px #95ba40;
+}
+body.hscollege_section form.webform-client-form .webform-component input:focus,
+body.hscollege_section form.webform-client-form .webform-component textarea:focus {
+  border: 1px solid #e87431;
+  -webkit-box-shadow: inset 0 0 3px #e87431;
+  box-shadow: inset 0 0 3px #e87431;
+}
+body.kscollege_section form.webform-client-form .webform-component input:focus,
+body.kscollege_section form.webform-client-form .webform-component textarea:focus {
+  border: 1px solid #78729f;
+  -webkit-box-shadow: inset 0 0 3px #78729f;
+  box-shadow: inset 0 0 3px #78729f;
+}
+body.excollege_section form.webform-client-form .webform-component input:focus,
+body.excollege_section form.webform-client-form .webform-component textarea:focus {
+  border: 1px solid #b1a895;
+  -webkit-box-shadow: inset 0 0 3px #b1a895;
+  box-shadow: inset 0 0 3px #b1a895;
 }
 form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
   display: none;
@@ -9479,27 +9807,56 @@ form.webform-client-form .webform-component select {
   padding: 5px 10px;
   height: auto;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.2em;
   text-align: left;
   color: #333333;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #777777;
-  background-color: #eeeeee;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
   outline: none;
 }
 form.webform-client-form .webform-component select:focus,
 form.webform-client-form .webform-component select:active {
   outline: none;
 }
+body.kvcollege_section form.webform-client-form .webform-component select:focus,
+body.kvcollege_section form.webform-client-form .webform-component select:active {
+  border: 1px solid #95ba40;
+}
+body.hscollege_section form.webform-client-form .webform-component select:focus,
+body.hscollege_section form.webform-client-form .webform-component select:active {
+  border: 1px solid #e87431;
+}
+body.kscollege_section form.webform-client-form .webform-component select:focus,
+body.kscollege_section form.webform-client-form .webform-component select:active {
+  border: 1px solid #78729f;
+}
+body.excollege_section form.webform-client-form .webform-component select:focus,
+body.excollege_section form.webform-client-form .webform-component select:active {
+  border: 1px solid #b1a895;
+}
+form.webform-client-form .webform-component .form-radios .form-item,
+form.webform-client-form .webform-component .form-checkboxes .form-item {
+  display: block;
+}
+form.webform-client-form .webform-component .form-radios .form-item label input,
+form.webform-client-form .webform-component .form-checkboxes .form-item label input {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px 0 0;
+}
+form.webform-client-form .webform-component .form-radios .form-item label input {
+  margin-left: 20px;
+}
 form.webform-client-form .webform-component .form-managed-file {
   display: block;
   position: relative;
   overflow-x: auto;
   white-space: nowrap;
-  border: 1px solid #777777;
+  border: 1px solid #ebebeb;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -9516,9 +9873,9 @@ form.webform-client-form .webform-component .form-managed-file input {
 form.webform-client-form .webform-component .form-managed-file button.btn {
   display: inline-block;
   margin: 0;
-  padding: 0.3em 1em;
+  padding: 15px 20px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: capitalize;
@@ -9542,7 +9899,7 @@ form.webform-client-form .webform-component.webform-component-markup {
   padding-top: 15px;
 }
 form.webform-client-form .webform-component.webform-component-markup h2 {
-  font-family: 'SohoGothicProBold', serif;
+  font-family: 'SohoGothicProMedium', serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 1em;
@@ -9557,12 +9914,12 @@ form.webform-client-form .webform-component.webform-component-markup p {
 }
 @media screen and (min-width: 480px) {
   form.webform-client-form .webform-component.webform-component-markup p {
-    font-size: 1.953125vw;
+    font-size: 2.08333333vw;
   }
 }
 @media screen and (min-width: 768px) {
   form.webform-client-form .webform-component.webform-component-markup p {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 form.webform-client-form .webform-component.webform-container-inline {
@@ -9592,6 +9949,27 @@ form.webform-client-form .webform-component.webform-container-inline select {
     width: 58.333333%;
   }
 }
+form.webform-client-form .webform-component.webform-container-inline.webform-component--adresse--anrede .form-radios .radio {
+  display: inline-block;
+}
+form.webform-client-form .webform-component.webform-container-inline.webform-component--personliche-angaben--gebdate .webform-container-inline {
+  position: relative;
+  right: auto;
+  width: 100%;
+}
+form.webform-client-form .webform-component.webform-container-inline.webform-component--personliche-angaben--gebdate .webform-container-inline select {
+  position: static;
+  display: inline-block;
+  margin: 0 -2px;
+  width: 33.33333%;
+}
+@media screen and (min-width: 480px) {
+  form.webform-client-form .webform-component.webform-container-inline.webform-component--personliche-angaben--gebdate .webform-container-inline {
+    position: absolute;
+    right: 0;
+    width: 58.333333%;
+  }
+}
 form.webform-client-form .webform-component-multiple-file label.control-label {
   display: none;
 }
@@ -9602,11 +9980,13 @@ form.webform-client-form div.form-actions {
 }
 form.webform-client-form div.form-actions button.webform-submit {
   min-width: 50%;
+}
+body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0;
-  padding: 0.3em 1em;
+  padding: 15px 20px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
   text-transform: capitalize;
@@ -9616,12 +9996,80 @@ form.webform-client-form div.form-actions button.webform-submit {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   border: none;
-  background-color: #777777;
-  padding: 15px 20px;
+  background-color: #95ba40;
 }
-form.webform-client-form div.form-actions button.webform-submit:hover,
-form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #777777;
+body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
+body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+  color: #95ba40;
+  border: none;
+  background: #ffffff;
+}
+body.hscollege_section form.webform-client-form div.form-actions button.webform-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 15px 20px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  color: #ffffff;
+  outline: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #e87431;
+}
+body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
+body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+  color: #e87431;
+  border: none;
+  background: #ffffff;
+}
+body.kscollege_section form.webform-client-form div.form-actions button.webform-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 15px 20px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  color: #ffffff;
+  outline: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #78729f;
+}
+body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
+body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+  color: #78729f;
+  border: none;
+  background: #ffffff;
+}
+body.excollege_section form.webform-client-form div.form-actions button.webform-submit {
+  display: inline-block;
+  margin: 0;
+  padding: 15px 20px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  color: #ffffff;
+  outline: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #b1a895;
+}
+body.excollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
+body.excollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+  color: #b1a895;
   border: none;
   background: #ffffff;
 }
@@ -9632,30 +10080,55 @@ form.webform-client-form div.form-actions button.webform-submit:focus {
 .node.node-course .row .col-sm-12 .field-name-body caption {
   display: none;
 }
-.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock {
-  margin: 30px 0 50px;
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick {
+  margin: 0 0 50px;
 }
-.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody {
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody {
   padding: 0 20px;
-  font-size: 16px;
 }
-.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th {
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr {
+  border-top: 1px solid #cccccc;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr th,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr td {
+  display: block;
   padding: 10px 10px 10px 0;
-  width: 50% !important;
+  width: 100% !important;
   font-family: 'SohoGothicProMedium', serif;
-  border-top: 1px solid #cccccc;
+  font-size: 14px;
   vertical-align: top;
 }
-.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td {
-  padding: 10px 0 10px 10px;
-  width: 50% !important;
-  font-family: 'SohoGothicProRegular', serif;
-  border-top: 1px solid #cccccc;
-  vertical-align: top;
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr td {
+  font-family: 'SohoGothicProLight', serif;
 }
-.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child th,
-.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child td {
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr:last-child {
   border-bottom: 1px solid #cccccc;
+}
+@media screen and (min-width: 768px) {
+  .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th,
+  .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr th,
+  .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
+  .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr td {
+    display: table-cell;
+    width: 50% !important;
+    font-size: 16px;
+  }
+}
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
 }
 body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #95ba40;
@@ -9675,6 +10148,15 @@ body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.acti
 body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #78729f;
   text-decoration: none;
@@ -9682,6 +10164,24 @@ body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
 body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
@@ -9914,7 +10414,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  background-color: transparent;
+  background: none;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title {
   display: inline-block;
@@ -9922,56 +10422,43 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
   display: block;
-  width: 80%;
+  width: 100%;
   padding: 10px 10px 12px;
   font-size: 14px;
   color: #777777;
   text-decoration: none;
 }
-.view.view-courses .view-content .panel-group .panel .panel-heading span.short-description {
-  cursor: pointer;
-  pointer-events: none;
+.view.view-courses .view-content .panel-group .panel .panel-heading .short-description {
   display: none;
   position: absolute;
-  top: 0;
-  right: 100px;
-  padding: 10px 10px 12px;
-  color: #fff;
+  top: 5px;
+  right: 5px;
+  padding: 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #fff;
 }
-.view.view-courses .view-content .panel-group .panel .panel-heading span.details {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.view.view-courses .view-content .panel-group .panel .panel-heading span.details a {
+.view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
   display: block;
-  padding: 10px 10px 12px;
+  padding: 5px 10px 7px;
   font-size: 14px;
   color: #fff;
   text-decoration: none;
 }
-.view.view-courses .view-content .panel-group .panel .panel-heading span.details a:hover,
-.view.view-courses .view-content .panel-group .panel .panel-heading span.details a.active {
-  color: #fff;
-}
 @media screen and (min-width: 480px) {
-  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
-    font-size: 15px;
-  }
-  .view.view-courses .view-content .panel-group .panel .panel-heading span.details {
+  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a,
+  .view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
     font-size: 15px;
   }
 }
 @media screen and (min-width: 768px) {
-  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
-    width: 100%;
-    font-size: 16px;
-  }
-  .view.view-courses .view-content .panel-group .panel .panel-heading span.short-description {
+  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title,
+  .view.view-courses .view-content .panel-group .panel .panel-heading .short-description {
     display: inline-block;
   }
-  .view.view-courses .view-content .panel-group .panel .panel-heading span.details {
+  .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a,
+  .view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
     font-size: 16px;
   }
 }
@@ -10017,9 +10504,21 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
  *  View Course-tabs component
  * --------------------------------------------------*/
 .view.view-course-tabs .view-content ul.nav-tabs {
-  margin: 0;
+  margin: 0 0 -1px;
+  padding: 2px 2px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  background-color: #ebebeb;
 }
-.view.view-course-tabs .view-content ul.nav-tabs li a {
+.view.view-course-tabs .view-content ul.nav-tabs > li {
+  display: inline-block;
+  float: none;
+  margin: 0 -2px -1px 0;
+}
+.view.view-course-tabs .view-content ul.nav-tabs > li a {
   margin: 0;
   padding: 10px 15px;
   color: #777777;
@@ -10029,12 +10528,12 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   border-right: 1px solid #dddddd;
   background-color: #ebebeb;
 }
-.view.view-course-tabs .view-content ul.nav-tabs li:last-child a {
+.view.view-course-tabs .view-content ul.nav-tabs > li:last-child a {
   border-right: transparent;
 }
-.view.view-course-tabs .view-content ul.nav-tabs li.active a,
-.view.view-course-tabs .view-content ul.nav-tabs li:hover a,
-.view.view-course-tabs .view-content ul.nav-tabs li:focus a {
+.view.view-course-tabs .view-content ul.nav-tabs > li.active a,
+.view.view-course-tabs .view-content ul.nav-tabs > li:hover a,
+.view.view-course-tabs .view-content ul.nav-tabs > li:focus a {
   color: #333333;
   border: 1px solid #dddddd;
   background-color: #fff;
@@ -10112,6 +10611,20 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 @media screen and (min-width: 768px) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
+    font-size: 16px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body li {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body li {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body li {
     font-size: 16px;
   }
 }
@@ -10217,7 +10730,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times .view-content table tbody tr td.views-field-nothing a {
   display: inline-block;
-  padding: 7px 15px 10px;
+  padding: 5px 15px 8px;
   min-width: 110px;
   line-height: 1;
   color: #fff;
@@ -10226,7 +10739,12 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  border: 2px solid #fa5050;
   background-color: #fa5050;
+}
+.view.view-course-times .view-content table tbody tr td.views-field-nothing a:hover {
+  color: #fa5050;
+  background-color: rgba(255, 255, 255, 0);
 }
 /*
  *  Header section (navigation)
@@ -10332,6 +10850,7 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-kv {
   border-bottom: 6px solid #95ba40;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a:hover,
+header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active {
   color: #fff;
   background-color: #95ba40;
@@ -10340,6 +10859,7 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-hs {
   border-bottom: 6px solid #e87431;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a:hover,
+header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active {
   color: #fff;
   background-color: #e87431;
@@ -10348,6 +10868,7 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-ks {
   border-bottom: 6px solid #78729f;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a:hover,
+header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active {
   color: #fff;
   background-color: #78729f;
@@ -10356,6 +10877,7 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-ex {
   border-bottom: 6px solid #b1a895;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a:hover,
+header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active {
   color: #fff;
   background-color: #b1a895;
@@ -10421,7 +10943,8 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
     color: #333333;
     background: none;
   }
-  header#navbar .container .navbar-collapse nav ul.menu.secondary li.last a {
+  header#navbar .container .navbar-collapse nav ul.menu.secondary li.last a,
+  header#navbar .container .navbar-collapse nav ul.menu.secondary li li a {
     border: none;
   }
 }
@@ -10468,7 +10991,7 @@ body {
   font-size: 24px;
 }
 .main-container .container .row section h1.page-header {
-  margin: 50px 0 0;
+  margin: 50px 0 30px;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
   font-size: 25.625px;
@@ -10605,7 +11128,7 @@ body.excollege_section .main-container .container .row section h1.page-header {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: none;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component input:focus {
   -webkit-box-shadow: inset 0 0 0.3em #333333;

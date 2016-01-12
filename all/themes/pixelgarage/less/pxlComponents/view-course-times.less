@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-@pxl-color-bg-button: #FA5050;
+
 
 // Mixins
 // -------------------------
@@ -95,14 +95,20 @@
 
               a {
                 display: inline-block;
-                padding: 7px 15px 10px;
+                padding: 5px 15px 8px;
                 min-width: 110px;
                 line-height: 1;
                 color: #fff;
                 text-align: center;
                 text-decoration: none;
                 #pxl-mixins.border-radius(3px);
+                border: 2px solid @pxl-color-bg-button;
                 background-color: @pxl-color-bg-button;
+
+                &:hover {
+                  color: @pxl-color-bg-button;
+                  background-color: rgba(255,255,255,0.0);
+                }
               }
             }
           }
