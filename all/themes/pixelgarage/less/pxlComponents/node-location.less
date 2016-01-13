@@ -1,0 +1,240 @@
+/*
+ *  Location content type
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-location {
+  margin-bottom: 50px;
+  border-top: 1px solid @pxl-border-color;
+  //background: @pxl-color-hso-gray;
+
+  .row {
+    padding-top: 20px;
+
+    .col-sm-12 {
+      position: relative;
+
+      .col-left {
+        display: inline-block;
+        margin: 0 -4px 0 0;
+        width: 100%;
+        vertical-align: top;
+
+        .picture-address {
+          .field-name-field-picture {
+            display: inline-block;
+            margin: 0 -4px 20px 0;
+            padding: 0;
+            vertical-align: top;
+            width: 100%;
+
+            img {
+              width: 100% !important;
+              height: auto !important;
+            }
+          }
+
+          .title-address {
+            display: inline-block;
+            margin: 0 -2px;
+            vertical-align: top;
+            width: 100%;
+
+            .title-location {
+              margin-bottom: 20px;
+
+              h2 {
+                margin: 0;
+                font-family: @pxl-text-font-medium;
+                font-size: @font-size-base+2;
+              }
+            }
+
+            .field-name-field-address {
+              font-family: @pxl-text-font-light;
+              font-size: 14px;
+
+              .field-item {
+                .organisation-block {
+                  margin-bottom: 10px;
+
+                  .organisation-name {
+                    font-size: @font-size-base;
+                  }
+                }
+                .locality-block {
+                  margin-bottom: 10px;
+                }
+                .addressfield-phone-block {
+                  margin-bottom: 10px;
+
+                  .phone-number {
+                    .addressfield-phone-label {
+                      display: none;
+                    }
+
+                    &:first-child:before {
+                      display: inline-block;
+                      content: '\f095';
+                      font-family: @pxl-icon-font;
+                      width: 25px;
+                    }
+                    &:last-child:before {
+                      display: inline-block;
+                      content: '\f1ac';
+                      font-family: @pxl-icon-font;
+                      width: 25px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .map-location-pin {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 10px;
+
+          a {
+            display: block;
+            overflow: hidden;
+            width: 30px;
+            height: 30px;
+            text-indent: -9999px;
+            background: url(../images/map_pin.png) no-repeat top left/contain;
+          }
+        }
+
+        .field-name-body {
+          margin-top: 20px;
+          width: 100%;
+
+          table {
+            width: 100% !important;
+
+            caption {
+              padding-bottom: 5px;
+              font-family: @pxl-text-font-light;
+              font-size: 14px;
+              color: @pxl-color-bg-button;
+              border-bottom: 2px solid @pxl-color-bg-button;
+            }
+
+            td {
+              padding: 5px 0;
+              font-family: @pxl-text-font-light;
+              font-size: 12px;
+              color: @text-color;
+              border-bottom: 1px solid @pxl-color-footer-border;
+
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        @media @narrow {
+          .picture-address {
+            .field-name-field-picture {
+              display: inline-block;
+              padding-right: 20px;
+              width: 50%;
+            }
+            .title-address {
+              display: inline-block;
+              width: 50%;
+
+              .title-location {
+                h2 {
+                  font-size: @font-size-large;
+                }
+              }
+              .field-name-field-address {
+                font-size: @font-size-base;
+
+                .field-item {
+                  .organisation-block {
+                    .organisation-name {
+                      font-size: @font-size-base+2;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .field-name-body {
+            table {
+              caption {
+                font-size: @font-size-base;
+              }
+              td {
+                font-size: @font-size-base;
+              }
+            }
+          }
+        } // media narrow
+
+      } // col-left
+
+      .col-right {
+        display: none;
+        margin: 0 -4px 0 0;
+        padding-left: 20px;
+        vertical-align: top;
+
+        .map-location {
+          display: block;
+
+          a {
+            display: block;
+            margin: 0 0 20px;
+
+            img {
+              display: block;
+              margin: 0 auto;
+              width: 92.86%;
+              height: auto;
+            }
+          }
+        }
+
+        .field-name-field-map-details {
+          display: block;
+
+          .field-item {
+            #pxl-mixins.wysiwyg-body;
+          }
+        }
+      }  // col-right
+
+      @media @tablet {
+        .col-left {
+          width: 65%;
+
+          .map-location-pin {
+            display: none;
+          }
+        }
+        .col-right {
+          display: inline-block;
+          width: 35%;
+        }
+      }
+    }
+  }
+}

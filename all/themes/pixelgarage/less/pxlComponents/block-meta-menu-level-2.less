@@ -1,0 +1,46 @@
+/*
+ *  Meta-menu level-2 block component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.menu-name-menu-meta-menu.menu-level-2 {
+  ul.menu {
+    display: block;
+    margin: 50px 0 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 5px 5px 0;
+
+      a {
+        padding: 8px 20px 10px;
+        width: 100%;
+        font-family: @pxl-text-font;
+        font-size: 16px;
+        line-height: 1;
+        color: @pxl-color-footer;
+        #pxl-mixins.border-radius(3px);
+        border: none;
+        background-color: @pxl-color-hso-gray;
+      }
+
+      &:hover,
+      &.active {
+        a {
+          color: #fff;
+          background-color: @pxl-color-footer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+/*
+ *  Course content type
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+// General settings
+// -------------------------
+.user-profile {
+  .row {
+    .col-profile {
+      display: block;
+      margin: 0 0 10px;
+      padding: 0 @grid-gutter-width/2;
+      vertical-align: top;
+
+      &.col-left {
+        .field-name-ds-user-picture {
+          margin-bottom: 5px;
+
+          .field-item {
+            a {
+              img {
+                width: 160px;
+                height: 210px;
+              }
+            }
+          }
+        }
+
+      }
+
+      &.col-right {
+        .title-with-full-name {
+          margin-bottom: 5px;
+          font-family: @pxl-text-font-medium;
+          font-size: @font-size-base;
+          color: @text-color;
+
+          .field-name-field-title {
+            display: inline-block;
+          }
+
+          .field-name-field-full-name {
+            display: inline-block;
+          }
+        }
+
+        .field-name-field-position-function {
+          margin-bottom: 5px;
+          font-size: @font-size-base;
+          color: @text-color;
+        }
+
+        .field-name-field-bio {
+          margin-bottom: 5px;
+          font-size: @font-size-base;
+          color: @text-color;
+        }
+
+        .wrapper-email {
+          span.fa-envelope {
+            display: inline-block;
+            margin-right: 5px;
+          }
+          .field-email {
+            display: inline-block;
+            margin-bottom: 5px;
+
+            a {
+              color: @text-color;
+
+              &:hover {
+                color: @pxl-color-bg-button;
+              }
+            }
+          }
+        }
+
+        .wrapper-phone {
+          span.fa-phone {
+            display: inline-block;
+            margin-right: 5px;
+          }
+          .field-name-field-phone {
+            display: inline-block;
+            margin-bottom: 5px;
+          }
+        }
+
+        .wrapper-place {
+          span.fa-map-marker {
+            display: inline-block;
+            margin-right: 10px;
+          }
+          .field-name-field-place {
+            display: inline-block;
+          }
+        }
+      }
+
+      @media @tablet {
+        &.col-right {
+          max-width: 340px;
+        }
+      }
+      @media @normal {
+        display: inline-block;
+        margin: 0 -4px 0 0;
+
+        &.col-right {
+          max-width: 250px;
+        }
+      }
+
+    }
+  }
+}

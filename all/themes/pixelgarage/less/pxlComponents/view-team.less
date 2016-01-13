@@ -1,0 +1,105 @@
+/*
+ *  View team component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view.view-team {
+  .view-header {
+    ul.links-alphabet {
+      display: block;
+      margin: 0 0 30px;
+      padding: 20px 0 0;
+      text-align: center;
+      border-top: 1px solid @pxl-border-color;
+
+      li {
+        display: inline-block;
+        margin: 0 1px 4px 0;
+
+        a {
+          display: block;
+          padding: 5px 0 9px;
+          width: 30px;
+          height: 30px;
+          font-family: @pxl-text-font;
+          font-size: 16px;
+          line-height: 1;
+          color: @pxl-color-footer;
+          text-decoration: none;
+          #pxl-mixins.border-radius(3px);
+          border: 1px solid @pxl-color-footer;
+          background: none;
+
+          &.first {
+            padding: 5px 0 9px;
+            width: 40px;
+          }
+        }
+
+        &:hover,
+        &.active {
+          a {
+            color: #fff;
+            background-color: @pxl-color-footer;
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    .views-row {
+      display: block;
+      margin: 0 0 30px;
+      width: 100%;
+
+      // see user-profile
+    }
+  }
+
+  .text-center {
+    ul.pagination {
+      display: block;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0 -2px;
+
+        a, span {
+          color: @pxl-color-footer;
+          border: 1px solid @pxl-color-footer;
+        }
+
+        &:hover,
+        &.active {
+          a, span {
+            color: #fff;
+            background-color: @pxl-color-footer;
+          }
+        }
+      }
+    }
+  }
+
+  @media @tablet {
+    .view-content {
+      .views-row {
+        display: inline-block;
+        margin: 0 -4px 30px 0;
+        vertical-align: top;
+        width: 50%;
+      }
+    }
+  }
+}

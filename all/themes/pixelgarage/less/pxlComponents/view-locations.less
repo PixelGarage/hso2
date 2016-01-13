@@ -18,6 +18,16 @@
 // General settings
 // -------------------------
 //
+// Location page
+.view-locations.view-display-id-page_1 {
+  .view-content {
+    .views-row {
+      // see node-location
+    }
+  }
+}
+
+//
 // footer location block
 .view-locations.view-display-id-block {
   .view-content {
@@ -106,7 +116,7 @@
             .field-content {
               .organisation-block {
                 margin-bottom: 10px;
-                font-weight: bold;
+                font-family: @pxl-text-font;
               }
               .street-block {
                 margin-bottom: 5px;
@@ -114,16 +124,11 @@
               .locality-block {
                 margin-bottom: 20px;
               }
-              .addressfield-phone-block {
-                margin-bottom: 20px;
+              .phone-number {
+                margin-bottom: 10px;
 
-                .phone-number {
-                  margin-bottom: 5px;
-
-                  span {
-                    display: inline-block;
-                    text-indent: -9999px;
-                  }
+                span.fa {
+                  width: 20px;
                 }
               }
             }
@@ -131,6 +136,10 @@
 
           .views-field-field-email {
             .field-content {
+              span.fa {
+                width: 20px;
+              }
+
               a {
                 text-decoration: none;
                 color: #fff;

@@ -10,6 +10,9 @@
  * Preprocess variables for the html template.
  */
 function pixelgarage_preprocess_html(&$vars) {
+  // set language to german
+  $vars['html_attributes_array']['lang'] = 'de';
+
   // make sure jQuery UI and effects is loaded for anonymous users
   drupal_add_library('system', 'ui');
   drupal_add_library('system', 'effects');
