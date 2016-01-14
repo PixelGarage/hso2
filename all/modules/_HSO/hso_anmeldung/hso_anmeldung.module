@@ -154,70 +154,6 @@ function _hso_redirect_salesfunnel_call($times_int_id) {
   drupal_goto('node/' . $nid . '/anmeldung');
 }
 
-/**
- * Get all graduations of the specific segment.
- *
- * @param $segment_tid  int The term id of the segment.
- *
- * @return string
- */
-function _hso_get_graduations_callback($segment_tid) {
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'course')
-    ->propertyCondition('status', 1)
-    ->fieldCondition('field_segment', 'tid', $segment_tid);
-  $result = $query->execute();
-  $options = '<option value="-1" selected="selected">' . t('- Wähle einen Abschluss -') . "</option>\n";
-  if (isset($result['node'])) {
-    $nids = array_keys($result['node']);
-    $courses = node_load_multiple($nids);
-
-    $tids = array();
-    foreach ($courses as $course) {
-      $tids[$course->field_fachgebiet[LANGUAGE_NONE][0]['tid']] = $course->field_fachgebiet[LANGUAGE_NONE][0]['tid'];
-    }
-    $graduations = taxonomy_term_load_multiple($tids);
-
-    foreach ($graduations as $graduation) {
-      $options .= '<option value="' . check_plain($graduation->tid) . '"">' . check_plain($graduation->name) . "</option>\n";
-    }
-  }
-  // output select options
-  drupal_add_http_header('Content-Type', 'text/html; charset=utf-8');
-  print $options;
-  drupal_exit();
-}
-
-/**
- * Gets all courses of a specific education degree.
- *
- * @param $segment_tid	int The term id of the segment.
- * @param $graduation  	int The term id of the graduation.
- */
-function _hso_get_courses_callback($segment_tid, $graduation) {
-  // load courses
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'course')
-    ->propertyCondition('status', 1)
-    ->fieldCondition('field_segment', 'tid', $segment_tid)
-    ->fieldCondition('field_fachgebiet', 'tid', $graduation);
-  $result = $query->execute();
-  $options = '<option value="-1" selected="selected">' . t('- Wähle einen Lehrgang -') . "</option>\n";
-  if (isset($result['node'])) {
-    $nids = array_keys($result['node']);
-    $courses = node_load_multiple($nids);
-
-    foreach ($courses as $course) {
-      $options .= '<option value="' . check_plain($course->nid) . '"">' . check_plain($course->title) . "</option>\n";
-    }
-  }
-  // output select options
-  drupal_add_http_header('Content-Type', 'text/html; charset=utf-8');
-  print $options;
-  drupal_exit();
-}
 
 /* --------------------------------------------------
  * HSO Anmeldungs-Mail (with contract as PDF attachment)
@@ -575,7 +511,7 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id) {
         $session_data['course_nid'] = arg(1);
       } else {
         //  called in form submit handler
-        $form['submitted']['course_nid']['#value'] = $session_data['course_nid'];
+        $form['submitted']['course_nid']['#value'] = isset($session_data['course_nid']) ? $session_data['course_nid'] : null;
       }
     }
 
@@ -795,89 +731,5 @@ function hso_anmeldung_component_edit_submit($form, &$form_state) {
   $form_state['values']['hso']['extra']['course_ids'] = '';
   $form_state['values']['hso']['extra']['custom_key'] = '';
   $form_state['values']['hso']['extra']['is_additional'] = NULL;
-}
-
-
-
-/* --------------------------------------------------
- * Brochure Webform select option definition
- * --------------------------------------------------*/
-
-/**
- * Define a custom select list displaying all available courses.
- *
- */
-function hso_anmeldung_webform_select_options_info() {
-  $items = array();
-
-  $items['segments'] = array(
-    'title' => t('Segments'),
-    'options callback' => '_webform_select_options_taxonomy',
-    'options arguments' => array ('segments'),
-  );
-
-  $items['graduation'] = array(
-    'title' => t('Graduation'),
-    'options callback' => '_webform_select_options_taxonomy',
-    'options arguments' => array ('menugroup'),
-  );
-
-  $items['courses'] = array(
-    'title' => t('Courses'),
-    'options callback' => '_webform_select_options_entities',
-    'options arguments' => array ('course'),
-  );
-
-  return $items;
-}
-
-/**
- * Creates a list of all available terms of a certain taxonomy.
- */
-function _webform_select_options_taxonomy ($component, $flat, $filter, $arguments) {
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'taxonomy_term')
-    ->entityCondition('bundle', $arguments[0]);
-  $result = $query->execute();
-  if (isset($result['taxonomy_term'])) {
-    $tids = array_keys($result['taxonomy_term']);
-    $terms = taxonomy_term_load_multiple($tids);
-
-    $list = array();
-    foreach ($terms as $term) {
-      $list[$term->tid] = $term->name;
-    }
-    return $list;
-  }
-
-  return null;
-}
-
-/**
- * Creates a list of all available entities of a certain type.
- *
- * @param $bundle The bundle (type) of the entities.
- *
- * @return array|null list of entities.
- */
-function _webform_select_options_entities ($component, $flat, $filter, $arguments) {
-  // load courses
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', $arguments[0])
-    ->propertyCondition('status', 1);
-  $result = $query->execute();
-  if (isset($result['node'])) {
-    $nids = array_keys($result['node']);
-    $nodes = node_load_multiple($nids);
-
-    $list = array();
-    foreach ($nodes as $node) {
-      $list[$node->nid] = $node->title;
-    }
-    return $list;
-  }
-
-  return null;
 }
 
