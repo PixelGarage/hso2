@@ -79,17 +79,19 @@
 .node-webform {
   padding-bottom: 30px;
 
-  div.col-sm-12 {
-    width: 100%;
+  .row {
+    div.col-sm-12 {
+      width: 100%;
 
-    .field-name-title {
-      //display: none;
+      .field-name-body {
+        margin-bottom: 30px;
+        #pxl-mixins.wysiwyg-body;
+      }
+
+      // see webform-client-form for form styling
+
     }
-
-    // see webform-client-form for form styling
-
   }
-
 }
 
 // Submission settings
@@ -149,6 +151,8 @@ ul.webform-submission-actions {
 form.webform-client-form {
   //
   // all links
+  .links(@pxl-color-hso-main);
+
   body.kvcollege_section & {
     .links(@pxl-color-hso-kv);
   }
@@ -301,6 +305,9 @@ form.webform-client-form {
     }
     input:focus,
     textarea:focus {
+      border: 1px solid @pxl-color-hso-main;
+      .box-shadow(inset 0 0 3px @pxl-color-hso-main);
+
       body.kvcollege_section & {
         border: 1px solid @pxl-color-hso-kv;
         .box-shadow(inset 0 0 3px @pxl-color-hso-kv);
@@ -342,6 +349,8 @@ form.webform-client-form {
 
       &:focus, &:active {
         outline: none;
+        border: 1px solid @pxl-color-hso-main;
+
         body.kvcollege_section & {
           border: 1px solid @pxl-color-hso-kv;
         }
@@ -458,7 +467,7 @@ form.webform-client-form {
       // Specific components
       //
       // Anrede radios
-      &.webform-component--adresse--anrede {
+      &[class*="anrede"] {
         .form-radios {
           .radio {
             display: inline-block;
@@ -468,7 +477,7 @@ form.webform-client-form {
 
       //
       // date selects
-      &.webform-component--personliche-angaben--gebdate {
+      &[class*="date"] {
         .webform-container-inline {
           position: relative;
           right: auto;
@@ -505,6 +514,7 @@ form.webform-client-form {
 
     button.webform-submit {
       min-width: 50%;
+      .resp-submit-button(#fff, @pxl-color-hso-main);
 
       body.kvcollege_section & {
         .resp-submit-button(#fff, @pxl-color-hso-kv);

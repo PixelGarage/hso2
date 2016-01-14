@@ -124,11 +124,14 @@
   <div class="fading fading-bottom"></div>
   <div class="<?php print $container_class; ?>">
     <header role="banner" id="page-header">
-      <?php if (!empty($site_slogan)): ?>
-        <p class="lead"><?php print $site_slogan; ?></p>
-      <?php endif; ?>
-
       <?php print render($page['header']); ?>
+      <div class="panel-header-blocks">
+        <div class="container">
+          <?php if (!empty($page['header_blocks'])): ?>
+            <?php print render($page['header_blocks']); ?>
+          <?php endif; ?>
+        </div>
+      </div>
     </header> <!-- /#page-header -->
 
     <div class="row">
