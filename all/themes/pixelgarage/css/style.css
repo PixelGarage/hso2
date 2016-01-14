@@ -9999,6 +9999,52 @@ form#user-login {
   background-color: #999999;
 }
 /*
+ *  Menu-blocks block component
+ * --------------------------------------------------*/
+#block-menu-menu-segment-blocks .block-title,
+#block-menu-menu-course-blocks .block-title {
+  display: none;
+}
+#block-menu-menu-segment-blocks ul.menu,
+#block-menu-menu-course-blocks ul.menu {
+  display: block;
+  margin: 20px 0 0;
+  text-align: left;
+}
+#block-menu-menu-segment-blocks ul.menu li,
+#block-menu-menu-course-blocks ul.menu li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+#block-menu-menu-segment-blocks ul.menu li a,
+#block-menu-menu-course-blocks ul.menu li a,
+#block-menu-menu-segment-blocks ul.menu li span,
+#block-menu-menu-course-blocks ul.menu li span {
+  display: block;
+  padding: 8px 20px 10px;
+  width: 100%;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #999999;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #ebebeb;
+}
+#block-menu-menu-segment-blocks ul.menu li:hover a,
+#block-menu-menu-course-blocks ul.menu li:hover a,
+#block-menu-menu-segment-blocks ul.menu li.active a,
+#block-menu-menu-course-blocks ul.menu li.active a,
+#block-menu-menu-segment-blocks ul.menu li:hover span,
+#block-menu-menu-course-blocks ul.menu li:hover span,
+#block-menu-menu-segment-blocks ul.menu li.active span,
+#block-menu-menu-course-blocks ul.menu li.active span {
+  color: #fff;
+  background-color: #999999;
+}
+/*
  *  Node page component
  * --------------------------------------------------*/
 .node.node-page .row div.col-sm-12 {
@@ -10445,6 +10491,24 @@ form.webform-client-form a.active,
 form.webform-client-form a:focus {
   text-decoration: underline;
 }
+form.webform-client-form a {
+  color: #cc3333;
+  text-decoration: none;
+}
+form.webform-client-form a:hover,
+form.webform-client-form a.active,
+form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.kvcollege_section form.webform-client-form a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section form.webform-client-form a:hover,
+body.kvcollege_section form.webform-client-form a.active,
+body.kvcollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
 body.kvcollege_section form.webform-client-form a {
   color: #95ba40;
   text-decoration: none;
@@ -10481,6 +10545,15 @@ body.hscollege_section form.webform-client-form a.active,
 body.hscollege_section form.webform-client-form a:focus {
   text-decoration: underline;
 }
+body.hscollege_section form.webform-client-form a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section form.webform-client-form a:hover,
+body.hscollege_section form.webform-client-form a.active,
+body.hscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
 body.kscollege_section form.webform-client-form a {
   color: #78729f;
   text-decoration: none;
@@ -10497,6 +10570,24 @@ body.kscollege_section form.webform-client-form a {
 body.kscollege_section form.webform-client-form a:hover,
 body.kscollege_section form.webform-client-form a.active,
 body.kscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section form.webform-client-form a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section form.webform-client-form a:hover,
+body.kscollege_section form.webform-client-form a.active,
+body.kscollege_section form.webform-client-form a:focus {
+  text-decoration: underline;
+}
+body.excollege_section form.webform-client-form a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section form.webform-client-form a:hover,
+body.excollege_section form.webform-client-form a.active,
+body.excollege_section form.webform-client-form a:focus {
   text-decoration: underline;
 }
 body.excollege_section form.webform-client-form a {
@@ -11073,6 +11164,24 @@ body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.acti
 body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
 body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
   color: #e87431;
   text-decoration: none;
@@ -11107,6 +11216,24 @@ body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
 body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+  text-decoration: underline;
+}
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
 body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
@@ -11535,6 +11662,117 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: none;
 }
 /*
+ *  Segment-pages view component
+ * --------------------------------------------------*/
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #95ba40;
+  text-decoration: none;
+}
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.kvcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.hscollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.hscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.hscollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.hscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.hscollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #e87431;
+  text-decoration: none;
+}
+body.hscollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.hscollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.hscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.kscollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.kscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.kscollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.kscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.kscollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #78729f;
+  text-decoration: none;
+}
+body.kscollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.kscollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.kscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.excollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.excollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.excollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.excollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.excollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.excollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+body.excollege_section .view.view-segment-pages .view-content .views-row a {
+  color: #b1a895;
+  text-decoration: none;
+}
+body.excollege_section .view.view-segment-pages .view-content .views-row a:hover,
+body.excollege_section .view.view-segment-pages .view-content .views-row a.active,
+body.excollege_section .view.view-segment-pages .view-content .views-row a:focus {
+  text-decoration: underline;
+}
+/*
  *  View locations component
  * --------------------------------------------------*/
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs {
@@ -11652,6 +11890,105 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 14px;
     text-align: left;
   }
+}
+/*
+ *  Contacts view component
+ * --------------------------------------------------*/
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs {
+  display: block;
+  margin: 20px 0 0;
+  text-align: center;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li a,
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li span {
+  display: block;
+  padding: 8px 20px 10px;
+  width: 100%;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #999999;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  background-color: #ebebeb;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a,
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active a,
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover span,
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active span {
+  color: #fff;
+  background-color: #999999;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content {
+  display: block;
+  border: none;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
+  padding: 20px;
+  height: 148px;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 16px;
+  line-height: 1;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-picture {
+  float: left;
+  margin-right: 20px;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-picture .field-content img {
+  height: 108px;
+  width: auto;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+  margin-bottom: 5px;
+  font-family: 'SohoGothicProRegular', serif;
+  color: #333333;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-phone {
+  margin-bottom: 5px;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-phone .field-content {
+  padding-left: 10px;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-phone .field-content:before {
+  display: inline-block;
+  content: '\f095';
+  font-family: 'fontawesome';
+  width: 25px;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content a {
+  color: #333333;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content a:hover {
+  text-decoration: underline;
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content:before {
+  display: inline-block;
+  content: '\f0e0';
+  font-family: 'fontawesome';
+  width: 25px;
+}
+body.kvcollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+  color: #95ba40;
+}
+body.hscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+  color: #e87431;
+}
+body.kscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+  color: #78729f;
+}
+body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+  color: #b1a895;
 }
 /*
  *  View courses component
@@ -12121,6 +12458,224 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   }
 }
 /*
+ *  Bildungsnavigator component
+ * --------------------------------------------------*/
+body.page-bildungsnavigator h1#page-title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+body.page-bildungsnavigator .view-segment-selector {
+  margin: 20px 0;
+  text-align: center;
+}
+body.page-bildungsnavigator .view-segment-selector .item-list ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.page-bildungsnavigator .view-segment-selector .item-list ul li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.page-bildungsnavigator .view-segment-selector .item-list ul li a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0 10px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 17px;
+  color: #6e6e6e;
+  text-decoration: none;
+  line-height: 33px;
+  background: #d9d9d9;
+}
+body.page-bildungsnavigator .view-segment-selector .item-list ul li a:hover,
+body.page-bildungsnavigator .view-segment-selector .item-list ul li a.active {
+  color: #fff;
+  background: #6e6e6e;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper {
+  margin-bottom: 30px;
+  position: relative;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper .course_item h2 {
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 19px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper .course_item a {
+  display: inline-block;
+  margin-top: 10px;
+  width: 125px;
+  text-decoration: none;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 17px;
+  color: #fff;
+  line-height: 33px;
+  text-align: center;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper .course_item a.last {
+  margin-left: 10px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper a.related_browse {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: #ffffff url(../images/witercho_related_pager.png) no-repeat center top;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper a.related_browse.down {
+  top: auto;
+  bottom: 0;
+  background-position: center bottom;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_wrapper {
+  position: relative;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_wrapper #bildungsnavigator_pin {
+  position: absolute;
+  width: 39px;
+  height: 50px;
+  background: url(../images/pin.png) no-repeat;
+  display: none;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details,
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho .course_item {
+  margin: 130px auto 0;
+  width: 260px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px 5px #dddddd;
+  -moz-box-shadow: 0 0 5px 5px #dddddd;
+  box-shadow: 0 0 5px 5px #dddddd;
+  font-size: 14px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details {
+  background: #fff;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_related {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-left: 42px;
+  padding: 45px 0;
+  width: 275px;
+  height: 600px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_related ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 45px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_related .course_item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: 243px;
+  font-size: 13px;
+  color: #fff;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_related .course_item h2 {
+  font-size: 15px;
+  color: #fff;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_related .course_item .witercho_link {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details {
+  width: 490px;
+  float: right;
+  padding: 25px 25px 0;
+  background: #f6f6f6;
+  margin-right: 43px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .legend,
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .witercho_breadcrumb,
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .witercho_breadcrumb a {
+  font-size: 14px;
+  color: #7f7e7e;
+  text-decoration: none;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .witercho_breadcrumb {
+  min-height: 90px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .legend {
+  height: 175px;
+  font-size: 19px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .legend:before,
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .legend:after {
+  display: inline-block;
+  content: ' ';
+  width: 18px;
+  height: 16px;
+  vertical-align: middle;
+  background: url(../images/quote.png) no-repeat 0 0;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .legend:after {
+  background-position: -18px 0;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .legend2 {
+  margin: 0 -25px;
+  padding: 0 25px;
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 20px;
+  color: #fff;
+  line-height: 70px;
+  background: #b4b4b4;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .course_item {
+  margin: 0 -25px;
+  padding: 25px;
+  font-size: 14px;
+}
+body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho_details #witercho_details .course_item .links a {
+  margin: 0 10px 0 0;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_1 {
+  background-color: #d8e5ab;
+  border-top: 7px solid #95ba40;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_1 a {
+  background-color: #95ba40;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_2 {
+  background-color: #fbc895;
+  border-top: 7px solid #e87431;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_2 a {
+  background-color: #e87431;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_3 {
+  background-color: #cbc6df;
+  border-top: 7px solid #78729f;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_3 a {
+  background-color: #78729f;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_4 {
+  background-color: #dcd7cd;
+  border-top: 7px solid #b1a895;
+}
+#bildungsnavigator_main_wrapper .course_item.tid_4 a {
+  background-color: #b1a895;
+}
+/*
  *  Header section (navigation)
  * --------------------------------------------------*/
 body.navbar-is-fixed-top {
@@ -12359,10 +12914,9 @@ body {
 .main-container .region-navigation {
   margin-bottom: 20px;
 }
-.main-container .container #page-header .region-header h2.block-title {
-  margin: 20px 0 10px;
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 24px;
+.main-container .container #page-header .panel-header-blocks {
+  display: none;
+  padding-top: 20px;
 }
 .main-container .container .row section h1.page-header {
   margin: 50px 0 30px;

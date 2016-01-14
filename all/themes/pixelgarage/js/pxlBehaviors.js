@@ -7,6 +7,78 @@
 (function ($) {
 
   /**
+   * Implements the active state of the block menus and opens or closes the header block section
+   * according to the menu state.
+   */
+  Drupal.behaviors.activateBlockMenus = {
+    attach: function() {
+      var $blockPanel = $('header#page-header .panel-header-blocks'),
+          $blocks = $blockPanel.find('.region-header-blocks > .block'),
+          $segmentBlockMenu = $('#block-menu-menu-segment-blocks'),
+          $segmentMenus = $segmentBlockMenu.find('ul.menu>li.menu-block'),
+          $courseBlockMenu = $('#block-menu-menu-course-blocks'),
+          $courseMenus = $courseBlockMenu.find('ul.menu>li.menu-block');
+
+      $segmentMenus.once('activated', function() {
+        $(this).on('click', function() {
+          var $menu = $(this),
+              blockClass = '.' + $menu.attr('id'),
+              $menuBlock = $blockPanel.find(blockClass), // menu id is block class
+              $menuIsActive = $menu.hasClass('active');
+
+          // deactivate all menus and hide all blocks in panel
+          $segmentMenus.removeClass('active');
+          $blocks.hide();
+
+          // show / hide filter section
+          if ($menuIsActive) {
+            // deactivate menu and hide block panel
+            $menu.removeClass('active');
+            $blockPanel.slideUp(400);
+
+          } else {
+            // show menu block
+            $menu.addClass('active');
+            $menuBlock.show();
+
+            // show panel content
+            $blockPanel.slideDown(400);
+          }
+        });
+      });
+
+      $courseMenus.once('activated', function() {
+        $(this).on('click', function() {
+          var $menu = $(this),
+              blockClass = '.' + $menu.attr('id'),
+              $menuBlock = $blockPanel.find(blockClass), // menu id is block class
+              $menuIsActive = $menu.hasClass('active');
+
+          // deactivate all menus and hide all blocks in panel
+          $courseMenus.removeClass('active');
+          $blocks.hide();
+
+          // show / hide filter section
+          if ($menuIsActive) {
+            // deactivate menu and hide block panel
+            $menu.removeClass('active');
+            $blockPanel.slideUp(400);
+
+          } else {
+            // show menu block
+            $menu.addClass('active');
+            $menuBlock.show();
+
+            // show panel content
+            $blockPanel.slideDown(400);
+          }
+        });
+      });
+
+    }
+  };
+
+  /**
    * Brochure webform.
    *
    * Handles the dynamically shown select boxes in the brochure webform.

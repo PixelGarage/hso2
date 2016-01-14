@@ -1,0 +1,51 @@
+/*
+ *  Menu-blocks block component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+// Mixins
+// -------------------------
+
+
+// General settings
+// -------------------------
+#block-menu-menu-segment-blocks,
+#block-menu-menu-course-blocks {
+  .block-title {
+    display: none;
+  }
+
+  ul.menu {
+    display: block;
+    margin: 20px 0 0;
+    text-align: left;
+
+    li {
+      display: inline-block;
+      margin: 0 5px 5px 0;
+
+      a, span {
+        display: block;
+        padding: 8px 20px 10px;
+        width: 100%;
+        font-family: @pxl-text-font;
+        font-size: 16px;
+        line-height: 1;
+        color: @pxl-color-footer;
+        #pxl-mixins.border-radius(3px);
+        border: none;
+        background-color: @pxl-color-hso-gray;
+      }
+
+      &:hover,
+      &.active {
+        a, span {
+          color: #fff;
+          background-color: @pxl-color-footer;
+        }
+      }
+    }
+  }
+}

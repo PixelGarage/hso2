@@ -1,0 +1,43 @@
+/*
+ *  Segment-pages view component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+.links(@seg-color) {
+  a {
+    color: @seg-color;
+    text-decoration: none;
+
+    &:hover, &.active, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+// General settings
+// -------------------------
+.view.view-segment-pages {
+  .view-content {
+    .views-row {
+      body.kvcollege_section & {
+        .links(@pxl-color-hso-kv);
+      }
+      body.hscollege_section & {
+        .links(@pxl-color-hso-hs);
+      }
+      body.kscollege_section & {
+        .links(@pxl-color-hso-ks);
+      }
+      body.excollege_section & {
+        .links(@pxl-color-hso-ex);
+      }
+    }
+  }
+}

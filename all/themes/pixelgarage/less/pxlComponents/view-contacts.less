@@ -1,0 +1,141 @@
+/*
+ *  Contacts view component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-contact-img-height: 108px;
+
+
+// Mixins
+// -------------------------
+.segment-color(@seg-color) {
+  // contact title
+  .views-field-title {
+    color: @seg-color;
+  }
+}
+
+
+
+// General settings
+// -------------------------
+.view.view-contacts {
+  .view-content {
+    .views-bootstrap-tab-plugin-style {
+      ul.nav-tabs {
+        display: block;
+        margin: 20px 0 0;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin: 0 5px 5px 0;
+
+          a, span {
+            display: block;
+            padding: 8px 20px 10px;
+            width: 100%;
+            font-family: @pxl-text-font;
+            font-size: 16px;
+            line-height: 1;
+            color: @pxl-color-footer;
+            #pxl-mixins.border-radius(3px);
+            border: none;
+            background-color: @pxl-color-hso-gray;
+          }
+
+          &:hover,
+          &.active {
+            a, span {
+              color: #fff;
+              background-color: @pxl-color-footer;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        display: block;
+        border: none;
+
+        .tab-pane {
+          padding: 20px;
+          height: 40px + @pxl-contact-img-height;
+          font-family: @pxl-text-font-light;
+          font-size: @font-size-base;
+          line-height: 1;
+
+          .views-field-field-picture {
+            float: left;
+            margin-right: 20px;
+
+            .field-content {
+              img {
+                height: @pxl-contact-img-height;
+                width: auto;
+              }
+            }
+          }
+
+          .views-field-title {
+            margin-bottom: 5px;
+            font-family: @pxl-text-font;
+            color: @text-color;
+          }
+
+          .views-field-field-phone {
+            margin-bottom: 5px;
+            .field-content {
+              padding-left: 10px;
+
+              &:before {
+                display: inline-block;
+                content: '\f095';
+                font-family: @pxl-icon-font;
+                width: 25px;
+              }
+            }
+          }
+
+          .views-field-field-email {
+            .field-content {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+              a {
+                color: @text-color;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+
+              &:before {
+                display: inline-block;
+                content: '\f0e0';
+                font-family: @pxl-icon-font;
+                width: 25px;
+              }
+            }
+          }
+
+          body.kvcollege_section & {
+            .segment-color(@pxl-color-hso-kv);
+          }
+          body.hscollege_section & {
+            .segment-color(@pxl-color-hso-hs);
+          }
+          body.kscollege_section & {
+            .segment-color(@pxl-color-hso-ks);
+          }
+          body.excollege_section & {
+            .segment-color(@pxl-color-hso-ex);
+          }
+
+        }
+      }
+    }
+  }
+}
