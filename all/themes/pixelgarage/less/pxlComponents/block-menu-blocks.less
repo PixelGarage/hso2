@@ -28,7 +28,7 @@
 
       a, span {
         display: block;
-        padding: 8px 20px 10px;
+        padding: 8px 12px 10px;
         width: 100%;
         font-family: @pxl-text-font;
         font-size: 16px;
@@ -45,6 +45,31 @@
           color: #fff;
           background-color: @pxl-color-footer;
         }
+      }
+    }
+
+    @media @tablet {
+      li {
+        margin: 0 -3px 0 0;
+        border-right: 1px solid #fff;
+
+        a, span {
+          #pxl-mixins.border-radius(0);
+        }
+
+        &.first {
+          a, span {
+            .border-left-radius(3px);
+          }
+        }
+        &.last {
+          border: none;
+
+          a, span {
+            .border-right-radius(3px);
+          }
+        }
+
       }
     }
   }

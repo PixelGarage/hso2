@@ -160,6 +160,27 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 }
 
 /**
+ * Adapts the contacts tab view to show only one tab per location.
+ *
+ */
+function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
+  $view = &$vars['view'];
+  if ($view->name != 'contacts') return;
+
+  $tab_field = $vars['options']['tab_field'];
+
+  // create tabs for locations.
+  if (isset($view->field[$tab_field])) {
+    $vars['tabs'] = array();
+    foreach ($vars['view']->result as $key => $contact) {
+      $location = strip_tags($view->style_plugin->get_field($key, $tab_field));
+      $vars['tabs'][$location][] = $key;
+    }
+  }
+}
+
+
+/**
  * Preprocess panel pane for remote forms to add the GUID (found in the URL) to the iFrame src attribute.
  *
  * @param $vars

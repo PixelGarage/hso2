@@ -10021,7 +10021,7 @@ form#user-login {
 #block-menu-menu-segment-blocks ul.menu li span,
 #block-menu-menu-course-blocks ul.menu li span {
   display: block;
-  padding: 8px 20px 10px;
+  padding: 8px 12px 10px;
   width: 100%;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
@@ -10043,6 +10043,39 @@ form#user-login {
 #block-menu-menu-course-blocks ul.menu li.active span {
   color: #fff;
   background-color: #999999;
+}
+@media screen and (min-width: 768px) {
+  #block-menu-menu-segment-blocks ul.menu li,
+  #block-menu-menu-course-blocks ul.menu li {
+    margin: 0 -3px 0 0;
+    border-right: 1px solid #fff;
+  }
+  #block-menu-menu-segment-blocks ul.menu li a,
+  #block-menu-menu-course-blocks ul.menu li a,
+  #block-menu-menu-segment-blocks ul.menu li span,
+  #block-menu-menu-course-blocks ul.menu li span {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  #block-menu-menu-segment-blocks ul.menu li.first a,
+  #block-menu-menu-course-blocks ul.menu li.first a,
+  #block-menu-menu-segment-blocks ul.menu li.first span,
+  #block-menu-menu-course-blocks ul.menu li.first span {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  #block-menu-menu-segment-blocks ul.menu li.last,
+  #block-menu-menu-course-blocks ul.menu li.last {
+    border: none;
+  }
+  #block-menu-menu-segment-blocks ul.menu li.last a,
+  #block-menu-menu-course-blocks ul.menu li.last a,
+  #block-menu-menu-segment-blocks ul.menu li.last span,
+  #block-menu-menu-course-blocks ul.menu li.last span {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
 }
 /*
  *  Node page component
@@ -11898,6 +11931,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   display: block;
   margin: 20px 0 0;
   text-align: center;
+  border: none;
 }
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li {
   display: inline-block;
@@ -11930,64 +11964,77 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   border: none;
 }
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
+  overflow-y: auto;
   padding: 20px;
-  height: 148px;
+  height: 169.6px;
   font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
   line-height: 1;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-picture {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item {
+  display: inline-block;
+  margin: 0 -2px 10px;
+  padding-right: 10px;
+  width: 100%;
+  vertical-align: top;
+}
+@media screen and (min-width: 768px) {
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item {
+    width: 50%;
+  }
+}
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-picture {
   float: left;
   margin-right: 20px;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-picture .field-content img {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-picture .field-content img {
   height: 108px;
   width: auto;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   margin-bottom: 5px;
   font-family: 'SohoGothicProRegular', serif;
   color: #333333;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-phone {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-phone {
   margin-bottom: 5px;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-phone .field-content {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-phone .field-content {
   padding-left: 10px;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-phone .field-content:before {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-phone .field-content:before {
   display: inline-block;
   content: '\f095';
   font-family: 'fontawesome';
   width: 25px;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-email .field-content {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content a {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-email .field-content a {
   color: #333333;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content a:hover {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-email .field-content a:hover {
   text-decoration: underline;
 }
-.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content:before {
+.view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-field-email .field-content:before {
   display: inline-block;
   content: '\f0e0';
   font-family: 'fontawesome';
   width: 25px;
 }
-body.kvcollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+body.kvcollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #95ba40;
 }
-body.hscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+body.hscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #e87431;
 }
-body.kscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+body.kscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #78729f;
 }
-body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-title {
+body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #b1a895;
 }
 /*
