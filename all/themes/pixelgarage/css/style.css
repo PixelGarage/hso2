@@ -11695,6 +11695,124 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: none;
 }
 /*
+ *  View call2action component
+ * --------------------------------------------------*/
+.view.view-call2action {
+  margin-top: 50px;
+  width: 100%;
+}
+.view.view-call2action .view-content .views-row {
+  display: inline-block;
+  margin: 10px -2px;
+  padding: 0;
+  width: 100%;
+  vertical-align: top;
+}
+@media screen and (min-width: 480px) {
+  .view.view-call2action .view-content .views-row {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-call2action .view-content .views-row {
+    width: 33.33333%;
+  }
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image {
+  position: relative;
+  width: 100%;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture {
+  margin: 0 7.5px;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture .field-item img {
+  width: 100%;
+  height: auto;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-title {
+  position: absolute;
+  bottom: 95px;
+  width: 100%;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-title h2 {
+  margin: 0;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
+  position: absolute;
+  bottom: 55%;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item img {
+  display: none;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link {
+  position: absolute;
+  bottom: 27px;
+  width: 100%;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 0 7px;
+  width: 50%;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fa5050;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #fa5050;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover,
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:focus {
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0);
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body {
+  margin-top: 20px;
+}
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body .field-item {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #999999;
+}
+.view.view-call2action .view-content .views-row.call2action-brochure .field-name-field-icon .field-item {
+  min-height: 95px;
+  width: 30%;
+  background: url(../images/icon_broschure.svg) no-repeat top center / contain;
+}
+.view.view-call2action .view-content .views-row.call2action-beratung .field-name-field-icon .field-item {
+  min-height: 83px;
+  width: 30%;
+  background: url(../images/icon_beratung.svg) no-repeat top center / contain;
+}
+.view.view-call2action .view-content .views-row.call2action-bildungsweg .field-name-field-icon .field-item {
+  min-height: 67px;
+  width: 40%;
+  background: url(../images/icon_bildungsweg.svg) no-repeat top center / contain;
+}
+/*
  *  Segment-pages view component
  * --------------------------------------------------*/
 body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
@@ -12760,7 +12878,7 @@ header#navbar {
   z-index: 5;
 }
 header#navbar a.logo {
-  margin: 10px 20px;
+  margin: 10px 0 10px 20px;
   padding: 0;
   outline: none;
 }
@@ -12919,7 +13037,7 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
     width: auto;
   }
   header#navbar .container .navbar-collapse nav ul.menu li a {
-    padding: 7px 30px 7px 10px;
+    padding: 7px 25px 7px 10px;
     font-size: 16px;
   }
   header#navbar .container .navbar-collapse nav ul.menu.secondary {
@@ -12947,7 +13065,7 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
 }
 @media screen and (min-width: 990px) {
   header#navbar .container .navbar-collapse nav ul.menu li a {
-    padding: 7px 40px 7px 10px;
+    padding: 7px 35px 7px 10px;
     font-size: 18px;
   }
 }

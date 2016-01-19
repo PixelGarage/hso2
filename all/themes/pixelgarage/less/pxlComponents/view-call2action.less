@@ -1,0 +1,163 @@
+/*
+ *  View call2action component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view.view-call2action {
+  margin-top: 50px;
+  width: 100%;
+
+  .view-content {
+    .views-row {
+      display: inline-block;
+      margin: 10px -2px;
+      padding: 0;
+      width: 100%;
+      vertical-align: top;
+
+      @media @narrow {
+        width: 50%;
+      }
+
+      @media @tablet {
+        width: 33.33333%;
+      }
+
+      .node-call2action {
+        .row {
+          .col-sm-12 {
+            .group-image {
+              position: relative;
+              width: 100%;
+
+              .field-name-field-picture {
+                margin: 0 @grid-gutter-width/4;
+
+                .field-item {
+                  img {
+                    width: 100%;
+                    height: auto;
+                    #pxl-mixins.border-radius(5px);
+                  }
+                }
+              }
+
+              .field-name-title {
+                position: absolute;
+                bottom: 95px;
+                width: 100%;
+
+                h2 {
+                  margin: 0;
+                  font-family: @pxl-text-font;
+                  font-size: @font-size-larger;
+                  text-align: center;
+                  color: #fff;
+                }
+              }
+
+              .field-name-field-icon {
+                position: absolute;
+                bottom: 55%;
+                width: 100%;
+                #pxl-mixins.center-horizontally;
+
+                .field-item {
+                  display: block;
+                  margin: 0 auto;
+                  height: auto;
+
+                  img {
+                    display: none;
+                  }
+                }
+              }
+
+              .field-name-field-link {
+                position: absolute;
+                bottom: 27px;
+                width: 100%;
+
+                .field-item {
+                  a {
+                    display: block;
+                    margin: 0 auto;
+                    padding: 5px 0 7px;
+                    width: 50%;
+                    font-family: @pxl-text-font;
+                    font-size: @font-size-large;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #fff;
+                    border: 1px solid @pxl-color-bg-button;
+                    #pxl-mixins.border-radius(3px);
+                    background: @pxl-color-bg-button;
+
+                    &:hover, &:focus {
+                      border: 1px solid #fff;
+                      background: rgba(0,0,0,0.0);
+                    }
+                  }
+                }
+              }
+
+            }
+
+            .field-name-body {
+              margin-top: 20px;
+
+              .field-item {
+                font-family: @pxl-text-font-light;
+                font-size: 18px;
+                line-height: 30px;
+                text-align: center;
+                color: @pxl-color-footer;
+              }
+            }
+          }
+        }
+      }
+
+      &.call2action-brochure {
+        .field-name-field-icon {
+          .field-item {
+            min-height: 95px;
+            //width: 79px;
+            width: 30%;
+            background: url(../images/icon_broschure.svg) no-repeat top center/contain;
+          }
+        }
+      }
+      &.call2action-beratung {
+        .field-name-field-icon {
+          .field-item {
+            min-height: 83px;
+            //width: 83px;
+            width: 30%;
+            background: url(../images/icon_beratung.svg) no-repeat top center/contain;
+          }
+        }
+      }
+      &.call2action-bildungsweg {
+        .field-name-field-icon {
+          .field-item {
+            min-height: 67px;
+            //width: 121px;
+            width: 40%;
+            background: url(../images/icon_bildungsweg.svg) no-repeat top center/contain;
+          }
+        }
+      }
+    }
+  }
+}
