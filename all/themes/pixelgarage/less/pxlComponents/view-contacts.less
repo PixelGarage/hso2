@@ -35,15 +35,15 @@
 
           a, span {
             display: block;
-            padding: 8px 20px 10px;
+            padding: 5px 10px 7px;
             width: 100%;
             font-family: @pxl-text-font;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1;
             color: @pxl-color-footer;
             #pxl-mixins.border-radius(3px);
-            border: none;
-            background-color: @pxl-color-hso-gray;
+            border: 1px solid @pxl-color-footer;
+            background-color: #fff;
           }
 
           &:hover,
@@ -52,6 +52,28 @@
               color: #fff;
               background-color: @pxl-color-footer;
             }
+          }
+        }
+
+        @media @tablet {
+          li {
+            margin: 0 -3px 0 0;
+
+            a, span {
+              #pxl-mixins.border-radius(0);
+            }
+
+            &:first-child {
+              a, span {
+                .border-left-radius(3px);
+              }
+            }
+            &:last-child {
+              a, span {
+                .border-right-radius(3px);
+              }
+            }
+
           }
         }
       }

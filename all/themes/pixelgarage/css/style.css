@@ -11940,17 +11940,17 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li a,
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li span {
   display: block;
-  padding: 8px 20px 10px;
+  padding: 5px 10px 7px;
   width: 100%;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1;
   color: #999999;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
-  background-color: #ebebeb;
+  border: 1px solid #999999;
+  background-color: #fff;
 }
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a,
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active a,
@@ -11958,6 +11958,27 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active span {
   color: #fff;
   background-color: #999999;
+}
+@media screen and (min-width: 768px) {
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li {
+    margin: 0 -3px 0 0;
+  }
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li a,
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li span {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:first-child a,
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:first-child span {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:last-child a,
+  .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:last-child span {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+  }
 }
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content {
   display: block;
