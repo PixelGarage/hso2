@@ -11782,8 +11782,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   border-radius: 3px;
   background: #fa5050;
 }
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover,
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:focus {
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover {
   border: 1px solid #fff;
   background: rgba(0, 0, 0, 0);
 }
