@@ -1,0 +1,176 @@
+/*
+ *  Exposed search block component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-form-control-height: 35px;
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.region-navigation {
+  position: relative;
+}
+
+.block-exposed-form-search-course-times {
+  position: absolute;
+  bottom: 54px;
+  left: 0;
+  margin: 0;
+
+  form#views-exposed-form-course-times-search-page-search-course-times {
+    .views-exposed-form {
+      .views-exposed-widgets {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+
+        .views-exposed-widget {
+          display: inline-block;
+          float: none;
+          margin: 0 -3px 0 -1px;
+          padding: 0;
+          vertical-align: top;
+          border-left: 1px solid @pxl-color-gray-border-light;
+
+          label {
+            display: none;
+          }
+
+          .description {
+            display: none;
+            height: 0;
+          }
+
+          .views-widget {
+            .form-item {
+              .control-label {
+                display: none;
+              }
+
+              .help-block {
+                display: none;
+                height: 0;
+              }
+
+              .form-control {
+                height: @pxl-form-control-height;
+                font-family: @pxl-text-font;
+                font-size: @font-size-base;
+                color: @pxl-color-gray-dark;
+                line-height: 1;
+                #pxl-mixins.border-radius(0);
+                border: 1px solid rgba(0,0,0,0.0);
+                background-color: #fff;
+                #pxl-mixins.box-shadow(none);
+                .placeholder(@pxl-color-gray-text);
+
+                &:focus {
+                  #pxl-mixins.box-shadow(inset 0 0 3px @pxl-color-gray-dark);
+                  border: 1px solid @pxl-color-gray-border;
+                }
+
+                &.form-text {
+                  margin: 0;
+                  padding: 3px 15px 6px;
+                }
+
+                &.form-select {
+                  padding: 3px 15px 6px 10px;
+
+                  option {
+
+                  }
+                }
+              }
+
+              // date popup
+              &.form-type-date-popup {
+                margin: 0;
+              }
+
+              // see date-popup.less
+            }
+          }  // views-widget
+
+          &.views-widget-filter-title {
+            width: 20%;
+            min-width: 150px;
+
+            border: none;
+
+            .views-widget {
+              .form-item {
+                .form-control {
+                  .border-left-radius(3px);
+                }
+              }
+            }
+          }
+
+          &.views-widget-filter-field_segment_tid_1 {
+            overflow: hidden;
+            width: 15%;
+            min-width: 150px;
+
+            .views-widget {
+              width: 125%;
+              .form-item {
+                .form-control {
+                  border: none;
+                }
+              }
+            }
+          }
+
+          &.views-widget-filter-field_course_date_value {
+            width: 10%;
+            min-width: 110px;
+          }
+
+          &.views-widget-filter-field_address_locality {
+            width: 10%;
+            min-width: 120px;
+
+            .views-widget {
+              .form-item {
+                .form-control {
+                  border: none;
+                }
+              }
+            }
+          }
+
+          &.views-submit-button {
+            border: none;
+
+            button.form-submit {
+              margin: 0;
+              height: @pxl-form-control-height;
+              padding: 7px 15px 10px;
+              font-family: @pxl-text-font;
+              font-size: @font-size-base;
+              color: #fff;
+              line-height: 1;
+              letter-spacing: 1px;
+              border: none;
+              #pxl-mixins.border-radius(0);
+              .border-right-radius(3px);
+              background: @pxl-color-bg-button;
+
+              &:hover {
+                color: @pxl-color-bg-button;
+                background: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

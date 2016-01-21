@@ -182,6 +182,28 @@ function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
   }
 }
 
+/**
+ * Adapts the exposed form to search for course-times.
+ *
+ * Add placeholders to the search fields.
+ */
+function pixelgarage_preprocess_views_exposed_form(&$vars) {
+  // adapt only search exposed form
+  $form = &$vars['form'];
+  if ($form['#id'] != 'views-exposed-form-course-times-search-page-search-course-times') return;
+
+  foreach ($form['#info'] as $id => $info) {
+    // add the description as placeholder to the widget
+    $form[$info['value']]['#attributes']['placeholder'] = $info['description'];
+    $form[$info['value']]['#printed'] = false;
+
+    // render widget again
+    $field = $form[$info['value']];
+    $vars['widgets'][$id]->widget = drupal_render($field);
+  }
+
+}
+
 
 /**
  * Preprocess panel pane for remote forms to add the GUID (found in the URL) to the iFrame src attribute.

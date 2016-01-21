@@ -34,10 +34,10 @@
           font-family: @pxl-text-font;
           font-size: 16px;
           line-height: 1;
-          color: @pxl-color-footer;
+          color: @pxl-color-gray-text;
           text-decoration: none;
           #pxl-mixins.border-radius(3px);
-          border: 1px solid @pxl-color-footer;
+          border: 1px solid @pxl-color-gray-text;
           background: none;
 
           &.first {
@@ -50,7 +50,7 @@
         &.active {
           a {
             color: #fff;
-            background-color: @pxl-color-footer;
+            background-color: @pxl-color-gray-text;
           }
         }
       }
@@ -68,28 +68,7 @@
   }
 
   .text-center {
-    ul.pagination {
-      display: block;
-      text-align: center;
-
-      li {
-        display: inline-block;
-        margin: 0 -2px;
-
-        a, span {
-          color: @pxl-color-footer;
-          border: 1px solid @pxl-color-footer;
-        }
-
-        &:hover,
-        &.active {
-          a, span {
-            color: #fff;
-            background-color: @pxl-color-footer;
-          }
-        }
-      }
-    }
+    #pxl-mixins.view-pager(@font-size-base, @pxl-color-gray-text, @pxl-color-hso-main);
   }
 
   @media @tablet {

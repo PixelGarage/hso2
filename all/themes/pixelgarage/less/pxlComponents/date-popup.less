@@ -1,0 +1,104 @@
+/*
+ *  Exposed search block component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+#ui-datepicker-div {
+  position: relative;
+  margin: -30px 0 0;
+  font-family: @pxl-text-font-light;
+  font-size: @font-size-base;
+  color: @pxl-color-gray-text;
+  border: 1px solid @pxl-border-color;
+  #pxl-mixins.border-radius(0);
+  background-color: #fff;
+  z-index: 100 !important;
+
+  .ui-state-default,
+  .ui-widget-header .ui-state-default,
+  .ui-widget-content .ui-state-default {
+    color: @pxl-color-gray-text;
+    border: 1px solid @pxl-color-gray-text;
+    background: none;
+  }
+
+  .ui-state-active,
+  .ui-widget-header .ui-state-active,
+  .ui-widget-content .ui-state-active {
+    color: @pxl-color-gray-dark;
+    border: 1px solid @pxl-color-gray-dark;
+    background: none;
+  }
+
+  .ui-widget-header {
+    border: 1px solid @pxl-border-color;
+    #pxl-mixins.border-radius(0);
+    background: #fff none;
+
+    .ui-datepicker-prev {
+      .ui-icon {
+
+      }
+    }
+
+    .ui-datepicker-next {
+      .ui-icon {
+
+      }
+    }
+
+    .ui-datepicker-title {
+      select.ui-datepicker-month,
+      select.ui-datepicker-year {
+        padding: 0 0 2px;
+        font-family: @pxl-text-font;
+        font-size: @font-size-base - 1;
+        color: @pxl-color-gray-text;
+
+        option {
+        }
+      }
+    }
+  }
+
+  table.ui-datepicker-calendar {
+    thead {
+      tr {
+        th {
+          color: @pxl-color-gray-dark;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          background: none;
+
+          a {
+            color: @pxl-color-gray-dark;
+
+            &:hover, &:focus, &.ui-state-active {
+              color: #fff;
+              background-color: @pxl-color-bg-button;
+            }
+          }
+
+          &.ui-datepicker-unselectable {
+
+          }
+        }
+      }
+    }
+  }
+}

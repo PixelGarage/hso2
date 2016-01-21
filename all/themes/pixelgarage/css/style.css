@@ -9580,14 +9580,14 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content hr {
   border: 0;
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #c9c9c9;
   background: none;
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content table,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content tr,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content th,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content td {
-  border-color: #cccccc;
+  border-color: #c9c9c9;
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content img {
   display: block;
@@ -9922,7 +9922,7 @@ form#user-login {
   content: "\f09e";
 }
 .follow-links .follow-link-wrapper a.follow-link:hover {
-  color: #999999;
+  color: #929295;
 }
 /*
  *  Language block component
@@ -9986,7 +9986,7 @@ form#user-login {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
-  color: #999999;
+  color: #929295;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -9996,7 +9996,7 @@ form#user-login {
 .menu-name-menu-meta-menu.menu-level-2 ul.menu li:hover a,
 .menu-name-menu-meta-menu.menu-level-2 ul.menu li.active a {
   color: #fff;
-  background-color: #999999;
+  background-color: #929295;
 }
 /*
  *  Menu-blocks block component
@@ -10026,7 +10026,7 @@ form#user-login {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
-  color: #999999;
+  color: #929295;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -10042,7 +10042,7 @@ form#user-login {
 #block-menu-menu-segment-blocks ul.menu li.active span,
 #block-menu-menu-course-blocks ul.menu li.active span {
   color: #fff;
-  background-color: #999999;
+  background-color: #929295;
 }
 @media screen and (min-width: 768px) {
   #block-menu-menu-segment-blocks ul.menu li,
@@ -10076,6 +10076,141 @@ form#user-login {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
   }
+}
+/*
+ *  Exposed search block component
+ * --------------------------------------------------*/
+.region-navigation {
+  position: relative;
+}
+.block-exposed-form-search-course-times {
+  position: absolute;
+  bottom: 54px;
+  left: 0;
+  margin: 0;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget {
+  display: inline-block;
+  float: none;
+  margin: 0 -3px 0 -1px;
+  padding: 0;
+  vertical-align: top;
+  border-left: 1px solid #c9c9c9;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+  display: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .description {
+  display: none;
+  height: 0;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .control-label {
+  display: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .help-block {
+  display: none;
+  height: 0;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control {
+  height: 35px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  color: #494a4f;
+  line-height: 1;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control::-moz-placeholder {
+  color: #929295;
+  opacity: 1;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control:-ms-input-placeholder {
+  color: #929295;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control::-webkit-input-placeholder {
+  color: #929295;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control:focus {
+  -webkit-box-shadow: inset 0 0 3px #494a4f;
+  -moz-box-shadow: inset 0 0 3px #494a4f;
+  box-shadow: inset 0 0 3px #494a4f;
+  border: 1px solid #6d6e72;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-text {
+  margin: 0;
+  padding: 3px 15px 6px;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-select {
+  padding: 3px 15px 6px 10px;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup {
+  margin: 0;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title {
+  width: 20%;
+  min-width: 150px;
+  border: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title .views-widget .form-item .form-control {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
+  overflow: hidden;
+  width: 15%;
+  min-width: 150px;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget {
+  width: 125%;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item .form-control {
+  border: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
+  width: 10%;
+  min-width: 110px;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality {
+  width: 10%;
+  min-width: 120px;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality .views-widget .form-item .form-control {
+  border: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  border: none;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit {
+  margin: 0;
+  height: 35px;
+  padding: 7px 15px 10px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 1px;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #ff5353;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit:hover {
+  color: #ff5353;
+  background: #fff;
 }
 /*
  *  Node page component
@@ -10188,14 +10323,14 @@ form#user-login {
 }
 .node.node-page .row div.col-sm-12 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #c9c9c9;
   background: none;
 }
 .node.node-page .row div.col-sm-12 .field-name-body table,
 .node.node-page .row div.col-sm-12 .field-name-body tr,
 .node.node-page .row div.col-sm-12 .field-name-body th,
 .node.node-page .row div.col-sm-12 .field-name-body td {
-  border-color: #cccccc;
+  border-color: #c9c9c9;
 }
 .node.node-page .row div.col-sm-12 .field-name-body img {
   display: block;
@@ -10318,14 +10453,14 @@ form#user-login {
 }
 .node-webform .row div.col-sm-12 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #c9c9c9;
   background: none;
 }
 .node-webform .row div.col-sm-12 .field-name-body table,
 .node-webform .row div.col-sm-12 .field-name-body tr,
 .node-webform .row div.col-sm-12 .field-name-body th,
 .node-webform .row div.col-sm-12 .field-name-body td {
-  border-color: #cccccc;
+  border-color: #c9c9c9;
 }
 .node-webform .row div.col-sm-12 .field-name-body img {
   display: block;
@@ -10478,14 +10613,14 @@ ul.webform-submission-actions li a:active {
 }
 .webform-confirmation hr {
   border: 0;
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #c9c9c9;
   background: none;
 }
 .webform-confirmation table,
 .webform-confirmation tr,
 .webform-confirmation th,
 .webform-confirmation td {
-  border-color: #cccccc;
+  border-color: #c9c9c9;
 }
 .webform-confirmation img {
   display: block;
@@ -10652,7 +10787,7 @@ form.webform-client-form fieldset.panel .panel-heading {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #c9c9c9;
   background: none;
 }
 form.webform-client-form fieldset.panel .panel-heading .panel-title {
@@ -10803,7 +10938,7 @@ form.webform-client-form .webform-component textarea {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #ebebeb;
+  border: 1px solid #c9c9c9;
   background-color: #ffffff;
 }
 form.webform-client-form .webform-component input:focus,
@@ -10850,7 +10985,7 @@ form.webform-client-form .webform-component select {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #ebebeb;
+  border: 1px solid #c9c9c9;
   background-color: #ffffff;
   outline: none;
 }
@@ -10893,7 +11028,7 @@ form.webform-client-form .webform-component .form-managed-file {
   position: relative;
   overflow-x: auto;
   white-space: nowrap;
-  border: 1px solid #ebebeb;
+  border: 1px solid #c9c9c9;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -11148,17 +11283,18 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr {
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #c9c9c9;
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr th,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr td {
   display: block;
-  padding: 10px 10px 10px 0;
+  padding: 15px 10px 15px 0;
   width: 100% !important;
   font-family: 'SohoGothicProMedium', serif;
   font-size: 14px;
+  color: #6d6e72;
   vertical-align: top;
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
@@ -11167,7 +11303,7 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr:last-child,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr:last-child {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #c9c9c9;
 }
 @media screen and (min-width: 768px) {
   .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th,
@@ -11292,7 +11428,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
  * --------------------------------------------------*/
 .node.node-location {
   margin-bottom: 50px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #c9c9c9;
 }
 .node.node-location .row {
   padding-top: 20px;
@@ -11387,15 +11523,15 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   padding-bottom: 5px;
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  color: #fa5050;
-  border-bottom: 2px solid #fa5050;
+  color: #ff5353;
+  border-bottom: 2px solid #ff5353;
 }
 .node.node-location .row .col-sm-12 .col-left .field-name-body table td {
   padding: 5px 0;
   font-family: 'SohoGothicProLight', serif;
   font-size: 12px;
   color: #333333;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #6d6e72;
 }
 .node.node-location .row .col-sm-12 .col-left .field-name-body table td p {
   margin: 0;
@@ -11538,14 +11674,14 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item hr {
   border: 0;
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #c9c9c9;
   background: none;
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item table,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tr,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item th,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item td {
-  border-color: #cccccc;
+  border-color: #c9c9c9;
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item img {
   display: block;
@@ -11628,7 +11764,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   color: #333333;
 }
 .user-profile .row .col-profile.col-right .wrapper-email .field-email a:hover {
-  color: #fa5050;
+  color: #ff5353;
 }
 .user-profile .row .col-profile.col-right .wrapper-phone span.fa-phone {
   display: inline-block;
@@ -11776,11 +11912,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   text-align: center;
   text-decoration: none;
   color: #fff;
-  border: 1px solid #fa5050;
+  border: 1px solid #ff5353;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #fa5050;
+  background: #ff5353;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover {
   border: 1px solid #fff;
@@ -11794,7 +11930,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 18px;
   line-height: 30px;
   text-align: center;
-  color: #999999;
+  color: #929295;
 }
 .view.view-call2action .view-content .views-row.call2action-brochure .field-name-field-icon .field-item {
   min-height: 95px;
@@ -11941,16 +12077,16 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
-  color: #999999;
+  color: #929295;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #999999;
+  border: 1px solid #929295;
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a,
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active a {
   color: #fff;
-  background-color: #999999;
+  background-color: #929295;
 }
 @media screen and (min-width: 768px) {
   .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs {
@@ -11985,7 +12121,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
     height: 0;
     border-top: 17px solid transparent;
     border-bottom: 17px solid transparent;
-    border-left: 12px solid #999999;
+    border-left: 12px solid #929295;
   }
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content {
@@ -12034,7 +12170,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
     margin: 0 0 0 -6.8%;
     width: 59%;
     height: 306px;
-    border: 1px solid #666666;
+    border: 1px solid #6d6e72;
   }
   .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
     font-size: 14px;
@@ -12062,11 +12198,11 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   line-height: 1;
-  color: #999999;
+  color: #929295;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #999999;
+  border: 1px solid #929295;
   background-color: #fff;
 }
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a,
@@ -12074,7 +12210,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover span,
 .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active span {
   color: #fff;
-  background-color: #999999;
+  background-color: #929295;
 }
 @media screen and (min-width: 768px) {
   .view.view-contacts .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li {
@@ -12218,10 +12354,10 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   margin: 30px 0 0;
   padding: 10px 0;
   font-family: 'SohoGothicProMedium', serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
   line-height: 1;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #c9c9c9;
 }
 .view.view-courses .view-content .panel-group .panel {
   margin: 0;
@@ -12252,7 +12388,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   width: 100%;
   padding: 10px 10px 12px;
   font-size: 14px;
-  color: #777777;
+  color: #929295;
   text-decoration: none;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .short-description {
@@ -12459,14 +12595,14 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body hr {
   border: 0;
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid #c9c9c9;
   background: none;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body table,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tr,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body th,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body td {
-  border-color: #cccccc;
+  border-color: #c9c9c9;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body img {
   display: block;
@@ -12490,85 +12626,172 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 /*
  *  View Course-times component
  * --------------------------------------------------*/
-.view.view-course-times .view-header {
+.view.view-course-times .view-header,
+.view.view-course-times-search .view-header {
   padding: 30px 15px;
 }
-.view.view-course-times .view-header p {
+.view.view-course-times .view-header p,
+.view.view-course-times-search .view-header p {
   margin: 0 auto;
   width: 80%;
-  font-family: 'SohoGothicProRegular', serif;
+  font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
   text-align: center;
-  color: #777777;
+  color: #929295;
 }
-.view.view-course-times .view-content {
+.view.view-course-times .view-content,
+.view.view-course-times-search .view-content {
   padding: 0 15px;
 }
-.view.view-course-times .view-content table {
+.view.view-course-times .view-content table,
+.view.view-course-times-search .view-content table {
   width: 100%;
 }
-.view.view-course-times .view-content table thead tr th {
+.view.view-course-times .view-content table thead tr th,
+.view.view-course-times-search .view-content table thead tr th {
+  position: relative;
   padding: 5px 5px 10px;
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 15px;
   border: none;
 }
-.view.view-course-times .view-content table tbody tr {
+.view.view-course-times .view-content table thead tr th a,
+.view.view-course-times-search .view-content table thead tr th a {
+  color: #494a4f;
+}
+.view.view-course-times .view-content table thead tr th a:hover,
+.view.view-course-times-search .view-content table thead tr th a:hover {
+  color: #494a4f;
+}
+.view.view-course-times .view-content table thead tr th a img,
+.view.view-course-times-search .view-content table thead tr th a img {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+}
+.view.view-course-times .view-content table tbody tr,
+.view.view-course-times-search .view-content table tbody tr {
   padding: 0;
   border: none;
 }
-.view.view-course-times .view-content table tbody tr.even {
+.view.view-course-times .view-content table tbody tr.even,
+.view.view-course-times-search .view-content table tbody tr.even {
   background-color: #fff;
 }
-.view.view-course-times .view-content table tbody tr.odd {
+.view.view-course-times .view-content table tbody tr.odd,
+.view.view-course-times-search .view-content table tbody tr.odd {
   background-color: #ebebeb;
 }
-.view.view-course-times .view-content table tbody tr td {
+.view.view-course-times .view-content table tbody tr td,
+.view.view-course-times-search .view-content table tbody tr td {
   padding: 8px;
   vertical-align: middle;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 16px;
+  font-size: 15px;
+  color: #494a4f;
   border: none;
 }
-.view.view-course-times .view-content table tbody tr td a {
-  color: #333333;
+.view.view-course-times .view-content table tbody tr td a,
+.view.view-course-times-search .view-content table tbody tr td a {
+  color: #494a4f;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-field-course-date {
+.view.view-course-times .view-content table tbody tr td.active,
+.view.view-course-times-search .view-content table tbody tr td.active {
+  background: none;
+}
+.view.view-course-times .view-content table tbody tr td.views-field-field-course-date,
+.view.view-course-times-search .view-content table tbody tr td.views-field-field-course-date {
   white-space: nowrap;
   line-height: 1.2;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-field-location {
+.view.view-course-times .view-content table tbody tr td.views-field-field-location,
+.view.view-course-times-search .view-content table tbody tr td.views-field-field-location {
   text-align: center;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-body p {
-  font-size: 16px;
+.view.view-course-times .view-content table tbody tr td.views-field-body,
+.view.view-course-times-search .view-content table tbody tr td.views-field-body {
+  min-width: 130px;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-field-brand {
+.view.view-course-times .view-content table tbody tr td.views-field-body p,
+.view.view-course-times-search .view-content table tbody tr td.views-field-body p {
+  font-size: 15px;
+}
+.view.view-course-times .view-content table tbody tr td.views-field-field-brand,
+.view.view-course-times-search .view-content table tbody tr td.views-field-field-brand {
   text-align: center;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-field-brand img {
+.view.view-course-times .view-content table tbody tr td.views-field-field-brand img,
+.view.view-course-times-search .view-content table tbody tr td.views-field-field-brand img {
   height: 30px;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-nothing {
+.view.view-course-times .view-content table tbody tr td.views-field-nothing,
+.view.view-course-times-search .view-content table tbody tr td.views-field-nothing {
   text-align: right;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-nothing a {
+.view.view-course-times .view-content table tbody tr td.views-field-nothing a,
+.view.view-course-times-search .view-content table tbody tr td.views-field-nothing a {
   display: inline-block;
-  padding: 5px 15px 8px;
+  padding: 5px 10px 8px;
   min-width: 110px;
   line-height: 1;
   color: #fff;
   text-align: center;
   text-decoration: none;
+  letter-spacing: 1px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #fa5050;
-  background-color: #fa5050;
+  border: 2px solid #ff5353;
+  background-color: #ff5353;
 }
-.view.view-course-times .view-content table tbody tr td.views-field-nothing a:hover {
-  color: #fa5050;
+.view.view-course-times .view-content table tbody tr td.views-field-nothing a:hover,
+.view.view-course-times-search .view-content table tbody tr td.views-field-nothing a:hover {
+  color: #ff5353;
   background-color: rgba(255, 255, 255, 0);
+}
+.view.view-course-times .text-center ul.pagination,
+.view.view-course-times-search .text-center ul.pagination {
+  display: inline-block;
+  margin: 20px 0;
+  text-align: center;
+}
+.view.view-course-times .text-center ul.pagination li a,
+.view.view-course-times-search .text-center ul.pagination li a,
+.view.view-course-times .text-center ul.pagination li span,
+.view.view-course-times-search .text-center ul.pagination li span {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #929295;
+  border: none;
+  background: none;
+}
+.view.view-course-times .text-center ul.pagination li:hover a,
+.view.view-course-times-search .text-center ul.pagination li:hover a,
+.view.view-course-times .text-center ul.pagination li:focus a,
+.view.view-course-times-search .text-center ul.pagination li:focus a,
+.view.view-course-times .text-center ul.pagination li.active a,
+.view.view-course-times-search .text-center ul.pagination li.active a,
+.view.view-course-times .text-center ul.pagination li:hover span,
+.view.view-course-times-search .text-center ul.pagination li:hover span,
+.view.view-course-times .text-center ul.pagination li:focus span,
+.view.view-course-times-search .text-center ul.pagination li:focus span,
+.view.view-course-times .text-center ul.pagination li.active span,
+.view.view-course-times-search .text-center ul.pagination li.active span {
+  color: #cc3333;
+  text-decoration: none;
+}
+.view.view-course-times-search .view-header {
+  padding: 30px 0;
+}
+.view.view-course-times-search .view-content {
+  padding: 0;
+}
+.view.view-course-times-search .view-content .table-responsive {
+  border: 1px solid #c9c9c9;
+}
+.view.view-course-times-search .view-content .table-responsive table {
+  padding: 10px;
 }
 /*
  *  View team component
@@ -12578,7 +12801,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   margin: 0 0 30px;
   padding: 20px 0 0;
   text-align: center;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #c9c9c9;
 }
 .view.view-team .view-header ul.links-alphabet li {
   display: inline-block;
@@ -12592,12 +12815,12 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
-  color: #999999;
+  color: #929295;
   text-decoration: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid #999999;
+  border: 1px solid #929295;
   background: none;
 }
 .view.view-team .view-header ul.links-alphabet li a.first {
@@ -12607,7 +12830,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-team .view-header ul.links-alphabet li:hover a,
 .view.view-team .view-header ul.links-alphabet li.active a {
   color: #fff;
-  background-color: #999999;
+  background-color: #929295;
 }
 .view.view-team .view-content .views-row {
   display: block;
@@ -12615,24 +12838,27 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   width: 100%;
 }
 .view.view-team .text-center ul.pagination {
-  display: block;
-  text-align: center;
-}
-.view.view-team .text-center ul.pagination li {
   display: inline-block;
-  margin: 0 -2px;
+  margin: 20px 0;
+  text-align: center;
 }
 .view.view-team .text-center ul.pagination li a,
 .view.view-team .text-center ul.pagination li span {
-  color: #999999;
-  border: 1px solid #999999;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #929295;
+  border: none;
+  background: none;
 }
 .view.view-team .text-center ul.pagination li:hover a,
+.view.view-team .text-center ul.pagination li:focus a,
 .view.view-team .text-center ul.pagination li.active a,
 .view.view-team .text-center ul.pagination li:hover span,
+.view.view-team .text-center ul.pagination li:focus span,
 .view.view-team .text-center ul.pagination li.active span {
-  color: #fff;
-  background-color: #999999;
+  color: #cc3333;
+  text-decoration: none;
 }
 @media screen and (min-width: 768px) {
   .view.view-team .view-content .views-row {
@@ -12861,6 +13087,65 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
   background-color: #b1a895;
 }
 /*
+ *  Exposed search block component
+ * --------------------------------------------------*/
+#ui-datepicker-div {
+  position: relative;
+  margin: -30px 0 0;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 16px;
+  color: #929295;
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #fff;
+  z-index: 100 !important;
+}
+#ui-datepicker-div .ui-state-default,
+#ui-datepicker-div .ui-widget-header .ui-state-default,
+#ui-datepicker-div .ui-widget-content .ui-state-default {
+  color: #929295;
+  border: 1px solid #929295;
+  background: none;
+}
+#ui-datepicker-div .ui-state-active,
+#ui-datepicker-div .ui-widget-header .ui-state-active,
+#ui-datepicker-div .ui-widget-content .ui-state-active {
+  color: #494a4f;
+  border: 1px solid #494a4f;
+  background: none;
+}
+#ui-datepicker-div .ui-widget-header {
+  border: 1px solid #c9c9c9;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #fff none;
+}
+#ui-datepicker-div .ui-widget-header .ui-datepicker-title select.ui-datepicker-month,
+#ui-datepicker-div .ui-widget-header .ui-datepicker-title select.ui-datepicker-year {
+  padding: 0 0 2px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+  color: #929295;
+}
+#ui-datepicker-div table.ui-datepicker-calendar thead tr th {
+  color: #494a4f;
+}
+#ui-datepicker-div table.ui-datepicker-calendar tbody tr td {
+  background: none;
+}
+#ui-datepicker-div table.ui-datepicker-calendar tbody tr td a {
+  color: #494a4f;
+}
+#ui-datepicker-div table.ui-datepicker-calendar tbody tr td a:hover,
+#ui-datepicker-div table.ui-datepicker-calendar tbody tr td a:focus,
+#ui-datepicker-div table.ui-datepicker-calendar tbody tr td a.ui-state-active {
+  color: #fff;
+  background-color: #ff5353;
+}
+/*
  *  Header section (navigation)
  * --------------------------------------------------*/
 body.navbar-is-fixed-top {
@@ -12908,7 +13193,7 @@ header#navbar .container .navbar-header .navbar-toggle {
 }
 header#navbar .container .navbar-header .navbar-toggle span.glyphicon {
   font-size: 30px;
-  color: #39393e;
+  color: #494a4f;
 }
 header#navbar .container .navbar-header .navbar-toggle:hover span.glyphicon,
 header#navbar .container .navbar-header .navbar-toggle:focus span.glyphicon {
@@ -12935,7 +13220,7 @@ header#navbar .container .navbar-collapse .navbar-toggle-2 {
 }
 header#navbar .container .navbar-collapse .navbar-toggle-2 span.fa {
   font-size: 30px;
-  color: #39393e;
+  color: #494a4f;
 }
 header#navbar .container .navbar-collapse .navbar-toggle-2:hover span.fa,
 header#navbar .container .navbar-collapse .navbar-toggle-2:focus span.fa {
@@ -13193,7 +13478,7 @@ body.excollege_section .main-container .container .row section h1.page-header {
   margin: 0;
   padding: 0;
   border: none;
-  background-color: #39393e;
+  background-color: #494a4f;
 }
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field .block-title {
   margin: 30px 0;
@@ -13235,7 +13520,7 @@ body.excollege_section .main-container .container .row section h1.page-header {
   font-size: 16px;
   line-height: 1;
   text-align: left;
-  color: #999999;
+  color: #929295;
   box-shadow: none;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -13268,11 +13553,11 @@ body.excollege_section .main-container .container .row section h1.page-header {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   border: none;
-  background-color: #999999;
+  background-color: #929295;
 }
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions button.webform-submit:hover,
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 div.form-actions button.webform-submit:focus {
-  color: #999999;
+  color: #929295;
   border: none;
   background: #eee;
 }
@@ -13305,7 +13590,7 @@ body.excollege_section .main-container .container .row section h1.page-header {
   margin-top: 30px;
   padding: 30px 0;
   width: 100%;
-  border-top: 1px solid #999999;
+  border-top: 1px solid #929295;
 }
 .footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu {
   text-align: center;
@@ -13318,8 +13603,8 @@ body.excollege_section .main-container .container .row section h1.page-header {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
-  color: #999999;
-  border-right: 1px solid #666666;
+  color: #929295;
+  border-right: 1px solid #6d6e72;
 }
 .footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a:hover,
 .footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a.active {
@@ -13328,6 +13613,21 @@ body.excollege_section .main-container .container .row section h1.page-header {
 }
 .footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li.last a {
   border: none;
+}
+.subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item {
+  margin: 10px 0 0;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1;
+}
+.subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item div a {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid #333333;
+}
+.subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item div a img {
+  max-width: 100%;
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates {
   display: block;
@@ -13342,6 +13642,8 @@ body.excollege_section .main-container .container .row section h1.page-header {
   display: inline-block;
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates .field-name-body .field-item a img {
+  margin: 10px !important;
   max-height: 60px;
+  max-width: 120px;
   width: auto;
 }
