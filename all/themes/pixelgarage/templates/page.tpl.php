@@ -200,7 +200,7 @@
   </div>
 <?php endif; ?>
 
-<?php if ($exposed_search_form): ?>
+<?php if ($exposed_search_form_modal_id): ?>
   <!--
   Modal dialog displaying the exposed course-times search form (mobile screens)
   -->

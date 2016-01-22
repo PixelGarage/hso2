@@ -97,6 +97,7 @@ function pixelgarage_preprocess_page(&$vars) {
   // hide titles on login forms
   pg_login_preprocess_page($vars);
 
+  //
   // set segment logo
   $contexts = context_active_contexts();
   if (array_key_exists('kv-college', $contexts) || array_key_exists('kv-college-home', $contexts)) {
@@ -114,11 +115,15 @@ function pixelgarage_preprocess_page(&$vars) {
   // replace logo with .svg
   $vars['logo'] = str_replace(array('.jpg', '.png'), '.svg', $vars['logo']);
 
+  //
   // get exposed search form, if available (to render it in modal dialog)
   $exposed_search_form_id = 'views_f8fbd4e2a199efa3b091b51b9cbe2130';
-  if (isset($vars['page']['navigation']) && ($exposed_search_form = $vars['page']['navigation'][$exposed_search_form_id])) {
+  $vars['exposed_search_form_modal_id'] = null;
+
+  if (isset($vars['page']['navigation'][$exposed_search_form_id]) &&
+      ($exposed_search_form = $vars['page']['navigation'][$exposed_search_form_id])) {
     $vars['exposed_search_form'] = $exposed_search_form;
-    if (isset($_SESSION['hso'])) {
+    if (isset($_SESSION['hso']['exposed_search_form_modal_id'])) {
       $vars['exposed_search_form_modal_id'] = $_SESSION['hso']['exposed_search_form_modal_id'];
       $vars['exposed_search_form_modal_title'] = t('Lehrgang Suche');
     }
