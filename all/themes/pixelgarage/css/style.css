@@ -10083,11 +10083,152 @@ form#user-login {
 .region-navigation {
   position: relative;
 }
-.block-exposed-form-search-course-times {
-  position: absolute;
-  bottom: 54px;
+#modal-exposed-search-form {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
+  z-index: 1040;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  z-index: 1620;
+}
+#modal-exposed-search-form.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+#modal-exposed-search-form.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+#modal-exposed-search-form .modal-backdrop {
+  bottom: 0;
+  background-color: #222;
+}
+#modal-exposed-search-form .modal-backdrop.in {
+  opacity: 0.7;
+}
+#modal-exposed-search-form .modal-dialog {
+  margin: 0 auto;
+  width: 100%;
+}
+.admin-menu #modal-exposed-search-form .modal-dialog {
+  margin: 29px auto 0;
+}
+#modal-exposed-search-form .modal-dialog .modal-content {
+  position: relative;
+  padding: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#modal-exposed-search-form .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  min-height: 60px;
+  border: none;
+}
+#modal-exposed-search-form .modal-dialog .modal-content .modal-header h2.modal-title {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #333333;
+}
+#modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 1.0;
+  z-index: 1;
+}
+#modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close span {
+  padding: 0;
+  font-size: 30px;
+  color: #333333;
+}
+#modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close:hover span {
+  color: #ff5353;
+}
+#modal-exposed-search-form .modal-dialog .modal-content .modal-body {
+  padding: 20px 10px;
+}
+.region-navigation .block-exposed-form-search-course-times {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
   margin: 0;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .region-navigation .block-exposed-form-search-course-times {
+    bottom: 54px;
+  }
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form {
+  display: none;
+}
+.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+@media screen and (min-width: 640px) {
+  .region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form {
+    display: none;
+  }
+}
+.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span {
+  display: inline-block;
+  margin: 0 -2px;
+  height: 35px;
+  padding: 7px 15px 10px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  border: none;
+}
+.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span.button-text {
+  color: #929295;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background: #fff none;
+}
+.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span.button-search {
+  color: #fff;
+  letter-spacing: 1px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #ff5353 none;
+}
+.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form {
+    display: block;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets {
   margin: 0;
@@ -10095,12 +10236,18 @@ form#user-login {
   text-align: center;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget {
-  display: inline-block;
+  display: block;
   float: none;
-  margin: 0 -3px 0 -1px;
+  margin: 0 auto 20px;
   padding: 0;
-  vertical-align: top;
-  border-left: 1px solid #c9c9c9;
+}
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget {
+    display: inline-block;
+    margin: 0 -3px 0 -1px;
+    vertical-align: top;
+    border-left: 1px solid #c9c9c9;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
   display: none;
@@ -10117,15 +10264,15 @@ form#user-login {
   height: 0;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control {
+  margin: 0;
   height: 35px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   color: #494a4f;
-  line-height: 1;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #c9c9c9;
   background-color: #fff;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -10141,14 +10288,21 @@ form#user-login {
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control::-webkit-input-placeholder {
   color: #929295;
 }
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+}
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control:focus {
-  -webkit-box-shadow: inset 0 0 3px #494a4f;
-  -moz-box-shadow: inset 0 0 3px #494a4f;
-  box-shadow: inset 0 0 3px #494a4f;
-  border: 1px solid #6d6e72;
+  -webkit-box-shadow: inset 0 0 3px #c9c9c9;
+  -moz-box-shadow: inset 0 0 3px #c9c9c9;
+  box-shadow: inset 0 0 3px #c9c9c9;
+  border: 1px solid #c9c9c9;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-text {
-  margin: 0;
   padding: 3px 15px 6px;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-select {
@@ -10158,35 +10312,51 @@ form#user-login {
   margin: 0;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title {
-  width: 20%;
-  min-width: 150px;
+  width: 90%;
   border: none;
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title .views-widget .form-item .form-control {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title {
+    width: 20%;
+    min-width: 150px;
+  }
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title .views-widget .form-item .form-control {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
-  overflow: hidden;
-  width: 15%;
-  min-width: 150px;
+  width: 90%;
+  background-color: #fff;
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget {
-  width: 125%;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item .form-control {
-  border: none;
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
+    overflow: hidden;
+    width: 15%;
+    min-width: 150px;
+  }
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget {
+    width: 125%;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
-  width: 10%;
-  min-width: 110px;
+  overflow: hidden;
+  width: 90%;
+}
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
+    width: 10%;
+    min-width: 110px;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality {
-  width: 10%;
-  min-width: 120px;
+  width: 90%;
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality .views-widget .form-item .form-control {
-  border: none;
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality {
+    width: 10%;
+    min-width: 120px;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
   border: none;
@@ -10200,13 +10370,17 @@ form#user-login {
   color: #fff;
   line-height: 1;
   letter-spacing: 1px;
-  border: none;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border: 1px solid #ff5353;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   background: #ff5353;
+}
+@media screen and (min-width: 640px) {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit:hover {
   color: #ff5353;
@@ -13515,10 +13689,9 @@ body.excollege_section .main-container .container .row section h1.page-header {
 }
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-newsletter form#webform-client-form-1301 .webform-component input.form-text {
   padding: 10px;
-  height: auto;
+  height: 36px;
   font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
-  line-height: 1;
   text-align: left;
   color: #929295;
   box-shadow: none;
@@ -13542,9 +13715,9 @@ body.excollege_section .main-container .container .row section h1.page-header {
   display: inline-block;
   margin: 0;
   padding: 10px 20px;
+  height: 36px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
-  line-height: 1;
   letter-spacing: 1.5px;
   text-transform: capitalize;
   color: #eee;

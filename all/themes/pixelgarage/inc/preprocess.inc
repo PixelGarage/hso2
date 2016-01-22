@@ -114,7 +114,46 @@ function pixelgarage_preprocess_page(&$vars) {
   // replace logo with .svg
   $vars['logo'] = str_replace(array('.jpg', '.png'), '.svg', $vars['logo']);
 
+  // get exposed search form, if available (to render it in modal dialog)
+  $exposed_search_form_id = 'views_f8fbd4e2a199efa3b091b51b9cbe2130';
+  if (isset($vars['page']['navigation']) && ($exposed_search_form = $vars['page']['navigation'][$exposed_search_form_id])) {
+    $vars['exposed_search_form'] = $exposed_search_form;
+    if (isset($_SESSION['hso'])) {
+      $vars['exposed_search_form_modal_id'] = $_SESSION['hso']['exposed_search_form_modal_id'];
+      $vars['exposed_search_form_modal_title'] = t('Lehrgang Suche');
+    }
+  }
 }
+
+/**
+ * Adapts the exposed search form to show placeholders in search fields.
+ *
+ */
+function pixelgarage_preprocess_views_exposed_form(&$vars) {
+  //
+  // add placeholders to search exposed form items
+  $form = &$vars['form'];
+  if ($form['#id'] != 'views-exposed-form-course-times-search-page-search-course-times') return;
+
+  foreach ($form['#info'] as $id => $info) {
+    // add the description as placeholder to the widget
+    $form[$info['value']]['#attributes']['placeholder'] = $info['description'];
+    $form[$info['value']]['#printed'] = false;
+
+    // render widget again
+    $field = $form[$info['value']];
+    $vars['widgets'][$id]->widget = drupal_render($field);
+  }
+
+  //
+  // define modal dialog trigger button
+  $vars['button_text'] = t('Welcher Lehrgang, wann, wo?');
+  $vars['button_search'] = t('Suchen');
+  $vars['button_modal_id'] = 'modal-exposed-search-form';
+  $_SESSION['hso'] = array('exposed_search_form_modal_id' => $vars['button_modal_id']);
+
+}
+
 
 /**
  * Adapts the courses accordion list in the segment page.
@@ -181,29 +220,6 @@ function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
     }
   }
 }
-
-/**
- * Adapts the exposed form to search for course-times.
- *
- * Add placeholders to the search fields.
- */
-function pixelgarage_preprocess_views_exposed_form(&$vars) {
-  // adapt only search exposed form
-  $form = &$vars['form'];
-  if ($form['#id'] != 'views-exposed-form-course-times-search-page-search-course-times') return;
-
-  foreach ($form['#info'] as $id => $info) {
-    // add the description as placeholder to the widget
-    $form[$info['value']]['#attributes']['placeholder'] = $info['description'];
-    $form[$info['value']]['#printed'] = false;
-
-    // render widget again
-    $field = $form[$info['value']];
-    $vars['widgets'][$id]->widget = drupal_render($field);
-  }
-
-}
-
 
 /**
  * Preprocess panel pane for remote forms to add the GUID (found in the URL) to the iFrame src attribute.

@@ -8,35 +8,182 @@
 
 // Mixins
 // -------------------------
+.modal() {
+  .modal-backdrop {
+    bottom: 0;
+    background-color: #222;
+
+    &.in {
+      opacity: 0.7;
+    }
+  }
+
+  .modal-dialog {
+    margin: 0 auto;
+    width: 100%;
+
+    .admin-menu & {
+      margin: 29px auto 0;
+    }
+
+    .modal-content {
+      position: relative;
+      padding: 0;
+      #pxl-mixins.border-radius(0);
+      border: none;
+      #pxl-mixins.box-shadow(none);
+
+      .modal-header {
+        padding: 0;
+        min-height: 60px;
+        border: none;
+
+        h2.modal-title {
+          font-family: @pxl-text-font-light;
+          font-size: 30px;
+          text-align: center;
+          color: @text-color;
+        }
+
+        button.close {
+          display: block;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          opacity: 1.0;
+          z-index: 1; // has to be above body
+
+          span {
+            padding: 0;
+            font-size: 30px;
+            color: @text-color;
+          }
+
+          &:hover {
+            span {
+              color: @pxl-color-bg-button;
+            }
+          }
+        }
+      }
+
+      .modal-body {
+        // content styled separately
+        padding: 20px 10px;
+      }
+    }
+  }
+}
 
 
 
 // General settings
 // -------------------------
+//
+// navigation region containing search form
 .region-navigation {
   position: relative;
 }
 
+//
+// modal search dialog
+#modal-exposed-search-form {
+  .modal();
+}
+
+
+//
+//  The exposed search form is shown in the navigation region (screen width > 640) or
+//  in a modal dialog for mobile devices.
+//
 .block-exposed-form-search-course-times {
-  position: absolute;
-  bottom: 54px;
-  left: 0;
-  margin: 0;
+  .region-navigation & {
+    // place search form absolutely in navigation region
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    margin: 0;
+    width: 100%;
+
+    @media @narrow {
+      bottom: 54px;
+    }
+  }
 
   form#views-exposed-form-course-times-search-page-search-course-times {
+    // search button to open modal dialog (mobiles)
+    .btn-modal-search-form {
+      display: none;
+
+      .region-navigation & {
+        // show this button only in navigation region on mobile screens
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+
+        @media @header-breakpoint {
+          display: none;
+        }
+
+        span {
+          display: inline-block;
+          margin: 0 -2px;
+          height: @pxl-form-control-height;
+          padding: 7px 15px 10px;
+          font-family: @pxl-text-font;
+          font-size: (@font-size-base - 2);
+          //line-height: 1;
+          border: none;
+
+          &.button-text {
+            color: @pxl-color-gray-text;
+            #pxl-mixins.border-radius(0);
+            .border-left-radius(3px);
+            background: #fff none;
+          }
+
+          &.button-search {
+            color: #fff;
+            letter-spacing: 1px;
+            #pxl-mixins.border-radius(0);
+            .border-right-radius(3px);
+            background: @pxl-color-bg-button none;
+          }
+        }
+      }
+    }
+
+    // exposed search form
     .views-exposed-form {
+      .region-navigation & {
+        // show in navigation region only on screens fulfilling header-breakpoint
+        display: none;
+
+        @media @header-breakpoint {
+          display: block;
+        }
+      }
+
       .views-exposed-widgets {
         margin: 0;
         width: 100%;
         text-align: center;
 
         .views-exposed-widget {
-          display: inline-block;
+          display: block;
           float: none;
-          margin: 0 -3px 0 -1px;
+          margin: 0 auto 20px;
           padding: 0;
-          vertical-align: top;
-          border-left: 1px solid @pxl-color-gray-border-light;
+
+          @media @header-breakpoint {
+            // show inline search form in navigation section for bigger screens
+            display: inline-block;
+            margin: 0 -3px 0 -1px;
+            vertical-align: top;
+            border-left: 1px solid @pxl-color-gray-border-light;
+          }
 
           label {
             display: none;
@@ -59,24 +206,28 @@
               }
 
               .form-control {
+                margin: 0;
                 height: @pxl-form-control-height;
                 font-family: @pxl-text-font;
                 font-size: @font-size-base;
                 color: @pxl-color-gray-dark;
-                line-height: 1;
-                #pxl-mixins.border-radius(0);
-                border: 1px solid rgba(0,0,0,0.0);
+                #pxl-mixins.border-radius(3px);
+                border: 1px solid @pxl-color-gray-border-light;
                 background-color: #fff;
                 #pxl-mixins.box-shadow(none);
                 .placeholder(@pxl-color-gray-text);
 
+                @media @header-breakpoint {
+                  #pxl-mixins.border-radius(0);
+                  border: 1px solid rgba(0,0,0,0.0);
+                }
+
                 &:focus {
-                  #pxl-mixins.box-shadow(inset 0 0 3px @pxl-color-gray-dark);
-                  border: 1px solid @pxl-color-gray-border;
+                  #pxl-mixins.box-shadow(inset 0 0 3px @pxl-color-gray-border-light);
+                  border: 1px solid @pxl-color-gray-border-light;
                 }
 
                 &.form-text {
-                  margin: 0;
                   padding: 3px 15px 6px;
                 }
 
@@ -84,7 +235,6 @@
                   padding: 3px 15px 6px 10px;
 
                   option {
-
                   }
                 }
               }
@@ -99,50 +249,55 @@
           }  // views-widget
 
           &.views-widget-filter-title {
-            width: 20%;
-            min-width: 150px;
-
+            width: 90%;
             border: none;
 
-            .views-widget {
-              .form-item {
-                .form-control {
-                  .border-left-radius(3px);
+            @media @header-breakpoint {
+              width: 20%;
+              min-width: 150px;
+
+              .views-widget {
+                .form-item {
+                  .form-control {
+                    .border-left-radius(3px);
+                  }
                 }
               }
             }
           }
 
           &.views-widget-filter-field_segment_tid_1 {
-            overflow: hidden;
-            width: 15%;
-            min-width: 150px;
+            width: 90%;
+            background-color: #fff; // corrects round corners
 
-            .views-widget {
-              width: 125%;
-              .form-item {
-                .form-control {
-                  border: none;
-                }
+            @media @header-breakpoint {
+              overflow: hidden;
+              width: 15%;
+              min-width: 150px;
+
+              .views-widget {
+                // hide select dropdown button
+                width: 125%;
               }
             }
           }
 
           &.views-widget-filter-field_course_date_value {
-            width: 10%;
-            min-width: 110px;
+            overflow: hidden;
+            width: 90%;
+
+            @media @header-breakpoint {
+              width: 10%;
+              min-width: 110px;
+            }
           }
 
           &.views-widget-filter-field_address_locality {
-            width: 10%;
-            min-width: 120px;
+            width: 90%;
 
-            .views-widget {
-              .form-item {
-                .form-control {
-                  border: none;
-                }
-              }
+            @media @header-breakpoint {
+              width: 10%;
+              min-width: 120px;
             }
           }
 
@@ -158,10 +313,13 @@
               color: #fff;
               line-height: 1;
               letter-spacing: 1px;
-              border: none;
-              #pxl-mixins.border-radius(0);
-              .border-right-radius(3px);
+              border: 1px solid @pxl-color-bg-button;
+              #pxl-mixins.border-radius(3px);
               background: @pxl-color-bg-button;
+
+              @media @header-breakpoint {
+                .border-left-radius(0);
+              }
 
               &:hover {
                 color: @pxl-color-bg-button;
