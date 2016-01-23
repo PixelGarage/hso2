@@ -7,62 +7,6 @@
  */
 
 /**
- * Output a form element in plain text format.
- */
-function hso_theme_webform_element_text($variables) {
-  $element = $variables['element'];
-  $value = $variables['element']['#children'];
-
-  $output = '';
-  $is_group = webform_component_feature($element['#webform_component']['type'], 'group');
-
-  // Output the element title.
-  if (isset($element['#title'])) {
-    if ($is_group) {
-      $output .= '--' . $element['#title'] . '--';
-    }
-    elseif (!in_array(drupal_substr($element['#title'], -1), array('?', ':', '!', '%', ';', '@'))) {
-      $output .= $element['#title'] . ':';
-    }
-    else {
-      $output .= $element['#title'];
-    }
-  }
-  // Wrap long values at 65 characters, allowing for a few fieldset indents.
-  // It's common courtesy to wrap at 75 characters in e-mails.
-  if ($is_group && drupal_strlen($value) > 65) {
-    $value = wordwrap($value, 65, "\n");
-    $lines = explode("\n", $value);
-    foreach ($lines as $key => $line) {
-      $lines[$key] = '  ' . $line;
-    }
-    $value = implode("\n", $lines);
-  }
-
-  // Add the value to the output.
-  if ($value) {
-    $output .= (strpos($value, "\n") === FALSE ? ' ' : "\n") . $value;
-  }
-
-  // Indent fieldsets.
-  if ($is_group) {
-    $lines = explode("\n", $output);
-    foreach ($lines as $number => $line) {
-      if (strlen($line)) {
-        $lines[$number] = '  ' . $line;
-      }
-    }
-    $output = implode("\n", $lines);
-  }
-
-  if ($output) {
-    $output .= "\n";
-  }
-
-  return $output;
-}
-
-/**
  * Field theme specific override for body field in a remote form.
  *
  * Adds the profile id to the iFrame src attribute for the Kundenprofil remote form.
