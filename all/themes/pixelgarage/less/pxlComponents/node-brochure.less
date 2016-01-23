@@ -1,0 +1,59 @@
+/*
+ *  Node brochure component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-brochure {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-h2);
+          color: @text-color;
+        }
+      }
+
+      .field-name-body {
+        #pxl-mixins.wysiwyg-body;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+
+      .field-name-field-file {
+        .flexpaper-container {
+          .flexpaper-header {
+            .flexpaper-select {
+              display:none;
+            }
+
+            .flexpaper-link-container {
+              span.file {
+                img {
+
+                }
+                a {
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -542,15 +542,16 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
           $js_settings[$fid]['jsonFiles'] = (count($jsonFiles) > 0) ? $folder_relative_path . '/' . $fid . '_{page}.js' : '';
 
           // set pdf as link file, if available
-          $pdfname = $file->filename . '.pdf';
-          $pdfpath = $folder_absolute_path . '/' . $pdfname;
-          if ($show_file_link && file_exists($pdfpath)) {
+          $pos = strpos($file->filename, '.');
+          $pdf_name = substr($file->filename, 0, $pos) . '.pdf';
+          $pdf_path = $files_directory . '/' . $pdf_name;
+          if ($show_file_link && file_exists($pdf_path)) {
             $pdf_file = new stdClass();
             $pdf_file->uid      = 1;
-            $pdf_file->filename = $pdfname;
-            $pdf_file->uri      = $pdfpath;
-            $pdf_file->filemime = file_get_mimetype($pdfpath);
-            $pdf_file->filesize = filesize($pdfpath);
+            $pdf_file->filename = $pdf_name;
+            $pdf_file->uri      = $pdf_path;
+            $pdf_file->filemime = file_get_mimetype($pdf_path);
+            $pdf_file->filesize = filesize($pdf_path);
             $pdf_file->status   = 1;
           }
           else {

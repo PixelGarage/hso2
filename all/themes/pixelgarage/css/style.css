@@ -11985,6 +11985,148 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   }
 }
 /*
+ *  Node brochure component
+ * --------------------------------------------------*/
+.node.node-brochure .row div.col-sm-12 {
+  width: 100%;
+}
+.node.node-brochure .row div.col-sm-12 .field-name-title h2 {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 21.25px;
+  color: #333333;
+}
+@media screen and (min-width: 480px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-title h2 {
+    font-size: 4.42708333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-title h2 {
+    font-size: 34px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body h1,
+.node.node-brochure .row div.col-sm-12 .field-name-body h2,
+.node.node-brochure .row div.col-sm-12 .field-name-body h3,
+.node.node-brochure .row div.col-sm-12 .field-name-body h4,
+.node.node-brochure .row div.col-sm-12 .field-name-body h5,
+.node.node-brochure .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 480px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body h1,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h2,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h3,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h4,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h5,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h6 {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body h1,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h2,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h3,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h4,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h5,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h6 {
+    font-size: 17px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body h1,
+.node.node-brochure .row div.col-sm-12 .field-name-body h2,
+.node.node-brochure .row div.col-sm-12 .field-name-body h3 {
+  font-size: 15px;
+}
+@media screen and (min-width: 480px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body h1,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h2,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body h1,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h2,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body p,
+.node.node-brochure .row div.col-sm-12 .field-name-body div,
+.node.node-brochure .row div.col-sm-12 .field-name-body tbody td {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 480px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body p,
+  .node.node-brochure .row div.col-sm-12 .field-name-body div,
+  .node.node-brochure .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 16px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body li {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 480px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body li {
+    font-size: 16px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body pre,
+.node.node-brochure .row div.col-sm-12 .field-name-body address {
+  font-family: 'SohoGothicProLightItalic' serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 480px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body pre,
+  .node.node-brochure .row div.col-sm-12 .field-name-body address {
+    font-size: 16px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #c9c9c9;
+  background: none;
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body table,
+.node.node-brochure .row div.col-sm-12 .field-name-body tr,
+.node.node-brochure .row div.col-sm-12 .field-name-body th,
+.node.node-brochure .row div.col-sm-12 .field-name-body td {
+  border-color: #c9c9c9;
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body embed,
+.node.node-brochure .row div.col-sm-12 .field-name-body video,
+.node.node-brochure .row div.col-sm-12 .field-name-body audio,
+.node.node-brochure .row div.col-sm-12 .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100% !important;
+  max-width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+.node.node-brochure .row div.col-sm-12 .field-name-field-file .flexpaper-container .flexpaper-header .flexpaper-select {
+  display: none;
+}
+/*
  *  Banners view (navigation)
  * --------------------------------------------------*/
 .view-banners .view-content .carousel {

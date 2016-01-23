@@ -84,7 +84,9 @@ function flexpaper2_extract_archive_batch_process($file, &$context) {
   file_unmanaged_copy($extracted_dir . '/index.html', $publish_directory, FILE_EXISTS_REPLACE);
 
   // copy pdf file if available
-  $pdfpath = $extracted_dir . '/' . $file->filename . '.pdf';
+  $pos = strpos($file->filename, '.');
+  $pdf_name = substr($file->filename, 0, $pos) . '.pdf';
+  $pdfpath = $extracted_dir . '/' . $pdf_name;
   if (file_exists($pdfpath)) {
     file_unmanaged_copy($pdfpath, $publish_directory, FILE_EXISTS_REPLACE);
   }
