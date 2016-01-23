@@ -62,12 +62,11 @@
   color: @color;
   outline: none;
   #pxl-mixins.border-radius(@radius);
-  border: none;
+  border: 2px solid @bg-color;
   background-color: @bg-color;
 
   &:hover, &:focus {
     color: @bg-color;
-    border: none;
     background: @color;
   }
 }
@@ -335,6 +334,7 @@ form.webform-client-form {
     //
     // select boxes
     select {
+      #pxl-mixins.no-appearance;
       padding: 5px 10px;
       height: auto;
       font-family: @pxl-text-font-light;
@@ -499,6 +499,24 @@ form.webform-client-form {
       }
     }
 
+  }
+
+  .webform-component-select {
+    // style dropdown of select box
+    position: relative;
+
+    &:after {
+      content: '\f107';
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      font-family: @pxl-icon-font;
+      font-size: @font-size-base;
+      color: @pxl-color-gray-dark;
+      line-height: 40px;
+      pointer-events: none;
+    }
   }
 
   .webform-component-multiple-file {

@@ -11036,14 +11036,13 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #777777;
   background-color: #777777;
   font-size: 14px;
 }
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:hover,
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:focus {
   color: #777777;
-  border: none;
   background: #ffffff;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file {
@@ -11074,7 +11073,7 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #777777;
   background-color: #777777;
   font-size: 16px;
   z-index: 10;
@@ -11082,7 +11081,6 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:hover,
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:focus {
   color: #777777;
-  border: none;
   background: #ffffff;
 }
 form.webform-client-form .webform-component {
@@ -11162,6 +11160,9 @@ form.webform-client-form .webform-component .form-textarea-wrapper div.grippie {
   display: none;
 }
 form.webform-client-form .webform-component select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 5px 10px;
   height: auto;
   font-family: 'SohoGothicProLight', serif;
@@ -11243,14 +11244,13 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #777777;
   background-color: #777777;
   z-index: 10;
 }
 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
   color: #777777;
-  border: none;
   background: #ffffff;
 }
 form.webform-client-form .webform-component.webform-component-markup {
@@ -11329,6 +11329,21 @@ form.webform-client-form .webform-component.webform-container-inline[class*="dat
     width: 58.333333%;
   }
 }
+form.webform-client-form .webform-component-select {
+  position: relative;
+}
+form.webform-client-form .webform-component-select:after {
+  content: '\f107';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  font-family: 'fontawesome';
+  font-size: 16px;
+  color: #494a4f;
+  line-height: 40px;
+  pointer-events: none;
+}
 form.webform-client-form .webform-component-multiple-file label.control-label {
   display: none;
 }
@@ -11352,13 +11367,12 @@ form.webform-client-form div.form-actions button.webform-submit {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #cc3333;
   background-color: #cc3333;
 }
 form.webform-client-form div.form-actions button.webform-submit:hover,
 form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #cc3333;
-  border: none;
   background: #ffffff;
 }
 body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit {
@@ -11375,13 +11389,12 @@ body.kvcollege_section form.webform-client-form div.form-actions button.webform-
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #95ba40;
   background-color: #95ba40;
 }
 body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #95ba40;
-  border: none;
   background: #ffffff;
 }
 body.hscollege_section form.webform-client-form div.form-actions button.webform-submit {
@@ -11398,13 +11411,12 @@ body.hscollege_section form.webform-client-form div.form-actions button.webform-
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #e87431;
   background-color: #e87431;
 }
 body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #e87431;
-  border: none;
   background: #ffffff;
 }
 body.kscollege_section form.webform-client-form div.form-actions button.webform-submit {
@@ -11421,13 +11433,12 @@ body.kscollege_section form.webform-client-form div.form-actions button.webform-
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #78729f;
   background-color: #78729f;
 }
 body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #78729f;
-  border: none;
   background: #ffffff;
 }
 body.excollege_section form.webform-client-form div.form-actions button.webform-submit {
@@ -11444,13 +11455,12 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #b1a895;
   background-color: #b1a895;
 }
 body.excollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.excollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
   color: #b1a895;
-  border: none;
   background: #ffffff;
 }
 /*
