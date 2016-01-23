@@ -10197,7 +10197,7 @@ form#user-login {
 .region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span {
   display: inline-block;
   margin: 0 -2px;
-  height: 35px;
+  height: 36px;
   padding: 7px 15px 10px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
@@ -10265,7 +10265,7 @@ form#user-login {
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control {
   margin: 0;
-  height: 35px;
+  height: 36px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   color: #494a4f;
@@ -10306,7 +10306,10 @@ form#user-login {
   padding: 3px 15px 6px;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-select {
-  padding: 3px 15px 6px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 3px 20px 6px 10px;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup {
   margin: 0;
@@ -10327,26 +10330,36 @@ form#user-login {
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
   width: 90%;
-  background-color: #fff;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget {
+  position: relative;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item:after {
+  content: '\f107';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  bottom: 0;
+  font-family: 'fontawesome';
+  color: #494a4f;
+  line-height: 36px;
+  pointer-events: none;
 }
 @media screen and (min-width: 640px) {
   .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
-    overflow: hidden;
     width: 15%;
     min-width: 150px;
   }
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget {
-    width: 125%;
-  }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
-  overflow: hidden;
   width: 90%;
 }
 @media screen and (min-width: 640px) {
   .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
     width: 10%;
     min-width: 110px;
+    margin-left: 0;
   }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality {
@@ -10363,7 +10376,7 @@ form#user-login {
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit {
   margin: 0;
-  height: 35px;
+  height: 36px;
   padding: 7px 15px 10px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
@@ -11443,13 +11456,15 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
 /*
  *  Course content type
  * --------------------------------------------------*/
-.node.node-course .row .col-sm-12 .field-name-body p,
-.node.node-course .row .col-sm-12 .field-name-body caption {
-  display: none;
-}
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick {
   margin: 0 0 50px;
+}
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock > p,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick > p,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock > caption,
+.node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick > caption {
+  display: none;
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody,
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody {
@@ -13265,7 +13280,7 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
  * --------------------------------------------------*/
 #ui-datepicker-div {
   position: relative;
-  margin: -30px 0 0;
+  margin: 0;
   font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
   color: #929295;
@@ -13274,7 +13289,10 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
   -webkit-border-radius: 0;
   border-radius: 0;
   background-color: #fff;
-  z-index: 100 !important;
+  z-index: 1060 !important;
+}
+.admin-menu #ui-datepicker-div {
+  margin: -29px 0 0;
 }
 #ui-datepicker-div .ui-state-default,
 #ui-datepicker-div .ui-widget-header .ui-state-default,

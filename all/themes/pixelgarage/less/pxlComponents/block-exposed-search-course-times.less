@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-@pxl-form-control-height: 35px;
+@pxl-form-control-height: 36px;
 
 // Mixins
 // -------------------------
@@ -232,10 +232,8 @@
                 }
 
                 &.form-select {
-                  padding: 3px 15px 6px 10px;
-
-                  option {
-                  }
+                  #pxl-mixins.no-appearance;
+                  padding: 3px 20px 6px 10px;
                 }
               }
 
@@ -268,27 +266,39 @@
 
           &.views-widget-filter-field_segment_tid_1 {
             width: 90%;
-            background-color: #fff; // corrects round corners
+
+            .views-widget {
+              // add a dropdown icon to the select box
+              position: relative;
+              .form-item {
+                &:after {
+                  content: '\f107';
+                  display: inline-block;
+                  position: absolute;
+                  top: 0;
+                  right: 5px;
+                  bottom: 0;
+                  font-family: @pxl-icon-font;
+                  color: @pxl-color-gray-dark;
+                  line-height: @pxl-form-control-height;
+                  pointer-events: none;
+                }
+              }
+            }
 
             @media @header-breakpoint {
-              overflow: hidden;
               width: 15%;
               min-width: 150px;
-
-              .views-widget {
-                // hide select dropdown button
-                width: 125%;
-              }
             }
           }
 
           &.views-widget-filter-field_course_date_value {
-            overflow: hidden;
             width: 90%;
 
             @media @header-breakpoint {
               width: 10%;
               min-width: 110px;
+              margin-left: 0;
             }
           }
 

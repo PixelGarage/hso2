@@ -83,6 +83,12 @@ function flexpaper2_extract_archive_batch_process($file, &$context) {
   // copy index.html file
   file_unmanaged_copy($extracted_dir . '/index.html', $publish_directory, FILE_EXISTS_REPLACE);
 
+  // copy pdf file if available
+  $pdfpath = $extracted_dir . '/' . $file->filename . '.pdf';
+  if (file_exists($pdfpath)) {
+    file_unmanaged_copy($pdfpath, $publish_directory, FILE_EXISTS_REPLACE);
+  }
+
   // delete temporary extract directory
   if (file_exists($tmp_dir)) {
     file_unmanaged_delete_recursive($tmp_dir);

@@ -517,6 +517,7 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
           $js_settings[$fid]['imgFiles'] = $folder_relative_path . '/' . $fid . '_{page}.png';
           $js_settings[$fid]['pdfFiles'] = $folder_relative_path . '/' . $fid . '_[*,0].pdf';
           $js_settings[$fid]['jsonFiles'] = (in_array($fid . '.js', $files_arr)) ? $folder_relative_path . '/' . $fid . '.js' : '';
+          $pdf_file = $file;
           break;
 
         case 'single':
@@ -524,6 +525,7 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
           $js_settings[$fid]['imgFiles'] = '';
           $js_settings[$fid]['pdfFiles'] = $folder_relative_path . '/' . $fid . '.pdf';
           $js_settings[$fid]['jsonFiles'] = (in_array($fid . '.js', $files_arr)) ? $folder_relative_path . '/' . $fid . '.js' : '';
+          $pdf_file = $file;
           break;
 
         case 'archive':
@@ -538,6 +540,22 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
           $js_settings[$fid]['thumbFiles'] = (count($thumb_files) > 0) ? $folder_relative_path . '/' . $fid . '_{page}_thumb.jpg' : '';
           $js_settings[$fid]['pdfFiles'] = (count($pdf_files) > 0) ? $folder_relative_path . '/' . $fid . '_[*,0].pdf' : '';
           $js_settings[$fid]['jsonFiles'] = (count($jsonFiles) > 0) ? $folder_relative_path . '/' . $fid . '_{page}.js' : '';
+
+          // set pdf as link file, if available
+          $pdfname = $file->filename . '.pdf';
+          $pdfpath = $folder_absolute_path . '/' . $pdfname;
+          if ($show_file_link && file_exists($pdfpath)) {
+            $pdf_file = new stdClass();
+            $pdf_file->uid      = 1;
+            $pdf_file->filename = $pdfname;
+            $pdf_file->uri      = $pdfpath;
+            $pdf_file->filemime = file_get_mimetype($pdfpath);
+            $pdf_file->filesize = filesize($pdfpath);
+            $pdf_file->status   = 1;
+          }
+          else {
+            $show_file_link = false;
+          }
           break;
       }
       // flexpaper viewer can be shown
@@ -553,7 +571,7 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
     // render file link, if needed
     if ($show_file_link) {
       $js_settings[$fid]['file_link'] = theme('file_link', array(
-        'file' => $file,
+        'file' => $pdf_file,
         'icon_directory' => variable_get('file_icon_directory', drupal_get_path('module', 'file') . '/icons'),
       ));
     }

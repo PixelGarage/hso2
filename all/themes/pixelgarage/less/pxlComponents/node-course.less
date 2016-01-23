@@ -27,13 +27,14 @@
   .row {
     .col-sm-12 {
       .field-name-body {
-        p, caption {
-          display: none;
-        }
-
         table.aufeinenblock, // legacy
         table.aufeinenblick {
           margin: 0 0 50px;
+
+          >p, >caption {
+            // do not show table caption
+            display: none;
+          }
 
           tbody {
             padding: 0 20px;

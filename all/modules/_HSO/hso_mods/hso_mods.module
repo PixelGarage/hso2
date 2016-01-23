@@ -453,7 +453,7 @@ function _webform_select_options_taxonomy ($component, $flat, $arguments) {
     $list = array();
     if ($arguments[0] == 'segments') {
       // add default option
-      $list[-1] = t('- Thema wählen -');
+      $list[-1] = t('- Bereich wählen -');
     }
     foreach ($terms as $term) {
       $list[$term->tid] = $term->name;

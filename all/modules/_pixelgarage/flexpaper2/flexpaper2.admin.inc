@@ -59,6 +59,7 @@ function flexpaper2_settings_page_form($form, &$form_state) {
  * Validation handler for settings page form.
  */
 function flexpaper2_settings_page_form_validate($form, &$form_state) {
+  return;
   $path_to_pdf2swf = $form_state['values']['flexpaper2_path_to_pdf2swf'];
   $path_to_swfrender = $form_state['values']['flexpaper2_path_to_swfrender'];
   $path_to_pdf2json = $form_state['values']['flexpaper2_path_to_pdf2json'];
