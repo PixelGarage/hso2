@@ -7,7 +7,7 @@
 (function ($) {
 
   /**
-   * Implements the active state of the block menus and opens or closes the header block section
+   * Implements the active state of the page sub-header block menus and opens or closes the sub-header block section
    * according to the menu state.
    */
   Drupal.behaviors.activateBlockMenus = {

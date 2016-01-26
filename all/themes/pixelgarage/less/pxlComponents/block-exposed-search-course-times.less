@@ -87,8 +87,14 @@
 
 //
 // modal search dialog
-#modal-exposed-search-form {
-  .modal();
+body.modal-open {
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  #modal-exposed-search-form {
+    .modal();
+  }
 }
 
 
@@ -111,7 +117,7 @@
   }
 
   form#views-exposed-form-course-times-search-page-search-course-times {
-    // search button to open modal dialog (mobiles)
+    // search button to open modal dialog (mobiles only)
     .btn-modal-search-form {
       display: none;
 
@@ -264,7 +270,8 @@
             }
           }
 
-          &.views-widget-filter-field_segment_tid_1 {
+          &.views-widget-filter-field_segment_tid_1,
+          &.views-widget-filter-field_location_target_id{
             width: 90%;
 
             .views-widget {
@@ -287,8 +294,8 @@
             }
 
             @media @header-breakpoint {
-              width: 15%;
-              min-width: 150px;
+              width: 12%;
+              min-width: 130px;
             }
           }
 
@@ -333,6 +340,7 @@
 
               &:hover {
                 color: @pxl-color-bg-button;
+                border-left: 2px solid @pxl-color-bg-button;
                 background: #fff;
               }
             }

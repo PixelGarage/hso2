@@ -9448,6 +9448,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  *  Box modificarion mixins
  * --------------------------------------------------*/
 #pxl-mixins .center-horizontally {
+  position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -10083,7 +10084,12 @@ form#user-login {
 .region-navigation {
   position: relative;
 }
-#modal-exposed-search-form {
+body.modal-open {
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+body.modal-open #modal-exposed-search-form {
   display: none;
   overflow: hidden;
   position: fixed;
@@ -10096,7 +10102,7 @@ form#user-login {
   outline: 0;
   z-index: 1620;
 }
-#modal-exposed-search-form.fade .modal-dialog {
+body.modal-open #modal-exposed-search-form.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
   -o-transform: translate(0, -25%);
@@ -10106,27 +10112,27 @@ form#user-login {
   -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
-#modal-exposed-search-form.in .modal-dialog {
+body.modal-open #modal-exposed-search-form.in .modal-dialog {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-#modal-exposed-search-form .modal-backdrop {
+body.modal-open #modal-exposed-search-form .modal-backdrop {
   bottom: 0;
   background-color: #222;
 }
-#modal-exposed-search-form .modal-backdrop.in {
+body.modal-open #modal-exposed-search-form .modal-backdrop.in {
   opacity: 0.7;
 }
-#modal-exposed-search-form .modal-dialog {
+body.modal-open #modal-exposed-search-form .modal-dialog {
   margin: 0 auto;
   width: 100%;
 }
-.admin-menu #modal-exposed-search-form .modal-dialog {
+.admin-menu body.modal-open #modal-exposed-search-form .modal-dialog {
   margin: 29px auto 0;
 }
-#modal-exposed-search-form .modal-dialog .modal-content {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content {
   position: relative;
   padding: 0;
   -moz-border-radius: 0;
@@ -10137,18 +10143,18 @@ form#user-login {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-#modal-exposed-search-form .modal-dialog .modal-content .modal-header {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header {
   padding: 0;
   min-height: 60px;
   border: none;
 }
-#modal-exposed-search-form .modal-dialog .modal-content .modal-header h2.modal-title {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header h2.modal-title {
   font-family: 'SohoGothicProLight', serif;
   font-size: 30px;
   text-align: center;
   color: #333333;
 }
-#modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close {
   display: block;
   position: absolute;
   top: 10px;
@@ -10156,15 +10162,15 @@ form#user-login {
   opacity: 1.0;
   z-index: 1;
 }
-#modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close span {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close span {
   padding: 0;
   font-size: 30px;
   color: #333333;
 }
-#modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close:hover span {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close:hover span {
   color: #ff5353;
 }
-#modal-exposed-search-form .modal-dialog .modal-content .modal-body {
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-body {
   padding: 20px 10px;
 }
 .region-navigation .block-exposed-form-search-course-times {
@@ -10328,13 +10334,16 @@ form#user-login {
     border-top-left-radius: 3px;
   }
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1,
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id {
   width: 90%;
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget {
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget,
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id .views-widget {
   position: relative;
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item:after {
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item:after,
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id .views-widget .form-item:after {
   content: '\f107';
   display: inline-block;
   position: absolute;
@@ -10347,9 +10356,10 @@ form#user-login {
   pointer-events: none;
 }
 @media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 {
-    width: 15%;
-    min-width: 150px;
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1,
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id {
+    width: 12%;
+    min-width: 130px;
   }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
@@ -10397,6 +10407,7 @@ form#user-login {
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit:hover {
   color: #ff5353;
+  border-left: 2px solid #ff5353;
   background: #fff;
 }
 /*
@@ -11030,7 +11041,6 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11067,7 +11077,6 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11238,7 +11247,6 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11361,7 +11369,6 @@ form.webform-client-form div.form-actions button.webform-submit {
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11383,7 +11390,6 @@ body.kvcollege_section form.webform-client-form div.form-actions button.webform-
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11405,7 +11411,6 @@ body.hscollege_section form.webform-client-form div.form-actions button.webform-
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11427,7 +11432,6 @@ body.kscollege_section form.webform-client-form div.form-actions button.webform-
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11449,7 +11453,6 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
   font-size: 20px;
   line-height: 1;
   letter-spacing: 1.5px;
-  text-transform: capitalize;
   color: #ffffff;
   outline: none;
   -moz-border-radius: 3px;
@@ -11506,11 +11509,15 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
 }
 @media screen and (min-width: 768px) {
   .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr th,
-  .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr th,
+  .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr th {
+    display: table-cell;
+    width: 33% !important;
+    font-size: 16px;
+  }
   .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
   .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblick tbody tr td {
     display: table-cell;
-    width: 50% !important;
+    width: 67% !important;
     font-size: 16px;
   }
 }
@@ -11777,7 +11784,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-location .row .col-sm-12 .col-right .map-location a img {
   display: block;
   margin: 0 auto;
-  width: 92.86%;
+  width: 100%;
   height: auto;
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details {
@@ -12148,6 +12155,18 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .view-banners .view-content .carousel > .carousel-inner {
   margin-top: 0;
 }
+.view-banners .view-content .carousel > .carousel-inner .item .views-field-field-picture {
+  position: relative;
+}
+.view-banners .view-content .carousel > .carousel-inner .item .views-field-field-picture img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  max-width: 133.333333%;
+  height: auto;
+}
 .view-banners .view-content .carousel > .carousel-indicators {
   display: none;
   position: absolute;
@@ -12222,13 +12241,14 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   color: #fff;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
-  position: absolute;
-  bottom: 55%;
-  width: 100%;
+  position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  position: absolute;
+  bottom: 55%;
+  width: 100%;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item {
   display: block;
@@ -12489,6 +12509,13 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number {
   margin-bottom: 10px;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number a {
+  color: #fff;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number a:hover,
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number a:focus {
+  color: #fff;
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number span.fa {
   width: 20px;
@@ -12845,6 +12872,9 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-tabs .view-content .tab-content {
   border: 1px solid #dddddd;
   border-top: none;
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs {
+  padding: 15px;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
