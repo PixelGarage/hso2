@@ -242,7 +242,11 @@ function template_preprocess_views_view_proximity(&$vars) {
     'proximity' => array(
       $pe_container_id => array(
         // item positioning parameters
-        'position_randomly' => $options['proximity_position_randomly'],
+        'layout_mode' => $options['proximity_layout_mode'],
+        'grid_sizer' => '.grid-sizer',
+        'gutter_sizer' => '.gutter-sizer',
+        'stamp_elements' => '.stamp',
+        'position_randomly' => $options['proximity_layout_mode'] == 'random',
         'random_grid_cell_size' => $options['proximity_random_grid_cell_size'],
 
         // proximity parameters
@@ -277,6 +281,7 @@ function template_preprocess_views_view_proximity(&$vars) {
   $path = drupal_get_path('module', 'proximity');
   drupal_add_js($js_settings, 'setting');
   drupal_add_js($path . '/js/isMobile.min.js');
+
   if ($options['proximity_effect_enabled']) {
     drupal_add_js($path . '/js/proximity.jquery-event.js');
     drupal_add_js($path . '/js/proximity.js');
@@ -291,4 +296,103 @@ function template_preprocess_views_view_proximity(&$vars) {
     drupal_add_js($path . '/js/proximity.container.js');
   }
   //drupal_add_css($path . '/css/proximity.css');
+
+  // apply specific isotope layout scripts
+  $layout_mode = $options['proximity_layout_mode'];
+  if ($layout_mode != 'none' && $layout_mode != 'random' && proximity_isotope_loaded()) {
+    //
+    // add isotope script
+    drupal_add_js($path . '/js/proximity.isotope.js');
+
+    //
+    // add specific layout script
+    $layout_file = '';
+    if ($layout_mode == 'masonry') {
+      $layout_file = '/layout-modes/masonry.js';
+    } else if ($layout_mode == 'masonryHorizontal') {
+      $layout_file = '/layout-modes/masonry-horizontal.js';
+    } else if ($layout_mode == 'packery') {
+      $layout_file = '/layout-modes/packery.pkgd.min.js';
+    } else if ($layout_mode == 'fitColumns') {
+      $layout_file = '/layout-modes/fit-columns.js';
+    } else if ($layout_mode == 'fitRows') {
+      $layout_file = '/layout-modes/fit-rows.js';
+    } else if ($layout_mode == 'cellsByRow') {
+      $layout_file = '/layout-modes/cells-by-row.js';
+    } else if ($layout_mode == 'cellsByColumn') {
+      $layout_file = '/layout-modes/cells-by-column.js';
+    } else if ($layout_mode == 'horizontal') {
+      $layout_file = '/layout-modes/horizontal.js';
+    } else if ($layout_mode == 'vertical') {
+      $layout_file = '/layout-modes/vertical.js';
+    }
+    if (!empty($layout_file)) {
+      $layout_file = libraries_get_path('isotope') . $layout_file;
+      drupal_add_js($layout_file);
+    }
+  }
+
 }
+
+
+/* -----------------------------------------------------------------
+ *  Isotope library definition and checking functions
+ * ----------------------------------------------------------------- */
+
+/**
+ * Implements hook_libraries_info().
+ */
+function proximity_libraries_info() {
+  $libraries['isotope'] = array(
+    'name' => 'Isotope magical layout',
+    'vendor url' => 'http://isotope.desandro.com/',
+    'download url' => 'http://isotope.desandro.com/',
+    'version arguments' => array(
+      'file' => 'isotope.pkgd.min.js',
+      // 2.x: Isotope PACKAGED v2.0.0
+      'pattern' => '/Isotope\s+PACKAGED\s+v?([0-9\.]+)/',
+      'lines' => 2,
+      'cols' => 50,
+    ),
+    'files' => array(
+      'js' => array(
+        'isotope.pkgd.min.js',
+        'imagesloaded.pkgd.min.js',
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Check if the Isotope library has been loaded.
+ *
+ * @return
+ *   A boolean indicating the loaded status.
+ */
+function proximity_isotope_loaded() {
+  $library = libraries_load('isotope');
+  if (($library) && !empty($library['loaded'])) {
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+/**
+ * Check if the Isotope library is installed.
+ *
+ * @return
+ *   A boolean indicating the installed status.
+ */
+function proximity_isotope_installed() {
+  if (($library = libraries_detect('isotope')) && !empty($library['installed'])) {
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+

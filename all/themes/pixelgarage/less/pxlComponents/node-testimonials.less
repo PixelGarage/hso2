@@ -1,0 +1,57 @@
+/*
+ *  Node testimonials component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-testimonial.node-teaser {
+  .row {
+    div.col-sm-12 {
+      position: relative;
+      width: 100%;
+
+      .field-name-field-picture {
+        .field-item {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .field-name-body {
+        position: absolute;
+        left: 10%;
+        top: 55%;
+        width: 80%;
+        padding: 10px;
+        #pxl-mixins.border-radius(3px);
+        background-color: rgba(73, 74, 79, 0.5);
+
+        .field-item {
+          p {
+            font-family: @pxl-text-font-light;
+            font-size: @font-size-base;
+            color: #fff;
+
+            @media @normal {
+              font-size: @font-size-large;
+            }
+          }
+        }
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+    }
+  }
+}

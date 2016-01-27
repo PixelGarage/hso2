@@ -1,0 +1,126 @@
+/*
+ *  Node news component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+.wysiwyg-body() {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @pxl-text-font;
+    #pxl-mixins.font-size-responsive(@font-size-base);
+  }
+  h1, h2, h3 {
+    #pxl-mixins.font-size-responsive(14px);
+  }
+
+  p, div, tbody td {
+    font-family: @pxl-text-font-light;
+    font-size: 14px;
+    #pxl-mixins.hyphenate;
+
+    @media @narrow {
+      font-size: @font-size-base;
+    }
+  }
+
+  li {
+    font-family: @pxl-text-font-light;
+    font-size: 14px;
+
+    @media @narrow {
+      font-size: @font-size-base;
+    }
+  }
+
+  pre, address {
+    font-family: @pxl-text-font-light-italics;
+    font-size: 14px;
+
+    @media @narrow {
+      font-size: @font-size-base;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 2px solid @pxl-border-color;
+    background: none;
+  }
+
+  table, tr, th, td {
+    border-color: @pxl-border-color;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  embed, video, audio, iframe {
+    display: block;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 100% !important;
+    max-width: 100%;
+    height: 0 !important;
+    padding-bottom: 56.25%; // 16:9 ratio
+  }
+}
+
+
+
+// General settings
+// -------------------------
+.node.node-news.node-teaser {
+  padding: 20px;
+  background-color: @pxl-color-hso-gray;
+
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(@font-size-base);
+          color: @text-color;
+        }
+      }
+
+      .field-name-body {
+        .wysiwyg-body;
+        color: @pxl-color-gray-text;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+
+      .field-name-post-date {
+        margin-top: 10px;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          font-size: 10px;
+          text-align: right;
+          color: @pxl-color-gray-text;
+
+          &:after {
+            content: '\f0e7';
+            font-family: @pxl-icon-font;
+            font-size: @font-size-base;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

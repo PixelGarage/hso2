@@ -19,6 +19,7 @@
         var $container    = $('#' + container),
             $modal        = $container.find('.modal'),
             transDuration = parseInt(settings.trans_duration);
+
         // backdrop height calculation
         var _backdropHeight = function() {
           var $dialog       = $modal.find('> .modal-dialog'),
@@ -28,6 +29,7 @@
           // adjust backdrop height
           $modal.find('.modal-backdrop').css('height', hBackdrop);
         };
+
         // scroll behavior of modal dialog
         var _modalScrollBehavior = function() {
           var $modalBody    = $modal.find('.modal-body'),

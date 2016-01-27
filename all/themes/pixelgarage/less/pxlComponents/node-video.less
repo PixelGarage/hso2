@@ -1,0 +1,38 @@
+/*
+ *  Node video component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-video {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-base);
+          color: @text-color;
+        }
+      }
+
+      .field-name-body {
+        #pxl-mixins.wysiwyg-body;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+    }
+  }
+}
