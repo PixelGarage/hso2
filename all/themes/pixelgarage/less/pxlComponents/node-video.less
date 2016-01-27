@@ -26,6 +26,60 @@
         }
       }
 
+      .field-name-field-video {
+        .field-item {
+          .file-video {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      .group-video {
+        position: relative;
+        height: 25px;
+
+        .field-name-field-duration,
+        .field-name-field-views {
+          display: inline-block;
+          position: absolute;
+          margin: 0;
+          top: 5px;
+          left: 10px;
+
+          .field-item {
+            font-family: @pxl-text-font;
+            font-size: @font-size-base;
+            color: @pxl-color-gray-text;
+          }
+        }
+        .field-name-field-views {
+          left: auto;
+          right: 10px;
+        }
+      }
+
+      .field-name-post-date {
+        padding: 10px;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          font-size: 10px;
+          text-align: right;
+          color: @pxl-color-gray-text;
+
+          &:after {
+            content: '\f16a';
+            font-family: @pxl-icon-font;
+            font-size: @font-size-base;
+            margin-left: 10px;
+          }
+        }
+      }
+
       .field-name-body {
         #pxl-mixins.wysiwyg-body;
 

@@ -12358,6 +12358,48 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 16px;
   }
 }
+.node.node-video .row div.col-sm-12 .field-name-field-video .field-item .file-video img {
+  width: 100%;
+  height: auto;
+}
+.node.node-video .row div.col-sm-12 .group-video {
+  position: relative;
+  height: 25px;
+}
+.node.node-video .row div.col-sm-12 .group-video .field-name-field-duration,
+.node.node-video .row div.col-sm-12 .group-video .field-name-field-views {
+  display: inline-block;
+  position: absolute;
+  margin: 0;
+  top: 5px;
+  left: 10px;
+}
+.node.node-video .row div.col-sm-12 .group-video .field-name-field-duration .field-item,
+.node.node-video .row div.col-sm-12 .group-video .field-name-field-views .field-item {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  color: #929295;
+}
+.node.node-video .row div.col-sm-12 .group-video .field-name-field-views {
+  left: auto;
+  right: 10px;
+}
+.node.node-video .row div.col-sm-12 .field-name-post-date {
+  padding: 10px;
+  width: 100%;
+}
+.node.node-video .row div.col-sm-12 .field-name-post-date .field-item {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 10px;
+  text-align: right;
+  color: #929295;
+}
+.node.node-video .row div.col-sm-12 .field-name-post-date .field-item:after {
+  content: '\f16a';
+  font-family: 'fontawesome';
+  font-size: 16px;
+  margin-left: 10px;
+}
 .node.node-video .row div.col-sm-12 .field-name-body h1,
 .node.node-video .row div.col-sm-12 .field-name-body h2,
 .node.node-video .row div.col-sm-12 .field-name-body h3,
