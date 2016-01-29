@@ -91,6 +91,7 @@
       if (status == "error") {
         var msg = "Content could not be loaded: ";
         $target.html(msg + xhr.status + " " + xhr.statusText);
+
       } else {
         // make sure all behaviors are attached to new content
         Drupal.attachBehaviors($target);
@@ -200,14 +201,14 @@
             // to build request history
             if (!Modernizr.history) {
               // don't open modal dialog before performing full page request (dialog is opened during page load)
-              $(this).find('a.btn').removeAttr('data-toggle');
+              $(this).find('a.button').removeAttr('data-toggle');
               return true;
             }
 
             //
             // load item specific content via ajax and update history object
             var $item          = $(this),
-                $button        = $item.find('a.btn'),
+                $button        = $item.find('a.button'),
                 param          = $button.attr('data-ajax-load-param'),
                 containerIndex = container.split('-').pop(),
                 item_url = settings.item_base_url + param;        // specific item url
