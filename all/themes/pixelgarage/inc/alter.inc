@@ -52,7 +52,7 @@ function pixelgarage_proximity_render_item_alter($container_index, $param, &$ren
   // return the render array for the specific node, if available
   if ($node= node_load($param)) {
     $view_mode = 'full';
-    if (property_exists($node, 'ds_switch')) {
+    if (property_exists($node, 'ds_switch') && !empty($node->ds_switch)) {
       // take an alternate view mode set by the ds switch
       $view_mode = $node->ds_switch;
     }

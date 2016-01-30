@@ -13,7 +13,7 @@
 
 // General settings
 // -------------------------
-.node.node-video {
+.node.node-video.view-mode-teaser {
   .row {
     div.col-sm-12 {
       width: 100%;
@@ -82,6 +82,98 @@
 
       .field-name-body {
         #pxl-mixins.wysiwyg-body;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+    }
+  }
+}
+
+.node.node-video.view-mode-full {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        h2 {
+          margin: 0;
+          padding: 15px 0;
+          font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(30px);
+          color: @text-color;
+        }
+      }
+
+      .field-name-submitted-by {
+        margin: 10px 0 20px;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          font-size: 12px;
+          text-align: right;
+          color: @pxl-color-gray-text;
+
+          &:before {
+            content: '\f16a';
+            font-family: @pxl-icon-font;
+            font-size: @font-size-base;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .field-name-field-video {
+        .field-item {
+          .file-video {
+            iframe {
+              display: block;
+              margin: 0 auto;
+              width: 100%;
+              height: auto;
+              max-width: 100%;
+
+              @media @tablet {
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+
+      .group-video {
+        position: relative;
+        margin: 0 auto 20px;
+        height: 25px;
+        width: 67%;
+
+        .field-name-field-duration,
+        .field-name-field-views {
+          display: inline-block;
+          position: absolute;
+          margin: 0;
+          top: 5px;
+          left: 10px;
+
+          .field-item {
+            font-family: @pxl-text-font;
+            font-size: @font-size-base;
+            color: @pxl-color-gray-text;
+          }
+        }
+        .field-name-field-views {
+          left: auto;
+          right: 10px;
+        }
+      }
+
+      .field-name-body {
+        margin: 0 0 20px;
+
+        .wysiwyg-body;
+        color: @pxl-color-gray-text;
 
         @media @tablet {
           //.content-columns(2);

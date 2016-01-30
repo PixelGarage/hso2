@@ -6,6 +6,18 @@
 
 (function ($) {
 
+  Drupal.behaviors.activateMasonryFilters = {
+    attach: function () {
+      var $exposedForm = $('#views-exposed-form-social-masonry-panel-pane-1'),
+          $filters = $exposedForm.find('.form-radios .control-label'),
+          $selectedRadio = $exposedForm.find('input[checked=checked]');
+
+      // add active class for selected radio
+      $filters.removeClass('active');
+      $selectedRadio.parent().addClass('active');
+    }
+  };
+
   /**
    * Implements the active state of the page sub-header block menus and opens or closes the sub-header block section
    * according to the menu state.

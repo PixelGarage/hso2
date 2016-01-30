@@ -6,6 +6,9 @@
  * Time: 17:23
  */
 
+/* =============================================================================
+ *      HTML, page processing
+ * ========================================================================== */
 /**
  * Preprocess variables for the html template.
  */
@@ -130,6 +133,9 @@ function pixelgarage_preprocess_page(&$vars) {
   }
 }
 
+/* =============================================================================
+ *      Exposed search form
+ * ========================================================================== */
 /**
  * Adapts the exposed search form to show placeholders in search fields.
  *
@@ -160,6 +166,43 @@ function pixelgarage_preprocess_views_exposed_form(&$vars) {
 }
 
 
+/* =============================================================================
+ *      Front Masonry
+ * ========================================================================== */
+/**
+ * Adapts the proximity view, so that always two randomly chosen testimonials are visible
+ * in the masonry.
+ */
+function pixelgarage_preprocess_views_view_proximity (&$vars) {
+  $vars['testimonials'] = _random_testimonials();
+}
+
+function _random_testimonials() {
+  static $testimonials = array();
+  if (empty($testimonials)) {
+    // get the published testimonials
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'testimonial')
+      ->propertyCondition('status', NODE_PUBLISHED);
+    $result = $query->execute();
+    if ($result && !empty($result['node'])) {
+      $testimonials = node_load_multiple(array_keys($result['node']));
+    }
+  }
+
+  // return a random testimonial
+  $keys = array_rand($testimonials, 2);
+  $i1 = mt_rand(0, 9);
+  return array(
+    0 => node_view($testimonials[$keys[0]], 'teaser'),
+    $i1 => node_view($testimonials[$keys[1]], 'teaser'),
+  );
+}
+
+/* =============================================================================
+ *      Segment page accordion
+ * ========================================================================== */
 /**
  * Adapts the courses accordion list in the segment page.
  */
@@ -206,6 +249,9 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
 }
 
+/* =============================================================================
+ *      Contacts tab view
+ * ========================================================================== */
 /**
  * Adapts the contacts tab view to show only one tab per location.
  *
@@ -226,6 +272,9 @@ function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
   }
 }
 
+/* =============================================================================
+ *      Remote forms
+ * ========================================================================== */
 /**
  * Preprocess panel pane for remote forms to add the GUID (found in the URL) to the iFrame src attribute.
  *
