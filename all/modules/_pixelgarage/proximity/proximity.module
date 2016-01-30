@@ -27,12 +27,6 @@ define('PROXIMITY_ITEM_URL_BASE_PATH', 'proximity-container-item/');
 define('PROXIMITY_ITEM_AJAX_PATH', 'ajax/pe-container-item/');
 
 
-/**
- * Holds global parameters of page callback
- */
-$page_callback_param = false;
-$page_callback_container = false;
-
 
 /* -----------------------------------------------------------------
  *  Proximity page / ajax callbacks
@@ -60,17 +54,14 @@ function proximity_menu() {
 }
 
 /**
- * Page callback function for page request.
+ * Page callback function for proximity item page request.
  */
 function proximity_page_callback($container_index, $param) {
-  global $page_callback_param, $page_callback_container;
+  // get destination
+  $session_data = &proximity_session_data();
 
-  // set page callback parameters globally
-  $page_callback_param = $param;
-  $page_callback_container = $container_index;
-
-  // return empty main content (item is rendered in proximity view)
-  return '';
+  // redirect to front page with item as query parameters (item is rendered in proximity view)
+  drupal_goto($session_data['destination'], array('query' => array('cont-idx' => $container_index, 'param' => $param)), 301);
 }
 
 /**
@@ -171,6 +162,18 @@ function proximity_views_api() {
 }
 
 /**
+ * Session wide data container.
+ *
+ * @return array Returns the session data array.
+ */
+function &proximity_session_data() {
+  if (!isset($_SESSION['proximity'])) {
+    $_SESSION['proximity'] = array();
+  }
+  return $_SESSION['proximity'];
+}
+
+/**
  * Pre-process function for theme hook views_view_proximity (implemented as views_view_proximity.tpl.php).
  * This function prepares all necessary variables to create the markup for the proximity layout.
  *
@@ -179,6 +182,9 @@ function proximity_views_api() {
 function template_preprocess_views_view_proximity(&$vars) {
 
   static $pe_container_index = 0;
+
+  $session_data = &proximity_session_data();
+  $session_data['destination'] = $_GET['q'];
 
   // Run preprocess function for unformatted style
   template_preprocess_views_view_unformatted($vars);
@@ -209,14 +215,14 @@ function template_preprocess_views_view_proximity(&$vars) {
   // Render the requested proximity item (full page request) or the first item in the current container to guarantee
   // that all needed js files are loaded. This assumes, that all items are of the same kind in terms of rendering.
   // Subsequent ajax calls have then all js files already loaded (js settings are loaded inline in ajax call)
-  global $page_callback_param, $page_callback_container;
+  $page_callback_container = isset($_GET['cont-idx']) ? $_GET['cont-idx'] : false;
+  $page_callback_param = isset($_GET['param']) ? $_GET['param'] : false;
+
   $load_param = $page_callback_param ? $page_callback_param : array_values($ajax_load_params)[0];
   $rendered_item = _proximity_item_render($pe_container_index, $load_param);
 
   // set rendered_item for output if the current container equals the one of the deep link and reset global parameter
   $vars['rendered_item'] = ($page_callback_param && $pe_container_index == $page_callback_container) ? $rendered_item : false;
-  $page_callback_param = false;
-  $page_callback_container = false;
 
   //
   // add toggle item attributes depending on modal and ajax settings

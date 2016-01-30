@@ -128,15 +128,17 @@
       .field-name-field-video {
         .field-item {
           .file-video {
-            iframe {
-              display: block;
-              margin: 0 auto;
-              width: 100%;
+            .media-youtube-video {
               height: auto;
-              max-width: 100%;
 
-              @media @tablet {
-                width: 80%;
+              iframe {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+
+                @media @tablet {
+                  width: 80%;
+                }
               }
             }
           }

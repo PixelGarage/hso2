@@ -103,6 +103,7 @@
       $.each(Drupal.settings.proximity, function (container, settings) {
         // set selectors and variables
         var $container             = $('#' + container),
+            $modal                 = $container.find('.modal'),
             $items                 = $container.find(settings.item_selector),
             uncoverEffectEnabled   = true,
             uncoveredItems         = 0,
@@ -202,6 +203,13 @@
           $(window).on('scroll.uncover', _onScroll);
           $(window).on('resize.uncover', _onResize);
 
+        });
+
+        $modal.once('isotope', function () {
+          // layout isotope after modal hiding
+          $(this).on('hidden.bs.modal', function () {
+            $container.isotope('layout');
+          });
         });
 
       }); // proximity container instances

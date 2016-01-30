@@ -70,7 +70,7 @@
         //
         // set modal dialog scrolling behavior when modal is opened and make sure,
         // all media is stopped on modal closing
-        $modal.once('modal-hidden', function () {
+        $modal.once('modal', function () {
           // show modal dialog
           $(this).on('shown.bs.modal', function() {
             // disable body scrolling
