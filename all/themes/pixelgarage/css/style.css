@@ -13167,12 +13167,12 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 @media screen and (min-width: 768px) {
   .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog {
     width: 80%;
-    max-width: 960px;
+    max-width: 750px;
   }
 }
 @media screen and (min-width: 990px) {
   .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog {
-    width: 960px;
+    width: 750px;
   }
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content {
