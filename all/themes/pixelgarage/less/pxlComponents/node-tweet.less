@@ -1,0 +1,245 @@
+/*
+ *  Node tweet component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+.wysiwyg-body() {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: @pxl-text-font;
+    #pxl-mixins.font-size-responsive(@font-size-base);
+  }
+  h1, h2, h3 {
+    #pxl-mixins.font-size-responsive(14px);
+  }
+
+  p, div, tbody td {
+    font-family: @pxl-text-font-light;
+    font-size: 14px;
+    #pxl-mixins.hyphenate;
+
+    @media @narrow {
+      font-size: @font-size-base;
+    }
+  }
+
+  li {
+    font-family: @pxl-text-font-light;
+    font-size: 14px;
+
+    @media @narrow {
+      font-size: @font-size-base;
+    }
+  }
+
+  pre, address {
+    font-family: @pxl-text-font-light-italics;
+    font-size: 14px;
+
+    @media @narrow {
+      font-size: @font-size-base;
+    }
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 2px solid @pxl-border-color;
+    background: none;
+  }
+
+  table, tr, th, td {
+    border-color: @pxl-border-color;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    //width: 80%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  embed, video, audio, iframe {
+    display: block;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 100% !important;
+    max-width: 100%;
+    height: 0 !important;
+    padding-bottom: 56.25%; // 16:9 ratio
+  }
+}
+
+
+
+
+// General settings
+// -------------------------
+.node.node-tweet.view-mode-teaser {
+  padding: 20px;
+  background-color: @pxl-color-hso-gray;
+
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        display: inline-block;
+        vertical-align: top;
+
+        h2 {
+          margin: 15px;
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-base);
+          color: @text-color;
+        }
+      }
+
+      .field-name-field-profile-image {
+        display: inline-block;
+
+        .field-item {
+          img {
+          }
+        }
+      }
+
+      .field-name-field-screen-name {
+        padding: 10px 0;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font-light-italics;
+          font-size: @font-size-base;
+          text-align: left;
+          color: @pxl-color-gray-text;
+
+          &:before {
+            content: '@';
+            font-size: @font-size-base;
+          }
+        }
+      }
+
+      .field-name-field-created-time {
+        padding: 10px;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          font-size: 10px;
+          text-align: right;
+          color: @pxl-color-gray-text;
+
+          &:after {
+            content: '\f099';
+            font-family: @pxl-icon-font;
+            font-size: @font-size-base;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .field-name-body {
+        #pxl-mixins.wysiwyg-body;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+    }
+  }
+}
+
+.node.node-tweet.view-mode-full {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .avatar {
+        display: inline-block;
+
+        a {
+          .field-name-field-profile-image {
+            .field-item {
+              img {
+
+              }
+            }
+          }
+        }
+      }
+
+      .title-tweet {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+
+        h2 {
+          margin: 0;
+          padding: 10px 0;
+          font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(30px);
+          color: @text-color;
+        }
+      }
+
+      .field-name-field-created-time {
+        margin: 10px 0 20px;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          font-size: 12px;
+          text-align: right;
+          color: @pxl-color-gray-text;
+
+          &:before {
+            content: '\f099';
+            font-family: @pxl-icon-font;
+            font-size: @font-size-base;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .screen-name {
+        margin: 0 0 20px;
+
+        a {
+
+        }
+      }
+
+      .field-name-body {
+        margin: 0 0 20px;
+
+        .wysiwyg-body;
+        color: @pxl-color-gray-text;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+
+      ul.actions {
+        #pxl-mixins.no-list-style;
+        text-align: right;
+
+        li {
+          display: inline-block;
+          margin: 0 5px;
+          #pxl-mixins.no-list-style;
+
+          a {
+            padding: 5px 12px 7px;
+          }
+        }
+      }
+    }
+  }
+}
