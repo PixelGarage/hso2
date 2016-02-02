@@ -515,27 +515,38 @@ function hso_mods_twitter_insert_statuses($statuses, $account) {
   $profile_image = _tweet_profile_picture($screen_name, $account->profile_image_url);
 
   foreach ($statuses as $tweet) {
-    $node = new stdClass();
-    $node->type = 'tweet';
-    $node->language = LANGUAGE_NONE;
-    $node->uid = 1;
-    $node->status = 1;
-    node_object_prepare($node);
+    //
+    // check if tweet is already imported
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'tweet')
+      ->fieldCondition('field_twitter_id', 'value', $tweet->id);
+    $result = $query->execute();
 
-    // assign all fields
-    $node->title = $full_name;
-    $node->field_profile_image[LANGUAGE_NONE][0]['fid'] = $profile_image->fid;
-    $node->field_twitter_id[LANGUAGE_NONE][0]['value'] = $tweet->id;
-    $node->field_screen_name[LANGUAGE_NONE][0]['value'] = $screen_name;
-    $node->field_created_time[LANGUAGE_NONE][0]['value'] = strtotime($tweet->created_at);
-    $node->body[LANGUAGE_NONE][0]['value'] = $tweet->text;
+    // import new tweets
+    if (!isset($result['node'])) {
+      $node = new stdClass();
+      $node->type = 'tweet';
+      $node->language = LANGUAGE_NONE;
+      $node->uid = 1;
+      $node->status = 1;
+      node_object_prepare($node);
 
-    // save node
-    $node = node_submit($node);
-    node_save($node);
+      // assign all fields
+      $node->title = $full_name;
+      $node->field_profile_image[LANGUAGE_NONE][0]['fid'] = $profile_image->fid;
+      $node->field_twitter_id[LANGUAGE_NONE][0]['value'] = $tweet->id;
+      $node->field_screen_name[LANGUAGE_NONE][0]['value'] = $screen_name;
+      $node->field_created_time[LANGUAGE_NONE][0]['value'] = strtotime($tweet->created_at);
+      $node->body[LANGUAGE_NONE][0]['value'] = $tweet->text;
+
+      // save node
+      $node = node_submit($node);
+      node_save($node);
+    }
   }
 
-  // delete tweet nodes older than user set time range
+  // delete tweet nodes older than configured time
   if ($age = variable_get('twitter_expire', 0)) {
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node')
@@ -552,23 +563,23 @@ function hso_mods_twitter_insert_statuses($statuses, $account) {
 }
 
 function _tweet_profile_picture($screen_name, $uri) {
-  // get/ create user picture object
+  // download file and manage it
+  $ext = pathinfo($uri, PATHINFO_EXTENSION);
+  $filename = $screen_name . '_profile_image.' . $ext;
+
+  // get or create user picture object
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'file')
-    ->propertyCondition('uri', $uri)
+    ->propertyCondition('filename', $filename)
     ->range(0, 1);
   $result = $query->execute();
+
   if (isset($result['file'])) {
     // get existing
     $file = file_load(key($result['file']));
 
   } else {
-    $file           = new stdClass();
-    $file->uid      = 1;
-    $file->filename = $screen_name . '_profile_image.jpg';
-    $file->uri      = $uri;
-    $file->status   = 1;
-    $file           = file_save($file);
+    $file = system_retrieve_file($uri, 'public://images/' . $filename, TRUE, FILE_EXISTS_REPLACE);
   }
   return $file;
 }

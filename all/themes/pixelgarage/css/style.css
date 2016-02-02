@@ -13734,6 +13734,26 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   max-width: 133.333333%;
   height: auto;
 }
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  transition: opacity 2s;
+}
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active {
+  opacity: 1.0;
+}
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active.left,
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.left.next,
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.right.prev {
+  opacity: 1.0;
+}
 .view-banners .view-content .carousel > .carousel-indicators {
   display: none;
   position: absolute;
@@ -13756,6 +13776,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .view-banners .view-content .carousel > a.carousel-control {
   display: none;
+  z-index: 2;
 }
 /*
  *  View call2action component

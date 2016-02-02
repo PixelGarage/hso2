@@ -272,6 +272,18 @@ function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
   }
 }
 
+
+/* =============================================================================
+ *      Banners view
+ * ========================================================================== */
+/**
+ * Implements a fading carousel for the banners.
+ */
+function pixelgarage_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
+  $vars['classes_array'][] = 'carousel-fade';
+}
+
+
 /* =============================================================================
  *      Remote forms
  * ========================================================================== */
