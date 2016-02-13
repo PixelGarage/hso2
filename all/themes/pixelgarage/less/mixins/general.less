@@ -19,11 +19,59 @@
   }
 
   //
-  // Select box appearence
+  // Select box appearence (OS defined style)
   .no-appearance() {
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
+  }
+
+  //
+  // Button styles
+  .button-normal() {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0 10px;
+    width: 60%;
+    min-width: 110px;
+    height: 34px;
+    font-family: @pxl-text-font;
+    font-size: @font-size-base;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: @pxl-button-letter-spacing;
+    color: #fff;
+    border: none;
+    #pxl-mixins.border-radius(3px);
+    background: @pxl-color-bg-button;
+
+    &:hover {
+      background: @pxl-color-bg-button-hover;
+    }
+  }
+
+  .button-large() {
+    display: block;
+    margin: 0 auto;
+    padding: 13px 0 15px;
+    width: 60%;
+    min-width: 160px;
+    height: 44px;
+    font-family: @pxl-text-font;
+    font-size: @font-size-base;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: @pxl-button-letter-spacing;
+    color: #fff;
+    border: none;
+    #pxl-mixins.border-radius(3px);
+    background: @pxl-color-bg-button;
+
+    &:hover {
+      background: @pxl-color-bg-button-hover;
+    }
   }
 
   //

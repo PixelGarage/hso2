@@ -329,8 +329,8 @@ body.modal-open {
               font-size: @font-size-base;
               color: #fff;
               line-height: 1;
-              letter-spacing: 1px;
-              border: 1px solid @pxl-color-bg-button;
+              letter-spacing: @pxl-button-letter-spacing;
+              border: none;
               #pxl-mixins.border-radius(3px);
               background: @pxl-color-bg-button;
 
@@ -339,9 +339,7 @@ body.modal-open {
               }
 
               &:hover {
-                color: @pxl-color-bg-button;
-                border-left: 2px solid @pxl-color-bg-button;
-                background: #fff;
+                background: @pxl-color-bg-button-hover;
               }
             }
           }

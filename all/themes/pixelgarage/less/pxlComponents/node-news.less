@@ -88,15 +88,17 @@
 
       .field-name-title {
         h2 {
+          margin-top: 0;
           font-family: @pxl-text-font-bold;
           #pxl-mixins.font-size-responsive(@font-size-base);
           color: @text-color;
+          line-height: 1.5;
         }
       }
 
       .field-name-body {
         .wysiwyg-body;
-        color: @pxl-color-gray-text;
+        color: @pxl-color-gray-dark;
 
         @media @tablet {
           //.content-columns(2);
@@ -111,7 +113,7 @@
           font-family: @pxl-text-font;
           font-size: 10px;
           text-align: right;
-          color: @pxl-color-gray-text;
+          color: @pxl-color-gray-dark;
 
           &:after {
             content: '\f0e7';
@@ -148,7 +150,7 @@
           font-family: @pxl-text-font;
           font-size: 12px;
           text-align: right;
-          color: @pxl-color-gray-text;
+          color: @pxl-color-gray-dark;
 
           &:before {
             content: '\f0e7';
@@ -176,7 +178,7 @@
         margin: 0 0 20px;
 
         .wysiwyg-body;
-        color: @pxl-color-gray-text;
+        color: @pxl-color-gray-dark;
 
         @media @tablet {
           //.content-columns(2);

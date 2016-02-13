@@ -1241,7 +1241,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 41px;
+  font-size: 36px;
 }
 h2,
 .h2 {
@@ -10168,7 +10168,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-h
   color: #333333;
 }
 body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close:hover span {
-  color: #ff5353;
+  color: #ff535d;
 }
 body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-body {
   padding: 20px 10px;
@@ -10226,7 +10226,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   border-radius: 0;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
-  background: #ff5353 none;
+  background: #ff535d none;
 }
 .region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form {
   display: none;
@@ -10392,12 +10392,12 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   font-size: 16px;
   color: #fff;
   line-height: 1;
-  letter-spacing: 1px;
-  border: 1px solid #ff5353;
+  letter-spacing: 0.03em;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff5353;
+  background: #ff535d;
 }
 @media screen and (min-width: 640px) {
   .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit {
@@ -10406,9 +10406,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit:hover {
-  color: #ff5353;
-  border-left: 2px solid #ff5353;
-  background: #fff;
+  background: #ff757d;
 }
 /*
  *  Node page component
@@ -11729,8 +11727,8 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   padding-bottom: 5px;
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  color: #ff5353;
-  border-bottom: 2px solid #ff5353;
+  color: #ff535d;
+  border-bottom: 2px solid #ff535d;
 }
 .node.node-location .row .col-sm-12 .col-left .field-name-body table td {
   padding: 5px 0;
@@ -11970,7 +11968,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   color: #333333;
 }
 .user-profile .row .col-profile.col-right .wrapper-email .field-email a:hover {
-  color: #ff5353;
+  color: #ff535d;
 }
 .user-profile .row .col-profile.col-right .wrapper-phone span.fa-phone {
   display: inline-block;
@@ -12154,9 +12152,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   width: 100%;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
+  margin-top: 0;
   font-family: 'SohoGothicProBold', serif;
   font-size: 13px;
   color: #333333;
+  line-height: 1.5;
 }
 @media screen and (min-width: 480px) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
@@ -12169,7 +12169,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   }
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body {
-  color: #929295;
+  color: #494a4f;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
@@ -12413,7 +12413,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 10px;
   text-align: right;
-  color: #929295;
+  color: #494a4f;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-post-date .field-item:after {
   content: '\f0e7';
@@ -12449,7 +12449,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 12px;
   text-align: right;
-  color: #929295;
+  color: #494a4f;
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-submitted-by .field-item:before {
   content: '\f0e7';
@@ -12468,7 +12468,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body {
   margin: 0 0 20px;
-  color: #929295;
+  color: #494a4f;
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
@@ -12717,13 +12717,13 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-testimonial.node-teaser .row div.col-sm-12 .field-name-body {
   position: absolute;
-  left: 10%;
-  top: 55%;
-  width: 80%;
-  padding: 10px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 30px 15px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   background-color: rgba(73, 74, 79, 0.5);
 }
 .node.node-testimonial.node-teaser .row div.col-sm-12 .field-name-body .field-item p {
@@ -13232,7 +13232,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
  *  Node tweet component
  * --------------------------------------------------*/
 .node.node-tweet.view-mode-teaser {
-  padding: 20px;
+  padding: 20px 20px 0;
   background-color: #ebebeb;
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 {
@@ -13276,6 +13276,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 16px;
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time {
+  margin-right: -20px;
   padding: 10px;
   width: 100%;
 }
@@ -13854,22 +13855,26 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
   display: block;
   margin: 0 auto;
-  padding: 5px 0 7px;
-  width: 50%;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.03em;
   color: #fff;
-  border: 1px solid #ff5353;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff5353;
+  background: #ff535d;
+  width: 50%;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover {
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0);
+  background: #ff757d;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body {
   margin-top: 20px;
@@ -13983,7 +13988,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .view.view-social-masonry .view-content > .pe-container .pe-item {
   display: block;
   overflow: hidden;
-  margin-bottom: 3% !important;
+  margin: 0 -2px 3% !important;
   opacity: 0.1;
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
@@ -14065,7 +14070,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   color: #333333;
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header button.close:hover span {
-  color: #ff5353;
+  color: #ff535d;
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header .body-fading {
   display: none;
@@ -14091,11 +14096,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  border: 2px solid #ff5353;
-  background-color: #ff5353;
+  border: 2px solid #ff535d;
+  background-color: #ff535d;
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-footer .btn:hover {
-  color: #ff5353;
+  color: #ff535d;
   background-color: #fff;
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-footer .body-fading {
@@ -14555,18 +14560,18 @@ body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-pl
   margin: 50px 0 0;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 25.625px;
+  font-size: 22.5px;
   color: #333333;
   line-height: 1;
 }
 @media screen and (min-width: 480px) {
   .view.view-courses .view-content .panel-group .main-title h1 {
-    font-size: 5.33854167vw;
+    font-size: 4.6875vw;
   }
 }
 @media screen and (min-width: 768px) {
   .view.view-courses .view-content .panel-group .main-title h1 {
-    font-size: 41px;
+    font-size: 36px;
   }
 }
 body.kvcollege_section .view.view-courses .view-content .panel-group .main-title h1 {
@@ -14866,11 +14871,11 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times .view-header p,
 .view.view-course-times-search .view-header p {
-  margin: 0 auto;
-  width: 80%;
+  margin: 0;
+  width: 90%;
   font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   color: #929295;
 }
 .view.view-course-times .view-content,
@@ -14964,24 +14969,29 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times .view-content table tbody tr td.views-field-nothing a,
 .view.view-course-times-search .view-content table tbody tr td.views-field-nothing a {
-  display: inline-block;
-  padding: 5px 10px 8px;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 0 10px;
+  width: 60%;
   min-width: 110px;
-  line-height: 1;
-  color: #fff;
+  height: 34px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
-  letter-spacing: 1px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #ff5353;
-  background-color: #ff5353;
+  background: #ff535d;
+  display: inline-block;
 }
 .view.view-course-times .view-content table tbody tr td.views-field-nothing a:hover,
 .view.view-course-times-search .view-content table tbody tr td.views-field-nothing a:hover {
-  color: #ff5353;
-  background-color: rgba(255, 255, 255, 0);
+  background: #ff757d;
 }
 .view.view-course-times .text-center ul.pagination,
 .view.view-course-times-search .text-center ul.pagination {
@@ -15353,15 +15363,15 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
   border: 1px solid #494a4f;
   background: none;
 }
-#ui-datepicker-div .ui-widget-header {
-  border: 1px solid #c9c9c9;
+#ui-datepicker-div .ui-datepicker-header {
+  border: none;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
   background: #fff none;
 }
-#ui-datepicker-div .ui-widget-header .ui-datepicker-title select.ui-datepicker-month,
-#ui-datepicker-div .ui-widget-header .ui-datepicker-title select.ui-datepicker-year {
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-title select.ui-datepicker-month,
+#ui-datepicker-div .ui-datepicker-header .ui-datepicker-title select.ui-datepicker-year {
   padding: 0 0 2px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 15px;
@@ -15380,7 +15390,7 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
 #ui-datepicker-div table.ui-datepicker-calendar tbody tr td a:focus,
 #ui-datepicker-div table.ui-datepicker-calendar tbody tr td a.ui-state-active {
   color: #fff;
-  background-color: #ff5353;
+  background-color: #ff535d;
 }
 /*
  *  Header section (navigation)
@@ -15419,7 +15429,7 @@ header#navbar .container {
 header#navbar .container .navbar-header a.navbar-brand {
   padding: 0;
   font-family: 'SohoGothicProMedium', serif;
-  font-size: 41px;
+  font-size: 36px;
   color: #222222;
   line-height: 1;
 }
@@ -15483,22 +15493,22 @@ header#navbar .container .navbar-collapse nav ul.menu li a {
   line-height: 1;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv {
-  border-bottom: 6px solid #95ba40;
+  border-bottom: 6px solid #a8d449;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a:hover,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active {
   color: #fff;
-  background-color: #95ba40;
+  background-color: #a8d449;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs {
-  border-bottom: 6px solid #e87431;
+  border-bottom: 6px solid #ff7828;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a:hover,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active {
   color: #fff;
-  background-color: #e87431;
+  background-color: #ff7828;
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks {
   border-bottom: 6px solid #78729f;
@@ -15614,6 +15624,8 @@ body {
   height: 100%;
   min-height: 320px;
   background: #f0f0eb none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .main-container {
   margin: 0 0 50px;
@@ -15629,19 +15641,19 @@ body {
   margin: 50px 0 30px;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 25.625px;
+  font-size: 22.5px;
   color: #cc3333;
   line-height: 1;
   border: none;
 }
 @media screen and (min-width: 480px) {
   .main-container .container .row section h1.page-header {
-    font-size: 5.33854167vw;
+    font-size: 4.6875vw;
   }
 }
 @media screen and (min-width: 768px) {
   .main-container .container .row section h1.page-header {
-    font-size: 41px;
+    font-size: 36px;
   }
 }
 body.kvcollege_section .main-container .container .row section h1.page-header {

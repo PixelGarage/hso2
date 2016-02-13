@@ -20,11 +20,11 @@
     padding: 30px 15px;
 
     p {
-      margin: 0 auto;
-      width: 80%;
+      margin: 0;
+      width: 90%;
       font-family: @pxl-text-font-light;
       font-size: @font-size-base;
-      text-align: center;
+      text-align: left;
       color: @pxl-color-gray-text;
     }
   }
@@ -121,22 +121,8 @@
               text-align: right;
 
               a {
+                #pxl-mixins.button-normal;
                 display: inline-block;
-                padding: 5px 10px 8px;
-                min-width: 110px;
-                line-height: 1;
-                color: #fff;
-                text-align: center;
-                text-decoration: none;
-                letter-spacing: 1px;
-                #pxl-mixins.border-radius(3px);
-                border: 2px solid @pxl-color-bg-button;
-                background-color: @pxl-color-bg-button;
-
-                &:hover {
-                  color: @pxl-color-bg-button;
-                  background-color: rgba(255,255,255,0.0);
-                }
               }
             }
           }

@@ -14,8 +14,11 @@
 @pxl-color-hso-ks: rgb(120, 114, 159);
 @pxl-color-hso-ex: rgb(177, 168, 149);
 @pxl-color-hso-gray: rgb(235,235,235);
+@pxl-color-hso-kv-menu: rgb(168, 212, 73);
+@pxl-color-hso-hs-menu: rgb(255, 120, 40);
 
-@pxl-color-bg-button: #ff5353;
+@pxl-color-bg-button: #ff535d;
+@pxl-color-bg-button-hover: #ff757d;
 @pxl-border-color: #c9c9c9;
 
 @pxl-color-gray-text: #929295;
@@ -44,6 +47,7 @@
 @text-color-disabled:   @gray-lighter;
 
 @font-size-base:          16px;
+@font-size-h1:            floor((@font-size-base * 2.25)); // ~36px
 @font-size-large:         ceil((@font-size-base * 1.25));
 @font-size-larger:        ceil((@font-size-base * 1.5));
 @font-size-small:         ceil((@font-size-base * 0.85));
@@ -132,4 +136,5 @@
 //
 //## Define common padding and border radius sizes and more.
 
-
+// Button
+@pxl-button-letter-spacing: 0.03em;
