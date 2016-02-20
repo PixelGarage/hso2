@@ -48,21 +48,16 @@
         button.close {
           display: block;
           position: absolute;
-          top: 10px;
-          right: 10px;
+          top: 15px;
+          right: 15px;
           opacity: 1.0;
           z-index: 1; // has to be above body
 
-          span {
-            padding: 0;
-            font-size: 30px;
-            color: @text-color;
-          }
-
-          &:hover {
-            span {
-              color: @pxl-color-bg-button;
-            }
+          .modal-close {
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            background: #fff url("../images/popup_close.svg") no-repeat left top/contain;
           }
         }
       }
@@ -246,6 +241,19 @@ body.modal-open {
               // date popup
               &.form-type-date-popup {
                 margin: 0;
+                width: 100%;
+
+                .date-padding {
+                  width: 100%;
+
+                  .form-item-field-course-date-value-value-date {
+                    width: 100%;
+
+                    input {
+                      width: 100%;
+                    }
+                  }
+                }
               }
 
               // see date-popup.less
@@ -279,7 +287,7 @@ body.modal-open {
               position: relative;
               .form-item {
                 &:after {
-                  content: '\f107';
+                  content: '\f0d7';
                   display: inline-block;
                   position: absolute;
                   top: 0;
@@ -304,7 +312,7 @@ body.modal-open {
 
             @media @header-breakpoint {
               width: 10%;
-              min-width: 110px;
+              min-width: 120px;
               margin-left: 0;
             }
           }

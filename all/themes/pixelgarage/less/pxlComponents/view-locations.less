@@ -53,7 +53,13 @@
             border: 1px solid @pxl-color-gray-text;
           }
 
-          &:hover,
+          &:hover {
+            a {
+              color: #fff;
+              background: none;
+            }
+          }
+
           &.active {
             a {
               color: #fff;
@@ -115,7 +121,7 @@
           .views-field-field-address {
             .field-content {
               .organisation-block {
-                margin-bottom: 10px;
+                margin-bottom: 5px;
                 font-family: @pxl-text-font;
               }
               .street-block {
@@ -130,13 +136,23 @@
                 a {
                   // mobile add a link
                   color: #fff;
+
                   &:hover, &:focus {
                     color: #fff;
                   }
                 }
 
-                span.fa {
-                  width: 20px;
+                .icon-phone {
+                  display: inline-block;
+                  width: 18px;
+                  height: 19px;
+                  background: url(../images/contact_icon_tel.svg) no-repeat top left/contain;
+                }
+                .icon-fax {
+                  display: inline-block;
+                  width: 18px;
+                  height: 21px;
+                  background: url(../images/contact_icon_fax.svg) no-repeat top left/contain;
                 }
               }
             }
@@ -144,8 +160,11 @@
 
           .views-field-field-email {
             .field-content {
-              span.fa {
-                width: 20px;
+              .envelope {
+                display: inline-block;
+                width: 18px;
+                height: 14px;
+                background: url(../images/contact_icon_email.svg) no-repeat top left/contain;
               }
 
               a {
@@ -165,12 +184,12 @@
           display: inline-block;
           vertical-align: top;
           margin: 0 0 0 -6.8%;
-          width: 59%;
+          width: 65%;
           height: (@pxl-li-vertical-height * @pxl-location-count);
           border: 1px solid @pxl-color-gray-border;
 
           .tab-pane {
-            font-size: 14px;
+            font-size: 16px;
             text-align: left;
           }
         }

@@ -32,6 +32,7 @@
           $courseMenus = $courseBlockMenu.find('ul.menu>li.menu-block');
 
       $segmentMenus.once('activated', function() {
+        // add click events to all menus
         $(this).on('click', function() {
           var $menu = $(this),
               blockClass = '.' + $menu.attr('id'),
@@ -57,9 +58,16 @@
             $blockPanel.slideDown(400);
           }
         });
+
+        // activate first menu immediately
+        if ($(this).hasClass('first')) {
+          $(this).click();
+        }
+
       });
 
       $courseMenus.once('activated', function() {
+        // add click events to all menus
         $(this).on('click', function() {
           var $menu = $(this),
               blockClass = '.' + $menu.attr('id'),
@@ -85,6 +93,12 @@
             $blockPanel.slideDown(400);
           }
         });
+
+        // activate first menu immediately
+        if ($(this).hasClass('first')) {
+          $(this).click();
+        }
+
       });
 
     }

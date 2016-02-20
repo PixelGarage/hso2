@@ -31,7 +31,7 @@
 
   .view-content {
     // course times table
-    padding: 0 15px;
+    padding: 0;
 
     table {
       width: 100%;
@@ -46,7 +46,7 @@
             border: none;
 
             a {
-              color: @pxl-color-gray-dark;
+              color: @text-color;
 
               &:hover {
                 color: @pxl-color-gray-dark;
@@ -68,6 +68,7 @@
         tr {
           padding: 0;
           border: none;
+          height: 70px;
 
           &.even {
             background-color: #fff;
@@ -82,11 +83,11 @@
             vertical-align: middle;
             font-family: @pxl-text-font-light;
             font-size: @table-font-size;
-            color: @pxl-color-gray-dark;
+            color: @text-color;
             border: none;
 
             a {
-              color: @pxl-color-gray-dark;
+              color: @text-color;
             }
 
             &.active {
@@ -95,7 +96,7 @@
 
             &.views-field-field-course-date {
               white-space: nowrap;
-              line-height: 1.2;
+              line-height: 25px;
             }
 
             &.views-field-field-location {
@@ -142,14 +143,8 @@
   }
 
   .view-content {
-    padding: 0;
-
     .table-responsive {
       border: 1px solid @pxl-color-gray-border-light;
-
-      table {
-        padding: 10px;
-      }
     }
   }
 

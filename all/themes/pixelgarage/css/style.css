@@ -10022,7 +10022,7 @@ form#user-login {
 #block-menu-menu-segment-blocks ul.menu li span,
 #block-menu-menu-course-blocks ul.menu li span {
   display: block;
-  padding: 8px 12px 10px;
+  padding: 11px 20px 13px;
   width: 100%;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
@@ -10055,6 +10055,7 @@ form#user-login {
   #block-menu-menu-course-blocks ul.menu li a,
   #block-menu-menu-segment-blocks ul.menu li span,
   #block-menu-menu-course-blocks ul.menu li span {
+    padding: 11px 12px 13px;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -10076,6 +10077,14 @@ form#user-login {
   #block-menu-menu-course-blocks ul.menu li.last span {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px;
+  }
+}
+@media screen and (min-width: 990px) {
+  #block-menu-menu-segment-blocks ul.menu li a,
+  #block-menu-menu-course-blocks ul.menu li a,
+  #block-menu-menu-segment-blocks ul.menu li span,
+  #block-menu-menu-course-blocks ul.menu li span {
+    padding: 11px 20px 13px;
   }
 }
 /*
@@ -10157,18 +10166,16 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-h
 body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   opacity: 1.0;
   z-index: 1;
 }
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close span {
-  padding: 0;
-  font-size: 30px;
-  color: #333333;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close:hover span {
-  color: #ff535d;
+body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close .modal-close {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: #ffffff url("../images/popup_close.svg") no-repeat left top / contain;
 }
 body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-body {
   padding: 20px 10px;
@@ -10319,6 +10326,16 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup {
   margin: 0;
+  width: 100%;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding {
+  width: 100%;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding .form-item-field-course-date-value-value-date {
+  width: 100%;
+}
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding .form-item-field-course-date-value-value-date input {
+  width: 100%;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title {
   width: 90%;
@@ -10344,7 +10361,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item:after,
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id .views-widget .form-item:after {
-  content: '\f107';
+  content: '\f0d7';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -10368,7 +10385,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 @media screen and (min-width: 640px) {
   .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
     width: 10%;
-    min-width: 110px;
+    min-width: 120px;
     margin-left: 0;
   }
 }
@@ -11033,25 +11050,28 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   width: auto;
   height: auto;
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #777777;
-  background-color: #777777;
+  background: #ff535d;
   font-size: 14px;
 }
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:hover,
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:focus {
-  color: #777777;
-  background: #ffffff;
+  background: #ff757d;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file {
   margin: 0;
@@ -11069,26 +11089,28 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button {
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #777777;
-  background-color: #777777;
+  background: #ff535d;
   font-size: 16px;
   z-index: 10;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:hover,
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:focus {
-  color: #777777;
-  background: #ffffff;
+  background: #ff757d;
 }
 form.webform-client-form .webform-component {
   margin: 0 auto 15px;
@@ -11238,26 +11260,30 @@ form.webform-client-form .webform-component .form-managed-file input {
   background: none;
 }
 form.webform-client-form .webform-component .form-managed-file button.btn {
-  display: inline-block;
   margin: 0;
-  padding: 15px 20px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #777777;
-  background-color: #777777;
+  background: #ff535d;
   z-index: 10;
 }
 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
-  color: #777777;
-  background: #ffffff;
+  background: #ff757d;
 }
 form.webform-client-form .webform-component.webform-component-markup {
   margin-bottom: 25px;
@@ -11322,7 +11348,21 @@ form.webform-client-form .webform-component.webform-container-inline[class*="dat
   right: auto;
   width: 100%;
 }
-form.webform-client-form .webform-component.webform-container-inline[class*="date"] .webform-container-inline select {
+form.webform-client-form .webform-component.webform-container-inline[class*="date"] .webform-container-inline .form-type-select {
+  position: relative;
+}
+form.webform-client-form .webform-component.webform-container-inline[class*="date"] .webform-container-inline .form-type-select:after {
+  content: '\f0d7';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  font-family: 'fontawesome';
+  font-size: 16px;
+  color: #494a4f;
+  pointer-events: none;
+}
+form.webform-client-form .webform-component.webform-container-inline[class*="date"] .webform-container-inline .form-type-select select {
   position: static;
   display: inline-block;
   margin: 0 -2px;
@@ -11339,7 +11379,7 @@ form.webform-client-form .webform-component-select {
   position: relative;
 }
 form.webform-client-form .webform-component-select:after {
-  content: '\f107';
+  content: '\f0d7';
   display: inline-block;
   position: absolute;
   right: 10px;
@@ -11361,108 +11401,123 @@ form.webform-client-form div.form-actions {
 form.webform-client-form div.form-actions button.webform-submit {
   min-width: 50%;
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #cc3333;
-  background-color: #cc3333;
+  background: #ff535d;
 }
 form.webform-client-form div.form-actions button.webform-submit:hover,
 form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #cc3333;
-  background: #ffffff;
+  background: #ff757d;
 }
 body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #95ba40;
-  background-color: #95ba40;
+  background: #ff535d;
 }
 body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #95ba40;
-  background: #ffffff;
+  background: #ff757d;
 }
 body.hscollege_section form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #e87431;
-  background-color: #e87431;
+  background: #ff535d;
 }
 body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #e87431;
-  background: #ffffff;
+  background: #ff757d;
 }
 body.kscollege_section form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #78729f;
-  background-color: #78729f;
+  background: #ff535d;
 }
 body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #78729f;
-  background: #ffffff;
+  background: #ff757d;
 }
 body.excollege_section form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-  outline: none;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  border: 2px solid #b1a895;
-  background-color: #b1a895;
+  background: #ff535d;
 }
 body.excollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
 body.excollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
-  color: #b1a895;
-  background: #ffffff;
+  background: #ff757d;
 }
 /*
  *  Course content type
@@ -11494,7 +11549,7 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
   width: 100% !important;
   font-family: 'SohoGothicProMedium', serif;
   font-size: 14px;
-  color: #6d6e72;
+  color: #333333;
   vertical-align: top;
 }
 .node.node-course .row .col-sm-12 .field-name-body table.aufeinenblock tbody tr td,
@@ -12441,17 +12496,17 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 30px;
   }
 }
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-submitted-by {
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-post-date {
   margin: 10px 0 20px;
   width: 100%;
 }
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-submitted-by .field-item {
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-post-date .field-item {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 12px;
   text-align: right;
   color: #494a4f;
 }
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-submitted-by .field-item:before {
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-post-date .field-item:before {
   content: '\f0e7';
   font-family: 'fontawesome';
   font-size: 16px;
@@ -13930,7 +13985,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .view.view-social-masonry .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-radios .radio .control-label {
   display: block;
-  padding: 8px 12px 10px;
+  padding: 8px 20px 10px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   line-height: 1;
@@ -14312,7 +14367,10 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   border-radius: 3px;
   border: 1px solid #929295;
 }
-.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a,
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li:hover a {
+  color: #fff;
+  background: none;
+}
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style ul.nav-tabs li.active a {
   color: #fff;
   background-color: #929295;
@@ -14366,7 +14424,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   color: #fff;
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .organisation-block {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: 'SohoGothicProRegular', serif;
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .street-block {
@@ -14385,11 +14443,23 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number a:focus {
   color: #fff;
 }
-.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number span.fa {
-  width: 20px;
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number .icon-phone {
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  background: url(../images/contact_icon_tel.svg) no-repeat top left / contain;
 }
-.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content span.fa {
-  width: 20px;
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-address .field-content .phone-number .icon-fax {
+  display: inline-block;
+  width: 18px;
+  height: 21px;
+  background: url(../images/contact_icon_fax.svg) no-repeat top left / contain;
+}
+.view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content .envelope {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url(../images/contact_icon_email.svg) no-repeat top left / contain;
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content a {
   text-decoration: none;
@@ -14404,12 +14474,12 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
     display: inline-block;
     vertical-align: top;
     margin: 0 0 0 -6.8%;
-    width: 59%;
+    width: 65%;
     height: 306px;
     border: 1px solid #6d6e72;
   }
   .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
   }
 }
@@ -14587,8 +14657,8 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   color: #b1a895;
 }
 .view.view-courses .view-content .panel-group .course-subject h2 {
-  margin: 30px 0 0;
-  padding: 10px 0;
+  margin: 15px 0 0;
+  padding: 20px 0 24px;
   font-family: 'SohoGothicProMedium', serif;
   font-size: 18px;
   color: #333333;
@@ -14608,7 +14678,6 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   margin-bottom: 0;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
-  color: #fff;
   line-height: 1;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -14622,7 +14691,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
 .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a {
   display: block;
   width: 100%;
-  padding: 10px 10px 12px;
+  padding: 9px 10px 11px;
   font-size: 14px;
   color: #929295;
   text-decoration: none;
@@ -14630,24 +14699,24 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
 .view.view-courses .view-content .panel-group .panel .panel-heading .short-description {
   display: none;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 15px;
   padding: 0;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #fff;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
-  display: block;
-  padding: 5px 10px 7px;
+  display: inline-block;
+  padding: 9px 10px 11px;
   font-size: 14px;
   color: #fff;
   text-decoration: none;
 }
+.view.view-courses .view-content .panel-group .panel .panel-heading .short-description .fa {
+  color: #fff;
+}
 @media screen and (min-width: 480px) {
   .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a,
   .view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
+    padding: 9px 10px 10px;
     font-size: 15px;
   }
 }
@@ -14658,7 +14727,8 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   }
   .view.view-courses .view-content .panel-group .panel .panel-heading .panel-title a,
   .view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
-    font-size: 16px;
+    padding: 7px 10px 9px;
+    font-size: 18px;
   }
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading:hover .panel-title a {
@@ -14677,8 +14747,8 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   background-color: #b1a895;
 }
 .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
-  margin: 10px 40px;
-  padding: 10px 0 20px;
+  margin: 10px 0;
+  padding: 10px 10px 20px;
   font-family: 'SohoGothicProLight', serif;
   color: #777777;
   border: none;
@@ -14880,7 +14950,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times .view-content,
 .view.view-course-times-search .view-content {
-  padding: 0 15px;
+  padding: 0;
 }
 .view.view-course-times .view-content table,
 .view.view-course-times-search .view-content table {
@@ -14896,7 +14966,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times .view-content table thead tr th a,
 .view.view-course-times-search .view-content table thead tr th a {
-  color: #494a4f;
+  color: #333333;
 }
 .view.view-course-times .view-content table thead tr th a:hover,
 .view.view-course-times-search .view-content table thead tr th a:hover {
@@ -14912,6 +14982,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-times-search .view-content table tbody tr {
   padding: 0;
   border: none;
+  height: 70px;
 }
 .view.view-course-times .view-content table tbody tr.even,
 .view.view-course-times-search .view-content table tbody tr.even {
@@ -14927,12 +14998,12 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   vertical-align: middle;
   font-family: 'SohoGothicProLight', serif;
   font-size: 15px;
-  color: #494a4f;
+  color: #333333;
   border: none;
 }
 .view.view-course-times .view-content table tbody tr td a,
 .view.view-course-times-search .view-content table tbody tr td a {
-  color: #494a4f;
+  color: #333333;
 }
 .view.view-course-times .view-content table tbody tr td.active,
 .view.view-course-times-search .view-content table tbody tr td.active {
@@ -14941,7 +15012,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-times .view-content table tbody tr td.views-field-field-course-date,
 .view.view-course-times-search .view-content table tbody tr td.views-field-field-course-date {
   white-space: nowrap;
-  line-height: 1.2;
+  line-height: 25px;
 }
 .view.view-course-times .view-content table tbody tr td.views-field-field-location,
 .view.view-course-times-search .view-content table tbody tr td.views-field-field-location {
@@ -15028,14 +15099,8 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-times-search .view-header {
   padding: 30px 0;
 }
-.view.view-course-times-search .view-content {
-  padding: 0;
-}
 .view.view-course-times-search .view-content .table-responsive {
   border: 1px solid #c9c9c9;
-}
-.view.view-course-times-search .view-content .table-responsive table {
-  padding: 10px;
 }
 /*
  *  View team component
@@ -15434,47 +15499,50 @@ header#navbar .container .navbar-header a.navbar-brand {
   line-height: 1;
 }
 header#navbar .container .navbar-header .navbar-toggle {
-  padding: 5px 10px;
+  padding: 10px 10px 5px;
   border: none;
   background: none;
 }
-header#navbar .container .navbar-header .navbar-toggle span.glyphicon {
-  font-size: 30px;
-  color: #494a4f;
-}
-header#navbar .container .navbar-header .navbar-toggle:hover span.glyphicon,
-header#navbar .container .navbar-header .navbar-toggle:focus span.glyphicon {
-  color: #cc3333;
+header#navbar .container .navbar-header .navbar-toggle span.navbar-open {
+  display: inline-block;
+  width: 35px;
+  height: 23px;
+  background: #ffffff url("../images/navi_burger.svg") no-repeat left top / contain;
 }
 header#navbar .container .navbar-collapse {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   padding: 0;
-  width: 60%;
-  height: auto;
+  width: 80%;
+  height: 100%;
   background-color: #ffffff;
   z-index: 10;
 }
 header#navbar .container .navbar-collapse .navbar-toggle-2 {
+  display: none;
   position: absolute;
   top: 20px;
   left: 10%;
-  display: none;
   padding: 5px 10px;
   border: none;
   background: none;
 }
-header#navbar .container .navbar-collapse .navbar-toggle-2 span.fa {
-  font-size: 30px;
-  color: #494a4f;
-}
-header#navbar .container .navbar-collapse .navbar-toggle-2:hover span.fa,
-header#navbar .container .navbar-collapse .navbar-toggle-2:focus span.fa {
-  color: #cc3333;
+header#navbar .container .navbar-collapse .navbar-toggle-2 span.navbar-close {
+  display: inline-block;
+  width: 33px;
+  height: 22px;
+  background: #ffffff url("../images/navi_close.svg") no-repeat left top / contain;
 }
 header#navbar .container .navbar-collapse.in .navbar-toggle-2 {
   display: block;
+}
+header#navbar .container .navbar-collapse.collapsing {
+  right: -80%;
+  height: 100% !important;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 header#navbar .container .navbar-collapse nav ul.menu {
   display: block;
@@ -15498,8 +15566,16 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-kv {
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a:hover,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active {
-  color: #fff;
-  background-color: #a8d449;
+  color: #a8d449;
+  background: none;
+}
+@media screen and (min-width: 768px) {
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a:hover,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active-trail,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active {
+    color: #fff;
+    background-color: #a8d449;
+  }
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs {
   border-bottom: 6px solid #ff7828;
@@ -15507,8 +15583,16 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-hs {
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a:hover,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active {
-  color: #fff;
-  background-color: #ff7828;
+  color: #ff7828;
+  background: none;
+}
+@media screen and (min-width: 768px) {
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a:hover,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active-trail,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active {
+    color: #fff;
+    background-color: #ff7828;
+  }
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks {
   border-bottom: 6px solid #78729f;
@@ -15516,8 +15600,16 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-ks {
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a:hover,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active {
-  color: #fff;
-  background-color: #78729f;
+  color: #78729f;
+  background: none;
+}
+@media screen and (min-width: 768px) {
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a:hover,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active-trail,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active {
+    color: #fff;
+    background-color: #78729f;
+  }
 }
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ex {
   border-bottom: 6px solid #b1a895;
@@ -15525,8 +15617,16 @@ header#navbar .container .navbar-collapse nav ul.menu li.menu-ex {
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a:hover,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active-trail,
 header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active {
-  color: #fff;
-  background-color: #b1a895;
+  color: #b1a895;
+  background: none;
+}
+@media screen and (min-width: 768px) {
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a:hover,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active-trail,
+  header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active {
+    color: #fff;
+    background-color: #b1a895;
+  }
 }
 header#navbar .container .navbar-collapse nav ul.menu.secondary {
   position: relative;
@@ -15541,11 +15641,12 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a {
   line-height: 1;
   color: #333333;
   border-right: none;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #6d6e72;
 }
 header#navbar .container .navbar-collapse nav ul.menu.secondary li a:hover,
 header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
-  background-color: #f0f0eb;
+  color: #929295;
+  background: none;
 }
 @media screen and (min-width: 768px) {
   header#navbar .container .navbar-collapse {
@@ -15729,6 +15830,9 @@ body.excollege_section .main-container .container .row section h1.page-header {
   border: none;
   background-color: #494a4f;
 }
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full {
+  padding: 0 0 20px;
+}
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field .block-title {
   margin: 30px 0;
   font-family: 'SohoGothicProMedium', serif;
@@ -15833,34 +15937,21 @@ body.excollege_section .main-container .container .row section h1.page-header {
     border-top-left-radius: 0;
   }
 }
-.footer .container .region-footer .block-menu-block {
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li {
   display: block;
-  margin-top: 30px;
-  padding: 30px 0;
-  width: 100%;
-  border-top: 1px solid #929295;
+  height: 40px;
 }
-.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu {
-  text-align: center;
-}
-.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li {
-  display: inline-block;
-}
-.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a {
-  padding: 0 10px 2px;
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li a {
+  padding: 0 0 2px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
-  line-height: 1;
   color: #929295;
-  border-right: 1px solid #6d6e72;
-}
-.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a:hover,
-.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li a.active {
-  text-decoration: underline;
   background: none;
 }
-.footer .container .region-footer .block-menu-block .menu-name-menu-footer-menu ul.menu li.last a {
-  border: none;
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li a:hover,
+.footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li a.active {
+  color: #fff;
+  background: none;
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item {
   margin: 10px 0 0;
@@ -15870,12 +15961,13 @@ body.excollege_section .main-container .container .row section h1.page-header {
   line-height: 1;
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item div a {
-  display: block;
-  padding: 10px 0;
-  border-top: 1px solid #333333;
+  display: inline-block;
+  padding: 10px 0 10px 5px;
+  width: 80%;
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item div a img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-certificates {
   display: block;

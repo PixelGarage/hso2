@@ -90,7 +90,7 @@
       <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
-          <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+          <span class="navbar-open" aria-hidden="true"></span>
         </button>
       <?php endif; ?>
     </div>
@@ -99,7 +99,7 @@
       <div class="navbar-collapse collapse">
         <button type="button" class="navbar-toggle-2" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
-          <span class="fa fa-long-arrow-right" aria-hidden="true"></span>
+          <span class="navbar-close" aria-hidden="true"></span>
         </button>
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
@@ -209,7 +209,7 @@
       <div class="modal-content">
         <!-- Header -->
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="modal-close" aria-hidden="true"></span></button>
           <?php if ($exposed_search_form_modal_title): ?>
             <h2 class="modal-title"><?php print $exposed_search_form_modal_title; ?></h2>
           <?php endif; ?>

@@ -62,53 +62,45 @@ header#navbar {
 
       .navbar-toggle {
         // navbar toggle with burger
-        padding: 5px 10px;
+        padding: 10px 10px 5px;
         border: none;
         background: none;
 
-        span.glyphicon {
-          font-size: 30px;
-          color: @pxl-color-gray-dark;
-        }
-
-        &:hover, &:focus {
-          span.glyphicon {
-            color: @pxl-color-hso-main;
-          }
+        span.navbar-open {
+          display: inline-block;
+          width: 35px;
+          height: 23px;
+          background: #fff url("../images/navi_burger.svg") no-repeat left top/contain;
         }
       }
     }
 
     // collapse part
     .navbar-collapse {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       padding: 0;
-      width: 60%;
-      height: auto;
+      width: 80%;
+      height: 100%;
       background-color: rgba(255,255,255, 1.0);
       z-index: 10;  // higher than header
 
       .navbar-toggle-2 {
         // navbar toggle with arrow
+        display: none;
         position: absolute;
         top: 20px;
         left: 10%;
-        display: none;
         padding: 5px 10px;
         border: none;
         background: none;
 
-        span.fa {
-          font-size: 30px;
-          color: @pxl-color-gray-dark;
-        }
-
-        &:hover, &:focus {
-          span.fa {
-            color: @pxl-color-hso-main;
-          }
+        span.navbar-close {
+          display: inline-block;
+          width: 33px;
+          height: 22px;
+          background: #fff url("../images/navi_close.svg") no-repeat left top/contain;
         }
       }
 
@@ -116,6 +108,14 @@ header#navbar {
         .navbar-toggle-2 {
           display: block;
         }
+      }
+
+
+      &.collapsing {
+        // override transition
+        right: -80%;
+        height: 100% !important;
+        .transition(all 0.5s ease);
       }
 
       nav {
@@ -141,32 +141,52 @@ header#navbar {
               border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-kv-menu;
 
               a:hover, a.active-trail, a.active {
-                color: #fff;
-                background-color: @pxl-color-hso-kv-menu;
+                color: @pxl-color-hso-kv-menu;
+                background: none;
+
+                @media @tablet {
+                  color: #fff;
+                  background-color: @pxl-color-hso-kv-menu;
+                }
               }
             }
             &.menu-hs {
               border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-hs-menu;
 
               a:hover, a.active-trail, a.active {
-                color: #fff;
-                background-color: @pxl-color-hso-hs-menu;
+                color: @pxl-color-hso-hs-menu;
+                background: none;
+
+                @media @tablet {
+                  color: #fff;
+                  background-color: @pxl-color-hso-hs-menu;
+                }
               }
             }
             &.menu-ks {
               border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-ks;
 
               a:hover, a.active-trail, a.active {
-                color: #fff;
-                background-color: @pxl-color-hso-ks;
+                color: @pxl-color-hso-ks;
+                background: none;
+
+                @media @tablet {
+                  color: #fff;
+                  background-color: @pxl-color-hso-ks;
+                }
               }
             }
             &.menu-ex {
               border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-ex;
 
               a:hover, a.active-trail, a.active {
-                color: #fff;
-                background-color: @pxl-color-hso-ex;
+                color: @pxl-color-hso-ex;
+                background: none;
+
+                @media @tablet {
+                  color: #fff;
+                  background-color: @pxl-color-hso-ex;
+                }
               }
             }
           }
@@ -187,11 +207,12 @@ header#navbar {
               line-height: 1;
               color: @text-color;
               border-right: none;
-              border-bottom: 1px solid @text-color;
+              border-bottom: 1px solid @pxl-color-gray-border;
 
               &:hover,
               &.active {
-                background-color: @pxl-color-hso-sec;
+                color: @pxl-color-gray-text;
+                background: none;
               }
             }
           }

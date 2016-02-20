@@ -28,7 +28,7 @@
 
       a, span {
         display: block;
-        padding: 8px 12px 10px;
+        padding: 11px 20px 13px;
         width: 100%;
         font-family: @pxl-text-font;
         font-size: 16px;
@@ -54,6 +54,7 @@
         border-right: 1px solid #fff;
 
         a, span {
+          padding: 11px 12px 13px;
           #pxl-mixins.border-radius(0);
         }
 
@@ -72,5 +73,15 @@
 
       }
     }
+
+    @media @normal {
+      li {
+        a, span {
+          padding: 11px 20px 13px;
+        }
+      }
+    }
+
+
   }
 }

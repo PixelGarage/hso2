@@ -23,6 +23,7 @@
               href="#collapse<?php print $key ?>">
              <?php print $label_short_desc ?>
           </a>
+          <span class="fa fa-caret-down"></span>
         </span>
       </div>
 

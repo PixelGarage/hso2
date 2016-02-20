@@ -52,22 +52,24 @@
 
 .resp-submit-button(@color: #fff; @bg-color: @gray-light; @radius: @border-radius-small) {
   display: inline-block;
-  margin: 0;
-  padding: 15px 20px;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
   font-family: @pxl-text-font;
-  font-size: @font-size-large;
+  font-size: @font-size-base;
+  text-align: center;
+  text-decoration: none;
   line-height: 1;
-  letter-spacing: 1.5px;
-  //text-transform: capitalize;
-  color: @color;
-  outline: none;
+  letter-spacing: @pxl-button-letter-spacing;
+  color: #fff;
+  border: none;
   #pxl-mixins.border-radius(@radius);
-  border: 2px solid @bg-color;
-  background-color: @bg-color;
+  background: @pxl-color-bg-button;
 
   &:hover, &:focus {
-    color: @bg-color;
-    background: @color;
+    background: @pxl-color-bg-button-hover;
   }
 }
 
@@ -483,11 +485,27 @@ form.webform-client-form {
           right: auto;
           width: 100%;
 
-          select {
-            position: static;
-            display: inline-block;
-            margin: 0 -2px;
-            width: 33.33333%;
+          .form-type-select {
+            position: relative;
+
+            &:after {
+              content: '\f0d7';
+              display: inline-block;
+              position: absolute;
+              right: 10px;
+              bottom: 0;
+              font-family: @pxl-icon-font;
+              font-size: @font-size-base;
+              color: @pxl-color-gray-dark;
+              pointer-events: none;
+            }
+
+            select {
+              position: static;
+              display: inline-block;
+              margin: 0 -2px;
+              width: 33.33333%;
+            }
           }
 
           @media @narrow {
@@ -506,7 +524,7 @@ form.webform-client-form {
     position: relative;
 
     &:after {
-      content: '\f107';
+      content: '\f0d7';
       display: inline-block;
       position: absolute;
       right: 10px;
