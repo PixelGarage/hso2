@@ -65,21 +65,16 @@
           button.close {
             display: block;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 20px;
+            right: 30px;
             opacity: 1.0;
             z-index: 1; // has to be above body
 
-            span {
-              padding: 0;
-              font-size: 30px;
-              color: @text-color;
-            }
-
-            &:hover {
-              span {
-                color: @pxl-color-bg-button;
-              }
+            .modal-close {
+              display: inline-block;
+              width: 23px;
+              height: 23px;
+              background: #fff url("../images/popup_close.svg") no-repeat left top/contain;
             }
           }
 

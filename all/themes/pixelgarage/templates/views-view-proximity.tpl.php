@@ -42,7 +42,7 @@
       <div class="modal-content">
         <!-- Header -->
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="fa fa-times" aria-hidden="true"></span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="modal-close" aria-hidden="true"></span></button>
           <?php if ($title): ?>
             <h2 class="modal-title" id="pe-modal-label"><?php print $title; ?></h2>
           <?php endif; ?>

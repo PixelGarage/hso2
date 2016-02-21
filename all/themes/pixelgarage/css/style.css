@@ -1557,14 +1557,14 @@ pre code {
     width: 750px;
   }
 }
-@media (min-width: 990px) {
+@media (min-width: 1024px) {
   .container {
-    width: 960px;
+    width: 990px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 960px;
+    width: 990px;
   }
 }
 .container-fluid {
@@ -1897,7 +1897,7 @@ pre code {
     margin-left: 0%;
   }
 }
-@media (min-width: 990px) {
+@media (min-width: 1024px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
@@ -5789,7 +5789,7 @@ button.close {
     width: 300px;
   }
 }
-@media (min-width: 990px) {
+@media (min-width: 1024px) {
   .modal-lg {
     width: 900px;
   }
@@ -6379,7 +6379,7 @@ button.close {
     display: inline-block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 989px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .visible-sm {
     display: block !important;
   }
@@ -6394,22 +6394,22 @@ button.close {
     display: table-cell !important;
   }
 }
-@media (min-width: 768px) and (max-width: 989px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .visible-sm-block {
     display: block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 989px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .visible-sm-inline {
     display: inline !important;
   }
 }
-@media (min-width: 768px) and (max-width: 989px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .visible-sm-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .visible-md {
     display: block !important;
   }
@@ -6424,17 +6424,17 @@ button.close {
     display: table-cell !important;
   }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .visible-md-block {
     display: block !important;
   }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .visible-md-inline {
     display: inline !important;
   }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .visible-md-inline-block {
     display: inline-block !important;
   }
@@ -6474,12 +6474,12 @@ button.close {
     display: none !important;
   }
 }
-@media (min-width: 768px) and (max-width: 989px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .hidden-sm {
     display: none !important;
   }
 }
-@media (min-width: 990px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .hidden-md {
     display: none !important;
   }
@@ -6627,14 +6627,14 @@ body #admin-menu .dropdown li {
     max-width: 720px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .navbar.container {
-    max-width: 930px;
+    max-width: 960px;
   }
 }
 @media screen and (min-width: 1200px) {
   .navbar.container {
-    max-width: 930px;
+    max-width: 960px;
   }
 }
 .navbar.container,
@@ -6722,7 +6722,7 @@ form#search-block-form {
   float: none;
   margin: 5px 0 5px 5px;
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .navbar #block-search-form {
     float: right;
   }
@@ -6925,7 +6925,7 @@ ul li.leaf {
     position: absolute;
   }
 }
-@media (min-width: 990px) {
+@media (min-width: 1024px) {
   .form-type-password-confirm .password-help {
     left: 33.33333333%;
   }
@@ -9634,7 +9634,7 @@ form#user-login {
   padding: 0 0 2em;
   width: 100%;
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   #user-create-account {
     padding: 2em;
     width: 50%;
@@ -9679,7 +9679,7 @@ form#user-login {
   border: 0;
   border-bottom: 1px solid #eeeeee;
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   #user_login_form {
     padding: 2em;
     width: 50%;
@@ -10017,6 +10017,10 @@ form#user-login {
   display: inline-block;
   margin: 0 5px 5px 0;
 }
+#block-menu-menu-segment-blocks ul.menu li.navigator,
+#block-menu-menu-course-blocks ul.menu li.navigator {
+  display: none;
+}
 #block-menu-menu-segment-blocks ul.menu li a,
 #block-menu-menu-course-blocks ul.menu li a,
 #block-menu-menu-segment-blocks ul.menu li span,
@@ -10051,6 +10055,10 @@ form#user-login {
     margin: 0 -3px 0 0;
     border-right: 1px solid #fff;
   }
+  #block-menu-menu-segment-blocks ul.menu li.navigator,
+  #block-menu-menu-course-blocks ul.menu li.navigator {
+    display: inline-block;
+  }
   #block-menu-menu-segment-blocks ul.menu li a,
   #block-menu-menu-course-blocks ul.menu li a,
   #block-menu-menu-segment-blocks ul.menu li span,
@@ -10079,7 +10087,7 @@ form#user-login {
     border-top-right-radius: 3px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   #block-menu-menu-segment-blocks ul.menu li a,
   #block-menu-menu-course-blocks ul.menu li a,
   #block-menu-menu-segment-blocks ul.menu li span,
@@ -12045,7 +12053,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     max-width: 340px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .user-profile .row .col-profile {
     display: inline-block;
     margin: 0 -4px 0 0;
@@ -12205,6 +12213,13 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 {
   width: 100%;
+}
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-field-picture {
+  margin: -20px -20px 20px;
+}
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-field-picture .field-item img {
+  width: 100%;
+  height: auto;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin-top: 0;
@@ -12786,7 +12801,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 16px;
   color: #fff;
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .node.node-testimonial.node-teaser .row div.col-sm-12 .field-name-body .field-item p {
     font-size: 20px;
   }
@@ -13841,6 +13856,9 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin-top: 50px;
   width: 100%;
 }
+.view.view-call2action .view-content {
+  margin: 0 -1.5%;
+}
 .view.view-call2action .view-content .views-row {
   display: inline-block;
   margin: 10px -2px;
@@ -13848,29 +13866,27 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   width: 100%;
   vertical-align: top;
 }
-@media screen and (min-width: 480px) {
-  .view.view-call2action .view-content .views-row {
-    width: 50%;
-  }
+.view.view-call2action .view-content .views-row .node-call2action .row {
+  margin: 0;
 }
-@media screen and (min-width: 768px) {
-  .view.view-call2action .view-content .views-row {
-    width: 33.33333%;
-  }
+.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
+  padding: 0 1.5%;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image {
   position: relative;
   width: 100%;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture {
-  margin: 0 7.5px;
+  margin: 0;
+  overflow: hidden;
+  max-height: 270px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture .field-item img {
   width: 100%;
   height: auto;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-title {
   position: absolute;
@@ -13891,8 +13907,8 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
-  bottom: 55%;
-  width: 100%;
+  bottom: 52%;
+  width: 90%;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item {
   display: block;
@@ -13932,6 +13948,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   background: #ff757d;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body {
+  display: none;
   margin-top: 20px;
 }
 .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body .field-item {
@@ -13940,6 +13957,34 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   line-height: 30px;
   text-align: center;
   color: #929295;
+}
+@media screen and (min-width: 480px) {
+  .view.view-call2action .view-content .views-row {
+    width: 50%;
+  }
+  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
+    padding: 0 3%;
+  }
+  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-call2action .view-content .views-row {
+    width: 33.33333%;
+  }
+  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
+    padding: 0 4.5%;
+  }
+  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture {
+    max-height: 320px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
+    bottom: 55%;
+    width: 100%;
+  }
 }
 .view.view-call2action .view-content .views-row.call2action-brochure .field-name-field-icon .field-item {
   min-height: 95px;
@@ -13950,6 +13995,14 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   min-height: 83px;
   width: 30%;
   background: url(../images/icon_beratung.svg) no-repeat top center / contain;
+}
+.view.view-call2action .view-content .views-row.call2action-bildungsweg {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .view.view-call2action .view-content .views-row.call2action-bildungsweg {
+    display: inline-block;
+  }
 }
 .view.view-call2action .view-content .views-row.call2action-bildungsweg .field-name-field-icon .field-item {
   min-height: 67px;
@@ -14025,7 +14078,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 @media screen and (min-width: 480px) {
   .view.view-social-masonry .view-content > .pe-container .grid-sizer,
   .view.view-social-masonry .view-content > .pe-container .pe-item {
-    width: 48%;
+    width: 48.5%;
   }
   .view.view-social-masonry .view-content > .pe-container .gutter-sizer {
     width: 3%;
@@ -14034,16 +14087,13 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 @media screen and (min-width: 768px) {
   .view.view-social-masonry .view-content > .pe-container .grid-sizer,
   .view.view-social-masonry .view-content > .pe-container .pe-item {
-    width: 30%;
-  }
-  .view.view-social-masonry .view-content > .pe-container .gutter-sizer {
-    width: 3%;
+    width: 31.33333%;
   }
 }
 .view.view-social-masonry .view-content > .pe-container .pe-item {
   display: block;
   overflow: hidden;
-  margin: 0 -2px 3% !important;
+  margin: 0 0 3% !important;
   opacity: 0.1;
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
@@ -14084,7 +14134,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     max-width: 750px;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog {
     width: 750px;
   }
@@ -14114,18 +14164,16 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header button.close {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 30px;
   opacity: 1.0;
   z-index: 1;
 }
-.view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header button.close span {
-  padding: 0;
-  font-size: 30px;
-  color: #333333;
-}
-.view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header button.close:hover span {
-  color: #ff535d;
+.view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header button.close .modal-close {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: #ffffff url("../images/popup_close.svg") no-repeat left top / contain;
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-dialog .modal-content .modal-header .body-fading {
   display: none;
@@ -14208,28 +14256,23 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .view.view-social-masonry .view-content > .pe-container .modal.modal-fixed-height .modal-dialog .modal-content .modal-body {
   overflow-y: auto;
 }
-.view.view-social-masonry .text-center ul.pagination {
+.view.view-social-masonry .pager.pager--infinite-scroll .pager__item a {
   display: inline-block;
-  margin: 20px 0;
-  text-align: center;
-}
-.view.view-social-masonry .text-center ul.pagination li a,
-.view.view-social-masonry .text-center ul.pagination li span {
+  padding: 8px 20px 10px;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
-  text-decoration: none;
+  line-height: 1;
   color: #929295;
-  border: none;
-  background: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #929295;
+  background-color: #fff;
 }
-.view.view-social-masonry .text-center ul.pagination li:hover a,
-.view.view-social-masonry .text-center ul.pagination li:focus a,
-.view.view-social-masonry .text-center ul.pagination li.active a,
-.view.view-social-masonry .text-center ul.pagination li:hover span,
-.view.view-social-masonry .text-center ul.pagination li:focus span,
-.view.view-social-masonry .text-center ul.pagination li.active span {
-  color: #cc3333;
-  text-decoration: none;
+.view.view-social-masonry .pager.pager--infinite-scroll .pager__item a:hover,
+.view.view-social-masonry .pager.pager--infinite-scroll .pager__item a.active {
+  color: #fff;
+  background-color: #929295;
 }
 /*
  *  Segment-pages view component
@@ -15228,7 +15271,7 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper .course_item h2 {
 body.page-bildungsnavigator #bildungsnavigator_main_wrapper .course_item a {
   display: inline-block;
   margin-top: 10px;
-  width: 125px;
+  width: 110px;
   text-decoration: none;
   font-family: 'SohoGothicProRegular', serif;
   font-size: 17px;
@@ -15275,7 +15318,7 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
 }
 body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_witercho .course_item {
   margin: 130px auto 0;
-  width: 260px;
+  width: 280px;
   padding: 25px;
   -webkit-box-shadow: 0 0 5px 5px #dddddd;
   -moz-box-shadow: 0 0 5px 5px #dddddd;
@@ -15695,7 +15738,7 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
     border: none;
   }
 }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1024px) {
   header#navbar .container .navbar-collapse nav ul.menu li a {
     padding: 7px 35px 7px 10px;
     font-size: 18px;
@@ -15946,12 +15989,18 @@ body.excollege_section .main-container .container .row section h1.page-header {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   color: #929295;
+  text-align: center;
   background: none;
 }
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li a:hover,
 .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li a.active {
   color: #fff;
   background: none;
+}
+@media screen and (min-width: 768px) {
+  .footer .container .region-footer .block-nodeblock .node-footer.view-mode-full .row .col-sm-6 .field-name-footer-menu ul.menu li a {
+    text-align: left;
+  }
 }
 .subfooter .container .region-subfooter .block-nodeblock .node-footer.view-mode-subfooter .row .col-sm-6 .field-name-copyright .field-name-body .field-item {
   margin: 10px 0 0;

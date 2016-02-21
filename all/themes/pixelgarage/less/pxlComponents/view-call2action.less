@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-
+@pxl-gutter-width: 1.5%;
 
 // Mixins
 // -------------------------
@@ -18,6 +18,8 @@
   width: 100%;
 
   .view-content {
+    margin: 0 -@pxl-gutter-width;
+
     .views-row {
       display: inline-block;
       margin: 10px -2px;
@@ -25,29 +27,27 @@
       width: 100%;
       vertical-align: top;
 
-      @media @narrow {
-        width: 50%;
-      }
-
-      @media @tablet {
-        width: 33.33333%;
-      }
-
       .node-call2action {
         .row {
+          margin: 0;
+
           .col-sm-12 {
+            padding: 0 @pxl-gutter-width;
+
             .group-image {
               position: relative;
               width: 100%;
 
               .field-name-field-picture {
-                margin: 0 @grid-gutter-width/4;
+                margin: 0;
+                overflow: hidden;
+                max-height: 270px;
+                #pxl-mixins.border-radius(5px);
 
                 .field-item {
                   img {
                     width: 100%;
                     height: auto;
-                    #pxl-mixins.border-radius(5px);
                   }
                 }
               }
@@ -69,8 +69,8 @@
               .field-name-field-icon {
                 #pxl-mixins.center-horizontally;
                 position: absolute;
-                bottom: 55%;
-                width: 100%;
+                bottom: 52%;
+                width: 90%;
 
                 .field-item {
                   display: block;
@@ -99,6 +99,7 @@
             }
 
             .field-name-body {
+              display: none;
               margin-top: 20px;
 
               .field-item {
@@ -107,6 +108,59 @@
                 line-height: 30px;
                 text-align: center;
                 color: @pxl-color-gray-text;
+              }
+            }
+          }
+        }
+      }
+
+      @media @narrow {
+        width: 50%;
+
+        .node-call2action {
+          .row {
+            .col-sm-12 {
+              padding: 0 2*@pxl-gutter-width;
+
+              .group-image {
+
+              }
+
+              .field-name-body {
+                display:block;
+              }
+            }
+          }
+        }
+      }
+
+      @media @tablet {
+        width: 33.33333%;
+
+        .node-call2action {
+          .row {
+            .col-sm-12 {
+              padding: 0 3*@pxl-gutter-width;
+
+              .group-image {
+                .field-name-field-picture {
+                  max-height: 320px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media @normal {
+        .node-call2action {
+          .row {
+            .col-sm-12 {
+              .group-image {
+                .field-name-field-icon {
+                  bottom: 55%;
+                  width: 100%;
+                }
               }
             }
           }
@@ -134,6 +188,12 @@
         }
       }
       &.call2action-bildungsweg {
+        display: none;
+
+        @media @tablet {
+          display: inline-block;
+        }
+
         .field-name-field-icon {
           .field-item {
             min-height: 67px;
