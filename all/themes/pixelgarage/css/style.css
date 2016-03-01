@@ -9604,10 +9604,10 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 /*
  *  Login form component
@@ -10567,10 +10567,10 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 /*
  *  Node / block webform component
@@ -10697,10 +10697,10 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 ul.webform-submission-actions {
   margin: 10px 0;
@@ -10857,10 +10857,10 @@ ul.webform-submission-actions li a:active {
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 form.webform-client-form a {
   color: #cc3333;
@@ -11964,10 +11964,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 @media screen and (min-width: 768px) {
   .node.node-location .row .col-sm-12 .col-left {
@@ -12196,10 +12196,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-brochure .row div.col-sm-12 .field-name-field-file .flexpaper-container .flexpaper-header .flexpaper-select {
   display: none;
@@ -12353,10 +12353,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
@@ -12470,10 +12470,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-post-date {
   margin-top: 10px;
@@ -12652,10 +12652,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
@@ -12769,10 +12769,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 /*
  *  Node testimonials component
@@ -12982,10 +12982,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-video.view-mode-full .row div.col-sm-12 {
   width: 100%;
@@ -13176,10 +13176,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
@@ -13293,10 +13293,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 /*
  *  Node tweet component
@@ -13475,10 +13475,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 {
   width: 100%;
@@ -13643,10 +13643,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
@@ -13760,10 +13760,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 ul.actions {
   list-style: none;
@@ -14970,10 +14970,10 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   display: block;
   overflow: hidden;
   margin: 20px auto;
-  width: 100% !important;
+  width: 80% !important;
   max-width: 100%;
-  height: 0 !important;
-  padding-bottom: 56.25%;
+  height: auto;
+  min-height: 350px;
 }
 /*
  *  View Course-times component
