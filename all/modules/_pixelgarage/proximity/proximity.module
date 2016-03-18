@@ -48,7 +48,7 @@ function proximity_menu() {
     'page arguments' => array(2,3),
     'type' => MENU_CALLBACK,
     'access arguments' => array('access content'),
-    'delivery callback' => 'proximity_ajax_delivery_callback',
+    //'delivery callback' => 'proximity_ajax_delivery_callback',
   );
   return $items;
 }

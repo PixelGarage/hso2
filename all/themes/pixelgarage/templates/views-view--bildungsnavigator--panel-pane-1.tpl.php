@@ -35,12 +35,22 @@
 	<div id="bildungsnavigator_tooltip" style="display: none;">
 		<img src="<?php print base_path(); ?>sites/all/themes/pixelgarage/images/bildungsnavigator.jpg" alt="" />
 	</div>
-	<div id="bildungsnavigator_witercho"></div>
+	<div id="bildungsnavigator_witercho">
+    <div class="course_item">
+      <h2 class="title"></h2>
+      <p class="description"></p>
+      <div class="links">
+        <a class="witercho_link" href="javascript:void(0);">Witercho</a>
+        <a class="details_link" href="javascript:void(0);">Details</a>
+      </div>
+    </div>
+  </div>
 	<div id="bildungsnavigator_witercho_details" class="clearfix">
 		<div id="witercho_related"></div>
 		<div id="witercho_details">
 			<div class="witercho_breadcrumb">
-				<a href="javascript:void(0);">Bildungsnavigator</a>
+				<a class="first"> href="javascript:void(0);">Bildungsnavigator</a>
+        <a class="last">Details</a>
 			</div>
 			<div class="legend">
 				Mit ihrem einmaligen, durchgehend aufeinander abgestimmten Programm macht die HSO den Bildungsweg frei,

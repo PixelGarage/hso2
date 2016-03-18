@@ -10345,16 +10345,16 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding .form-item-field-course-date-value-value-date input {
   width: 100%;
 }
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title {
+.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine {
   width: 90%;
   border: none;
 }
 @media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine {
     width: 20%;
     min-width: 150px;
   }
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-title .views-widget .form-item .form-control {
+  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item .form-control {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
   }
@@ -14736,14 +14736,14 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
   width: 100%;
   padding: 9px 10px 11px;
   font-size: 14px;
-  color: #929295;
+  color: #333333;
   text-decoration: none;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .short-description {
   display: none;
   position: absolute;
   top: 0;
-  right: 15px;
+  right: 25px;
   padding: 0;
 }
 .view.view-courses .view-content .panel-group .panel .panel-heading .short-description a {
@@ -15524,6 +15524,7 @@ header#navbar a.logo {
 header#navbar a.logo img {
   display: inline-block;
   max-height: 60px;
+  height: 60px;
   width: auto;
 }
 header#navbar .container {
@@ -15752,6 +15753,10 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
   max-width: 1280px;
   background-color: #fff;
 }
+.container {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .container a {
   outline: none;
 }
@@ -15759,6 +15764,14 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
 .container a:hover,
 .container a:focus {
   outline: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx) {
+  .container {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+.container img[src*=".svg"] {
+  width: 100%;
 }
 html {
   height: 100%;

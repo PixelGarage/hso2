@@ -22,12 +22,12 @@
     });
 
     $('a.witercho_link').on('click', function() {
-      var _s = $(this);
-      if (_s.closest('.witercho_breadcrumb').size()) {
-        _s.nextAll().remove();
-      }
-      //$('.view.view-segment-selector').css({visibility: 'hidden'});
-      show_witercho($(this).data('key'));
+      // show bildungsweg
+      var _s = $(this),
+          key = _s.attr('data-key');
+      show_witercho(key);
+      // hide popup
+      _s.parents('#bildungsnavigator_witercho').hide();
       return false;
     });
 
@@ -46,16 +46,19 @@
       },
       onClick: function(data) {
         if (Drupal.bildungsnavigator_items[data.key]) {
+          // reset selected bildungsweg, if any and hide tooltip
           $('#map_tooltip').hide();
-          var _c = Drupal.bildungsnavigator_items[data.key];
-          $('#bildungsnavigator_witercho').html(
-            '<div class="course_item tid_' + _c.segment_id + '">' +
-            '<h2>' + _c.title + '</h2>' +
-            '<p>' + _c.description + '</p>' +
-            '<div><a data-key="' + data.key + '" class="witercho_link" href="javascript:void(0);">Witercho</a>' +
-            '<a class="last" href="' + _c.link + '">Details</a></div>' +
-            '</div>'
-          ).show();
+          $('.view-segment-selector .views-row a[rel*="all"]').click();
+
+          var _c = Drupal.bildungsnavigator_items[data.key],
+              $witercho = $('#bildungsnavigator_witercho');
+
+          $witercho.find('.course_item').removeClass().addClass('course_item tid_' + _c.segment_id);
+          $witercho.find('.title').html(_c.title);
+          $witercho.find('.description').html(_c.description);
+          $witercho.find('.witercho_link').attr('data-key', data.key);
+          $witercho.find('.details_link').attr('href', _c.link);
+          $witercho.show();
         }
         return false;
       },
