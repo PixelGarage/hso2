@@ -1,10 +1,10 @@
 <?php
-$export_time = 1458333185;
+$export_time = 1458660363;
 $data = array(
   'bundles' => array(
     'facebook_post' => (object) array(
       'type' => 'facebook_post',
-      'name' => 'Facebook post',
+      'name' => 'Facebook',
       'base' => 'node_content',
       'module' => 'node',
       'description' => 'This content types is filled with feeds.',
@@ -456,7 +456,7 @@ $data = array(
             'rows' => 20,
             'summary_rows' => 5,
           ),
-          'weight' => '5',
+          'weight' => '3',
           'module' => 'text',
         ),
         'settings' => array(
@@ -468,9 +468,9 @@ $data = array(
           'default' => array(
             'label' => 'hidden',
             'type' => 'text_default',
+            'weight' => '0',
             'settings' => array(),
             'module' => 'text',
-            'weight' => 0,
           ),
           'teaser' => array(
             'label' => 'hidden',
@@ -495,7 +495,7 @@ $data = array(
       0 => array(
         'label' => 'Created time',
         'widget' => array(
-          'weight' => '3',
+          'weight' => '6',
           'type' => 'date_text',
           'module' => 'date',
           'active' => 1,
@@ -518,8 +518,9 @@ $data = array(
         ),
         'display' => array(
           'default' => array(
-            'label' => 'above',
+            'label' => 'hidden',
             'type' => 'date_default',
+            'weight' => '1',
             'settings' => array(
               'format_type' => 'long',
               'multiple_number' => '',
@@ -529,7 +530,6 @@ $data = array(
               'show_remaining_days' => FALSE,
             ),
             'module' => 'date',
-            'weight' => 1,
           ),
           'teaser' => array(
             'type' => 'hidden',
@@ -550,7 +550,7 @@ $data = array(
       0 => array(
         'label' => 'Likes count',
         'widget' => array(
-          'weight' => '6',
+          'weight' => '5',
           'type' => 'number',
           'module' => 'number',
           'active' => 0,
@@ -565,8 +565,9 @@ $data = array(
         ),
         'display' => array(
           'default' => array(
-            'label' => 'above',
+            'label' => 'hidden',
             'type' => 'number_integer',
+            'weight' => '4',
             'settings' => array(
               'thousand_separator' => '',
               'decimal_separator' => '.',
@@ -574,7 +575,6 @@ $data = array(
               'prefix_suffix' => TRUE,
             ),
             'module' => 'number',
-            'weight' => 4,
           ),
           'teaser' => array(
             'type' => 'hidden',
@@ -615,11 +615,11 @@ $data = array(
         ),
         'display' => array(
           'default' => array(
-            'label' => 'above',
+            'label' => 'hidden',
             'type' => 'text_default',
+            'weight' => '5',
             'settings' => array(),
             'module' => 'text',
-            'weight' => 5,
           ),
           'teaser' => array(
             'type' => 'hidden',
@@ -647,7 +647,7 @@ $data = array(
           'active' => 1,
           'settings' => array(
             'progress_indicator' => 'throbber',
-            'preview_image_style' => 'thumbnail',
+            'preview_image_style' => 'large',
           ),
         ),
         'settings' => array(
@@ -663,14 +663,14 @@ $data = array(
         ),
         'display' => array(
           'default' => array(
-            'label' => 'above',
+            'label' => 'hidden',
             'type' => 'image',
+            'weight' => '2',
             'settings' => array(
               'image_style' => '',
               'image_link' => '',
             ),
             'module' => 'image',
-            'weight' => 2,
           ),
           'teaser' => array(
             'type' => 'hidden',
@@ -710,11 +710,11 @@ $data = array(
         ),
         'display' => array(
           'default' => array(
-            'label' => 'above',
+            'label' => 'hidden',
             'type' => 'text_default',
+            'weight' => '3',
             'settings' => array(),
             'module' => 'text',
-            'weight' => 3,
           ),
           'teaser' => array(
             'type' => 'hidden',

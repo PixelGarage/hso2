@@ -1,5 +1,5 @@
 <?php
-$export_time = 1440869367;
+$export_time = 1458658887;
 $data = array(
   'bundles' => array(
     'brochure' => (object) array(
@@ -100,11 +100,12 @@ $data = array(
           7 => 'course_tabs',
           8 => 'block',
           9 => 'news',
-          10 => 'media',
-          11 => 'segment_blocks',
-          12 => 'segment_sidebar_block',
-          13 => 'remoteform',
-          14 => 'brochure',
+          10 => 'remote_form',
+          11 => 'brochure',
+          12 => 'footer',
+          13 => 'call2action',
+          14 => 'tweet',
+          15 => 'facebook_post',
         ),
       ),
     ),
@@ -183,8 +184,73 @@ $data = array(
       ),
       'bundles' => array(
         'node' => array(
-          0 => 'media',
-          1 => 'brochure',
+          0 => 'brochure',
+        ),
+      ),
+    ),
+    'field_sku_code' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'max_length' => '50',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_sku_code' => array(
+                'value' => 'field_sku_code_value',
+                'format' => 'field_sku_code_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_sku_code' => array(
+                'value' => 'field_sku_code_value',
+                'format' => 'field_sku_code_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'field_name' => 'field_sku_code',
+      'type' => 'text',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => '50',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'brochure',
         ),
       ),
     ),
@@ -199,7 +265,7 @@ $data = array(
             'rows' => 20,
             'summary_rows' => 5,
           ),
-          'weight' => '2',
+          'weight' => '3',
           'module' => 'text',
         ),
         'settings' => array(
@@ -211,9 +277,9 @@ $data = array(
           'default' => array(
             'label' => 'hidden',
             'type' => 'text_default',
+            'weight' => '0',
             'settings' => array(),
             'module' => 'text',
-            'weight' => 0,
           ),
           'teaser' => array(
             'label' => 'hidden',
@@ -227,11 +293,11 @@ $data = array(
         ),
         'required' => FALSE,
         'description' => '',
+        'default_value' => NULL,
         'field_name' => 'body',
         'entity_type' => 'node',
         'bundle' => 'brochure',
         'deleted' => '0',
-        'default_value' => NULL,
       ),
     ),
     'field_file' => array(
@@ -248,18 +314,38 @@ $data = array(
         ),
         'settings' => array(
           'file_directory' => 'leaflets',
-          'file_extensions' => 'pdf',
+          'file_extensions' => 'pdf zip tar gz',
           'max_filesize' => '',
           'description_field' => 0,
           'user_register_form' => FALSE,
         ),
         'display' => array(
           'default' => array(
-            'label' => 'above',
-            'type' => 'file_default',
-            'settings' => array(),
-            'module' => 'file',
-            'weight' => 1,
+            'label' => 'hidden',
+            'type' => 'flexpaper2_formatter',
+            'weight' => '1',
+            'settings' => array(
+              'show_file_link' => TRUE,
+              'rendering_order' => 'html5,html',
+              'view_mode_tools_visible' => 1,
+              'zoom_tools_visible' => 1,
+              'nav_tools_visible' => 1,
+              'cursor_tools_visible' => 1,
+              'search_tools_visible' => 1,
+              'scale' => 0.59999999999999997779553950749686919152736663818359375,
+              'zoom_transition' => 'easeOut',
+              'zoom_time' => 0.5,
+              'zoom_interval' => 0.200000000000000011102230246251565404236316680908203125,
+              'fit_page_on_load' => FALSE,
+              'fit_width_on_load' => TRUE,
+              'full_screen_as_max_window' => FALSE,
+              'progressive_loading' => FALSE,
+              'min_zoom_size' => 0.200000000000000011102230246251565404236316680908203125,
+              'max_zoom_size' => 5,
+              'search_match_all' => FALSE,
+              'init_view_mode' => 'TwoPage',
+            ),
+            'module' => 'flexpaper2',
           ),
           'teaser' => array(
             'type' => 'hidden',
@@ -271,6 +357,51 @@ $data = array(
         'required' => 1,
         'description' => '',
         'field_name' => 'field_file',
+        'entity_type' => 'node',
+        'bundle' => 'brochure',
+        'deleted' => '0',
+      ),
+    ),
+    'field_sku_code' => array(
+      0 => array(
+        'label' => 'SKU code',
+        'widget' => array(
+          'weight' => '2',
+          'type' => 'text_textfield',
+          'module' => 'text',
+          'active' => 1,
+          'settings' => array(
+            'size' => '60',
+          ),
+        ),
+        'settings' => array(
+          'text_processing' => '0',
+          'linkit' => array(
+            'enable' => 0,
+            'profile' => '',
+            'button_text' => 'Search',
+          ),
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'text_default',
+            'settings' => array(),
+            'module' => 'text',
+            'weight' => 2,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Add the SKU code for e-commerce tracking.',
+        'default_value' => NULL,
+        'field_name' => 'field_sku_code',
         'entity_type' => 'node',
         'bundle' => 'brochure',
         'deleted' => '0',

@@ -66,18 +66,18 @@
   }
 
 
-  .wysiwyg-body() {
+  .wysiwyg-body(@font-size-text: 14px; @font-size-title: 24px; @font-size-subtitle: @resp-font-size-max) {
     h1, h2, h3, h4, h5, h6 {
       font-family: @pxl-text-font;
-      .font-size-responsive(@resp-font-size-max);
+      .font-size-responsive(@font-size-subtitle);
     }
     h1, h2, h3 {
-      .font-size-responsive(24px);
+      .font-size-responsive(@font-size-title);
     }
 
     p, div, tbody td {
       font-family: @pxl-text-font-light;
-      font-size: 14px;
+      font-size: @font-size-text;
       .hyphenate;
 
       @media @narrow {
@@ -87,7 +87,7 @@
 
     li {
       font-family: @pxl-text-font-light;
-      font-size: 14px;
+      font-size: @font-size-text;
 
       @media @narrow {
         font-size: @font-size-base;
@@ -96,7 +96,7 @@
 
     pre, address {
       font-family: @pxl-text-font-light-italics;
-      font-size: 14px;
+      font-size: @font-size-text;
 
       @media @narrow {
         font-size: @font-size-base;
