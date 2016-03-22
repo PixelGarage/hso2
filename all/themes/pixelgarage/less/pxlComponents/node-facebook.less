@@ -141,6 +141,7 @@
           font-family: @pxl-text-font;
           font-size: 12px;
           text-align: right;
+          line-height: 1;
           color: @pxl-color-gray-text;
 
           &:before {
@@ -148,6 +149,27 @@
             font-family: @pxl-icon-font;
             font-size: @font-size-base;
             margin-right: 10px;
+          }
+        }
+      }
+
+      .field-name-field-likes-count {
+        margin: -34px 0 0;
+        padding: 0;
+        width: 100%;
+
+        .field-item {
+          font-family: @pxl-text-font;
+          font-size: 12px;
+          text-align: left;
+          line-height: 1;
+          color: @pxl-color-gray-text;
+
+          &:after {
+            content: 'Likes';
+            font-family: @pxl-text-font;
+            font-size: 12px;
+            margin-left: 10px;
           }
         }
       }

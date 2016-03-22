@@ -13554,6 +13554,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 12px;
   text-align: right;
+  line-height: 1;
   color: #929295;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-created-time .field-item:before {
@@ -13561,6 +13562,24 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'fontawesome';
   font-size: 16px;
   margin-right: 10px;
+}
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-likes-count {
+  margin: -34px 0 0;
+  padding: 0;
+  width: 100%;
+}
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-likes-count .field-item {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1;
+  color: #929295;
+}
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-likes-count .field-item:after {
+  content: 'Likes';
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 12px;
+  margin-left: 10px;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-picture {
   margin: 0 0 20px;
