@@ -88,6 +88,10 @@ class FeedsFacebookParser extends FeedsParser {
         'name' => t('Picture'),
         'description' => t('Picture or screenshot of the post'),
       ),
+      'full_picture' => array(
+        'name' => t('Full Picture'),
+        'description' => t('Full picture or screenshot of the post'),
+      ),
       'name' => array(
         'name' => t('Name'),
         'description' => t('Post name, could be a file name'),
