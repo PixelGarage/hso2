@@ -29,6 +29,7 @@ class FeedsFacebookParser extends FeedsParser {
           'to_id' => (isset($entry->to) ? $entry->to->data[0]->id : ''),
           'message' => $entry->message,
           'picture' => (isset($entry->picture) ? $entry->picture : ''),
+          'full_picture' => (isset($entry->full_picture) ? $entry->full_picture : ''),
           'link' => (isset($entry->link) ? $entry->link : ''),
           'source' => (isset($entry->source) ? $entry->source : ''),
           'name' => (isset($entry->name) ? $entry->name : ''),
