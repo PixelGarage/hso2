@@ -13334,6 +13334,9 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   width: 100%;
   height: auto;
 }
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-title {
+  display: none;
+}
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin-top: 0;
   font-family: 'SohoGothicProBold', serif;
@@ -13473,6 +13476,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   min-height: 350px;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-field-name-from {
+  display: none;
   padding: 0 0 10px;
   width: 100%;
 }
@@ -13519,6 +13523,9 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 {
   width: 100%;
 }
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-title {
+  display: none;
+}
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-title h2 {
   margin: 0;
   padding: 15px 0;
@@ -13537,6 +13544,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-field-name-from {
+  display: none;
   padding: 0 0 10px;
   width: 100%;
 }
