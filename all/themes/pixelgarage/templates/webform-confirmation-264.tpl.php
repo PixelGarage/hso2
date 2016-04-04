@@ -3,6 +3,7 @@ module_load_include('inc', 'webform', 'includes/webform.submissions');
 $submission = webform_get_submission($node->nid, $sid);
 
 // get course time node
+$course_time_nid = null;
 $webform_components = $node->webform['components'];
 foreach ($webform_components as $key => $data) {
 	if ($data['form_key'] == 'course_times_nid') {

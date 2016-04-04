@@ -19,6 +19,7 @@ $submission = webform_get_submission($node->nid, $sid);
 $brochure = null;
 
 // get course node
+$course_nid = null;
 $webform_components = $node->webform['components'];
 foreach ($webform_components as $key => $data) {
   if ($data['form_key'] == 'lehrgang') {
@@ -58,37 +59,3 @@ if ($course_nid) {
 <div class="links">
   <a href="<?php print url('node/' . $course_nid); ?>">Zurück zum Kurs/Lehrgang</a>
 </div>
-
-<?php if ($brochure): ?>
-  <script type="text/javascript">
-    // check existance (opt-out doesn't create ga)
-    if (typeof ga == 'function') {
-      // Load the ecommerce plug-in.
-      ga('require', 'ecommerce');
-
-      // add transaction
-      ga('ecommerce:addTransaction', {
-        'id': '<?php print $sid; ?>-<?php print $submission->remote_addr; ?>',    // Transaction ID. Required
-        'affiliation': 'HSO Download Center',                                     // Affiliation or store name
-        'revenue': '0.00',                                                        // Grand Total
-        'shipping': '0',                                                          // Shipping
-        'tax': '0.0'                                                              // Tax
-      });
-
-      // add ecommerce item
-      ga('ecommerce:addItem', {
-        'id': '<?php print $sid; ?>-<?php print $submission->remote_addr; ?>',    // Transaction ID. Required
-        'name': '<?php print addslashes($brochure->title); ?>',                   // Product name. Required
-        'sku': '<?php print $brochure->field_sku_code[LANGUAGE_NONE][0]['value']; ?>', // SKU/code
-        'category': '<?php print addslashes($segment->name); ?>',                 // Category or variation
-        'price': 'no',                                                            // Unit price
-        'quantity': '1'                                                           // Quantity
-      });
-
-      // submit transaction
-      ga('ecommerce:send');      // Send transaction and item data to Google Analytics.
-    }
-  </script>
-<?php endif; ?>
-
-

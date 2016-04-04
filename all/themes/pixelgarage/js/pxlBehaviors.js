@@ -180,6 +180,75 @@
   };
 
   /**
+   * Implements google analytic events for the brochure download and the consulting request forms.
+   */
+  Drupal.behaviors.gaEvents = {
+    attach: function () {
+      //
+      // GA Event for the brochure download on submit of brochure form
+      var $brochureForm = $('#webform-client-form-1336'),
+          $consultingForm = $('#webform-client-form-1335'),
+          _createFunctionWithTimeout = function(callback, opt_timeout) {
+            var called = false;
+            setTimeout(callback, opt_timeout || 1000);
+            return function() {
+              if (!called) {
+                called = true;
+                callback();
+              }
+            }
+          };
+
+      //
+      // Adds a listener for the brochure form.
+      $brochureForm.off('submit');
+      $brochureForm.on('submit', function(event) {
+        // Prevents the browser from submiting the form
+        // and thus unloading the current page.
+        event.preventDefault();
+
+        // get form values
+        var segment = $(this).find('.webform-component--interesse select option:selected').html(),
+            course = $(this).find('.webform-component--lehrgang select option:selected').html(),
+            label = segment + ' - ' + course;
+
+        // Sends the event to Google Analytics and
+        // resubmits the form once the hit is done.
+        ga('send', 'event', 'document', 'download', label, {
+          hitCallback: _createFunctionWithTimeout(function() {
+            $brochureForm.off('submit'); // prevent loop
+            $brochureForm.submit();
+          })
+        });
+      });
+
+      //
+      // Adds a listener for the consulting form.
+      $consultingForm.off('submit');
+      $consultingForm.on('submit', function(event) {
+        // Prevents the browser from submiting the form
+        // and thus unloading the current page.
+        event.preventDefault();
+
+        // get form values
+        var segment = $(this).find('.webform-component--interesse select option:selected').html(),
+            stao = $(this).find('.webform-component--standort select option:selected').html(),
+            label = segment + ' - ' + stao;
+
+        // Sends the event to Google Analytics and
+        // resubmits the form once the hit is done.
+        ga('send', 'event', 'document', 'download', label, {
+          hitCallback: _createFunctionWithTimeout(function() {
+            $consultingForm.off('submit'); // prevent loop
+            $consultingForm.submit();
+          })
+        });
+      });
+
+    }
+  };
+
+  /**
    * This behavior adds shadow to header on scroll.
    *
   Drupal.behaviors.addHeaderShadow = {
