@@ -215,7 +215,7 @@ function theme_hso_mods_formatter_hso_mods_date_vom_bis($element) {
 	$from_date = strtotime($element['element']['value']);
   $date_start = explode(' ', $element['element']['value']);
   $date_end = explode(' ', $element['element']['value2']);
-  $has_end_date = ($date_start[0] != $date_end[0]);
+  $has_end_date = !empty($date_end[0]);
 
   if ($has_end_date) {
     $string = '<strong>' . t('Vom') . '</strong> ';
