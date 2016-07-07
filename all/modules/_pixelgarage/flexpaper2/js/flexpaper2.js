@@ -26,7 +26,7 @@
           $('#' + element_id).FlexPaperViewer(
             {
               config: {
-                SWFFile: fileSettings.swfFiles,
+                //SWFFile: fileSettings.swfFiles,
                 JSONFile: fileSettings.jsonFiles,
                 IMGFiles: fileSettings.imgFiles,
                 PDFFile: fileSettings.pdfFiles,
@@ -51,7 +51,7 @@
                 NavToolsVisible: fileSettings.NavToolsVisible == 1,
                 CursorToolsVisible: fileSettings.CursorToolsVisible == 1,
                 SearchToolsVisible: fileSettings.SearchToolsVisible == 1,
-                UIConfig: fileSettings.UIConfig,
+                //UIConfig: fileSettings.UIConfig,
 
                 jsDirectory: settings.jsDirectory,
                 cssDirectory: settings.cssDirectory,
@@ -67,7 +67,7 @@
 
                 localeChain: 'en_US',
                 WMode : 'transparent',
-                JSONDataType: 'json',
+                //JSONDataType: 'json',
                 key: settings.licenseKey
               }
             }
