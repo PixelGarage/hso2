@@ -38,12 +38,12 @@
 					<a href="#tab-startdaten" data-toggle="tab">Startdaten</a>
 				</li>
 			</ul>
-		<?php endif; ?>
-		<div class="tab-content">
-			<div class="tab-pane active" id="tab-startdaten">
-				<?php print views_embed_view('course_times'); ?>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab-startdaten">
+					<?php print views_embed_view('course_times'); ?>
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>
 	</div>
 
 </div>
