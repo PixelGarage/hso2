@@ -62,21 +62,20 @@ function flexpaper2_extract_archive_batch_process($file, &$context) {
   }
 
   // copy and rename all relevant files in the extracted directory to the publish directory
+  $pos = strpos($file->filename, '.zip');
+  $filename = substr($file->filename, 0, $pos);
   $extensions = array('.swf', '.pdf', '_thumb.jpg', '.jpg', '.js');
   foreach ($extensions as $ext) {
     $pattern = sprintf('/\%s$/', $ext);
-    $files = file_scan_directory($extracted_dir . '/docs', $pattern);
-    $i = 1;
-    $factor = ($ext == '.js') ? 10 : 1;
+    $files = file_scan_directory($extracted_dir . '/docs', $pattern, array('key' => 'name'));
 
     foreach ($files as $uri => $obj) {
-      $destination = $publish_directory . '/' . $file->fid . '_' . $i*$factor . $ext;
-      if (!file_unmanaged_move($uri, $destination, FILE_EXISTS_REPLACE)) {
+      $destination = $publish_directory . '/' . str_replace($filename, $file->fid, $obj->filename);
+      if (!file_unmanaged_move($obj->uri, $destination, FILE_EXISTS_REPLACE)) {
         $msg = t('Error in the attempt to copy %file to publish folder.', array('%file' => $uri));
         _flexpaper2_batch_error($msg, $publish_directory, $context);
         return;
       }
-      $i++;
     }
   }
 
@@ -84,9 +83,7 @@ function flexpaper2_extract_archive_batch_process($file, &$context) {
   file_unmanaged_copy($extracted_dir . '/index.html', $publish_directory, FILE_EXISTS_REPLACE);
 
   // copy pdf file if available
-  $pos = strpos($file->filename, '.');
-  $pdf_name = substr($file->filename, 0, $pos) . '.pdf';
-  $pdfpath = $extracted_dir . '/' . $pdf_name;
+  $pdfpath = $extracted_dir . '/' . $filename . '.pdf';
   if (file_exists($pdfpath)) {
     file_unmanaged_copy($pdfpath, $publish_directory, FILE_EXISTS_REPLACE);
   }

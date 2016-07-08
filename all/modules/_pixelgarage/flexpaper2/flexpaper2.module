@@ -535,11 +535,11 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
           $pdf_files = file_scan_directory($files_directory, '/\.pdf$/');
           $jsonFiles = file_scan_directory($files_directory, '/\.js$/');
           $swf_count = count($swf_files);
-          $js_settings[$fid]['swfFiles'] = ($swf_count > 0) ? $folder_relative_path . '/{' . $fid . '_[*,0].swf,' . $swf_count . '}' : '';
-          $js_settings[$fid]['imgFiles'] = (count($jpg_files) > 0) ? $folder_relative_path . '/' . $fid . '_{page}.jpg' : '';
-          $js_settings[$fid]['thumbFiles'] = (count($thumb_files) > 0) ? $folder_relative_path . '/' . $fid . '_{page}_thumb.jpg' : '';
-          $js_settings[$fid]['pdfFiles'] = (count($pdf_files) > 0) ? $folder_relative_path . '/' . $fid . '_[*,0].pdf' : '';
-          $js_settings[$fid]['jsonFiles'] = (count($jsonFiles) > 0) ? $folder_relative_path . '/' . $fid . '_{page}.js' : '';
+          $js_settings[$fid]['swfFiles'] = ($swf_count > 0) ? $folder_relative_path . '/{' . $fid . '_[*,2].swf,' . $swf_count . '}' : '';
+          $js_settings[$fid]['imgFiles'] = (count($jpg_files) > 0) ? $folder_relative_path . '/' . $fid . '.pdf_{page}.jpg' : '';
+          $js_settings[$fid]['thumbFiles'] = (count($thumb_files) > 0) ? $folder_relative_path . '/' . $fid . '.pdf_{page}_thumb.jpg' : '';
+          $js_settings[$fid]['pdfFiles'] = (count($pdf_files) > 0) ? $folder_relative_path . '/' . $fid . '_[*,2].pdf' : '';
+          $js_settings[$fid]['jsonFiles'] = (count($jsonFiles) > 0) ? $folder_relative_path . '/' . $fid . '.pdf_{page}.js' : '';
 
           // set pdf as link file, if available
           $pos = strpos($file->filename, '.');
