@@ -51,7 +51,7 @@
                 NavToolsVisible: fileSettings.NavToolsVisible == 1,
                 CursorToolsVisible: fileSettings.CursorToolsVisible == 1,
                 SearchToolsVisible: fileSettings.SearchToolsVisible == 1,
-                //UIConfig: fileSettings.UIConfig,
+                UIConfig: fileSettings.UIConfig,
 
                 jsDirectory: settings.jsDirectory,
                 cssDirectory: settings.cssDirectory,

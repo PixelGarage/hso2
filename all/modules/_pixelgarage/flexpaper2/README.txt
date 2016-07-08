@@ -46,7 +46,10 @@ flexpaper library:
 2. Create a flexpaper folder in the libraries directory (sites/all/libraries).
 3. Download the needed Flexpaper Webserver package from the download page http://flexpaper.devaldi.com/download.
 4. There are many folders in this package. You need only js, css and locale folders and FlexPaperViewer.swf file.
-5. Copy these items into the flexpaper folder and that's it.
+   Copy these items into the flexpaper folder and that's it.
+5. If you want the configuration file for the viewer included rename the UIConfig_{file_name}.pdf.xml to UIConfig_standard.pdf.xml
+   and copy it to the flexpaper library folder. Additionally copy the assets_zine folder to the flexpaper library folder.
+
 
 Install Flexpaper2 module:
 See official Drupal documentation for module installation instructions.

@@ -172,8 +172,10 @@ function flexpaper2_parse_settings_file($file) {
     }
   }
 
-  // TODO: replace UIConfig file
-  $js_settings['UIConfig'] = '';
+  // replace UIConfig file
+  global $base_url;
+  $path = $base_url . '/' . libraries_get_path('flexpaper');
+  $js_settings['UIConfig'] = $path . '/UIConfig_standard.pdf.xml';
 
 
   return $js_settings;

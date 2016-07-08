@@ -479,7 +479,7 @@ function _flexpaper2_prepare_settings($status, $settings) {
         $js_settings[$fid]['NavToolsVisible'] = $settings['nav_tools_visible'];
         $js_settings[$fid]['CursorToolsVisible'] = $settings['cursor_tools_visible'];
         $js_settings[$fid]['SearchToolsVisible'] = $settings['search_tools_visible'];
-        $js_settings[$fid]['UIConfig'] = '';//$base_url . '/' . drupal_get_path('module', 'flexpaper2') . '/config/UIConfig_standard.pdf.xml';
+        $js_settings[$fid]['UIConfig'] = $path . '/UIConfig_standard.pdf.xml';
         break;
       }
     }
