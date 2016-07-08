@@ -542,7 +542,7 @@ function flexpaper2_complete_file_publishing($status, $show_file_link, &$js_sett
           $js_settings[$fid]['jsonFiles'] = (count($jsonFiles) > 0) ? $folder_relative_path . '/' . $fid . '.pdf_{page}.js' : '';
 
           // set pdf as link file, if available
-          $pos = strpos($file->filename, '.');
+          $pos = strpos($file->filename, '.zip');
           $pdf_name = substr($file->filename, 0, $pos) . '.pdf';
           $pdf_path = $files_directory . '/' . $pdf_name;
           if ($show_file_link && file_exists($pdf_path)) {
