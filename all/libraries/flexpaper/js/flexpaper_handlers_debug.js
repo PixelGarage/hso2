@@ -19,7 +19,7 @@
  home page: http://flexpaper.devaldi.com
  */
 
-jQuery(function() {
+$(function() {
     /**
      * Handles the event of external links getting clicked in the document.
      *
@@ -79,6 +79,8 @@ jQuery(function() {
      * @param int totalPages
      */
     jQuery('#documentViewer').bind('onDocumentLoaded',function(e,totalPages){
+        jQuery('#documentViewer').show();
+
         jQuery("#txt_eventlog").val('onDocumentLoaded:' + totalPages + '\n' + jQuery("#txt_eventlog").val());
     });
 
@@ -121,7 +123,7 @@ jQuery(function() {
      * @example onDocumentPrinted();
      *
      */
-    jQuery('#documentViewer').bind('onDocumentPrinted',function(e,numPages){
+    jQuery('#documentViewer').bind('onDocumentPrinted',function(e){
         jQuery("#txt_eventlog").val('onDocumentPrinted\n' + jQuery("#txt_eventlog").val());
     });
 });

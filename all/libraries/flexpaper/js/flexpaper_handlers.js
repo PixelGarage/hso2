@@ -19,7 +19,7 @@
  home page: http://flexpaper.devaldi.com
  */
 
-jQuery(function() {
+$(function() {
     /**
      * Handles the event of external links getting clicked in the document.
      *
@@ -134,7 +134,7 @@ jQuery(function() {
      * @example onDocumentPrinted();
      *
      */
-    jQuery('#documentViewer').bind('onDocumentPrinted',function(e,numPages){
+    jQuery('#documentViewer').bind('onDocumentPrinted',function(e){
 
     });
 });
