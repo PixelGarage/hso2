@@ -235,7 +235,7 @@ function hso_anmeldung_mail_alter(&$message)
 
             // replace tokens with values in mail and complete mail with attachment and address
             $message['subject'] = str_replace(array_keys($to_search), array_values($to_search), $message['subject']);
-            $message['body'][0] = str_replace(array_keys($to_search), array_values($to_search), $message['body'][0]);
+            $message['params']['plaintext'] = str_replace(array_keys($to_search), array_values($to_search), $message['params']['plaintext']);
             if ($template == 'admin') {
               // add admin mail address and attach pdfs
               if ($location) {
@@ -434,9 +434,9 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
     // create file class and return it
     $file = new StdClass();
     if ($template == 'ecdl') {
-      $file->filename = $to_client ? 'anmeldereservation.pdf' : 'anmeldung.pdf';
+      $file->filename = $to_client ? 'Anmeldereservation.pdf' : 'Anmeldung.pdf';
     } else {
-      $file->filename = $to_client ? 'ausbildungsvertrag.pdf' : 'anmeldung.pdf';
+      $file->filename = $to_client ? 'Ausbildungsvertrag.pdf' : 'Anmeldung.pdf';
     }
     $file->filepath = variable_get('file_private_path') . '/anmeldung/' . $filename;
     $file->filemime = 'application/pdf';
