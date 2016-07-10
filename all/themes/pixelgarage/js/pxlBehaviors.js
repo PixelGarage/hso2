@@ -190,13 +190,14 @@
           $consultingForm = $('#webform-client-form-1335'),
           _createFunctionWithTimeout = function(callback, opt_timeout) {
             var called = false;
-            setTimeout(callback, opt_timeout || 1000);
-            return function() {
-              if (!called) {
-                called = true;
-                callback();
-              }
-            }
+            var fn = function() {
+                  if (!called) {
+                    called = true;
+                    callback();
+                  }
+                };
+            setTimeout(fn, opt_timeout || 1000);
+            return fn;
           };
 
       //
@@ -216,7 +217,7 @@
         // resubmits the form once the hit is done.
         ga('send', 'event', 'document', 'download', label, {
           hitCallback: _createFunctionWithTimeout(function() {
-            $brochureForm.off('submit'); // prevent loop
+            $brochureForm.off('submit');  // prevents infinite loop
             $brochureForm.submit();
           })
         });
@@ -239,7 +240,7 @@
         // resubmits the form once the hit is done.
         ga('send', 'event', 'document', 'download', label, {
           hitCallback: _createFunctionWithTimeout(function() {
-            $consultingForm.off('submit'); // prevent loop
+            $consultingForm.off('submit'); // prevents infinite loop
             $consultingForm.submit();
           })
         });
