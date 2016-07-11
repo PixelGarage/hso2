@@ -381,6 +381,7 @@ function flexpaper2_check_file_publishing_status($files) {
   // publish all files in this field according to its mime type
   foreach ($files as $fid => $file) {
     $files_directory = flexpaper2_get_files_folder_path($file);
+    $archive_ext_errors = file_validate_extensions($file, archiver_get_extensions());
 
     if ($file->filemime == 'application/pdf') {
       // pdf file, check publishing state and publish file, if needed
@@ -409,7 +410,7 @@ function flexpaper2_check_file_publishing_status($files) {
         }
       }
     }
-    else if (empty(file_validate_extensions($file, archiver_get_extensions()))) {
+    else if (empty($archive_ext_errors)) {
       // supported archive formats, unpack archive
       if (!is_dir($files_directory)) {
         // file not published yet, define batch publishing process
