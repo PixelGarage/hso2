@@ -409,7 +409,7 @@ function flexpaper2_check_file_publishing_status($files) {
         }
       }
     }
-    else if (($ext = archiver_get_extensions()) && empty(file_validate_extensions($file, $ext))) {
+    else if (empty(file_validate_extensions($file, archiver_get_extensions()))) {
       // supported archive formats, unpack archive
       if (!is_dir($files_directory)) {
         // file not published yet, define batch publishing process
