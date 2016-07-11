@@ -258,6 +258,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
  */
 function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
   $view = &$vars['view'];
+  $vars['id'] = $view->vid;
   if ($view->name != 'contacts') return;
 
   $tab_field = $vars['options']['tab_field'];
