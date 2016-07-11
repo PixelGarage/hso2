@@ -9,8 +9,8 @@
   Drupal.behaviors.activateMasonryFilters = {
     attach: function () {
       var $exposedForm = $('#views-exposed-form-social-masonry-panel-pane-1'),
-          $filters = $exposedForm.find('.form-radios .control-label'),
-          $selectedRadio = $exposedForm.find('input[checked=checked]');
+        $filters = $exposedForm.find('.form-radios .control-label'),
+        $selectedRadio = $exposedForm.find('input[checked=checked]');
 
       // add active class for selected radio
       $filters.removeClass('active');
@@ -23,21 +23,21 @@
    * according to the menu state.
    */
   Drupal.behaviors.activateBlockMenus = {
-    attach: function() {
+    attach: function () {
       var $blockPanel = $('header#page-header .panel-header-blocks'),
-          $blocks = $blockPanel.find('.region-header-blocks > .block'),
-          $segmentBlockMenu = $('#block-menu-menu-segment-blocks'),
-          $segmentMenus = $segmentBlockMenu.find('ul.menu>li.menu-block'),
-          $courseBlockMenu = $('#block-menu-menu-course-blocks'),
-          $courseMenus = $courseBlockMenu.find('ul.menu>li.menu-block');
+        $blocks = $blockPanel.find('.region-header-blocks > .block'),
+        $segmentBlockMenu = $('#block-menu-menu-segment-blocks'),
+        $segmentMenus = $segmentBlockMenu.find('ul.menu>li.menu-block'),
+        $courseBlockMenu = $('#block-menu-menu-course-blocks'),
+        $courseMenus = $courseBlockMenu.find('ul.menu>li.menu-block');
 
-      $segmentMenus.once('activated', function() {
+      $segmentMenus.once('activated', function () {
         // add click events to all menus
-        $(this).on('click', function() {
+        $(this).on('click', function () {
           var $menu = $(this),
-              blockClass = '.' + $menu.attr('id'),
-              $menuBlock = $blockPanel.find(blockClass), // menu id is block class
-              $menuIsActive = $menu.hasClass('active');
+            blockClass = '.' + $menu.attr('id'),
+            $menuBlock = $blockPanel.find(blockClass), // menu id is block class
+            $menuIsActive = $menu.hasClass('active');
 
           // deactivate all menus and hide all blocks in panel
           $segmentMenus.removeClass('active');
@@ -66,13 +66,13 @@
 
       });
 
-      $courseMenus.once('activated', function() {
+      $courseMenus.once('activated', function () {
         // add click events to all menus
-        $(this).on('click', function() {
+        $(this).on('click', function () {
           var $menu = $(this),
-              blockClass = '.' + $menu.attr('id'),
-              $menuBlock = $blockPanel.find(blockClass), // menu id is block class
-              $menuIsActive = $menu.hasClass('active');
+            blockClass = '.' + $menu.attr('id'),
+            $menuBlock = $blockPanel.find(blockClass), // menu id is block class
+            $menuIsActive = $menu.hasClass('active');
 
           // deactivate all menus and hide all blocks in panel
           $courseMenus.removeClass('active');
@@ -111,12 +111,12 @@
    */
   Drupal.behaviors.dynamicSelectBoxes = {
     attach: function () {
-      var $webform         = $('form#webform-client-form-1336'),
-          $selectInteresse = $webform.find('#edit-submitted-interesse'),
-          $compAbschluss   = $webform.find('.webform-component--abschluss'),
-          $selectAbschluss = $webform.find('#edit-submitted-abschluss'),
-          $compLehrgang    = $webform.find('.webform-component--lehrgang'),
-          $selectLehrgang  = $webform.find('#edit-submitted-lehrgang');
+      var $webform = $('#webform-client-form-1336, #webform-client-form-14006'),
+        $selectInteresse = $webform.find('#edit-submitted-interesse'),
+        $compAbschluss = $webform.find('.webform-component--abschluss'),
+        $selectAbschluss = $webform.find('#edit-submitted-abschluss'),
+        $compLehrgang = $webform.find('.webform-component--lehrgang'),
+        $selectLehrgang = $webform.find('#edit-submitted-lehrgang');
 
       // hide select boxes and reset interesse select box
       $compAbschluss.hide();
@@ -140,8 +140,8 @@
       });
       $selectAbschluss.once('change', function () {
         $(this).change(function () {
-          var tid  = $selectInteresse.find('option:selected').val(),
-              tid2 = $selectAbschluss.find('option:selected').val();
+          var tid = $selectInteresse.find('option:selected').val(),
+            tid2 = $selectAbschluss.find('option:selected').val();
 
           $selectLehrgang.html('<option>Lehrgänge werden geladen...</option>');
           $compLehrgang.show(300);
@@ -165,7 +165,7 @@
     attach: function (context) {
       $('#webform-client-form-476', context).once(function () {
         var checkCount = function () {
-          var _f            = $('#webform-client-form-476');
+          var _f = $('#webform-client-form-476');
           var total_modules = _f.find('#webform-component-module input:checkbox:checked').add('#webform-component-module-base input:checkbox:checked').size();
           if (total_modules > 2) {
             alert("Information\n_______________________________________________________\n\nPro Pr\u00FCfungstermin k\u00F6nnen Sie maximal zwei Module absolvieren.\n\nBitte melden Sie sich f\u00FCr weitere Module an einem\nanderen Tag an!");
@@ -185,38 +185,39 @@
   Drupal.behaviors.gaEvents = {
     attach: function () {
       //
-      // GA Event for the brochure download on submit of brochure form
+      // GA Events for the brochure download, consulting requests and brochure postal delivery
       var $brochureForm = $('#webform-client-form-1336'),
-          $consultingForm = $('#webform-client-form-1335'),
-          _createFunctionWithTimeout = function(callback, opt_timeout) {
-            var called = false;
-            var fn = function() {
-                  if (!called) {
-                    called = true;
-                    callback();
-                  }
-                };
-            setTimeout(fn, opt_timeout || 1000);
-            return fn;
+        $brochurePostal = $('#webform-client-form-14006'),
+        $consultingForm = $('#webform-client-form-1335'),
+        _createFunctionWithTimeout = function (callback, opt_timeout) {
+          var called = false;
+          var fn = function () {
+            if (!called) {
+              called = true;
+              callback();
+            }
           };
+          setTimeout(fn, opt_timeout || 1000);
+          return fn;
+        };
 
       //
-      // Adds a listener for the brochure form.
+      // Adds a listener for the brochure download.
       $brochureForm.off('submit');
-      $brochureForm.on('submit', function(event) {
-        // Prevents the browser from submiting the form
+      $brochureForm.on('submit', function (event) {
+        // Prevents the browser from submitting the form
         // and thus unloading the current page.
         event.preventDefault();
 
         // get form values
         var segment = $(this).find('.webform-component--interesse select option:selected').html(),
-            course = $(this).find('.webform-component--lehrgang select option:selected').html(),
-            label = segment + ' - ' + course;
+          course = $(this).find('.webform-component--lehrgang select option:selected').html(),
+          label = segment + ' - ' + course;
 
         // Sends the event to Google Analytics and
         // resubmits the form once the hit is done.
-        ga('send', 'event', 'document', 'download', label, {
-          hitCallback: _createFunctionWithTimeout(function() {
+        ga('send', 'event', 'Brochure-download-form', 'submit', label, {
+          hitCallback: _createFunctionWithTimeout(function () {
             $brochureForm.off('submit');  // prevents infinite loop
             $brochureForm.submit();
           })
@@ -224,22 +225,45 @@
       });
 
       //
-      // Adds a listener for the consulting form.
-      $consultingForm.off('submit');
-      $consultingForm.on('submit', function(event) {
-        // Prevents the browser from submiting the form
+      // Adds a listener for the brochure postal delivery.
+      $brochurePostal.off('submit');
+      $brochurePostal.on('submit', function (event) {
+        // Prevents the browser from submitting the form
         // and thus unloading the current page.
         event.preventDefault();
 
         // get form values
         var segment = $(this).find('.webform-component--interesse select option:selected').html(),
-            stao = $(this).find('.webform-component--standort select option:selected').html(),
-            label = segment + ' - ' + stao;
+          course = $(this).find('.webform-component--lehrgang select option:selected').html(),
+          label = segment + ' - ' + course;
 
         // Sends the event to Google Analytics and
         // resubmits the form once the hit is done.
-        ga('send', 'event', 'document', 'download', label, {
-          hitCallback: _createFunctionWithTimeout(function() {
+        ga('send', 'event', 'Brochure-delivery-form', 'submit', label, {
+          hitCallback: _createFunctionWithTimeout(function () {
+            $brochurePostal.off('submit');  // prevents infinite loop
+            $brochurePostal.submit();
+          })
+        });
+      });
+
+      //
+      // Adds a listener for the consulting form.
+      $consultingForm.off('submit');
+      $consultingForm.on('submit', function (event) {
+        // Prevents the browser from submitting the form
+        // and thus unloading the current page.
+        event.preventDefault();
+
+        // get form values
+        var segment = $(this).find('.webform-component--interesse select option:selected').html(),
+          stao = $(this).find('.webform-component--standort select option:selected').html(),
+          label = segment + ' - ' + stao;
+
+        // Sends the event to Google Analytics and
+        // resubmits the form once the hit is done.
+        ga('send', 'event', 'Consulting-form', 'submit', label, {
+          hitCallback: _createFunctionWithTimeout(function () {
             $consultingForm.off('submit'); // prevents infinite loop
             $consultingForm.submit();
           })
@@ -252,7 +276,7 @@
   /**
    * This behavior adds shadow to header on scroll.
    *
-  Drupal.behaviors.addHeaderShadow = {
+   Drupal.behaviors.addHeaderShadow = {
     attach: function (context) {
       $(window).on("scroll", function () {
         if ($(window).scrollTop() > 10) {
