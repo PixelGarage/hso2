@@ -12,6 +12,7 @@ function tcpdf_document_libraries_info() {
     'name' => 'TCPHP based PDF document creation',
     'vendor url' => 'http://www.tcpdf.org/',
     'download url' => 'http://sourceforge.net/projects/tcpdf/files/',
+    'version callback' => 'tcpdf_document_get_version',
     'version arguments' => array(
        'file' => 'CHANGELOG.TXT',
        // 6.0.091
@@ -67,6 +68,56 @@ function tcpdf_document_tcpdf_loaded() {
     return FALSE;
   }
 }
+
+/**
+ * Gets the version information from the TCPDF library.
+ *
+ * @param $library
+ *   An associative array containing all information about the library.
+ * @param $options
+ *   An associative array containing with the following keys:
+ *   - file: The filename to parse for the version, relative to the library
+ *     path. For example: 'docs/changelog.txt'.
+ *   - pattern: A string containing a regular expression (PCRE) to match the
+ *     library version. For example: '@version\s+([0-9a-zA-Z\.-]+)@'. Note that
+ *     the returned version is not the match of the entire pattern (i.e.
+ *     '@version 1.2.3' in the above example) but the match of the first
+ *     sub-pattern (i.e. '1.2.3' in the above example).
+ *   - lines: (optional) The maximum number of lines to search the pattern in.
+ *     Defaults to 20.
+ *   - cols: (optional) The maximum number of characters per line to take into
+ *     account. Defaults to 200. In case of minified or compressed files, this
+ *     prevents reading the entire file into memory.
+ *
+ * @return
+ *   A string containing the version of the library.
+ *
+ * @see libraries_get_path()
+ */
+function tcpdf_document_get_version($library, $options) {
+  // Provide defaults.
+  $options += array(
+    'file' => '',
+    'pattern' => '',
+    'lines' => 20,
+    'cols' => 200,
+  );
+
+  $file = DRUPAL_ROOT . '/' . $library['library path'] . '/' . $options['file'];
+  if (empty($options['file']) || !file_exists($file)) {
+    return;
+  }
+  $file = fopen($file, 'r');
+  while ($options['lines'] && $line = fgets($file, $options['cols'])) {
+    if (preg_match($options['pattern'], $line, $version)) {
+      fclose($file);
+      return array_pop($version);
+    }
+    $options['lines']--;
+  }
+  fclose($file);
+}
+
 
 /**
  * Ensures that the TCPDF library is loaded, otherwise exits with an error message.
