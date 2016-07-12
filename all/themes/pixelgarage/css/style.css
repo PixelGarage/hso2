@@ -14442,6 +14442,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   display: inline-block;
   width: 18px;
   height: 14px;
+  margin-right: 5px;
   background: url(../images/contact_icon_email.svg) no-repeat top left / contain;
 }
 .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .views-field-field-email .field-content a {
