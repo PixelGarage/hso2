@@ -255,7 +255,7 @@ function hso_anmeldung_mail_alter(&$message)
                 unset($message['headers']['From']);
               }
               $message['params']['attachments'][] = _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $course, $course_time_node, $webform_components, $message['params']['submission']->data, $message['params']['submission']->sid, TRUE);
-              $message['params']['attachments'][] = _hso_get_agb_file();
+              //$message['params']['attachments'][] = _hso_get_agb_file();
 
             }
           }
