@@ -9544,7 +9544,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -10507,7 +10506,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .node.node-page .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -10637,7 +10635,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .node-webform .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -10797,7 +10794,6 @@ ul.webform-submission-actions li a:active {
 .webform-confirmation tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -11904,7 +11900,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -12136,7 +12131,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-brochure .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -12294,7 +12288,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -12477,7 +12470,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -12690,7 +12682,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -12885,7 +12876,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -13067,7 +13057,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -13236,7 +13225,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -13410,7 +13398,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -13656,7 +13643,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -14851,7 +14837,6 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
-  -ms-word-break: break-all;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
