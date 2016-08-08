@@ -235,7 +235,8 @@
         // get form values
         var segment = $(this).find('.webform-component--interesse select option:selected').html(),
           course = $(this).find('.webform-component--lehrgang select option:selected').html(),
-          label = segment + ' - ' + course;
+          stao = $(this).find('.webform-component--standort select option:selected').html(),
+          label =  stao + ' - ' + segment + ' - ' + course;
 
         // Sends the event to Google Analytics and
         // resubmits the form once the hit is done.
