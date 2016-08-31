@@ -9509,7 +9509,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
@@ -9534,7 +9534,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
@@ -10450,7 +10450,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   font-size: 21.25px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-page .row div.col-sm-12 .field-name-title h2 {
     font-size: 4.42708333vw;
   }
@@ -10469,7 +10469,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .node.node-page .row div.col-sm-12 .field-name-body h1,
   .node.node-page .row div.col-sm-12 .field-name-body h2,
   .node.node-page .row div.col-sm-12 .field-name-body h3,
@@ -10494,7 +10494,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .node.node-page .row div.col-sm-12 .field-name-body h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-page .row div.col-sm-12 .field-name-body h1,
   .node.node-page .row div.col-sm-12 .field-name-body h2,
   .node.node-page .row div.col-sm-12 .field-name-body h3 {
@@ -10598,7 +10598,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .node-webform .row div.col-sm-12 .field-name-body h1,
   .node-webform .row div.col-sm-12 .field-name-body h2,
   .node-webform .row div.col-sm-12 .field-name-body h3,
@@ -10623,7 +10623,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .node-webform .row div.col-sm-12 .field-name-body h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node-webform .row div.col-sm-12 .field-name-body h1,
   .node-webform .row div.col-sm-12 .field-name-body h2,
   .node-webform .row div.col-sm-12 .field-name-body h3 {
@@ -10755,7 +10755,7 @@ ul.webform-submission-actions li a:active {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .webform-confirmation h1,
   .webform-confirmation h2,
   .webform-confirmation h3,
@@ -10780,7 +10780,7 @@ ul.webform-submission-actions li a:active {
 .webform-confirmation h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .webform-confirmation h1,
   .webform-confirmation h2,
   .webform-confirmation h3 {
@@ -11310,7 +11310,7 @@ form.webform-client-form .webform-component.webform-component-markup p {
   text-align: left;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   form.webform-client-form .webform-component.webform-component-markup p {
     font-size: 2.08333333vw;
   }
@@ -11859,7 +11859,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3,
@@ -11884,7 +11884,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3 {
@@ -12069,7 +12069,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 21.25px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-brochure .row div.col-sm-12 .field-name-title h2 {
     font-size: 4.42708333vw;
   }
@@ -12088,7 +12088,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .node.node-brochure .row div.col-sm-12 .field-name-body h1,
   .node.node-brochure .row div.col-sm-12 .field-name-body h2,
   .node.node-brochure .row div.col-sm-12 .field-name-body h3,
@@ -12113,7 +12113,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-brochure .row div.col-sm-12 .field-name-body h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-brochure .row div.col-sm-12 .field-name-body h1,
   .node.node-brochure .row div.col-sm-12 .field-name-body h2,
   .node.node-brochure .row div.col-sm-12 .field-name-body h3 {
@@ -12223,7 +12223,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   color: #333333;
   line-height: 1.5;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -12245,7 +12245,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
@@ -12270,7 +12270,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -12379,7 +12379,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 18.75px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-title h2 {
     font-size: 3.90625vw;
   }
@@ -12427,7 +12427,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
@@ -12452,7 +12452,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3 {
@@ -12580,7 +12580,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 13px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -12641,7 +12641,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
@@ -12666,7 +12666,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -12759,7 +12759,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 18.75px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-title h2 {
     font-size: 3.90625vw;
   }
@@ -12835,7 +12835,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3,
@@ -12860,7 +12860,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
@@ -12963,7 +12963,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 13px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -13016,7 +13016,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
@@ -13041,7 +13041,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -13142,7 +13142,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 18.75px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .title-tweet h2 {
     font-size: 3.90625vw;
   }
@@ -13184,7 +13184,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3,
@@ -13209,7 +13209,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
@@ -13335,7 +13335,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   color: #333333;
   line-height: 1.5;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -13357,7 +13357,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
@@ -13382,7 +13382,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -13523,7 +13523,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-size: 18.75px;
   color: #333333;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-title h2 {
     font-size: 3.90625vw;
   }
@@ -13602,7 +13602,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 44.57142857142857em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3,
@@ -13627,7 +13627,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
@@ -13728,7 +13728,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .node.node-remote-form .row div.col-sm-12 .field-name-body h1,
   .node.node-remote-form .row div.col-sm-12 .field-name-body h2,
   .node.node-remote-form .row div.col-sm-12 .field-name-body h3,
@@ -13753,7 +13753,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-remote-form .row div.col-sm-12 .field-name-body h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .node.node-remote-form .row div.col-sm-12 .field-name-body h1,
   .node.node-remote-form .row div.col-sm-12 .field-name-body h2,
   .node.node-remote-form .row div.col-sm-12 .field-name-body h3 {
@@ -14734,7 +14734,7 @@ body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-pl
   color: #333333;
   line-height: 1;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .view.view-courses .view-content .panel-group .main-title h1 {
     font-size: 4.6875vw;
   }
@@ -14923,7 +14923,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   font-family: 'SohoGothicProRegular', serif;
   font-size: 13px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 36.705882352941174em) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
@@ -14948,7 +14948,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
   font-size: 15px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
@@ -15857,7 +15857,7 @@ body {
   line-height: 1;
   border: none;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 30em) {
   .main-container .container .row section h1.page-header {
     font-size: 4.6875vw;
   }

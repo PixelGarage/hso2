@@ -43,23 +43,32 @@
     }
   }
 
-  // responsive font size with minimum and maximum size
-  .font-size-responsive(@min-size; @max-size) {
-    font-size: @min-size;
-
-    @media @narrow {
-      font-size: unit(@max-size/7.68, vw);
+  .placeholder(@color: @input-color-placeholder; @text-align: left) {
+    // Firefox
+    &::-moz-placeholder {
+      text-align: @text-align;
+      color: @color;
+      opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
     }
-    @media @tablet {
-      font-size: @max-size;
-    }
+    &:-ms-input-placeholder { text-align: @text-align; color: @color; } // Internet Explorer 10+
+    &::-webkit-input-placeholder  { text-align: @text-align; color: @color; } // Safari and Chrome
   }
-  .font-size-responsive(@max-size: @resp-font-size-max) {
-    font-size: max(@resp-font-size-min, @max-size*5/8);   // min = 480 / 768 * max
 
-    @media @narrow {
+  // responsive font size with minimum and maximum size
+  .font-size-responsive(@max-size: @resp-font-size-max; @min-size: @resp-font-size-min) {
+    @min-font-size: max(@min-size, @max-size*5/8); // min = 480 / 768 * max
+    @min-max-breakpoint: unit((48 * @min-font-size / @max-size), em);
+    @font-break:  ~"screen and (min-width: @{min-max-breakpoint})";
+
+    // min font size
+    font-size: @min-font-size;
+
+    // dynamic font size
+    @media @font-break {
       font-size: unit(@max-size/7.68, vw);
     }
+
+    // max.font size
     @media @tablet {
       font-size: @max-size;
     }
