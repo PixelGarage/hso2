@@ -538,6 +538,7 @@ function hso_mods_twitter_insert_statuses($statuses, $account) {
       $node->field_twitter_id[LANGUAGE_NONE][0]['value'] = $tweet->id;
       $node->field_screen_name[LANGUAGE_NONE][0]['value'] = $screen_name;
       $node->field_created_time[LANGUAGE_NONE][0]['value'] = strtotime($tweet->created_at);
+      $node->created = strtotime($tweet->created_at);
       $node->body[LANGUAGE_NONE][0]['value'] = $tweet->text;
 
       // save node
