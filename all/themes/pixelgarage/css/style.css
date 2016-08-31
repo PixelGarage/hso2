@@ -9615,9 +9615,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   height: auto;
   min-height: 350px;
 }
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content iframe {
-  min-height: 800px;
-}
 /*
  *  Login form component
  *  (see inc/login.inc for login form alteration)
@@ -10578,9 +10575,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   height: auto;
   min-height: 350px;
 }
-.node.node-page .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
 }
 /*
@@ -10709,9 +10703,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.node-webform .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
 }
 ul.webform-submission-actions {
   margin: 10px 0;
@@ -10869,9 +10860,6 @@ ul.webform-submission-actions li a:active {
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.webform-confirmation iframe {
-  min-height: 800px;
 }
 form.webform-client-form a {
   color: #cc3333;
@@ -11977,9 +11965,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   height: auto;
   min-height: 350px;
 }
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
   .node.node-location .row .col-sm-12 .col-left {
     width: 65%;
@@ -12209,9 +12194,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   height: auto;
   min-height: 350px;
 }
-.node.node-brochure .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
 }
 .node.node-brochure .row div.col-sm-12 .field-name-field-file .flexpaper-container .flexpaper-header .flexpaper-select {
@@ -12368,9 +12350,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
 }
 @media screen and (min-width: 768px) {
 }
@@ -12553,9 +12532,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
 }
 @media screen and (min-width: 768px) {
 }
@@ -12771,9 +12747,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   height: auto;
   min-height: 350px;
 }
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
 }
 .node.node-video.view-mode-full .row div.col-sm-12 {
@@ -12968,9 +12941,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   height: auto;
   min-height: 350px;
 }
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
 }
 /*
@@ -13152,9 +13122,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   height: auto;
   min-height: 350px;
 }
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 {
@@ -13322,9 +13289,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
 }
 @media screen and (min-width: 768px) {
 }
@@ -13498,9 +13462,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
 }
 @media screen and (min-width: 768px) {
 }
@@ -13747,14 +13708,14 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   height: auto;
   min-height: 350px;
 }
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
-}
 @media screen and (min-width: 768px) {
 }
 /*
  *  Node remoteform component
  * --------------------------------------------------*/
+.node.node-remote-form {
+  margin-top: 50px;
+}
 .node.node-remote-form .row div.col-sm-12 {
   width: 100%;
 }
@@ -13874,7 +13835,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   min-height: 350px;
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body iframe {
-  min-height: 800px;
+  min-height: 1600px;
 }
 /*
  *  Banners view (navigation)
@@ -15067,9 +15028,6 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   max-width: 100%;
   height: auto;
   min-height: 350px;
-}
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body iframe {
-  min-height: 800px;
 }
 /*
  *  View Course-times component
