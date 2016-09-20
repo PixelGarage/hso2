@@ -17,6 +17,7 @@
 module_load_include('inc', 'webform', 'includes/webform.submissions');
 $submission = webform_get_submission($node->nid, $sid);
 $brochure = null;
+$viewer = null;
 
 // get course node
 $course_nid = null;
@@ -34,11 +35,15 @@ if ($course_nid) {
   if ($course && !empty($course->field_brochure)) {
     $brochure = node_load($course->field_brochure[LANGUAGE_NONE][0]['target_id']);
     if ($brochure && !empty($brochure->field_file)) {
-      // render brochure (flexpaper viewer)
-      $viewer = node_view($brochure);
-
-      //$pdf = $brochure->field_file[LANGUAGE_NONE][0]['uri'];
-      //hso_anmeldung_transfer_pdf($pdf, 'Kurs-Details.pdf', false);
+      if ($brochure->field_file[LANGUAGE_NONE][0]['filemime'] === 'application/zip') {
+        // render brochure (flexpaper viewer)
+        $viewer = node_view($brochure);
+      }
+      else if ($brochure->field_file[LANGUAGE_NONE][0]['filemime'] === 'application/pdf'){
+        // display pdf in browser (inline or as dialog)
+        $pdf = $brochure->field_file[LANGUAGE_NONE][0]['uri'];
+        hso_anmeldung_transfer_pdf($pdf, 'Kurs-Details.pdf', false);
+      }
     }
   }
 }
@@ -52,9 +57,11 @@ if ($course_nid) {
   <?php endif; ?>
 </div>
 
-<div class="brochure-viewer">
-  <?php print render($viewer) ?>
-</div>
+<?php if ($viewer): ?>
+  <div class="brochure-viewer">
+    <?php print render($viewer) ?>
+  </div>
+<?php endif; ?>
 
 <div class="links">
   <a href="<?php print url('node/' . $course_nid); ?>">Zurück zum Kurs/Lehrgang</a>
