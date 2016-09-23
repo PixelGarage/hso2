@@ -207,6 +207,11 @@ function instagram_social_feed_cron() {
 
       // Insert data into table.
       $result = db_insert($table)->fields($data)->execute();
+
+      // Let other modules know that a instagram media has been saved.
+      $type = $feed->type;
+      module_invoke_all('instagram_media_save', $type, (object)$data);
+
       $total++;
     }
 

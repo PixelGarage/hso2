@@ -494,7 +494,8 @@ function _webform_select_options_entities ($component, $flat, $arguments) {
 
 
 /* --------------------------------------------------
- * Tweets node creation on Tweets import (see Twitter module)
+ * Tweet and instagram node creation on feed import
+ * (see Twitter and Instagram_social_feed modules)
  * --------------------------------------------------*/
 
 /**
@@ -512,7 +513,8 @@ function hso_mods_twitter_insert_statuses($statuses, $account) {
   // import all new tweets (statuses) of an account into tweet nodes
   $full_name = $account->name;
   $screen_name = $account->screen_name;
-  $profile_image = _tweet_profile_picture($screen_name, $account->profile_image_url);
+  $filename = $screen_name . '_profile_image';
+  $profile_image = _import_picture($filename, $account->profile_image_url);
 
   foreach ($statuses as $tweet) {
     //
@@ -563,10 +565,52 @@ function hso_mods_twitter_insert_statuses($statuses, $account) {
 
 }
 
-function _tweet_profile_picture($screen_name, $uri) {
+
+/**
+ * Notifies of a newly saved instagram media item.
+ *
+ * @param $type  string
+ *    The type of the instagram media (image, video)
+ * @param $item
+ *    The instagram media item object
+ *   stdClass containing the instagram media item.
+ * @see https://www.instagram.com/developer/endpoints/media/ for details about the contents of $item.
+ */
+function hso_mods_instagram_media_save($type, $item) {
+  //
+  // save only image (no video)
+  $filename = $type . $item->instagram_id;
+  $picture = _import_picture($filename, $item->standard_resolution);
+  $caption = ($item->caption && $item->caption->text) ? $item->caption->text : '';
+
+  $node = new stdClass();
+  $node->type = 'instagram';
+  $node->language = LANGUAGE_NONE;
+  $node->uid = 1;
+  $node->status = 1;
+  node_object_prepare($node);
+
+  // assign all fields
+  $node->title = $filename;
+  $node->field_post_id[LANGUAGE_NONE][0]['value'] = $item->instagram_id;
+  $node->field_picture[LANGUAGE_NONE][0]['fid'] = $picture->fid;
+  $node->field_created_time[LANGUAGE_NONE][0]['value'] = strtotime($item->created_time);
+  $node->created = strtotime($item->created_time);
+  $node->field_link[LANGUAGE_NONE][0]['url'] = $item->instagram_link;
+  $node->field_instagram_user[LANGUAGE_NONE][0]['value'] = $item->instagram_user;
+  $node->field_instagram_tags[LANGUAGE_NONE][0]['value'] = $item->tags;
+  $node->body[LANGUAGE_NONE][0]['value'] = $caption;
+
+  // save node
+  $node = node_submit($node);
+  node_save($node);
+}
+
+
+function _import_picture($unique_name, $uri) {
   // download file and manage it
-  $ext = pathinfo($uri, PATHINFO_EXTENSION);
-  $filename = $screen_name . '_profile_image.' . $ext;
+  $ext = '.' . pathinfo($uri, PATHINFO_EXTENSION);
+  $filename = $unique_name . $ext;
 
   // get or create user picture object
   $query = new EntityFieldQuery();
