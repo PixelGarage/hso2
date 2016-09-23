@@ -6,7 +6,12 @@ Changes in Modules (Patches)
 
 
 Locked Modules (no update)
-===================
+==========================
+
+
+PATH on LIVE server:
+====================
+cd  ../var/www/vhosts/hso.ch/httpdocs/sites
 
 
 
