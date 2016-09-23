@@ -15045,6 +15045,82 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   text-align: left;
   color: #929295;
 }
+.view.view-course-times .view-filters,
+.view.view-course-times-search .view-filters {
+  padding: 0 15px;
+}
+.view.view-course-times .view-filters .views-exposed-form .views-exposed-widget label,
+.view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget label {
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 16px;
+  color: #333333;
+}
+.view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item,
+.view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item {
+  position: relative;
+}
+.view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item:after,
+.view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item:after {
+  content: '\f0d7';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+  font-family: 'fontawesome';
+  font-size: 16px;
+  color: #494a4f;
+  pointer-events: none;
+}
+.view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select,
+.view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 10px;
+  height: auto;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-align: left;
+  color: #333333;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+  outline: none;
+}
+.view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+.view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+.view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+.view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+  outline: none;
+  border: 1px solid #cc3333;
+}
+body.kvcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.kvcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.kvcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.kvcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+  border: 1px solid #95ba40;
+}
+body.hscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.hscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.hscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.hscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+  border: 1px solid #e87431;
+}
+body.kscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.kscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.kscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.kscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+  border: 1px solid #78729f;
+}
+body.excollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.excollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.excollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.excollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+  border: 1px solid #b1a895;
+}
 .view.view-course-times .view-content,
 .view.view-course-times-search .view-content {
   padding: 0;

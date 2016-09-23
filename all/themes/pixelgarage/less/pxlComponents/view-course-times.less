@@ -29,6 +29,70 @@
     }
   }
 
+  .view-filters {
+    padding: 0 15px;
+    .views-exposed-form {
+      .views-exposed-widget {
+        label {
+          font-family: @pxl-text-font-medium;
+          font-size: @font-size-base;
+          color: @text-color;
+        }
+
+        .views-widget {
+          .form-item {
+            position: relative;
+
+            &:after {
+              content: '\f0d7';
+              display: inline-block;
+              position: absolute;
+              right: 10px;
+              bottom: 2px;
+              font-family: @pxl-icon-font;
+              font-size: @font-size-base;
+              color: @pxl-color-gray-dark;
+              pointer-events: none;
+            }
+
+            select {
+              #pxl-mixins.no-appearance;
+              padding: 0 10px;
+              height: auto;
+              font-family: @pxl-text-font-light;
+              font-size: @font-size-base;
+              line-height: 1.2em;
+              text-align: left;
+              color: @text-color;
+              #pxl-mixins.border-radius(@border-radius-small);
+              border: 1px solid @pxl-color-gray-border-light;
+              background-color: #fff;
+              outline: none;
+
+              &:focus, &:active {
+                outline: none;
+                border: 1px solid @pxl-color-hso-main;
+
+                body.kvcollege_section & {
+                  border: 1px solid @pxl-color-hso-kv;
+                }
+                body.hscollege_section & {
+                  border: 1px solid @pxl-color-hso-hs;
+                }
+                body.kscollege_section & {
+                  border: 1px solid @pxl-color-hso-ks;
+                }
+                body.excollege_section & {
+                  border: 1px solid @pxl-color-hso-ex;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .view-content {
     // course times table
     padding: 0;
