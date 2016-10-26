@@ -240,9 +240,12 @@ function theme_hso_mods_formatter_hso_mods_date_start_ende($element) {
 	} else {
 		$string .= date('d.m.Y, H:i', $from_date);
 	}
-	if ($element['element']['value2']) {
-		$string .= '<br />' . t('Ende') . ': ' . date('d.m.Y', strtotime($element['element']['value2']));
-	}
+  if ($element['element']['value2']) {
+    $end_date = strtotime($element['element']['value2']);
+    if ($from_date != $end_date) {
+      $string .= '<br />' . t('Ende') . ': ' . date('d.m.Y', $end_date);
+    }
+  }
   return $string;
 }
 
