@@ -14164,6 +14164,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   cursor: pointer;
 }
 .view.view-social-masonry .view-content > .pe-container .modal .modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   background-color: #f0f0eb;
 }

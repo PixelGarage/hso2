@@ -58,9 +58,15 @@
         };
         break;
       case 'fitRows':
-      case 'fitColumns':
+        $options.fitRows = {
+          gutter: settings.gutter_sizer
+        };
         break;
-
+      case 'fitColumns':
+        $options.fitColumns = {
+          gutter: settings.gutter_sizer
+        };
+        break;
       case 'cellsByRow':
         $options.cellsByRow = {
           columnWidth: settings.grid_sizer,

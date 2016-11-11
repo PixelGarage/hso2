@@ -118,7 +118,7 @@ class views_plugin_style_proximity extends views_plugin_style {
       '#type' => 'select',
       '#title' => t('Layout mode'),
       '#description' => t("Defines the layout mode for the items. 'None' means no specific layout, 'Random' means a random distribtion in the container, all other are specific Isotope grid layouts."),
-      '#default_value' => $default_values['isotope_layout_mode'],
+      '#default_value' => $default_values['proximity_layout_mode'],
       '#options' => $layout_options,
       '#required' => TRUE,
       '#weight' => 1,
