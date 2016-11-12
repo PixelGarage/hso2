@@ -10108,7 +10108,6 @@ form#user-login {
   position: relative;
 }
 body.modal-open {
-  position: absolute;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
@@ -10124,6 +10123,8 @@ body.modal-open #modal-exposed-search-form {
   -webkit-overflow-scrolling: touch;
   outline: 0;
   z-index: 1620;
+  height: 100%;
+  overflow-y: hidden;
 }
 body.modal-open #modal-exposed-search-form.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
@@ -10142,7 +10143,11 @@ body.modal-open #modal-exposed-search-form.in .modal-dialog {
   transform: translate(0, 0);
 }
 body.modal-open #modal-exposed-search-form .modal-backdrop {
+  position: fixed;
+  top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #222;
 }
 body.modal-open #modal-exposed-search-form .modal-backdrop.in {
@@ -10151,12 +10156,14 @@ body.modal-open #modal-exposed-search-form .modal-backdrop.in {
 body.modal-open #modal-exposed-search-form .modal-dialog {
   margin: 0 auto;
   width: 100%;
+  height: 100%;
 }
 .admin-menu body.modal-open #modal-exposed-search-form .modal-dialog {
   margin: 29px auto 0;
 }
 body.modal-open #modal-exposed-search-form .modal-dialog .modal-content {
   position: relative;
+  height: 100%;
   padding: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
