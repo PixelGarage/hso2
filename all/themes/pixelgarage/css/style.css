@@ -10108,7 +10108,7 @@ form#user-login {
   position: relative;
 }
 body.modal-open {
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
