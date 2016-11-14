@@ -75,14 +75,6 @@
       $innerDialog.css({'position': 'absolute', 'top': iTop, 'left': leftPos});
     };
 
-    var _setModalBackdropHeight = function () {
-      var hTotal   = $(window).height();
-
-      // update backdrop height according to dialog content
-      $dialog.find('.modal-backdrop').css('height', hTotal);
-    };
-
-
     //
     // set the loading indicator on the target and load target content via ajax
     $container.append(settings.ajax_loading_html);
@@ -111,10 +103,6 @@
           $dialog.fadeIn(transDuration).modal('show');
 
         }
-
-        // set backdrop height according to content height.
-        // Wait a short time to get correct height
-        window.setTimeout(_setModalBackdropHeight, 200);
       }
     });
 

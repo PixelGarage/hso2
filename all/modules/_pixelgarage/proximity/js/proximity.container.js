@@ -20,16 +20,6 @@
             $modal        = $container.find('.modal'),
             transDuration = parseInt(settings.trans_duration);
 
-        // backdrop height calculation
-        var _backdropHeight = function() {
-          var $dialog       = $modal.find('> .modal-dialog'),
-              hWindow       = $(window).height(),
-              hBackdrop     = Math.max(hWindow, $dialog.height());
-
-          // adjust backdrop height
-          $modal.find('.modal-backdrop').css('height', hBackdrop);
-        };
-
         // scroll behavior of modal dialog
         var _modalScrollBehavior = function() {
           var $modalBody    = $modal.find('.modal-body'),
@@ -52,9 +42,6 @@
             $modalBody.css('height', 'auto');
 
           }
-
-          // set backdrop height
-          _backdropHeight();
         };
 
 
@@ -87,14 +74,13 @@
 
             // enable background scrolling
             $('body').css('overflow', 'auto');
-          });
 
-          // modal dialog scrolling adapts backdrop height
-          $(this).on('scroll', function(){
-            if ($(this).is(':visible')) {
-              // set backdrop height
-              _backdropHeight();
-            }
+            // set scroll position to top of container
+            //var offset = $container.offset().top - 50;
+            //$(window).scrollTop(offset);
+
+            // redirect to home page to update view
+            //window.location = '/';
           });
 
           // prevent iOS overscrolling in the back of modal
