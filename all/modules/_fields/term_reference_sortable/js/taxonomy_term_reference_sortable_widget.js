@@ -2,12 +2,12 @@
   Drupal.behaviors.termReferenceSortable = {
     attach: function(context, settings) {
       //init select
-      $('.sortable2', context).parents('.field-suffix').siblings('select').hide();
+      $('.sortable2', context).parents('.form-type-select').find('select').hide();
 
       $('.sortable2', context).once('sort-init').each(function(index, value){
 
         var $this = $(this);
-        var $select = $this.parents('.field-suffix').siblings('select');
+        var $select = $this.parents('.form-type-select').find('select');
         if($select.hasClass('error')){
           $this.addClass('error');
         }
@@ -62,7 +62,7 @@
 
       function sortSelect(element){
         var selected = $(element).sortable('toArray');
-        var $select = $(element).parents('.field-suffix').siblings('select');
+        var $select = $(element).parents('.form-type-select').find('select');
           //for different versions of jQuery
           if (typeof jQuery.prop != 'undefined') {
               $select.find(':selected').prop("selected", "");
@@ -72,7 +72,7 @@
 
         if($(selected).length > 0){
           $(selected.reverse()).each(function(index, value){
-            var $curent_option = $select.find('option:[value="'+ value +'"]');
+            var $curent_option = $select.find('option[value="'+ value +'"]');
             var $curent_option_clone = $curent_option.clone().attr("selected", "selected");
             $curent_option.remove();
             $select.prepend($curent_option_clone);

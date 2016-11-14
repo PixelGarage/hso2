@@ -5,9 +5,9 @@ core = 7.x
 
 dependencies[] = taxonomy
 
-; Information added by drupal.org packaging script on 2013-09-30
-version = "7.x-1.2"
+; Information added by Drupal.org packaging script on 2016-09-10
+version = "7.x-1.3"
 core = "7.x"
 project = "term_reference_sortable"
-datestamp = "1380551368"
+datestamp = "1473532740"
 
