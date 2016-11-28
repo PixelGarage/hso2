@@ -112,6 +112,12 @@ function pixelgarage_preprocess_page(&$vars) {
   if (array_key_exists('ks-college', $contexts) || array_key_exists('ks-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
   }
+  if (array_key_exists('hf-college', $contexts) || array_key_exists('hf-college-home', $contexts)) {
+    $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
+  }
+  if (array_key_exists('fh-college', $contexts) || array_key_exists('fh-college-home', $contexts)) {
+    $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
+  }
   if (array_key_exists('ex-college', $contexts) || array_key_exists('ex-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'ex_logo.png', $vars['logo']);
   }
