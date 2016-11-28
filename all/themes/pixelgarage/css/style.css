@@ -16208,7 +16208,7 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
   color: #929295;
   background: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   header#navbar .container .navbar-collapse {
     position: static;
     top: auto;
