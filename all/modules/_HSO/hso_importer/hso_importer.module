@@ -286,9 +286,8 @@ function _hso_departments_mapping() {
     foreach ($result['taxonomy_term'] as $key => $value) {
       $term = taxonomy_term_load($key);
       $int_id = $term->field_internal_id[LANGUAGE_NONE][0]['value'];
-      $dep_id = !empty($int_id) ? $int_id : -1;
-      if ($dep_id != -1) {
-        $mapping[$dep_id] = $key;
+      if (!empty($int_id)) {
+        $mapping[$int_id] = $key;
       }
     }
   }
