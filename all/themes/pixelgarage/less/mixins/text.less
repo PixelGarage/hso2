@@ -75,63 +75,75 @@
   }
 
 
-  .wysiwyg-body(@font-size-text: 14px; @font-size-title: 24px; @font-size-subtitle: @resp-font-size-max) {
-    h1, h2, h3, h4, h5, h6 {
-      font-family: @pxl-text-font;
-      .font-size-responsive(@font-size-subtitle);
-    }
+  .wysiwyg-body(@text-size: @resp-font-size-max; @title-size: @resp-title-size-max; @subtitle-size: @resp-subtitle-size-max) {
     h1, h2, h3 {
-      .font-size-responsive(@font-size-title);
+      font-family: @pxl-title-font;
+      .font-size-responsive(@title-size, @resp-title-size-min);
     }
 
-    p, div, tbody td {
-      font-family: @pxl-text-font-light;
-      font-size: @font-size-text;
-      .hyphenate;
+    h4, h5, h6 {
+      font-family: @pxl-text-font;
+      .font-size-responsive(@subtitle-size, @resp-subtitle-size-min);
+    }
 
-      @media @narrow {
-        font-size: @font-size-base;
+    p, tbody td {
+      font-family: @pxl-text-font;
+      .font-size-responsive(@text-size);
+      .hyphenate;
+    }
+
+    a {
+      font-family: @pxl-text-font;
+      .font-size-responsive(@text-size);
+      color: @link-color;
+
+      &:hover, &:focus {
+        color: @link-hover-color;
+        text-decoration: none;
+        background: none;
       }
     }
 
     li {
       font-family: @pxl-text-font-light;
-      font-size: @font-size-text;
-
-      @media @narrow {
-        font-size: @font-size-base;
-      }
+      .font-size-responsive(@text-size);
     }
 
     pre, address {
-      font-family: @pxl-text-font-light-italics;
-      font-size: @font-size-text;
-
-      @media @narrow {
-        font-size: @font-size-base;
-      }
-    }
-
-    hr {
-      border: 0;
-      border-bottom: 2px solid @pxl-border-color;
-      background: none;
+      font-family: @pxl-text-font-italics;
+      .font-size-responsive(@text-size);
     }
 
     table, tr, th, td {
       border-color: @pxl-border-color;
     }
 
+    strong {
+      font-family: @pxl-text-font-bold;
+      .font-size-responsive(@text-size + 2, 16px);
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 2px solid @text-color;
+      background: none;
+    }
+
     img {
       display: block;
-      height: auto;
+      overflow: hidden;
+      margin: 20px auto;
+      padding: 0;
       max-width: 100%;
+      width: auto;
+      height: auto;
     }
 
     embed, video, audio, iframe {
       display: block;
       overflow: hidden;
       margin: 20px auto;
+      padding: @grid-gutter-width/2;
       width: 80% !important;
       max-width: 100%;
       height: auto;

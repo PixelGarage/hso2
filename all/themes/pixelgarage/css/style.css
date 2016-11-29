@@ -9502,39 +9502,11 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
-    font-size: 17px;
-  }
-}
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
@@ -9548,10 +9520,29 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
     font-size: 24px;
   }
 }
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h4,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h5,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content h6 {
+    font-size: 20px;
+  }
+}
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content p,
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content div,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -9560,37 +9551,69 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content p,
-  .panel-display .panel-panel .panel-pane.pane-custom .panel-content div,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content p,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content tbody td {
+    font-size: 17px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content a {
+    font-size: 17px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content a:hover,
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content li {
+    font-size: 17px;
   }
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content pre,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content pre,
   .panel-display .panel-panel .panel-pane.pane-custom .panel-content address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.panel-display .panel-panel .panel-pane.pane-custom .panel-content hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content pre,
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content address {
+    font-size: 17px;
+  }
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content table,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content tr,
@@ -9598,10 +9621,33 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content td {
   border-color: #c9c9c9;
 }
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .panel-display .panel-panel .panel-pane.pane-custom .panel-content strong {
+    font-size: 19px;
+  }
+}
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content embed,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content video,
@@ -9610,6 +9656,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -10469,39 +10516,11 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 }
 .node.node-page .row div.col-sm-12 .field-name-body h1,
 .node.node-page .row div.col-sm-12 .field-name-body h2,
-.node.node-page .row div.col-sm-12 .field-name-body h3,
-.node.node-page .row div.col-sm-12 .field-name-body h4,
-.node.node-page .row div.col-sm-12 .field-name-body h5,
-.node.node-page .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .node.node-page .row div.col-sm-12 .field-name-body h1,
-  .node.node-page .row div.col-sm-12 .field-name-body h2,
-  .node.node-page .row div.col-sm-12 .field-name-body h3,
-  .node.node-page .row div.col-sm-12 .field-name-body h4,
-  .node.node-page .row div.col-sm-12 .field-name-body h5,
-  .node.node-page .row div.col-sm-12 .field-name-body h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body h1,
-  .node.node-page .row div.col-sm-12 .field-name-body h2,
-  .node.node-page .row div.col-sm-12 .field-name-body h3,
-  .node.node-page .row div.col-sm-12 .field-name-body h4,
-  .node.node-page .row div.col-sm-12 .field-name-body h5,
-  .node.node-page .row div.col-sm-12 .field-name-body h6 {
-    font-size: 17px;
-  }
-}
-.node.node-page .row div.col-sm-12 .field-name-body h1,
-.node.node-page .row div.col-sm-12 .field-name-body h2,
 .node.node-page .row div.col-sm-12 .field-name-body h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .node.node-page .row div.col-sm-12 .field-name-body h1,
   .node.node-page .row div.col-sm-12 .field-name-body h2,
   .node.node-page .row div.col-sm-12 .field-name-body h3 {
@@ -10515,10 +10534,29 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
     font-size: 24px;
   }
 }
+.node.node-page .row div.col-sm-12 .field-name-body h4,
+.node.node-page .row div.col-sm-12 .field-name-body h5,
+.node.node-page .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .node.node-page .row div.col-sm-12 .field-name-body h4,
+  .node.node-page .row div.col-sm-12 .field-name-body h5,
+  .node.node-page .row div.col-sm-12 .field-name-body h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page .row div.col-sm-12 .field-name-body h4,
+  .node.node-page .row div.col-sm-12 .field-name-body h5,
+  .node.node-page .row div.col-sm-12 .field-name-body h6 {
+    font-size: 20px;
+  }
+}
 .node.node-page .row div.col-sm-12 .field-name-body p,
-.node.node-page .row div.col-sm-12 .field-name-body div,
 .node.node-page .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -10527,37 +10565,69 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-page .row div.col-sm-12 .field-name-body p,
-  .node.node-page .row div.col-sm-12 .field-name-body div,
   .node.node-page .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page .row div.col-sm-12 .field-name-body p,
+  .node.node-page .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-page .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-page .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-page .row div.col-sm-12 .field-name-body a:hover,
+.node.node-page .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-page .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-page .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-page .row div.col-sm-12 .field-name-body pre,
 .node.node-page .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-page .row div.col-sm-12 .field-name-body pre,
   .node.node-page .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-page .row div.col-sm-12 .field-name-body pre,
+  .node.node-page .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-page .row div.col-sm-12 .field-name-body table,
 .node.node-page .row div.col-sm-12 .field-name-body tr,
@@ -10565,10 +10635,33 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .node.node-page .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-page .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-page .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-page .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-page .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-page .row div.col-sm-12 .field-name-body embed,
 .node.node-page .row div.col-sm-12 .field-name-body video,
@@ -10577,6 +10670,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -10598,39 +10692,11 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 }
 .node-webform .row div.col-sm-12 .field-name-body h1,
 .node-webform .row div.col-sm-12 .field-name-body h2,
-.node-webform .row div.col-sm-12 .field-name-body h3,
-.node-webform .row div.col-sm-12 .field-name-body h4,
-.node-webform .row div.col-sm-12 .field-name-body h5,
-.node-webform .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .node-webform .row div.col-sm-12 .field-name-body h1,
-  .node-webform .row div.col-sm-12 .field-name-body h2,
-  .node-webform .row div.col-sm-12 .field-name-body h3,
-  .node-webform .row div.col-sm-12 .field-name-body h4,
-  .node-webform .row div.col-sm-12 .field-name-body h5,
-  .node-webform .row div.col-sm-12 .field-name-body h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node-webform .row div.col-sm-12 .field-name-body h1,
-  .node-webform .row div.col-sm-12 .field-name-body h2,
-  .node-webform .row div.col-sm-12 .field-name-body h3,
-  .node-webform .row div.col-sm-12 .field-name-body h4,
-  .node-webform .row div.col-sm-12 .field-name-body h5,
-  .node-webform .row div.col-sm-12 .field-name-body h6 {
-    font-size: 17px;
-  }
-}
-.node-webform .row div.col-sm-12 .field-name-body h1,
-.node-webform .row div.col-sm-12 .field-name-body h2,
 .node-webform .row div.col-sm-12 .field-name-body h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .node-webform .row div.col-sm-12 .field-name-body h1,
   .node-webform .row div.col-sm-12 .field-name-body h2,
   .node-webform .row div.col-sm-12 .field-name-body h3 {
@@ -10644,10 +10710,29 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
     font-size: 24px;
   }
 }
+.node-webform .row div.col-sm-12 .field-name-body h4,
+.node-webform .row div.col-sm-12 .field-name-body h5,
+.node-webform .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .node-webform .row div.col-sm-12 .field-name-body h4,
+  .node-webform .row div.col-sm-12 .field-name-body h5,
+  .node-webform .row div.col-sm-12 .field-name-body h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-webform .row div.col-sm-12 .field-name-body h4,
+  .node-webform .row div.col-sm-12 .field-name-body h5,
+  .node-webform .row div.col-sm-12 .field-name-body h6 {
+    font-size: 20px;
+  }
+}
 .node-webform .row div.col-sm-12 .field-name-body p,
-.node-webform .row div.col-sm-12 .field-name-body div,
 .node-webform .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -10656,37 +10741,69 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node-webform .row div.col-sm-12 .field-name-body p,
-  .node-webform .row div.col-sm-12 .field-name-body div,
   .node-webform .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node-webform .row div.col-sm-12 .field-name-body p,
+  .node-webform .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node-webform .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node-webform .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-webform .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node-webform .row div.col-sm-12 .field-name-body a:hover,
+.node-webform .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node-webform .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node-webform .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-webform .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node-webform .row div.col-sm-12 .field-name-body pre,
 .node-webform .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node-webform .row div.col-sm-12 .field-name-body pre,
   .node-webform .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node-webform .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node-webform .row div.col-sm-12 .field-name-body pre,
+  .node-webform .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node-webform .row div.col-sm-12 .field-name-body table,
 .node-webform .row div.col-sm-12 .field-name-body tr,
@@ -10694,10 +10811,33 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .node-webform .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node-webform .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node-webform .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-webform .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node-webform .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node-webform .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node-webform .row div.col-sm-12 .field-name-body embed,
 .node-webform .row div.col-sm-12 .field-name-body video,
@@ -10706,6 +10846,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -10755,39 +10896,11 @@ ul.webform-submission-actions li a:active {
 }
 .webform-confirmation h1,
 .webform-confirmation h2,
-.webform-confirmation h3,
-.webform-confirmation h4,
-.webform-confirmation h5,
-.webform-confirmation h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .webform-confirmation h1,
-  .webform-confirmation h2,
-  .webform-confirmation h3,
-  .webform-confirmation h4,
-  .webform-confirmation h5,
-  .webform-confirmation h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .webform-confirmation h1,
-  .webform-confirmation h2,
-  .webform-confirmation h3,
-  .webform-confirmation h4,
-  .webform-confirmation h5,
-  .webform-confirmation h6 {
-    font-size: 17px;
-  }
-}
-.webform-confirmation h1,
-.webform-confirmation h2,
 .webform-confirmation h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .webform-confirmation h1,
   .webform-confirmation h2,
   .webform-confirmation h3 {
@@ -10801,10 +10914,29 @@ ul.webform-submission-actions li a:active {
     font-size: 24px;
   }
 }
+.webform-confirmation h4,
+.webform-confirmation h5,
+.webform-confirmation h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .webform-confirmation h4,
+  .webform-confirmation h5,
+  .webform-confirmation h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation h4,
+  .webform-confirmation h5,
+  .webform-confirmation h6 {
+    font-size: 20px;
+  }
+}
 .webform-confirmation p,
-.webform-confirmation div,
 .webform-confirmation tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -10813,37 +10945,69 @@ ul.webform-submission-actions li a:active {
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .webform-confirmation p,
-  .webform-confirmation div,
   .webform-confirmation tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation p,
+  .webform-confirmation tbody td {
+    font-size: 17px;
+  }
+}
+.webform-confirmation a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .webform-confirmation a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation a {
+    font-size: 17px;
+  }
+}
+.webform-confirmation a:hover,
+.webform-confirmation a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .webform-confirmation li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .webform-confirmation li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation li {
+    font-size: 17px;
   }
 }
 .webform-confirmation pre,
 .webform-confirmation address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .webform-confirmation pre,
   .webform-confirmation address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.webform-confirmation hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .webform-confirmation pre,
+  .webform-confirmation address {
+    font-size: 17px;
+  }
 }
 .webform-confirmation table,
 .webform-confirmation tr,
@@ -10851,10 +11015,33 @@ ul.webform-submission-actions li a:active {
 .webform-confirmation td {
   border-color: #c9c9c9;
 }
+.webform-confirmation strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .webform-confirmation strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .webform-confirmation strong {
+    font-size: 19px;
+  }
+}
+.webform-confirmation hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .webform-confirmation img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .webform-confirmation embed,
 .webform-confirmation video,
@@ -10863,6 +11050,7 @@ ul.webform-submission-actions li a:active {
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -11386,12 +11574,12 @@ form.webform-client-form .webform-component.webform-component-markup h2 {
 }
 form.webform-client-form .webform-component.webform-component-markup p {
   font-family: 'SohoGothicProLight', serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 22px;
   text-align: left;
   color: #333333;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 42em) {
   form.webform-client-form .webform-component.webform-component-markup p {
     font-size: 2.08333333vw;
   }
@@ -12035,39 +12223,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3,
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h4,
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h5,
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h4,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h5,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h4,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h5,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h6 {
-    font-size: 17px;
-  }
-}
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h1,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h2,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h3 {
@@ -12081,10 +12241,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 24px;
   }
 }
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h4,
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h5,
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h4,
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h5,
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h4,
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h5,
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item h6 {
+    font-size: 20px;
+  }
+}
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item p,
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item div,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -12093,37 +12272,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item p,
-  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item div,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item p,
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item a {
+    font-size: 17px;
+  }
+}
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item a:hover,
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item li {
+    font-size: 17px;
   }
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item pre,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item pre,
   .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item pre,
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item address {
+    font-size: 17px;
+  }
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item table,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tr,
@@ -12131,10 +12342,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item td {
   border-color: #c9c9c9;
 }
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item strong {
+    font-size: 19px;
+  }
+}
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item embed,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item video,
@@ -12143,6 +12377,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -12264,39 +12499,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-brochure .row div.col-sm-12 .field-name-body h1,
 .node.node-brochure .row div.col-sm-12 .field-name-body h2,
-.node.node-brochure .row div.col-sm-12 .field-name-body h3,
-.node.node-brochure .row div.col-sm-12 .field-name-body h4,
-.node.node-brochure .row div.col-sm-12 .field-name-body h5,
-.node.node-brochure .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .node.node-brochure .row div.col-sm-12 .field-name-body h1,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h2,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h3,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h4,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h5,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-brochure .row div.col-sm-12 .field-name-body h1,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h2,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h3,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h4,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h5,
-  .node.node-brochure .row div.col-sm-12 .field-name-body h6 {
-    font-size: 17px;
-  }
-}
-.node.node-brochure .row div.col-sm-12 .field-name-body h1,
-.node.node-brochure .row div.col-sm-12 .field-name-body h2,
 .node.node-brochure .row div.col-sm-12 .field-name-body h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .node.node-brochure .row div.col-sm-12 .field-name-body h1,
   .node.node-brochure .row div.col-sm-12 .field-name-body h2,
   .node.node-brochure .row div.col-sm-12 .field-name-body h3 {
@@ -12310,10 +12517,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 24px;
   }
 }
+.node.node-brochure .row div.col-sm-12 .field-name-body h4,
+.node.node-brochure .row div.col-sm-12 .field-name-body h5,
+.node.node-brochure .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body h4,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h5,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body h4,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h5,
+  .node.node-brochure .row div.col-sm-12 .field-name-body h6 {
+    font-size: 20px;
+  }
+}
 .node.node-brochure .row div.col-sm-12 .field-name-body p,
-.node.node-brochure .row div.col-sm-12 .field-name-body div,
 .node.node-brochure .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -12322,37 +12548,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-brochure .row div.col-sm-12 .field-name-body p,
-  .node.node-brochure .row div.col-sm-12 .field-name-body div,
   .node.node-brochure .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body p,
+  .node.node-brochure .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body a:hover,
+.node.node-brochure .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-brochure .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-brochure .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-brochure .row div.col-sm-12 .field-name-body pre,
 .node.node-brochure .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-brochure .row div.col-sm-12 .field-name-body pre,
   .node.node-brochure .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-brochure .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body pre,
+  .node.node-brochure .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-brochure .row div.col-sm-12 .field-name-body table,
 .node.node-brochure .row div.col-sm-12 .field-name-body tr,
@@ -12360,10 +12618,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-brochure .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-brochure .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-brochure .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-brochure .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-brochure .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-brochure .row div.col-sm-12 .field-name-body embed,
 .node.node-brochure .row div.col-sm-12 .field-name-body video,
@@ -12372,6 +12653,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -12402,11 +12684,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin-top: 0;
   font-family: 'SohoGothicProBold', serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #333333;
   line-height: 1.5;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 42em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -12421,39 +12703,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 51em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -12467,10 +12721,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 16px;
   }
 }
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 51.42857142857143em) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body div,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -12479,37 +12752,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body div,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 14px;
+  }
+}
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 48em) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 14px;
+  }
+}
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+    font-size: 14px;
   }
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
   .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
 }
-.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+    font-size: 14px;
+  }
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
@@ -12517,10 +12822,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 16px;
+  }
+}
+.node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body video,
@@ -12529,6 +12857,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -12616,7 +12945,30 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
-.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 34em) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h4,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h4,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h5,
@@ -12624,75 +12976,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h6,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h6 {
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
+  font-size: 15px;
 }
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3,
+@media screen and (min-width: 36em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h4,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h5,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h6,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
+    font-size: 2.60416667vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h4,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h5,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h6,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
-.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
-.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
-}
-@media screen and (min-width: 39em) {
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
-    font-size: 2.08333333vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body p,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body p,
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body div,
-.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body div,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -12701,47 +13011,87 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body p,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body p,
-  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body div,
-  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body div,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body a,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a:hover,
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body a:focus,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body li,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body li,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body pre,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body pre,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body address,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body pre,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body pre,
   .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body address,
   .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body hr,
-.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table,
@@ -12753,11 +13103,38 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body strong,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body hr,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body img,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body embed,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body embed,
@@ -12770,6 +13147,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -12856,12 +13234,12 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-position-function .field-item,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-position-function .field-item {
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
   color: #494a4f;
   text-align: center;
 }
-@media screen and (min-width: 36.705882352941174em) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-position-function .field-item,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-position-function .field-item {
     font-size: 2.21354167vw;
@@ -12884,7 +13262,30 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
-.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 34em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h4,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h4,
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h5,
@@ -12892,75 +13293,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h6,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h6 {
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
+  font-size: 15px;
 }
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3,
+@media screen and (min-width: 36em) {
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h4,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h5,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h6,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
+    font-size: 2.60416667vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h4,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h5,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h6,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
-.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
-.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
-.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
-.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
-}
-@media screen and (min-width: 39em) {
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
-    font-size: 2.08333333vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body p,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body p,
-.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body div,
-.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body div,
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -12969,47 +13328,87 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body p,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body p,
-  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body div,
-  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body div,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body a,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body a:hover,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body a:focus,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body li,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body li,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body pre,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body pre,
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body address,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body pre,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body pre,
   .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body address,
   .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body hr,
-.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body table,
@@ -13021,11 +13420,38 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body strong,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body hr,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body img,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body embed,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body embed,
@@ -13038,6 +13464,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -13053,10 +13480,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   font-family: 'SohoGothicProLight', serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #333333;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 42em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -13110,39 +13537,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 51em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -13156,10 +13555,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 16px;
   }
 }
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 51.42857142857143em) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body div,
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -13168,37 +13586,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body div,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 14px;
+  }
+}
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 48em) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 14px;
+  }
+}
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+    font-size: 14px;
   }
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
   .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
 }
-.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+    font-size: 14px;
+  }
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
@@ -13206,10 +13656,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 16px;
+  }
+}
+.node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body video,
@@ -13218,6 +13691,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -13304,56 +13778,47 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 34em) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h4,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h5,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h6 {
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
+  font-size: 15px;
 }
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3,
+@media screen and (min-width: 36em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
+    font-size: 2.60416667vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
-}
-@media screen and (min-width: 39em) {
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-    font-size: 2.08333333vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body p,
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body div,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -13362,37 +13827,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body p,
-  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body div,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body pre,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body pre,
   .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body tr,
@@ -13400,10 +13897,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body embed,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body video,
@@ -13412,6 +13932,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -13436,10 +13957,10 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin: 15px;
   font-family: 'SohoGothicProLight', serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #333333;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 42em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -13485,39 +14006,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 51em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -13531,10 +14024,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 16px;
   }
 }
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 51.42857142857143em) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body div,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -13543,37 +14055,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body div,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 14px;
+  }
+}
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 48em) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 14px;
+  }
+}
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+    font-size: 14px;
   }
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
   .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
 }
-.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+    font-size: 14px;
+  }
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
@@ -13581,10 +14125,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 16px;
+  }
+}
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body video,
@@ -13593,6 +14160,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -13653,56 +14221,47 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 34em) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h4,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h5,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h6 {
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
+  font-size: 15px;
 }
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3,
+@media screen and (min-width: 36em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
+    font-size: 2.60416667vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
-}
-@media screen and (min-width: 39em) {
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-    font-size: 2.08333333vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body p,
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body div,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -13711,37 +14270,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body p,
-  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body div,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body pre,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body pre,
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body tr,
@@ -13749,10 +14340,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body embed,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body video,
@@ -13761,6 +14375,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -13807,11 +14422,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
   margin-top: 0;
   font-family: 'SohoGothicProBold', serif;
-  font-size: 13px;
+  font-size: 14px;
   color: #333333;
   line-height: 1.5;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 42em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
     font-size: 2.08333333vw;
   }
@@ -13826,39 +14441,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 51em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
@@ -13872,10 +14459,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 16px;
   }
 }
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 51.42857142857143em) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body div,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -13884,37 +14490,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body p,
-  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body div,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 14px;
+  }
+}
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 48em) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 14px;
+  }
+}
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+    font-size: 14px;
   }
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 48em) {
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 1.82291667vw;
   }
 }
-.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+    font-size: 14px;
+  }
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
@@ -13922,10 +14560,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 16px;
+  }
+}
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body video,
@@ -13934,6 +14595,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -14071,56 +14733,47 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 34em) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h4,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h5,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h6 {
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
+  font-size: 15px;
 }
-@media screen and (min-width: 44.57142857142857em) {
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3,
+@media screen and (min-width: 36em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-    font-size: 1.82291667vw;
+    font-size: 2.60416667vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h4,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h5,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h6 {
-    font-size: 14px;
-  }
-}
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-  font-size: 13px;
-}
-@media screen and (min-width: 39em) {
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-    font-size: 2.08333333vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h1,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h2,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body p,
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body div,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -14129,37 +14782,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body p,
-  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body div,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body pre,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body pre,
   .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tr,
@@ -14167,10 +14852,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body embed,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body video,
@@ -14179,6 +14887,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -14197,39 +14906,11 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body h1,
 .node.node-remote-form .row div.col-sm-12 .field-name-body h2,
-.node.node-remote-form .row div.col-sm-12 .field-name-body h3,
-.node.node-remote-form .row div.col-sm-12 .field-name-body h4,
-.node.node-remote-form .row div.col-sm-12 .field-name-body h5,
-.node.node-remote-form .row div.col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h1,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h2,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h3,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h4,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h5,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h1,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h2,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h3,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h4,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h5,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body h6 {
-    font-size: 17px;
-  }
-}
-.node.node-remote-form .row div.col-sm-12 .field-name-body h1,
-.node.node-remote-form .row div.col-sm-12 .field-name-body h2,
 .node.node-remote-form .row div.col-sm-12 .field-name-body h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .node.node-remote-form .row div.col-sm-12 .field-name-body h1,
   .node.node-remote-form .row div.col-sm-12 .field-name-body h2,
   .node.node-remote-form .row div.col-sm-12 .field-name-body h3 {
@@ -14243,10 +14924,29 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
     font-size: 24px;
   }
 }
+.node.node-remote-form .row div.col-sm-12 .field-name-body h4,
+.node.node-remote-form .row div.col-sm-12 .field-name-body h5,
+.node.node-remote-form .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body h4,
+  .node.node-remote-form .row div.col-sm-12 .field-name-body h5,
+  .node.node-remote-form .row div.col-sm-12 .field-name-body h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body h4,
+  .node.node-remote-form .row div.col-sm-12 .field-name-body h5,
+  .node.node-remote-form .row div.col-sm-12 .field-name-body h6 {
+    font-size: 20px;
+  }
+}
 .node.node-remote-form .row div.col-sm-12 .field-name-body p,
-.node.node-remote-form .row div.col-sm-12 .field-name-body div,
 .node.node-remote-form .row div.col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -14255,37 +14955,69 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-remote-form .row div.col-sm-12 .field-name-body p,
-  .node.node-remote-form .row div.col-sm-12 .field-name-body div,
   .node.node-remote-form .row div.col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body p,
+  .node.node-remote-form .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-remote-form .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-remote-form .row div.col-sm-12 .field-name-body a:hover,
+.node.node-remote-form .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-remote-form .row div.col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body pre,
 .node.node-remote-form .row div.col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .node.node-remote-form .row div.col-sm-12 .field-name-body pre,
   .node.node-remote-form .row div.col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.node.node-remote-form .row div.col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body pre,
+  .node.node-remote-form .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body table,
 .node.node-remote-form .row div.col-sm-12 .field-name-body tr,
@@ -14293,10 +15025,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 .node.node-remote-form .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.node.node-remote-form .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-remote-form .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-remote-form .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .node.node-remote-form .row div.col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body embed,
 .node.node-remote-form .row div.col-sm-12 .field-name-body video,
@@ -14305,6 +15060,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
@@ -15476,39 +16232,11 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 13px;
-}
-@media screen and (min-width: 36.705882352941174em) {
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
-    font-size: 17px;
-  }
-}
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
-  font-size: 15px;
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
 }
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 34em) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h1,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h2,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h3 {
@@ -15522,10 +16250,29 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
     font-size: 24px;
   }
 }
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h4,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h5,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body h6 {
+    font-size: 20px;
+  }
+}
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body div,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
-  font-family: 'SohoGothicProLight', serif;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -15534,37 +16281,69 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   -o-hyphens: auto;
   hyphens: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
-  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body div,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body p,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body a:hover,
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body li {
-    font-size: 16px;
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body li {
+    font-size: 17px;
   }
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body pre,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
-  font-family: 'SohoGothicProLightItalic' serif;
+  font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 39.529411764705884em) {
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body pre,
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
-    font-size: 16px;
+    font-size: 2.21354167vw;
   }
 }
-.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body hr {
-  border: 0;
-  border-bottom: 2px solid #c9c9c9;
-  background: none;
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body pre,
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body table,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tr,
@@ -15572,10 +16351,33 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body img {
   display: block;
-  height: auto;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body embed,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body video,
@@ -15584,6 +16386,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   display: block;
   overflow: hidden;
   margin: 20px auto;
+  padding: 15px;
   width: 80% !important;
   max-width: 100%;
   height: auto;
