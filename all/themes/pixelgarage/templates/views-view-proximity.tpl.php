@@ -13,11 +13,16 @@
 
   <?php foreach ($rows as $id => $row): ?>
     <?php if (isset($testimonials[$id])): ?>
-      <div class="pe-item">
-        <div class="pe-item-inner">
-          <?php print render($testimonials[$id]); ?>
+      <?php foreach ($testimonials[$id] as $key => $testimonial): ?>
+        <div class="pe-item pe-item-ajax <?php print 'pe-item-' . $key; ?>">
+          <div class="pe-item-inner">
+            <!-- modal trigger -->
+            <a class="button" role="button" href="<?php print $item_base_url . $key; ?>" data-ajax-load-param="<?php print $key; ?>" <?php print drupal_attributes($toggle_attributes); ?>>
+              <?php print render($testimonial); ?>
+            </a>
+         </div>
         </div>
-      </div>
+      <?php endforeach; ?>
 
     <?php endif; ?>
 

@@ -12811,6 +12811,240 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 @media screen and (min-width: 768px) {
 }
+.node.node-testimonial.view-mode-full .row div.col-sm-12,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 {
+  position: relative;
+  width: 100%;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-picture,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-picture {
+  margin: 0 0 20px;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-picture .field-item img,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-picture .field-item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-title h2,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-title h2 {
+  margin: 0;
+  padding: 15px 0;
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 18.75px;
+  color: #333333;
+  text-align: center;
+}
+@media screen and (min-width: 30em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-title h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-title h2 {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-title h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-title h2 {
+    font-size: 30px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-position-function,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-position-function {
+  margin: 10px 0 20px;
+  width: 100%;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-position-function .field-item,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-position-function .field-item {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+  text-align: left;
+  color: #494a4f;
+  text-align: center;
+}
+@media screen and (min-width: 36.705882352941174em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-position-function .field-item,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-position-function .field-item {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-field-position-function .field-item,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-field-position-function .field-item {
+    font-size: 17px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body {
+  margin: 0 0 20px;
+  color: #494a4f;
+  text-align: center;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h4,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h4,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h5,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h5,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h6,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 13px;
+}
+@media screen and (min-width: 44.57142857142857em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h4,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h4,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h5,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h5,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h6,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h4,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h4,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h5,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h5,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h6,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+  font-size: 13px;
+}
+@media screen and (min-width: 39em) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 16px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body p,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body p,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body div,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body div,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 480px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body div,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body div,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 16px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body li,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body li {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 480px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body li {
+    font-size: 16px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body pre,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body pre,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body address,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body address {
+  font-family: 'SohoGothicProLightItalic' serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 480px) {
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body address {
+    font-size: 16px;
+  }
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body hr,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #c9c9c9;
+  background: none;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body table,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tr,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tr,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body th,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body th,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body td,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body td {
+  border-color: #c9c9c9;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body img,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body embed,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body embed,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body video,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body video,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body audio,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body audio,
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body iframe,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 80% !important;
+  max-width: 100%;
+  height: auto;
+  min-height: 350px;
+}
+@media screen and (min-width: 768px) {
+}
 /*
  *  Node video component
  * --------------------------------------------------*/

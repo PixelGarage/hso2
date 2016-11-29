@@ -201,8 +201,8 @@ function _random_testimonials() {
   $keys = array_rand($testimonials, 2);
   $i1 = mt_rand(0, 9);
   return array(
-    0 => node_view($testimonials[$keys[0]], 'teaser'),
-    $i1 => node_view($testimonials[$keys[1]], 'teaser'),
+    0 => array($keys[0] => node_view($testimonials[$keys[0]], 'teaser')),
+    $i1 => array($keys[1] => node_view($testimonials[$keys[1]], 'teaser')),
   );
 }
 
