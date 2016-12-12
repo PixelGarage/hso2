@@ -104,22 +104,22 @@ function pixelgarage_preprocess_page(&$vars) {
   // set segment logo
   $contexts = context_active_contexts();
   if (array_key_exists('kv-college', $contexts) || array_key_exists('kv-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'kv_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'kv_logo.svg', $vars['logo']);
   }
   if (array_key_exists('hs-college', $contexts) || array_key_exists('hs-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'hs_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'hs_logo.svg', $vars['logo']);
   }
   if (array_key_exists('ks-college', $contexts) || array_key_exists('ks-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'ks_logo.svg', $vars['logo']);
   }
   if (array_key_exists('hf-college', $contexts) || array_key_exists('hf-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'hf_logo.svg', $vars['logo']);
   }
   if (array_key_exists('fh-college', $contexts) || array_key_exists('fh-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'ks_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'fh_logo.svg', $vars['logo']);
   }
   if (array_key_exists('ex-college', $contexts) || array_key_exists('ex-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'ex_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'ex_logo.svg', $vars['logo']);
   }
   // replace logo with .svg
   $vars['logo'] = str_replace(array('.jpg', '.png'), '.svg', $vars['logo']);
@@ -240,9 +240,11 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
       // add main titles
       if ($course_subject == 'Management und Organisation') {
-        $vars['course_subject_titles'][$key] = 'Berufsakademie';
+        $vars['course_subject_titles'][$key] = 'Kaderschule';
       } else if ($course_subject == 'Diplomstudium HF') {
         $vars['course_subject_titles'][$key] = 'Höhere Fachschule für Wirtschaft';
+      } else if ($course_subject == 'Bachelor-Studium') {
+        $vars['course_subject_titles'][$key] = 'Fachhochschule';
       } else {
         $vars['course_subject_titles'][$key] = '';
       }
