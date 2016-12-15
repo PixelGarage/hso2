@@ -5,6 +5,11 @@
         <h1><?php print $course_subject_titles[$key] ?></h1>
       </div>
     <?php endif; ?>
+    <?php if (!empty($course_subject_description[$key])): ?>
+      <div class="main-description">
+        <?php print $course_subject_description[$key] ?>
+      </div>
+    <?php endif; ?>
 
     <?php if (!empty($course_subjects[$key])): ?>
       <div class="course-subject">

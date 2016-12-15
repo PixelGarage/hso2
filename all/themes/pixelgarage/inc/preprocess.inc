@@ -116,7 +116,7 @@ function pixelgarage_preprocess_page(&$vars) {
     $vars['logo'] = str_replace('logo.png', 'hf_logo.png', $vars['logo']);
   }
   if (array_key_exists('fh-college', $contexts) || array_key_exists('fh-college-home', $contexts)) {
-    $vars['logo'] = str_replace('logo.png', 'fh_logo.png', $vars['logo']);
+    $vars['logo'] = str_replace('logo.png', 'hfh_logo.svg', $vars['logo']);
   }
   if (array_key_exists('ex-college', $contexts) || array_key_exists('ex-college-home', $contexts)) {
     $vars['logo'] = str_replace('logo.png', 'ex_logo.svg', $vars['logo']);
@@ -180,6 +180,10 @@ function pixelgarage_preprocess_views_exposed_form(&$vars) {
  * in the masonry.
  */
 function pixelgarage_preprocess_views_view_proximity (&$vars) {
+  $view = $vars['view'];
+  if ($view->name != 'social_masonry') return;
+
+  // add testimonials for the social masonry
   $vars['testimonials'] = _random_testimonials();
 }
 
@@ -240,13 +244,17 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
       // add main titles
       if ($course_subject == 'Management und Organisation') {
-        $vars['course_subject_titles'][$key] = 'Kaderschule';
+        $vars['course_subject_titles'][$key] = t('Kaderschule');
+        $vars['course_subject_description'][$key] = '';
       } else if ($course_subject == 'Diplomstudium HF') {
-        $vars['course_subject_titles'][$key] = 'Höhere Fachschule für Wirtschaft';
+        $vars['course_subject_titles'][$key] = t('Höhere Fachschule für Wirtschaft');
+        $vars['course_subject_description'][$key] = '';
       } else if ($course_subject == 'Bachelor-Studium') {
-        $vars['course_subject_titles'][$key] = 'Fachhochschule';
+        $vars['course_subject_titles'][$key] = t('Fachhochschule HFH');
+        $vars['course_subject_description'][$key] = t('HFH ist ein bekannter Abschluss');
       } else {
         $vars['course_subject_titles'][$key] = '';
+        $vars['course_subject_description'][$key] = '';
       }
 
     } else {
