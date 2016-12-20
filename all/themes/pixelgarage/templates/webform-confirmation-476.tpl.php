@@ -26,8 +26,8 @@ if ($course_time_nid) {
 <div class="webform-confirmation">
   <p>Besten Dank für Ihre Anmeldung.<p>
   <ul>
-    <li>Die <a target="_blank" href="<?php print $pdf_link; ?>">Reservationsbestätigung (PDF)</a> können Sie nun herunterladen</li>
-    <li>Per E-Mail erhalten Sie dieselbe Reservationsbestätigung in einigen Minuten zugestellt</li>
+    <li>Die <a target="_blank" href="<?php print $pdf_link; ?>">Anmeldebestätigung (PDF)</a> können Sie nun herunterladen</li>
+    <li>Per E-Mail erhalten Sie dieselbe Anmeldebestätigung in einigen Minuten zugestellt</li>
   </ul>
   <h2>Anmeldenummer</h2>
   <p>Und dies ist Ihre Anmeldenummer: <b><?php echo str_pad($sid, 6, '0', STR_PAD_LEFT); ?></b><br />
@@ -42,7 +42,7 @@ if ($course_time_nid) {
   <p>Wollen Sie Ihre Anmeldung rückgängig machen, nehmen Sie bitte telefonisch mit uns
   	Kontakt auf.</p>
 
-  <p><a href="<?php print url('node/' . $course->nid); ?>">Zurück zur Übersicht Informatik ECDL</a></p>
+  <p><a href="<?php print url('node/' . $course->nid); ?>">Zurück zu Informatik ECDL</a></p>
 </div>
 
 <?php if ($course_time_nid): ?>
