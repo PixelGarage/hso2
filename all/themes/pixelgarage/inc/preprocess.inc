@@ -251,7 +251,9 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
         $vars['course_subject_description'][$key] = '';
       } else if ($course_subject == 'Bachelor-Studium') {
         $vars['course_subject_titles'][$key] = t('Fachhochschule HFH');
-        $vars['course_subject_description'][$key] = t('HFH ist ein bekannter Abschluss');
+        $vars['course_subject_description'][$key] =
+          t('Mit der <a href="@hfh_url" target="_blank">Hamburger Fern-Hochschule</a> führen wir eine Exklusivität in der Schweizer Wirtschaftsbildung: An der HSO haben Sie die Möglichkeit (ohne Berufsmatura), integral im HFW-Diplomstudium exakt abgestimmte Module des Fachhochschulprogramms zu absolvieren. So schliessen Sie nach insgesamt 4½ Jahren den nach Bologna-Richtlinien anerkannten Bachelor of Arts in Betriebswirt­schaft ab. Dabei erreichen Sie nach dem 1. Jahr den Zwischenabschluss Höheres Wirtschaftsdiplom VSK/HWD, nach 3 Jahren den eidge­nössisch geschützten «Dipl. Betriebswirtschafter / -in HF» und ab dem 4. Studienjahr konzentrieren Sie sich auf die restlichen Bachelor-Module und erlangen damit den Bachelor of Arts in Betriebswirtschaft (180 ECTS).',
+            array('@hfh_url' => 'http://www.hamburger-fh.de/'));
       } else {
         $vars['course_subject_titles'][$key] = '';
         $vars['course_subject_description'][$key] = '';
