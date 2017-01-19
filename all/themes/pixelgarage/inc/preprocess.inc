@@ -201,7 +201,14 @@ function _random_testimonials() {
     }
   }
 
-  // return a random testimonial
+  // return a random testimonial list
+  if (count($testimonials) <= 1) {
+    $ret = array();
+    foreach ($testimonials as $key => $testimonial) {
+      $ret[] = array($key => node_view($testimonial, 'teaser'));
+    }
+    return $ret;
+  }
   $keys = array_rand($testimonials, 2);
   $i1 = mt_rand(0, 9);
   return array(
