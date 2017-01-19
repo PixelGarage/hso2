@@ -14896,6 +14896,507 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 @media screen and (min-width: 768px) {
 }
 /*
+ *  Node instagram component
+ * --------------------------------------------------*/
+.node.node-instagram.view-mode-teaser {
+  padding: 20px;
+  background-color: #ebebeb;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 {
+  width: 100%;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-field-picture {
+  margin: -20px -20px 20px;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-field-picture .field-item img {
+  width: 100%;
+  height: auto;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-title {
+  display: none;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
+  margin-top: 0;
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+}
+@media screen and (min-width: 42em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-title h2 {
+    font-size: 16px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body {
+  color: #494a4f;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 51em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h1,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h2,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h3 {
+    font-size: 16px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 51.42857142857143em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h4,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h5,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 48em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body p,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 14px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 48em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body a {
+    font-size: 14px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body a:hover,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body li {
+    font-size: 14px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+  font-family: 'SohoGothicProThin' serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body pre,
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body address {
+    font-size: 14px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body table,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body th,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body td {
+  border-color: #c9c9c9;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body strong {
+    font-size: 16px;
+  }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body img {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body video,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body audio,
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 15px;
+  width: 80% !important;
+  max-width: 100%;
+  height: auto;
+  min-height: 350px;
+}
+@media screen and (min-width: 768px) {
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time {
+  margin-right: -20px;
+  padding: 10px;
+  width: 100%;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time .field-item {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 10px;
+  text-align: right;
+  color: #929295;
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-field-created-time .field-item:after {
+  content: '\f16d';
+  font-family: 'fontawesome';
+  font-size: 16px;
+  margin-left: 10px;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12,
+.node.node-instagram.view-mode-default .row div.col-sm-12 {
+  width: 100%;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-title,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-title {
+  display: none;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-title h2,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-title h2 {
+  margin: 0;
+  padding: 15px 0;
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 18.75px;
+  color: #333333;
+}
+@media screen and (min-width: 30em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-title h2,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-title h2 {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-title h2,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-title h2 {
+    font-size: 30px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-field-created-time,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-field-created-time {
+  margin: 10px 0 20px;
+  width: 100%;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-field-created-time .field-item,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-field-created-time .field-item {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 12px;
+  text-align: right;
+  line-height: 1;
+  color: #929295;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-field-created-time .field-item:before,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-field-created-time .field-item:before {
+  content: '\f16d';
+  font-family: 'fontawesome';
+  font-size: 16px;
+  margin-right: 10px;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-field-picture,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-field-picture {
+  margin: 0 0 20px;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-field-picture .field-item img,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-field-picture .field-item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body {
+  margin: 0 0 20px;
+  color: #494a4f;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h1,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h1,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h2,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h2,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 34em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h3 {
+    font-size: 24px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h4,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h4,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h5,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h5,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h6,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 36em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h4,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h4,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h5,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h5,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h6,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h6 {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h4,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h4,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h5,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h5,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body h6,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body h6 {
+    font-size: 20px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body p,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body p,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
+    font-size: 17px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body a,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body a {
+    font-size: 17px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body a:hover,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body a:focus,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body li,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body li {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body li {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body li {
+    font-size: 17px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body pre,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body pre,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body address,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body address {
+  font-family: 'SohoGothicProThin' serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 39.529411764705884em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body address {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body address {
+    font-size: 17px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body table,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body tr,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body tr,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body th,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body th,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body td,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body td {
+  border-color: #c9c9c9;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body strong,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 40.421052631578945em) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body strong {
+    font-size: 2.47395833vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body strong {
+    font-size: 19px;
+  }
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body hr,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body img,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body img {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body embed,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body embed,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body video,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body video,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body audio,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body audio,
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body iframe,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 15px;
+  width: 80% !important;
+  max-width: 100%;
+  height: auto;
+  min-height: 350px;
+}
+@media screen and (min-width: 768px) {
+}
+/*
  *  Node remoteform component
  * --------------------------------------------------*/
 .node.node-remote-form {
