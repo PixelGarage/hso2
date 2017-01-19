@@ -42,7 +42,6 @@ class FeedsFacebookParser extends FeedsParser {
           'comments_count' => (isset($entry->comments) ? $entry->comments->count : 0),
           'comments' => (isset($entry->comments) ? json_encode($entry->comments) : ''),
           'created_time' => $entry->created_time,
-          'updated_time' => $entry->updated_time,
         );
       }
     }
@@ -134,10 +133,6 @@ class FeedsFacebookParser extends FeedsParser {
       ),            
       'created_time' => array(
         'name' => t('Created time'),
-        'description' => t('Date/time'),
-      ),
-      'updated_time' => array(
-        'name' => t('Updated time'),
         'description' => t('Date/time'),
       ),
     );
