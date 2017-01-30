@@ -9646,7 +9646,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content embed,
@@ -10660,7 +10659,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-page .row div.col-sm-12 .field-name-body embed,
@@ -10836,7 +10834,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node-webform .row div.col-sm-12 .field-name-body embed,
@@ -11040,7 +11037,6 @@ ul.webform-submission-actions li a:active {
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .webform-confirmation embed,
@@ -12367,7 +12363,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item embed,
@@ -12643,7 +12638,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-brochure .row div.col-sm-12 .field-name-body embed,
@@ -12847,7 +12841,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
@@ -13133,7 +13126,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -13450,7 +13442,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -13681,7 +13672,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-video.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
@@ -13922,7 +13912,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -14150,7 +14139,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
@@ -14365,7 +14353,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -14585,7 +14572,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
@@ -14877,7 +14863,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -15081,7 +15066,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body embed,
@@ -15374,7 +15358,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body embed,
@@ -15551,7 +15534,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body embed,
@@ -16884,7 +16866,6 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   margin: 20px auto;
   padding: 0;
   max-width: 100%;
-  width: auto;
   height: auto;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body embed,
