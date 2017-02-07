@@ -16257,7 +16257,6 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
     display: block;
     margin: 0;
     width: 100%;
-    height: 34px;
     text-align: left;
     z-index: 10;
   }
@@ -16348,7 +16347,7 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
     vertical-align: top;
     margin: 0 0 0 -6.8%;
     width: 65%;
-    height: 306px;
+    height: 356px;
     border: 1px solid #6d6e72;
   }
   .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane {
