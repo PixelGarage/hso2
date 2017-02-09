@@ -135,7 +135,7 @@
       }
 
       @media @tablet {
-        width: 33.33333%;
+        width: 50%;
 
         .node-call2action {
           .row {
@@ -153,6 +153,8 @@
       }
 
       @media @normal {
+        width: 25%;
+
         .node-call2action {
           .row {
             .col-sm-12 {
@@ -170,10 +172,10 @@
       &.call2action-brochure {
         .field-name-field-icon {
           .field-item {
-            min-height: 95px;
+            min-height: 83px;
             //width: 79px;
             width: 30%;
-            background: url(../images/icon_broschure.svg) no-repeat top center/contain;
+            background: url(../images/icon_broschure.svg) no-repeat center center/contain;
           }
         }
       }
@@ -183,23 +185,27 @@
             min-height: 83px;
             //width: 83px;
             width: 30%;
-            background: url(../images/icon_beratung.svg) no-repeat top center/contain;
+            background: url(../images/icon_beratung.svg) no-repeat center center/contain;
           }
         }
       }
       &.call2action-bildungsweg {
-        display: none;
-
-        @media @tablet {
-          display: inline-block;
-        }
-
         .field-name-field-icon {
           .field-item {
             min-height: 67px;
             //width: 121px;
             width: 40%;
             background: url(../images/icon_bildungsweg.svg) no-repeat top center/contain;
+          }
+        }
+      }
+      &.call2action-info {
+        .field-name-field-icon {
+          .field-item {
+            min-height: 83px;
+            //width: 83px;
+            width: 30%;
+            background: url(../images/icon_info.svg) no-repeat top center/contain;
           }
         }
       }

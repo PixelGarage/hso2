@@ -204,6 +204,7 @@ function _hso_importer_brand_import($hso_importer, $brand_id, $departments_mappi
           $course_times_processed += count($course_times);
 
           // only enable course when course times are available for it
+          $course->has_info_events = _hso_course_has_infoevents($course_times);
           $course_nid = _hso_process_course($course);
           $courses_updated++;
 
@@ -252,7 +253,13 @@ function _hso_importer_brand_import($hso_importer, $brand_id, $departments_mappi
             _hso_cleanup_contacts($imported_contacts, $course_nid);
           } // end contacts
 
-        } // end course times
+        }
+        else {
+          // create or update course, but as disabled with no course times
+          $course->has_info_events = 0;
+          _hso_process_course($course, 0);
+          $courses_updated++;
+        }
 
       }
 
@@ -415,6 +422,18 @@ function _hso_unpublish_imported_courses() {
 }
 
 /**
+ * Returns a flag indicating the existence of a information event (course time with temoplate infoevent).
+ */
+function _hso_course_has_infoevents($course_times) {
+  foreach ($course_times as $course_time) {
+    if ($course_time->template == 'infoevent') {
+      return 1;
+    }
+  }
+  return 0;
+}
+
+/**
  * Cleans up all course times in the db which are not used anymore or outdated.
  *
  * @param $imported_course_times  array   All imported course times
@@ -529,7 +548,7 @@ function _hso_process_location($location) {
  * @return mixed  Node ID
  * @throws \Exception
  */
-function _hso_process_course($course) {
+function _hso_process_course($course, $status = 1) {
   // update an imported course only once
   static $already_processed = array();
   if (array_key_exists($course->id, $already_processed)) {
@@ -546,13 +565,13 @@ function _hso_process_course($course) {
   if (isset($result['node'])) {
     // Update existing
     $node = node_load(key($result['node']));
-    $node->status = 1;
+    $node->status = $status;
   } else {
     $node = new stdClass();
     $node->type = 'course';
     $node->language = LANGUAGE_NONE;
     $node->uid = 1;
-    $node->status = 1;
+    $node->status = $status;
     node_object_prepare($node);
   }
 
@@ -563,6 +582,7 @@ function _hso_process_course($course) {
     $node->field_segment[LANGUAGE_NONE][0]['tid'] = $course->segment_tid;
   }
   $node->field_is_module[LANGUAGE_NONE][0]['value'] = !empty($course->is_module) ? 1 : 0;
+  $node->field_has_info_events[LANGUAGE_NONE][0]['value'] = isset($course->has_info_events) ? $course->has_info_events : 0;
   if (!empty($course->meta->title)) {
     $node->metatags['title']['value'] = $course->meta->title;
   }
@@ -730,7 +750,7 @@ function _hso_process_course_time($time) {
   $time->taken_places = !empty($time->taken_places) ? $time->taken_places : 0;
   $time->min_places = !empty($time->min_places) ? $time->min_places : 0;
   $time->max_places = !empty($time->max_places) ? $time->max_places : NULL;
-  $time->template = !empty($time->template) && in_array($time->template, array('ecdl', 'european', 'salesfunnel')) ? $time->template : 'default';
+  $time->template = !empty($time->template) && in_array($time->template, array('ecdl', 'european', 'infoevent', 'salesfunnel')) ? $time->template : 'default';
   $time->brand_tid = _hso_brands_id_converter($time->brand_id);
 
   // compare objects

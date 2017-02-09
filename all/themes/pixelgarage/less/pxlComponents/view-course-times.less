@@ -57,7 +57,7 @@
 
             select {
               #pxl-mixins.no-appearance;
-              padding: 0 10px;
+              padding: 0 25px 0 10px;
               height: auto;
               font-family: @pxl-text-font-light;
               font-size: @font-size-base;
@@ -105,6 +105,17 @@
 
     table {
       width: 100%;
+
+      caption {
+        // Header for grouped tables
+        margin: 15px 0 0;
+        padding: 20px 0 24px;
+        font-family: @pxl-text-font-medium;
+        font-size: @font-size-base + 2;
+        color: @text-color;
+        line-height: 1;
+        border-top: 1px solid @pxl-border-color;
+      }
 
       thead {
         tr {

@@ -29,6 +29,11 @@ define('ANMELDUNG_ECDL', 476);
 define('ANMELDUNG_EURO', 475);
 
 /**
+ * Informationsanlässe Anmeldungs form.
+ */
+define('ANMELDUNG_INFO', 35254);
+
+/**
  * Kontakt form.
  */
 define('KONTAKT_FORM', 1052); // HSO: 1052
@@ -228,6 +233,12 @@ function hso_anmeldung_mail_alter(&$message)
             if ($course && $location) {
               $contact = _hso_get_contact($course->nid, $location->nid);
             }
+            $address = '';
+            if ($location) {
+              $address .= $location->field_address[LANGUAGE_NONE][0]['thoroughfare'] . "\n";
+              $address .= $location->field_address[LANGUAGE_NONE][0]['postal_code'] . ' ';
+              $address .= $location->field_address[LANGUAGE_NONE][0]['locality'];
+            }
             // assign mail tokens
             $to_search = array(
               '%log_id%' => $message['params']['submission']->sid,
@@ -235,6 +246,7 @@ function hso_anmeldung_mail_alter(&$message)
               '%course_title%' => $course->title,
               '%segment_name%' => $segment ? $segment->name : '-',
               '%location_name%' => $location ? $location->title : '-',
+              '%location_address%' => $address,
               '%course_time_start_date%' => date('d.m.Y', strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value'])),
               '%course_time_start_time%' => date('H:i', strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value'])),
               '%course_time_end_date%' => $course_time_node->field_course_date[LANGUAGE_NONE][0]['value2'] ? date('d.m.Y', strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value2'])) : '-',
@@ -328,6 +340,10 @@ function _hso_get_agb_file() {
 function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $course, $course_time_node, $webform_components, $submission, $submission_sid, $to_client)
 {
   $template = $course_time_node->field_template[LANGUAGE_NONE][0]['value'];
+  //
+  // do not create a PDF for info events
+  if ($template == 'infoevent') return;
+
   $to_search = array();
   $additional_fields = array();
   $mod_count = 0;
@@ -550,7 +566,8 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id)
       }
     }
 
-  } else if ($form_id == 'webform_client_form_264' || $form_id == 'webform_client_form_475' || $form_id == 'webform_client_form_476') {
+  } else if ($form_id == 'webform_client_form_' . ANMELDUNG_DEFAULT || $form_id == 'webform_client_form_' . ANMELDUNG_EURO ||
+    $form_id == 'webform_client_form_' . ANMELDUNG_ECDL || $form_id == 'webform_client_form_' . ANMELDUNG_INFO) {
     // extend all anmeldungs-forms (default, european, ecdl),
     // but only if they are shown (url = node/nid/anmeldung)
     if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'anmeldung') {
@@ -567,8 +584,8 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id)
     }
 
     // prepare to alter form with additional course time info's
-    $course = node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']);
     $form['submitted']['course_times_nid']['#value'] = $course_time_node->nid;
+    $course = node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']);
     $segment = !empty($course->field_segment) ? taxonomy_term_load($course->field_segment[LANGUAGE_NONE][0]['tid']) : FALSE;
     $agb_nid = AGB_NID;
 
@@ -579,30 +596,36 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id)
 
     // add additional price details
     $text = '';
-    if (!empty($course_time_node->field_detailed_price) && !empty($course_time_node->field_detailed_price[LANGUAGE_NONE][0]['value'])) {
-      $text = $course_time_node->field_detailed_price[LANGUAGE_NONE][0]['value'];
+    if (isset($form['submitted']['markup'])) {
+      if (!empty($course_time_node->field_detailed_price) && !empty($course_time_node->field_detailed_price[LANGUAGE_NONE][0]['value'])) {
+        $text = $course_time_node->field_detailed_price[LANGUAGE_NONE][0]['value'];
+      }
+      if (!empty($course_time_node->field_additional_info_price) && !empty($course_time_node->field_additional_info_price[LANGUAGE_NONE][0]['value'])) {
+        $text .= $course_time_node->field_additional_info_price[LANGUAGE_NONE][0]['value'];
+      }
+      $form['submitted']['markup']['#markup'] = $text;
     }
-    if (!empty($course_time_node->field_additional_info_price) && !empty($course_time_node->field_additional_info_price[LANGUAGE_NONE][0]['value'])) {
-      $text .= $course_time_node->field_additional_info_price[LANGUAGE_NONE][0]['value'];
-    }
-    $form['submitted']['markup']['#markup'] = $text;
 
     // add Anmeldungs conditions
-    if ($form_id == 'webform_client_form_' . ANMELDUNG_ECDL) {
-      // ecdl form
-      $text = 'Ich habe die ' . l('Allgemeinen Geschäftsbedingungen (AGB)', 'node/' . $agb_nid, array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
-        ' gelesen und bin mir &#252;ber die Kosten von <strong id="agb_costs">CHF 0.--</strong> bewusst, ' .
-        'welche mir auch bei Nicht-Erscheinen zum Pr&#252;fungstermin verrechnet werden.';
+    if (isset($form['submitted']['agbcheck'])) {
+      if ($form_id == 'webform_client_form_' . ANMELDUNG_ECDL) {
+        // ecdl form
+        $text = 'Ich habe die ' . l('Allgemeinen Geschäftsbedingungen (AGB)', 'node/' . $agb_nid, array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
+          ' gelesen und bin mir &#252;ber die Kosten von <strong id="agb_costs">CHF 0.--</strong> bewusst, ' .
+          'welche mir auch bei Nicht-Erscheinen zum Pr&#252;fungstermin verrechnet werden.';
 
-    } else {
-      // default & european form
-      // add agb text
-      $text = '* <strong>Ich habe die ' .
-        l('Allgemeinen Geschäftsbedingungen sowie die Preisliste (AGB / Preislisten)', 'node/' . $agb_nid, array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
-        ' gelesen und bin damit einverstanden.</strong><br />';
+      } else {
+        // default & european form
+        // add agb text
+        $text = '* <strong>Ich habe die ' .
+          l('Allgemeinen Geschäftsbedingungen sowie die Preisliste (AGB / Preislisten)', 'node/' . $agb_nid, array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
+          ' gelesen und bin damit einverstanden.</strong><br />';
 
+      }
+      $form['submitted']['agbcheck']['#options'][1] = $text;
     }
-    $form['submitted']['agbcheck']['#options'][1] = $text;
+
+    // show/hide fields
     _hso_anmeldung_check_form_fields($form['submitted'], $course);
   }
 }

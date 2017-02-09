@@ -3,6 +3,9 @@
     <li class="active">
       <a href="#tab-startdaten" data-toggle="tab">Startdaten</a>
     </li>
+    <li>
+      <a href="#tab-info-events" data-toggle="tab">Informationsanlässe</a>
+    </li>
     <?php foreach ($tabs as $key => $tab): ?>
      <li>
        <a href="#tab-<?php print "{$id}-{$key}" ?>" data-toggle="tab"><?php print $tab ?></a>
@@ -12,6 +15,9 @@
   <div class="tab-content">
     <div class="tab-pane active" id="tab-startdaten">
       <?php print views_embed_view('course_times'); ?>
+    </div>
+    <div class="tab-pane" id="tab-info-events">
+      <?php print views_embed_view('course_times', 'block_info_events'); ?>
     </div>
     <?php foreach ($rows as $key => $row): ?>
       <div class="tab-pane" id="tab-<?php print "{$id}-{$key}" ?>">

@@ -15742,7 +15742,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 @media screen and (min-width: 768px) {
   .view.view-call2action .view-content .views-row {
-    width: 33.33333%;
+    width: 50%;
   }
   .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
     padding: 0 4.5%;
@@ -15752,33 +15752,33 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   }
 }
 @media screen and (min-width: 1024px) {
+  .view.view-call2action .view-content .views-row {
+    width: 25%;
+  }
   .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
     bottom: 55%;
     width: 100%;
   }
 }
 .view.view-call2action .view-content .views-row.call2action-brochure .field-name-field-icon .field-item {
-  min-height: 95px;
+  min-height: 83px;
   width: 30%;
-  background: url(../images/icon_broschure.svg) no-repeat top center / contain;
+  background: url(../images/icon_broschure.svg) no-repeat center center / contain;
 }
 .view.view-call2action .view-content .views-row.call2action-beratung .field-name-field-icon .field-item {
   min-height: 83px;
   width: 30%;
-  background: url(../images/icon_beratung.svg) no-repeat top center / contain;
-}
-.view.view-call2action .view-content .views-row.call2action-bildungsweg {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .view.view-call2action .view-content .views-row.call2action-bildungsweg {
-    display: inline-block;
-  }
+  background: url(../images/icon_beratung.svg) no-repeat center center / contain;
 }
 .view.view-call2action .view-content .views-row.call2action-bildungsweg .field-name-field-icon .field-item {
   min-height: 67px;
   width: 40%;
   background: url(../images/icon_bildungsweg.svg) no-repeat top center / contain;
+}
+.view.view-call2action .view-content .views-row.call2action-info .field-name-field-icon .field-item {
+  min-height: 83px;
+  width: 30%;
+  background: url(../images/icon_info.svg) no-repeat top center / contain;
 }
 /*
  *  Social-masonry view component
@@ -16927,7 +16927,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0 10px;
+  padding: 0 25px 0 10px;
   height: auto;
   font-family: 'SohoGothicProLight', serif;
   font-size: 16px;
@@ -16991,6 +16991,16 @@ body.excollege_section .view.view-course-times-search .view-filters .views-expos
 .view.view-course-times .view-content table,
 .view.view-course-times-search .view-content table {
   width: 100%;
+}
+.view.view-course-times .view-content table caption,
+.view.view-course-times-search .view-content table caption {
+  margin: 15px 0 0;
+  padding: 20px 0 24px;
+  font-family: 'SohoGothicProMedium', serif;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1;
+  border-top: 1px solid #c9c9c9;
 }
 .view.view-course-times .view-content table thead tr th,
 .view.view-course-times-search .view-content table thead tr th {
