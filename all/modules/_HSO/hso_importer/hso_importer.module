@@ -204,7 +204,9 @@ function _hso_importer_brand_import($hso_importer, $brand_id, $departments_mappi
           $course_times_processed += count($course_times);
 
           // only enable course when course times are available for it
-          $course->has_info_events = _hso_course_has_infoevents($course_times);
+          if (!isset($course->has_info_events)) {
+            $course->has_info_events = _hso_course_has_infoevents($course_times);
+          }
           $course_nid = _hso_process_course($course);
           $courses_updated++;
 
