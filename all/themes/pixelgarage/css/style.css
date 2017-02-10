@@ -16883,6 +16883,62 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 /*
  *  View Course-times component
  * --------------------------------------------------*/
+.view.view-course-times.view-display-id-page_info_events .view-header,
+.view.view-course-times.view-display-id-page_info_events .view-filters {
+  padding: 15px 0 30px;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content {
+  padding: 0;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-field-course-date {
+  white-space: nowrap;
+  line-height: 25px;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-field-address {
+  min-width: 250px;
+  width: 25%;
+  text-align: left;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-body {
+  min-width: 250px;
+  width: 25%;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-body p {
+  font-size: 15px;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-field-brand {
+  text-align: center;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-field-brand img {
+  height: 30px;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-nothing {
+  text-align: right;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-nothing a {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 0 10px;
+  width: 60%;
+  min-width: 110px;
+  height: 34px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #ff535d;
+  display: inline-block;
+}
+.view.view-course-times.view-display-id-page_info_events .view-content table tbody tr td.views-field-nothing a:hover {
+  background: #ff757d;
+}
 .view.view-course-times .view-header,
 .view.view-course-times-search .view-header {
   padding: 30px 15px;
@@ -16898,7 +16954,7 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times .view-filters,
 .view.view-course-times-search .view-filters {
-  padding: 0 15px;
+  padding: 0 15px 15px;
 }
 .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget label,
 .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget label {

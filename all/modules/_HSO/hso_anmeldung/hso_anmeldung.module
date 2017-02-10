@@ -253,6 +253,7 @@ function hso_anmeldung_mail_alter(&$message)
               '%gruss_formel%' => $grussformel,
               '%contact_name%' => $contact ? $contact->title : '',
               '%contact_phone%' => $contact ? $contact->field_phone[LANGUAGE_NONE][0]['value'] : '',
+              '%contact_email%' => $contact ? $contact->field_email[LANGUAGE_NONE][0]['email'] : '',
               '%course_time_variante%' => !empty($course_time_node->body) ? $course_time_node->body[LANGUAGE_NONE][0]['value'] : '',
             );
 

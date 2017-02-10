@@ -25,6 +25,6 @@
   <?php if ($confirmation_message): ?>
     <?php print $confirmation_message ?>
   <?php else: ?>
-    <p><?php print t('Vielen Dank für Ihre Anmeldung zu einem unserer Informationsanlässe. Sie erhalten weiter Informationen in den nächsten Minuten per eMail.'); ?></p>
+    <p><?php print t('Vielen Dank für Ihre Anmeldung zu einem unserer Informationsanlässe. Sie erhalten weitere Informationen in den nächsten Minuten per eMail.'); ?></p>
   <?php endif; ?>
 </div>
