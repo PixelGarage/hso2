@@ -244,6 +244,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
   $active_course_subject = '';
   foreach ($vars['view']->result as $key => $field) {
     $course_subject = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
+    $course_subject = !empty($course_subject) ? $course_subject : 'Lehrgänge';
 
     if ($active_course_subject != $course_subject) {
       $vars['course_subjects'][$key] = $course_subject;

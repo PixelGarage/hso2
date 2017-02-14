@@ -45,7 +45,7 @@
 				<div class="tab-pane active" id="tab-startdaten">
 					<?php print views_embed_view('course_times'); ?>
 				</div>
-        <div class="tab-pane" id="tab-inof-events">
+        <div class="tab-pane" id="tab-info-events">
           <?php print views_embed_view('course_times', 'block_info_events'); ?>
         </div>
 			</div>
