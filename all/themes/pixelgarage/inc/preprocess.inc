@@ -255,7 +255,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
         $vars['course_subject_titles'][$key] = t('Kaderschule');
         $vars['course_subject_description'][$key] = '';
       } else if ($course_subject == 'Diplomstudium HF') {
-        $vars['course_subject_titles'][$key] = t('Höhere Fachschule für Wirtschaft');
+        $vars['course_subject_titles'][$key] = t('Höhere Fachschule für Wirtschaft & Informatik');
         $vars['course_subject_description'][$key] = '';
       } else if ($course_subject == 'Bachelor-Studium') {
         $vars['course_subject_titles'][$key] = t('Fachhochschule HFH');
