@@ -15576,25 +15576,34 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   max-width: 133.333333%;
   height: auto;
 }
-.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition: opacity 2s;
-  -moz-transition: opacity 2s;
-  -o-transition: opacity 2s;
-  transition: opacity 2s;
+.view-banners .view-content .carousel.carousel-fade > .carousel-inner {
+  background: #000000;
 }
-.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active {
-  opacity: 1.0;
-}
-.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active.left,
-.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.left.next,
-.view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.right.prev {
-  opacity: 1.0;
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .view-banners .view-content .carousel.carousel-fade > .carousel-inner .item {
+    opacity: 0;
+    -webkit-transition: opacity ease 1s;
+    -moz-transition: opacity ease 1s;
+    -o-transition: opacity ease 1s;
+    transition: opacity ease 1s;
+  }
+  .view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active {
+    opacity: 1.0;
+  }
+  .view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active.left,
+  .view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.active.right {
+    left: 0;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+  }
+  .view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.left.next,
+  .view-banners .view-content .carousel.carousel-fade > .carousel-inner .item.right.prev {
+    opacity: 1.0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 .view-banners .view-content .carousel > .carousel-indicators {
   display: none;

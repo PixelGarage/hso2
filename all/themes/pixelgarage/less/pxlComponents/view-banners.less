@@ -43,21 +43,27 @@
       // fading carousel
       &.carousel-fade {
         > .carousel-inner {
-          .item {
-            opacity: 0;
-            #pxl-mixins.transition(opacity 2s);
+          background: #000000;
 
-            &.active {
-              opacity: 1.0;
+          @media all and (transform-3d), (-webkit-transform-3d) {
+            .item {
+              opacity: 0;
+              #pxl-mixins.transition(opacity ease 1s);
 
-              &.left, &.right {
-                left: 0;
-                opacity: 0;
-                z-index: 1;
+              &.active {
+                opacity: 1.0;
+
+                &.left, &.right {
+                  left: 0;
+                  opacity: 0;
+                  .translate3d(0,0,0);
+                  z-index: 1;
+                }
               }
-            }
-            &.left.next, &.right.prev {
-              opacity: 1.0;
+              &.left.next, &.right.prev {
+                opacity: 1.0;
+                .translate3d(0,0,0);
+              }
             }
           }
         }
