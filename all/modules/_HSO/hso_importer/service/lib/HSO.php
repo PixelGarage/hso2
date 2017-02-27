@@ -16,7 +16,7 @@ class HSO
 
   public function initDB($live_import = TRUE) {
     $db_name = $live_import ? 'hso_anmsys_new' : 'hso_anmsys_test';
-    $this->db = new Mysqli('localhost', 'hsodrupaluser', 'megaphon', $db_name);
+    $this->db = new Mysqli('localhost', 'hsodrupaluser', 'a100ce5s2db', $db_name);
 
     // validate DB connection
     if ($this->db->connect_errno) {
