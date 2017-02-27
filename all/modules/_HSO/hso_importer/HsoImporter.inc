@@ -11,7 +11,7 @@ class HsoImporter
 {
   private $hso;
 
-  private $api_endpoint = "http://test:test@stage.hso.ch/sites/all/modules/hso_importer/service";
+  private $api_endpoint = "http://test:test@hso.ch/sites/all/modules/_HSO/hso_importer/service";
 
   private $use_service = false;
 
