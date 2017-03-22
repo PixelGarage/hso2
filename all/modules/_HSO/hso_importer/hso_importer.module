@@ -66,12 +66,35 @@ function hso_importer_settings_form($form, &$form_state) {
   }
   $brand_id = variable_get('hso_importer_brand_select', -1);
 
+  //
+  // run import
+  $form['hso_importer_action_set'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Run an import'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+    '#weight' => 0,
+  );
+  $form['hso_importer_action_set']['hso_importer_last_run'] = array(
+    '#markup' => t('Last import: @date', array('@date' => date('d.m.y G:i:s', variable_get('hso_importer_cron_last_run', 0)))),
+    '#prefix' => '<div>',
+    '#suffix' => '</br></br></div>',
+  );
+  $form['hso_importer_action_set']['hso_importer_run'] = array(
+    '#type' => 'submit',
+    '#value' => t('Run import'),
+    '#description' => t('Last import: @date', array('@date' => date('d.m.y G:i:s', variable_get('hso_importer_cron_last_run', 0)))),
+    '#submit' => array('_hso_importer_run_import'),
+  );
+
+  //
   // configure school (brand)
   $form['hso_importer_branch_set'] = array(
     '#type' => 'fieldset',
     '#title' => t('School settings'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
+    '#weight' => 1,
   );
   $form['hso_importer_branch_set']['hso_importer_brand_select'] = array(
     '#type' => 'select',
@@ -82,12 +105,14 @@ function hso_importer_settings_form($form, &$form_state) {
     '#required' => TRUE,
   );
 
+  //
   // live/debug mode
   $form['hso_importer_mode_set'] = array(
     '#type' => 'fieldset',
     '#title' => t('Choose import system'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
+    '#weight' => 2,
   );
   $form['hso_importer_mode_set']['hso_importer_live_flag'] = array(
     '#type' => 'checkbox',
@@ -106,24 +131,6 @@ function hso_importer_settings_form($form, &$form_state) {
     );
   }
 
-  // run import
-  $form['hso_importer_action_set'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Run an import'),
-    '#collapsible' => FALSE,
-    '#collapsed' => FALSE,
-  );
-  $form['hso_importer_action_set']['hso_importer_last_run'] = array(
-    '#markup' => t('Last import: @date', array('@date' => date('d.m.y G:i:s', variable_get('hso_importer_cron_last_run', 0)))),
-    '#prefix' => '<div>',
-    '#suffix' => '</br></br></div>',
-  );
-  $form['hso_importer_action_set']['hso_importer_run'] = array(
-    '#type' => 'submit',
-    '#value' => t('Run import'),
-    '#description' => t('Last import: @date', array('@date' => date('d.m.y G:i:s', variable_get('hso_importer_cron_last_run', 0)))),
-    '#submit' => array('_hso_importer_run_import'),
-  );
   return system_settings_form($form);
 }
 
