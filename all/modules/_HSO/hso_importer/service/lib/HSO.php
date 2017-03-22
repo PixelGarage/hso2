@@ -65,7 +65,7 @@ class HSO {
     $files['V_ANMSYS_EXP_Department']['header_keys'] = array('department_id', 'department_short', 'department_long');
     $files['V_ANMSYS_EXP_Lehrgaenge']['expected_count'] = 5;
     $files['V_ANMSYS_EXP_Lehrgaenge']['header_keys'] = array('lehrgang_id', 'bezeichnung_kurz', 'department_id', 'webRegistrationTitle', 'webRegistrationTitleMeta', 'webRegistrationShortDescription', 'webRegistrationPageMeta', 'type');
-    $files['V_ANMSYS_EXP_Branches']['expected_count'] = TRUE;
+    $files['V_ANMSYS_EXP_Branches']['expected_count'] = 5;
     $files['V_ANMSYS_EXP_Branches']['header_keys'] = array('branch_id', 'brach_short', 'branch_long', 'branch_town', 'branch_state', 'branch_address', 'branch_zip', 'branch_phone', 'branch_fax', 'branch_mail', 'standort_id', 'standort_name', 'brand_id', 'brand_short');
 
     //
@@ -117,7 +117,7 @@ class HSO {
     //$this->db->query("update anm_h4_durchfuehrungen D set lehrgang_id = case when lehrgang_id < pow(2,23) then (select lehrgang_id from hso_anmsys.anm_lehrgang where h4_lg_id = D.lehrgang_id) else (select lehrgang_id from hso_anmsys.anm_lehrgang where h4_m_id = D.lehrgang_id - pow(2,23)) end");
     //$this->db->query("UPDATE sis_import.anm_h4_durchfuehrungen AS DF SET location = (SELECT AL.location_id FROM hso_anmsys_new.anm_location AS AL WHERE DF.location = AL.h4_branch_id)");
     $status = $this->db->query("UPDATE V_ANMSYS_EXP_Durchfuehrungen AS DF SET location = (SELECT AL.location_id FROM anm_location AS AL WHERE DF.location = AL.h4_branch_id)");
-    watchdog("ANMSYS Importer", 'V_ANMSYS_EXP_Durchfuehrungen location update @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
+    watchdog("ANMSYS Importer", 'V_ANMSYS_EXP_Durchfuehrungen location correction status @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
     if (!$status) $error = true;
 
     //
@@ -127,11 +127,11 @@ class HSO {
     if ($count > $files['V_ANMSYS_EXP_Branches']['expected_count']) {
       $this->db->query("TRUNCATE TABLE anm_h4_branches");
       $status = $this->db->query("INSERT INTO anm_h4_branches SELECT * FROM V_ANMSYS_EXP_Branches");
-      watchdog("ANMSYS Importer", 'anm_h4_branches import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
+      watchdog("ANMSYS Importer", 'anm_h4_branches table import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
       if (!$status) $error = true;
     }
     else {
-      watchdog("ANMSYS Importer", 'anm_h4_branches not imported. No data!', NULL, WATCHDOG_WARNING);
+      watchdog("ANMSYS Importer", 'anm_h4_branches table not imported. No data!', NULL, WATCHDOG_WARNING);
       $error = true;
     }
 
@@ -142,11 +142,11 @@ class HSO {
     if ($count > $files['V_ANMSYS_EXP_Durchfuehrungen']['expected_count']) {
       $this->db->query("TRUNCATE TABLE anm_h4_durchfuehrungen");
       $status = $this->db->query("INSERT INTO anm_h4_durchfuehrungen SELECT * FROM V_ANMSYS_EXP_Durchfuehrungen");
-      watchdog("ANMSYS Importer", 'anm_h4_durchfuehrungen import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
+      watchdog("ANMSYS Importer", 'anm_h4_durchfuehrungen table import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
       if (!$status) $error = true;
     }
     else {
-      watchdog("ANMSYS Importer", 'anm_h4_durchfuehrungen not imported. No data!', NULL, WATCHDOG_WARNING);
+      watchdog("ANMSYS Importer", 'anm_h4_durchfuehrungen table not imported. No data!', NULL, WATCHDOG_WARNING);
       $error = true;
     }
 
@@ -157,11 +157,11 @@ class HSO {
     if ($count > $files['V_ANMSYS_EXP_Ansprechperson']['expected_count']) {
       $this->db->query("TRUNCATE TABLE anm_h4_contact");
       $status = $this->db->query("INSERT INTO anm_h4_contact SELECT * FROM V_ANMSYS_EXP_Ansprechperson");
-      watchdog("ANMSYS Importer", 'anm_h4_contact import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
+      watchdog("ANMSYS Importer", 'anm_h4_contact table import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
       if (!$status) $error = true;
     }
     else {
-      watchdog("ANMSYS Importer", 'anm_h4_contact not imported. No data!', NULL, WATCHDOG_WARNING);
+      watchdog("ANMSYS Importer", 'anm_h4_contact table not imported. No data!', NULL, WATCHDOG_WARNING);
       $error = true;
     }
 
@@ -172,11 +172,11 @@ class HSO {
     if ($count > $files['V_ANMSYS_EXP_Department']['expected_count']) {
       $this->db->query("TRUNCATE TABLE anm_h4_departments");
       $status = $this->db->query("INSERT INTO anm_h4_departments SELECT * FROM V_ANMSYS_EXP_Department");
-      watchdog("ANMSYS Importer", 'anm_h4_departments import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
+      watchdog("ANMSYS Importer", 'anm_h4_departments table import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
       if (!$status) $error = true;
     }
     else {
-      watchdog("ANMSYS Importer", 'anm_h4_departments not imported. No data!', NULL, WATCHDOG_WARNING);
+      watchdog("ANMSYS Importer", 'anm_h4_departments table not imported. No data!', NULL, WATCHDOG_WARNING);
       $error = true;
     }
 
@@ -187,11 +187,11 @@ class HSO {
     if ($count > $files['V_ANMSYS_EXP_Lehrgaenge']['expected_count']) {
       $this->db->query("TRUNCATE TABLE anm_h4_lehrgange");
       $status = $this->db->query("INSERT INTO anm_h4_lehrgange SELECT * FROM V_ANMSYS_EXP_Lehrgaenge");
-      watchdog("ANMSYS Importer", 'anm_h4_lehrgange import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
+      watchdog("ANMSYS Importer", 'anm_h4_lehrgange table import @status', array('@status' => $status ? 'ok' : 'failed'), WATCHDOG_INFO);
       if (!$status) $error = true;
     }
     else {
-      watchdog("ANMSYS Importer", 'anm_h4_lehrgange not imported. No data!', NULL, WATCHDOG_WARNING);
+      watchdog("ANMSYS Importer", 'anm_h4_lehrgange table not imported. No data!', NULL, WATCHDOG_WARNING);
       $error = true;
     }
 
