@@ -34,13 +34,23 @@ class HsoImporter
 
     // init DB connection
     if ($this->use_service) {
-      // no direct DB connection possible, use web service
+      // no local DB connection possible, use web service instead
       watchdog("HSO Importer", "DB import system remotely connected", NULL, WATCHDOG_INFO);
 
     } else {
       // local DB connection
       watchdog("HSO Importer", "DB import system locally connected", NULL, WATCHDOG_INFO);
 
+      // import HERMES CSV files into anmsys db, if requested
+      $update_anmsys = variable_get('hso_importer_update_anmsys', 0) > 0;
+      if ($update_anmsys) {
+        if ($this->hso->anmsysImport()) {
+          watchdog("ANMSYS Importer", "ANMSYS import successfully.", NULL, WATCHDOG_INFO);
+        }
+        else {
+          watchdog("ANMSYS Importer", "ANMSYS import has terminated with error. See log file for details.", NULL, WATCHDOG_ERROR);
+        }
+      }
     }
 
 	}

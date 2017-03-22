@@ -3,6 +3,9 @@
 /* --------------------------------------------------
  * HSO Settings / cron job
  * --------------------------------------------------*/
+/* --------------------------------------------------
+ * HSO Importer hooks
+ * --------------------------------------------------*/
 /**
  * Runs import when more than four hours has past since last import
  *
@@ -18,6 +21,7 @@ function hso_importer_cron() {
     variable_set('hso_importer_cron_last_run', REQUEST_TIME);
   }
 }
+
 /**
  * Defines the configuration menu for HSO specific settings.
  *
@@ -38,6 +42,9 @@ function hso_importer_menu() {
   return $items;
 }
 
+/* --------------------------------------------------
+ * HSO Import settings form
+ * --------------------------------------------------*/
 function hso_importer_settings_form($form, &$form_state) {
   $form = array();
 
@@ -57,6 +64,7 @@ function hso_importer_settings_form($form, &$form_state) {
       }
     }
   }
+  $brand_id = variable_get('hso_importer_brand_select', -1);
 
   // configure school (brand)
   $form['hso_importer_branch_set'] = array(
@@ -69,7 +77,7 @@ function hso_importer_settings_form($form, &$form_state) {
     '#type' => 'select',
     '#title' => t('Choose school/brand'),
     '#options' => $options,
-    '#default_value' => variable_get('hso_importer_brand_select', -1),
+    '#default_value' => $brand_id,
     '#description' => t('Set the school/brand represented by this website.'),
     '#required' => TRUE,
   );
@@ -79,7 +87,7 @@ function hso_importer_settings_form($form, &$form_state) {
     '#type' => 'fieldset',
     '#title' => t('Choose import system'),
     '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
+    '#collapsed' => FALSE,
   );
   $form['hso_importer_mode_set']['hso_importer_live_flag'] = array(
     '#type' => 'checkbox',
@@ -88,6 +96,15 @@ function hso_importer_settings_form($form, &$form_state) {
     '#return_value' => 1,
     '#default_value' => variable_get('hso_importer_live_flag', 0),
   );
+  if ($brand_id == 1) {
+    $form['hso_importer_mode_set']['hso_importer_update_anmsys'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Update anm_sys DB before import'),
+      '#description' => t('Set flag to update the anm_sys DB with the newest data from HERMES, before the import is performed.'),
+      '#return_value' => 1,
+      '#default_value' => variable_get('hso_importer_update_anmsys', 0),
+    );
+  }
 
   // run import
   $form['hso_importer_action_set'] = array(
@@ -118,47 +135,39 @@ function hso_importer_settings_form($form, &$form_state) {
  * Runs the brand specific data import.
  */
 function _hso_importer_run_import() {
-  // initialize importer object
-	$hso_importer = new HsoImporter();
-  $hso_importer->init();
-  $brand_id = variable_get('hso_importer_brand_select', -1);
-  $departments_mapping = _hso_departments_mapping();
-
   // brand specifc data import
   $result = NULL;
   try {
+    // initialize importer object
+    $hso_importer = new HsoImporter();
+    $hso_importer->init();
+    $brand_id = variable_get('hso_importer_brand_select', -1);
 
     if ($brand_id > 0) {
-      $result = _hso_importer_brand_import($hso_importer, $brand_id, $departments_mapping);
-      watchdog('HSO Importer', 'Result returned: ' . implode('; ', $result), array(), WATCHDOG_DEBUG);
-
-    } else {
+      $result = _hso_importer_brand_import($hso_importer, $brand_id);
+    }
+    else {
       // no brand set, return with error
       drupal_set_message(t('No brand set in the HSO import settings. To import data for a specific brand, select brand above.'), 'error');
     }
 
   } catch (Exception $ex) {
-    watchdog('HSO Importer',$ex->getMessage(), array(), WATCHDOG_DEBUG);
+    watchdog('HSO Importer',$ex->getMessage(), array(), WATCHDOG_ERROR);
     drupal_set_message($ex->getMessage(), 'error');
   }
 
   // display feedback about import, if any
   if ($result) {
-    $importMessage = 'from local DB: ';
-    if ($hso_importer->webServiceUsed()) {
-      $importMessage = 'via web service: ';
-    }
-    if ($hso_importer->liveImportConnected() ) {
-      $importMessage = 'LIVE data import - ' . $importMessage;
-    } else {
-      $importMessage = 'TEST data import - ' . $importMessage;
-    }
+    $importMessage = $hso_importer->liveImportConnected() ? 'LIVE data import - ' : 'TEST data import - ';
+    $importMessage .= $hso_importer->webServiceUsed() ? 'via web service: ' : 'from local DB: ';
     $importMessage .= ' @nLocations branches, @nContacts contacts (@updContacts changed), @nCourses courses (@updCourses changed), @nCourseTimes course times (@updCourseTimes changed).';
     drupal_set_message(t($importMessage, $result));
+    watchdog('HSO Importer', $importMessage, $result, WATCHDOG_INFO);
+
+    // set time of import
+    variable_set('hso_importer_cron_last_run', REQUEST_TIME);
   }
 
-  // set time of import
-  variable_set('hso_importer_cron_last_run', REQUEST_TIME);
 }
 
 /**
@@ -170,7 +179,7 @@ function _hso_importer_run_import() {
  *
  * @return array  An array with the numbers of processed items: {@nContacts => nContacts, @nCourse => nCourses, @nCourseTimes => nCourseTimes}
  */
-function _hso_importer_brand_import($hso_importer, $brand_id, $departments_mapping) {
+function _hso_importer_brand_import($hso_importer, $brand_id) {
   $contacts_processed = 0;
   $contacts_updated = 0;
   $courses_processed = 0;
@@ -189,6 +198,7 @@ function _hso_importer_brand_import($hso_importer, $brand_id, $departments_mappi
   _hso_unpublish_imported_courses();
 
   // loop through segments
+  $departments_mapping = _hso_departments_mapping();
   foreach ($departments_mapping as $department_internal_id => $segment_taxonomy_id) {
     // Start with courses
     $courses = $hso_importer->getCoursesBySegment($department_internal_id);
