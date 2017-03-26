@@ -102,8 +102,9 @@ class HSO {
       $sql_query = "INSERT INTO $key (" . implode(',', $element['header_keys']) . ") VALUES (";
 
       foreach ($csv_rows as $idx => $row) {
-        $conv_row = implode("', '", $row);
-        $conv_row = iconv('windows-1252', 'utf-8', $conv_row);
+        $row_str = implode("', '", $row);
+        $conv_row = iconv('windows-1252', 'utf-8', $row_str);
+        if(!$conv_row) $conv_row = $row_str;
         $query = $sql_query . "'" . $conv_row . "')";
         $status = $this->db->query($query);
         if (!$status) {
