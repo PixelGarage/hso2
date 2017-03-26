@@ -102,7 +102,9 @@ class HSO {
       $sql_query = "INSERT INTO $key (" . implode(',', $element['header_keys']) . ") VALUES (";
 
       foreach ($csv_rows as $idx => $row) {
-        $query = $sql_query . "'" . implode("', '", $row) . "')";
+        $conv_row = implode("', '", $row);
+        $conv_row = iconv('windows-1252', 'utf-8', $conv_row);
+        $query = $sql_query . "'" . $conv_row . "')";
         $status = $this->db->query($query);
         if (!$status) {
           watchdog("ANMSYS Importer", "Import of CSV file {$key} failed in line @idx", array('@idx' => $idx), WATCHDOG_ERROR);
