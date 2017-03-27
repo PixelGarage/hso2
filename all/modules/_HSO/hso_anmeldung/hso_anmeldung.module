@@ -662,6 +662,47 @@ function _hso_anmeldung_check_form_fields(&$fields, $course)
   return $to_return;
 }
 
+/* --------------------------------------------------
+ * Webform submission alteration
+ * --------------------------------------------------*/
+
+/**
+ * Add location and course information to submission, prior to saving it in the database.
+ *
+ * @param $node
+ *   The Webform node on which this submission was made.
+ * @param $submission
+ *   The Webform submission that is about to be saved to the database.
+ */
+function hso_anmeldung_webform_submission_presave($node, &$submission) {
+  //
+  // get location and course fields via course_times nid
+  if (in_array($submission->nid, array(ANMELDUNG_DEFAULT, ANMELDUNG_INFO, ANMELDUNG_ECDL))) {
+    // get course time nid from form, if any
+    $course_time_nid = FALSE;
+    $course_location_key = false;
+    $webform_components = $node->webform['components'];
+    foreach ($webform_components as $key => $data) {
+      if ($data['form_key'] == 'course_times_nid') {
+        $course_time_nid = $submission->data[$key][0];
+      }
+      else if ($data['form_key'] == 'course_location_info') {
+        $course_location_key = $key;
+      }
+    }
+
+    // if course time nid has been found
+    if ($course_time_nid) {
+      $course_time_node = node_load($course_time_nid);
+      if ($course_time_node) {
+        $course = !empty($course_time_node->field_course) ? node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']) : null;
+        $location = !empty($course_time_node->field_location) ? node_load($course_time_node->field_location[LANGUAGE_NONE][0]['target_id']) : null;
+        $submission->data[$course_location_key][0] = $course->title . ': ' . $location->title;
+      }
+    }
+  }
+}
+
 /**
  * Alters a anmeldungs-webform submission before rendering.
  *
