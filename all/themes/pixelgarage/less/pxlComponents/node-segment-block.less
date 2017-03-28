@@ -1,0 +1,41 @@
+/*
+ *  Node segment block component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-segment-block {
+  .row {
+    div.col-sm-12 {
+      width: 100%;
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-h2);
+          color: @text-color;
+        }
+      }
+
+      .field-name-body {
+        margin: 0 0 20px;
+        #pxl-mixins.wysiwyg-body;
+      }
+
+      .field-name-field-block {
+        .field-item {
+          // see view-segment-pages.less
+        }
+      }
+    }
+  }
+}

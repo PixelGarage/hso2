@@ -181,7 +181,7 @@
   };
 
   /**
-   * Brochure webform.
+   * Consulting / Brochure webforms.
    *
    * Handles the dynamically shown select boxes in the brochure webform.
    */
