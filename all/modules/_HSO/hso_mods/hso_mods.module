@@ -346,6 +346,13 @@ function hso_mods_menu() {
     'page arguments' => array(1,2),
     'type' => MENU_CALLBACK,
   );
+  $items['get_course/%'] = array(
+    'title' => 'Get a specific course',
+    'access callback' => TRUE,
+    'page callback' => '_hso_get_specific_course_callback',
+    'page arguments' => array(1),
+    'type' => MENU_CALLBACK,
+  );
   return $items;
 }
 
@@ -408,6 +415,15 @@ function _hso_get_courses_callback($segment_tid, $graduation) {
       $options .= '<option value="' . check_plain($course->nid) . '"">' . check_plain($course->title) . "</option>\n";
     }
   }
+  // output select options
+  drupal_add_http_header('Content-Type', 'text/html; charset=utf-8');
+  print $options;
+  drupal_exit();
+}
+
+function _hso_get_specific_course_callback($course_nid) {
+  $course  = node_load($course_nid);
+  $options = '<option value="' . check_plain($course->nid) . '"">' . check_plain($course->title) . "</option>\n";
   // output select options
   drupal_add_http_header('Content-Type', 'text/html; charset=utf-8');
   print $options;
