@@ -1,0 +1,272 @@
+<?php
+$export_time = 1490730649;
+$data = array(
+  'bundles' => array(
+    'segment_block' => (object) array(
+      'type' => 'segment_block',
+      'name' => 'Segment-Block',
+      'base' => 'node_content',
+      'module' => 'node',
+      'description' => '',
+      'help' => '',
+      'has_title' => '1',
+      'title_label' => 'Title',
+      'custom' => '1',
+      'modified' => '1',
+      'locked' => '0',
+      'disabled' => '0',
+      'orig_type' => 'segment_block',
+      'disabled_changed' => FALSE,
+      'bc_entity_type' => 'node',
+    ),
+  ),
+  'fields' => array(
+    'body' => array(
+      'entity_types' => array(
+        0 => 'node',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'settings' => array(),
+      'translatable' => '0',
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'field_name' => 'body',
+      'type' => 'text_with_summary',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'summary' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'course',
+          1 => 'course_times',
+          2 => 'webform',
+          3 => 'location',
+          4 => 'video',
+          5 => 'page',
+          6 => 'testimonial',
+          7 => 'course_tabs',
+          8 => 'block',
+          9 => 'news',
+          10 => 'remote_form',
+          11 => 'brochure',
+          12 => 'footer',
+          13 => 'call2action',
+          14 => 'tweet',
+          15 => 'facebook_post',
+          16 => 'instagram',
+          17 => 'segment_block',
+        ),
+      ),
+    ),
+    'field_block' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'referenceable_modules' => array(),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_block' => array(
+                'moddelta' => 'field_block_moddelta',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_block' => array(
+                'moddelta' => 'field_block_moddelta',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'moddelta' => array(
+          0 => 'moddelta',
+        ),
+      ),
+      'field_name' => 'field_block',
+      'type' => 'blockreference',
+      'module' => 'blockreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'moddelta' => array(
+          'type' => 'varchar',
+          'length' => 129,
+          'not null' => TRUE,
+          'default' => '',
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'segment_block',
+        ),
+      ),
+    ),
+  ),
+  'instances' => array(
+    'body' => array(
+      0 => array(
+        'label' => 'Body',
+        'widget' => array(
+          'type' => 'text_textarea_with_summary',
+          'settings' => array(
+            'rows' => 20,
+            'summary_rows' => 5,
+          ),
+          'weight' => '1',
+          'module' => 'text',
+        ),
+        'settings' => array(
+          'display_summary' => TRUE,
+          'text_processing' => 1,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'text_default',
+            'weight' => '0',
+            'settings' => array(),
+            'module' => 'text',
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'text_summary_or_trimmed',
+            'settings' => array(
+              'trim_length' => 600,
+            ),
+            'module' => 'text',
+            'weight' => 0,
+          ),
+        ),
+        'required' => FALSE,
+        'description' => '',
+        'field_name' => 'body',
+        'entity_type' => 'node',
+        'bundle' => 'segment_block',
+        'deleted' => '0',
+        'default_value' => NULL,
+      ),
+    ),
+    'field_block' => array(
+      0 => array(
+        'label' => 'Block',
+        'widget' => array(
+          'weight' => '2',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'blockreference_modules' => array(
+            'block' => 'block',
+            'nodeblock' => 'nodeblock',
+            'views' => 'views',
+            'webform' => 'webform',
+            'backup_migrate' => 0,
+            'comment' => 0,
+            'context_ui' => 0,
+            'follow' => 0,
+            'hso_mods' => 0,
+            'instagram_social_feed' => 0,
+            'locale' => 0,
+            'menu' => 0,
+            'menu_block' => 0,
+            'node' => 0,
+            'serapi' => 0,
+            'system' => 0,
+            'user' => 0,
+          ),
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'blockreference_default',
+            'weight' => '1',
+            'settings' => array(
+              'show_empty_blocks' => 0,
+            ),
+            'module' => 'blockreference',
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 1,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_block',
+        'entity_type' => 'node',
+        'bundle' => 'segment_block',
+        'deleted' => '0',
+      ),
+    ),
+  ),
+);
