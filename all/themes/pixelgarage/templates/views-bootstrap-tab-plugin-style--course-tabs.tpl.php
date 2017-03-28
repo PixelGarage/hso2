@@ -1,9 +1,9 @@
-<div id="views-bootstrap-tab-<?php print $id ?>" class="<?php print $classes ?>">
+<div id="views-bootstrap-tab-course-tabs" class="<?php print $classes ?>">
   <ul class="nav nav-<?php print $tab_type?> <?php if ($justified) print 'nav-justified' ?>">
-    <li class="active">
+    <li class="tab-startdaten active">
       <a href="#tab-startdaten" data-toggle="tab">Startdaten</a>
     </li>
-    <li>
+    <li class="tab-info-events">
       <a href="#tab-info-events" data-toggle="tab">Informationsanlässe</a>
     </li>
     <?php foreach ($tabs as $key => $tab): ?>

@@ -105,6 +105,34 @@
   };
 
   /**
+   * Scrolls smoothly to info event tab due to menu click.
+   */
+  Drupal.behaviors.smoothScrolltoInfoEventTab = {
+    attach: function(context, settings) {
+      var $courseBlockMenu = $('#block-menu-menu-course-blocks'),
+        $infoEventMenu = $courseBlockMenu.find('ul.menu>li.menu.infoevent');
+
+      $infoEventMenu.once('clicked', function () {
+        $(this).on('click', function () {
+          var $target = $('#views-bootstrap-tab-course-tabs'),
+              $infoTab = $target.find('.tab-info-events > a');
+
+          // click tab
+          $infoTab.click();
+
+          // scroll to tab section
+          if ($target.length > 0) {
+            var topPos = $target.offset().top;
+            $('html, body').animate({scrollTop: topPos-30}, 1000, 'swing');
+            return false;
+          }
+          return true;
+        });
+      });
+    }
+  };
+
+  /**
    * Enhance the links to Consulting- and Brochure-Form with a parameter holding the segment or course id
    * of the current webpage origin.
    */
@@ -159,7 +187,7 @@
    */
   Drupal.behaviors.dynamicSelectBoxes = {
     attach: function () {
-      var $webform = $('#webform-client-form-1336, #webform-client-form-14006'),
+      var $webform = $('#webform-client-form-1335, #webform-client-form-1336, #webform-client-form-14006'),
         $compInteresse = $webform.find('.webform-component--interesse'),
         $selectInteresse = $webform.find('#edit-submitted-interesse'),
         $compAbschluss = $webform.find('.webform-component--abschluss'),
