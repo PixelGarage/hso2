@@ -98,13 +98,14 @@ class HSO {
     // import data from CSV files into transfer tables
     foreach ($files as $key => $element) {
       $filepath = "$csv_path/$key.csv";
-      $csv_rows = array_map('str_getcsv', file($filepath));
+      $csv_rows = file($filepath);
       $sql_query = "INSERT INTO $key (" . implode(',', $element['header_keys']) . ") VALUES (";
 
       foreach ($csv_rows as $idx => $row) {
-        $row_str = implode("', '", $row);
-        $conv_row = iconv('windows-1252', 'utf-8', $row_str);
-        if(!$conv_row) $conv_row = $row_str;
+        $conv_row = iconv('windows-1252', 'utf-8', $row);
+        if(!$conv_row) $conv_row = $row;
+        $conv_row = str_replace('","', "','", $conv_row);
+        $conv_row = trim($conv_row, "\" \n \n\r \r");
         $query = $sql_query . "'" . $conv_row . "')";
         $status = $this->db->query($query);
         if (!$status) {
