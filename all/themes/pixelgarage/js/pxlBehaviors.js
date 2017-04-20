@@ -142,6 +142,15 @@
         $menuLinks = $blockMenu.find('ul.menu>li.menu.consulting').add('ul.menu>li.menu.brochures');
 
       //
+      // Polyfill for IE11
+      if (!String.prototype.startsWith) {
+        String.prototype.startsWith = function(searchString, position){
+          position = position || 0;
+          return this.substr(position, searchString.length) === searchString;
+        };
+      }
+
+      //
       // find segment taxonomy id or course node id
       var body_classes = $("body").attr("class").toString().split(' '),
         tid = false,
