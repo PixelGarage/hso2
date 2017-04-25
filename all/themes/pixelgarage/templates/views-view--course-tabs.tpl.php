@@ -34,10 +34,10 @@
 			<?php print $rows; ?>
 		<?php else: ?>
 			<ul class="nav nav-tabs">
-				<li class="active">
+				<li class="tab-startdaten active">
 					<a href="#tab-startdaten" data-toggle="tab">Startdaten</a>
 				</li>
-        <li>
+        <li class="tab-info-events">
           <a href="#tab-info-events" data-toggle="tab">Informationsanlässe</a>
         </li>
 			</ul>
