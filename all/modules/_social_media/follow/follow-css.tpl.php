@@ -87,6 +87,13 @@
   background-image: url(<?php print $icon_path; ?>/icon-spiceworks.png);
 }
 
+<?php print $selector_prefix; ?>a.follow-link-instagram {
+  background-image: url(<?php print $icon_path; ?>/icon-instagram.png);
+}
+
+<?php print $selector_prefix; ?>a.follow-link-pinterest {
+  background-image: url(<?php print $icon_path; ?>/icon-pinterest.png);
+}
 <?php print $selector_prefix; ?>a.follow-link-newsletter {
   background-image: url(<?php print $icon_path; ?>/icon-newsletter.png);
 }

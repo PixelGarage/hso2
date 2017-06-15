@@ -390,6 +390,14 @@ function follow_default_networks($uid) {
       'title' => t('Spiceworks'),
       'domain' => 'spiceworks.com',
     ),
+    'instagram'    => array(
+      'title' => t('Instagram'),
+      'domain' => 'instagram.com',
+    ),
+    'pinterest'    => array(
+      'title' => t('Pinterest'),
+      'domain' => 'pinterest.com',
+    ),
   );
   if ($uid == 0) {
     $networks['this-site'] = array(

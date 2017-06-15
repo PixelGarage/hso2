@@ -1,0 +1,50 @@
+From 2a277c57218d8ab2553947c7b28f3806e6e55ded Mon Sep 17 00:00:00 2001
+From: cristina <cristinawithout@gmail.com>
+Date: Sun, 1 Sep 2013 11:54:24 -0700
+Subject: [PATCH] Add support for instagram and pinterest
+
+---
+ follow-css.tpl.php | 7 +++++++
+ follow.inc         | 8 ++++++++
+ 2 files changed, 15 insertions(+)
+
+diff --git a/follow-css.tpl.php b/follow-css.tpl.php
+index 1155ccd..5050c90 100644
+--- a/follow-css.tpl.php
++++ b/follow-css.tpl.php
+@@ -94,6 +94,13 @@
+   background-image: url(<?php print $icon_path; ?>/icon-spiceworks.png);
+ }
+ 
++<?php print $selector_prefix; ?>a.follow-link-instagram {
++  background-image: url(<?php print $icon_path; ?>/icon-instagram.png);
++}
++
++<?php print $selector_prefix; ?>a.follow-link-pinterest {
++  background-image: url(<?php print $icon_path; ?>/icon-pinterest.png);
++}
+ <?php print $selector_prefix; ?>a.follow-link-newsletter {
+   background-image: url(<?php print $icon_path; ?>/icon-newsletter.png);
+ }
+diff --git a/follow.inc b/follow.inc
+index 64bf244..d9206c1 100644
+--- a/follow.inc
++++ b/follow.inc
+@@ -401,6 +401,14 @@ function follow_default_networks($uid) {
+       'title' => t('Spiceworks'),
+       'domain' => 'spiceworks.com',
+     ),
++    'instagram'    => array(
++      'title' => t('Instagram'),
++      'domain' => 'instagram.com',
++    ),
++    'pinterest'    => array(
++      'title' => t('Pinterest'),
++      'domain' => 'pinterest.com',
++    ),
+   );
+   if ($uid == 0) {
+     $networks['this-site'] = array(
+-- 
+1.8.0.msysgit.0
+
