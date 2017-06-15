@@ -9968,6 +9968,9 @@ form#user-login {
 .follow-links .follow-link-wrapper a.follow-link.follow-link-xing:before {
   content: "\f168";
 }
+.follow-links .follow-link-wrapper a.follow-link.follow-link-instagram:before {
+  content: "\f16d";
+}
 .follow-links .follow-link-wrapper a.follow-link.follow-link-linkedin:before {
   content: "\f0e1";
 }
