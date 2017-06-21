@@ -11,7 +11,7 @@
 /**
  * Default Anmeldungs form.
  */
-define('ANMELDUNG_BRAND_EMAIL', '@hso.ch');
+define('ANMELDUNG_BRAND_EMAIL', '@hso.vantage.ch');
 
 /**
  * Default Anmeldungs form.
@@ -187,7 +187,7 @@ function hso_anmeldung_mail_alter(&$message)
     $recepient_fields = array(
       KONTAKT_FORM => 4,  // Kontakt
       BILDUNGSBERATUNG_FORM => 10, // Bildungsberatung
-      BROSCHUERE_BESTELLEN_FORM => 9,   // Broschüre bestellen
+      BROSCHUERE_BESTELLEN_FORM => 14,   // Broschüre bestellen
       BROSCHUERE_POST_FORM => 10  // Broschüre per Post bestellen
     );
     if (array_key_exists($message['params']['email']['nid'], $recepient_fields)) {
