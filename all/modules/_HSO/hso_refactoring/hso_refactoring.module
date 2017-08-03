@@ -1,0 +1,86 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: ralph
+ * Date: 27.07.17
+ * Time: 17:11
+ */
+
+
+/**
+ * Defines the configuration menu for HSO specific tasks.
+ *
+ * Implements hook_menu().
+ */
+function hso_refactoring_menu() {
+  $items = array();
+  $items['admin/config/system/hso/refactoring'] = array(
+    'title' => 'Refactoring 2017',
+    'type' => MENU_NORMAL_ITEM,
+    'description' => t('Run the HSO Refactoring 2017'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer site configuration'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('hso_refactoring_settings_form'),
+    'weight' => -10,
+  );
+  return $items;
+}
+
+/* --------------------------------------------------
+ * HSO Refactoring settings form
+ * --------------------------------------------------*/
+function hso_refactoring_settings_form($form, &$form_state) {
+  //
+  // run refactoring
+  $form['hso_refactoring_action_set'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Run all refactoring tasks'),
+    '#collapsible' => FALSE,
+    '#collapsed' => FALSE,
+    '#weight' => 0,
+  );
+  $form['hso_refactoring_action_set']['hso_refactoring_last_run'] = array(
+    '#markup' => t('Last refactoring: @date', array('@date' => date('d.m.y G:i:s', variable_get('hso_refactoring_last_run', 0)))),
+    '#prefix' => '<div>',
+    '#suffix' => '</br></br></div>',
+  );
+  $form['hso_refactoring_action_set']['hso_refactoring_submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Refactor'),
+    '#submit' => array('_hso_refactoring_run_all'),
+  );
+  $form['hso_refactoring_action_set']['hso_refactoring_reset'] = array(
+    '#type' => 'submit',
+    '#value' => t('Reset'),
+    '#submit' => array('_hso_refactoring_reset'),
+  );
+
+  return system_settings_form($form);
+}
+
+function _hso_refactoring_run_all() {
+  try {
+    // initialize importer object
+    $hso_refactor = new HSORefactoring('hso_refactoring');
+    if (($step = $hso_refactor->runAll()) === true) {
+      drupal_set_message('Refactoring successfully completed', 'status');
+    }
+    else {
+      drupal_set_message(t('Refactoring stopped at step @step', array('@step' => $step)), 'warning');
+    }
+
+  } catch (Exception $ex) {
+    watchdog('HSO Refactoring', $ex->getMessage(), array(), WATCHDOG_ERROR);
+    drupal_set_message($ex->getMessage(), 'error');
+  }
+
+  // set time of refactoring
+  variable_set('hso_refactoring_last_run', REQUEST_TIME);
+}
+
+
+function _hso_refactoring_reset() {
+  $hso_refactor = new HSORefactoring('hso_refactoring');
+  $hso_refactor->reset();
+}

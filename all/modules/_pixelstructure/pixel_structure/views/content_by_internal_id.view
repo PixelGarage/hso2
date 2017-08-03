@@ -1,0 +1,296 @@
+<?php
+
+$view = new view();
+$view->name = 'content_by_internal_id';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Content by Internal ID';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'Content by Internal ID';
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['access']['perm'] = 'access content overview';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '25';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'field_internal_id' => 'field_internal_id',
+  'nid' => 'nid',
+  'title' => 'title',
+  'type' => 'type',
+  'field_segment' => 'field_segment',
+  'field_location' => 'field_location',
+  'field_course' => 'field_course',
+  'edit_node' => 'edit_node',
+  'delete_node' => 'edit_node',
+  'clone_node' => 'edit_node',
+);
+$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['info'] = array(
+  'field_internal_id' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nid' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'title' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'type' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_segment' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_location' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'field_course' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'edit_node' => array(
+    'align' => '',
+    'separator' => ' ',
+    'empty_column' => 0,
+  ),
+  'delete_node' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'clone_node' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+/* Field: Bulk operations: Content */
+$handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+$handler->display->display_options['fields']['views_bulk_operations']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+$handler->display->display_options['fields']['views_bulk_operations']['label'] = '';
+$handler->display->display_options['fields']['views_bulk_operations']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+$handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+  'action::views_bulk_operations_delete_item' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+    'settings' => array(
+      'log' => 0,
+    ),
+  ),
+  'action::node_publish_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+  ),
+  'action::node_unpublish_action' => array(
+    'selected' => 1,
+    'postpone_processing' => 0,
+    'skip_confirmation' => 1,
+    'skip_permission_check' => 0,
+    'override_label' => 0,
+    'label' => '',
+  ),
+);
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+/* Field: Content: Published */
+$handler->display->display_options['fields']['status']['id'] = 'status';
+$handler->display->display_options['fields']['status']['table'] = 'node';
+$handler->display->display_options['fields']['status']['field'] = 'status';
+$handler->display->display_options['fields']['status']['not'] = 0;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+/* Field: Content: Type */
+$handler->display->display_options['fields']['type']['id'] = 'type';
+$handler->display->display_options['fields']['type']['table'] = 'node';
+$handler->display->display_options['fields']['type']['field'] = 'type';
+/* Field: Content: Segment */
+$handler->display->display_options['fields']['field_segment']['id'] = 'field_segment';
+$handler->display->display_options['fields']['field_segment']['table'] = 'field_data_field_segment';
+$handler->display->display_options['fields']['field_segment']['field'] = 'field_segment';
+/* Field: Content: Location */
+$handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+$handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+$handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+$handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_location']['type'] = 'entityreference_entity_id';
+$handler->display->display_options['fields']['field_location']['settings'] = array(
+  'link' => 0,
+);
+/* Field: Content: Course */
+$handler->display->display_options['fields']['field_course']['id'] = 'field_course';
+$handler->display->display_options['fields']['field_course']['table'] = 'field_data_field_course';
+$handler->display->display_options['fields']['field_course']['field'] = 'field_course';
+$handler->display->display_options['fields']['field_course']['type'] = 'entityreference_entity_id';
+$handler->display->display_options['fields']['field_course']['settings'] = array(
+  'link' => 0,
+);
+/* Field: Content: Edit link */
+$handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+$handler->display->display_options['fields']['edit_node']['label'] = 'Operations';
+$handler->display->display_options['fields']['edit_node']['text'] = 'Edit ';
+/* Field: Content: Delete link */
+$handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
+$handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
+$handler->display->display_options['fields']['delete_node']['label'] = '';
+$handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['delete_node']['text'] = 'Delete';
+/* Field: Content: Clone link */
+$handler->display->display_options['fields']['clone_node']['id'] = 'clone_node';
+$handler->display->display_options['fields']['clone_node']['table'] = 'node';
+$handler->display->display_options['fields']['clone_node']['field'] = 'clone_node';
+$handler->display->display_options['fields']['clone_node']['label'] = '';
+$handler->display->display_options['fields']['clone_node']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['clone_node']['text'] = 'Clone';
+/* Sort criterion: Content: Type */
+$handler->display->display_options['sorts']['type']['id'] = 'type';
+$handler->display->display_options['sorts']['type']['table'] = 'node';
+$handler->display->display_options['sorts']['type']['field'] = 'type';
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'contact' => 'contact',
+  'course' => 'course',
+  'course_times' => 'course_times',
+  'location' => 'location',
+  'page' => 'page',
+);
+$handler->display->display_options['filters']['type']['group'] = 1;
+$handler->display->display_options['filters']['type']['exposed'] = TRUE;
+$handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+$handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+$handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+$handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+$handler->display->display_options['filters']['type']['expose']['remember'] = TRUE;
+$handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  5 => 0,
+  4 => 0,
+  3 => 0,
+  6 => 0,
+);
+$handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
+/* Filter criterion: Content: Nid */
+$handler->display->display_options['filters']['nid']['id'] = 'nid';
+$handler->display->display_options['filters']['nid']['table'] = 'node';
+$handler->display->display_options['filters']['nid']['field'] = 'nid';
+$handler->display->display_options['filters']['nid']['group'] = 1;
+$handler->display->display_options['filters']['nid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['nid']['expose']['operator_id'] = 'nid_op';
+$handler->display->display_options['filters']['nid']['expose']['label'] = 'Node ID';
+$handler->display->display_options['filters']['nid']['expose']['operator'] = 'nid_op';
+$handler->display->display_options['filters']['nid']['expose']['identifier'] = 'nid';
+$handler->display->display_options['filters']['nid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  5 => 0,
+  4 => 0,
+  3 => 0,
+  6 => 0,
+);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['path'] = 'admin/content/find-by-internal-id';
+$handler->display->display_options['menu']['type'] = 'tab';
+$handler->display->display_options['menu']['title'] = 'HSO - Manage content';
+$handler->display->display_options['menu']['weight'] = '-3';
+$handler->display->display_options['menu']['context'] = 0;
+$handler->display->display_options['menu']['context_only_inline'] = 0;
+$translatables['content_by_internal_id'] = array(
+  t('Master'),
+  t('Content by Internal ID'),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« first'),
+  t('‹ previous'),
+  t('next ›'),
+  t('last »'),
+  t('- Choose an operation -'),
+  t('Nid'),
+  t('Published'),
+  t('Title'),
+  t('Type'),
+  t('Segment'),
+  t('Location'),
+  t('Course'),
+  t('Operations'),
+  t('Edit '),
+  t('Delete'),
+  t('Clone'),
+  t('Node ID'),
+  t('Page'),
+);

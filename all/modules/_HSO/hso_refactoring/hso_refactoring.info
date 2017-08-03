@@ -1,0 +1,9 @@
+name = "HSO Refactoring 2017"
+description = "HSO Refactoring methods (decouple import interface, refactor contacts, courses etc."
+package = "HSO"
+core = "7.x"
+version = "1.0"
+
+files[] = HsoRefactoring.inc
+
+dependencies[] = pixel_structure

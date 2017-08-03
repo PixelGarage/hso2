@@ -1,4 +1,7 @@
 <?php
+
+require_once 'includes/node.lib.inc';
+
 /**
  * Implements hook_init().
  *

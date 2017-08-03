@@ -7,4 +7,5 @@ configure = admin/structure/pixel_structure
 dependencies[] = views
 dependencies[] = bundle_copy
 
-;files[] = views_plugin_style_custom_map.inc
+files[] = pixel_structure.admin.inc
+files[] = refactoring.inc

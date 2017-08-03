@@ -1,5 +1,5 @@
 <?php
-$export_time = 1458658905;
+$export_time = 1501596466;
 $data = array(
   'bundles' => array(
     'course' => (object) array(
@@ -106,6 +106,7 @@ $data = array(
           13 => 'call2action',
           14 => 'tweet',
           15 => 'facebook_post',
+          16 => 'instagram',
         ),
       ),
     ),
@@ -519,6 +520,61 @@ $data = array(
         ),
       ),
     ),
+    'field_has_info_events' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_has_info_events' => array(
+                'value' => 'field_has_info_events_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_has_info_events' => array(
+                'value' => 'field_has_info_events_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_has_info_events',
+      'type' => 'list_boolean',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'course',
+        ),
+      ),
+    ),
     'field_internal_id' => array(
       'translatable' => '0',
       'entity_types' => array(),
@@ -860,6 +916,7 @@ $data = array(
       'settings' => array(
         'hide_blank_items' => 1,
         'path' => '',
+        'hide_initial_item' => FALSE,
       ),
       'storage' => array(
         'type' => 'field_sql_storage',
@@ -887,6 +944,9 @@ $data = array(
       'indexes' => array(
         'revision_id' => array(
           0 => 'revision_id',
+        ),
+        'value' => array(
+          0 => 'value',
         ),
       ),
       'field_name' => 'field_teaser_tabs',
@@ -961,7 +1021,7 @@ $data = array(
       0 => array(
         'label' => 'BN Links',
         'widget' => array(
-          'weight' => '12',
+          'weight' => '13',
           'type' => 'advanced_link',
           'module' => 'advanced_link',
           'active' => 1,
@@ -1021,7 +1081,7 @@ $data = array(
       0 => array(
         'label' => 'BN Description',
         'widget' => array(
-          'weight' => '11',
+          'weight' => '12',
           'type' => 'text_textarea',
           'module' => 'text',
           'active' => 1,
@@ -1078,7 +1138,7 @@ $data = array(
       0 => array(
         'label' => 'BN Related IDs',
         'widget' => array(
-          'weight' => '13',
+          'weight' => '14',
           'type' => 'text_textfield',
           'module' => 'text',
           'active' => 1,
@@ -1135,7 +1195,7 @@ $data = array(
       0 => array(
         'label' => 'BN Title',
         'widget' => array(
-          'weight' => '10',
+          'weight' => '11',
           'type' => 'text_textfield',
           'module' => 'text',
           'active' => 1,
@@ -1253,8 +1313,55 @@ $data = array(
         ),
         'required' => 0,
         'description' => '',
-        'default_value' => NULL,
+        'default_value' => array(
+          0 => array(
+            'tid' => '63',
+          ),
+        ),
         'field_name' => 'field_fachgebiet',
+        'entity_type' => 'node',
+        'bundle' => 'course',
+        'deleted' => '0',
+      ),
+    ),
+    'field_has_info_events' => array(
+      0 => array(
+        'label' => 'Has Info-Events',
+        'widget' => array(
+          'weight' => '7',
+          'type' => 'options_onoff',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(
+            'display_label' => 1,
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'list_default',
+            'settings' => array(),
+            'module' => 'list',
+            'weight' => 23,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => array(
+          0 => array(
+            'value' => 0,
+          ),
+        ),
+        'field_name' => 'field_has_info_events',
         'entity_type' => 'node',
         'bundle' => 'course',
         'deleted' => '0',
@@ -1264,7 +1371,7 @@ $data = array(
       0 => array(
         'label' => 'Internal ID',
         'widget' => array(
-          'weight' => '9',
+          'weight' => '10',
           'type' => 'number',
           'module' => 'number',
           'active' => 0,
@@ -1304,7 +1411,7 @@ $data = array(
       0 => array(
         'label' => 'Is Module',
         'widget' => array(
-          'weight' => '7',
+          'weight' => '8',
           'type' => 'options_onoff',
           'module' => 'options',
           'active' => 1,
@@ -1427,7 +1534,7 @@ $data = array(
       0 => array(
         'label' => 'Sort',
         'widget' => array(
-          'weight' => '8',
+          'weight' => '9',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,
