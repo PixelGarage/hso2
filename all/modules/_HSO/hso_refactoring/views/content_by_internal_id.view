@@ -26,22 +26,22 @@ $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['pager']['options']['quantity'] = '9';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-  'field_internal_id' => 'field_internal_id',
+  'views_bulk_operations' => 'views_bulk_operations',
   'nid' => 'nid',
   'title' => 'title',
   'type' => 'type',
   'field_segment' => 'field_segment',
   'field_location' => 'field_location',
   'field_course' => 'field_course',
+  'created' => 'created',
+  'status' => 'status',
   'edit_node' => 'edit_node',
   'delete_node' => 'edit_node',
   'clone_node' => 'edit_node',
 );
-$handler->display->display_options['style_options']['default'] = '-1';
+$handler->display->display_options['style_options']['default'] = 'created';
 $handler->display->display_options['style_options']['info'] = array(
-  'field_internal_id' => array(
-    'sortable' => 1,
-    'default_sort_order' => 'asc',
+  'views_bulk_operations' => array(
     'align' => '',
     'separator' => '',
     'empty_column' => 0,
@@ -82,6 +82,20 @@ $handler->display->display_options['style_options']['info'] = array(
     'empty_column' => 0,
   ),
   'field_course' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'created' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'desc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'status' => array(
     'sortable' => 1,
     'default_sort_order' => 'asc',
     'align' => '',
@@ -149,11 +163,6 @@ $handler->display->display_options['fields']['nid']['id'] = 'nid';
 $handler->display->display_options['fields']['nid']['table'] = 'node';
 $handler->display->display_options['fields']['nid']['field'] = 'nid';
 $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-/* Field: Content: Published */
-$handler->display->display_options['fields']['status']['id'] = 'status';
-$handler->display->display_options['fields']['status']['table'] = 'node';
-$handler->display->display_options['fields']['status']['field'] = 'status';
-$handler->display->display_options['fields']['status']['not'] = 0;
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -185,6 +194,17 @@ $handler->display->display_options['fields']['field_course']['type'] = 'entityre
 $handler->display->display_options['fields']['field_course']['settings'] = array(
   'link' => 0,
 );
+/* Field: Content: Post date */
+$handler->display->display_options['fields']['created']['id'] = 'created';
+$handler->display->display_options['fields']['created']['table'] = 'node';
+$handler->display->display_options['fields']['created']['field'] = 'created';
+$handler->display->display_options['fields']['created']['date_format'] = 'short';
+$handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+/* Field: Content: Published */
+$handler->display->display_options['fields']['status']['id'] = 'status';
+$handler->display->display_options['fields']['status']['table'] = 'node';
+$handler->display->display_options['fields']['status']['field'] = 'status';
+$handler->display->display_options['fields']['status']['not'] = 0;
 /* Field: Content: Edit link */
 $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
 $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -259,7 +279,7 @@ $handler->display->display_options['filters']['nid']['expose']['remember_roles']
 $handler = $view->new_display('page', 'Page', 'page');
 $handler->display->display_options['path'] = 'admin/content/find-by-internal-id';
 $handler->display->display_options['menu']['type'] = 'tab';
-$handler->display->display_options['menu']['title'] = 'HSO - Manage content';
+$handler->display->display_options['menu']['title'] = 'Manage content';
 $handler->display->display_options['menu']['weight'] = '-3';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
@@ -281,12 +301,13 @@ $translatables['content_by_internal_id'] = array(
   t('last »'),
   t('- Choose an operation -'),
   t('Nid'),
-  t('Published'),
   t('Title'),
   t('Type'),
   t('Segment'),
   t('Location'),
   t('Course'),
+  t('Post date'),
+  t('Published'),
   t('Operations'),
   t('Edit '),
   t('Delete'),

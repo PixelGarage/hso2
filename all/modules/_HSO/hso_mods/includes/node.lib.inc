@@ -108,14 +108,14 @@ function node_generator_ajax_callback($form, &$form_state) {
 }
 
 /**
- * Node generator.
+ * Node generator for course-time nodes.
  *
  * @param $form
  * @param $form_state
  */
 function node_submit_generate_nodes($form, &$form_state) {
   //
-  // only generate nodes when master flag is set
+  // only generate course-time nodes when master flag is set
   $master_flag = isset($form_state['values']['master_flag']) ? $form_state['values']['master_flag'] : 0;
   if (!$master_flag) return;
 

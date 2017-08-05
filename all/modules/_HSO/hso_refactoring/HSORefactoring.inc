@@ -37,6 +37,7 @@ class HSORefactoring extends Refactoring {
     if (!$this->contactCleanup()) return 'ContactCleanup';
     if (!$this->courseTimesCleanup()) return 'CourseTimesCleanup';
     if (!$this->locationAndBrandsCleanup()) return 'LocationAndBrandsCleanup';
+    if (!$this->bannerExtension()) return 'BannerExtension';
     if (!$this->viewsUpdate()) return 'ViewsUpdate';
 
     // refactoring successfully completed
@@ -55,6 +56,10 @@ class HSORefactoring extends Refactoring {
     else if ($step_name == 'CourseTimesCleanup') {
       // make sure that newly added fields are completely deleted (also DB tables)
       $this->deleteFields(array('field_study_variants', 'field_master_nid'));
+    }
+    else if ($step_name == 'BannerExtension') {
+      // make sure that newly added fields are completely deleted (also DB tables)
+      $this->deleteFields(array('field_banner_link', 'field_interval'));
     }
 
   }
@@ -165,6 +170,25 @@ class HSORefactoring extends Refactoring {
   }
 
   /**
+   * Extends banners with new fields and functionality.
+   */
+  public function bannerExtension() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('BannerExtension')) return true;
+
+      // add steps here...
+      $this->updateEntityType('node', 'nodes/banner.node');
+
+      return $this->endStep('BannerExtension');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('BannerExtension failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
    * Update all changed views and delete the views in db (views only in code)
    */
   public function viewsUpdate() {
@@ -172,7 +196,7 @@ class HSORefactoring extends Refactoring {
       // check if step has to be performed
       if (!$this->startStep('ViewsUpdate')) return true;
 
-      // add views here...
+      // add additionalviews here...
       $this->updateView('views/content_by_internal_id.view');
 
       // clear views cache
@@ -267,7 +291,7 @@ class HSORefactoring extends Refactoring {
       }
 
       //
-      // delete all contacts in the db
+      // delete all merged contacts in the db
       node_delete_multiple($delete_contacts);
 
       //
