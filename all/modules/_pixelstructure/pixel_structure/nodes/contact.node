@@ -1,5 +1,5 @@
 <?php
-$export_time = 1501604421;
+$export_time = 1502103158;
 $data = array(
   'bundles' => array(
     'contact' => (object) array(
@@ -141,58 +141,6 @@ $data = array(
         'node' => array(
           0 => 'location',
           1 => 'contact',
-        ),
-      ),
-    ),
-    'field_internal_id' => array(
-      'translatable' => '0',
-      'entity_types' => array(),
-      'settings' => array(),
-      'storage' => array(
-        'type' => 'field_sql_storage',
-        'settings' => array(),
-        'module' => 'field_sql_storage',
-        'active' => '1',
-        'details' => array(
-          'sql' => array(
-            'FIELD_LOAD_CURRENT' => array(
-              'field_data_field_internal_id' => array(
-                'value' => 'field_internal_id_value',
-              ),
-            ),
-            'FIELD_LOAD_REVISION' => array(
-              'field_revision_field_internal_id' => array(
-                'value' => 'field_internal_id_value',
-              ),
-            ),
-          ),
-        ),
-      ),
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'field_name' => 'field_internal_id',
-      'type' => 'number_integer',
-      'module' => 'number',
-      'active' => '1',
-      'locked' => '0',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'columns' => array(
-        'value' => array(
-          'type' => 'int',
-          'not null' => FALSE,
-        ),
-      ),
-      'bundles' => array(
-        'node' => array(
-          0 => 'location',
-          1 => 'contact',
-          2 => 'course',
-          3 => 'course_times',
-        ),
-        'taxonomy_term' => array(
-          0 => 'brands',
-          1 => 'segments',
         ),
       ),
     ),
@@ -574,40 +522,6 @@ $data = array(
         'description' => '',
         'default_value' => NULL,
         'field_name' => 'field_email',
-        'entity_type' => 'node',
-        'bundle' => 'contact',
-        'deleted' => '0',
-      ),
-    ),
-    'field_internal_id' => array(
-      0 => array(
-        'label' => 'Internal ID',
-        'widget' => array(
-          'weight' => '14',
-          'type' => 'number',
-          'module' => 'number',
-          'active' => 0,
-          'settings' => array(),
-        ),
-        'settings' => array(
-          'min' => '',
-          'max' => '',
-          'prefix' => '',
-          'suffix' => '',
-          'user_register_form' => FALSE,
-        ),
-        'display' => array(
-          'default' => array(
-            'label' => 'above',
-            'type' => 'hidden',
-            'weight' => '10',
-            'settings' => array(),
-          ),
-        ),
-        'required' => 0,
-        'description' => '',
-        'default_value' => NULL,
-        'field_name' => 'field_internal_id',
         'entity_type' => 'node',
         'bundle' => 'contact',
         'deleted' => '0',

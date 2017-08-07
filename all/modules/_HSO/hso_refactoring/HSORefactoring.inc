@@ -179,6 +179,7 @@ class HSORefactoring extends Refactoring {
 
       // add steps here...
       $this->updateEntityType('node', 'nodes/banner.node');
+      $this->updateView('views/banners.view');
 
       return $this->endStep('BannerExtension');
     }
