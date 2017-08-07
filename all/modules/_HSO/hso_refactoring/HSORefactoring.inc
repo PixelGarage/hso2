@@ -341,6 +341,11 @@ class HSORefactoring extends Refactoring {
     // delete unused locations
     $loc_nids = array_keys($this->location_mapping);
     node_delete_multiple($loc_nids);
+
+    // rename HBS Rapperswil -> HBSKMZ Rapperswil
+    $node = node_load(6687);
+    $node->title = 'HBSKMZ Rapperswil';
+    node_save($node);
   }
 
 
