@@ -4,6 +4,6 @@ package = "HSO"
 core = "7.x"
 version = "1.0"
 
-files[] = HsoRefactoring.inc
+files[] = HSORefactoring.inc
 
 dependencies[] = pixel_structure
