@@ -490,13 +490,7 @@ class HSO {
       $time->price_brutto = $row->price_brutto;
       $time->price_netto = $row->price_netto;
       $time->price_detailed = $row->price_text;
-      $time->price_additional = $row->price_additional;
-      $time->taken_places = $row->nof_tn == -1 ? 0 : $row->nof_tn;
-      $time->no_vacancy = $row->nof_tn == -1;
-      $time->min_places = $row->teilnehmer_min;
-      $time->max_places = $row->teilnehmer_max;
       $time->template = $row->webTemplate;
-      $time->brand_id = $row->brand_id;
       // create location object (branch)
       $time->location = new StdClass();
       $time->location->id = $row->branch_id;

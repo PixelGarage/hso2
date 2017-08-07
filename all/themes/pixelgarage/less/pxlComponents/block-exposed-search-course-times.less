@@ -117,7 +117,7 @@ body.modal-open {
     width: 100%;
 
     @media @narrow {
-      bottom: 54px;
+      //bottom: 54px;
     }
   }
 
@@ -152,6 +152,7 @@ body.modal-open {
             color: @pxl-color-gray-text;
             #pxl-mixins.border-radius(0);
             .border-left-radius(3px);
+            border: 1px solid @pxl-color-gray-border-light;
             background: #fff none;
           }
 
@@ -160,6 +161,7 @@ body.modal-open {
             letter-spacing: 1px;
             #pxl-mixins.border-radius(0);
             .border-right-radius(3px);
+            border: 1px solid @pxl-color-bg-button;
             background: @pxl-color-bg-button none;
           }
         }
@@ -193,7 +195,7 @@ body.modal-open {
             display: inline-block;
             margin: 0 -3px 0 -1px;
             vertical-align: top;
-            border-left: 1px solid @pxl-color-gray-border-light;
+            //border-left: 1px solid @pxl-color-gray-border-light;
           }
 
           label {
@@ -230,7 +232,7 @@ body.modal-open {
 
                 @media @header-breakpoint {
                   #pxl-mixins.border-radius(0);
-                  border: 1px solid rgba(0,0,0,0.0);
+                  //border: 1px solid rgba(0,0,0,0.0);
                 }
 
                 &:focus {
@@ -272,7 +274,7 @@ body.modal-open {
 
           &.views-widget-filter-combine {
             width: 90%;
-            border: none;
+            //border: none;
 
             @media @header-breakpoint {
               width: 20%;

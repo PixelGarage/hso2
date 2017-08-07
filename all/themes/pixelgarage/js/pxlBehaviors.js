@@ -190,6 +190,45 @@
   };
 
   /**
+   * Implements an interval per slide for the carousel.
+   */
+  Drupal.behaviors.carouselIntervalPerSlide = {
+    attach: function() {
+      var timeout,
+        $carousel = $('#views-bootstrap-carousel-1'),
+        interval = $carousel.find('.item.active').attr('data-interval'),
+        start = interval > 0 ? interval : 10000,
+        _next_slide = function() {
+          $carousel.carousel('next');
+        };
+
+      //initialize first slide
+      timeout = setTimeout(function(){ $carousel.carousel({interval: 1000}); }, start-1000);
+
+      // add events to carousel
+      $carousel.once('carousel', function() {
+        $carousel.on('slid.bs.carousel', function () {
+          clearTimeout(timeout);
+          var data = $(this).find('.item.active').attr('data-interval'),
+            interval = data > 0 ? data : 10000;
+
+          timeout = setTimeout(_next_slide, interval);
+        });
+
+        $carousel.find('.carousel-control.left').on('click', function(){
+          //
+          clearTimeout(timeout);
+        });
+
+        $carousel.find('.carousel-control.right').on('click', function(){
+          clearTimeout(timeout);
+        });
+      });
+
+    }
+  };
+
+  /**
    * Consulting / Brochure webforms.
    *
    * Handles the dynamically shown select boxes in the brochure webform.

@@ -10,7 +10,6 @@
  * Runs import when more than four hours has past since last import
  *
  * Implements hook_cron().
- */
 function hso_importer_cron() {
   $last_time = variable_get('hso_importer_cron_last_run', 0);
 
@@ -19,7 +18,7 @@ function hso_importer_cron() {
   	_hso_importer_run_import();
     variable_set('hso_importer_cron_last_run', REQUEST_TIME);
   }
-}
+}*/
 
 /**
  * Defines the configuration menu for HSO specific settings.
@@ -660,12 +659,11 @@ function _hso_process_contact($contact) {
 
   // update all imported fields of node
 	$node->title = $contact->name;
-  $node->field_internal_id[LANGUAGE_NONE][0]['value'] = $contact->id;
 	$node->field_phone[LANGUAGE_NONE][0]['value'] = $contact->phone;
 	$node->field_email[LANGUAGE_NONE][0]['email'] = $contact->email;
-	$node->field_location[LANGUAGE_NONE][0]['target_id'] = $contact->location_nid;
+	$node->field_locations[LANGUAGE_NONE][0]['target_id'] = $contact->location_nid;
   $node->field_segment[LANGUAGE_NONE][0]['tid'] = $contact->segment_tid;
-  $node->field_course[LANGUAGE_NONE][0]['target_id'] = $contact->course_nid;
+  $node->field_courses[LANGUAGE_NONE][0]['target_id'] = $contact->course_nid;
   $node->field_picture[LANGUAGE_NONE][0] = $contact->file;
   $node = node_submit($node);
   node_save($node);
@@ -713,7 +711,6 @@ function _hso_equal_contacts($node, $contact) {
   // compare objects
   if ($node->status != 1) return false;
   if ($node->title != $contact->name) return false;
-  if ($node->field_internal_id[LANGUAGE_NONE][0]['value'] != $contact->id) return false;
   if ($node->field_phone[LANGUAGE_NONE][0]['value'] != $contact->phone) return false;
   if ($node->field_email[LANGUAGE_NONE][0]['email'] != $contact->email) return false;
   if ($node->field_location[LANGUAGE_NONE][0]['target_id'] != $contact->location_nid) return false;
@@ -766,37 +763,24 @@ function _hso_process_course_time($time) {
   $time->start_date = date('Y-m-d H:i:s', $start_date);
   $time->end_date = !empty($time->end_date) ? date('Y-m-d H:i:s', strtotime($time->end_date . ' 00:00:00')) : null;
   $time->has_subsidy = $time->has_subsidy ? 1 : 0;
-  $time->no_vacancy = $time->no_vacancy ? 1 : 0;
-  $time->taken_places = !empty($time->taken_places) ? $time->taken_places : 0;
-  $time->min_places = !empty($time->min_places) ? $time->min_places : 0;
-  $time->max_places = !empty($time->max_places) ? $time->max_places : NULL;
   $time->template = !empty($time->template) && in_array($time->template, array('ecdl', 'european', 'infoevent', 'salesfunnel')) ? $time->template : 'default';
-  $time->brand_tid = _hso_brands_id_converter($time->brand_id);
 
   // compare objects
   if ($node_update && _hso_equal_course_times($node, $time)) return false;
 
   // update all imported fields of node
 	$node->title = $time->title;
-  $node->field_internal_id[LANGUAGE_NONE][0]['value'] = $time->id;
   $node->field_course[LANGUAGE_NONE][0]['target_id'] = $time->course_nid;
   $node->field_location[LANGUAGE_NONE][0]['target_id'] = $time->location_nid;
-  $node->field_brand[LANGUAGE_NONE][0]['tid'] = $time->brand_tid;
 	$node->body[LANGUAGE_NONE][0]['value'] = $time->description;
 	$node->body[LANGUAGE_NONE][0]['format']  = 'html';
 	$node->field_course_date['und'][0]['value'] = $time->start_date;
   $node->field_course_date['und'][0]['value2'] = $time->end_date;
   $node->field_has_fsv[LANGUAGE_NONE][0]['value'] = $time->has_subsidy;
-  $node->field_no_vacancy[LANGUAGE_NONE][0]['value'] = $time->no_vacancy;
   $node->field_brutto_price[LANGUAGE_NONE][0]['value'] = $time->price_brutto;
   $node->field_netto_price[LANGUAGE_NONE][0]['value'] = $time->price_netto;
   $node->field_detailed_price[LANGUAGE_NONE][0]['value'] = $time->price_detailed;
   $node->field_detailed_price[LANGUAGE_NONE][0]['format']  = 'html';
-  $node->field_additional_info_price[LANGUAGE_NONE][0]['value'] = $time->price_additional;
-  $node->field_additional_info_price[LANGUAGE_NONE][0]['format']  = 'html';
-	$node->field_taken_places[LANGUAGE_NONE][0]['value'] = $time->taken_places;
-  $node->field_minimum[LANGUAGE_NONE][0]['value'] = $time->min_places;
-  $node->field_maximum[LANGUAGE_NONE][0]['value'] = $time->max_places;
   $node->field_template[LANGUAGE_NONE][0]['value'] = $time->template;
 	$node = node_submit($node);
 	node_save($node);
@@ -815,22 +799,15 @@ function _hso_equal_course_times($node, $time) {
   // compare objects
   if ($node->status != 1) return false;
   if ($node->title != $time->title) return false;
-  if ($node->field_internal_id[LANGUAGE_NONE][0]['value'] != $time->id) return false;
   if ($node->field_course[LANGUAGE_NONE][0]['target_id'] != $time->course_nid) return false;
   if ($node->field_location[LANGUAGE_NONE][0]['target_id'] != $time->location_nid) return false;
-  if ($node->field_brand[LANGUAGE_NONE][0]['tid'] != $time->brand_tid) return false;
   if ($node->body[LANGUAGE_NONE][0]['value'] != $time->description) return false;
   if ($node->field_course_date['und'][0]['value'] != $time->start_date) return false;
   if ($node->field_course_date['und'][0]['value2'] != $time->end_date) return false;
   if ($node->field_has_fsv[LANGUAGE_NONE][0]['value'] != $time->has_subsidy) return false;
-  if ($node->field_no_vacancy[LANGUAGE_NONE][0]['value'] != $time->no_vacancy) return false;
   if ($node->field_brutto_price[LANGUAGE_NONE][0]['value'] != $time->price_brutto) return false;
   if ($node->field_netto_price[LANGUAGE_NONE][0]['value'] != $time->price_netto) return false;
   if ($node->field_detailed_price[LANGUAGE_NONE][0]['value'] != $time->price_detailed) return false;
-  if ($node->field_additional_info_price[LANGUAGE_NONE][0]['value'] != $time->price_additional) return false;
-  if ($node->field_taken_places[LANGUAGE_NONE][0]['value'] != $time->taken_places) return false;
-  if ($node->field_minimum[LANGUAGE_NONE][0]['value'] != $time->min_places) return false;
-  if ($node->field_maximum[LANGUAGE_NONE][0]['value'] != $time->max_places) return false;
   if ($node->field_template[LANGUAGE_NONE][0]['value'] != $time->template) return false;
 
   // objects are equal

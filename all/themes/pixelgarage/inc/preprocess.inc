@@ -218,6 +218,44 @@ function _random_testimonials() {
 }
 
 /* =============================================================================
+ *      Course-times views
+ * ========================================================================== */
+/**
+ * Converts the grouped tables into tabs for all course-times views.
+ */
+function pixelgarage_preprocess_views_view(&$vars) {
+  $view = &$vars['view'];
+  if ($view->name != 'course_times') return;
+
+  //
+  // split rendered rows into tables again, if any
+  $vars['tables'] = array();
+  $vars['tabs'] = array();
+  if (empty($vars['rows'])) return;
+
+  $tables = explode('<div class="table-responsive">', $vars['rows']);
+  array_shift($tables);
+  $tables = array_map(function($table) { return '<div class="table-responsive">' . $table; }, $tables);
+  foreach ($tables as $table) {
+    $splitters = explode('caption>', $table);
+    $tab_title = str_replace('</', '', $splitters[1]);
+    $tabs[] = $tab_title;
+  }
+  // sort arrays
+  asort($tabs);
+  $sorted_tables = array();
+  $sorted_tabs = array();
+  foreach ($tabs as $idx => $tab) {
+    $sorted_tabs[] = $tab;
+    $sorted_tables[] = $tables[$idx];
+  }
+  $vars['tables'] = $sorted_tables;
+  $vars['tabs'] = $sorted_tabs;
+
+}
+
+
+/* =============================================================================
  *      Segment page accordion
  * ========================================================================== */
 /**
@@ -307,7 +345,18 @@ function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
  * Implements a fading carousel for the banners.
  */
 function pixelgarage_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
+  $view = &$vars['view'];
+  if ($view->name != 'banners') return;
+
+  // implements fading transition (css)
   $vars['classes_array'][] = 'carousel-fade';
+
+  // implement interval per slide
+  foreach ($view->result as $index => $result) {
+    $node = $result->_field_data['nid']['entity'];
+    $interval = $node->field_interval[LANGUAGE_NONE][0]['value'];
+    $vars['intervals'][] = $interval;
+  }
 }
 
 
