@@ -53,16 +53,41 @@
   <?php if ($rows): ?>
     <div class="view-content">
       <ul class="nav nav-tabs">
-        <?php foreach ($tables as $index => $table): ?>
+        <?php $index = 0; ?>
+        <?php foreach ($tabs as $tab_title => $tab_content): ?>
           <li class="tab-table-<?php print $index ?> <?php if ($index == 0) print 'active' ?>">
-            <a href="#tab-table-<?php print $display_id . $index ?>" data-toggle="tab"><?php print $tabs[$index] ?></a>
+            <a href="#tab-table-<?php print $display_id . $index++ ?>" data-toggle="tab"><?php print $tab_title ?></a>
           </li>
         <?php endforeach ?>
       </ul>
       <div class="tab-content">
-        <?php foreach ($tables as $index => $table): ?>
-          <div class="tab-pane <?php if ($index == 0) print 'active' ?>" id="tab-table-<?php print $display_id . $index ?>">
-            <?php print $table; ?>
+        <?php $index = 0; ?>
+        <?php foreach ($tabs as $tab_title => $tab_content): ?>
+          <div class="tab-pane <?php if ($index == 0) print 'active' ?>" id="tab-table-<?php print $display_id . $index++ ?>">
+            <!-- Print grouped tables as accordion -->
+            <div id="views-bootstrap-accordion-<?php print $index ?>" class="panel-group date-accordion" aria-multiselectable="true">
+              <?php $key = 0; ?>
+              <?php foreach ($tab_content as $date_title => $table): ?>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="panel-title">
+                      <a class="accordion-toggle"
+                         data-toggle="collapse"
+                         aria-expanded="true"
+                         href="#collapse-<?php print $index ?>-<?php print $key ?>">
+                        <?php print $date_title ?>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div id="collapse-<?php print $index ?>-<?php print $key ?>" class="panel-collapse collapse <?php if (0 == $key++) print 'in' ?>">
+                    <div class="panel-body">
+                      <?php print $table; ?>
+                    </div>
+                  </div>
+                </div>
+              <?php endforeach ?>
+            </div>
           </div>
         <?php endforeach ?>
       </div>

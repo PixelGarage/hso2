@@ -229,28 +229,36 @@ function pixelgarage_preprocess_views_view(&$vars) {
 
   //
   // split rendered rows into tables again, if any
-  $vars['tables'] = array();
+  // create location tabs and date headers
   $vars['tabs'] = array();
   if (empty($vars['rows'])) return;
 
-  $tables = explode('<div class="table-responsive">', $vars['rows']);
-  array_shift($tables);
-  $tables = array_map(function($table) { return '<div class="table-responsive">' . $table; }, $tables);
-  foreach ($tables as $table) {
-    $splitters = explode('caption>', $table);
-    $tab_title = str_replace('</', '', $splitters[1]);
-    $tabs[] = $tab_title;
+  // get view-grouping elements
+  $view_groupings = explode('<div class="view-grouping">', $vars['rows']);
+  array_shift($view_groupings); // delete null element at beginning
+  foreach ($view_groupings as $view_grouping) {
+    $content = explode('<div class="view-grouping-content">', $view_grouping);
+
+    // get location tab text
+    $tab_title = str_replace('<div class="view-grouping-header">', '', $content[0]);
+    $tab_title = str_replace('</div>', '', $tab_title);
+    $tabs[$tab_title] = array();
+
+    // get date headers and tables
+    $resp_tables = substr($content[1], 0, -12); // delete </div> at end
+    $tables = explode('<div class="table-responsive">', $resp_tables);
+    array_shift($tables); // delete null element at beginning
+    $tables = array_map(function($table) { return '<div class="table-responsive">' . $table; }, $tables);
+    foreach ($tables as $table) {
+      $splitters = explode('caption>', $table);
+      $date_title = str_replace('</', '', $splitters[1]);
+      $tabs[$tab_title][$date_title] = $table;
+    }
   }
+
   // sort arrays
-  asort($tabs);
-  $sorted_tables = array();
-  $sorted_tabs = array();
-  foreach ($tabs as $idx => $tab) {
-    $sorted_tabs[] = $tab;
-    $sorted_tables[] = $tables[$idx];
-  }
-  $vars['tables'] = $sorted_tables;
-  $vars['tabs'] = $sorted_tabs;
+  ksort($tabs);
+  $vars['tabs'] = $tabs;
 
 }
 

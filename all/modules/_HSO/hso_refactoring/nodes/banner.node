@@ -1,5 +1,5 @@
 <?php
-$export_time = 1501953701;
+$export_time = 1502292270;
 $data = array(
   'bundles' => array(
     'banner' => (object) array(
@@ -459,10 +459,10 @@ $data = array(
           ),
         ),
         'required' => 0,
-        'description' => '',
+        'description' => 'Add banner display time in ms. Default: 5000ms',
         'default_value' => array(
           0 => array(
-            'value' => '0',
+            'value' => '5000',
           ),
         ),
         'field_name' => 'field_interval',

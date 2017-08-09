@@ -9,6 +9,58 @@
 
 // Mixins
 // -------------------------
+.accordion() {
+  padding-top: 30px;
+
+  .panel {
+    border: none;
+    background: transparent none;
+    #pxl-mixins.box-shadow(none);
+
+    .panel-heading {
+      padding: 0 0 10px;
+      background-color: transparent;
+
+      .panel-title {
+        padding: 0 10px;
+        a {
+          display: block;
+          padding: 10px 0;
+          font-family: @pxl-text-font;
+          font-size: @font-size-base + 2;
+          color: @text-color;
+          line-height: 1;
+          text-decoration: none;
+          border-bottom: 1px solid @pxl-color-border;
+          background: none;
+
+          &:hover, &.active {
+            text-decoration: none;
+          }
+
+          span.fa {
+            margin: 0 10px;
+          }
+        }
+
+        &:hover, &.active {
+          background-color: @pxl-color-hso-gray;
+        }
+
+      }
+    }
+
+    .panel-collapse {
+      padding: 0 20px;
+
+      .panel-body {
+        padding: 0;
+        border: none;
+
+      }
+    }
+  }
+}
 
 
 // General settings
@@ -32,43 +84,47 @@
       border-top: none;
 
       .tab-pane {
-        table {
-          tbody {
-            tr {
-              td {
-                &.views-field-field-course-date {
-                  white-space: nowrap;
-                  line-height: 25px;
-                }
+        .panel-group {
+          .accordion();
 
-                &.views-field-field-address {
-                  min-width: 250px;
-                  width: 25%;
-                  text-align: left;
-                }
-
-                &.views-field-body {
-                  min-width: 250px;
-                  width: 25%;
-                  p {
-                    font-size: @table-font-size;
+          table {
+            tbody {
+              tr {
+                td {
+                  &.views-field-field-course-date {
+                    white-space: nowrap;
+                    line-height: 25px;
                   }
-                }
 
-                &.views-field-field-brand {
-                  text-align: center;
-
-                  img {
-                    height: 30px;
+                  &.views-field-field-address {
+                    min-width: 250px;
+                    width: 25%;
+                    text-align: left;
                   }
-                }
 
-                &.views-field-nothing {
-                  text-align: right;
+                  &.views-field-body {
+                    min-width: 250px;
+                    width: 25%;
+                    p {
+                      font-size: @table-font-size;
+                    }
+                  }
 
-                  a {
-                    #pxl-mixins.button-normal;
-                    display: inline-block;
+                  &.views-field-field-brand {
+                    text-align: center;
+
+                    img {
+                      height: 30px;
+                    }
+                  }
+
+                  &.views-field-nothing {
+                    text-align: right;
+
+                    a {
+                      #pxl-mixins.button-normal;
+                      display: inline-block;
+                    }
                   }
                 }
               }
@@ -172,114 +228,130 @@
     // course times table
     padding: 0;
 
-    table {
-      width: 100%;
+    // nav-tabs see course-tabs.less
 
-      caption {
-        // Header for grouped tables
-        margin: 15px 0 0;
-        padding: 20px 20px 24px;
-        font-family: @pxl-text-font-medium;
-        font-size: @font-size-base + 2;
-        color: @text-color;
-        line-height: 1;
-        //border-top: 1px solid @pxl-border-color;
-      }
+    .tab-content {
+      .tab-pane {
+        .panel-group {
+          .accordion();
 
-      thead {
-        tr {
-          th {
-            position: relative;
-            padding: 5px 5px 10px;
-            font-family: @pxl-text-font-medium;
-            font-size: @table-font-size;
-            border: none;
+          table {
+            width: 100%;
 
-            a {
+            caption {
+              // Header for grouped tables
+              display: none;
+              margin: 15px 0 0;
+              padding: 20px 20px 24px;
+              font-family: @pxl-text-font-medium;
+              font-size: @font-size-base + 2;
               color: @text-color;
-
-              &:hover {
-                color: @pxl-color-gray-dark;
-              }
-
-              img {
-                // sort icon
-                display: inline-block;
-                position: absolute;
-                right: 10px;
-              }
+              line-height: 1;
+              //border-top: 1px solid @pxl-border-color;
             }
 
-          }
-        }
-      }
+            thead {
+              tr {
+                th {
+                  position: relative;
+                  padding: 5px 5px 10px;
+                  font-family: @pxl-text-font-medium;
+                  font-size: @table-font-size;
+                  border: none;
 
-      tbody {
-        tr {
-          padding: 0;
-          border: none;
-          height: 70px;
+                  &.active {
+                    background: none;
+                  }
 
-          &.even {
-            background-color: #fff;
-          }
+                  a {
+                    color: @text-color;
 
-          &.odd {
-            background-color: @pxl-color-hso-gray;
-          }
+                    &:hover {
+                      color: @pxl-color-gray-dark;
+                    }
 
-          td {
-            padding: 8px;
-            vertical-align: middle;
-            font-family: @pxl-text-font-light;
-            font-size: @table-font-size;
-            color: @text-color;
-            border: none;
+                    img {
+                      // sort icon
+                      display: inline-block;
+                      position: absolute;
+                      right: 10px;
+                    }
+                  }
 
-            a {
-              color: @text-color;
-            }
-
-            &.active {
-              background: none;
-            }
-
-            &.views-field-field-course-date {
-              white-space: nowrap;
-              line-height: 25px;
-            }
-
-            &.views-field-field-location {
-              text-align: center;
-            }
-
-            &.views-field-body {
-              min-width: 130px;
-              p {
-                font-size: @table-font-size;
+                }
               }
             }
 
-            &.views-field-field-brand {
-              text-align: center;
+            tbody {
+              tr {
+                padding: 0;
+                border: none;
+                height: 70px;
 
-              img {
-                height: 30px;
-              }
-            }
+                &.even {
+                  background-color: #fff;
+                }
 
-            &.views-field-nothing {
-              text-align: right;
+                &.odd {
+                  background-color: @pxl-color-hso-gray;
+                }
 
-              a {
-                #pxl-mixins.button-normal;
-                display: inline-block;
+                td {
+                  padding: 8px;
+                  vertical-align: middle;
+                  font-family: @pxl-text-font-light;
+                  font-size: @table-font-size;
+                  color: @text-color;
+                  border: none;
+
+                  a {
+                    color: @text-color;
+                  }
+
+                  &.active {
+                    background: none;
+                  }
+
+                  &.views-field-field-course-date {
+                    white-space: nowrap;
+                    line-height: 25px;
+                  }
+
+                  &.views-field-field-location {
+                    text-align: center;
+                  }
+
+                  &.views-field-body {
+                    min-width: 130px;
+                    p {
+                      font-size: @table-font-size;
+                    }
+                  }
+
+                  &.views-field-field-brand {
+                    text-align: center;
+
+                    img {
+                      height: 30px;
+                    }
+                  }
+
+                  &.views-field-nothing {
+                    text-align: right;
+
+                    a {
+                      #pxl-mixins.button-normal;
+                      display: inline-block;
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
     }
+
   }
 
   .text-center {

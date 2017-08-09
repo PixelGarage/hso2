@@ -120,8 +120,14 @@ function node_submit_generate_nodes($form, &$form_state) {
   if (!$master_flag) return;
 
   //
-  // generate course-times nodes for all selected locations and study-variants
+  // save master as unpublished (never show in frontend)
   $master_nid = $form_state['values']['nid'];
+  $master_node = node_load($master_nid);
+  $master_node->status = 0;
+  node_save($master_node);
+
+  //
+  // generate course-times nodes for all selected locations and study-variants
   $course = node_load($form_state['values']['field_course'][LANGUAGE_NONE][0]['target_id']);
   $locations = $form_state['values']['locations'];
   $study_variants = $form_state['values']['study_variants'];
