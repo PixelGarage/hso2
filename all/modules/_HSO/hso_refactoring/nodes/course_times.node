@@ -1,5 +1,5 @@
 <?php
-$export_time = 1501763794;
+$export_time = 1502319075;
 $data = array(
   'bundles' => array(
     'course_times' => (object) array(
@@ -228,15 +228,12 @@ $data = array(
       'entity_types' => array(),
       'settings' => array(
         'target_type' => 'node',
-        'handler' => 'base',
+        'handler' => 'views',
         'handler_settings' => array(
-          'target_bundles' => array(
-            'course' => 'course',
-          ),
-          'sort' => array(
-            'type' => 'property',
-            'property' => 'title',
-            'direction' => 'ASC',
+          'view' => array(
+            'view_name' => 'courses',
+            'display_name' => 'entityreference_2',
+            'args' => array(),
           ),
           'behaviors' => array(
             'views-select-list' => array(
@@ -866,11 +863,11 @@ $data = array(
         ),
         'required' => FALSE,
         'description' => '',
+        'default_value' => NULL,
         'field_name' => 'body',
         'entity_type' => 'node',
         'bundle' => 'course_times',
         'deleted' => '0',
-        'default_value' => NULL,
       ),
     ),
     'field_anmeldungs_link' => array(
@@ -1220,7 +1217,7 @@ $data = array(
       0 => array(
         'label' => 'Location',
         'widget' => array(
-          'weight' => '1',
+          'weight' => '2',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,

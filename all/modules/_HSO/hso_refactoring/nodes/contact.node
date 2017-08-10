@@ -1,5 +1,5 @@
 <?php
-$export_time = 1502103158;
+$export_time = 1502319060;
 $data = array(
   'bundles' => array(
     'contact' => (object) array(
@@ -26,15 +26,12 @@ $data = array(
       'entity_types' => array(),
       'settings' => array(
         'target_type' => 'node',
-        'handler' => 'base',
+        'handler' => 'views',
         'handler_settings' => array(
-          'target_bundles' => array(
-            'course' => 'course',
-          ),
-          'sort' => array(
-            'type' => 'property',
-            'property' => 'title',
-            'direction' => 'ASC',
+          'view' => array(
+            'view_name' => 'courses',
+            'display_name' => 'entityreference_2',
+            'args' => array(),
           ),
           'behaviors' => array(
             'views-select-list' => array(

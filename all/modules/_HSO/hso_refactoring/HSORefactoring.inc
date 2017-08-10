@@ -34,6 +34,7 @@ class HSORefactoring extends Refactoring {
     //
     // run all refactoring step by step. Each step has to succeed
     // to continue refactoring
+    if (!$this->enhanceViewCourses()) return 'EnhanceViewCourses';
     if (!$this->contactCleanup()) return 'ContactCleanup';
     if (!$this->courseTimesCleanup()) return 'CourseTimesCleanup';
     if (!$this->locationAndBrandsCleanup()) return 'LocationAndBrandsCleanup';
@@ -68,6 +69,30 @@ class HSORefactoring extends Refactoring {
   //
   // Steps implementation
   //
+  /**
+   * Enhance view courses with course references.
+   */
+  public function enhanceViewCourses() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('EnhanceViewCourses')) return true;
+
+      // add additionalviews here...
+      $this->updateView('views/courses.view');
+
+      // clear views cache
+      if (module_exists('views')) {
+        views_invalidate_cache();
+      }
+
+      return $this->endStep('EnhanceViewCourses');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('EnhanceViewCourses failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
   /**
    * Cleanup all contacts
    */

@@ -36,7 +36,7 @@ function hso_mods_form_node_form_alter(&$form, &$form_state) {
   $form['master_wrapper'] = array(
     '#type' => 'markup',
     '#markup' => '<div id="node-generator-settings"></div>',
-    '#weight' => 0,
+    '#weight' => 1,
   );
 
   // add "Delete Generated Nodes" button, if generated nodes exist
@@ -65,7 +65,7 @@ function hso_mods_form_node_form_alter(&$form, &$form_state) {
     '#description' => t('Define the settings to generate the course-time nodes. For each selection combination a new course-time node is generated. All set fields in this master node are considered by the generation.'),
     '#prefix' => '<div id="node-generator-settings">',
     '#suffix' => '</div>',
-    '#weight' => 0,
+    '#weight' => 1,
   );
   $form['generator_settings']['title_pattern'] = array(
     '#type' => 'textfield',
