@@ -56,11 +56,15 @@ class HSORefactoring extends Refactoring {
     }
     else if ($step_name == 'CourseTimesCleanup') {
       // make sure that newly added fields are completely deleted (also DB tables)
-      $this->deleteFields(array('field_study_variants', 'field_master_nid'));
+      $this->deleteFields(array('field_study_variant', 'field_master_nid'));
     }
     else if ($step_name == 'BannerExtension') {
       // make sure that newly added fields are completely deleted (also DB tables)
       $this->deleteFields(array('field_banner_link', 'field_interval'));
+    }
+    else if ($step_name == 'LocationAndBrandsCleanup') {
+      // make sure that newly added fields are completely deleted (also DB tables)
+      $this->deleteFields(array('field_teaching_times'));
     }
 
   }
@@ -135,17 +139,18 @@ class HSORefactoring extends Refactoring {
 
       // add study variants
       $this->updateEntityType('taxonomy_term', 'taxonomy_terms/study_variants.taxo');
-      $this->updateTerm('study_variants', 'Ganzer Tag: MO');
-      $this->updateTerm('study_variants', 'Ganzer Tag: DI');
-      $this->updateTerm('study_variants', 'Ganzer Tag: MI');
-      $this->updateTerm('study_variants', 'Ganzer Tag: DO');
-      $this->updateTerm('study_variants', 'Ganzer Tag: FR');
-      $this->updateTerm('study_variants', 'Ganzer Tag: SA');
-      $this->updateTerm('study_variants', 'Ganzer Tag: MO, MI, FR');
-      $this->updateTerm('study_variants', 'Ganzer Tag: MO, FR, SA');
-      $this->updateTerm('study_variants', 'Abend: MO, MI');
-      $this->updateTerm('study_variants', 'Abend: MO, DO');
-      $this->updateTerm('study_variants', 'NA & Abend: MI');
+      $this->updateTerm('study_variants', 'MO ganztags');
+      $this->updateTerm('study_variants', 'DI ganztags');
+      $this->updateTerm('study_variants', 'MI ganztags');
+      $this->updateTerm('study_variants', 'DO ganztags');
+      $this->updateTerm('study_variants', 'FR ganztags');
+      $this->updateTerm('study_variants', 'SA ganztags');
+      $this->updateTerm('study_variants', 'MO, MI, FR ganztags');
+      $this->updateTerm('study_variants', 'MO, FR, SA ganztags');
+      $this->updateTerm('study_variants', 'MO, MI abends');
+      $this->updateTerm('study_variants', 'MO, DO abends');
+      $this->updateTerm('study_variants', 'DI, DO abends');
+      $this->updateTerm('study_variants', 'MI nachmittags und abends');
       $this->updateTerm('study_variants', 'Informationsanlass');
 
       // update course times node
@@ -185,6 +190,13 @@ class HSORefactoring extends Refactoring {
       $this->deleteTerm('brands', 'KMZ');
       $this->deleteTerm('brands', 'HMZ');
       $this->updateTerm('brands', 'HBS', 'HBSKMZ');
+
+      // update location node
+      $this->updateEntityType('node', 'nodes/location.node', array(
+        'field_internal_id',
+        'field_standorte',
+      ));
+      $this->updateView('views/locations.view');
 
       return $this->endStep('LocationAndBrandsCleanup');
     }

@@ -1,0 +1,191 @@
+<?php
+
+$page = new stdClass();
+$page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+$page->api_version = 1;
+$page->name = 'course_reservation';
+$page->task = 'page';
+$page->admin_title = 'Platz-Reservation';
+$page->admin_description = '';
+$page->path = 'node/%node/reservation';
+$page->access = array();
+$page->menu = array();
+$page->arguments = array(
+  'node' => array(
+    'id' => 1,
+    'identifier' => 'Node: ID',
+    'name' => 'entity_id:node',
+    'settings' => array(),
+  ),
+);
+$page->conf = array(
+  'admin_paths' => FALSE,
+);
+$page->default_handlers = array();
+$handler = new stdClass();
+$handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+$handler->api_version = 1;
+$handler->name = 'page_course_reservation__default';
+$handler->task = 'page';
+$handler->subtask = 'course_reservation';
+$handler->handler = 'panel_context';
+$handler->weight = -29;
+$handler->conf = array(
+  'title' => 'Default',
+  'no_blocks' => 0,
+  'pipeline' => 'standard',
+  'body_classes_to_remove' => '',
+  'body_classes_to_add' => '',
+  'css_id' => '',
+  'css' => '',
+  'contexts' => array(),
+  'relationships' => array(
+    1 => array(
+      'identifier' => 'Course',
+      'keyword' => 'course',
+      'name' => 'entity_from_field:field_course-node-node',
+      'delta' => 0,
+      'context' => 'argument_entity_id:node_1',
+      'id' => 1,
+    ),
+    2 => array(
+      'identifier' => 'Location',
+      'keyword' => 'location',
+      'name' => 'entity_from_field:field_location-node-node',
+      'delta' => 0,
+      'context' => 'argument_entity_id:node_1',
+      'id' => 1,
+    ),
+    3 => array(
+      'identifier' => 'Segment',
+      'keyword' => 'segment',
+      'name' => 'entity_from_field:field_segment-node-taxonomy_term',
+      'delta' => 0,
+      'context' => 'relationship_entity_from_field:field_course-node-node_1',
+      'id' => 1,
+    ),
+  ),
+  'access' => array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'course_times' => 'course_times',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'node_status',
+        'settings' => NULL,
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      2 => array(
+        'name' => 'entity_field_value:node:course_times:field_template',
+        'settings' => array(
+          'field_template' => array(
+            'und' => array(
+              0 => array(
+                'value' => 'default',
+              ),
+            ),
+          ),
+          'field_template_value' => array(
+            0 => 'default',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  ),
+  'name' => 'default',
+);
+$display = new panels_display();
+$display->layout = 'onecol';
+$display->layout_settings = array();
+$display->panel_settings = array(
+  'style_settings' => array(
+    'default' => NULL,
+    'middle' => NULL,
+  ),
+);
+$display->cache = array();
+$display->title = '%course:title';
+$display->uuid = '0e9d1b50-d043-43d9-ad8f-63c4ec8b0f35';
+$display->storage_type = 'page_manager';
+$display->storage_id = 'page_course_reservation__default';
+$display->content = array();
+$display->panels = array();
+$pane = new stdClass();
+$pane->pid = 'new-ce4dbaac-181a-4eb5-a8c3-9f47397e6289';
+$pane->panel = 'middle';
+$pane->type = 'custom';
+$pane->subtype = 'custom';
+$pane->shown = TRUE;
+$pane->access = array();
+$pane->configuration = array(
+  'admin_title' => '',
+  'title' => '',
+  'body' => '<p>Füllen Sie bitte das unten stehende Formular aus. Die Felder mit einem <span class="required">*</span> sind Pflichtfelder. Die Anmeldung wird Ihnen per E-Mail bestätigt.</p>
+
+<p>&nbsp;</p>
+
+<p><strong class="segment_%segment:tid">%segment:name:</strong> %course:title</p>
+
+<p>%node:body</p>
+
+<p>%node:field_course_date <strong>in</strong> %location:title</p>
+',
+  'format' => 'html',
+  'substitute' => 1,
+  'title_heading' => 'h2',
+);
+$pane->cache = array();
+$pane->style = array(
+  'settings' => NULL,
+);
+$pane->css = array();
+$pane->extras = array();
+$pane->position = 0;
+$pane->locks = array();
+$pane->uuid = 'ce4dbaac-181a-4eb5-a8c3-9f47397e6289';
+$display->content['new-ce4dbaac-181a-4eb5-a8c3-9f47397e6289'] = $pane;
+$display->panels['middle'][0] = 'new-ce4dbaac-181a-4eb5-a8c3-9f47397e6289';
+$pane = new stdClass();
+$pane->pid = 'new-a8dcc22b-b59a-40d0-8fa6-f7a527ecd9f4';
+$pane->panel = 'middle';
+$pane->type = 'node';
+$pane->subtype = 'node';
+$pane->shown = TRUE;
+$pane->access = array();
+$pane->configuration = array(
+  'nid' => '76045',
+  'links' => 0,
+  'leave_node_title' => 0,
+  'identifier' => '',
+  'build_mode' => 'full',
+  'link_node_title' => 0,
+  'override_title' => 1,
+  'override_title_text' => '',
+  'override_title_heading' => 'h2',
+);
+$pane->cache = array();
+$pane->style = array(
+  'settings' => NULL,
+);
+$pane->css = array();
+$pane->extras = array();
+$pane->position = 1;
+$pane->locks = array();
+$pane->uuid = 'a8dcc22b-b59a-40d0-8fa6-f7a527ecd9f4';
+$display->content['new-a8dcc22b-b59a-40d0-8fa6-f7a527ecd9f4'] = $pane;
+$display->panels['middle'][1] = 'new-a8dcc22b-b59a-40d0-8fa6-f7a527ecd9f4';
+$display->hide_title = PANELS_TITLE_FIXED;
+$display->title_pane = 'new-ce4dbaac-181a-4eb5-a8c3-9f47397e6289';
+$handler->conf['display'] = $display;
+$page->default_handlers[$handler->name] = $handler;

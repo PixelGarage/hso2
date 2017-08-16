@@ -65,7 +65,7 @@ if ($course_time_nid) {
     ga('ecommerce:addItem', {
       'id': '<?php print $sid; ?>-<?php print $submission->remote_addr; ?>',    // Transaction ID. Required
       'name': '<?php print addslashes($course->title); ?>',                     // Product name. Required
-      'sku': '<?php print $course_time_node->field_internal_id[LANGUAGE_NONE][0]['value']; ?>', // SKU/code
+      'sku': '<?php print $course_time_nid; ?>', // SKU/code
       'category': '<?php print addslashes($segment->name); ?>',                 // Category or variation
       'price': '<?php print $tracking_price; ?>',                               // Unit price
       'quantity': '1'                                                           // Quantity

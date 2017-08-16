@@ -204,17 +204,20 @@ abstract class Refactoring {
    * @return bool
    *    True, if term is successfully added or updated, false otherwise.
    */
-  protected function updateTerm($vocabulary_name, $term_name, $new_name = null) {
+  protected function updateTerm($vocabulary_name, $term_name, $new_name = null, $fields = array()) {
     //
     // check if term exists in vocabulary, update if any
     $terms = taxonomy_get_term_by_name($term_name, $vocabulary_name);
     if ($terms) {
-      if ($new_name) {
-        // update name of term
-        foreach ($terms as $term) {
+      // update name of term
+      foreach ($terms as $term) {
+        if ($new_name) {
           $term->name = $new_name;
-          taxonomy_term_save($term);
         }
+        foreach($fields as $key => $value) {
+          $term->$key = $value;
+        }
+        taxonomy_term_save($term);
       }
       return true;
     }
@@ -236,6 +239,9 @@ abstract class Refactoring {
       $term->name = $term_name;
       $term->vid = $vid;
       $term->weight = $weight++;
+      foreach($fields as $key => $value) {
+        $term->$key = $value;
+      }
       taxonomy_term_save($term);
       return true;
     }

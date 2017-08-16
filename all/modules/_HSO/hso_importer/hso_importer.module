@@ -541,7 +541,6 @@ function _hso_process_location($location) {
   // update all imported fields of node
 	$node->title = $location->brand_short == 'HSO' ? $location->name : $location->brand_short . ' ' . $location->name;
   $node->field_tab_text[LANGUAGE_NONE][0]['value'] = $location->name;
-  $node->field_internal_id[LANGUAGE_NONE][0]['value'] = $location->id;
 	$node->field_address[LANGUAGE_NONE][0]['country'] = 'CH';
 	$node->field_address[LANGUAGE_NONE][0]['thoroughfare'] = $location->address;
   $node->field_address[LANGUAGE_NONE][0]['postal_code'] = $location->plz;
@@ -550,7 +549,6 @@ function _hso_process_location($location) {
 	$node->field_address[LANGUAGE_NONE][0]['fax_number'] = $location->fax;
 	$node->field_email[LANGUAGE_NONE][0]['email'] = $location->email;
   $node->field_brand[LANGUAGE_NONE][0]['tid'] = _hso_brands_id_converter($location->brand_id, $location->brand_short);
-  $node->field_standorte[LANGUAGE_NONE][0]['value'] = true;
 	$node = node_submit($node);
 	node_save($node);
 	$already_processed[$location->id] = $node->nid;
@@ -763,7 +761,7 @@ function _hso_process_course_time($time) {
   $time->start_date = date('Y-m-d H:i:s', $start_date);
   $time->end_date = !empty($time->end_date) ? date('Y-m-d H:i:s', strtotime($time->end_date . ' 00:00:00')) : null;
   $time->has_subsidy = $time->has_subsidy ? 1 : 0;
-  $time->template = !empty($time->template) && in_array($time->template, array('ecdl', 'european', 'infoevent', 'salesfunnel')) ? $time->template : 'default';
+  $time->template = !empty($time->template) && in_array($time->template, array('reservation', 'ecdl', 'infoevent')) ? $time->template : 'default';
 
   // compare objects
   if ($node_update && _hso_equal_course_times($node, $time)) return false;

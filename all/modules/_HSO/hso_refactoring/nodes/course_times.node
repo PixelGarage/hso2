@@ -1,5 +1,5 @@
 <?php
-$export_time = 1502319075;
+$export_time = 1502891225;
 $data = array(
   'bundles' => array(
     'course_times' => (object) array(
@@ -682,25 +682,14 @@ $data = array(
         ),
       ),
     ),
-    'field_study_variants' => array(
+    'field_study_variant' => array(
       'translatable' => '0',
       'entity_types' => array(),
       'settings' => array(
-        'target_type' => 'taxonomy_term',
-        'handler' => 'base',
-        'handler_settings' => array(
-          'target_bundles' => array(
-            'study_variants' => 'study_variants',
-          ),
-          'sort' => array(
-            'type' => 'property',
-            'property' => 'name',
-            'direction' => 'ASC',
-          ),
-          'behaviors' => array(
-            'views-select-list' => array(
-              'status' => 1,
-            ),
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'study_variants',
+            'parent' => '0',
           ),
         ),
       ),
@@ -712,47 +701,49 @@ $data = array(
         'details' => array(
           'sql' => array(
             'FIELD_LOAD_CURRENT' => array(
-              'field_data_field_study_variants' => array(
-                'target_id' => 'field_study_variants_target_id',
+              'field_data_field_study_variant' => array(
+                'tid' => 'field_study_variant_tid',
               ),
             ),
             'FIELD_LOAD_REVISION' => array(
-              'field_revision_field_study_variants' => array(
-                'target_id' => 'field_study_variants_target_id',
+              'field_revision_field_study_variant' => array(
+                'tid' => 'field_study_variant_tid',
               ),
             ),
           ),
         ),
       ),
       'foreign keys' => array(
-        'taxonomy_term_data' => array(
+        'tid' => array(
           'table' => 'taxonomy_term_data',
           'columns' => array(
-            'target_id' => 'tid',
+            'tid' => 'tid',
           ),
         ),
       ),
       'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
-      'field_name' => 'field_study_variants',
-      'type' => 'entityreference',
-      'module' => 'entityreference',
+      'field_name' => 'field_study_variant',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
       'active' => '1',
       'locked' => '0',
       'cardinality' => '1',
       'deleted' => '0',
       'columns' => array(
-        'target_id' => array(
-          'description' => 'The id of the target entity.',
+        'tid' => array(
           'type' => 'int',
           'unsigned' => TRUE,
-          'not null' => TRUE,
+          'not null' => FALSE,
         ),
       ),
       'bundles' => array(
+        'field_collection_item' => array(
+          0 => 'field_teaching_times',
+        ),
         'node' => array(
           0 => 'course_times',
         ),
@@ -766,8 +757,6 @@ $data = array(
           'default' => 'default',
           'ecdl' => 'ecdl',
           'infoevent' => 'infoevent',
-          'european' => 'european',
-          'salesfunnel' => 'salesfunnel',
         ),
         'allowed_values_function' => '',
       ),
@@ -821,19 +810,25 @@ $data = array(
   'instances' => array(
     'body' => array(
       0 => array(
-        'label' => 'Body',
+        'label' => 'Weitere Infos',
         'widget' => array(
+          'weight' => '8',
           'type' => 'text_textarea_with_summary',
+          'module' => 'text',
+          'active' => 1,
           'settings' => array(
-            'rows' => 20,
+            'rows' => '20',
             'summary_rows' => 5,
           ),
-          'weight' => '8',
-          'module' => 'text',
         ),
         'settings' => array(
-          'display_summary' => TRUE,
-          'text_processing' => 1,
+          'text_processing' => '1',
+          'display_summary' => 1,
+          'linkit' => array(
+            'enable' => 0,
+            'profile' => '',
+            'button_text' => 'Search',
+          ),
           'user_register_form' => FALSE,
         ),
         'display' => array(
@@ -861,7 +856,7 @@ $data = array(
             'module' => 'text',
           ),
         ),
-        'required' => FALSE,
+        'required' => 0,
         'description' => '',
         'default_value' => NULL,
         'field_name' => 'body',
@@ -874,7 +869,7 @@ $data = array(
       0 => array(
         'label' => 'Anmeldungs Link',
         'widget' => array(
-          'weight' => '11',
+          'weight' => '10',
           'type' => 'text_textfield',
           'module' => 'text',
           'active' => 1,
@@ -990,7 +985,7 @@ $data = array(
       0 => array(
         'label' => 'Course',
         'widget' => array(
-          'weight' => '2',
+          'weight' => '1',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,
@@ -1167,7 +1162,7 @@ $data = array(
       0 => array(
         'label' => 'Has FSV',
         'widget' => array(
-          'weight' => '9',
+          'weight' => '11',
           'type' => 'options_onoff',
           'module' => 'options',
           'active' => 1,
@@ -1366,9 +1361,9 @@ $data = array(
         'deleted' => '0',
       ),
     ),
-    'field_study_variants' => array(
+    'field_study_variant' => array(
       0 => array(
-        'label' => 'Study variants',
+        'label' => 'Study variant',
         'widget' => array(
           'weight' => '4',
           'type' => 'options_select',
@@ -1377,23 +1372,15 @@ $data = array(
           'settings' => array(),
         ),
         'settings' => array(
-          'behaviors' => array(
-            'taxonomy-index' => array(
-              'status' => TRUE,
-            ),
-          ),
           'user_register_form' => FALSE,
         ),
         'display' => array(
           'default' => array(
             'label' => 'above',
-            'type' => 'entityreference_label',
-            'settings' => array(
-              'link' => FALSE,
-              'bypass_access' => FALSE,
-            ),
-            'module' => 'entityreference',
-            'weight' => 17,
+            'type' => 'taxonomy_term_reference_link',
+            'settings' => array(),
+            'module' => 'taxonomy',
+            'weight' => 19,
           ),
           'teaser' => array(
             'type' => 'hidden',
@@ -1411,7 +1398,7 @@ $data = array(
         'required' => 0,
         'description' => '',
         'default_value' => NULL,
-        'field_name' => 'field_study_variants',
+        'field_name' => 'field_study_variant',
         'entity_type' => 'node',
         'bundle' => 'course_times',
         'deleted' => '0',
@@ -1419,9 +1406,9 @@ $data = array(
     ),
     'field_template' => array(
       0 => array(
-        'label' => 'Anmeldung Template',
+        'label' => 'Anmeldungs Template',
         'widget' => array(
-          'weight' => '10',
+          'weight' => '9',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,

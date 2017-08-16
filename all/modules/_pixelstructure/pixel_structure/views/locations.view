@@ -19,29 +19,10 @@ $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['pager']['type'] = 'none';
-$handler->display->display_options['style_plugin'] = 'list';
-$handler->display->display_options['style_options']['grouping'] = array(
-  0 => array(
-    'field' => 'field_tab_text',
-    'rendered' => 1,
-    'rendered_strip' => 0,
-  ),
-);
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_tab_plugin_style';
+$handler->display->display_options['style_options']['tab_field'] = 'field_tab_text';
+$handler->display->display_options['style_options']['justified'] = 0;
 $handler->display->display_options['row_plugin'] = 'fields';
-/* Footer: Global: Text area */
-$handler->display->display_options['footer']['area']['id'] = 'area';
-$handler->display->display_options['footer']['area']['table'] = 'views';
-$handler->display->display_options['footer']['area']['field'] = 'area';
-$handler->display->display_options['footer']['area']['content'] = '<p><a class="kontakt_link" href="/node/1052">Zum Kontaktformular</a></p>
-<p style="text-align: center; margin: 0 -7px;">
-  <a class="social twitter" href="http://twitter.com/witercho" target="_blank">Twitter</a>
-  <a class="social facebook" href="http://facebook.com/witercho" target="_blank">Facebook</a>
-  <a class="social youtube" href="http://www.youtube.com/user/HSOSchweiz" target="_blank">Youtube</a>
-  <a class="social googleplus" href="https://plus.google.com/115769061148550553321" target="_blank">Google+</a>
-  <a class="social xing" href="https://www.xing.com/companies/hsowirtschaftsschuleschweiz" target="_blank">Xing</a>
-  <a class="social linkedin" href="http://www.linkedin.com/company/2957809?trk=tyah" target="_blank">Linkedin</a>
-</p>';
-$handler->display->display_options['footer']['area']['format'] = 'html';
 /* Field: Content: Tab title */
 $handler->display->display_options['fields']['field_tab_text']['id'] = 'field_tab_text';
 $handler->display->display_options['fields']['field_tab_text']['table'] = 'field_data_field_tab_text';
@@ -54,11 +35,11 @@ $handler->display->display_options['fields']['field_address']['id'] = 'field_add
 $handler->display->display_options['fields']['field_address']['table'] = 'field_data_field_address';
 $handler->display->display_options['fields']['field_address']['field'] = 'field_address';
 $handler->display->display_options['fields']['field_address']['label'] = '';
-$handler->display->display_options['fields']['field_address']['alter']['text'] = '<p><strong>[field_address-organisation_name]</strong><br>
-[field_address-thoroughfare]<br>
-[field_address-postal_code] [field_address-locality]</p>
-<p><span class="phone">[field_address-phone]</span></p>
-<p><span class="fax">[field_address-fax]</span></p>';
+$handler->display->display_options['fields']['field_address']['alter']['text'] = '<p><strong>[field_address-organisation-name]</strong></p>
+<p>[field_address-thoroughfare]</p>
+<p>[field_address-postal_code] [field_address-locality]</p>
+<p><span class="fa fa-phone"></span>[field_address-phone]</p>
+<p><span class="fa fa-fax"></span>[field_address-fax]</p>';
 $handler->display->display_options['fields']['field_address']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_address']['click_sort_column'] = 'country';
 $handler->display->display_options['fields']['field_address']['settings'] = array(
@@ -74,8 +55,9 @@ $handler->display->display_options['fields']['field_email']['id'] = 'field_email
 $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
 $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
 $handler->display->display_options['fields']['field_email']['label'] = '';
+$handler->display->display_options['fields']['field_email']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_email']['alter']['text'] = '<p><span class="envelope"></span>[field_email]</p>';
 $handler->display->display_options['fields']['field_email']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_email']['type'] = 'invisimail_js_entities';
 $handler->display->display_options['fields']['field_email']['settings'] = array(
   'chunk' => 0,
   'link' => 1,
@@ -98,13 +80,6 @@ $handler->display->display_options['filters']['type']['field'] = 'type';
 $handler->display->display_options['filters']['type']['value'] = array(
   'location' => 'location',
 );
-/* Filter criterion: Content: Standorte (field_standorte) */
-$handler->display->display_options['filters']['field_standorte_value']['id'] = 'field_standorte_value';
-$handler->display->display_options['filters']['field_standorte_value']['table'] = 'field_data_field_standorte';
-$handler->display->display_options['filters']['field_standorte_value']['field'] = 'field_standorte_value';
-$handler->display->display_options['filters']['field_standorte_value']['value'] = array(
-  1 => '1',
-);
 /* Filter criterion: Content: Brand (field_brand) */
 $handler->display->display_options['filters']['field_brand_tid']['id'] = 'field_brand_tid';
 $handler->display->display_options['filters']['field_brand_tid']['table'] = 'field_data_field_brand';
@@ -117,6 +92,16 @@ $handler->display->display_options['filters']['field_brand_tid']['vocabulary'] =
 
 /* Display: Block */
 $handler = $view->new_display('block', 'Block', 'block');
+$handler->display->display_options['defaults']['title'] = FALSE;
+$handler->display->display_options['title'] = 'Kontakt';
+$handler->display->display_options['defaults']['style_plugin'] = FALSE;
+$handler->display->display_options['style_plugin'] = 'views_bootstrap_tab_plugin_style';
+$handler->display->display_options['style_options']['tab_field'] = 'field_tab_text';
+$handler->display->display_options['style_options']['justified'] = 0;
+$handler->display->display_options['defaults']['style_options'] = FALSE;
+$handler->display->display_options['defaults']['row_plugin'] = FALSE;
+$handler->display->display_options['row_plugin'] = 'fields';
+$handler->display->display_options['defaults']['row_options'] = FALSE;
 
 /* Display: Page */
 $handler = $view->new_display('page', 'Page', 'page_1');
@@ -141,21 +126,14 @@ $translatables['locations'] = array(
   t('Sort by'),
   t('Asc'),
   t('Desc'),
-  t('<p><a class="kontakt_link" href="/node/1052">Zum Kontaktformular</a></p>
-<p style="text-align: center; margin: 0 -7px;">
-  <a class="social twitter" href="http://twitter.com/witercho" target="_blank">Twitter</a>
-  <a class="social facebook" href="http://facebook.com/witercho" target="_blank">Facebook</a>
-  <a class="social youtube" href="http://www.youtube.com/user/HSOSchweiz" target="_blank">Youtube</a>
-  <a class="social googleplus" href="https://plus.google.com/115769061148550553321" target="_blank">Google+</a>
-  <a class="social xing" href="https://www.xing.com/companies/hsowirtschaftsschuleschweiz" target="_blank">Xing</a>
-  <a class="social linkedin" href="http://www.linkedin.com/company/2957809?trk=tyah" target="_blank">Linkedin</a>
-</p>'),
-  t('<p><strong>[field_address-organisation_name]</strong><br>
-[field_address-thoroughfare]<br>
-[field_address-postal_code] [field_address-locality]</p>
-<p><span class="phone">[field_address-phone]</span></p>
-<p><span class="fax">[field_address-fax]</span></p>'),
+  t('<p><strong>[field_address-organisation-name]</strong></p>
+<p>[field_address-thoroughfare]</p>
+<p>[field_address-postal_code] [field_address-locality]</p>
+<p><span class="fa fa-phone"></span>[field_address-phone]</p>
+<p><span class="fa fa-fax"></span>[field_address-fax]</p>'),
+  t('<p><span class="envelope"></span>[field_email]</p>'),
   t('Block'),
+  t('Kontakt'),
   t('Page'),
   t('Standorte'),
 );

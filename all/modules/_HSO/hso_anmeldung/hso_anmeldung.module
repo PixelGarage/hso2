@@ -19,14 +19,14 @@ define('ANMELDUNG_BRAND_EMAIL', '@hso.vantage.ch');
 define('ANMELDUNG_DEFAULT', 264);
 
 /**
+ * Reservation Anmeldungs form.
+ */
+define('ANMELDUNG_RESERVATION', 76045);
+
+/**
  * ECDL Anmeldungs form.
  */
 define('ANMELDUNG_ECDL', 476);
-
-/**
- * European Anmeldungs form.
- */
-define('ANMELDUNG_EURO', 475);
 
 /**
  * Informationsanlässe Anmeldungs form.
@@ -210,6 +210,8 @@ function hso_anmeldung_mail_alter(&$message) {
             $message['send'] = TRUE;
             $course = node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']);
             $segment = !empty($course->field_segment) ? taxonomy_term_load($course->field_segment[LANGUAGE_NONE][0]['tid']) : FALSE;
+            $study_variant = isset($course_time_node->field_study_variant[LANGUAGE_NONE][0]['value']) ?
+              taxonomy_term_load($course_time_node->field_study_variant[LANGUAGE_NONE][0]['value']) : false;
             $location = !empty($course_time_node->field_location) ? node_load($course_time_node->field_location[LANGUAGE_NONE][0]['target_id']) : FALSE;
             $contact = FALSE;
             if ($course && $location) {
@@ -221,6 +223,10 @@ function hso_anmeldung_mail_alter(&$message) {
               $address .= $location->field_address[LANGUAGE_NONE][0]['postal_code'] . ' ';
               $address .= $location->field_address[LANGUAGE_NONE][0]['locality'];
             }
+            $now = time();
+            $start_timestamp = strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value']);
+            $res_days = min(round(($start_timestamp - $now) / 86400), 30) . ' days';
+            $res_end_timestamp = strtotime($res_days);
 
             //
             // assign mail tokens
@@ -233,14 +239,15 @@ function hso_anmeldung_mail_alter(&$message) {
               '%segment_name%' => $segment ? $segment->name : '-',
               '%location_name%' => $location ? $location->title : '-',
               '%location_address%' => $address,
-              '%course_time_start_date%' => date('d.m.Y', strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value'])),
-              '%course_time_start_time%' => date('H:i', strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value'])),
+              '%course_time_start_date%' => date('d.m.Y', $start_timestamp),
+              '%course_time_start_time%' => date('H:i', $start_timestamp),
               '%course_time_end_date%' => $course_time_node->field_course_date[LANGUAGE_NONE][0]['value2'] ? date('d.m.Y', strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value2'])) : '-',
               '%gruss_formel%' => $grussformel,
               '%contact_name%' => $contact ? $contact->title : '',
               '%contact_phone%' => $contact ? $contact->field_phone[LANGUAGE_NONE][0]['value'] : '',
               '%contact_email%' => $contact ? $contact->field_email[LANGUAGE_NONE][0]['email'] : '',
-              '%course_time_variante%' => !empty($course_time_node->body) ? $course_time_node->body[LANGUAGE_NONE][0]['value'] : '',
+              '%course_time_variante%' => $study_variant ? $study_variant->name : '',
+              '%reservation_end_date%' => date('d.m.Y', $res_end_timestamp),
             );
 
             // replace tokens with values in mail and complete mail with attachment and address
@@ -249,14 +256,6 @@ function hso_anmeldung_mail_alter(&$message) {
             if ($template == 'admin') {
               //
               // override recipient address for Admin mail and attach pdfs
-//              if ($location) {
-//                // send to main address course location
-//                $message['to'] = array('name' => $location->title, 'mail' => $location->field_email[LANGUAGE_NONE][0]['email']);
-//              }
-//              elseif ($contact) {
-//                // send to responsible person at course location
-//                $message['to'] = array('name' => $contact->title, 'mail' => $contact->field_email[LANGUAGE_NONE][0]['email']);
-//              }
               $message['to'] = array('name' => 'HSO Anmeldedienst', 'mail' => 'info@hso.vantage.ch');
               $message['params']['attachments'][] = _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $course, $course_time_node, $webform_components, $submission_data, $sid, FALSE);
 
@@ -338,9 +337,9 @@ function _hso_get_agb_file() {
  *
  */
 function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $course, $course_time_node, $webform_components, $submission, $submission_sid, $to_client) {
-  $template = $course_time_node->field_template[LANGUAGE_NONE][0]['value'];
   //
   // do not create a PDF for info events
+  $template = $course_time_node->field_template[LANGUAGE_NONE][0]['value'];
   if ($template == 'infoevent') {
     return;
   }
@@ -364,7 +363,7 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
         $additional_fields[] = sprintf('%-26s', $data['name'] . ':') . $submission[$key][0] . '\par';
       }
       else {
-        $to_search['%' . strtoupper($data['form_key']) . '%'] = $submission[$key][0];
+        $to_search['%' . strtoupper($data['form_key']) . '%'] = $submission[$key][0] ? $submission[$key][0] : '__________________________';
       }
       if ($template == 'ecdl' && preg_match('/^m(\d+)$/', $data['form_key']) && $submission[$key][0]) {
         // count number of selected modules
@@ -541,10 +540,10 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id) {
 
   }
   else if ($form_id == 'webform_client_form_' . ANMELDUNG_DEFAULT ||
-    $form_id == 'webform_client_form_' . ANMELDUNG_EURO ||
+    $form_id == 'webform_client_form_' . ANMELDUNG_RESERVATION ||
     $form_id == 'webform_client_form_' . ANMELDUNG_ECDL ||
     $form_id == 'webform_client_form_' . ANMELDUNG_INFO) {
-    // extend all Anmeldungs-webforms (default, european, ecdl, infoanlass) with additional infos,
+    // extend all Anmeldungs-webforms (default, reservation, ecdl, infoanlass) with additional infos,
     // but only if they are shown (url = node/nid/anmeldung)
     if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'anmeldung') {
       // Anmeldung called from course time
@@ -593,13 +592,12 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id) {
 
       }
       else {
-        // default & european form
+        // default & reservation form
         // add agb text
         $text = '* <strong>Ich habe die ' .
-          l('Allgemeinen Geschäftsbedingungen sowie die Preisliste (AGB / Preislisten)', 'node/' . $agb_nid, array(
-            'html' => TRUE,
-            'attributes' => array('target' => '_blank')
-          )) .
+          l('Allgemeinen Geschäftsbedingungen', 'node/' . $agb_nid, array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
+          ' sowie die Bestimmungen zu den ' .
+          l('Kantonsbeiträgen', 'node/3128', array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
           ' gelesen und bin damit einverstanden.</strong><br />';
 
       }
@@ -628,7 +626,7 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id) {
 function hso_anmeldung_webform_submission_presave($node, &$submission) {
   //
   // get location and course fields via course_times nid
-  if (in_array($submission->nid, array(ANMELDUNG_DEFAULT, ANMELDUNG_INFO, ANMELDUNG_ECDL))) {
+  if (in_array($submission->nid, array(ANMELDUNG_DEFAULT, ANMELDUNG_RESERVATION, ANMELDUNG_INFO, ANMELDUNG_ECDL))) {
     // get course time nid from form, if any
     $course_time_nid = FALSE;
     $course_location_key = FALSE;
@@ -662,8 +660,8 @@ function hso_anmeldung_webform_submission_presave($node, &$submission) {
 function hso_anmeldung_webform_submission_render_alter(&$renderable) {
   $submission = $renderable['#submission'];
 
-  // only anmeldungs forms (default, european, ecdl)
-  if (in_array($submission->nid, array(ANMELDUNG_DEFAULT, ANMELDUNG_ECDL, ANMELDUNG_EURO))) {
+  // only anmeldungs forms (default, reservation, ecdl)
+  if (in_array($submission->nid, array(ANMELDUNG_DEFAULT, ANMELDUNG_ECDL, ANMELDUNG_RESERVATION))) {
     // get course time nid from form, if any
     $course_time_nid = FALSE;
     $webform_components = $renderable['#node']->webform['components'];

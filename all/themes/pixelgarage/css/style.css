@@ -10064,7 +10064,7 @@ form#user-login {
 #block-menu-menu-segment-blocks ul.menu,
 #block-menu-menu-course-blocks ul.menu {
   display: block;
-  margin: 20px 0 0;
+  margin: 50px 0 0;
   text-align: left;
 }
 #block-menu-menu-segment-blocks ul.menu li,
@@ -10253,7 +10253,7 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .region-navigation .block-exposed-form-search-course-times {
   position: absolute;
   left: 0;
-  bottom: 20px;
+  bottom: 32px;
   margin: 0;
   width: 100%;
 }
@@ -15554,8 +15554,8 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 /*
  *  Banners view (navigation)
  * --------------------------------------------------*/
-.view-banners {
-  padding-bottom: 90px;
+body.front .view-banners {
+  padding-bottom: 100px;
 }
 .view-banners .view-content .carousel {
   position: relative;
@@ -15635,7 +15635,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
  *  View call2action component
  * --------------------------------------------------*/
 .view.view-call2action {
-  margin-top: 50px;
   width: 100%;
 }
 .view.view-call2action .view-content {
@@ -15643,7 +15642,7 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 }
 .view.view-call2action .view-content .views-row {
   display: inline-block;
-  margin: 10px -2px;
+  margin: 0 -2px;
   padding: 0;
   width: 100%;
   vertical-align: top;
@@ -17017,13 +17016,13 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
 }
 .view.view-course-times.view-display-id-page_info_events .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-nothing a {
   display: block;
-  margin: 0 auto;
+  margin: 0 10px 0 0;
   padding: 8px 0 10px;
-  width: 60%;
-  min-width: 110px;
+  width: 40%;
+  min-width: 150px;
   height: 34px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -17278,40 +17277,29 @@ body.excollege_section .view.view-course-times-search .view-filters .views-expos
   white-space: nowrap;
   line-height: 25px;
 }
-.view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-field-location,
-.view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-field-location {
-  text-align: center;
-}
 .view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-body,
 .view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-body {
+  width: 30%;
   min-width: 130px;
 }
 .view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-body p,
 .view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-body p {
   font-size: 15px;
 }
-.view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-field-brand,
-.view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-field-brand {
-  text-align: center;
-}
-.view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-field-brand img,
-.view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-field-brand img {
-  height: 30px;
-}
 .view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-nothing,
 .view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-nothing {
-  text-align: right;
+  text-align: left;
 }
 .view.view-course-times .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-nothing a,
 .view.view-course-times-search .view-content .tab-content .tab-pane .panel-group table tbody tr td.views-field-nothing a {
   display: block;
-  margin: 0 auto;
+  margin: 0 10px 0 0;
   padding: 8px 0 10px;
-  width: 60%;
-  min-width: 110px;
+  width: 40%;
+  min-width: 150px;
   height: 34px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -18268,9 +18256,6 @@ body {
 }
 .main-container {
   margin: 0 0 50px;
-}
-.main-container .region-navigation {
-  margin-bottom: 20px;
 }
 .main-container .container #page-header .panel-header-blocks {
   display: none;

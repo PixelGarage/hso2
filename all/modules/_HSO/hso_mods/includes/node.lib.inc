@@ -160,8 +160,6 @@ function node_submit_generate_nodes($form, &$form_state) {
           $course_times->field_location[LANGUAGE_NONE][0]['target_id'] = $loc_nid;
           $course_times->field_study_variants[LANGUAGE_NONE][0]['target_id'] = $variant_tid;
           $course_times->field_course_date[LANGUAGE_NONE][0]['value'] = $start_date;
-          $course_times->body[LANGUAGE_NONE][0]['value'] = $variant_name;
-          $course_times->body[LANGUAGE_NONE][0]['format']  = 'html';
           $course_times->field_master_nid[LANGUAGE_NONE][0]['value'] = $master_nid;
           node_save($course_times);
         }
