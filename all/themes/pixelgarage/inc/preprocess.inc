@@ -362,7 +362,8 @@ function pixelgarage_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
   // implement interval per slide
   foreach ($view->result as $index => $result) {
     $node = $result->_field_data['nid']['entity'];
-    $interval = $node->field_interval[LANGUAGE_NONE][0]['value']*1000;
+    $interval = isset($node->field_interval[LANGUAGE_NONE][0]['value']) ?
+      $node->field_interval[LANGUAGE_NONE][0]['value']*1000 : 10000;
     $vars['intervals'][] = $interval;
   }
 }

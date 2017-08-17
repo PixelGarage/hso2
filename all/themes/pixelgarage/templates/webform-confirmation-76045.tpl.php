@@ -21,12 +21,12 @@
 ?>
 <?php print $progressbar; ?>
 
-<br class="webform-confirmation">
+<div class="webform-confirmation">
   <?php if ($confirmation_message): ?>
     <?php print $confirmation_message ?>
   <?php else: ?>
-    <p><?php print t('Herzlichen Dank für Ihre Reservierung. Sie erhalten in Kürze eine Bestätigung per Mail.'); ?></p></br>
-    <p><?php print t('Bei Fragen stehen wir Ihnen gerne zur Verfügung.'); ?></br><?php print t('Ihr HSO-Team'); ?></p></br>
+    <p><?php print t('Herzlichen Dank für Ihre Reservierung. Sie erhalten in Kürze eine Bestätigung per Mail.'); ?></p><br>
+    <p><?php print t('Bei Fragen stehen wir Ihnen gerne zur Verfügung.'); ?><br><?php print t('Ihr HSO-Team'); ?></p><br>
     <p><?php print t('058 680 14 00'); ?></p>
   <?php endif; ?>
 </div>
