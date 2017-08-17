@@ -385,7 +385,7 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
     $field_coll = field_collection_item_load($teaching_time['value']);
     if ($study_variant->tid == $field_coll->field_study_variant[LANGUAGE_NONE][0]['tid']) {
       $course_time_description .= isset($field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value']) ?
-        $field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value'] : '';
+        ', ' . $field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value'] : '';
     }
   }
   $to_search['%ADDITIONALFIELDS%'] = implode(PHP_EOL, $additional_fields);
@@ -428,6 +428,7 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
     $pdf_string = $doc->saveHTML($doc->getElementsByTagName('style')->item(0));
     $pdf_string .= $doc->saveHTML($doc->getElementsByTagName('body')->item(0));
     $pdf_string = str_replace(array_keys($to_search), array_values($to_search), $pdf_string);
+    $pdf_string = preg_replace("/%\w+%/", '', $pdf_string);
 
     // convert html string to pdf
     $dir_uri = file_stream_wrapper_get_instance_by_uri('private://anmeldung');
