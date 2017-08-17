@@ -545,7 +545,7 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id) {
     $form_id == 'webform_client_form_' . ANMELDUNG_INFO) {
     // extend all Anmeldungs-webforms (default, reservation, ecdl, infoanlass) with additional infos,
     // but only if they are shown (url = node/nid/anmeldung)
-    if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'anmeldung') {
+    if (arg(0) == 'node' && is_numeric(arg(1)) && (arg(2) == 'anmeldung' || arg(2) == 'reservation')) {
       // Anmeldung called from course time
       $course_time_node = node_load(arg(1));
       $prevent_access = $course_time_node->type != 'course_times' || !$course_time_node->status || empty($course_time_node->field_course);
