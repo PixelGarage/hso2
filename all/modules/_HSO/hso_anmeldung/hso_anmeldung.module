@@ -210,8 +210,8 @@ function hso_anmeldung_mail_alter(&$message) {
             $message['send'] = TRUE;
             $course = node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']);
             $segment = !empty($course->field_segment) ? taxonomy_term_load($course->field_segment[LANGUAGE_NONE][0]['tid']) : FALSE;
-            $study_variant = isset($course_time_node->field_study_variant[LANGUAGE_NONE][0]['value']) ?
-              taxonomy_term_load($course_time_node->field_study_variant[LANGUAGE_NONE][0]['value']) : false;
+            $study_variant = isset($course_time_node->field_study_variant[LANGUAGE_NONE][0]['tid']) ?
+              taxonomy_term_load($course_time_node->field_study_variant[LANGUAGE_NONE][0]['tid']) : false;
             $location = !empty($course_time_node->field_location) ? node_load($course_time_node->field_location[LANGUAGE_NONE][0]['target_id']) : FALSE;
             $contact = FALSE;
             if ($course && $location) {
@@ -363,7 +363,7 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
         $additional_fields[] = sprintf('%-26s', $data['name'] . ':') . $submission[$key][0] . '\par';
       }
       else {
-        $to_search['%' . strtoupper($data['form_key']) . '%'] = $submission[$key][0] ? $submission[$key][0] : '__________________________';
+        $to_search['%' . strtoupper($data['form_key']) . '%'] = $submission[$key][0] ? $submission[$key][0] : '';
       }
       if ($template == 'ecdl' && preg_match('/^m(\d+)$/', $data['form_key']) && $submission[$key][0]) {
         // count number of selected modules
@@ -378,7 +378,16 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
     $to_search['%NOFMODULE%'] = $mod_count;
     $to_search['%KOSTEN%'] = $mod_count * 65;
   }
-  $course_time_description = !empty($course_time_node->body) ? strip_tags($course_time_node->body[LANGUAGE_NONE][0]['value']) : '';
+  $study_variant = isset($course_time_node->field_study_variant[LANGUAGE_NONE][0]['tid']) ?
+    taxonomy_term_load($course_time_node->field_study_variant[LANGUAGE_NONE][0]['tid']) : false;
+  $course_time_description = $study_variant ? $study_variant->name : '';
+  foreach($location->field_teaching_times[LANGUAGE_NONE] as $index => $teaching_time) {
+    $field_coll = field_collection_item_load($teaching_time['value']);
+    if ($study_variant->tid == $field_coll->field_study_variant[LANGUAGE_NONE][0]['tid']) {
+      $course_time_description .= isset($field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value']) ?
+        $field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value'] : '';
+    }
+  }
   $to_search['%ADDITIONALFIELDS%'] = implode(PHP_EOL, $additional_fields);
   $to_search['%LEHRGANG%'] = $course->title . (empty($course_time_description) ? '' : ', ' . $course_time_description);
   $to_search['%ABTEILUNG%'] = $segment ? $segment->name : '-';
@@ -390,8 +399,6 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
   $to_search['%LOCATION%'] = $location ? $location->title : '';
   $to_search['%HSO_ADRESSE%'] = $location ? $location->field_address[LANGUAGE_NONE][0]['thoroughfare'] : '';
   $to_search['%HSO_PLZORT%'] = $location ? $location->field_address[LANGUAGE_NONE][0]['postal_code'] . ' ' . $location->field_address[LANGUAGE_NONE][0]['locality'] : '';
-  $to_search['%HSO_FAX%'] = $location && isset($location->field_address[LANGUAGE_NONE][0]['fax_number']) ?
-    $location->field_address[LANGUAGE_NONE][0]['fax_number'] : '';
   $to_search['%HSO_TEL%'] = $location && isset($location->field_address[LANGUAGE_NONE][0]['phone_number']) ?
     $location->field_address[LANGUAGE_NONE][0]['phone_number'] : '';
   $to_search['%HSO_EMAIL%'] = $location && isset($location->field_email[LANGUAGE_NONE][0]['email']) ?
