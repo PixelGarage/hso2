@@ -1,5 +1,5 @@
 <?php
-$export_time = 1502891225;
+$export_time = 1503054073;
 $data = array(
   'bundles' => array(
     'course_times' => (object) array(
@@ -741,11 +741,11 @@ $data = array(
         ),
       ),
       'bundles' => array(
-        'field_collection_item' => array(
-          0 => 'field_teaching_times',
-        ),
         'node' => array(
           0 => 'course_times',
+        ),
+        'field_collection_item' => array(
+          0 => 'field_teaching_times',
         ),
       ),
     ),
@@ -806,13 +806,78 @@ $data = array(
         ),
       ),
     ),
+    'field_visible_from' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'granularity' => array(
+          'month' => 'month',
+          'day' => 'day',
+          'hour' => 'hour',
+          'minute' => 'minute',
+          'year' => 'year',
+          'second' => 0,
+        ),
+        'tz_handling' => 'none',
+        'timezone_db' => '',
+        'cache_enabled' => 0,
+        'cache_count' => '4',
+        'todate' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_visible_from' => array(
+                'value' => 'field_visible_from_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_visible_from' => array(
+                'value' => 'field_visible_from_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'field_name' => 'field_visible_from',
+      'type' => 'datetime',
+      'module' => 'date',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'datetime',
+          'mysql_type' => 'datetime',
+          'pgsql_type' => 'timestamp without time zone',
+          'sqlite_type' => 'varchar',
+          'sqlsrv_type' => 'smalldatetime',
+          'not null' => FALSE,
+          'sortable' => TRUE,
+          'views' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'course_times',
+        ),
+      ),
+    ),
   ),
   'instances' => array(
     'body' => array(
       0 => array(
         'label' => 'Weitere Infos',
         'widget' => array(
-          'weight' => '8',
+          'weight' => '9',
           'type' => 'text_textarea_with_summary',
           'module' => 'text',
           'active' => 1,
@@ -869,7 +934,7 @@ $data = array(
       0 => array(
         'label' => 'Anmeldungs Link',
         'widget' => array(
-          'weight' => '10',
+          'weight' => '11',
           'type' => 'text_textfield',
           'module' => 'text',
           'active' => 1,
@@ -933,7 +998,7 @@ $data = array(
       0 => array(
         'label' => 'Brutto price',
         'widget' => array(
-          'weight' => '5',
+          'weight' => '6',
           'type' => 'number',
           'module' => 'number',
           'active' => 0,
@@ -1098,7 +1163,7 @@ $data = array(
       0 => array(
         'label' => 'Detailed price',
         'widget' => array(
-          'weight' => '7',
+          'weight' => '8',
           'type' => 'text_textarea',
           'module' => 'text',
           'active' => 1,
@@ -1162,7 +1227,7 @@ $data = array(
       0 => array(
         'label' => 'Has FSV',
         'widget' => array(
-          'weight' => '11',
+          'weight' => '12',
           'type' => 'options_onoff',
           'module' => 'options',
           'active' => 1,
@@ -1262,7 +1327,7 @@ $data = array(
       0 => array(
         'label' => 'Master NID',
         'widget' => array(
-          'weight' => '12',
+          'weight' => '13',
           'type' => 'text_textfield',
           'module' => 'text',
           'active' => 1,
@@ -1313,7 +1378,7 @@ $data = array(
       0 => array(
         'label' => 'Netto price',
         'widget' => array(
-          'weight' => '6',
+          'weight' => '7',
           'type' => 'number',
           'module' => 'number',
           'active' => 0,
@@ -1365,7 +1430,7 @@ $data = array(
       0 => array(
         'label' => 'Study variant',
         'widget' => array(
-          'weight' => '4',
+          'weight' => '5',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,
@@ -1408,7 +1473,7 @@ $data = array(
       0 => array(
         'label' => 'Anmeldungs Template',
         'widget' => array(
-          'weight' => '9',
+          'weight' => '10',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,
@@ -1446,6 +1511,67 @@ $data = array(
           ),
         ),
         'field_name' => 'field_template',
+        'entity_type' => 'node',
+        'bundle' => 'course_times',
+        'deleted' => '0',
+      ),
+    ),
+    'field_visible_from' => array(
+      0 => array(
+        'label' => 'Visible from',
+        'widget' => array(
+          'weight' => '4',
+          'type' => 'date_popup',
+          'module' => 'date',
+          'active' => 1,
+          'settings' => array(
+            'input_format' => 'd.m.Y - H:i:s',
+            'input_format_custom' => '',
+            'year_range' => '-3:+3',
+            'increment' => '15',
+            'label_position' => 'above',
+            'text_parts' => array(),
+            'no_fieldset' => 0,
+          ),
+        ),
+        'settings' => array(
+          'default_value' => 'now',
+          'default_value_code' => '',
+          'default_value2' => 'same',
+          'default_value_code2' => '',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'date_default',
+            'settings' => array(
+              'format_type' => 'long',
+              'multiple_number' => '',
+              'multiple_from' => '',
+              'multiple_to' => '',
+              'fromto' => 'both',
+              'show_remaining_days' => FALSE,
+            ),
+            'module' => 'date',
+            'weight' => 20,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+          'token' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Set the date from when on the content is visible on the website. The course time is visible until the course start date plus 10 days.',
+        'field_name' => 'field_visible_from',
         'entity_type' => 'node',
         'bundle' => 'course_times',
         'deleted' => '0',

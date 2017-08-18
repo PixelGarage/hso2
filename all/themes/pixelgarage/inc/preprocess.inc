@@ -362,6 +362,22 @@ function pixelgarage_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
   // implement interval per slide
   foreach ($view->result as $index => $result) {
     $node = $result->_field_data['nid']['entity'];
+
+    // check if banner is valid
+    $now = time();
+    $start_timestamp = isset($node->field_validity_period[LANGUAGE_NONE][0]['value']) ?
+      strtotime($node->field_validity_period[LANGUAGE_NONE][0]['value']) : false;
+    $end_timestamp = isset($node->field_validity_period[LANGUAGE_NONE][0]['value2']) ?
+      strtotime($node->field_validity_period[LANGUAGE_NONE][0]['value2']) : false;
+    if ($start_timestamp && $end_timestamp && $start_timestamp > $now && $end_timestamp < $now) {
+      // banner is not valid
+      continue;
+    }
+
+    // set banner
+    $vars['banners'][] = $vars['rows'][$index];
+
+    // set slide duration if any
     $interval = isset($node->field_interval[LANGUAGE_NONE][0]['value']) ?
       $node->field_interval[LANGUAGE_NONE][0]['value']*1000 : 10000;
     $vars['intervals'][] = $interval;

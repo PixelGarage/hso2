@@ -56,11 +56,11 @@ class HSORefactoring extends Refactoring {
     }
     else if ($step_name == 'CourseTimesCleanup') {
       // make sure that newly added fields are completely deleted (also DB tables)
-      $this->deleteFields(array('field_study_variant', 'field_master_nid'));
+      $this->deleteFields(array('field_visible_from', 'field_study_variant', 'field_master_nid'));
     }
     else if ($step_name == 'BannerExtension') {
       // make sure that newly added fields are completely deleted (also DB tables)
-      $this->deleteFields(array('field_banner_link', 'field_interval'));
+      $this->deleteFields(array('field_validity_period', 'field_banner_link', 'field_interval'));
     }
     else if ($step_name == 'LocationAndBrandsCleanup') {
       // make sure that newly added fields are completely deleted (also DB tables)

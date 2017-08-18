@@ -2,7 +2,7 @@
   <?php if ($indicators): ?>
     <!-- Carousel indicators -->
     <ol class="carousel-indicators">
-      <?php foreach ($rows as $key => $value): ?>
+      <?php foreach ($banners as $key => $value): ?>
         <li data-target="#views-bootstrap-carousel-<?php print $id ?>" data-slide-to="<?php print $key ?>" class="<?php if ($key === 0) print 'active' ?>"></li>
       <?php endforeach ?>
     </ol>
@@ -10,7 +10,7 @@
 
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <?php foreach ($rows as $key => $row): ?>
+    <?php foreach ($banners as $key => $row): ?>
       <div class="item <?php if ($key === 0) print 'active' ?>" data-interval="<?php print $intervals[$key] ?>">
         <?php print $row ?>
       </div>
