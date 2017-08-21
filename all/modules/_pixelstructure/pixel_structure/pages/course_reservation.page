@@ -137,9 +137,9 @@ $pane->configuration = array(
 
 <p><strong class="segment_%segment:tid">%segment:name:</strong> %course:title</p>
 
-<p>%node:field_study_variant</p>
-
 <p>%node:field_course_date <strong>in</strong> %location:title</p>
+
+<p><strong>Studienvariante: </strong>%node:field_study_variant</p>
 ',
   'format' => 'html',
   'substitute' => 1,
