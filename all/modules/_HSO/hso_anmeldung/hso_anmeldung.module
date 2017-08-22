@@ -224,8 +224,8 @@ function hso_anmeldung_mail_alter(&$message) {
               $address .= $location->field_address[LANGUAGE_NONE][0]['locality'];
             }
             $now = time();
-            $start_timestamp = strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value']) - 10*86400;
-            $res_days = min(round(($start_timestamp - $now) / 86400), 30) . ' days';
+            $start_timestamp = strtotime($course_time_node->field_course_date[LANGUAGE_NONE][0]['value']);
+            $res_days = min(round(($start_timestamp - $now) / 86400 -10), 30) . ' days';
             $res_end_timestamp = strtotime($res_days);
 
             //
