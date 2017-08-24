@@ -24,7 +24,6 @@ function hso_importer_cron() {
  * Defines the configuration menu for HSO specific settings.
  *
  * Implements hook_menu().
- */
 function hso_importer_menu() {
 	$items = array();
 	$items['admin/config/system/hso'] = array(
@@ -39,6 +38,7 @@ function hso_importer_menu() {
 	);
   return $items;
 }
+ */
 
 /* --------------------------------------------------
  * HSO Import settings form
