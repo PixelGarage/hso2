@@ -369,7 +369,7 @@ function pixelgarage_preprocess_views_bootstrap_carousel_plugin_style(&$vars) {
       strtotime($node->field_validity_period[LANGUAGE_NONE][0]['value']) : false;
     $end_timestamp = isset($node->field_validity_period[LANGUAGE_NONE][0]['value2']) ?
       strtotime($node->field_validity_period[LANGUAGE_NONE][0]['value2']) : $now + 1;
-    if ($start_timestamp && $end_timestamp && ($start_timestamp > $now || $end_timestamp < $now)) {
+    if ($start_timestamp && $end_timestamp && ($start_timestamp <> $end_timestamp) && ($start_timestamp > $now || $end_timestamp < $now)) {
       // banner is not valid
       continue;
     }
