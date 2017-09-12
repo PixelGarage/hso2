@@ -73,14 +73,13 @@
                     <div class="panel-title">
                       <a class="accordion-toggle"
                          data-toggle="collapse"
-                         aria-expanded="true"
-                         href="#collapse-<?php print $index ?>-<?php print $key ?>">
+                         href="#collapse-<?php print $display_id . $index ?>-<?php print $key ?>">
                         <?php print $date_title ?>
                       </a>
                     </div>
                   </div>
 
-                  <div id="collapse-<?php print $index ?>-<?php print $key ?>" class="panel-collapse collapse <?php if (0 == $key++) print 'in' ?>">
+                  <div id="collapse-<?php print $display_id . $index ?>-<?php print $key ?>" class="panel-collapse collapse <?php if (0 == $key++) print 'in' ?>">
                     <div class="panel-body">
                       <?php print $table; ?>
                     </div>
