@@ -9500,6 +9500,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 .panel-display .panel-panel .panel-separator {
   margin-top: 30px;
 }
+.panel-display .panel-panel .panel-pane iframe {
+  max-width: 100%;
+}
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h3 {
@@ -15643,7 +15646,7 @@ body.front .view-banners {
 .view.view-call2action .view-content .views-row {
   display: inline-block;
   margin: 0 -2px;
-  padding: 0;
+  padding: 0 0 15px;
   width: 100%;
   vertical-align: top;
 }
