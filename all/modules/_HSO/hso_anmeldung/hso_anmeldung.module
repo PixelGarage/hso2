@@ -381,14 +381,19 @@ function _hso_make_anmeldung_pdf($location, $segment, $contact, $grussformel, $c
     $to_search['%NOFMODULE%'] = $mod_count;
     $to_search['%KOSTEN%'] = $mod_count * 65;
   }
+
+  //
+  // add study variant and teaching times to contract
   $study_variant = isset($course_time_node->field_study_variant[LANGUAGE_NONE][0]['tid']) ?
     taxonomy_term_load($course_time_node->field_study_variant[LANGUAGE_NONE][0]['tid']) : false;
   $course_time_description = $study_variant ? $study_variant->name : '';
-  foreach($location->field_teaching_times[LANGUAGE_NONE] as $index => $teaching_time) {
-    $field_coll = field_collection_item_load($teaching_time['value']);
-    if ($study_variant->tid == $field_coll->field_study_variant[LANGUAGE_NONE][0]['tid']) {
-      $course_time_description .= isset($field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value']) ?
-        ', ' . $field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value'] : '';
+  if ($study_variant) {
+    foreach($location->field_teaching_times[LANGUAGE_NONE] as $index => $teaching_time) {
+      $field_coll = field_collection_item_load($teaching_time['value']);
+      if ($study_variant->tid == $field_coll->field_study_variant[LANGUAGE_NONE][0]['tid']) {
+        $course_time_description .= isset($field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value']) ?
+          ', ' . $field_coll->field_variant_teaching_times[LANGUAGE_NONE][0]['safe_value'] : '';
+      }
     }
   }
   $to_search['%ADDITIONALFIELDS%'] = implode(PHP_EOL, $additional_fields);
