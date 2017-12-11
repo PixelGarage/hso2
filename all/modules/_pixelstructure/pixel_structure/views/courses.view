@@ -46,7 +46,7 @@ $handler->display->display_options['fields']['title']['field'] = 'title';
 $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-/* Sort criterion: Content: Course-Group (field_fachgebiet) */
+/* Sort criterion: Content: Course-Category (field_fachgebiet) */
 $handler->display->display_options['sorts']['field_fachgebiet_tid']['id'] = 'field_fachgebiet_tid';
 $handler->display->display_options['sorts']['field_fachgebiet_tid']['table'] = 'field_data_field_fachgebiet';
 $handler->display->display_options['sorts']['field_fachgebiet_tid']['field'] = 'field_fachgebiet_tid';
@@ -102,7 +102,7 @@ $handler->display->display_options['row_plugin'] = 'fields';
 $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
 $handler->display->display_options['defaults']['row_options'] = FALSE;
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Field: Content: Course-Group */
+/* Field: Content: Course-Category */
 $handler->display->display_options['fields']['field_fachgebiet']['id'] = 'field_fachgebiet';
 $handler->display->display_options['fields']['field_fachgebiet']['table'] = 'field_data_field_fachgebiet';
 $handler->display->display_options['fields']['field_fachgebiet']['field'] = 'field_fachgebiet';
@@ -131,15 +131,10 @@ $handler->display->display_options['fields']['field_teaser_tabs']['settings'] = 
 );
 $handler->display->display_options['fields']['field_teaser_tabs']['delta_offset'] = '0';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
-/* Sort criterion: Field: Weight (field_weight) */
-$handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
-$handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
-$handler->display->display_options['sorts']['field_weight_value']['field'] = 'field_weight_value';
-$handler->display->display_options['sorts']['field_weight_value']['relationship'] = 'term_node_tid';
-/* Sort criterion: Content: Sort (field_sort) */
-$handler->display->display_options['sorts']['field_sort_value']['id'] = 'field_sort_value';
-$handler->display->display_options['sorts']['field_sort_value']['table'] = 'field_data_field_sort';
-$handler->display->display_options['sorts']['field_sort_value']['field'] = 'field_sort_value';
+/* Sort criterion: Content: Course-Category (field_fachgebiet) */
+$handler->display->display_options['sorts']['field_fachgebiet_tid']['id'] = 'field_fachgebiet_tid';
+$handler->display->display_options['sorts']['field_fachgebiet_tid']['table'] = 'field_data_field_fachgebiet';
+$handler->display->display_options['sorts']['field_fachgebiet_tid']['field'] = 'field_fachgebiet_tid';
 
 /* Display: Infoanlässe References */
 $handler = $view->new_display('entityreference', 'Infoanlässe References', 'entityreference_1');

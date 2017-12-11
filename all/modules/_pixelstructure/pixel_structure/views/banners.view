@@ -46,6 +46,22 @@ $handler->display->display_options['fields']['field_picture']['settings'] = arra
   'image_style' => 'banner',
   'image_link' => '',
 );
+/* Field: Content: Text orientation */
+$handler->display->display_options['fields']['field_text_orientation']['id'] = 'field_text_orientation';
+$handler->display->display_options['fields']['field_text_orientation']['table'] = 'field_data_field_text_orientation';
+$handler->display->display_options['fields']['field_text_orientation']['field'] = 'field_text_orientation';
+$handler->display->display_options['fields']['field_text_orientation']['label'] = '';
+$handler->display->display_options['fields']['field_text_orientation']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_text_orientation']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_text_orientation']['type'] = 'list_key';
+/* Field: Field: Banner text */
+$handler->display->display_options['fields']['field_body']['id'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['table'] = 'field_data_field_body';
+$handler->display->display_options['fields']['field_body']['field'] = 'field_body';
+$handler->display->display_options['fields']['field_body']['label'] = '';
+$handler->display->display_options['fields']['field_body']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['field_body']['alter']['text'] = '<div class="[field_text_orientation]">[field_body]</div>';
+$handler->display->display_options['fields']['field_body']['element_label_colon'] = FALSE;
 /* Sort criterion: Field: Weight (field_weight) */
 $handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
 $handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
@@ -113,6 +129,7 @@ $translatables['banners'] = array(
   t('Sort by'),
   t('Asc'),
   t('Desc'),
+  t('<div class="[field_text_orientation]">[field_body]</div>'),
   t('Home Block'),
   t('Segment Block'),
   t('All'),

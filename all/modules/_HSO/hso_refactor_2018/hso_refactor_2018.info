@@ -1,0 +1,9 @@
+name = "HSO Refactoring 2018"
+description = "HSO Refactoring 2018 (new page layout, integration of HBSKMZ, benefits..."
+package = "HSO"
+core = "7.x"
+version = "1.0"
+
+files[] = HSORefactoring.inc
+
+dependencies[] = pixel_structure

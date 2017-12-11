@@ -1,0 +1,836 @@
+{
+  "77951": {
+    "vid": "77952",
+    "uid": "1",
+    "title": "Wirtschaft & Management",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "77951",
+    "type": "call2action",
+    "language": "de",
+    "created": "1512998583",
+    "changed": "1512998743",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1512998743",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": [],
+    "field_picture": {
+      "und": [
+        {
+          "fid": "6762",
+          "uid": "1",
+          "filename": "broschueren.png",
+          "uri": "public:\/\/images\/broschueren.png",
+          "filemime": "image\/png",
+          "filesize": "19244",
+          "status": "1",
+          "timestamp": "1512998583",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 320,
+            "width": 296
+          },
+          "alt": "",
+          "title": "",
+          "height": "320",
+          "width": "296"
+        }
+      ]
+    },
+    "field_link": {
+      "und": [
+        {
+          "url": "taxonomy\/term\/161",
+          "title": "alle Lehrg\u00e4nge >",
+          "attributes": []
+        }
+      ]
+    },
+    "field_weight": {
+      "und": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "field_css_class": {
+      "und": [
+        {
+          "value": "call2action-management",
+          "format": null,
+          "safe_value": "call2action-management"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1512998583",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77952": {
+    "vid": "77953",
+    "uid": "1",
+    "title": "Wirtschaftsinformatik & Informatik",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "77952",
+    "type": "call2action",
+    "language": "de",
+    "created": "1512998923",
+    "changed": "1512998923",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1512998923",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": [],
+    "field_picture": {
+      "und": [
+        {
+          "fid": "6763",
+          "uid": "1",
+          "filename": "broschueren.png",
+          "uri": "public:\/\/images\/broschueren_0.png",
+          "filemime": "image\/png",
+          "filesize": "19244",
+          "status": "1",
+          "timestamp": "1512998923",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 320,
+            "width": 296
+          },
+          "alt": "",
+          "title": "",
+          "height": "320",
+          "width": "296"
+        }
+      ]
+    },
+    "field_link": {
+      "und": [
+        {
+          "url": "taxonomy\/term\/162",
+          "title": "alle Lehrg\u00e4nge >",
+          "attributes": []
+        }
+      ]
+    },
+    "field_weight": {
+      "und": [
+        {
+          "value": "10"
+        }
+      ]
+    },
+    "field_css_class": {
+      "und": [
+        {
+          "value": "call2action-informatik",
+          "format": null,
+          "safe_value": "call2action-informatik"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1512998923",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77953": {
+    "vid": "77954",
+    "uid": "1",
+    "title": "Handelsschule",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "77953",
+    "type": "call2action",
+    "language": "de",
+    "created": "1512998975",
+    "changed": "1512998975",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1512998975",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": [],
+    "field_picture": {
+      "und": [
+        {
+          "fid": "6764",
+          "uid": "1",
+          "filename": "broschueren.png",
+          "uri": "public:\/\/images\/broschueren_1.png",
+          "filemime": "image\/png",
+          "filesize": "19244",
+          "status": "1",
+          "timestamp": "1512998975",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 320,
+            "width": 296
+          },
+          "alt": "",
+          "title": "",
+          "height": "320",
+          "width": "296"
+        }
+      ]
+    },
+    "field_link": {
+      "und": [
+        {
+          "url": "taxonomy\/term\/2",
+          "title": "alle Lehrg\u00e4nge >",
+          "attributes": []
+        }
+      ]
+    },
+    "field_weight": {
+      "und": [
+        {
+          "value": "20"
+        }
+      ]
+    },
+    "field_css_class": {
+      "und": [
+        {
+          "value": "call2action-handel",
+          "format": null,
+          "safe_value": "call2action-handel"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1512998975",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77954": {
+    "vid": "77955",
+    "uid": "1",
+    "title": "Grundbildung KV & Retail",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "77954",
+    "type": "call2action",
+    "language": "de",
+    "created": "1512999028",
+    "changed": "1512999028",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1512999028",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": [],
+    "field_picture": {
+      "und": [
+        {
+          "fid": "6765",
+          "uid": "1",
+          "filename": "broschueren.png",
+          "uri": "public:\/\/images\/broschueren_2.png",
+          "filemime": "image\/png",
+          "filesize": "19244",
+          "status": "1",
+          "timestamp": "1512999028",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 320,
+            "width": 296
+          },
+          "alt": "",
+          "title": "",
+          "height": "320",
+          "width": "296"
+        }
+      ]
+    },
+    "field_link": {
+      "und": [
+        {
+          "url": "taxonomy\/term\/163",
+          "title": "alle Lehrg\u00e4nge >",
+          "attributes": []
+        }
+      ]
+    },
+    "field_weight": {
+      "und": [
+        {
+          "value": "30"
+        }
+      ]
+    },
+    "field_css_class": {
+      "und": [
+        {
+          "value": "call2action-kv",
+          "format": null,
+          "safe_value": "call2action-kv"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1512999028",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77955": {
+    "vid": "77956",
+    "uid": "1",
+    "title": "Sprachen",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "77955",
+    "type": "call2action",
+    "language": "de",
+    "created": "1512999082",
+    "changed": "1512999082",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1512999082",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": [],
+    "field_picture": {
+      "und": [
+        {
+          "fid": "6766",
+          "uid": "1",
+          "filename": "broschueren.png",
+          "uri": "public:\/\/images\/broschueren_3.png",
+          "filemime": "image\/png",
+          "filesize": "19244",
+          "status": "1",
+          "timestamp": "1512999082",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 320,
+            "width": 296
+          },
+          "alt": "",
+          "title": "",
+          "height": "320",
+          "width": "296"
+        }
+      ]
+    },
+    "field_link": {
+      "und": [
+        {
+          "url": "taxonomy\/term\/160",
+          "title": "alle Sprachen >",
+          "attributes": []
+        }
+      ]
+    },
+    "field_weight": {
+      "und": [
+        {
+          "value": "40"
+        }
+      ]
+    },
+    "field_css_class": {
+      "und": [
+        {
+          "value": "call2action-sprachen",
+          "format": null,
+          "safe_value": "call2action-sprachen"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1512999082",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77956": {
+    "vid": "77957",
+    "uid": "1",
+    "title": "Professional Programs",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "77956",
+    "type": "call2action",
+    "language": "de",
+    "created": "1512999129",
+    "changed": "1512999129",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1512999129",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": [],
+    "field_picture": {
+      "und": [
+        {
+          "fid": "6767",
+          "uid": "1",
+          "filename": "broschueren.png",
+          "uri": "public:\/\/images\/broschueren_4.png",
+          "filemime": "image\/png",
+          "filesize": "19244",
+          "status": "1",
+          "timestamp": "1512999129",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 320,
+            "width": 296
+          },
+          "alt": "",
+          "title": "",
+          "height": "320",
+          "width": "296"
+        }
+      ]
+    },
+    "field_link": {
+      "und": [
+        {
+          "url": "taxonomy\/term\/164",
+          "title": "alle Lehrg\u00e4nge >",
+          "attributes": []
+        }
+      ]
+    },
+    "field_weight": {
+      "und": [
+        {
+          "value": "50"
+        }
+      ]
+    },
+    "field_css_class": {
+      "und": [
+        {
+          "value": "call2action-programs",
+          "format": null,
+          "safe_value": "call2action-programs"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1512999129",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  }
+}

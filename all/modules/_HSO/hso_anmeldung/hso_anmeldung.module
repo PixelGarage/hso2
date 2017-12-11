@@ -71,22 +71,6 @@ function hso_anmeldung_menu() {
     'page arguments' => array(1),
     'type' => MENU_CALLBACK,
   );
-  // dynamically loaded select boxes in brochure form
-  $items['get_graduations/%'] = array(
-    'title' => 'Get graduations of selected segment',
-    //'access callback' => TRUE,
-    'access arguments' => array('access content'),
-    'page callback' => '_hso_get_graduations_callback',
-    'page arguments' => array(1),
-    'type' => MENU_CALLBACK,
-  );
-  $items['get_courses/%/%'] = array(
-    'title' => 'Get all courses of selected education degree',
-    'access callback' => TRUE,
-    'page callback' => '_hso_get_courses_callback',
-    'page arguments' => array(1, 2),
-    'type' => MENU_CALLBACK,
-  );
   return $items;
 }
 

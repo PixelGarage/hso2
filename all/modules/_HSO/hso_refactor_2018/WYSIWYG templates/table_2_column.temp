@@ -1,0 +1,38 @@
+$template = array();
+$template['title'] = 'Table 2 Columns';
+$template['description'] = '';
+$template['weight'] = '0';
+$template['fid'] = '0';
+$template['body'] = '<table class="table-2column" style="width: 100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr style="vertical-align: top;">
+			<th style="width: 50%">
+				<p style="text-align: center; ">Spalte 1</p>
+			</th>
+			<th style="width: 50%">
+				<p style="text-align: center; ">Spalte 2</p>
+			</th>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td>
+				<p style="text-align: left; ">Lorem Ipsum</p>
+			</td>
+			<td style="text-align: left; ">Lorem Ipsum</td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td>
+				<p style="text-align: left; ">Lorem Ipsum</p>
+			</td>
+			<td style="text-align: left; ">Lorem Ipsum</td>
+		</tr>
+		<tr style="vertical-align: top;">
+			<td>
+				<p style="text-align: left; ">Lorem Ipsum</p>
+			</td>
+			<td style="text-align: left; ">Lorem Ipsum</td>
+		</tr>
+	</tbody>
+</table>
+';
+$template['format'] = NULL;
+$template['name'] = 'table_2_columns';

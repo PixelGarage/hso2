@@ -1,5 +1,5 @@
 <?php
-$export_time = 1503054086;
+$export_time = 1513007321;
 $data = array(
   'bundles' => array(
     'banner' => (object) array(
@@ -92,6 +92,73 @@ $data = array(
         ),
       ),
       'bundles' => array(
+        'node' => array(
+          0 => 'banner',
+        ),
+      ),
+    ),
+    'field_body' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_body' => array(
+                'value' => 'field_body_value',
+                'format' => 'field_body_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_body' => array(
+                'value' => 'field_body_value',
+                'format' => 'field_body_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'field_name' => 'field_body',
+      'type' => 'text_long',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'field_collection_item' => array(
+          0 => 'field_teaser_tabs',
+        ),
         'node' => array(
           0 => 'banner',
         ),
@@ -307,6 +374,63 @@ $data = array(
         ),
       ),
     ),
+    'field_text_orientation' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          'left' => 'Left',
+          'center' => 'Center',
+          'right' => 'Right',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_text_orientation' => array(
+                'value' => 'field_text_orientation_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_text_orientation' => array(
+                'value' => 'field_text_orientation_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_text_orientation',
+      'type' => 'list_text',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'banner',
+        ),
+      ),
+    ),
     'field_validity_period' => array(
       'translatable' => '0',
       'entity_types' => array(),
@@ -439,7 +563,7 @@ $data = array(
       0 => array(
         'label' => 'Banner link',
         'widget' => array(
-          'weight' => '5',
+          'weight' => '8',
           'type' => 'link_field',
           'module' => 'link',
           'active' => 0,
@@ -497,11 +621,56 @@ $data = array(
         'deleted' => '0',
       ),
     ),
+    'field_body' => array(
+      0 => array(
+        'label' => 'Banner text',
+        'widget' => array(
+          'weight' => '4',
+          'type' => 'text_textarea',
+          'module' => 'text',
+          'active' => 1,
+          'settings' => array(
+            'rows' => '5',
+          ),
+        ),
+        'settings' => array(
+          'text_processing' => '0',
+          'linkit' => array(
+            'enable' => 0,
+            'profile' => '',
+            'button_text' => 'Search',
+          ),
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'text_default',
+            'settings' => array(),
+            'module' => 'text',
+            'weight' => 7,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_body',
+        'entity_type' => 'node',
+        'bundle' => 'banner',
+        'deleted' => '0',
+      ),
+    ),
     'field_interval' => array(
       0 => array(
         'label' => 'Interval',
         'widget' => array(
-          'weight' => '4',
+          'weight' => '6',
           'type' => 'number',
           'module' => 'number',
           'active' => 0,
@@ -601,7 +770,7 @@ $data = array(
       0 => array(
         'label' => 'Segment',
         'widget' => array(
-          'weight' => '3',
+          'weight' => '5',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,
@@ -634,11 +803,52 @@ $data = array(
         'deleted' => '0',
       ),
     ),
+    'field_text_orientation' => array(
+      0 => array(
+        'label' => 'Text orientation',
+        'widget' => array(
+          'weight' => '3',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'list_default',
+            'settings' => array(),
+            'module' => 'list',
+            'weight' => 8,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => array(
+          0 => array(
+            'value' => 'left',
+          ),
+        ),
+        'field_name' => 'field_text_orientation',
+        'entity_type' => 'node',
+        'bundle' => 'banner',
+        'deleted' => '0',
+      ),
+    ),
     'field_validity_period' => array(
       0 => array(
         'label' => 'Validity period',
         'widget' => array(
-          'weight' => '6',
+          'weight' => '10',
           'type' => 'date_popup',
           'module' => 'date',
           'active' => 1,
