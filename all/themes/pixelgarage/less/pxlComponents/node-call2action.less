@@ -1,0 +1,265 @@
+/*
+ *  Node call2action component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-call2action-menu-height: 40px;
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-call2action {
+  cursor: pointer;
+
+  .row {
+    margin: 0;
+
+    .col-sm-12 {
+      padding: 0;
+
+      .group-image {
+        position: relative;
+        width: 100%;
+
+        .field-name-field-picture {
+          margin: 0;
+          overflow: hidden;
+          max-height: 160px;
+          #pxl-mixins.border-radius(0);
+
+          .field-item {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .field-name-title {
+          position: absolute;
+          top: 20px;
+          width: 100%;
+          padding: 0 10px;
+
+          h2 {
+            margin: 0;
+            font-family: @pxl-text-font;
+            font-size: @font-size-larger;
+            text-align: center;
+            color: #fff;
+          }
+        }
+
+        .field-name-field-icon {
+          display: none;
+
+          #pxl-mixins.center-horizontally;
+          position: absolute;
+          bottom: 52%;
+          width: 90%;
+
+          .field-item {
+            display: block;
+            margin: 0 auto;
+            height: auto;
+
+            img {
+              display: none;
+            }
+          }
+        }
+
+        .field-name-field-link {
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+
+          .field-item {
+            a {
+              #pxl-mixins.button-large;
+              opacity: 1.0;
+              width: 50%;
+
+              &:hover {
+                opacity: 0.7;
+              }
+
+              .call2action-kv & {
+                background: @pxl-color-hso-kv;
+              }
+              .call2action-handel & {
+                background: @pxl-color-hso-hs;
+              }
+              .call2action-management & {
+                background: @pxl-color-hso-wm;
+              }
+              .call2action-informatik & {
+                background: @pxl-color-hso-wi;
+              }
+              .call2action-sprachen & {
+                background: @pxl-color-hso-sp;
+              }
+              .call2action-programs & {
+                background: @pxl-color-hso-pp;
+              }
+            }
+          }
+        }
+
+      }
+
+      .field-name-body {
+        display: none;
+        margin-top: 20px;
+
+        .field-item {
+          font-family: @pxl-text-font-light;
+          font-size: 18px;
+          line-height: 30px;
+          text-align: center;
+          color: @pxl-color-gray-text;
+        }
+      }
+    }
+  }
+
+  @media @narrow {
+    .row {
+      .col-sm-12 {
+        .group-image {
+          .field-name-title {
+            h2 {
+              font-size: @font-size-large;
+            }
+          }
+        }
+
+        .field-name-body {
+          display:block;
+        }
+      }
+    }
+  }
+  @media @tablet {
+    .row {
+      .col-sm-12 {
+        .group-image {
+          .field-name-title {
+            h2 {
+              font-size: @font-size-larger;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.node.node-call2action.view-mode-teaser {
+  cursor: pointer;
+
+  .row {
+    margin: 0;
+    .col-sm-12 {
+      padding: 0;
+
+      .field-name-title {
+        display: block;
+        width: 100%;
+        height: @pxl-call2action-menu-height;
+        padding: 0 5px;
+        background-color: @pxl-color-hso-gray;
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 1.0;
+        }
+
+        h2 {
+          display: block;
+          #pxl-mixins.center-xy(absolute);
+          margin: 0;
+          font-family: @pxl-text-font;
+          font-size: 14px;
+          text-align: center;
+          color: #fff;
+        }
+
+        .call2action-kv & {
+          background: @pxl-color-hso-kv;
+
+          body.segment_kv & {
+            opacity: 1.0;
+          }
+        }
+        .call2action-handel & {
+          background: @pxl-color-hso-hs;
+
+          body.segment_hs & {
+            opacity: 1.0;
+          }
+        }
+        .call2action-management & {
+          background: @pxl-color-hso-wm;
+
+          body.segment_wm & {
+            opacity: 1.0;
+          }
+        }
+        .call2action-informatik & {
+          background: @pxl-color-hso-wi;
+
+          body.segment_wi & {
+            opacity: 1.0;
+          }
+        }
+        .call2action-sprachen & {
+          background: @pxl-color-hso-sp;
+
+          body.segment_sp & {
+            opacity: 1.0;
+          }
+        }
+        .call2action-programs & {
+          background: @pxl-color-hso-pp;
+
+          body.segment_pp & {
+            opacity: 1.0;
+          }
+        }
+      }
+
+      .field-name-field-link {
+        display: none;
+      }
+    }
+  }
+
+  @media @narrow {
+    .row {
+      .col-sm-12 {
+        .field-name-title {
+          h2 {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @media @tablet {
+    .row {
+      .col-sm-12 {
+        .field-name-title {
+          h2 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

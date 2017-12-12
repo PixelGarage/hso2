@@ -119,15 +119,18 @@ class HSORefactoring extends Refactoring {
     //
     // run all refactoring step by step. Each step has to succeed
     // to continue refactoring
-    if (!$this->addNewSegmentsAndCategories()) return 'AddNewSegmentsAndCategories';
-    if (!$this->importCall2Actions()) return 'ImportCall2Actions';
+    //if (!$this->addNewSegmentsAndCategories()) return 'AddNewSegmentsAndCategories';
+    //if (!$this->importCall2Actions()) return 'ImportCall2Actions';
     //if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
-    if (!$this->bannerExtension()) return 'BannerExtension';
-    if (!$this->viewsUpdate()) return 'ViewsUpdate';
+    //if (!$this->bannerExtension()) return 'BannerExtension';
+    //if (!$this->cleanupContext()) return 'CleanupContext';
+    if (!$this->updateMainMenu()) return 'UpdateMainMenu';
+    //if (!$this->viewsUpdate()) return 'ViewsUpdate';
 
     //
-    // display hints
-    drupal_set_message('Update stored contexts!', 'warning');
+    // display hints for manual update
+    drupal_set_message('Manual update: import main menu!', 'warning');
+    drupal_set_message('Manual update: remove exposed search block from navigation region!', 'warning');
 
 
     // refactoring successfully completed
@@ -231,6 +234,9 @@ class HSORefactoring extends Refactoring {
       // import nodes in json file
       $this->_call2actionImport();
 
+      // update view
+      $this->updateView('views/call2action.view');
+
       return $this->endStep('ImportCall2Actions');
     }
     catch (Exception $ex) {
@@ -280,6 +286,70 @@ class HSORefactoring extends Refactoring {
   }
 
   /**
+   * Cleanup of all contexts.
+   */
+  public function cleanupContext() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('CleanupContext')) return true;
+
+      // delete old contexts
+      $this->deleteContext('ex-college');
+      $this->deleteContext('ex-college-home');
+      $this->deleteContext('fh-college');
+      $this->deleteContext('fh-college-home');
+      $this->deleteContext('hf-college');
+      $this->deleteContext('hf-college-home');
+      $this->deleteContext('hs-college');
+      $this->deleteContext('hs-college-home');
+      $this->deleteContext('ks-college');
+      $this->deleteContext('ks-college-home');
+      $this->deleteContext('kv-college');
+      $this->deleteContext('kv-college-home');
+
+      // import new contexts
+      $this->importContext('contexts/segment_wm.cont');
+      $this->importContext('contexts/segment_wm_home.cont');
+      $this->importContext('contexts/segment_wi.cont');
+      $this->importContext('contexts/segment_wi_home.cont');
+      $this->importContext('contexts/segment_hs.cont');
+      $this->importContext('contexts/segment_hs_home.cont');
+      $this->importContext('contexts/segment_kv.cont');
+      $this->importContext('contexts/segment_kv_home.cont');
+      $this->importContext('contexts/segment_sp.cont');
+      $this->importContext('contexts/segment_sp_home.cont');
+      $this->importContext('contexts/segment_pp.cont');
+      $this->importContext('contexts/segment_pp_home.cont');
+      $this->importContext('contexts/segments_home.cont');
+      $this->importContext('contexts/course.cont');
+
+      return $this->endStep('CleanupContext');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('CleanupContext() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
+   * Update main menu with new items. Adapt search view.
+   */
+  public function updateMainMenu() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('UpdateMainMenu')) return true;
+
+      // add steps here...
+
+      return $this->endStep('UpdateMainMenu');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('UpdateMainMenu() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
    * Update all changed views and delete the views in db (views only in code)
    */
   public function viewsUpdate() {
@@ -289,6 +359,7 @@ class HSORefactoring extends Refactoring {
 
       // add additional views here...
       $this->updateView('views/courses.view');
+      $this->updateView('views/course_times_search.view');
 
       // clear views cache
       if (module_exists('views')) {

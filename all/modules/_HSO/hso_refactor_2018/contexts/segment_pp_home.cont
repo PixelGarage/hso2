@@ -1,0 +1,21 @@
+<?php
+
+$context = new stdClass();
+$context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+$context->api_version = 3;
+$context->name = 'segment_pp_home';
+$context->description = '';
+$context->tag = '';
+$context->conditions = array(
+  'path' => array(
+    'values' => array(
+      'taxonomy/term/164' => 'taxonomy/term/164',
+    ),
+  ),
+);
+$context->reactions = array(
+  'theme_html' => array(
+    'class' => 'segment_pp',
+  ),
+);
+$context->condition_mode = 0;

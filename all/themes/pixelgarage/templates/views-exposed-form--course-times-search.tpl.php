@@ -78,8 +78,3 @@
     <?php endif; ?>
   </div>
 </div>
-<!-- Add a modal dialog trigger button -->
-<button type="button" class="btn btn-modal-search-form" data-toggle="modal" data-target="#<?php print $button_modal_id; ?>">
-  <span class="button-text"><?php print $button_text; ?></span>
-  <span class="button-search"><?php print $button_search; ?></span>
-</button>

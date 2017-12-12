@@ -1,0 +1,33 @@
+<?php
+
+$context = new stdClass();
+$context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+$context->api_version = 3;
+$context->name = 'segment_sp';
+$context->description = '';
+$context->tag = '';
+$context->conditions = array(
+  'node' => array(
+    'values' => array(
+      'course' => 'course',
+      'page' => 'page',
+    ),
+    'options' => array(
+      'node_form' => '0',
+    ),
+  ),
+  'node_taxonomy' => array(
+    'values' => array(
+      160 => 160,
+    ),
+    'options' => array(
+      'node_form' => '0',
+    ),
+  ),
+);
+$context->reactions = array(
+  'theme_html' => array(
+    'class' => 'segment_sp',
+  ),
+);
+$context->condition_mode = 1;

@@ -1,3 +1,5 @@
+<?php
+
 $context = new stdClass();
 $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
 $context->api_version = 3;
@@ -25,29 +27,11 @@ $context->reactions = array(
         'region' => 'navigation',
         'weight' => '-10',
       ),
-      'menu-menu-segment-blocks' => array(
-        'module' => 'menu',
-        'delta' => 'menu-segment-blocks',
-        'region' => 'header',
-        'weight' => '-10',
-      ),
-      'views-contacts-block_segment_contacts' => array(
+      'views-call2action-block_1' => array(
         'module' => 'views',
-        'delta' => 'contacts-block_segment_contacts',
-        'region' => 'header_blocks',
-        'weight' => '-10',
-      ),
-      'views-segment_pages-block_info_pages' => array(
-        'module' => 'views',
-        'delta' => 'segment_pages-block_info_pages',
-        'region' => 'header_blocks',
-        'weight' => '-7',
-      ),
-      'views-d69121d4eba27ebba1f1bbf70e6f4f90' => array(
-        'module' => 'views',
-        'delta' => 'd69121d4eba27ebba1f1bbf70e6f4f90',
-        'region' => 'header_blocks',
-        'weight' => '-6',
+        'delta' => 'call2action-block_1',
+        'region' => 'navigation',
+        'weight' => '-9',
       ),
       'views-testimonial_view-block' => array(
         'module' => 'views',

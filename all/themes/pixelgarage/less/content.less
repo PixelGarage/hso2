@@ -79,7 +79,7 @@ body {
 
         h1.page-header {
           //display: none;
-          margin: 50px 0 30px;
+          margin: 30px 0 30px;
           padding: 0;
           font-family: @pxl-text-font-light;
           #pxl-mixins.font-size-responsive(@font-size-h1);
@@ -87,35 +87,23 @@ body {
           line-height: 1;
           border: none;
 
-          body.kvcollege_section & {
+          body.segment_kv & {
             color: @pxl-color-hso-kv;
           }
-          body.hscollege_section & {
+          body.segment_hs & {
             color: @pxl-color-hso-hs;
           }
-          body.kscollege_section & {
-            color: @pxl-color-hso-ks;
+          body.segment_wm & {
+            color: @pxl-color-hso-wm;
           }
-          body.kscollege_section.page-taxonomy-term-3 & {
-            // don't show title on KS segment page
-            display: none;
+          body.segment_sp & {
+            color: @pxl-color-hso-sp;
           }
-          body.hfcollege_section & {
-            color: @pxl-color-hso-hf;
+          body.segment_wi & {
+            color: @pxl-color-hso-wi;
           }
-          body.hfcollege_section.page-taxonomy-term-108 & {
-            // don't show title on KS segment page
-            display: none;
-          }
-          body.fhcollege_section & {
-            color: @pxl-color-hso-fh;
-          }
-          body.fhcollege_section.page-taxonomy-term-109 & {
-            // don't show title on KS segment page
-            display: none;
-          }
-          body.excollege_section & {
-            color: @pxl-color-hso-ex;
+          body.segment_pp & {
+            color: @pxl-color-hso-pp;
           }
         }
 

@@ -19,9 +19,25 @@
   };
 
   /**
+   * Full item click on call2action nodes.
+   */
+  Drupal.behaviors.fullItemClick = {
+    attach: function () {
+      var $call2actions = $('.node-call2action');
+
+      // make call2action full clickable
+      $call2actions.once('click', function() {
+        $(this).on('click', function(ev) {
+          window.location = $(this).find('.field-name-field-link a').attr('href');
+          return false;
+        });
+      });
+    }
+  };
+
+  /**
    * Implements the active state of the page sub-header block menus and opens or closes the sub-header block section
    * according to the menu state.
-   */
   Drupal.behaviors.activateBlockMenus = {
     attach: function () {
       var $blockPanel = $('header#page-header .panel-header-blocks'),
@@ -103,6 +119,7 @@
 
     }
   };
+   */
 
   /**
    * Scrolls smoothly to info event tab due to menu click.
@@ -197,7 +214,7 @@
       var timeout,
         $carousel = $('#views-bootstrap-carousel-1'),
         interval = $carousel.find('.item.active').attr('data-interval'),
-        start = interval > 0 ? interval : 10000,
+        start = interval > 5000 ? interval : 10000,
         _next_slide = function() {
           $carousel.carousel('next');
         };
@@ -210,7 +227,7 @@
         $carousel.on('slid.bs.carousel', function () {
           clearTimeout(timeout);
           var data = $(this).find('.item.active').attr('data-interval'),
-            interval = data > 0 ? data : 10000;
+            interval = data > 5000 ? data : 10000;
 
           timeout = setTimeout(_next_slide, interval);
         });

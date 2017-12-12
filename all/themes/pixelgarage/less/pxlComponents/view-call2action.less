@@ -4,7 +4,8 @@
 
 // Variables
 // -------------------------
-@pxl-gutter-width: 1.5%;
+@pxl-gutter-width: 1%;
+@pxl-gutter-width-teaser: 2px;
 
 // Mixins
 // -------------------------
@@ -15,6 +16,11 @@
 // -------------------------
 .view.view-call2action {
   width: 100%;
+  margin-top: 30px;
+
+  @media @normal {
+    margin-top: 50px;
+  }
 
   .view-content {
     margin: 0 -@pxl-gutter-width;
@@ -22,191 +28,45 @@
     .views-row {
       display: inline-block;
       margin: 0 -2px;
-      padding: 0 0 15px;
+      padding: 0 @pxl-gutter-width 4*@pxl-gutter-width;
       width: 100%;
       vertical-align: top;
 
-      .node-call2action {
-        .row {
-          margin: 0;
-
-          .col-sm-12 {
-            padding: 0 @pxl-gutter-width;
-
-            .group-image {
-              position: relative;
-              width: 100%;
-
-              .field-name-field-picture {
-                margin: 0;
-                overflow: hidden;
-                max-height: 270px;
-                #pxl-mixins.border-radius(5px);
-
-                .field-item {
-                  img {
-                    width: 100%;
-                    height: auto;
-                  }
-                }
-              }
-
-              .field-name-title {
-                position: absolute;
-                bottom: 95px;
-                width: 100%;
-
-                h2 {
-                  margin: 0;
-                  font-family: @pxl-text-font;
-                  font-size: @font-size-larger;
-                  text-align: center;
-                  color: #fff;
-                }
-              }
-
-              .field-name-field-icon {
-                #pxl-mixins.center-horizontally;
-                position: absolute;
-                bottom: 52%;
-                width: 90%;
-
-                .field-item {
-                  display: block;
-                  margin: 0 auto;
-                  height: auto;
-
-                  img {
-                    display: none;
-                  }
-                }
-              }
-
-              .field-name-field-link {
-                position: absolute;
-                bottom: 27px;
-                width: 100%;
-
-                .field-item {
-                  a {
-                    #pxl-mixins.button-large;
-                    width: 50%;
-                  }
-                }
-              }
-
-            }
-
-            .field-name-body {
-              display: none;
-              margin-top: 20px;
-
-              .field-item {
-                font-family: @pxl-text-font-light;
-                font-size: 18px;
-                line-height: 30px;
-                text-align: center;
-                color: @pxl-color-gray-text;
-              }
-            }
-          }
-        }
-      }
-
       @media @narrow {
         width: 50%;
-
-        .node-call2action {
-          .row {
-            .col-sm-12 {
-              padding: 0 2*@pxl-gutter-width;
-
-              .group-image {
-
-              }
-
-              .field-name-body {
-                display:block;
-              }
-            }
-          }
-        }
-      }
-
-      @media @tablet {
-        width: 50%;
-
-        .node-call2action {
-          .row {
-            .col-sm-12 {
-              padding: 0 3*@pxl-gutter-width;
-
-              .group-image {
-                .field-name-field-picture {
-                  max-height: 320px;
-                }
-              }
-            }
-          }
-        }
+        padding: 0 @pxl-gutter-width 2*@pxl-gutter-width;
       }
 
       @media @normal {
-        width: 25%;
+        width: 33.333333%;
+      }
+    }
+  }
+}
 
-        .node-call2action {
-          .row {
-            .col-sm-12 {
-              .group-image {
-                .field-name-field-icon {
-                  bottom: 55%;
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-      }
+//
+// Call2action as Menu links
+//
+.view.view-call2action.view-display-id-block_1 {
+  width: 100%;
+  margin: 20px 0 0;
 
-      &.call2action-brochure {
-        .field-name-field-icon {
-          .field-item {
-            min-height: 83px;
-            //width: 79px;
-            width: 30%;
-            background: url(../images/icon_broschure.svg) no-repeat center center/contain;
-          }
-        }
+  .view-content {
+    margin: 0;
+
+    .views-row {
+      display: inline-block;
+      margin: 0 -2px;
+      padding: 0 @pxl-gutter-width-teaser 2*@pxl-gutter-width-teaser;
+      width: 50%;
+      vertical-align: top;
+
+      @media @tablet {
+        width: 33.3333333%;
       }
-      &.call2action-beratung {
-        .field-name-field-icon {
-          .field-item {
-            min-height: 83px;
-            //width: 83px;
-            width: 30%;
-            background: url(../images/icon_beratung.svg) no-repeat center center/contain;
-          }
-        }
-      }
-      &.call2action-bildungsweg {
-        .field-name-field-icon {
-          .field-item {
-            min-height: 67px;
-            //width: 121px;
-            width: 40%;
-            background: url(../images/icon_bildungsweg.svg) no-repeat top center/contain;
-          }
-        }
-      }
-      &.call2action-info {
-        .field-name-field-icon {
-          .field-item {
-            min-height: 83px;
-            //width: 83px;
-            width: 30%;
-            background: url(../images/icon_info.svg) no-repeat top center/contain;
-          }
-        }
+      @media @normal {
+        width: 16.6666666%;
+        padding: 0 @pxl-gutter-width-teaser;
       }
     }
   }

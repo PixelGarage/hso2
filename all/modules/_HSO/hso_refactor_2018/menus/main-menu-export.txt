@@ -1,0 +1,4 @@
+Bildungsweg {"url":"node\/76123","options":{"item_attributes":{"id":"","class":"","style":""},"menu_attach_block":{"name":"","orientation":"horizontal","mlid":0,"plid":0}},"weight":"0"}
+Broschüre {"url":"node\/1336","options":{"item_attributes":{"id":"","class":"","style":""},"menu_attach_block":{"name":"","orientation":"horizontal","mlid":0,"plid":0}},"weight":"0"}
+Beratungstermin {"url":"node\/1335","options":{"item_attributes":{"id":"","class":"","style":""},"menu_attach_block":{"name":"","orientation":"horizontal","mlid":0,"plid":0}},"weight":"0"}
+Search field {"url":"<block>","options":{"menu_attach_block":{"name":"views|f8fbd4e2a199efa3b091b51b9cbe2130","orientation":"vertical","mlid":"5002","plid":"0"},"item_attributes":{"id":"","class":"","style":""}},"weight":"0"}

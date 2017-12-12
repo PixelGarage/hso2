@@ -1,5 +1,5 @@
 <?php
-$export_time = 1512998152;
+$export_time = 1513105651;
 $data = array(
   'bundles' => array(
     'call2action' => (object) array(
@@ -525,12 +525,9 @@ $data = array(
           ),
           'teaser' => array(
             'label' => 'hidden',
-            'type' => 'text_summary_or_trimmed',
-            'settings' => array(
-              'trim_length' => 600,
-            ),
-            'module' => 'text',
-            'weight' => 0,
+            'type' => 'hidden',
+            'weight' => '12',
+            'settings' => array(),
           ),
         ),
         'required' => FALSE,
@@ -568,6 +565,12 @@ $data = array(
             'label' => 'above',
             'type' => 'hidden',
             'weight' => '15',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '10',
             'settings' => array(),
           ),
         ),
@@ -614,6 +617,12 @@ $data = array(
               'image_link' => '',
             ),
             'module' => 'image',
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '13',
+            'settings' => array(),
           ),
         ),
         'required' => 0,
@@ -670,6 +679,13 @@ $data = array(
             'settings' => array(),
             'module' => 'link',
           ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'link_default',
+            'weight' => '1',
+            'settings' => array(),
+            'module' => 'link',
+          ),
         ),
         'required' => 1,
         'description' => '',
@@ -715,6 +731,12 @@ $data = array(
             ),
             'module' => 'image',
           ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'hidden',
+            'weight' => '11',
+            'settings' => array(),
+          ),
         ),
         'required' => 0,
         'description' => 'Add the background image to the item.',
@@ -746,6 +768,12 @@ $data = array(
             'label' => 'above',
             'type' => 'hidden',
             'weight' => '14',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '9',
             'settings' => array(),
           ),
         ),

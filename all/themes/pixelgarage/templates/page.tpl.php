@@ -199,27 +199,3 @@
     </div>
   </div>
 <?php endif; ?>
-
-<?php if ($exposed_search_form_modal_id): ?>
-  <!--
-  Modal dialog displaying the exposed course-times search form (mobile screens)
-  -->
-  <div id="<?php print $exposed_search_form_modal_id; ?>" class="modal" tabindex="-1" role="dialog" aria-labelledby="pe-modal-label" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <!-- Header -->
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="modal-close" aria-hidden="true"></span></button>
-          <?php if ($exposed_search_form_modal_title): ?>
-            <h2 class="modal-title"><?php print $exposed_search_form_modal_title; ?></h2>
-          <?php endif; ?>
-        </div>
-        <!-- Body -->
-        <div class="modal-body">
-          <?php print render($exposed_search_form); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
-

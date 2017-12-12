@@ -1,0 +1,21 @@
+<?php
+
+$context = new stdClass();
+$context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+$context->api_version = 3;
+$context->name = 'segment_kv_home';
+$context->description = '';
+$context->tag = '';
+$context->conditions = array(
+  'path' => array(
+    'values' => array(
+      'taxonomy/term/163' => 'taxonomy/term/163',
+    ),
+  ),
+);
+$context->reactions = array(
+  'theme_html' => array(
+    'class' => 'segment_kv',
+  ),
+);
+$context->condition_mode = 0;

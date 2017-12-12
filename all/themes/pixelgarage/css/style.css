@@ -9456,20 +9456,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 /*
  *  Box modificarion mixins
  * --------------------------------------------------*/
-#pxl-mixins .center-horizontally {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-#pxl-mixins .center-vertically {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 /*
  *  Transformation mixins
  * --------------------------------------------------*/
@@ -10156,182 +10142,17 @@ form#user-login {
 /*
  *  Exposed search block component
  * --------------------------------------------------*/
-.region-navigation {
-  position: relative;
-}
-body.modal-open {
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-body.modal-open #modal-exposed-search-form {
-  display: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-  z-index: 1620;
-  height: 100%;
-  overflow-y: hidden;
-}
-body.modal-open #modal-exposed-search-form.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  -o-transform: translate(0, -25%);
-  transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-}
-body.modal-open #modal-exposed-search-form.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-body.modal-open #modal-exposed-search-form .modal-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #222;
-}
-body.modal-open #modal-exposed-search-form .modal-backdrop.in {
-  opacity: 0.7;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-}
-.admin-menu body.modal-open #modal-exposed-search-form .modal-dialog {
-  margin: 29px auto 0;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content {
-  position: relative;
-  height: 100%;
-  padding: 0;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header {
-  padding: 0;
-  min-height: 60px;
-  border: none;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header h2.modal-title {
-  font-family: 'SohoGothicProLight', serif;
-  font-size: 30px;
-  text-align: center;
-  color: #333333;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close {
-  display: block;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  opacity: 1.0;
-  z-index: 1;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-header button.close .modal-close {
-  display: inline-block;
-  width: 23px;
-  height: 23px;
-  background: #fff url("../images/popup_close.svg") no-repeat left top / contain;
-}
-body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-body {
-  padding: 20px 10px;
-}
-.region-navigation .block-exposed-form-search-course-times {
-  position: absolute;
-  left: 0;
-  bottom: 32px;
-  margin: 0;
-  width: 100%;
-}
-@media screen and (min-width: 480px) {
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form {
-  display: none;
-}
-.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  border: none;
-  outline: none;
-}
-@media screen and (min-width: 640px) {
-  .region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form {
-    display: none;
-  }
-}
-.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span {
-  display: inline-block;
-  margin: 0 -2px;
-  height: 36px;
-  padding: 7px 15px 10px;
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 14px;
-  border: none;
-}
-.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span.button-text {
-  color: #929295;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
-  border: 1px solid #c9c9c9;
-  background: #fff none;
-}
-.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .btn-modal-search-form span.button-search {
-  color: #fff;
-  letter-spacing: 1px;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border: 1px solid #ff535d;
-  background: #ff535d none;
-}
-.region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form {
-  display: none;
-}
-@media screen and (min-width: 640px) {
-  .region-navigation .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form {
-    display: block;
-  }
-}
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets {
   margin: 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget {
-  display: block;
+  display: inline-block;
   float: none;
-  margin: 0 auto 20px;
+  margin: 0 -3px 0 -1px;
   padding: 0;
-}
-@media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget {
-    display: inline-block;
-    margin: 0 -3px 0 -1px;
-    vertical-align: top;
-  }
+  vertical-align: bottom;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
   display: none;
@@ -10349,13 +10170,13 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control {
   margin: 0;
-  height: 36px;
+  height: 24px;
   font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #494a4f;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   border: 1px solid #c9c9c9;
   background-color: #fff;
   -webkit-box-shadow: none;
@@ -10372,13 +10193,6 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control::-webkit-input-placeholder {
   color: #929295;
 }
-@media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control {
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-  }
-}
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control:focus {
   -webkit-box-shadow: inset 0 0 3px #c9c9c9;
   -moz-box-shadow: inset 0 0 3px #c9c9c9;
@@ -10386,113 +10200,32 @@ body.modal-open #modal-exposed-search-form .modal-dialog .modal-content .modal-b
   border: 1px solid #c9c9c9;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-text {
-  padding: 3px 15px 6px;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item .form-control.form-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 3px 20px 6px 10px;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup {
-  margin: 0;
-  width: 100%;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding {
-  width: 100%;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding .form-item-field-course-date-value-value-date {
-  width: 100%;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget .form-item.form-type-date-popup .date-padding .form-item-field-course-date-value-value-date input {
-  width: 100%;
+  padding: 4px 15px 6px;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine {
-  width: 90%;
+  width: 85%;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1024px) {
   .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine {
-    width: 20%;
-    min-width: 150px;
-  }
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item .form-control {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-  }
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1,
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id {
-  width: 90%;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget,
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id .views-widget {
-  position: relative;
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1 .views-widget .form-item:after,
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id .views-widget .form-item:after {
-  content: '\f0d7';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 5px;
-  bottom: 0;
-  font-family: 'fontawesome';
-  color: #494a4f;
-  line-height: 36px;
-  pointer-events: none;
-}
-@media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_segment_tid_1,
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_location_target_id {
-    width: 12%;
-    min-width: 130px;
-  }
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
-  width: 90%;
-}
-@media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_course_date_value {
-    width: 10%;
-    min-width: 120px;
-    margin-left: 0;
-  }
-}
-.block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality {
-  width: 90%;
-}
-@media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-field_address_locality {
-    width: 10%;
-    min-width: 120px;
+    width: 180px;
   }
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  overflow: hidden;
   border: none;
+  padding-left: 5px;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit {
   margin: 0;
-  height: 36px;
-  padding: 7px 15px 10px;
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1;
-  letter-spacing: 0.03em;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  text-indent: 100%;
   border: none;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background: #ff535d;
-}
-@media screen and (min-width: 640px) {
-  .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-  }
+  background: url(../images/icon-search.svg) no-repeat top center / contain;
 }
 .block-exposed-form-search-course-times form#views-exposed-form-course-times-search-page-search-course-times .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button.form-submit:hover {
-  background: #ff757d;
+  background: url(../images/icon-search-hover.svg) no-repeat top center / contain;
 }
 /*
  *  Node page component
@@ -11081,166 +10814,166 @@ form.webform-client-form a.active,
 form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section form.webform-client-form a {
+body.segment_kv form.webform-client-form a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section form.webform-client-form a:hover,
-body.kvcollege_section form.webform-client-form a.active,
-body.kvcollege_section form.webform-client-form a:focus {
+body.segment_kv form.webform-client-form a:hover,
+body.segment_kv form.webform-client-form a.active,
+body.segment_kv form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section form.webform-client-form a {
+body.segment_kv form.webform-client-form a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section form.webform-client-form a:hover,
-body.kvcollege_section form.webform-client-form a.active,
-body.kvcollege_section form.webform-client-form a:focus {
+body.segment_kv form.webform-client-form a:hover,
+body.segment_kv form.webform-client-form a.active,
+body.segment_kv form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section form.webform-client-form a {
+body.segment_kv form.webform-client-form a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section form.webform-client-form a:hover,
-body.kvcollege_section form.webform-client-form a.active,
-body.kvcollege_section form.webform-client-form a:focus {
+body.segment_kv form.webform-client-form a:hover,
+body.segment_kv form.webform-client-form a.active,
+body.segment_kv form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.hscollege_section form.webform-client-form a {
+body.segment_hs form.webform-client-form a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section form.webform-client-form a:hover,
-body.hscollege_section form.webform-client-form a.active,
-body.hscollege_section form.webform-client-form a:focus {
+body.segment_hs form.webform-client-form a:hover,
+body.segment_hs form.webform-client-form a.active,
+body.segment_hs form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.hscollege_section form.webform-client-form a {
+body.segment_hs form.webform-client-form a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section form.webform-client-form a:hover,
-body.hscollege_section form.webform-client-form a.active,
-body.hscollege_section form.webform-client-form a:focus {
+body.segment_hs form.webform-client-form a:hover,
+body.segment_hs form.webform-client-form a.active,
+body.segment_hs form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.hscollege_section form.webform-client-form a {
+body.segment_hs form.webform-client-form a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section form.webform-client-form a:hover,
-body.hscollege_section form.webform-client-form a.active,
-body.hscollege_section form.webform-client-form a:focus {
+body.segment_hs form.webform-client-form a:hover,
+body.segment_hs form.webform-client-form a.active,
+body.segment_hs form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.kscollege_section form.webform-client-form a {
+body.segment_wm form.webform-client-form a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section form.webform-client-form a:hover,
-body.kscollege_section form.webform-client-form a.active,
-body.kscollege_section form.webform-client-form a:focus {
+body.segment_wm form.webform-client-form a:hover,
+body.segment_wm form.webform-client-form a.active,
+body.segment_wm form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.kscollege_section form.webform-client-form a {
+body.segment_wm form.webform-client-form a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section form.webform-client-form a:hover,
-body.kscollege_section form.webform-client-form a.active,
-body.kscollege_section form.webform-client-form a:focus {
+body.segment_wm form.webform-client-form a:hover,
+body.segment_wm form.webform-client-form a.active,
+body.segment_wm form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.kscollege_section form.webform-client-form a {
+body.segment_wm form.webform-client-form a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section form.webform-client-form a:hover,
-body.kscollege_section form.webform-client-form a.active,
-body.kscollege_section form.webform-client-form a:focus {
+body.segment_wm form.webform-client-form a:hover,
+body.segment_wm form.webform-client-form a.active,
+body.segment_wm form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section form.webform-client-form a {
-  color: #335592;
+body.segment_sp form.webform-client-form a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section form.webform-client-form a:hover,
-body.hfcollege_section form.webform-client-form a.active,
-body.hfcollege_section form.webform-client-form a:focus {
+body.segment_sp form.webform-client-form a:hover,
+body.segment_sp form.webform-client-form a.active,
+body.segment_sp form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section form.webform-client-form a {
-  color: #335592;
+body.segment_sp form.webform-client-form a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section form.webform-client-form a:hover,
-body.hfcollege_section form.webform-client-form a.active,
-body.hfcollege_section form.webform-client-form a:focus {
+body.segment_sp form.webform-client-form a:hover,
+body.segment_sp form.webform-client-form a.active,
+body.segment_sp form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section form.webform-client-form a {
-  color: #335592;
+body.segment_sp form.webform-client-form a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section form.webform-client-form a:hover,
-body.hfcollege_section form.webform-client-form a.active,
-body.hfcollege_section form.webform-client-form a:focus {
+body.segment_sp form.webform-client-form a:hover,
+body.segment_sp form.webform-client-form a.active,
+body.segment_sp form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section form.webform-client-form a {
+body.segment_wi form.webform-client-form a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section form.webform-client-form a:hover,
-body.fhcollege_section form.webform-client-form a.active,
-body.fhcollege_section form.webform-client-form a:focus {
+body.segment_wi form.webform-client-form a:hover,
+body.segment_wi form.webform-client-form a.active,
+body.segment_wi form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section form.webform-client-form a {
+body.segment_wi form.webform-client-form a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section form.webform-client-form a:hover,
-body.fhcollege_section form.webform-client-form a.active,
-body.fhcollege_section form.webform-client-form a:focus {
+body.segment_wi form.webform-client-form a:hover,
+body.segment_wi form.webform-client-form a.active,
+body.segment_wi form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section form.webform-client-form a {
+body.segment_wi form.webform-client-form a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section form.webform-client-form a:hover,
-body.fhcollege_section form.webform-client-form a.active,
-body.fhcollege_section form.webform-client-form a:focus {
+body.segment_wi form.webform-client-form a:hover,
+body.segment_wi form.webform-client-form a.active,
+body.segment_wi form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.excollege_section form.webform-client-form a {
+body.segment_pp form.webform-client-form a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section form.webform-client-form a:hover,
-body.excollege_section form.webform-client-form a.active,
-body.excollege_section form.webform-client-form a:focus {
+body.segment_pp form.webform-client-form a:hover,
+body.segment_pp form.webform-client-form a.active,
+body.segment_pp form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.excollege_section form.webform-client-form a {
+body.segment_pp form.webform-client-form a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section form.webform-client-form a:hover,
-body.excollege_section form.webform-client-form a.active,
-body.excollege_section form.webform-client-form a:focus {
+body.segment_pp form.webform-client-form a:hover,
+body.segment_pp form.webform-client-form a.active,
+body.segment_pp form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.excollege_section form.webform-client-form a {
+body.segment_pp form.webform-client-form a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section form.webform-client-form a:hover,
-body.excollege_section form.webform-client-form a.active,
-body.excollege_section form.webform-client-form a:focus {
+body.segment_pp form.webform-client-form a:hover,
+body.segment_pp form.webform-client-form a.active,
+body.segment_pp form.webform-client-form a:focus {
   text-decoration: underline;
 }
 form.webform-client-form fieldset.panel {
@@ -11415,38 +11148,38 @@ form.webform-client-form .webform-component textarea:focus {
   -webkit-box-shadow: inset 0 0 3px #cc3333;
   box-shadow: inset 0 0 3px #cc3333;
 }
-body.kvcollege_section form.webform-client-form .webform-component input:focus,
-body.kvcollege_section form.webform-client-form .webform-component textarea:focus {
+body.segment_kv form.webform-client-form .webform-component input:focus,
+body.segment_kv form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #8C9D44;
   -webkit-box-shadow: inset 0 0 3px #8C9D44;
   box-shadow: inset 0 0 3px #8C9D44;
 }
-body.hscollege_section form.webform-client-form .webform-component input:focus,
-body.hscollege_section form.webform-client-form .webform-component textarea:focus {
+body.segment_hs form.webform-client-form .webform-component input:focus,
+body.segment_hs form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #D09D15;
   -webkit-box-shadow: inset 0 0 3px #D09D15;
   box-shadow: inset 0 0 3px #D09D15;
 }
-body.kscollege_section form.webform-client-form .webform-component input:focus,
-body.kscollege_section form.webform-client-form .webform-component textarea:focus {
+body.segment_wm form.webform-client-form .webform-component input:focus,
+body.segment_wm form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #7C0B25;
   -webkit-box-shadow: inset 0 0 3px #7C0B25;
   box-shadow: inset 0 0 3px #7C0B25;
 }
-body.hfcollege_section form.webform-client-form .webform-component input:focus,
-body.hfcollege_section form.webform-client-form .webform-component textarea:focus {
-  border: 1px solid #335592;
-  -webkit-box-shadow: inset 0 0 3px #335592;
-  box-shadow: inset 0 0 3px #335592;
+body.segment_sp form.webform-client-form .webform-component input:focus,
+body.segment_sp form.webform-client-form .webform-component textarea:focus {
+  border: 1px solid #B2CCD8;
+  -webkit-box-shadow: inset 0 0 3px #B2CCD8;
+  box-shadow: inset 0 0 3px #B2CCD8;
 }
-body.fhcollege_section form.webform-client-form .webform-component input:focus,
-body.fhcollege_section form.webform-client-form .webform-component textarea:focus {
+body.segment_wi form.webform-client-form .webform-component input:focus,
+body.segment_wi form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #3F5868;
   -webkit-box-shadow: inset 0 0 3px #3F5868;
   box-shadow: inset 0 0 3px #3F5868;
 }
-body.excollege_section form.webform-client-form .webform-component input:focus,
-body.excollege_section form.webform-client-form .webform-component textarea:focus {
+body.segment_pp form.webform-client-form .webform-component input:focus,
+body.segment_pp form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #7B6C65;
   -webkit-box-shadow: inset 0 0 3px #7B6C65;
   box-shadow: inset 0 0 3px #7B6C65;
@@ -11477,28 +11210,28 @@ form.webform-client-form .webform-component select:active {
   outline: none;
   border: 1px solid #cc3333;
 }
-body.kvcollege_section form.webform-client-form .webform-component select:focus,
-body.kvcollege_section form.webform-client-form .webform-component select:active {
+body.segment_kv form.webform-client-form .webform-component select:focus,
+body.segment_kv form.webform-client-form .webform-component select:active {
   border: 1px solid #8C9D44;
 }
-body.hscollege_section form.webform-client-form .webform-component select:focus,
-body.hscollege_section form.webform-client-form .webform-component select:active {
+body.segment_hs form.webform-client-form .webform-component select:focus,
+body.segment_hs form.webform-client-form .webform-component select:active {
   border: 1px solid #D09D15;
 }
-body.kscollege_section form.webform-client-form .webform-component select:focus,
-body.kscollege_section form.webform-client-form .webform-component select:active {
+body.segment_wm form.webform-client-form .webform-component select:focus,
+body.segment_wm form.webform-client-form .webform-component select:active {
   border: 1px solid #7C0B25;
 }
-body.hfcollege_section form.webform-client-form .webform-component select:focus,
-body.hfcollege_section form.webform-client-form .webform-component select:active {
-  border: 1px solid #335592;
+body.segment_sp form.webform-client-form .webform-component select:focus,
+body.segment_sp form.webform-client-form .webform-component select:active {
+  border: 1px solid #B2CCD8;
 }
-body.fhcollege_section form.webform-client-form .webform-component select:focus,
-body.fhcollege_section form.webform-client-form .webform-component select:active {
+body.segment_wi form.webform-client-form .webform-component select:focus,
+body.segment_wi form.webform-client-form .webform-component select:active {
   border: 1px solid #3F5868;
 }
-body.excollege_section form.webform-client-form .webform-component select:focus,
-body.excollege_section form.webform-client-form .webform-component select:active {
+body.segment_pp form.webform-client-form .webform-component select:focus,
+body.segment_pp form.webform-client-form .webform-component select:active {
   border: 1px solid #7B6C65;
 }
 form.webform-client-form .webform-component .form-radios .form-item,
@@ -11697,7 +11430,7 @@ form.webform-client-form div.form-actions button.webform-submit:hover,
 form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
-body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit {
+body.segment_kv form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -11717,11 +11450,11 @@ body.kvcollege_section form.webform-client-form div.form-actions button.webform-
   border-radius: 3px;
   background: #ff535d;
 }
-body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
-body.kvcollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+body.segment_kv form.webform-client-form div.form-actions button.webform-submit:hover,
+body.segment_kv form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
-body.hscollege_section form.webform-client-form div.form-actions button.webform-submit {
+body.segment_hs form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -11741,11 +11474,11 @@ body.hscollege_section form.webform-client-form div.form-actions button.webform-
   border-radius: 3px;
   background: #ff535d;
 }
-body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
-body.hscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+body.segment_hs form.webform-client-form div.form-actions button.webform-submit:hover,
+body.segment_hs form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
-body.kscollege_section form.webform-client-form div.form-actions button.webform-submit {
+body.segment_wm form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -11765,11 +11498,11 @@ body.kscollege_section form.webform-client-form div.form-actions button.webform-
   border-radius: 3px;
   background: #ff535d;
 }
-body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
-body.kscollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+body.segment_wm form.webform-client-form div.form-actions button.webform-submit:hover,
+body.segment_wm form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
-body.hfcollege_section form.webform-client-form div.form-actions button.webform-submit {
+body.segment_sp form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -11789,11 +11522,11 @@ body.hfcollege_section form.webform-client-form div.form-actions button.webform-
   border-radius: 3px;
   background: #ff535d;
 }
-body.hfcollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
-body.hfcollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+body.segment_sp form.webform-client-form div.form-actions button.webform-submit:hover,
+body.segment_sp form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
-body.fhcollege_section form.webform-client-form div.form-actions button.webform-submit {
+body.segment_wi form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -11813,11 +11546,11 @@ body.fhcollege_section form.webform-client-form div.form-actions button.webform-
   border-radius: 3px;
   background: #ff535d;
 }
-body.fhcollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
-body.fhcollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+body.segment_wi form.webform-client-form div.form-actions button.webform-submit:hover,
+body.segment_wi form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
-body.excollege_section form.webform-client-form div.form-actions button.webform-submit {
+body.segment_pp form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -11837,8 +11570,8 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
   border-radius: 3px;
   background: #ff535d;
 }
-body.excollege_section form.webform-client-form div.form-actions button.webform-submit:hover,
-body.excollege_section form.webform-client-form div.form-actions button.webform-submit:focus {
+body.segment_pp form.webform-client-form div.form-actions button.webform-submit:hover,
+body.segment_pp form.webform-client-form div.form-actions button.webform-submit:focus {
   background: #ff757d;
 }
 /*
@@ -11896,166 +11629,166 @@ body.excollege_section form.webform-client-form div.form-actions button.webform-
     font-size: 16px;
   }
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.kvcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_kv .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.hscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_hs .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.kscollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_wm .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
-  color: #335592;
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
-  color: #335592;
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
-  color: #335592;
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.hfcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_sp .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.fhcollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_wi .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a {
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:hover,
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a.active,
-body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focus {
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a:hover,
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a.active,
+body.segment_pp .node.node-course .row .col-sm-12 .field-name-body a:focus {
   text-decoration: underline;
 }
 /*
@@ -12390,6 +12123,224 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
   .node.node-location .row .col-sm-12 .col-right {
     display: inline-block;
     width: 35%;
+  }
+}
+/*
+ *  Node call2action component
+ * --------------------------------------------------*/
+.node.node-call2action {
+  cursor: pointer;
+}
+.node.node-call2action .row {
+  margin: 0;
+}
+.node.node-call2action .row .col-sm-12 {
+  padding: 0;
+}
+.node.node-call2action .row .col-sm-12 .group-image {
+  position: relative;
+  width: 100%;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-picture {
+  margin: 0;
+  overflow: hidden;
+  max-height: 160px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-picture .field-item img {
+  width: 100%;
+  height: auto;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-title {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 0 10px;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-title h2 {
+  margin: 0;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
+  display: none;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 52%;
+  width: 90%;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item img {
+  display: none;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-link {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  display: block;
+  margin: 0 auto;
+  padding: 13px 0 15px;
+  width: 60%;
+  min-width: 160px;
+  height: 44px;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #ff535d;
+  opacity: 1.0;
+  width: 50%;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover {
+  background: #ff757d;
+}
+.node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover {
+  opacity: 0.7;
+}
+.call2action-kv .node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  background: #8C9D44;
+}
+.call2action-handel .node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  background: #D09D15;
+}
+.call2action-management .node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  background: #7C0B25;
+}
+.call2action-informatik .node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  background: #3F5868;
+}
+.call2action-sprachen .node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  background: #B2CCD8;
+}
+.call2action-programs .node.node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
+  background: #7B6C65;
+}
+.node.node-call2action .row .col-sm-12 .field-name-body {
+  display: none;
+  margin-top: 20px;
+}
+.node.node-call2action .row .col-sm-12 .field-name-body .field-item {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #929295;
+}
+@media screen and (min-width: 480px) {
+  .node.node-call2action .row .col-sm-12 .group-image .field-name-title h2 {
+    font-size: 20px;
+  }
+  .node.node-call2action .row .col-sm-12 .field-name-body {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-call2action .row .col-sm-12 .group-image .field-name-title h2 {
+    font-size: 24px;
+  }
+}
+.node.node-call2action.view-mode-teaser {
+  cursor: pointer;
+}
+.node.node-call2action.view-mode-teaser .row {
+  margin: 0;
+}
+.node.node-call2action.view-mode-teaser .row .col-sm-12 {
+  padding: 0;
+}
+.node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+  background-color: #ebebeb;
+  opacity: 0.5;
+}
+.node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title:hover {
+  opacity: 1.0;
+}
+.node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title h2 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+}
+.call2action-kv .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  background: #8C9D44;
+}
+body.segment_kv .call2action-kv .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  opacity: 1.0;
+}
+.call2action-handel .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  background: #D09D15;
+}
+body.segment_hs .call2action-handel .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  opacity: 1.0;
+}
+.call2action-management .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  background: #7C0B25;
+}
+body.segment_wm .call2action-management .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  opacity: 1.0;
+}
+.call2action-informatik .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  background: #3F5868;
+}
+body.segment_wi .call2action-informatik .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  opacity: 1.0;
+}
+.call2action-sprachen .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  background: #B2CCD8;
+}
+body.segment_sp .call2action-sprachen .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  opacity: 1.0;
+}
+.call2action-programs .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  background: #7B6C65;
+}
+body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title {
+  opacity: 1.0;
+}
+.node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-field-link {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title h2 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title h2 {
+    font-size: 16px;
   }
 }
 /*
@@ -15557,9 +15508,6 @@ body.excollege_section .node.node-course .row .col-sm-12 .field-name-body a:focu
 /*
  *  Banners view (navigation)
  * --------------------------------------------------*/
-body.front .view-banners {
-  padding-bottom: 100px;
-}
 .view-banners .view-content .carousel {
   position: relative;
   margin: 0;
@@ -15639,159 +15587,58 @@ body.front .view-banners {
  * --------------------------------------------------*/
 .view.view-call2action {
   width: 100%;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .view.view-call2action {
+    margin-top: 50px;
+  }
 }
 .view.view-call2action .view-content {
-  margin: 0 -1.5%;
+  margin: 0 -1%;
 }
 .view.view-call2action .view-content .views-row {
   display: inline-block;
   margin: 0 -2px;
-  padding: 0 0 15px;
+  padding: 0 1% 4%;
   width: 100%;
   vertical-align: top;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row {
-  margin: 0;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
-  padding: 0 1.5%;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image {
-  position: relative;
-  width: 100%;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture {
-  margin: 0;
-  overflow: hidden;
-  max-height: 270px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture .field-item img {
-  width: 100%;
-  height: auto;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-title {
-  position: absolute;
-  bottom: 95px;
-  width: 100%;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-title h2 {
-  margin: 0;
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 24px;
-  text-align: center;
-  color: #fff;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 52%;
-  width: 90%;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item {
-  display: block;
-  margin: 0 auto;
-  height: auto;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon .field-item img {
-  display: none;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link {
-  position: absolute;
-  bottom: 27px;
-  width: 100%;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a {
-  display: block;
-  margin: 0 auto;
-  padding: 13px 0 15px;
-  width: 60%;
-  min-width: 160px;
-  height: 44px;
-  font-family: 'SohoGothicProRegular', serif;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  color: #fff;
-  border: none;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background: #ff535d;
-  width: 50%;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-link .field-item a:hover {
-  background: #ff757d;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body {
-  display: none;
-  margin-top: 20px;
-}
-.view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body .field-item {
-  font-family: 'SohoGothicProLight', serif;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  color: #929295;
 }
 @media screen and (min-width: 480px) {
   .view.view-call2action .view-content .views-row {
     width: 50%;
-  }
-  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
-    padding: 0 3%;
-  }
-  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .field-name-body {
-    display: block;
-  }
-}
-@media screen and (min-width: 768px) {
-  .view.view-call2action .view-content .views-row {
-    width: 50%;
-  }
-  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 {
-    padding: 0 4.5%;
-  }
-  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-picture {
-    max-height: 320px;
+    padding: 0 1% 2%;
   }
 }
 @media screen and (min-width: 1024px) {
   .view.view-call2action .view-content .views-row {
-    width: 25%;
-  }
-  .view.view-call2action .view-content .views-row .node-call2action .row .col-sm-12 .group-image .field-name-field-icon {
-    bottom: 55%;
-    width: 100%;
+    width: 33.333333%;
   }
 }
-.view.view-call2action .view-content .views-row.call2action-brochure .field-name-field-icon .field-item {
-  min-height: 83px;
-  width: 30%;
-  background: url(../images/icon_broschure.svg) no-repeat center center / contain;
+.view.view-call2action.view-display-id-block_1 {
+  width: 100%;
+  margin: 20px 0 0;
 }
-.view.view-call2action .view-content .views-row.call2action-beratung .field-name-field-icon .field-item {
-  min-height: 83px;
-  width: 30%;
-  background: url(../images/icon_beratung.svg) no-repeat center center / contain;
+.view.view-call2action.view-display-id-block_1 .view-content {
+  margin: 0;
 }
-.view.view-call2action .view-content .views-row.call2action-bildungsweg .field-name-field-icon .field-item {
-  min-height: 67px;
-  width: 40%;
-  background: url(../images/icon_bildungsweg.svg) no-repeat top center / contain;
+.view.view-call2action.view-display-id-block_1 .view-content .views-row {
+  display: inline-block;
+  margin: 0 -2px;
+  padding: 0 2px 4px;
+  width: 50%;
+  vertical-align: top;
 }
-.view.view-call2action .view-content .views-row.call2action-info .field-name-field-icon .field-item {
-  min-height: 83px;
-  width: 30%;
-  background: url(../images/icon_info.svg) no-repeat top center / contain;
+@media screen and (min-width: 768px) {
+  .view.view-call2action.view-display-id-block_1 .view-content .views-row {
+    width: 33.3333333%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .view.view-call2action.view-display-id-block_1 .view-content .views-row {
+    width: 16.6666666%;
+    padding: 0 2px;
+  }
 }
 /*
  *  Social-masonry view component
@@ -16069,166 +15916,166 @@ body.front .view-banners {
   display: inline-block;
   padding-right: 15px;
 }
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_kv .view.view-segment-pages .view-content .views-row a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_kv .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_kv .view.view-segment-pages .view-content .views-row a.active,
+body.segment_kv .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_kv .view.view-segment-pages .view-content .views-row a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_kv .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_kv .view.view-segment-pages .view-content .views-row a.active,
+body.segment_kv .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_kv .view.view-segment-pages .view-content .views-row a {
   color: #8C9D44;
   text-decoration: none;
 }
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.kvcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_kv .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_kv .view.view-segment-pages .view-content .views-row a.active,
+body.segment_kv .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_hs .view.view-segment-pages .view-content .views-row a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.hscollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.hscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_hs .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_hs .view.view-segment-pages .view-content .views-row a.active,
+body.segment_hs .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_hs .view.view-segment-pages .view-content .views-row a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.hscollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.hscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_hs .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_hs .view.view-segment-pages .view-content .views-row a.active,
+body.segment_hs .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.hscollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_hs .view.view-segment-pages .view-content .views-row a {
   color: #D09D15;
   text-decoration: none;
 }
-body.hscollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.hscollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.hscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_hs .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_hs .view.view-segment-pages .view-content .views-row a.active,
+body.segment_hs .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_wm .view.view-segment-pages .view-content .views-row a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.kscollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.kscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_wm .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_wm .view.view-segment-pages .view-content .views-row a.active,
+body.segment_wm .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_wm .view.view-segment-pages .view-content .views-row a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.kscollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.kscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_wm .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_wm .view.view-segment-pages .view-content .views-row a.active,
+body.segment_wm .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.kscollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_wm .view.view-segment-pages .view-content .views-row a {
   color: #7C0B25;
   text-decoration: none;
 }
-body.kscollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.kscollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.kscollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_wm .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_wm .view.view-segment-pages .view-content .views-row a.active,
+body.segment_wm .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a {
-  color: #335592;
+body.segment_sp .view.view-segment-pages .view-content .views-row a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_sp .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_sp .view.view-segment-pages .view-content .views-row a.active,
+body.segment_sp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a {
-  color: #335592;
+body.segment_sp .view.view-segment-pages .view-content .views-row a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_sp .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_sp .view.view-segment-pages .view-content .views-row a.active,
+body.segment_sp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a {
-  color: #335592;
+body.segment_sp .view.view-segment-pages .view-content .views-row a {
+  color: #B2CCD8;
   text-decoration: none;
 }
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.hfcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_sp .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_sp .view.view-segment-pages .view-content .views-row a.active,
+body.segment_sp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_wi .view.view-segment-pages .view-content .views-row a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_wi .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_wi .view.view-segment-pages .view-content .views-row a.active,
+body.segment_wi .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_wi .view.view-segment-pages .view-content .views-row a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_wi .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_wi .view.view-segment-pages .view-content .views-row a.active,
+body.segment_wi .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_wi .view.view-segment-pages .view-content .views-row a {
   color: #3F5868;
   text-decoration: none;
 }
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.fhcollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_wi .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_wi .view.view-segment-pages .view-content .views-row a.active,
+body.segment_wi .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.excollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_pp .view.view-segment-pages .view-content .views-row a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.excollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.excollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_pp .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_pp .view.view-segment-pages .view-content .views-row a.active,
+body.segment_pp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.excollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_pp .view.view-segment-pages .view-content .views-row a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.excollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.excollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_pp .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_pp .view.view-segment-pages .view-content .views-row a.active,
+body.segment_pp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.excollege_section .view.view-segment-pages .view-content .views-row a {
+body.segment_pp .view.view-segment-pages .view-content .views-row a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.excollege_section .view.view-segment-pages .view-content .views-row a:hover,
-body.excollege_section .view.view-segment-pages .view-content .views-row a.active,
-body.excollege_section .view.view-segment-pages .view-content .views-row a:focus {
+body.segment_pp .view.view-segment-pages .view-content .views-row a:hover,
+body.segment_pp .view.view-segment-pages .view-content .views-row a.active,
+body.segment_pp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
 /*
@@ -16494,22 +16341,22 @@ body.excollege_section .view.view-segment-pages .view-content .views-row a:focus
   font-family: 'fontawesome';
   width: 25px;
 }
-body.kvcollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.segment_kv .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #8C9D44;
 }
-body.hscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.segment_hs .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #D09D15;
 }
-body.kscollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.segment_wm .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #7C0B25;
 }
-body.hfcollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
-  color: #335592;
+body.segment_sp .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+  color: #B2CCD8;
 }
-body.fhcollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.segment_wi .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #3F5868;
 }
-body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.segment_pp .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #7B6C65;
 }
 /*
@@ -16539,22 +16386,22 @@ body.excollege_section .view.view-contacts .view-content .views-bootstrap-tab-pl
     font-size: 36px;
   }
 }
-body.kvcollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+body.segment_kv .view.view-courses .view-content .panel-group .main-title h1 {
   color: #8C9D44;
 }
-body.hscollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+body.segment_hs .view.view-courses .view-content .panel-group .main-title h1 {
   color: #D09D15;
 }
-body.kscollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+body.segment_wm .view.view-courses .view-content .panel-group .main-title h1 {
   color: #7C0B25;
 }
-body.hfcollege_section .view.view-courses .view-content .panel-group .main-title h1 {
-  color: #335592;
+body.segment_sp .view.view-courses .view-content .panel-group .main-title h1 {
+  color: #B2CCD8;
 }
-body.fhcollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+body.segment_wi .view.view-courses .view-content .panel-group .main-title h1 {
   color: #3F5868;
 }
-body.excollege_section .view.view-courses .view-content .panel-group .main-title h1 {
+body.segment_pp .view.view-courses .view-content .panel-group .main-title h1 {
   color: #7B6C65;
 }
 .view.view-courses .view-content .panel-group .main-description {
@@ -16642,22 +16489,22 @@ body.excollege_section .view.view-courses .view-content .panel-group .main-title
 .view.view-courses .view-content .panel-group .panel .panel-heading:hover .panel-title a {
   color: #fff;
 }
-body.kvcollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+body.segment_kv .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
   background-color: #8C9D44;
 }
-body.hscollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+body.segment_hs .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
   background-color: #D09D15;
 }
-body.kscollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+body.segment_wm .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
   background-color: #7C0B25;
 }
-body.hfcollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
-  background-color: #335592;
+body.segment_sp .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+  background-color: #B2CCD8;
 }
-body.fhcollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+body.segment_wi .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
   background-color: #3F5868;
 }
-body.excollege_section .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
+body.segment_pp .view.view-courses .view-content .panel-group .panel .panel-heading:hover {
   background-color: #7B6C65;
 }
 .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
@@ -16667,27 +16514,27 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   color: #777777;
   border: none;
 }
-body.kvcollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+body.segment_kv .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
   border-top: 1px solid #8C9D44;
   border-bottom: 1px solid #8C9D44;
 }
-body.hscollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+body.segment_hs .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
   border-top: 1px solid #D09D15;
   border-bottom: 1px solid #D09D15;
 }
-body.kscollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+body.segment_wm .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
   border-top: 1px solid #7C0B25;
   border-bottom: 1px solid #7C0B25;
 }
-body.hfcollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
-  border-top: 1px solid #335592;
-  border-bottom: 1px solid #335592;
+body.segment_sp .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+  border-top: 1px solid #B2CCD8;
+  border-bottom: 1px solid #B2CCD8;
 }
-body.fhcollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+body.segment_wi .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
   border-top: 1px solid #3F5868;
   border-bottom: 1px solid #3F5868;
 }
-body.excollege_section .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
+body.segment_pp .view.view-courses .view-content .panel-group .panel .panel-collapse .panel-body {
   border-top: 1px solid #7B6C65;
   border-bottom: 1px solid #7B6C65;
 }
@@ -17106,40 +16953,40 @@ body.excollege_section .view.view-courses .view-content .panel-group .panel .pan
   outline: none;
   border: 1px solid #cc3333;
 }
-body.kvcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.kvcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.kvcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.kvcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.segment_kv .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_kv .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_kv .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.segment_kv .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #8C9D44;
 }
-body.hscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.hscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.hscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.hscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.segment_hs .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_hs .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_hs .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.segment_hs .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #D09D15;
 }
-body.kscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.kscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.kscollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.kscollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.segment_wm .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_wm .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_wm .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.segment_wm .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #7C0B25;
 }
-body.hfcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.hfcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.hfcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.hfcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
-  border: 1px solid #335592;
+body.segment_sp .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_sp .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_sp .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.segment_sp .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+  border: 1px solid #B2CCD8;
 }
-body.fhcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.fhcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.fhcollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.fhcollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.segment_wi .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_wi .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_wi .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.segment_wi .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #3F5868;
 }
-body.excollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.excollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.excollege_section .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.excollege_section .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.segment_pp .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_pp .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.segment_pp .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.segment_pp .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #7B6C65;
 }
 .view.view-course-times .view-content,
@@ -17645,10 +17492,10 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
 }
 #bildungsnavigator_main_wrapper .course_item.tid_108 {
   background-color: #cbc6df;
-  border-top: 7px solid #335592;
+  border-top: 7px solid #B2CCD8;
 }
 #bildungsnavigator_main_wrapper .course_item.tid_108 a {
-  background-color: #335592;
+  background-color: #B2CCD8;
 }
 #bildungsnavigator_main_wrapper .course_item.tid_109 {
   background-color: #cbc6df;
@@ -18046,110 +17893,19 @@ header#navbar .container .navbar-collapse nav ul.menu li a {
   padding: 7px 0;
   font-family: 'SohoGothicProLight', serif;
   font-size: 20px;
-  color: #333333;
   line-height: 1;
+  color: #333333;
+  border: none;
+  border-bottom: 1px solid #6d6e72;
 }
-header#navbar .container .navbar-collapse nav ul.menu li.menu-kv {
-  border-bottom: 6px solid #8C9D44;
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active-trail,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active {
-  color: #8C9D44;
+header#navbar .container .navbar-collapse nav ul.menu li a:hover,
+header#navbar .container .navbar-collapse nav ul.menu li a.active {
+  color: #929295;
   background: none;
 }
-@media screen and (min-width: 768px) {
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a:hover,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active-trail,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-kv a.active {
-    color: #fff;
-    background-color: #8C9D44;
-  }
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hs {
-  border-bottom: 6px solid #D09D15;
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active-trail,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active {
-  color: #D09D15;
-  background: none;
-}
-@media screen and (min-width: 768px) {
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a:hover,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active-trail,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-hs a.active {
-    color: #fff;
-    background-color: #D09D15;
-  }
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ks {
-  border-bottom: 6px solid #7C0B25;
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active-trail,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active {
-  color: #7C0B25;
-  background: none;
-}
-@media screen and (min-width: 768px) {
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a:hover,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active-trail,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-ks a.active {
-    color: #fff;
-    background-color: #7C0B25;
-  }
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hf {
-  border-bottom: 6px solid #335592;
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hf a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hf a.active-trail,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-hf a.active {
-  color: #335592;
-  background: none;
-}
-@media screen and (min-width: 768px) {
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-hf a:hover,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-hf a.active-trail,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-hf a.active {
-    color: #fff;
-    background-color: #335592;
-  }
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-fh {
-  border-bottom: 6px solid #3F5868;
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-fh a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-fh a.active-trail,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-fh a.active {
-  color: #3F5868;
-  background: none;
-}
-@media screen and (min-width: 768px) {
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-fh a:hover,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-fh a.active-trail,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-fh a.active {
-    color: #fff;
-    background-color: #3F5868;
-  }
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ex {
-  border-bottom: 6px solid #7B6C65;
-}
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a:hover,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active-trail,
-header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active {
-  color: #7B6C65;
-  background: none;
-}
-@media screen and (min-width: 768px) {
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a:hover,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active-trail,
-  header#navbar .container .navbar-collapse nav ul.menu li.menu-ex a.active {
-    color: #fff;
-    background-color: #7B6C65;
-  }
+header#navbar .container .navbar-collapse nav ul.menu li.last .menu-attach-block-wrapper {
+  display: block;
+  padding: 10px 0;
 }
 header#navbar .container .navbar-collapse nav ul.menu.secondary {
   position: relative;
@@ -18184,7 +17940,7 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
   }
   header#navbar .container .navbar-collapse nav ul.menu {
     display: inline-block;
-    margin: 0 0 -6px;
+    margin: 0;
     float: right;
   }
   header#navbar .container .navbar-collapse nav ul.menu li {
@@ -18192,8 +17948,17 @@ header#navbar .container .navbar-collapse nav ul.menu.secondary li a.active {
     width: auto;
   }
   header#navbar .container .navbar-collapse nav ul.menu li a {
-    padding: 7px 25px 7px 10px;
+    padding: 7px 20px;
     font-size: 16px;
+    border-bottom: none;
+    color: #333333;
+  }
+  header#navbar .container .navbar-collapse nav ul.menu li a:hover,
+  header#navbar .container .navbar-collapse nav ul.menu li a.active {
+    color: #cc3333;
+  }
+  header#navbar .container .navbar-collapse nav ul.menu li.last .menu-attach-block-wrapper {
+    padding: 0;
   }
   header#navbar .container .navbar-collapse nav ul.menu.secondary {
     position: absolute;
@@ -18265,7 +18030,7 @@ body {
   padding-top: 20px;
 }
 .main-container .container .row section h1.page-header {
-  margin: 50px 0 30px;
+  margin: 30px 0 30px;
   padding: 0;
   font-family: 'SohoGothicProLight', serif;
   font-size: 22.5px;
@@ -18283,31 +18048,22 @@ body {
     font-size: 36px;
   }
 }
-body.kvcollege_section .main-container .container .row section h1.page-header {
+body.segment_kv .main-container .container .row section h1.page-header {
   color: #8C9D44;
 }
-body.hscollege_section .main-container .container .row section h1.page-header {
+body.segment_hs .main-container .container .row section h1.page-header {
   color: #D09D15;
 }
-body.kscollege_section .main-container .container .row section h1.page-header {
+body.segment_wm .main-container .container .row section h1.page-header {
   color: #7C0B25;
 }
-body.kscollege_section.page-taxonomy-term-3 .main-container .container .row section h1.page-header {
-  display: none;
+body.segment_sp .main-container .container .row section h1.page-header {
+  color: #B2CCD8;
 }
-body.hfcollege_section .main-container .container .row section h1.page-header {
-  color: #335592;
-}
-body.hfcollege_section.page-taxonomy-term-108 .main-container .container .row section h1.page-header {
-  display: none;
-}
-body.fhcollege_section .main-container .container .row section h1.page-header {
+body.segment_wi .main-container .container .row section h1.page-header {
   color: #3F5868;
 }
-body.fhcollege_section.page-taxonomy-term-109 .main-container .container .row section h1.page-header {
-  display: none;
-}
-body.excollege_section .main-container .container .row section h1.page-header {
+body.segment_pp .main-container .container .row section h1.page-header {
   color: #7B6C65;
 }
 .main-container .container .row section .messages {

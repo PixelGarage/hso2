@@ -4,7 +4,6 @@
 
 // Variables
 // -------------------------
-@pxl-menu-border-thickness:   6px;
 
 
 // Mixins
@@ -134,86 +133,24 @@ header#navbar {
               padding: 7px 0;
               font-family: @pxl-text-font-light;
               font-size: 20px;
-              color: @text-color;
               line-height: 1;
-            }
+              color: @text-color;
+              border: none;
+              border-bottom: 1px solid @pxl-color-gray-border;
 
-            &.menu-kv {
-              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-kv-menu;
-
-              a:hover, a.active-trail, a.active {
-                color: @pxl-color-hso-kv-menu;
+              &:hover,
+              &.active {
+                color: @pxl-color-gray-text;
                 background: none;
-
-                @media @tablet {
-                  color: #fff;
-                  background-color: @pxl-color-hso-kv-menu;
-                }
               }
             }
-            &.menu-hs {
-              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-hs-menu;
 
-              a:hover, a.active-trail, a.active {
-                color: @pxl-color-hso-hs-menu;
-                background: none;
+            &.last {
+              .menu-attach-block-wrapper {
+                display: block;
+                padding: 10px 0;
 
-                @media @tablet {
-                  color: #fff;
-                  background-color: @pxl-color-hso-hs-menu;
-                }
-              }
-            }
-            &.menu-ks {
-              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-ks;
-
-              a:hover, a.active-trail, a.active {
-                color: @pxl-color-hso-ks;
-                background: none;
-
-                @media @tablet {
-                  color: #fff;
-                  background-color: @pxl-color-hso-ks;
-                }
-              }
-            }
-            &.menu-hf {
-              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-hf;
-
-              a:hover, a.active-trail, a.active {
-                color: @pxl-color-hso-hf;
-                background: none;
-
-                @media @tablet {
-                  color: #fff;
-                  background-color: @pxl-color-hso-hf;
-                }
-              }
-            }
-            &.menu-fh {
-              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-fh;
-
-              a:hover, a.active-trail, a.active {
-                color: @pxl-color-hso-fh;
-                background: none;
-
-                @media @tablet {
-                  color: #fff;
-                  background-color: @pxl-color-hso-fh;
-                }
-              }
-            }
-            &.menu-ex {
-              border-bottom: @pxl-menu-border-thickness solid @pxl-color-hso-ex;
-
-              a:hover, a.active-trail, a.active {
-                color: @pxl-color-hso-ex;
-                background: none;
-
-                @media @tablet {
-                  color: #fff;
-                  background-color: @pxl-color-hso-ex;
-                }
+                // see block-exposed-form-search-course-times.less
               }
             }
           }
@@ -263,7 +200,7 @@ header#navbar {
         nav {
           ul.menu {
             display: inline-block;
-            margin: 0 0 -@pxl-menu-border-thickness;
+            margin: 0;
             float: right;
 
             li {
@@ -271,8 +208,21 @@ header#navbar {
               width: auto;
 
               a {
-                padding: 7px 25px 7px 10px;
+                padding: 7px 20px;
                 font-size: 16px;
+                border-bottom: none;
+                color: @text-color;
+
+                &:hover,
+                &.active {
+                  color: @pxl-color-hso-main;
+                }
+              }
+
+              &.last {
+                .menu-attach-block-wrapper {
+                  padding: 0;
+                }
               }
             }
           }
@@ -302,19 +252,6 @@ header#navbar {
                 a {
                   border: none;
                 }
-              }
-            }
-          }
-        }
-      }
-
-      @media @normal {
-        nav {
-          ul.menu {
-            li {
-              a {
-                //padding: 7px 35px 7px 10px;
-                //font-size: 18px;
               }
             }
           }

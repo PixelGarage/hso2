@@ -261,7 +261,52 @@ abstract class Refactoring {
     }
   }
 
+  /**
+   * Deletes a context given by its machine name.
+   *
+   * @param $context_name string
+   *   Machine name of context
+   */
+  protected function deleteContext($context_name) {
+    // check if module is available
+    if (!module_exists('context')) return;
 
+    // load context and delete it
+    $context = context_load($context_name);
+    if ($context) {
+      context_delete($context);
+    }
+  }
+
+
+  /**
+   * Imports all context files in the contexts folder.
+   * File name specification: context_name.cont
+   *
+   * @param $context_path
+   */
+  protected function importContext($context_path) {
+    // check if module is available
+    if (!module_exists('context')) return;
+
+    // copy content type file to pixelstructure
+    $context_name = pathinfo($context_path, PATHINFO_FILENAME);
+    $source = 'this://' . $context_path;
+    $dest = _pixel_structure_file_path('context', $context_name);
+    $this->copyFile($source, $dest);
+
+    // get all context in code (hold in files ending with .cont)
+    $files = file_scan_directory(drupal_get_path('module', 'pixel_structure') . '/contexts', '#\.cont$#');
+    foreach ($files as $filepath => $file) {
+      // import page
+      require $filepath;
+
+      // Import context
+      if (isset($context)) {
+        context_save($context);
+      }
+    }
+  }
 
   //
   // File helper functions
