@@ -174,11 +174,6 @@
         height: @pxl-call2action-menu-height;
         padding: 0 5px;
         background-color: @pxl-color-hso-gray;
-        opacity: 0.5;
-
-        &:hover {
-          opacity: 1.0;
-        }
 
         h2 {
           display: block;
@@ -187,49 +182,43 @@
           font-family: @pxl-text-font;
           font-size: 14px;
           text-align: center;
-          color: #fff;
+          color: @text-color;
         }
 
-        .call2action-kv & {
+        body.segment_kv .call2action-kv &, .call2action-kv &:hover {
           background: @pxl-color-hso-kv;
-
-          body.segment_kv & {
-            opacity: 1.0;
+          h2 {
+            color: #fff;
           }
         }
-        .call2action-handel & {
+        body.segment_hs .call2action-handel &, .call2action-handel &:hover {
           background: @pxl-color-hso-hs;
-
-          body.segment_hs & {
-            opacity: 1.0;
+          h2 {
+            color: #fff;
           }
         }
-        .call2action-management & {
+        body.segment_wm .call2action-management &, .call2action-management &:hover {
           background: @pxl-color-hso-wm;
-
-          body.segment_wm & {
-            opacity: 1.0;
+          h2 {
+            color: #fff;
           }
         }
-        .call2action-informatik & {
+        body.segment_wi .call2action-informatik &, .call2action-informatik &:hover {
           background: @pxl-color-hso-wi;
-
-          body.segment_wi & {
-            opacity: 1.0;
+          h2 {
+            color: #fff;
           }
         }
-        .call2action-sprachen & {
+        body.segment_sp .call2action-sprachen &, .call2action-sprachen &:hover {
           background: @pxl-color-hso-sp;
-
-          body.segment_sp & {
-            opacity: 1.0;
+          h2 {
+            color: #fff;
           }
         }
-        .call2action-programs & {
+        body.segment_pp .call2action-programs &, .call2action-programs &:hover {
           background: @pxl-color-hso-pp;
-
-          body.segment_pp & {
-            opacity: 1.0;
+          h2 {
+            color: #fff;
           }
         }
       }

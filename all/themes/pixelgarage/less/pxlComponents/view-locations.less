@@ -71,7 +71,7 @@
         @media @tablet {
           display: inline-block;
           vertical-align: top;
-          width: 40%;
+          width: 25%;
 
           li {
             display: block;
@@ -118,8 +118,8 @@
           text-align: center;
           color: #fff;
 
-          .views-field-field-address {
-            .field-content {
+          .row {
+            .col-sm-6 {
               .organisation-block {
                 margin-bottom: 5px;
                 font-family: @pxl-text-font;
@@ -155,28 +155,37 @@
                   background: url(../images/contact_icon_fax.svg) no-repeat top left/contain;
                 }
               }
-            }
-          }
-
-          .views-field-field-email {
-            .field-content {
-              .envelope {
-                display: inline-block;
-                width: 18px;
-                height: 14px;
-                margin-right: 5px;
-                background: url(../images/contact_icon_email.svg) no-repeat top left/contain;
-              }
-
-              a {
-                text-decoration: none;
-                color: #fff;
-
-                &:hover, &:focus {
-                  text-decoration: underline;
+              .email {
+                .icon-mail {
+                  display: inline-block;
+                  width: 18px;
+                  height: 14px;
+                  margin-right: 5px;
+                  background: url(../images/contact_icon_email.svg) no-repeat top left/contain;
                 }
 
+                a {
+                  text-decoration: none;
+                  color: #fff;
+
+                  &:hover, &:focus {
+                    text-decoration: underline;
+                  }
+                }
               }
+              .map-location {
+                margin-top: 30px;
+
+                a {
+                  display: block;
+                  text-align: left;
+
+                  img {
+                    display: inline-block;
+                  }
+                }
+              }
+
             }
           }
         }
@@ -184,14 +193,22 @@
         @media @tablet {
           display: inline-block;
           vertical-align: top;
-          margin: 0 0 0 -6.8%;
-          width: 65%;
+          margin: 0 0 0 -4.1%;
+          width: 77%;
           height: 356px;
           border: 1px solid @pxl-color-gray-border;
 
           .tab-pane {
             font-size: 16px;
             text-align: left;
+
+            .row {
+              .col-sm-6 {
+                .map-location {
+                  margin-top: 0;
+                }
+              }
+            }
           }
         }
 

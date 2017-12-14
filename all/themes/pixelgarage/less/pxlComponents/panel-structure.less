@@ -19,6 +19,17 @@
     }
 
     .panel-pane {
+      h2.pane-title {
+        a {
+          color: @text-color;
+
+          &:hover {
+            color: @pxl-color-hso-main;
+            text-decoration: none;
+          }
+        }
+      }
+
       iframe {
         max-width: 100%;
       }

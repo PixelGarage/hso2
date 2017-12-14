@@ -122,9 +122,9 @@ class HSORefactoring extends Refactoring {
     //if (!$this->addNewSegmentsAndCategories()) return 'AddNewSegmentsAndCategories';
     //if (!$this->importCall2Actions()) return 'ImportCall2Actions';
     //if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
-    //if (!$this->bannerExtension()) return 'BannerExtension';
+    if (!$this->bannerExtension()) return 'BannerExtension';
     //if (!$this->cleanupContext()) return 'CleanupContext';
-    if (!$this->updateMainMenu()) return 'UpdateMainMenu';
+    //if (!$this->adaptFooter()) return 'AdaptFooter';
     //if (!$this->viewsUpdate()) return 'ViewsUpdate';
 
     //
@@ -332,19 +332,20 @@ class HSORefactoring extends Refactoring {
   }
 
   /**
-   * Update main menu with new items. Adapt search view.
+   * Adapt footer to new layout.
    */
-  public function updateMainMenu() {
+  public function adaptFooter() {
     try {
       // check if step has to be performed
-      if (!$this->startStep('UpdateMainMenu')) return true;
+      if (!$this->startStep('AdaptFooter')) return true;
 
       // add steps here...
+      $this->updateView('views/locations.view');
 
-      return $this->endStep('UpdateMainMenu');
+      return $this->endStep('AdaptFooter');
     }
     catch (Exception $ex) {
-      drupal_set_message(t('UpdateMainMenu() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      drupal_set_message(t('AdaptFooter() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
       return false;
     }
   }
@@ -360,6 +361,7 @@ class HSORefactoring extends Refactoring {
       // add additional views here...
       $this->updateView('views/courses.view');
       $this->updateView('views/course_times_search.view');
+      $this->updateView('views/news.view');
 
       // clear views cache
       if (module_exists('views')) {
@@ -459,10 +461,16 @@ class HSORefactoring extends Refactoring {
           $term_name = 'Handelsschule';
           break;
         case 3:
+          $term_name = 'Wirtschaft & Management';
+          break;
         case 4:
+          $term_name = 'Professional Programs';
+          break;
         case 108:
+          $term_name = 'Wirtschaftsinformatik & Informatik';
+          break;
         case 109:
-        $term_name = 'Wirtschaft & Management';
+        $term_name = 'Sprachen';
           break;
         default:
           $term_name = '';

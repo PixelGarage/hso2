@@ -1,0 +1,28 @@
+/*
+ *  View news component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view.view-news {
+  margin-bottom: 50px;
+
+  .view-content {
+    .views-row:not(.views-row-first) {
+      padding-top: 20px;
+    }
+  }
+
+  .text-center {
+    #pxl-mixins.view-pager(@font-size-base, @text-color, @pxl-color-hso-main);
+  }
+}

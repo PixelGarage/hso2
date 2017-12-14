@@ -44,6 +44,97 @@ function hso_mods_entity_info_alter(&$info) {
 
 
 /* --------------------------------------------------
+ * Set specific contexts for nodes and views
+ * --------------------------------------------------*/
+
+/**
+ * Implements hook_node_view
+ *
+ * If a node is shown in full mode and is related to a segment, set a new segment
+ * context (namespace = HSO, attribute = current_segment) to the segment term id.
+ */
+function hso_mods_node_view($node, $view_mode, $langcode) {
+  // set special context only for the following nodes
+  if (!in_array($node->type, array('course', 'course_times', 'news', 'page', 'video', 'webform', 'youtube_playlist'))) return;
+
+  if ($view_mode == 'full') {
+    $node_to_check = $node;
+    if ($node->type == 'course_times') {
+      // get the segment from the related course
+      if (!empty($node->field_course)) {
+        $node_to_check = node_load($node->field_course[LANGUAGE_NONE][0]['target_id']);
+      }
+    }
+    if ($node->type == 'video') {
+      $nid = feeds_get_feed_nid($node->nid, 'node');
+      if ($nid) {
+        $node_to_check = node_load($nid);
+      }
+    }
+    if (isset($node_to_check->field_segment) && !empty($node_to_check->field_segment)) {
+      $tid = $node_to_check->field_segment[LANGUAGE_NONE][0]['tid'];
+      context_set('hso', 'current_segment', $tid);
+      _hso_mods_trigger_context($tid);
+    } elseif (isset($node_to_check->field_segments) && !empty($node_to_check->field_segments)) {
+      $tid = $node_to_check->field_segments[LANGUAGE_NONE][0]['tid'];
+      context_set('hso', 'current_segment', $tid);
+      _hso_mods_trigger_context($tid);
+    }
+  }
+}
+
+/**
+ * Implements of hook_taxonomy_term_view
+ *
+ * If a segment page is shown, set a new segment context
+ * (namespace = HSO, attribute = current_segment) to the segment term id.
+ */
+function hso_mods_taxonomy_term_view($term, $view_mode, $langcode) {
+  if ($term->vid == 1 && $view_mode == 'full') {
+    context_set('hso', 'current_segment', $term->tid);
+  }
+}
+
+/**
+ * Internal function to set all contexts with a given segment condition.
+ * @param $segment_id
+ */
+function _hso_mods_trigger_context($segment_id) {
+  $contexts = context_enabled_contexts();
+  foreach ($contexts as $context_name => $data) {
+    if (array_key_exists('node_taxonomy', $data->conditions) && in_array($segment_id, $data->conditions['node_taxonomy']['values'])) {
+      context_condition_met($data, 'node_taxonomy');
+    }
+  }
+}
+
+/**
+ * Implements ctools_render_alter().
+ *
+ * This is done since hook_node_view never gets called if the node is rendered by Ctools.
+ */
+function hso_mods_ctools_render_alter($info, $page, $context) {
+  if ($page && is_array($context['subtask']) && $context['subtask']['name'] == 'course_anmeldung') {
+    //
+    // set all context conditions for the specific course time,
+    // for which the anmeldungs webform is displayed.
+    $course_time = $context['contexts']['argument_entity_id:node_1']->data;
+    hso_mods_node_view($course_time, 'full', LANGUAGE_NONE);
+    $contexts = context_enabled_contexts();
+    foreach ($contexts as $context_name => $data) {
+      if (array_key_exists('node', $data->conditions) && in_array($course_time->type, $data->conditions['node']['values'])) {
+        context_condition_met($data, 'node');
+      }
+    }
+  } elseif ($page && isset($context['task']['admin path']) && $context['task']['admin path'] == 'taxonomy/term/%taxonomy_term') {
+    hso_mods_taxonomy_term_view($context['contexts']['argument_term_1']->data, 'full', LANGUAGE_NONE);
+  } elseif ($page && isset($context['task']['admin path']) && $context['task']['admin path'] == 'node/%node') {
+    hso_mods_node_view($context['contexts']['argument_entity_id:node_1']->data, 'full', LANGUAGE_NONE);
+  }
+}
+
+
+/* --------------------------------------------------
  * Themes and field formatters for date-time ranges
  * --------------------------------------------------*/
 /**

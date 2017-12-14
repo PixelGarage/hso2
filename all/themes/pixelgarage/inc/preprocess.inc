@@ -332,18 +332,39 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
   $view = &$vars['view'];
   $vars['id'] = $view->vid;
-  if ($view->name != 'contacts') return;
+  if ($view->name == 'contacts') {
+    //
+    // create tabs for contacts
+    $tab_field = $vars['options']['tab_field'];
 
-  $tab_field = $vars['options']['tab_field'];
-
-  // create tabs for locations.
-  if (isset($view->field[$tab_field])) {
-    $vars['tabs'] = array();
-    foreach ($vars['view']->result as $key => $contact) {
-      $location = strip_tags($view->style_plugin->get_field($key, $tab_field));
-      $vars['tabs'][$location][] = $key;
+    if (isset($view->field[$tab_field])) {
+      $vars['tabs'] = array();
+      foreach ($vars['view']->result as $key => $contact) {
+        $location = strip_tags($view->style_plugin->get_field($key, $tab_field));
+        $vars['tabs'][$location][] = $key;
+      }
     }
   }
+  else if ($view->name == 'locations') {
+    //
+    // create map infos for location tabs
+    $vars['locations'] = array();
+    foreach ($view->result as $key => $location) {
+      // get fields of each location
+      $address = $location->field_field_address[0]['raw'];
+      $vars['locations'][$key]['organisation_name'] = check_plain($address['organisation_name']);
+      $vars['locations'][$key]['thoroughfare'] = check_plain($address['thoroughfare']);
+      $vars['locations'][$key]['country'] = check_plain($address['country']);
+      $vars['locations'][$key]['postal_code'] = check_plain($address['postal_code']);
+      $vars['locations'][$key]['locality'] = check_plain($address['locality']);
+      $vars['locations'][$key]['phone_number'] = check_plain($address['phone_number']);
+      $vars['locations'][$key]['email'] = $location->field_field_email[0]['rendered']['#markup'];;
+      // create map location
+      $vars['locations'][$key]['map_location'] = urlencode($address['thoroughfare'] . ', ' . $address['postal_code'] . ' ' . $address['locality']);
+    }
+
+  }
+
 }
 
 

@@ -4,7 +4,7 @@
 
 // Variables
 // -------------------------
-
+@pxl-node-padding: 10px;
 
 // Mixins
 // -------------------------
@@ -14,15 +14,13 @@
 // General settings
 // -------------------------
 .node.node-news.view-mode-teaser {
-  padding: 20px;
-  background-color: @pxl-color-hso-gray;
+  padding: @pxl-node-padding;
+  border-top: 1px solid @pxl-border-color;
 
   .row {
-    div.col-sm-12 {
-      width: 100%;
-
+    div.col-sm-4, div.col-sm-8 {
       .field-name-field-picture {
-        margin: -20px -20px 20px;
+        margin: 0 -@pxl-node-padding;
 
         .field-item {
           img {
@@ -75,6 +73,9 @@
 
 .node.node-news.view-mode-full,
 .node.node-news.view-mode-default {
+  margin-top: 50px;
+  border-top: 2px solid @pxl-border-color;
+
   .row {
     div.col-sm-12 {
       width: 100%;
@@ -96,7 +97,7 @@
         .field-item {
           font-family: @pxl-text-font;
           font-size: 12px;
-          text-align: right;
+          text-align: left;
           color: @pxl-color-gray-dark;
 
           &:before {
@@ -115,7 +116,8 @@
           img {
             display: block;
             margin: 0 auto;
-            max-width: 100%;
+            width: 80%;
+            max-width: 1280px;
             height: auto;
           }
         }

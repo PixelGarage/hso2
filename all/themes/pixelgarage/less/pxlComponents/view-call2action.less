@@ -5,7 +5,7 @@
 // Variables
 // -------------------------
 @pxl-gutter-width: 1%;
-@pxl-gutter-width-teaser: 2px;
+@pxl-gutter-width-teaser: 1px;
 
 // Mixins
 // -------------------------
@@ -27,7 +27,7 @@
 
     .views-row {
       display: inline-block;
-      margin: 0 -2px;
+      margin: 0 -0.08em;
       padding: 0 @pxl-gutter-width 4*@pxl-gutter-width;
       width: 100%;
       vertical-align: top;
@@ -49,15 +49,15 @@
 //
 .view.view-call2action.view-display-id-block_1 {
   width: 100%;
-  margin: 20px 0 0;
+  margin: 0;
 
   .view-content {
     margin: 0;
 
     .views-row {
       display: inline-block;
-      margin: 0 -2px;
-      padding: 0 @pxl-gutter-width-teaser 2*@pxl-gutter-width-teaser;
+      margin-right: 0 -0.15em;
+      padding: 0 0 @pxl-gutter-width-teaser;
       width: 50%;
       vertical-align: top;
 
@@ -65,8 +65,8 @@
         width: 33.3333333%;
       }
       @media @normal {
-        width: 16.6666666%;
-        padding: 0 @pxl-gutter-width-teaser;
+        width: 16.666667%;
+        padding: 0;
       }
     }
   }
