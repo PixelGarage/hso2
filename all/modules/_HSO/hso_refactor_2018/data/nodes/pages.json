@@ -1,0 +1,114 @@
+{
+  "17072": {
+    "vid": "17073",
+    "uid": "15761",
+    "title": "Preislisten Sprachschule",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "17072",
+    "type": "page",
+    "language": "de",
+    "created": "1483396588",
+    "changed": "1498804843",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1498804843",
+    "revision_uid": "19649",
+    "body": {
+      "und": [
+        {
+          "value": "<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_chinesisch_new_3-quartal_2017.pdf\">Preisliste Chinesisch<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_deutsch_als_fremdsprache_new_3-quartal_2017.pdf\">Preisliste Deutsch als Fremdsprache<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblaetter_2017_2-quartal_2017_deutsch_als_mutersprache.pdf\" target=\"_blank\">Preisliste Deutsch als Muttersprache<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_englisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Englisch<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_franzoesisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Franz\u00f6sisch<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_italienisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Italienisch<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_russisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Russisch<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_spanisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Spanisch<\/a><\/p>\r\n\r\n<p><a href=\"\/sites\/default\/files\/uploads\/hbs-spr-telc-preise-pruefungsdaten_2016-17neu_0.pdf\" target=\"_blank\">Preisliste TELC<\/a><\/p>\r\n",
+          "summary": "",
+          "format": "html",
+          "safe_value": "<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_chinesisch_new_3-quartal_2017.pdf\">Preisliste Chinesisch<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_deutsch_als_fremdsprache_new_3-quartal_2017.pdf\">Preisliste Deutsch als Fremdsprache<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblaetter_2017_2-quartal_2017_deutsch_als_mutersprache.pdf\" target=\"_blank\">Preisliste Deutsch als Muttersprache<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_englisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Englisch<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_franzoesisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Franz\u00f6sisch<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_italienisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Italienisch<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_russisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Russisch<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/h.b.s._sprachschule_preisblatter_2017_spanisch_new_3-quartal_2017.pdf\" target=\"_blank\">Preisliste Spanisch<\/a><\/p>\n<p><a href=\"\/sites\/default\/files\/uploads\/hbs-spr-telc-preise-pruefungsdaten_2016-17neu_0.pdf\" target=\"_blank\">Preisliste TELC<\/a><\/p>\n",
+          "safe_summary": ""
+        }
+      ]
+    },
+    "field_segment": [],
+    "field_page_type": {
+      "und": [
+        {
+          "tid": "103"
+        }
+      ]
+    },
+    "field_full_content": {
+      "und": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1483396588",
+    "last_comment_name": null,
+    "last_comment_uid": "15761",
+    "comment_count": "0",
+    "name": "sreichhold",
+    "picture": "0",
+    "data": "a:3:{s:17:\"mimemail_textonly\";i:0;s:8:\"gravatar\";i:1;s:7:\"overlay\";i:1;}"
+  }
+}

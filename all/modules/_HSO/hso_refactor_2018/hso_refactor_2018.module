@@ -161,13 +161,12 @@ function _hso_refactor_2018_hbskmz_export() {
     if ($json_str) {
       $path = drupal_get_path('module', 'hso_refactor_2018') . '/data/courses/course_' . $key . '.json';
       file_put_contents($path, $json_str);
-      break;
     }
   }
-
+  drupal_set_message('Export of language courses successfully completed', 'status');
 }
 
-function _hso_refactor_2018_hbskmz_import() {
+function _hso_refactor_2018_hbskmz_import($price_list_nid = false) {
   //
   // delete all language course nodes with its course times and course tabs
   $lang_tid = _segment_mapping(107);
@@ -204,6 +203,7 @@ function _hso_refactor_2018_hbskmz_import() {
         node_delete_multiple(array_keys($result['node']));
       }
     }
+    drupal_set_message('Cleanup: All language courses with its course times and course tabs deleted!', 'status');
   }
 
   //
@@ -212,46 +212,68 @@ function _hso_refactor_2018_hbskmz_import() {
   $path = drupal_get_path('module', 'hso_refactor_2018') . '/data/courses/*.json';
   $json_files = glob($path);
 
-  foreach ($json_files as $idx => $filepath) {
-    // get and decode file data
-    $file_data = json_decode(file_get_contents($filepath), true);
-
-    //
-    // save course
-    $course =  (object)$file_data['course'];
-    $course->nid = NULL;
-    $course->is_new = TRUE;
-
-    // map segment and course category to HSO values
-    $course->field_segment[LANGUAGE_NONE][0]['tid'] = _segment_mapping($course->field_segment[LANGUAGE_NONE][0]['tid']);
-    $course->field_fachgebiet[LANGUAGE_NONE][0]['tid'] = _course_category_mapping($course->field_fachgebiet[LANGUAGE_NONE][0]['tid']);
-
-    // TODO:map brochure?????
-    node_save($course);
-    $course_nid = $course->nid;
-
-    if ($course_nid) {
-      //
-      // import course-times of course and adapt course nid
-      $course_times = $file_data['course_times'];
-      foreach ($course_times as $key => $course_time) {
-        $course_time = (object)$course_time;
-        $course_time->field_course[LANGUAGE_NONE][0]['target_id'] = $course_nid;
-        $course_time->is_new = TRUE;
-        node_save($course_time);
+  try {
+    foreach ($json_files as $idx => $filepath) {
+      // replace nid of price list, if available
+      $file_str = file_get_contents($filepath);
+      if ($price_list_nid) {
+        $file_str = str_replace('\/node\/17072',   "\/node\/{$price_list_nid}", $file_str);
       }
+      // get and decode file data
+      $file_data = json_decode($file_str, true);
 
       //
-      // import course-tabs of course and adapt course nid
-      $course_tabs = $file_data['course_tabs'];
-      foreach ($course_tabs as $key => $course_tab) {
-        $course_tab = (object)$course_tab;
-        $course_tab->field_course[LANGUAGE_NONE][0]['target_id'] = $course_nid;
-        $course_tab->is_new = TRUE;
-        node_save($course_tab);
+      // save course
+      $course =  (object)$file_data['course'];
+      unset($course->vid);
+      $course->nid = NULL;
+      $course->is_new = TRUE;
+
+      // map segment and course category to HSO values
+      $course->field_segment[LANGUAGE_NONE][0]['tid'] = _segment_mapping($course->field_segment[LANGUAGE_NONE][0]['tid']);
+      $course->field_fachgebiet[LANGUAGE_NONE][0]['tid'] = _course_category_mapping($course->field_fachgebiet[LANGUAGE_NONE][0]['tid']);
+
+      // TODO:map brochure?????
+      node_save($course);
+      $course_nid = $course->nid;
+
+      if ($course_nid) {
+        //
+        // import course-times of course and adapt course nid
+        $course_times = $file_data['course_times'];
+        foreach ($course_times as $key => $course_time) {
+          $course_time = (object)$course_time;
+          unset($course_time->vid);
+          $course_time->nid = NULL;
+          $course_time->is_new = TRUE;
+          $course_time->field_course[LANGUAGE_NONE][0]['target_id'] = $course_nid;
+          $course_time->field_location[LANGUAGE_NONE][0]['target_id'] =
+            _location_mapping($course_time->field_location[LANGUAGE_NONE][0]['target_id']);
+          node_save($course_time);
+        }
+
+        //
+        // import course-tabs of course and adapt course nid
+        $course_tabs = $file_data['course_tabs'];
+        foreach ($course_tabs as $key => $course_tab) {
+          $course_tab = (object)$course_tab;
+          unset($course_tab->vid);
+          $course_tab->nid = NULL;
+          $course_tab->is_new = TRUE;
+          $course_tab->field_course[LANGUAGE_NONE][0]['target_id'] = $course_nid;
+          node_save($course_tab);
+        }
       }
+      // course imported
+      $msg = "Course {$course_nid} import successful.";
+      drupal_set_message($msg, 'status');
     }
-
+    // all courses imported
+    drupal_set_message('IMPORT finished: All language courses with its course times and course tabs imported!', 'status');
+  }
+  catch (Exception $ex) {
+    drupal_set_message(t('Node Import failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+    return;
   }
 }
 
@@ -285,6 +307,26 @@ function _course_category_mapping($hbskmz_tid) {
   return $course_category_map[$hbskmz_tid];
 }
 
+/**
+ * Maps the location nid of HBSKMZ to corresponding location nid of HSO.
+ */
+function _location_mapping($hbskmz_nid) {
+  $location_map = array(
+    477 => 477,// Zürich Oerlikon
+    14796 => 5942,// Rapperswil
+    8804 => 8804,// Aarau
+    6687 => 5942,// HBSKMZ Rapperswil
+    6685 => 6685,// Baar
+    6684 => 6684,// Bern
+    6683 => 6683,// Luzern
+    585 => 585,// Basel
+    579 => 579,// St.Gallen
+    577 => 577,// Thun
+    17141 => 32578,// Zürich Altstetten
+    5942 => 5942,// HSO Rapperswil
+  );
+  return $location_map[$hbskmz_nid];
+}
 
 
 //
@@ -340,7 +382,7 @@ function __export_course_segment_map() {
 //
 // Export/import nodes of a specific type.
 //
-function __hso_refactor_2018_node_export($bundle) {
+function __hso_refactor_2018_node_export($bundle, $nid = false) {
   //
   // retrieve all nodes of a specific type and export it to a file
   //
@@ -350,6 +392,9 @@ function __hso_refactor_2018_node_export($bundle) {
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', $bundle)
     ->propertyCondition('status', NODE_PUBLISHED);
+  if ($nid) {
+    $query->propertyCondition('nid', $nid);
+  }
   $result = $query->execute();
   if (isset($result['node'])) {
     $nodes = node_load_multiple(array_keys($result['node']));
@@ -363,22 +408,25 @@ function __hso_refactor_2018_node_export($bundle) {
   }
 }
 
-function __hso_refactor_2018_node_import($bundle) {
+function __hso_refactor_2018_node_import($bundle, $do_cleanup = false) {
   //
   // Cleanup: delete all nodes of specific type
-  $query = new EntityFieldQuery();
-  $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', $bundle)
-    ->propertyCondition('status', NODE_PUBLISHED);
-  $result = $query->execute();
-  if (isset($result['node'])) {
-    node_delete_multiple(array_keys($result['node']));
+  if ($do_cleanup) {
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', $bundle)
+      ->propertyCondition('status', NODE_PUBLISHED);
+    $result = $query->execute();
+    if (isset($result['node'])) {
+      node_delete_multiple(array_keys($result['node']));
+    }
   }
 
   //
   // scan all files in the data directory
   $path = drupal_get_path('module', 'hso_refactor_2018') . "/data/nodes/{$bundle}s.json";
   $json_files = glob($path);
+  $nids = array();
 
   foreach ($json_files as $idx => $filepath) {
     // get and decode file data
@@ -387,6 +435,7 @@ function __hso_refactor_2018_node_import($bundle) {
 
     foreach ($nodes as $key => $node) {
       $node = (object)$node;
+      unset($node->vid);
       $node->nid = NULL;
       $node->is_new = TRUE;
       if (isset($node->field_icon)) {
@@ -404,7 +453,9 @@ function __hso_refactor_2018_node_import($bundle) {
       }
 
       node_save($node);
+      $nids[] = $node->nid;
     }
   }
+  return $nids;
 }
 

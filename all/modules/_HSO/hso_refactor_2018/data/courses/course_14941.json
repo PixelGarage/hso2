@@ -1,0 +1,3796 @@
+{
+  "course": {
+    "vid": "14942",
+    "uid": "19331",
+    "title": "Franz\u00f6sisch-Konversation A1",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "",
+    "nid": "14941",
+    "type": "course",
+    "language": "de",
+    "created": "1474902344",
+    "changed": "1483397083",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1483397083",
+    "revision_uid": "15761",
+    "body": {
+      "und": [
+        {
+          "value": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"aufeinenblock\" style=\"width: 100%;\">\r\n\t<caption style=\"text-align: left;\">Auf einen Blick<\/caption>\r\n\t<tbody>\r\n\t\t<tr style=\"vertical-align: top;\">\r\n\t\t\t<th scope=\"row\" style=\"width: 50%;\">Dauer<\/th>\r\n\t\t\t<td>\r\n\t\t\t<p>Abendkurs oder Samstagskurs: 10 Wochen mal 2 Lektionen<\/p>\r\n\t\t\t<\/td>\r\n\t\t<\/tr>\r\n\t\t<tr style=\"vertical-align: top;\">\r\n\t\t\t<th scope=\"row\">Beginn<\/th>\r\n\t\t\t<td>\r\n\t\t\t<p>4 mal pro Jahr<\/p>\r\n\t\t\t<\/td>\r\n\t\t<\/tr>\r\n\t\t<tr style=\"vertical-align: top;\">\r\n\t\t\t<th scope=\"row\">Unterrichtszeiten<\/th>\r\n\t\t\t<td>\r\n\t\t\t<div>Dienstag: 19.00-20.30 Uhr,<\/div>\r\n\r\n\t\t\t<div>Samstag: 09.00-10.30 Uhr<\/div>\r\n\t\t\t<\/td>\r\n\t\t<\/tr>\r\n\t\t<tr style=\"vertical-align: top;\">\r\n\t\t\t<th scope=\"row\">Kosten<\/th>\r\n\t\t\t<td>\r\n\t\t\t<div><a href=\"\/node\/17072\" target=\"_blank\">Preislisten Sprachschule<\/a><\/div>\r\n\t\t\t<\/td>\r\n\t\t<\/tr>\r\n\t<\/tbody>\r\n<\/table>\r\n",
+          "summary": "",
+          "format": "html",
+          "safe_value": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"aufeinenblock\" style=\"width: 100%;\"><caption style=\"text-align: left;\">Auf einen Blick<\/caption>\n<tbody><tr style=\"vertical-align: top;\"><th scope=\"row\" style=\"width: 50%;\">Dauer<\/th>\n<td>\n<p>Abendkurs oder Samstagskurs: 10 Wochen mal 2 Lektionen<\/p>\n<\/td>\n<\/tr><tr style=\"vertical-align: top;\"><th scope=\"row\">Beginn<\/th>\n<td>\n<p>4 mal pro Jahr<\/p>\n<\/td>\n<\/tr><tr style=\"vertical-align: top;\"><th scope=\"row\">Unterrichtszeiten<\/th>\n<td>\n<div>Dienstag: 19.00-20.30 Uhr,<\/div>\n<div>Samstag: 09.00-10.30 Uhr<\/div>\n<\/td>\n<\/tr><tr style=\"vertical-align: top;\"><th scope=\"row\">Kosten<\/th>\n<td>\n<div><a href=\"\/node\/17072\" target=\"_blank\">Preislisten Sprachschule<\/a><\/div>\n<\/td>\n<\/tr><\/tbody><\/table>",
+          "safe_summary": ""
+        }
+      ]
+    },
+    "field_internal_id": [],
+    "field_is_module": {
+      "und": [
+        {
+          "value": "0"
+        }
+      ]
+    },
+    "field_segment": {
+      "und": [
+        {
+          "tid": "107"
+        }
+      ]
+    },
+    "field_teaser_tabs": {
+      "und": [
+        {
+          "value": "21",
+          "revision_id": "21"
+        }
+      ]
+    },
+    "field_bn_title": [],
+    "field_bn_description": [],
+    "field_bn_related_ids": [],
+    "field_banner_links": [],
+    "field_sort": {
+      "und": [
+        {
+          "value": "-18"
+        }
+      ]
+    },
+    "field_fachgebiet": {
+      "und": [
+        {
+          "tid": "111"
+        }
+      ]
+    },
+    "field_brochure": {
+      "und": [
+        {
+          "target_id": "14884"
+        }
+      ]
+    },
+    "field_search_tags": {
+      "und": [
+        {
+          "value": "Sprachschule, Grundkurs, Aufbaukurs,  Franz\u00f6sisch, Franz\u00f6sischkurs, Franz\u00f6sischschule, Zertifikat, Intensivkurse, Kompaktkurse, Sprachdiplom, Reisesprachkurs, DELF, DALF, A2, B1, B2, C1, C2, TELC, Anf\u00e4ngerkurs",
+          "format": null,
+          "safe_value": "Sprachschule, Grundkurs, Aufbaukurs,  Franz\u00f6sisch, Franz\u00f6sischkurs, Franz\u00f6sischschule, Zertifikat, Intensivkurse, Kompaktkurse, Sprachdiplom, Reisesprachkurs, DELF, DALF, A2, B1, B2, C1, C2, TELC, Anf\u00e4ngerkurs"
+        }
+      ]
+    },
+    "field_has_info_events": [],
+    "metatags": {
+      "de": {
+        "description": {
+          "value": "Parlez vous fran\u00e7ais? An der H.B.S. Sprachschule lernen Sie Franz\u00f6sisisch auf allen Stufen effizient in kleinen Gruppen oder im Privatunterricht!"
+        }
+      }
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1474902344",
+    "last_comment_name": null,
+    "last_comment_uid": "19331",
+    "comment_count": "0",
+    "name": "Thomas Schiendorfer",
+    "picture": "0",
+    "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+  },
+  "course_times": {
+    "15609": {
+      "vid": "15610",
+      "uid": "19331",
+      "title": "1-Spr-F-KonvA1-Startdaten Ab1",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "15609",
+      "type": "course_times",
+      "language": "de",
+      "created": "1476101875",
+      "changed": "1481038311",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038311",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-01-10 00:00:00",
+            "value2": "2017-03-21 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1476101875",
+      "last_comment_name": null,
+      "last_comment_uid": "19331",
+      "comment_count": "0",
+      "name": "Thomas Schiendorfer",
+      "picture": "0",
+      "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+    },
+    "15610": {
+      "vid": "15611",
+      "uid": "19331",
+      "title": "1-Spr-F-KonvA1-Startdaten Vm1",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "15610",
+      "type": "course_times",
+      "language": "de",
+      "created": "1476102012",
+      "changed": "1481038663",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038663",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-01-14 00:00:00",
+            "value2": "2017-03-25 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1476102012",
+      "last_comment_name": null,
+      "last_comment_uid": "19331",
+      "comment_count": "0",
+      "name": "Thomas Schiendorfer",
+      "picture": "0",
+      "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+    },
+    "16487": {
+      "vid": "16488",
+      "uid": "19410",
+      "title": " 1-Spr-F-KonvA1-Startdaten Ab2",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16487",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038359",
+      "changed": "1481038359",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038359",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-02-07 00:00:00",
+            "value2": "2017-04-25 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038359",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16488": {
+      "vid": "16489",
+      "uid": "19410",
+      "title": " 1-Spr-F-KonvA1-Startdaten Ab3",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16488",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038403",
+      "changed": "1481038403",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038403",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-03-07 00:00:00",
+            "value2": "2017-05-16 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038403",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16489": {
+      "vid": "16490",
+      "uid": "19410",
+      "title": "  1-Spr-F-KonvA1-Startdaten Ab4",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16489",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038451",
+      "changed": "1481038451",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038451",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-04-04 00:00:00",
+            "value2": "2017-06-13 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038451",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16490": {
+      "vid": "16491",
+      "uid": "19410",
+      "title": "  1-Spr-F-KonvA1-Startdaten Ab5",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16490",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038496",
+      "changed": "1481038496",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038496",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-05-09 00:00:00",
+            "value2": "2017-07-18 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038496",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16491": {
+      "vid": "16492",
+      "uid": "19410",
+      "title": "  1-Spr-F-KonvA1-Startdaten Ab6",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16491",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038545",
+      "changed": "1481038545",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038545",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-06-13 00:00:00",
+            "value2": "2017-09-26 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038545",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16492": {
+      "vid": "16493",
+      "uid": "19410",
+      "title": " 1-Spr-F-KonvA1-Startdaten Vm2",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16492",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038781",
+      "changed": "1481038781",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038781",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-02-11 00:00:00",
+            "value2": "2017-04-29 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038781",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16493": {
+      "vid": "16494",
+      "uid": "19410",
+      "title": " 1-Spr-F-KonvA1-Startdaten Vm3",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16493",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038828",
+      "changed": "1481038828",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038828",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-03-11 00:00:00",
+            "value2": "2017-05-20 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038828",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16494": {
+      "vid": "16495",
+      "uid": "19410",
+      "title": " 1-Spr-F-KonvA1-Startdaten Vm4",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16494",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038869",
+      "changed": "1481038869",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038869",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-04-08 00:00:00",
+            "value2": "2017-06-17 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038869",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16495": {
+      "vid": "16496",
+      "uid": "19410",
+      "title": " 1-Spr-F-KonvA1-Startdaten Vm5",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16495",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038910",
+      "changed": "1481038910",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038910",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-05-06 00:00:00",
+            "value2": "2017-07-15 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038910",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "16496": {
+      "vid": "16497",
+      "uid": "19410",
+      "title": "  1-Spr-F-KonvA1-Startdaten Vm6",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "16496",
+      "type": "course_times",
+      "language": "de",
+      "created": "1481038953",
+      "changed": "1481038953",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1481038953",
+      "revision_uid": "19410",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-06-10 00:00:00",
+            "value2": "2017-09-23 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1481038953",
+      "last_comment_name": null,
+      "last_comment_uid": "19410",
+      "comment_count": "0",
+      "name": "Aranshi Abraham",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "17622": {
+      "vid": "17623",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten Ab8",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "17622",
+      "type": "course_times",
+      "language": "de",
+      "created": "1497279691",
+      "changed": "1497619225",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1497619225",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-08-22 00:00:00",
+            "value2": "2017-10-24 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1497279691",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "17623": {
+      "vid": "17624",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten SVm8",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "17623",
+      "type": "course_times",
+      "language": "de",
+      "created": "1497279769",
+      "changed": "1502711008",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1502711008",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-08-26 00:00:00",
+            "value2": "2017-10-28 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1497279769",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "17931": {
+      "vid": "17932",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten Ab9",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "17931",
+      "type": "course_times",
+      "language": "de",
+      "created": "1498132074",
+      "changed": "1498132074",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1498132074",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-09-19 00:00:00",
+            "value2": "2017-12-05 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1498132074",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "17932": {
+      "vid": "17933",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten SVm9",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "17932",
+      "type": "course_times",
+      "language": "de",
+      "created": "1498132114",
+      "changed": "1498132114",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1498132114",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-09-23 00:00:00",
+            "value2": "2017-12-09 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": [],
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1498132114",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "18289": {
+      "vid": "18290",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten Ab10",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "18289",
+      "type": "course_times",
+      "language": "de",
+      "created": "1504875330",
+      "changed": "1504875330",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1504875330",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-10-17 00:00:00",
+            "value2": "2017-12-19 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": {
+        "und": [
+          {
+            "value": "2017-09-08 15:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1504875330",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "18290": {
+      "vid": "18291",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten Ab11",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "18290",
+      "type": "course_times",
+      "language": "de",
+      "created": "1504875368",
+      "changed": "1504875368",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1504875368",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Di Abend<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Di Abend<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-11-14 00:00:00",
+            "value2": "2018-01-30 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": {
+        "und": [
+          {
+            "value": "2017-09-08 15:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1504875368",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "18291": {
+      "vid": "18292",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten SVm10",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "18291",
+      "type": "course_times",
+      "language": "de",
+      "created": "1504875448",
+      "changed": "1504875448",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1504875448",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-10-14 00:00:00",
+            "value2": "2017-12-16 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": {
+        "und": [
+          {
+            "value": "2017-09-08 15:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1504875448",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    },
+    "18292": {
+      "vid": "18293",
+      "uid": "19406",
+      "title": "1-Spr-F-KonvA1-Startdaten SVm11",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "18292",
+      "type": "course_times",
+      "language": "de",
+      "created": "1504875497",
+      "changed": "1504875497",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1504875497",
+      "revision_uid": "19406",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Sa Vormittag<br \/>\r\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\r\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Sa Vormittag<br \/>\n10 Wo x 2 Lekt = 20 Lektionen<br \/>\nFr. 695.-- (+Lehrmittel: Fr. 25.--)<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course_date": {
+        "und": [
+          {
+            "value": "2017-11-11 00:00:00",
+            "value2": "2018-01-27 00:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "field_has_fsv": {
+        "und": [
+          {
+            "value": "0"
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_location": {
+        "und": [
+          {
+            "target_id": "6687"
+          }
+        ]
+      },
+      "field_brutto_price": {
+        "und": [
+          {
+            "value": "695"
+          }
+        ]
+      },
+      "field_netto_price": [],
+      "field_anmeldungs_link": [],
+      "field_template": {
+        "und": [
+          {
+            "value": "default"
+          }
+        ]
+      },
+      "field_detailed_price": {
+        "und": [
+          {
+            "value": "<ul>\r\n\t<li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\r\n<\/ul>\r\n",
+            "format": "html",
+            "safe_value": "<ul><li>Total Schulgeld f\u00fcr den gesamten Lehrgang: 695 CHF.<\/li>\n<\/ul>"
+          }
+        ]
+      },
+      "field_master_nid": [],
+      "field_study_variant": [],
+      "field_visible_from": {
+        "und": [
+          {
+            "value": "2017-09-08 15:00:00",
+            "timezone": "Europe\/Zurich",
+            "timezone_db": "Europe\/Zurich",
+            "date_type": "datetime"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1504875497",
+      "last_comment_name": null,
+      "last_comment_uid": "19406",
+      "comment_count": "0",
+      "name": "Frank Merola",
+      "picture": "0",
+      "data": "a:1:{s:17:\"mimemail_textonly\";i:0;}"
+    }
+  },
+  "course_tabs": {
+    "15205": {
+      "vid": "15206",
+      "uid": "19331",
+      "title": "2-Spr-F-KonvA1-Programm",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "15205",
+      "type": "course_tabs",
+      "language": "de",
+      "created": "1475240261",
+      "changed": "1475240261",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1475240261",
+      "revision_uid": "19331",
+      "body": {
+        "und": [
+          {
+            "value": "<p>In den Konversationskursen wird das Sprechen ge\u00fcbt. Die Lernenden unterhalten sich mit der Lehrkraft und miteinander zu verschiedenen Themen. Der erste Konversationskurs entspricht dem Niveau A1.<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>In den Konversationskursen wird das Sprechen ge\u00fcbt. Die Lernenden unterhalten sich mit der Lehrkraft und miteinander zu verschiedenen Themen. Der erste Konversationskurs entspricht dem Niveau A1.<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_tab_title": {
+        "und": [
+          {
+            "value": "Programm",
+            "format": null,
+            "safe_value": "Programm"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1475240261",
+      "last_comment_name": null,
+      "last_comment_uid": "19331",
+      "comment_count": "0",
+      "name": "Thomas Schiendorfer",
+      "picture": "0",
+      "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+    },
+    "15206": {
+      "vid": "15207",
+      "uid": "19331",
+      "title": "3-Spr-F-KonvA1-Teilnehmer",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "15206",
+      "type": "course_tabs",
+      "language": "de",
+      "created": "1475240345",
+      "changed": "1475240345",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1475240345",
+      "revision_uid": "19331",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Personen, die auf ihrer erreichten Stufe das Sprechen \u00fcben und verbessern wollen.<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Personen, die auf ihrer erreichten Stufe das Sprechen \u00fcben und verbessern wollen.<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_tab_title": {
+        "und": [
+          {
+            "value": "Teilnehmer",
+            "format": null,
+            "safe_value": "Teilnehmer"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1475240345",
+      "last_comment_name": null,
+      "last_comment_uid": "19331",
+      "comment_count": "0",
+      "name": "Thomas Schiendorfer",
+      "picture": "0",
+      "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+    },
+    "15207": {
+      "vid": "15208",
+      "uid": "19331",
+      "title": "4-Spr-F-KonvA1-System",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "15207",
+      "type": "course_tabs",
+      "language": "de",
+      "created": "1475240414",
+      "changed": "1475240414",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1475240414",
+      "revision_uid": "19331",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Unsere Franz\u00f6sischkurse sind bestm\u00f6glich auf die Kompetenzstufen des Gemeinsamen Europ\u00e4ischen Referenzrahmens GER (Stufen A1, A2, B1, B2, C1, C2) ausgerichtet. Ab Stufe A1 bereiten sie auf anerkannte Diplome vor, insbesondere die bekannten DELF- und DALF-Diplome sowie die TELC-Diplome. Unterrichtet wird mit bew\u00e4hrten Lehrmitteln, durch fachkundige Lehrkr\u00e4fte und ausschliesslich in kleinen Gruppen. Die Teilnehmerzahl betr\u00e4gt 4-7 Lernende (Standardkurse) bzw. 2-5 Lernende (Konversations- und Reisekurse).<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Unsere Franz\u00f6sischkurse sind bestm\u00f6glich auf die Kompetenzstufen des Gemeinsamen Europ\u00e4ischen Referenzrahmens GER (Stufen A1, A2, B1, B2, C1, C2) ausgerichtet. Ab Stufe A1 bereiten sie auf anerkannte Diplome vor, insbesondere die bekannten DELF- und DALF-Diplome sowie die TELC-Diplome. Unterrichtet wird mit bew\u00e4hrten Lehrmitteln, durch fachkundige Lehrkr\u00e4fte und ausschliesslich in kleinen Gruppen. Die Teilnehmerzahl betr\u00e4gt 4-7 Lernende (Standardkurse) bzw. 2-5 Lernende (Konversations- und Reisekurse).<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_tab_title": {
+        "und": [
+          {
+            "value": "System",
+            "format": null,
+            "safe_value": "System"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1475240414",
+      "last_comment_name": null,
+      "last_comment_uid": "19331",
+      "comment_count": "0",
+      "name": "Thomas Schiendorfer",
+      "picture": "0",
+      "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+    },
+    "15208": {
+      "vid": "15209",
+      "uid": "19331",
+      "title": "5-Spr-F-KonvA1-Anschluss",
+      "log": "",
+      "status": "1",
+      "comment": "1",
+      "promote": "0",
+      "sticky": "0",
+      "ds_switch": "",
+      "nid": "15208",
+      "type": "course_tabs",
+      "language": "de",
+      "created": "1475240478",
+      "changed": "1475240478",
+      "tnid": "0",
+      "translate": "0",
+      "revision_timestamp": "1475240478",
+      "revision_uid": "19331",
+      "body": {
+        "und": [
+          {
+            "value": "<p>Konversationskurse auf dem n\u00e4chsth\u00f6heren Niveau oder dem Niveau entsprechende Sprachkurse.<\/p>\r\n",
+            "summary": "",
+            "format": "html",
+            "safe_value": "<p>Konversationskurse auf dem n\u00e4chsth\u00f6heren Niveau oder dem Niveau entsprechende Sprachkurse.<\/p>\n",
+            "safe_summary": ""
+          }
+        ]
+      },
+      "field_course": {
+        "und": [
+          {
+            "target_id": "14941"
+          }
+        ]
+      },
+      "field_tab_title": {
+        "und": [
+          {
+            "value": "Anschlussausbildungen",
+            "format": null,
+            "safe_value": "Anschlussausbildungen"
+          }
+        ]
+      },
+      "rdf_mapping": {
+        "rdftype": [
+          "sioc:Item",
+          "foaf:Document"
+        ],
+        "title": {
+          "predicates": [
+            "dc:title"
+          ]
+        },
+        "created": {
+          "predicates": [
+            "dc:date",
+            "dc:created"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "changed": {
+          "predicates": [
+            "dc:modified"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        },
+        "body": {
+          "predicates": [
+            "content:encoded"
+          ]
+        },
+        "uid": {
+          "predicates": [
+            "sioc:has_creator"
+          ],
+          "type": "rel"
+        },
+        "name": {
+          "predicates": [
+            "foaf:name"
+          ]
+        },
+        "comment_count": {
+          "predicates": [
+            "sioc:num_replies"
+          ],
+          "datatype": "xsd:integer"
+        },
+        "last_activity": {
+          "predicates": [
+            "sioc:last_activity_date"
+          ],
+          "datatype": "xsd:dateTime",
+          "callback": "date_iso8601"
+        }
+      },
+      "path": {
+        "pathauto": "1"
+      },
+      "cid": "0",
+      "last_comment_timestamp": "1475240478",
+      "last_comment_name": null,
+      "last_comment_uid": "19331",
+      "comment_count": "0",
+      "name": "Thomas Schiendorfer",
+      "picture": "0",
+      "data": "a:2:{s:17:\"mimemail_textonly\";i:0;s:7:\"overlay\";i:1;}"
+    }
+  }
+}

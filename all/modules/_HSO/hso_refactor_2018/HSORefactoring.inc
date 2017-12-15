@@ -125,8 +125,9 @@ class HSORefactoring extends Refactoring {
     //if (!$this->addNewSegmentsAndCategories()) return 'AddNewSegmentsAndCategories';
     //if (!$this->updateCourseLayout()) return 'UpdateCourseLayout';
     //if (!$this->importCall2Actions()) return 'ImportCall2Actions';
-    //if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
-    if (!$this->bannerExtension()) return 'BannerExtension';
+    //if (!$this->importBenefits()) return 'ImportBenefits';
+    if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
+    //if (!$this->bannerExtension()) return 'BannerExtension';
     //if (!$this->cleanupContext()) return 'CleanupContext';
     //if (!$this->viewsUpdate()) return 'ViewsUpdate';
 
@@ -256,7 +257,7 @@ class HSORefactoring extends Refactoring {
       $this->updateEntityType('node', 'nodes/call2action.node');
 
       // import nodes in json file
-      __hso_refactor_2018_node_import('call2action');
+      __hso_refactor_2018_node_import('call2action', true);
 
       // update view
       $this->updateView('views/call2action.view');
@@ -281,7 +282,7 @@ class HSORefactoring extends Refactoring {
       $this->updateEntityType('node', 'nodes/benefit.node');
 
       // import nodes in json file
-      __hso_refactor_2018_node_import('benefit');
+      __hso_refactor_2018_node_import('benefit', true);
 
       // update view
       $this->updateView('views/benefits.view');
@@ -302,8 +303,11 @@ class HSORefactoring extends Refactoring {
       // check if step has to be performed
       if (!$this->startStep('ImportHBSKMZCourses')) return true;
 
+      // import price page from json file
+     $nids = __hso_refactor_2018_node_import('page');
+
       // import all exported files
-      _hso_refactor_2018_hbskmz_import();
+      _hso_refactor_2018_hbskmz_import($nids[0]);
 
       return $this->endStep('ImportHBSKMZCourses');
     }
