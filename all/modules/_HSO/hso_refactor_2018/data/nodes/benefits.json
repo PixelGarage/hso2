@@ -1,0 +1,1019 @@
+{
+  "77957": {
+    "vid": "77958",
+    "uid": "1",
+    "title": "International anerkannte Zertifizierungen",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77957",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513343583",
+    "changed": "1513343963",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513343963",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6770",
+          "uid": "1",
+          "filename": "icon_bachelor_blue.png",
+          "uri": "public:\/\/icons\/icon_bachelor_blue.png",
+          "filemime": "image\/png",
+          "filesize": "11777",
+          "status": "1",
+          "timestamp": "1513343963",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513343583",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77958": {
+    "vid": "77959",
+    "uid": "1",
+    "title": "Verschiedene Durchf\u00fchrungsvarianten",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77958",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513343931",
+    "changed": "1513343931",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513343931",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6769",
+          "uid": "1",
+          "filename": "icon_uhr_blue.png",
+          "uri": "public:\/\/icons\/icon_uhr_blue.png",
+          "filemime": "image\/png",
+          "filesize": "16034",
+          "status": "1",
+          "timestamp": "1513343931",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513343931",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77959": {
+    "vid": "77960",
+    "uid": "1",
+    "title": "Innovative Lernmethoden und aktuelle Themen",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77959",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344042",
+    "changed": "1513344042",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344042",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6771",
+          "uid": "1",
+          "filename": "icon_licht_blue.png",
+          "uri": "public:\/\/icons\/icon_licht_blue.png",
+          "filemime": "image\/png",
+          "filesize": "12167",
+          "status": "1",
+          "timestamp": "1513344042",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344042",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77960": {
+    "vid": "77961",
+    "uid": "1",
+    "title": "To be done..",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77960",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344074",
+    "changed": "1513344074",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344074",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6772",
+          "uid": "1",
+          "filename": "icon_flugzeug_blue.png",
+          "uri": "public:\/\/icons\/icon_flugzeug_blue.png",
+          "filemime": "image\/png",
+          "filesize": "11846",
+          "status": "1",
+          "timestamp": "1513344074",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344074",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77961": {
+    "vid": "77962",
+    "uid": "1",
+    "title": "Hat to be done..",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77961",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344104",
+    "changed": "1513344104",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344104",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6773",
+          "uid": "1",
+          "filename": "icon_hut_blue.png",
+          "uri": "public:\/\/icons\/icon_hut_blue.png",
+          "filemime": "image\/png",
+          "filesize": "13006",
+          "status": "1",
+          "timestamp": "1513344104",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344104",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77962": {
+    "vid": "77963",
+    "uid": "1",
+    "title": "Brain to be done..",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77962",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344131",
+    "changed": "1513344131",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344131",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6774",
+          "uid": "1",
+          "filename": "icon_kopf_blue.png",
+          "uri": "public:\/\/icons\/icon_kopf_blue.png",
+          "filemime": "image\/png",
+          "filesize": "11724",
+          "status": "1",
+          "timestamp": "1513344131",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344131",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77963": {
+    "vid": "77964",
+    "uid": "1",
+    "title": "Spezialisierung to be done..",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77963",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344184",
+    "changed": "1513344184",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344184",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6775",
+          "uid": "1",
+          "filename": "icon_spezialist_blue.png",
+          "uri": "public:\/\/icons\/icon_spezialist_blue.png",
+          "filemime": "image\/png",
+          "filesize": "13046",
+          "status": "1",
+          "timestamp": "1513344184",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344184",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77964": {
+    "vid": "77965",
+    "uid": "1",
+    "title": "Together to be done..",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77964",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344210",
+    "changed": "1513344210",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344210",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6776",
+          "uid": "1",
+          "filename": "icon_together_blue.png",
+          "uri": "public:\/\/icons\/icon_together_blue.png",
+          "filemime": "image\/png",
+          "filesize": "16741",
+          "status": "1",
+          "timestamp": "1513344210",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344210",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  },
+  "77965": {
+    "vid": "77966",
+    "uid": "1",
+    "title": "Wohin to be done..",
+    "log": "",
+    "status": "1",
+    "comment": "1",
+    "promote": "0",
+    "sticky": "0",
+    "ds_switch": "default",
+    "nid": "77965",
+    "type": "benefit",
+    "language": "de",
+    "created": "1513344257",
+    "changed": "1513344257",
+    "tnid": "0",
+    "translate": "0",
+    "revision_timestamp": "1513344257",
+    "revision_uid": "1",
+    "body": [],
+    "field_icon": {
+      "und": [
+        {
+          "fid": "6777",
+          "uid": "1",
+          "filename": "icon_wegweiser_red.png",
+          "uri": "public:\/\/icons\/icon_wegweiser_red.png",
+          "filemime": "image\/png",
+          "filesize": "9390",
+          "status": "1",
+          "timestamp": "1513344257",
+          "type": "image",
+          "field_file_image_alt_text": [],
+          "field_file_image_title_text": [],
+          "rdf_mapping": [],
+          "metadata": {
+            "height": 139,
+            "width": 140
+          },
+          "alt": "",
+          "title": "",
+          "height": "139",
+          "width": "140"
+        }
+      ]
+    },
+    "rdf_mapping": {
+      "rdftype": [
+        "sioc:Item",
+        "foaf:Document"
+      ],
+      "title": {
+        "predicates": [
+          "dc:title"
+        ]
+      },
+      "created": {
+        "predicates": [
+          "dc:date",
+          "dc:created"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "changed": {
+        "predicates": [
+          "dc:modified"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      },
+      "body": {
+        "predicates": [
+          "content:encoded"
+        ]
+      },
+      "uid": {
+        "predicates": [
+          "sioc:has_creator"
+        ],
+        "type": "rel"
+      },
+      "name": {
+        "predicates": [
+          "foaf:name"
+        ]
+      },
+      "comment_count": {
+        "predicates": [
+          "sioc:num_replies"
+        ],
+        "datatype": "xsd:integer"
+      },
+      "last_activity": {
+        "predicates": [
+          "sioc:last_activity_date"
+        ],
+        "datatype": "xsd:dateTime",
+        "callback": "date_iso8601"
+      }
+    },
+    "path": {
+      "pathauto": "1"
+    },
+    "cid": "0",
+    "last_comment_timestamp": "1513344257",
+    "last_comment_name": null,
+    "last_comment_uid": "1",
+    "comment_count": "0",
+    "name": "dpAdmin",
+    "picture": "0",
+    "data": "a:8:{s:8:\"gravatar\";i:1;s:17:\"mimemail_textonly\";i:0;s:16:\"ckeditor_default\";s:1:\"t\";s:20:\"ckeditor_show_toggle\";s:1:\"t\";s:14:\"ckeditor_width\";s:4:\"100%\";s:13:\"ckeditor_lang\";s:2:\"en\";s:18:\"ckeditor_auto_lang\";s:1:\"t\";s:7:\"overlay\";i:1;}"
+  }
+}

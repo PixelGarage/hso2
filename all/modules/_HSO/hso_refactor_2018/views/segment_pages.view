@@ -1,0 +1,269 @@
+<?php
+
+$view = new view();
+$view->name = 'segment_pages';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'node';
+$view->human_name = 'Segment Pages';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'perm';
+$handler->display->display_options['cache']['type'] = 'none';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'none';
+$handler->display->display_options['style_plugin'] = 'default';
+$handler->display->display_options['row_plugin'] = 'fields';
+/* Field: Content: Nid */
+$handler->display->display_options['fields']['nid']['id'] = 'nid';
+$handler->display->display_options['fields']['nid']['table'] = 'node';
+$handler->display->display_options['fields']['nid']['field'] = 'nid';
+$handler->display->display_options['fields']['nid']['label'] = '';
+$handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+$handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+/* Field: Content: Title */
+$handler->display->display_options['fields']['title']['id'] = 'title';
+$handler->display->display_options['fields']['title']['table'] = 'node';
+$handler->display->display_options['fields']['title']['field'] = 'title';
+$handler->display->display_options['fields']['title']['label'] = '';
+$handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['title']['alter']['path'] = 'node/[nid]';
+$handler->display->display_options['fields']['title']['alter']['target'] = '_blank';
+$handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+$handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+$handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+/* Contextual filter: Content: Segment (field_segment) */
+$handler->display->display_options['arguments']['field_segment_tid']['id'] = 'field_segment_tid';
+$handler->display->display_options['arguments']['field_segment_tid']['table'] = 'field_data_field_segment';
+$handler->display->display_options['arguments']['field_segment_tid']['field'] = 'field_segment_tid';
+$handler->display->display_options['arguments']['field_segment_tid']['default_action'] = 'default';
+$handler->display->display_options['arguments']['field_segment_tid']['default_argument_type'] = 'context';
+$handler->display->display_options['arguments']['field_segment_tid']['default_argument_options']['namespace'] = 'hso';
+$handler->display->display_options['arguments']['field_segment_tid']['default_argument_options']['attribute'] = 'current_segment';
+$handler->display->display_options['arguments']['field_segment_tid']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_segment_tid']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_segment_tid']['summary_options']['items_per_page'] = '25';
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'page' => 'page',
+);
+/* Filter criterion: Content: Page Type (field_page_type) */
+$handler->display->display_options['filters']['field_page_type_tid']['id'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['table'] = 'field_data_field_page_type';
+$handler->display->display_options['filters']['field_page_type_tid']['field'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['value'] = array(
+  104 => '104',
+);
+$handler->display->display_options['filters']['field_page_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_page_type_tid']['vocabulary'] = 'segment_page_type';
+
+/* Display: Description Info-pages */
+$handler = $view->new_display('block', 'Description Info-pages', 'block_desc_info_pages');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Rendered Content */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'page' => 'page',
+);
+/* Filter criterion: Content: Page Type (field_page_type) */
+$handler->display->display_options['filters']['field_page_type_tid']['id'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['table'] = 'field_data_field_page_type';
+$handler->display->display_options['filters']['field_page_type_tid']['field'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['value'] = array(
+  103 => '103',
+);
+$handler->display->display_options['filters']['field_page_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_page_type_tid']['vocabulary'] = 'segment_page_type';
+/* Filter criterion: Content: Show full content (field_full_content) */
+$handler->display->display_options['filters']['field_full_content_value']['id'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['table'] = 'field_data_field_full_content';
+$handler->display->display_options['filters']['field_full_content_value']['field'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['value'] = array(
+  1 => '1',
+);
+
+/* Display: Info-pages block */
+$handler = $view->new_display('block', 'Info-pages block', 'block_info_pages');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: View area */
+$handler->display->display_options['header']['view']['id'] = 'view';
+$handler->display->display_options['header']['view']['table'] = 'views';
+$handler->display->display_options['header']['view']['field'] = 'view';
+$handler->display->display_options['header']['view']['empty'] = TRUE;
+$handler->display->display_options['header']['view']['view_to_insert'] = 'segment_pages:block_desc_info_pages';
+$handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'page' => 'page',
+);
+/* Filter criterion: Content: Page Type (field_page_type) */
+$handler->display->display_options['filters']['field_page_type_tid']['id'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['table'] = 'field_data_field_page_type';
+$handler->display->display_options['filters']['field_page_type_tid']['field'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['value'] = array(
+  103 => '103',
+);
+$handler->display->display_options['filters']['field_page_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_page_type_tid']['vocabulary'] = 'segment_page_type';
+/* Filter criterion: Content: Show full content (field_full_content) */
+$handler->display->display_options['filters']['field_full_content_value']['id'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['table'] = 'field_data_field_full_content';
+$handler->display->display_options['filters']['field_full_content_value']['field'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['operator'] = 'not';
+$handler->display->display_options['filters']['field_full_content_value']['value'] = array(
+  1 => '1',
+);
+
+/* Display: Description concept-pages */
+$handler = $view->new_display('block', 'Description concept-pages', 'block_desc_concept_pages');
+$handler->display->display_options['defaults']['fields'] = FALSE;
+/* Field: Content: Rendered Content */
+$handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
+$handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+$handler->display->display_options['fields']['rendered_entity']['label'] = '';
+$handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+$handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+$handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+$handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'page' => 'page',
+);
+/* Filter criterion: Content: Page Type (field_page_type) */
+$handler->display->display_options['filters']['field_page_type_tid']['id'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['table'] = 'field_data_field_page_type';
+$handler->display->display_options['filters']['field_page_type_tid']['field'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['value'] = array(
+  104 => '104',
+);
+$handler->display->display_options['filters']['field_page_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_page_type_tid']['vocabulary'] = 'segment_page_type';
+/* Filter criterion: Content: Show full content (field_full_content) */
+$handler->display->display_options['filters']['field_full_content_value']['id'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['table'] = 'field_data_field_full_content';
+$handler->display->display_options['filters']['field_full_content_value']['field'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['value'] = array(
+  1 => '1',
+);
+
+/* Display: Concept-pages Block */
+$handler = $view->new_display('block', 'Concept-pages Block', 'block_concept_pages');
+$handler->display->display_options['defaults']['header'] = FALSE;
+/* Header: Global: View area */
+$handler->display->display_options['header']['view']['id'] = 'view';
+$handler->display->display_options['header']['view']['table'] = 'views';
+$handler->display->display_options['header']['view']['field'] = 'view';
+$handler->display->display_options['header']['view']['empty'] = TRUE;
+$handler->display->display_options['header']['view']['view_to_insert'] = 'segment_pages:block_desc_concept_pages';
+$handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
+$handler->display->display_options['defaults']['filter_groups'] = FALSE;
+$handler->display->display_options['defaults']['filters'] = FALSE;
+/* Filter criterion: Content: Published */
+$handler->display->display_options['filters']['status']['id'] = 'status';
+$handler->display->display_options['filters']['status']['table'] = 'node';
+$handler->display->display_options['filters']['status']['field'] = 'status';
+$handler->display->display_options['filters']['status']['value'] = 1;
+$handler->display->display_options['filters']['status']['group'] = 1;
+$handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+/* Filter criterion: Content: Type */
+$handler->display->display_options['filters']['type']['id'] = 'type';
+$handler->display->display_options['filters']['type']['table'] = 'node';
+$handler->display->display_options['filters']['type']['field'] = 'type';
+$handler->display->display_options['filters']['type']['value'] = array(
+  'page' => 'page',
+);
+/* Filter criterion: Content: Page Type (field_page_type) */
+$handler->display->display_options['filters']['field_page_type_tid']['id'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['table'] = 'field_data_field_page_type';
+$handler->display->display_options['filters']['field_page_type_tid']['field'] = 'field_page_type_tid';
+$handler->display->display_options['filters']['field_page_type_tid']['value'] = array(
+  104 => '104',
+);
+$handler->display->display_options['filters']['field_page_type_tid']['type'] = 'select';
+$handler->display->display_options['filters']['field_page_type_tid']['vocabulary'] = 'segment_page_type';
+/* Filter criterion: Content: Show full content (field_full_content) */
+$handler->display->display_options['filters']['field_full_content_value']['id'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['table'] = 'field_data_field_full_content';
+$handler->display->display_options['filters']['field_full_content_value']['field'] = 'field_full_content_value';
+$handler->display->display_options['filters']['field_full_content_value']['operator'] = 'not';
+$handler->display->display_options['filters']['field_full_content_value']['value'] = array(
+  1 => '1',
+);
+$translatables['segment_pages'] = array(
+  t('Master'),
+  t('more'),
+  t('Apply'),
+  t('Reset'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('All'),
+  t('Description Info-pages'),
+  t('Info-pages block'),
+  t('Description concept-pages'),
+  t('Concept-pages Block'),
+);

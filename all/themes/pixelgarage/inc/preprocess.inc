@@ -148,6 +148,19 @@ function pixelgarage_preprocess_page(&$vars) {
 }
 
 /* =============================================================================
+ *      Course node adaptation
+ * ========================================================================== */
+function pixelgarage_ds_pre_render_alter(&$layout_render_array, $context, &$vars) {
+  // check node type
+  if ($context['entity_type'] == 'node' && $context['bundle'] == 'course') {
+    $layout_render_array['bottom'][] = $layout_render_array['left'][1];
+    unset($layout_render_array['left'][1]);
+  }
+}
+
+
+
+/* =============================================================================
  *      Exposed search form
  * ========================================================================== */
 /**
@@ -281,42 +294,21 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
   // Get titles with course link.
   if (isset($view->field[$title_field])) {
+    $active_course_subject = '';
     foreach ($vars['view']->result as $key => $field) {
       $title = $view->style_plugin->get_field($key, $title_field);
       $vars['titles'][$key] = $title;
-    }
-  }
+      $course_subject = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
+      $course_subject = !empty($course_subject) ? $course_subject : 'Lehrgänge';
 
-  // add course subject titles and main titles, if any
-  $active_course_subject = '';
-  foreach ($vars['view']->result as $key => $field) {
-    $course_subject = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
-    $course_subject = !empty($course_subject) ? $course_subject : 'Lehrgänge';
+      if ($active_course_subject != $course_subject) {
+        $vars['course_subjects'][$key] = $course_subject;
+        $active_course_subject = $course_subject;
 
-    if ($active_course_subject != $course_subject) {
-      $vars['course_subjects'][$key] = $course_subject;
-      $active_course_subject = $course_subject;
-
-      // add main titles
-      if ($course_subject == 'Management und Organisation') {
-        $vars['course_subject_titles'][$key] = t('Kaderschule');
-        $vars['course_subject_description'][$key] = '';
-      } else if ($course_subject == 'Diplomstudium HF') {
-        $vars['course_subject_titles'][$key] = t('Höhere Fachschule für Wirtschaft & Informatik');
-        $vars['course_subject_description'][$key] = '';
-      } else if ($course_subject == 'Bachelor-Studium') {
-        $vars['course_subject_titles'][$key] = t('Fachhochschule HFH');
-        $vars['course_subject_description'][$key] =
-          t('Mit der <a href="@hfh_url" target="_blank">Hamburger Fern-Hochschule</a> führen wir eine Exklusivität in der Schweizer Wirtschaftsbildung: An der HSO haben Sie die Möglichkeit (ohne Berufsmatura), integral im HFW-Diplomstudium exakt abgestimmte Module des Fachhochschulprogramms zu absolvieren. So schliessen Sie nach insgesamt 4½ Jahren den nach Bologna-Richtlinien anerkannten Bachelor of Arts in Betriebswirt­schaft ab. Dabei erreichen Sie nach dem 1. Jahr den Zwischenabschluss Höheres Wirtschaftsdiplom VSK/HWD, nach 3 Jahren den eidge­nössisch geschützten «Dipl. Betriebswirtschafter / -in HF» und ab dem 4. Studienjahr konzentrieren Sie sich auf die restlichen Bachelor-Module und erlangen damit den Bachelor of Arts in Betriebswirtschaft (180 ECTS).',
-            array('@hfh_url' => 'http://www.hamburger-fh.de/'));
       } else {
+        $vars['course_subjects'][$key] = '';
         $vars['course_subject_titles'][$key] = '';
-        $vars['course_subject_description'][$key] = '';
       }
-
-    } else {
-      $vars['course_subjects'][$key] = '';
-      $vars['course_subject_titles'][$key] = '';
     }
   }
 

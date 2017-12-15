@@ -169,6 +169,45 @@ function _hso_refactor_2018_hbskmz_export() {
 
 function _hso_refactor_2018_hbskmz_import() {
   //
+  // delete all language course nodes with its course times and course tabs
+  $lang_tid = _segment_mapping(107);
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'course')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_segment', 'tid', $lang_tid);
+  $result = $query->execute();
+
+  if (isset($result['node'])) {
+    $course_nids = array_keys($result['node']);
+    foreach ($course_nids as $course_nid) {
+      node_delete($course_nid);
+
+      // delete all course times of course
+      $query = new EntityFieldQuery();
+      $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'course_times')
+        ->propertyCondition('status', NODE_PUBLISHED)
+        ->fieldCondition('field_course', 'target_id', $course_nid);
+      $result = $query->execute();
+      if ($result && !empty($result['node'])) {
+        node_delete_multiple(array_keys($result['node']));
+      }
+      // delete all course tabs of course
+      $query = new EntityFieldQuery();
+      $query->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'course_tabs')
+        ->propertyCondition('status', NODE_PUBLISHED)
+        ->fieldCondition('field_course', 'target_id', $course_nid);
+      $result = $query->execute();
+      if ($result && !empty($result['node'])) {
+        node_delete_multiple(array_keys($result['node']));
+      }
+    }
+  }
+
+  //
+  // IMPORT ALL COURSE FILES
   // scan all files in the data directory
   $path = drupal_get_path('module', 'hso_refactor_2018') . '/data/courses/*.json';
   $json_files = glob($path);
@@ -299,28 +338,73 @@ function __export_course_segment_map() {
 
 
 //
-// Export call2action nodes
+// Export/import nodes of a specific type.
 //
-function __hso_refactor_2018_call2action_export() {
+function __hso_refactor_2018_node_export($bundle) {
   //
-  // retrieve all call2action nodes and export it to a file
+  // retrieve all nodes of a specific type and export it to a file
   //
-  // get all call2action nodes
-  $call2actions = null;
+  // get all nodes
+  $nodes = null;
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'call2action')
+    ->entityCondition('bundle', $bundle)
     ->propertyCondition('status', NODE_PUBLISHED);
   $result = $query->execute();
   if (isset($result['node'])) {
-    $call2actions = node_load_multiple(array_keys($result['node']));
+    $nodes = node_load_multiple(array_keys($result['node']));
   }
 
   // encode json and write it to file
-  $json_str = json_encode($call2actions);
+  $json_str = json_encode($nodes);
   if ($json_str) {
-    $path = drupal_get_path('module', 'hso_refactor_2018') . '/data/call2actions/call2actions.json';
+    $path = drupal_get_path('module', 'hso_refactor_2018') . "/data/nodes/{$bundle}s.json";
     file_put_contents($path, $json_str);
+  }
+}
+
+function __hso_refactor_2018_node_import($bundle) {
+  //
+  // Cleanup: delete all nodes of specific type
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', $bundle)
+    ->propertyCondition('status', NODE_PUBLISHED);
+  $result = $query->execute();
+  if (isset($result['node'])) {
+    node_delete_multiple(array_keys($result['node']));
+  }
+
+  //
+  // scan all files in the data directory
+  $path = drupal_get_path('module', 'hso_refactor_2018') . "/data/nodes/{$bundle}s.json";
+  $json_files = glob($path);
+
+  foreach ($json_files as $idx => $filepath) {
+    // get and decode file data
+    $nodes = json_decode(file_get_contents($filepath), true);
+    $img_path = drupal_get_path('theme', 'pixelgarage') . '/images/';
+
+    foreach ($nodes as $key => $node) {
+      $node = (object)$node;
+      $node->nid = NULL;
+      $node->is_new = TRUE;
+      if (isset($node->field_icon)) {
+        $node->field_icon[LANGUAGE_NONE][0]['fid'] = null;
+        $icon_origin = $img_path . $node->field_icon[LANGUAGE_NONE][0]['filename'];
+        file_unmanaged_copy($icon_origin, $node->field_icon[LANGUAGE_NONE][0]['uri']);
+        $node->field_icon[LANGUAGE_NONE][0] = (array)file_save((object)$node->field_icon[LANGUAGE_NONE][0]);
+      }
+
+      if (isset($node->field_picture)) {
+        $node->field_picture[LANGUAGE_NONE][0]['fid'] = null;
+        $picture_origin = $img_path . $node->field_picture[LANGUAGE_NONE][0]['filename'];
+        file_unmanaged_copy($picture_origin, $node->field_picture[LANGUAGE_NONE][0]['uri']);
+        $node->field_picture[LANGUAGE_NONE][0] = (array)file_save((object)$node->field_picture[LANGUAGE_NONE][0]);
+      }
+
+      node_save($node);
+    }
   }
 }
 

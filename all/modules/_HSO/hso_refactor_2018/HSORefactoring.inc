@@ -111,27 +111,32 @@ class HSORefactoring extends Refactoring {
     // call parent function
     parent::runAll();
 
+    //__hso_refactor_2018_node_export('benefit');
+    //return true;
+
     // enable new modules
     if (!module_exists('views_bulk_operations')) {
-      module_enable(array('views_bulk_operations'), true);
+      //module_enable(array('views_bulk_operations'), true);
     }
 
     //
     // run all refactoring step by step. Each step has to succeed
     // to continue refactoring
     //if (!$this->addNewSegmentsAndCategories()) return 'AddNewSegmentsAndCategories';
+    //if (!$this->updateCourseLayout()) return 'UpdateCourseLayout';
     //if (!$this->importCall2Actions()) return 'ImportCall2Actions';
     //if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
     if (!$this->bannerExtension()) return 'BannerExtension';
     //if (!$this->cleanupContext()) return 'CleanupContext';
-    //if (!$this->adaptFooter()) return 'AdaptFooter';
     //if (!$this->viewsUpdate()) return 'ViewsUpdate';
 
     //
     // display hints for manual update
-    drupal_set_message('Manual update: import main menu!', 'warning');
+    drupal_set_message('Manual update: import main menu from file main-menu-export!', 'warning');
+    drupal_set_message('Manual update: import menu course-blocks from file menu-course-blocks-export.txt!', 'warning');
+    drupal_set_message('Manual update: Add DS block fields Course benefits, Course info, Course links!', 'warning');
     drupal_set_message('Manual update: remove exposed search block from navigation region!', 'warning');
-
+    drupal_set_message('Manual update: Home-Page refresh!', 'warning');
 
     // refactoring successfully completed
     return TRUE;
@@ -221,6 +226,25 @@ class HSORefactoring extends Refactoring {
   }
 
   /**
+   * Update course layout and add sidebar blocks.
+   */
+  public function updateCourseLayout() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('UpdateCourseLayout')) return true;
+
+      // update course content type
+      $this->updateEntityType('node', 'nodes/course.node');
+
+      return $this->endStep('UpdateCourseLayout');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('UpdateCourseLayout() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
    * Import all new call2action nodes from json-file.
    */
   public function importCall2Actions() {
@@ -232,7 +256,7 @@ class HSORefactoring extends Refactoring {
       $this->updateEntityType('node', 'nodes/call2action.node');
 
       // import nodes in json file
-      $this->_call2actionImport();
+      __hso_refactor_2018_node_import('call2action');
 
       // update view
       $this->updateView('views/call2action.view');
@@ -241,6 +265,31 @@ class HSORefactoring extends Refactoring {
     }
     catch (Exception $ex) {
       drupal_set_message(t('ImportCall2Actions() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
+   * Import all new benefit nodes from json-file.
+   */
+  public function importBenefits() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('ImportBenefits')) return true;
+
+      // update call2action content type
+      $this->updateEntityType('node', 'nodes/benefit.node');
+
+      // import nodes in json file
+      __hso_refactor_2018_node_import('benefit');
+
+      // update view
+      $this->updateView('views/benefits.view');
+
+      return $this->endStep('ImportBenefits');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('ImportBenefits() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
       return false;
     }
   }
@@ -332,25 +381,6 @@ class HSORefactoring extends Refactoring {
   }
 
   /**
-   * Adapt footer to new layout.
-   */
-  public function adaptFooter() {
-    try {
-      // check if step has to be performed
-      if (!$this->startStep('AdaptFooter')) return true;
-
-      // add steps here...
-      $this->updateView('views/locations.view');
-
-      return $this->endStep('AdaptFooter');
-    }
-    catch (Exception $ex) {
-      drupal_set_message(t('AdaptFooter() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
-      return false;
-    }
-  }
-
-  /**
    * Update all changed views and delete the views in db (views only in code)
    */
   public function viewsUpdate() {
@@ -362,6 +392,8 @@ class HSORefactoring extends Refactoring {
       $this->updateView('views/courses.view');
       $this->updateView('views/course_times_search.view');
       $this->updateView('views/news.view');
+      $this->updateView('views/locations.view');
+      $this->updateView('views/segment_pages.view');
 
       // clear views cache
       if (module_exists('views')) {
@@ -395,47 +427,6 @@ class HSORefactoring extends Refactoring {
         ->fields(array('field_fachgebiet_tid' => $category_tid))
         ->condition('entity_id', $course_nid)
         ->execute();
-    }
-  }
-
-  private function _call2actionImport() {
-    //
-    // delete all call2action nodes
-    $query = new EntityFieldQuery();
-    $query->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'call2action')
-      ->propertyCondition('status', NODE_PUBLISHED);
-    $result = $query->execute();
-    if (isset($result['node'])) {
-      node_delete_multiple(array_keys($result['node']));
-    }
-
-    //
-    // scan all files in the data directory
-    $path = drupal_get_path('module', 'hso_refactor_2018') . '/data/call2actions/*.json';
-    $json_files = glob($path);
-
-    foreach ($json_files as $idx => $filepath) {
-      // get and decode file data
-      $nodes = json_decode(file_get_contents($filepath), true);
-      $img_path = drupal_get_path('theme', 'pixelgarage') . '/images/';
-
-      foreach ($nodes as $key => $call2action) {
-        $call2action = (object)$call2action;
-        $call2action->nid = NULL;
-        $call2action->is_new = TRUE;
-        $call2action->field_icon[LANGUAGE_NONE][0]['fid'] = null;
-        $icon_origin = $img_path . $call2action->field_icon[LANGUAGE_NONE][0]['filename'];
-        file_unmanaged_copy($icon_origin, $call2action->field_icon[LANGUAGE_NONE][0]['uri']);
-        $call2action->field_icon[LANGUAGE_NONE][0] = (array)file_save((object)$call2action->field_icon[LANGUAGE_NONE][0]);
-
-        $call2action->field_picture[LANGUAGE_NONE][0]['fid'] = null;
-        $picture_origin = $img_path . $call2action->field_picture[LANGUAGE_NONE][0]['filename'];
-        file_unmanaged_copy($picture_origin, $call2action->field_picture[LANGUAGE_NONE][0]['uri']);
-        $call2action->field_picture[LANGUAGE_NONE][0] = (array)file_save((object)$call2action->field_picture[LANGUAGE_NONE][0]);
-
-        node_save($call2action);
-      }
     }
   }
 

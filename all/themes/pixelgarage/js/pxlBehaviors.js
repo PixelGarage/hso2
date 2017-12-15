@@ -126,7 +126,8 @@
    */
   Drupal.behaviors.smoothScrolltoInfoEventTab = {
     attach: function(context, settings) {
-      var $courseBlockMenu = $('#block-menu-menu-course-blocks'),
+      var $course = $('.node-course'),
+        $courseBlockMenu = $course.find('.field-name-course-links'),
         $infoEventMenu = $courseBlockMenu.find('ul.menu>li.menu.infoevent');
 
       $infoEventMenu.once('clicked', function () {
@@ -155,8 +156,9 @@
    */
   Drupal.behaviors.enhanceBlockMenuWithParameters = {
     attach: function() {
-      var $blockMenu = $('#page-header .block-menu'),
-        $menuLinks = $blockMenu.find('ul.menu>li.menu.consulting').add('ul.menu>li.menu.brochures');
+      var $course = $('.node-course'),
+        $courseBlockMenu = $course.find('.field-name-course-links'),
+        $menuLinks = $courseBlockMenu.find('ul.menu>li.menu.consulting').add('ul.menu>li.menu.brochures');
 
       //
       // Polyfill for IE11
@@ -173,16 +175,16 @@
         tid = false,
         nid = false;
       $.each(body_classes, function (i, className) {
-        if (className.startsWith('page-taxonomy-term-')) {
-          className = className.replace('page-taxonomy-term-', '');
-          if (className.length > 0) {
-            tid = className;
-          }
-        }
-        else if (className.startsWith('page-node-')) {
+        if (className.startsWith('page-node-')) {
           className = className.replace('page-node-', '');
           if (className.length > 0) {
             nid = className;
+          }
+        }
+        else if (className.startsWith('page-taxonomy-term-')) {
+          className = className.replace('page-taxonomy-term-', '');
+          if (className.length > 0) {
+            tid = className;
           }
         }
       });
@@ -193,12 +195,12 @@
         $(this).on('click', function() {
           var href = $(this).find('a').attr('href');
 
-          if (tid) {
-            window.location = href + '?tid=' + tid;
+          if (nid) {
+            window.location = href + '?nid=' + nid;
             return false;
           }
-          else if (nid) {
-            window.location = href + '?nid=' + nid;
+          else if (tid) {
+            window.location = href + '?tid=' + tid;
             return false;
           }
         });

@@ -1,0 +1,5 @@
+Kontakt {"url":"<nolink>","hidden":true,"options":{"item_attributes":{"id":"menu-block-course-contacts","class":"menu-block menu-block-course-contacts","style":""}},"weight":"-47"}
+Bildungsweg {"url":"node\/76123","hidden":true,"options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu navigator","style":""}},"weight":"-46"}
+Beratung {"url":"node\/1335","options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu consulting","style":""}},"weight":"-49"}
+Broschüre / Factsheet {"url":"node\/1336","options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu brochures","style":""}},"weight":"-48"}
+Informationsanlässe {"url":"<nolink>","options":{"item_attributes":{"id":"","class":"menu infoevent","style":""}},"weight":"-50"}

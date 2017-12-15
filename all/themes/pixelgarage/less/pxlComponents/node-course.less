@@ -19,18 +19,106 @@
   }
 }
 
+.menu-course-blocks() {
+  ul.menu {
+    display: block;
+    margin: 0;
+    text-align: left;
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 10px 0;
+      width: 100%;
+
+      a, span {
+        display: inline-block;
+        padding: 0;
+        width: 100%;
+        font-family: @pxl-text-font-medium;
+        font-size: 16px;
+        line-height: 1;
+        color: @text-color;
+        text-decoration: none;
+        background: none;
+      }
+
+      &.infoevent {
+        a:before, span:before {
+          display: inline-block;
+          content: '\f274';
+          font-family: @pxl-icon-font;
+          font-size: 30px;
+          width: 20%;
+          max-width: 40px;
+          padding-right: 10px;
+        }
+      }
+      &.consulting {
+        a:before, span:before {
+          display: inline-block;
+          content: '\f0e6';
+          font-family: @pxl-icon-font;
+          font-size: 30px;
+          width: 20%;
+          max-width: 40px;
+          padding-right: 10px;
+        }
+      }
+      &.brochures {
+        a:before, span:before {
+          display: inline-block;
+          content: '\f019';
+          font-family: @pxl-icon-font;
+          font-size: 30px;
+          width: 20%;
+          max-width: 40px;
+          padding-right: 10px;
+        }
+      }
+
+      &:hover,
+      &.active {
+        a, span {
+          text-decoration: underline;
+          body.segment_kv & {
+            color: @pxl-color-hso-kv;
+          }
+          body.segment_hs & {
+            color: @pxl-color-hso-hs;
+          }
+          body.segment_wm & {
+            color: @pxl-color-hso-wm;
+          }
+          body.segment_sp & {
+            color: @pxl-color-hso-sp;
+          }
+          body.segment_wi & {
+            color: @pxl-color-hso-wi;
+          }
+          body.segment_pp & {
+            color: @pxl-color-hso-pp;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
 
 
 // General settings
 // -------------------------
 .node.node-course{
   .row {
-    .col-sm-12 {
+    .col-sm-9 {
+      margin: 0 0 30px;
+
       .field-name-body {
         table.aufeinenblock, // legacy
         table.aufeinenblick {
-          margin: 0 0 50px;
-
           >p, >caption {
             // do not show table caption
             display: none;
@@ -95,6 +183,26 @@
         }
       }
 
+    }
+
+    .col-sm-3 {
+      margin: 0 0 30px;
+
+      // sidebar
+      .field-name-course-links {
+        .field-item {
+          .menu-course-blocks();
+        }
+      }
+      .field-name-course-benefits {
+        .field-item {
+          // see view-benefits.less and node-benefit.less
+        }
+      }
+    }
+
+    .col-sm-12 {
+      // bottom
       .field-name-course-tab {
         // see view-course-tabs
       }

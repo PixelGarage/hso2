@@ -42,3 +42,19 @@
     }
   }
 }
+
+.panel-2col-stacked {
+  .panel-col-first, .panel-col-last {
+    float: left;
+    width: 100%;
+  }
+
+  @media @tablet {
+    .panel-col-first {
+      width: 50%;
+    }
+    .panel-col-last {
+      width: 49.9%;
+    }
+  }
+}
