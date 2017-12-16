@@ -10,7 +10,9 @@ $context->conditions = array(
   'node' => array(
     'values' => array(
       'course' => 'course',
+      'course_times' => 'course_times',
       'page' => 'page',
+      'webform' => 'webform',
     ),
     'options' => array(
       'node_form' => '0',

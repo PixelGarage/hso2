@@ -66,10 +66,11 @@
   color: #fff;
   border: none;
   #pxl-mixins.border-radius(@radius);
-  background: @pxl-color-bg-button;
+  background: @bg-color;
+  opacity: 1.0;
 
   &:hover, &:focus {
-    background: @pxl-color-bg-button-hover;
+    opacity: 0.7;
   }
 }
 

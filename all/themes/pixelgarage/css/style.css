@@ -11522,12 +11522,13 @@ form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.dra
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #777777;
+  opacity: 1.0;
   font-size: 14px;
 }
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:hover,
 form.webform-client-form [id$=ajax-wrapper] .table-responsive table tbody tr.draggable td button:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file {
   margin: 0;
@@ -11560,13 +11561,14 @@ form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .fo
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #777777;
+  opacity: 1.0;
   font-size: 16px;
   z-index: 10;
 }
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:hover,
 form.webform-client-form [id$=ajax-wrapper] .webform-component-multiple-file .form-managed-file .input-group-btn button:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 form.webform-client-form .webform-component {
   margin: 0 auto 15px;
@@ -11754,12 +11756,13 @@ form.webform-client-form .webform-component .form-managed-file button.btn {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #777777;
+  opacity: 1.0;
   z-index: 10;
 }
 form.webform-client-form .webform-component .form-managed-file button.btn:hover,
 form.webform-client-form .webform-component .form-managed-file button.btn:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 form.webform-client-form .webform-component.webform-component-markup {
   margin-bottom: 25px;
@@ -11893,11 +11896,12 @@ form.webform-client-form div.form-actions button.webform-submit {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #cc3333;
+  opacity: 1.0;
 }
 form.webform-client-form div.form-actions button.webform-submit:hover,
 form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 body.segment_kv form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
@@ -11917,11 +11921,12 @@ body.segment_kv form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #8C9D44;
+  opacity: 1.0;
 }
 body.segment_kv form.webform-client-form div.form-actions button.webform-submit:hover,
 body.segment_kv form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 body.segment_hs form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
@@ -11941,11 +11946,12 @@ body.segment_hs form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #D09D15;
+  opacity: 1.0;
 }
 body.segment_hs form.webform-client-form div.form-actions button.webform-submit:hover,
 body.segment_hs form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 body.segment_wm form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
@@ -11965,11 +11971,12 @@ body.segment_wm form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #7C0B25;
+  opacity: 1.0;
 }
 body.segment_wm form.webform-client-form div.form-actions button.webform-submit:hover,
 body.segment_wm form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 body.segment_sp form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
@@ -11989,11 +11996,12 @@ body.segment_sp form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #B2CCD8;
+  opacity: 1.0;
 }
 body.segment_sp form.webform-client-form div.form-actions button.webform-submit:hover,
 body.segment_sp form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 body.segment_wi form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
@@ -12013,11 +12021,12 @@ body.segment_wi form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #3F5868;
+  opacity: 1.0;
 }
 body.segment_wi form.webform-client-form div.form-actions button.webform-submit:hover,
 body.segment_wi form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 body.segment_pp form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
@@ -12037,11 +12046,12 @@ body.segment_pp form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #ff535d;
+  background: #7B6C65;
+  opacity: 1.0;
 }
 body.segment_pp form.webform-client-form div.form-actions button.webform-submit:hover,
 body.segment_pp form.webform-client-form div.form-actions button.webform-submit:focus {
-  background: #ff757d;
+  opacity: 0.7;
 }
 /*
  *  Course content type
