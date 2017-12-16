@@ -1,22 +1,19 @@
-<?php 
+<?php
+
 /**
- *  Implementation of hook_views_data
- *
- *  Exposing the count table to views as a field, a filter and a sort
+ * Implements hook_views_data().
  */
 function ga_stats_views_data() {
   $data = array();
-  
-  
+
   $times = ga_stats_ga_timeframes(true);
   $metrics = ga_stats_ga_metrics();
-  
-  foreach($metrics as $mk=>$mv){
-    
-    //this is used because views currently lowercases field names but we're getting camelCase from google.
+
+  foreach($metrics as $mk => $mv) {
+    // Google provides camelCase key values but views requires lowercase identifiers.
     $mkl = strtolower($mk); 
-    
-    foreach($times as $tk=>$tv){
+
+    foreach($times as $tk => $tv) {
       $data['ga_stats_count_'.$mkl.'_'.$tk]['table']['group']  = t('Statistics');
       $data['ga_stats_count_'.$mkl.'_'.$tk]['table']['join']  = array(
         'node' => array(
@@ -28,7 +25,7 @@ function ga_stats_views_data() {
         )
       );
       $data['ga_stats_count_'.$mkl.'_'.$tk]['count'] = array(
-        'title' => t("$mv $tv"),
+        'title' => "$mv $tv",
         'help' => t('Information retrieved from Google Analytics'),
         'field' => array(
           'handler'=> 'views_handler_field_numeric',
@@ -45,4 +42,3 @@ function ga_stats_views_data() {
    
   return $data;
 }
-

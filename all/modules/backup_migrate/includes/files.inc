@@ -12,7 +12,7 @@ define('BACKUP_MIGRATE_FILENAME_MAXLENGTH', 255);
  * Add a file to the temporary files list for deletion when we're done.
  */
 function backup_migrate_temp_files_add($filepath = NULL) {
-  static $files = array();
+  $files = &drupal_static('backup_migrate_temp_files_add', array());
   if (!$filepath) {
     return $files;
   }

@@ -66,7 +66,7 @@ function addressfield_format_phone_generate(&$format, $address, $context = array
         '#default_value' => isset($address['mobile_number']) ? $address['mobile_number'] : '',
       );
     }
-    if (!$settings || $settings['fax']) {
+    if (!$settings || isset($settings['fax'])) {
       $format['phone_block']['fax_number'] = array(
         '#title' => t('Fax Number'),
         '#size' => 15,
