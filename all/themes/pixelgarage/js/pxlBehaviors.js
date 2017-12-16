@@ -366,6 +366,54 @@
   };
 
   /**
+   * TELC webform
+   *
+   * Handles the kind of exam and calculates the price depending of the selected exam (oral, written, both).
+   */
+  Drupal.behaviors.telc_anmeldung = {
+    attach: function (context) {
+      var $telc_form = $('#webform-client-form-78061'),
+        $radios_level = $telc_form.find('.webform-component--zertifikat-b--level-b input[type="radio"]')
+        .add('.webform-component--zertifikat-a--level-a input[type="radio"]'),
+        $radios_type = $telc_form.find('.webform-component--zertifikat-b--pruefungsart input[type="radio"]'),
+        checkCount = function () {
+          var $level = $telc_form.find('.webform-component--zertifikat-b--level-b input[type="radio"]:checked')
+            .add('.webform-component--zertifikat-a--level-a input[type="radio"]:checked'),
+            $type = $telc_form.find('.webform-component--zertifikat-b--pruefungsart input[type="radio"]:checked'),
+            price =  0;
+
+          // find price for checked radio, if any
+          if ($level.length > 0) {
+            var costs = Drupal.settings.hso_anmeldung.telc_costs,
+              level = $level.attr('value');
+
+            if (level === 'a1' || level === 'a2') {
+              price = costs[level];
+            } else if ($type.length > 0) {
+              var type = $type.attr('value');
+
+              price = costs[type + '_' + level];
+            }
+          }
+
+          // set corresponding price in agb label
+          $telc_form.find('.webform-component--agbcheck label strong.telc_costs').html('CHF ' + price + '.--');
+        };
+
+      // add click events to radios
+      $radios_level.once('radio-level-click', function() {
+        $(this).on('click', checkCount);
+      });
+      $radios_type.once('radio-type-click', function() {
+        $(this).on('click', checkCount);
+      });
+
+      // initialize price
+      checkCount();
+    }
+  };
+
+  /**
    * Implements google analytic events for the brochure download and the consulting request forms.
    */
   Drupal.behaviors.gaEvents = {

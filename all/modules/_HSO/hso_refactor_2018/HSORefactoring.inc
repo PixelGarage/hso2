@@ -130,14 +130,17 @@ class HSORefactoring extends Refactoring {
     //if (!$this->bannerExtension()) return 'BannerExtension';
     //if (!$this->cleanupContext()) return 'CleanupContext';
     //if (!$this->viewsUpdate()) return 'ViewsUpdate';
+    //if (!$this->addTelcFunctionality()) return 'AddTelcFunctionality';
 
     //
     // display hints for manual update
-    drupal_set_message('Manual update: import main menu from file main-menu-export!', 'warning');
-    drupal_set_message('Manual update: import menu course-blocks from file menu-course-blocks-export.txt!', 'warning');
-    drupal_set_message('Manual update: Add DS block fields Course benefits, Course info, Course links!', 'warning');
-    drupal_set_message('Manual update: remove exposed search block from navigation region!', 'warning');
-    drupal_set_message('Manual update: Home-Page refresh!', 'warning');
+    drupal_set_message('Menu update: import main menu from file main-menu-export!', 'warning');
+    drupal_set_message('Menu update: import menu course-blocks from file menu-course-blocks-export.txt!', 'warning');
+    drupal_set_message('Region update: remove exposed search block from navigation region!', 'warning');
+    drupal_set_message('Display Suite update: Add DS block fields Course benefits, Course info, Course links!', 'warning');
+    drupal_set_message('Page update: Refresh pages Home and Anmeldung!', 'warning');
+    drupal_set_message('Webform update: Create TELC webform and add it to telc variant!', 'warning');
+    drupal_set_message('Wysiwyg update: Import wysiwyg templates from files!', 'warning');
 
     // refactoring successfully completed
     return TRUE;
@@ -333,7 +336,7 @@ class HSORefactoring extends Refactoring {
       return $this->endStep('BannerExtension');
     }
     catch (Exception $ex) {
-      drupal_set_message(t('BannerExtension failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      drupal_set_message(t('BannerExtension() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
       return false;
     }
   }
@@ -409,6 +412,25 @@ class HSORefactoring extends Refactoring {
     }
     catch (Exception $ex) {
       drupal_set_message(t('ViewsUpdate() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
+   * Add TELC functionality.
+   */
+  public function addTelcFunctionality() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('AddTelcFunctionality')) return true;
+
+      // add steps here...
+      $this->updateEntityType('node', 'nodes/course_times.node');
+
+      return $this->endStep('AddTelcFunctionality');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('AddTelcFunctionality() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
       return false;
     }
   }

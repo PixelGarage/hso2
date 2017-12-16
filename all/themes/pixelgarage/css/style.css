@@ -10118,6 +10118,189 @@ form#user-login {
   text-decoration: none;
 }
 /*
+ *  Wysiwyg templates component
+ * --------------------------------------------------*/
+body.segment_kv table.lektionplan .color-bg-20 {
+  background-color: rgba(140, 157, 68, 0.2);
+}
+body.segment_kv table.lektionplan .color-bg-25 {
+  background-color: rgba(140, 157, 68, 0.25);
+}
+body.segment_kv table.lektionplan .color-bg-33 {
+  background-color: rgba(140, 157, 68, 0.33);
+}
+body.segment_kv table.lektionplan .color-bg-40 {
+  background-color: rgba(140, 157, 68, 0.4);
+}
+body.segment_kv table.lektionplan .color-bg-50 {
+  background-color: rgba(140, 157, 68, 0.5);
+}
+body.segment_kv table.lektionplan .color-bg-60 {
+  background-color: rgba(140, 157, 68, 0.6);
+}
+body.segment_kv table.lektionplan .color-bg-66 {
+  background-color: rgba(140, 157, 68, 0.66);
+}
+body.segment_kv table.lektionplan .color-bg-75 {
+  background-color: rgba(140, 157, 68, 0.75);
+}
+body.segment_kv table.lektionplan .color-bg-80 {
+  background-color: rgba(140, 157, 68, 0.8);
+}
+body.segment_kv table.lektionplan .color-bg-100 {
+  background-color: #8c9d44;
+}
+body.segment_hs table.lektionplan .color-bg-20 {
+  background-color: rgba(208, 157, 21, 0.2);
+}
+body.segment_hs table.lektionplan .color-bg-25 {
+  background-color: rgba(208, 157, 21, 0.25);
+}
+body.segment_hs table.lektionplan .color-bg-33 {
+  background-color: rgba(208, 157, 21, 0.33);
+}
+body.segment_hs table.lektionplan .color-bg-40 {
+  background-color: rgba(208, 157, 21, 0.4);
+}
+body.segment_hs table.lektionplan .color-bg-50 {
+  background-color: rgba(208, 157, 21, 0.5);
+}
+body.segment_hs table.lektionplan .color-bg-60 {
+  background-color: rgba(208, 157, 21, 0.6);
+}
+body.segment_hs table.lektionplan .color-bg-66 {
+  background-color: rgba(208, 157, 21, 0.66);
+}
+body.segment_hs table.lektionplan .color-bg-75 {
+  background-color: rgba(208, 157, 21, 0.75);
+}
+body.segment_hs table.lektionplan .color-bg-80 {
+  background-color: rgba(208, 157, 21, 0.8);
+}
+body.segment_hs table.lektionplan .color-bg-100 {
+  background-color: #d09d15;
+}
+body.segment_wm table.lektionplan .color-bg-20 {
+  background-color: rgba(124, 11, 37, 0.2);
+}
+body.segment_wm table.lektionplan .color-bg-25 {
+  background-color: rgba(124, 11, 37, 0.25);
+}
+body.segment_wm table.lektionplan .color-bg-33 {
+  background-color: rgba(124, 11, 37, 0.33);
+}
+body.segment_wm table.lektionplan .color-bg-40 {
+  background-color: rgba(124, 11, 37, 0.4);
+}
+body.segment_wm table.lektionplan .color-bg-50 {
+  background-color: rgba(124, 11, 37, 0.5);
+}
+body.segment_wm table.lektionplan .color-bg-60 {
+  background-color: rgba(124, 11, 37, 0.6);
+}
+body.segment_wm table.lektionplan .color-bg-66 {
+  background-color: rgba(124, 11, 37, 0.66);
+}
+body.segment_wm table.lektionplan .color-bg-75 {
+  background-color: rgba(124, 11, 37, 0.75);
+}
+body.segment_wm table.lektionplan .color-bg-80 {
+  background-color: rgba(124, 11, 37, 0.8);
+}
+body.segment_wm table.lektionplan .color-bg-100 {
+  background-color: #7c0b25;
+}
+body.segment_sp table.lektionplan .color-bg-20 {
+  background-color: rgba(178, 204, 216, 0.2);
+}
+body.segment_sp table.lektionplan .color-bg-25 {
+  background-color: rgba(178, 204, 216, 0.25);
+}
+body.segment_sp table.lektionplan .color-bg-33 {
+  background-color: rgba(178, 204, 216, 0.33);
+}
+body.segment_sp table.lektionplan .color-bg-40 {
+  background-color: rgba(178, 204, 216, 0.4);
+}
+body.segment_sp table.lektionplan .color-bg-50 {
+  background-color: rgba(178, 204, 216, 0.5);
+}
+body.segment_sp table.lektionplan .color-bg-60 {
+  background-color: rgba(178, 204, 216, 0.6);
+}
+body.segment_sp table.lektionplan .color-bg-66 {
+  background-color: rgba(178, 204, 216, 0.66);
+}
+body.segment_sp table.lektionplan .color-bg-75 {
+  background-color: rgba(178, 204, 216, 0.75);
+}
+body.segment_sp table.lektionplan .color-bg-80 {
+  background-color: rgba(178, 204, 216, 0.8);
+}
+body.segment_sp table.lektionplan .color-bg-100 {
+  background-color: #b2ccd8;
+}
+body.segment_wi table.lektionplan .color-bg-20 {
+  background-color: rgba(63, 88, 104, 0.2);
+}
+body.segment_wi table.lektionplan .color-bg-25 {
+  background-color: rgba(63, 88, 104, 0.25);
+}
+body.segment_wi table.lektionplan .color-bg-33 {
+  background-color: rgba(63, 88, 104, 0.33);
+}
+body.segment_wi table.lektionplan .color-bg-40 {
+  background-color: rgba(63, 88, 104, 0.4);
+}
+body.segment_wi table.lektionplan .color-bg-50 {
+  background-color: rgba(63, 88, 104, 0.5);
+}
+body.segment_wi table.lektionplan .color-bg-60 {
+  background-color: rgba(63, 88, 104, 0.6);
+}
+body.segment_wi table.lektionplan .color-bg-66 {
+  background-color: rgba(63, 88, 104, 0.66);
+}
+body.segment_wi table.lektionplan .color-bg-75 {
+  background-color: rgba(63, 88, 104, 0.75);
+}
+body.segment_wi table.lektionplan .color-bg-80 {
+  background-color: rgba(63, 88, 104, 0.8);
+}
+body.segment_wi table.lektionplan .color-bg-100 {
+  background-color: #3f5868;
+}
+body.segment_pp table.lektionplan .color-bg-20 {
+  background-color: rgba(123, 108, 101, 0.2);
+}
+body.segment_pp table.lektionplan .color-bg-25 {
+  background-color: rgba(123, 108, 101, 0.25);
+}
+body.segment_pp table.lektionplan .color-bg-33 {
+  background-color: rgba(123, 108, 101, 0.33);
+}
+body.segment_pp table.lektionplan .color-bg-40 {
+  background-color: rgba(123, 108, 101, 0.4);
+}
+body.segment_pp table.lektionplan .color-bg-50 {
+  background-color: rgba(123, 108, 101, 0.5);
+}
+body.segment_pp table.lektionplan .color-bg-60 {
+  background-color: rgba(123, 108, 101, 0.6);
+}
+body.segment_pp table.lektionplan .color-bg-66 {
+  background-color: rgba(123, 108, 101, 0.66);
+}
+body.segment_pp table.lektionplan .color-bg-75 {
+  background-color: rgba(123, 108, 101, 0.75);
+}
+body.segment_pp table.lektionplan .color-bg-80 {
+  background-color: rgba(123, 108, 101, 0.8);
+}
+body.segment_pp table.lektionplan .color-bg-100 {
+  background-color: #7b6c65;
+}
+/*
  *  ShareThis component
  * --------------------------------------------------*/
 @font-face {
