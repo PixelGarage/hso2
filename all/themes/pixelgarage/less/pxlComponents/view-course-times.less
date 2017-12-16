@@ -234,106 +234,111 @@
       .tab-pane {
         .panel-group {
           .accordion();
+        }
+      }
+    }
 
-          table {
-            width: 100%;
+    table {
+      width: 100%;
 
-            caption {
-              // Header for grouped tables
-              display: none;
-              margin: 15px 0 0;
-              padding: 20px 20px 24px;
-              font-family: @pxl-text-font-medium;
-              font-size: @font-size-base + 2;
-              color: @text-color;
-              line-height: 1;
-              //border-top: 1px solid @pxl-border-color;
+      caption {
+        // Header for grouped tables
+        display: none;
+        margin: 15px 0 0;
+        padding: 20px 20px 24px;
+        font-family: @pxl-text-font-medium;
+        font-size: @font-size-base + 2;
+        color: @text-color;
+        line-height: 1;
+        //border-top: 1px solid @pxl-border-color;
+      }
+
+      thead {
+        tr {
+          th {
+            position: relative;
+            padding: 5px 5px 10px;
+            font-family: @pxl-text-font-medium;
+            font-size: @table-font-size;
+            border: none;
+
+            &.active {
+              background: none;
             }
 
-            thead {
-              tr {
-                th {
-                  position: relative;
-                  padding: 5px 5px 10px;
-                  font-family: @pxl-text-font-medium;
-                  font-size: @table-font-size;
-                  border: none;
+            a {
+              color: @text-color;
 
-                  &.active {
-                    background: none;
-                  }
+              &:hover {
+                color: @pxl-color-gray-dark;
+              }
 
-                  a {
-                    color: @text-color;
-
-                    &:hover {
-                      color: @pxl-color-gray-dark;
-                    }
-
-                    img {
-                      // sort icon
-                      display: inline-block;
-                      position: absolute;
-                      right: 10px;
-                    }
-                  }
-
-                }
+              img {
+                // sort icon
+                display: inline-block;
+                position: absolute;
+                right: 10px;
               }
             }
 
-            tbody {
-              tr {
-                padding: 0;
-                border: none;
-                height: 70px;
+          }
+        }
+      }
 
-                &.even {
-                  background-color: #fff;
-                }
+      tbody {
+        tr {
+          padding: 0;
+          border: none;
+          height: 70px;
 
-                &.odd {
-                  background-color: @pxl-color-hso-gray;
-                }
+          &.even {
+            background-color: #fff;
+          }
 
-                td {
-                  padding: 8px;
-                  vertical-align: middle;
-                  font-family: @pxl-text-font-light;
-                  font-size: @table-font-size;
-                  color: @text-color;
-                  border: none;
+          &.odd {
+            background-color: @pxl-color-hso-gray;
+          }
 
-                  a {
-                    color: @text-color;
-                  }
+          td {
+            padding: 8px;
+            vertical-align: middle;
+            font-family: @pxl-text-font-light;
+            font-size: @table-font-size;
+            color: @text-color;
+            border: none;
 
-                  &.active {
-                    background: none;
-                  }
+            a {
+              color: @text-color;
+            }
 
-                  &.views-field-field-course-date {
-                    white-space: nowrap;
-                    line-height: 25px;
-                  }
+            &.active {
+              background: none;
+            }
 
-                  &.views-field-body {
-                    width: 30%;
-                    min-width: 130px;
-                    p {
-                      font-size: @table-font-size;
-                    }
-                  }
+            &.views-field-field-course {
+              width: 20%;
+              min-width: 130px;
+            }
 
-                  &.views-field-nothing {
-                    text-align: left;
+            &.views-field-field-course-date {
+              white-space: nowrap;
+              line-height: 25px;
+            }
 
-                    a {
-                      #pxl-mixins.button-normal;
-                      display: inline-block;
-                    }
-                  }
-                }
+            &.views-field-body {
+              width: 30%;
+              min-width: 130px;
+              p {
+                font-size: @table-font-size;
+              }
+            }
+
+            &.views-field-nothing {
+              text-align: left;
+
+              a {
+                #pxl-mixins.button-normal;
+                display: inline-block;
               }
             }
           }
@@ -356,6 +361,17 @@
   .view-content {
     .table-responsive {
       border: 1px solid @pxl-color-gray-border-light;
+      tbody {
+        tr {
+          td {
+            &.views-field-body {
+              width: 20%;
+              min-width: 130px;
+            }
+          }
+        }
+      }
+
     }
   }
 

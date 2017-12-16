@@ -394,6 +394,7 @@ class HSORefactoring extends Refactoring {
 
       // add additional views here...
       $this->updateView('views/courses.view');
+      $this->updateView('views/course_times.view');
       $this->updateView('views/course_times_search.view');
       $this->updateView('views/news.view');
       $this->updateView('views/locations.view');
