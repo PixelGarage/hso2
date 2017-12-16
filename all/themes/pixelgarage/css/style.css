@@ -13493,6 +13493,8 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
 .node.node-news.view-mode-default {
   margin-top: 50px;
   border-top: 2px solid #c9c9c9;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .node.node-news.view-mode-full .row div.col-sm-12,
 .node.node-news.view-mode-default .row div.col-sm-12 {
@@ -16481,7 +16483,7 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
 }
 .view.view-call2action.view-display-id-block_1 .view-content .views-row {
   display: inline-block;
-  margin-right: 0 -0.15em;
+  margin: 0 -0.08em;
   padding: 0 0 1px;
   width: 50%;
   vertical-align: top;
