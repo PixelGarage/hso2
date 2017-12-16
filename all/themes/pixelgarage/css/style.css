@@ -18847,6 +18847,9 @@ header#navbar .container .navbar-collapse nav ul.menu li a.active {
   color: #929295;
   background: none;
 }
+header#navbar .container .navbar-collapse nav ul.menu li.last .menu-attach-block-drop-link {
+  display: none;
+}
 header#navbar .container .navbar-collapse nav ul.menu li.last .menu-attach-block-wrapper {
   display: block;
   padding: 10px 0;

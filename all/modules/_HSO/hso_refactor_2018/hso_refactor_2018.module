@@ -438,14 +438,14 @@ function __hso_refactor_2018_node_import($bundle, $do_cleanup = false) {
       unset($node->vid);
       $node->nid = NULL;
       $node->is_new = TRUE;
-      if (isset($node->field_icon)) {
+      if (!empty($node->field_icon)) {
         $node->field_icon[LANGUAGE_NONE][0]['fid'] = null;
         $icon_origin = $img_path . $node->field_icon[LANGUAGE_NONE][0]['filename'];
         file_unmanaged_copy($icon_origin, $node->field_icon[LANGUAGE_NONE][0]['uri']);
         $node->field_icon[LANGUAGE_NONE][0] = (array)file_save((object)$node->field_icon[LANGUAGE_NONE][0]);
       }
 
-      if (isset($node->field_picture)) {
+      if (!empty($node->field_picture)) {
         $node->field_picture[LANGUAGE_NONE][0]['fid'] = null;
         $picture_origin = $img_path . $node->field_picture[LANGUAGE_NONE][0]['filename'];
         file_unmanaged_copy($picture_origin, $node->field_picture[LANGUAGE_NONE][0]['uri']);

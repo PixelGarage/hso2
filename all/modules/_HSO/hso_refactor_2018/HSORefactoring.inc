@@ -118,6 +118,12 @@ class HSORefactoring extends Refactoring {
     if (!module_exists('views_bulk_operations')) {
       //module_enable(array('views_bulk_operations'), true);
     }
+    if (!module_exists('menu_import')) {
+      module_enable(array('menu_import'), true);
+    }
+    if (!module_exists('menu_attach_block')) {
+      module_enable(array('menu_attach_block'), true);
+    }
 
     //
     // run all refactoring step by step. Each step has to succeed
@@ -126,20 +132,21 @@ class HSORefactoring extends Refactoring {
     //if (!$this->updateCourseLayout()) return 'UpdateCourseLayout';
     //if (!$this->importCall2Actions()) return 'ImportCall2Actions';
     //if (!$this->importBenefits()) return 'ImportBenefits';
-    if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
     //if (!$this->bannerExtension()) return 'BannerExtension';
     //if (!$this->cleanupContext()) return 'CleanupContext';
     //if (!$this->viewsUpdate()) return 'ViewsUpdate';
     //if (!$this->addTelcFunctionality()) return 'AddTelcFunctionality';
+    if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
 
     //
     // display hints for manual update
     drupal_set_message('Menu update: import main menu from file main-menu-export!', 'warning');
     drupal_set_message('Menu update: import menu course-blocks from file menu-course-blocks-export.txt!', 'warning');
     drupal_set_message('Region update: remove exposed search block from navigation region!', 'warning');
-    drupal_set_message('Display Suite update: Add DS block fields Course benefits, Course info, Course links!', 'warning');
+    drupal_set_message('Display Suite update: Add DS block fields Course benefits, Course infos, Course links!', 'warning');
     drupal_set_message('Page update: Refresh pages Home and Anmeldung!', 'warning');
     drupal_set_message('Webform update: Create TELC webform and add it to telc variant!', 'warning');
+    drupal_set_message('Node view modes update: Adapt view modes of benefit full&teaser, course full, call2action teaser, footer full!', 'warning');
     drupal_set_message('Wysiwyg update: Import wysiwyg templates from files!', 'warning');
 
     // refactoring successfully completed
@@ -299,28 +306,6 @@ class HSORefactoring extends Refactoring {
   }
 
   /**
-   * Import all language courses, including the course-times and tabs of each course from HBBS-KMZ.
-   */
-  public function importHBSKMZCourses() {
-    try {
-      // check if step has to be performed
-      if (!$this->startStep('ImportHBSKMZCourses')) return true;
-
-      // import price page from json file
-     $nids = __hso_refactor_2018_node_import('page');
-
-      // import all exported files
-      _hso_refactor_2018_hbskmz_import($nids[0]);
-
-      return $this->endStep('ImportHBSKMZCourses');
-    }
-    catch (Exception $ex) {
-      drupal_set_message(t('ImportHBSKMZCourses() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
-      return false;
-    }
-  }
-
-  /**
    * Extends banners with new fields and functionality.
    */
   public function bannerExtension() {
@@ -431,6 +416,28 @@ class HSORefactoring extends Refactoring {
     }
     catch (Exception $ex) {
       drupal_set_message(t('AddTelcFunctionality() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
+   * Import all language courses, including the course-times and tabs of each course from HBBS-KMZ.
+   */
+  public function importHBSKMZCourses() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('ImportHBSKMZCourses')) return true;
+
+      // import price page from json file
+      $nids = __hso_refactor_2018_node_import('page');
+
+      // import all exported files
+      _hso_refactor_2018_hbskmz_import($nids[0]);
+
+      return $this->endStep('ImportHBSKMZCourses');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('ImportHBSKMZCourses() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
       return false;
     }
   }
