@@ -145,9 +145,10 @@ class HSORefactoring extends Refactoring {
     drupal_set_message('Region update: remove exposed search block from navigation region!', 'warning');
     drupal_set_message('Display Suite update: Add DS block fields Course benefits, Course infos, Course links!', 'warning');
     drupal_set_message('Page update: Refresh pages Home and Anmeldung!', 'warning');
-    drupal_set_message('Webform update: Create TELC webform and add it to telc variant!', 'warning');
     drupal_set_message('Node view modes update: Adapt view modes of benefit full&teaser, course full, call2action teaser, news teaser, footer full!', 'warning');
     drupal_set_message('Wysiwyg update: Import wysiwyg templates from files!', 'warning');
+    drupal_set_message('Webform update: Create TELC webform and add it to telc variant!', 'warning');
+    drupal_set_message('TELC prices: Add prices to TELC settings form!', 'warning');
 
     // refactoring successfully completed
     return TRUE;
