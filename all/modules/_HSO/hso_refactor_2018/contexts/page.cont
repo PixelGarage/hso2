@@ -20,6 +20,7 @@ $context->conditions = array(
     'values' => array(
       'informationsanlaesse' => 'informationsanlaesse',
       'coursetimes/search' => 'coursetimes/search',
+      'news' => 'news',
     ),
   ),
 );
