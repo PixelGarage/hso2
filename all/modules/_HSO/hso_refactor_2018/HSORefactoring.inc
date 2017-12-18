@@ -124,6 +124,9 @@ class HSORefactoring extends Refactoring {
     if (!module_exists('menu_attach_block')) {
       module_enable(array('menu_attach_block'), true);
     }
+    if (!module_exists('video_embed_field')) {
+      module_enable(array('video_embed_field'), true);
+    }
 
     //
     // run all refactoring step by step. Each step has to succeed

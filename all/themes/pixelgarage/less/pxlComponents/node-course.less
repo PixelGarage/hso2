@@ -115,6 +115,7 @@
   .row {
     .col-sm-9 {
       margin: 0 0 30px;
+      padding-right: 50px;
 
       .field-name-body {
         table.aufeinenblock, // legacy
@@ -134,13 +135,20 @@
                 display: block;
                 padding: 15px 10px 15px 0;
                 width: 100% !important;
-                font-family: @pxl-text-font-medium;
+                font-family: @pxl-text-font;
                 font-size: @font-size-small;
                 color: @text-color;
                 vertical-align: top;
               }
               td {
                 font-family: @pxl-text-font-light;
+              }
+
+              &:first-child {
+                th {
+                  font-family: @pxl-text-font-light;
+                  font-weight: normal;
+                }
               }
 
               &:last-child  {
@@ -190,11 +198,13 @@
 
       // sidebar
       .field-name-course-links {
+        margin-bottom: 50px;
         .field-item {
           .menu-course-blocks();
         }
       }
       .field-name-course-benefits {
+        margin-bottom: 50px;
         .field-item {
           // see view-benefits.less and node-benefit.less
         }

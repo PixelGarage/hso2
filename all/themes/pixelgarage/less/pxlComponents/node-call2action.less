@@ -5,6 +5,7 @@
 // Variables
 // -------------------------
 @pxl-call2action-menu-height: 40px;
+@pxl-call2action-menu-height-tablet: 60px;
 
 // Mixins
 // -------------------------
@@ -162,6 +163,9 @@
 
 .node.node-call2action.view-mode-teaser {
   cursor: pointer;
+  border-top: 2px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 
   .row {
     margin: 0;
@@ -175,6 +179,10 @@
         padding: 0 5px;
         background-color: @pxl-color-hso-gray;
 
+        @media @tablet {
+          height: @pxl-call2action-menu-height-tablet;
+        }
+
         h2 {
           display: block;
           #pxl-mixins.center-xy(absolute);
@@ -183,42 +191,37 @@
           font-size: 14px;
           text-align: center;
           color: @text-color;
+          line-height: 1.3;
         }
 
         body.segment_kv .call2action-kv &, .call2action-kv &:hover {
-          background: @pxl-color-hso-kv;
           h2 {
-            color: #fff;
+            color: @pxl-color-hso-kv;
           }
         }
         body.segment_hs .call2action-handel &, .call2action-handel &:hover {
-          background: @pxl-color-hso-hs;
           h2 {
-            color: #fff;
+            color: @pxl-color-hso-hs;
           }
         }
         body.segment_wm .call2action-management &, .call2action-management &:hover {
-          background: @pxl-color-hso-wm;
           h2 {
-            color: #fff;
+            color: @pxl-color-hso-wm;
           }
         }
         body.segment_wi .call2action-informatik &, .call2action-informatik &:hover {
-          background: @pxl-color-hso-wi;
           h2 {
-            color: #fff;
+            color: @pxl-color-hso-wi;
           }
         }
         body.segment_sp .call2action-sprachen &, .call2action-sprachen &:hover {
-          background: @pxl-color-hso-sp;
           h2 {
-            color: #fff;
+            color: @pxl-color-hso-sp;
           }
         }
         body.segment_pp .call2action-programs &, .call2action-programs &:hover {
-          background: @pxl-color-hso-pp;
           h2 {
-            color: #fff;
+            color: @pxl-color-hso-pp;
           }
         }
       }

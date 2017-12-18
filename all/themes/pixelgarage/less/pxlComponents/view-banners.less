@@ -34,6 +34,36 @@
             }
           }
 
+          .views-field-field-body {
+            font-family: @pxl-text-font-medium;
+            font-size: 24px;
+            color: white;
+
+            .left {
+              margin: 0;
+              padding: 20px;
+              width: 35%;
+              text-align: left;
+              #pxl-mixins.center-vertically(absolute);
+              left: 10%;
+            }
+            .center {
+              margin: 0;
+              padding: 20px;
+              width: 35%;
+              text-align: center;
+              #pxl-mixins.center-xy(absolute);
+            }
+            .right {
+              margin: 0;
+              padding: 20px;
+              width: 35%;
+              text-align: right;
+              #pxl-mixins.center-vertically(absolute);
+              right: 10%;
+            }
+          }
+
           &.active {
 
           }
