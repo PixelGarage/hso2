@@ -368,6 +368,7 @@ class HSORefactoring extends Refactoring {
       $this->importContext('contexts/segment_pp_home.cont');
       $this->importContext('contexts/segments_home.cont');
       $this->importContext('contexts/course.cont');
+      $this->importContext('contexts/page.cont');
 
       return $this->endStep('CleanupContext');
     }

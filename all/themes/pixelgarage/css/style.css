@@ -14414,7 +14414,7 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
  *  Node video component
  * --------------------------------------------------*/
 .node.node-video.view-mode-teaser {
-  margin: 0 -15px;
+  margin: 0 -50px;
   padding: 20px 0;
   background-color: #f0f0eb;
 }
