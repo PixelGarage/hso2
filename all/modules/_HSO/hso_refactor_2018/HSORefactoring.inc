@@ -136,6 +136,7 @@ class HSORefactoring extends Refactoring {
     //if (!$this->cleanupContext()) return 'CleanupContext';
     //if (!$this->viewsUpdate()) return 'ViewsUpdate';
     //if (!$this->addTelcFunctionality()) return 'AddTelcFunctionality';
+    //if (!$this->updateStartpage()) return 'UpdateStartpage';
     if (!$this->importHBSKMZCourses()) return 'ImportHBSKMZCourses';
 
     //
@@ -145,7 +146,7 @@ class HSORefactoring extends Refactoring {
     drupal_set_message('Region update: remove exposed search block from navigation region!', 'warning');
     drupal_set_message('Display Suite update: Add DS block fields Course benefits, Course infos, Course links!', 'warning');
     drupal_set_message('Page update: Refresh pages Home and Anmeldung!', 'warning');
-    drupal_set_message('Node view modes update: Adapt view modes of benefit full&teaser, course full, call2action teaser, news teaser, footer full!', 'warning');
+    drupal_set_message('Node view modes update: Adapt view modes of benefit full&teaser, course full, call2action teaser, news teaser, page teaser, footer full!', 'warning');
     drupal_set_message('Wysiwyg update: Import wysiwyg templates from files!', 'warning');
     drupal_set_message('Webform update: Create TELC webform and add it to telc variant!', 'warning');
     drupal_set_message('TELC prices: Add prices to TELC settings form!', 'warning');
@@ -417,6 +418,27 @@ class HSORefactoring extends Refactoring {
     }
     catch (Exception $ex) {
       drupal_set_message(t('AddTelcFunctionality() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
+      return false;
+    }
+  }
+
+  /**
+   * Update Startpage with new type and taaxonomy.
+   */
+  public function updateStartpage() {
+    try {
+      // check if step has to be performed
+      if (!$this->startStep('UpdateStartpage')) return true;
+
+      // add steps here...
+      $this->updateTerm('segment_page_type', 'Warum HSO (Home)');
+      $this->updateEntityType('node', 'nodes/page.node');
+      $this->updateView('views/segment_pages.view');
+
+      return $this->endStep('UpdateStartpage');
+    }
+    catch (Exception $ex) {
+      drupal_set_message(t('UpdateStartpage() failed: @msg', array('@msg' => $ex->getMessage())), 'error');
       return false;
     }
   }

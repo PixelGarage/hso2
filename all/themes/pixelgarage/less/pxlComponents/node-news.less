@@ -14,8 +14,10 @@
 // General settings
 // -------------------------
 .node.node-news.view-mode-teaser {
+  cursor: pointer;
+  margin-bottom: 30px;
   padding: @pxl-node-padding;
-  border-top: 1px solid @pxl-border-color;
+  //border-top: 1px solid @pxl-border-color;
 
   .row {
     div.col-sm-4, div.col-sm-8 {
@@ -33,8 +35,8 @@
       .field-name-title {
         h2 {
           margin-top: 0;
-          font-family: @pxl-text-font-bold;
-          #pxl-mixins.font-size-responsive(@font-size-base);
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-larger);
           color: @text-color;
           line-height: 1.5;
         }
@@ -73,10 +75,9 @@
 
 .node.node-news.view-mode-full,
 .node.node-news.view-mode-default {
-  margin-top: 50px;
+  margin: 50px auto 0;
   border-top: 2px solid @pxl-border-color;
   max-width: 800px;
-  margin: 0 auto;
 
   .row {
     div.col-sm-12 {

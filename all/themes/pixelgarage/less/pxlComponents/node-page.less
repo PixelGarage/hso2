@@ -13,7 +13,8 @@
 
 // General settings
 // -------------------------
-.node.node-page {
+.node.node-page.view-mode-full,
+.node.node-news.view-mode-default {
   max-width: 800px;
   margin: 0 auto;
 
@@ -36,6 +37,49 @@
           //.content-columns(2);
         }
       }
+    }
+  }
+}
+
+.node.node-page.view-mode-teaser {
+  cursor: pointer;
+  margin-bottom: 30px;
+  padding: @pxl-node-padding;
+
+  .row {
+    div.col-sm-2, div.col-sm-10 {
+
+      .field-name-field-icon {
+        margin: 0 -@pxl-node-padding;
+
+        .field-item {
+          img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
+
+      .field-name-title {
+        h2 {
+          margin: 0;
+          font-family: @pxl-text-font-light;
+          #pxl-mixins.font-size-responsive(@font-size-larger);
+          color: @text-color;
+          line-height: 1.5;
+        }
+      }
+
+      .field-name-body {
+        #pxl-mixins.wysiwyg-body(14px; @font-size-base; 14px);
+        color: @pxl-color-gray-dark;
+
+        @media @tablet {
+          //.content-columns(2);
+        }
+      }
+
     }
   }
 }

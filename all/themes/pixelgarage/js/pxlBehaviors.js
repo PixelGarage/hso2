@@ -23,12 +23,26 @@
    */
   Drupal.behaviors.fullItemClick = {
     attach: function () {
-      var $call2actions = $('.node-call2action');
+      var $call2actions = $('.node-call2action'),
+          $news = $('.node-news.view-mode-teaser'),
+          $pages = $('body.front .node-page.view-mode-teaser');
 
       // make call2action full clickable
       $call2actions.once('click', function() {
         $(this).on('click', function(ev) {
           window.location = $(this).find('.field-name-field-link a').attr('href');
+          return false;
+        });
+      });
+      $news.once('click', function() {
+        $(this).on('click', function(ev) {
+          window.location = $(this).find('>a').attr('href');
+          return false;
+        });
+      });
+      $pages.once('click', function() {
+        $(this).on('click', function(ev) {
+          window.location = $(this).find('>a').attr('href');
           return false;
         });
       });

@@ -9924,9 +9924,11 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 @media screen and (min-width: 768px) {
   .panel-2col-stacked .panel-col-first {
+    padding-right: 10px;
     width: 50%;
   }
   .panel-2col-stacked .panel-col-last {
+    padding-left: 10px;
     width: 49.9%;
   }
 }
@@ -10693,70 +10695,95 @@ body.segment_pp table.lektionplan .color-bg-100 {
 /*
  *  Node page component
  * --------------------------------------------------*/
-.node.node-page {
+.node.node-page.view-mode-full,
+.node.node-news.view-mode-default {
   max-width: 800px;
   margin: 0 auto;
 }
-.node.node-page .row div.col-sm-12 {
+.node.node-page.view-mode-full .row div.col-sm-12,
+.node.node-news.view-mode-default .row div.col-sm-12 {
   width: 100%;
 }
-.node.node-page .row div.col-sm-12 .field-name-title h2 {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-title h2,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-title h2 {
   font-family: 'SohoGothicProLight', serif;
   font-size: 21.25px;
   color: #333333;
 }
 @media screen and (min-width: 30em) {
-  .node.node-page .row div.col-sm-12 .field-name-title h2 {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-title h2,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-title h2 {
     font-size: 4.42708333vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-title h2 {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-title h2,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-title h2 {
     font-size: 34px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body h1,
-.node.node-page .row div.col-sm-12 .field-name-body h2,
-.node.node-page .row div.col-sm-12 .field-name-body h3 {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h1,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h2,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h3,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
   font-family: 'SohoGothicProBold';
   font-size: 17px;
 }
 @media screen and (min-width: 34em) {
-  .node.node-page .row div.col-sm-12 .field-name-body h1,
-  .node.node-page .row div.col-sm-12 .field-name-body h2,
-  .node.node-page .row div.col-sm-12 .field-name-body h3 {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
     font-size: 3.125vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body h1,
-  .node.node-page .row div.col-sm-12 .field-name-body h2,
-  .node.node-page .row div.col-sm-12 .field-name-body h3 {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h1,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h1,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h2,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h2,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h3,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h3 {
     font-size: 24px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body h4,
-.node.node-page .row div.col-sm-12 .field-name-body h5,
-.node.node-page .row div.col-sm-12 .field-name-body h6 {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h4,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h4,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h5,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h5,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h6,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h6 {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 15px;
 }
 @media screen and (min-width: 36em) {
-  .node.node-page .row div.col-sm-12 .field-name-body h4,
-  .node.node-page .row div.col-sm-12 .field-name-body h5,
-  .node.node-page .row div.col-sm-12 .field-name-body h6 {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h4,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h4,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h5,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h5,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h6,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h6 {
     font-size: 2.60416667vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body h4,
-  .node.node-page .row div.col-sm-12 .field-name-body h5,
-  .node.node-page .row div.col-sm-12 .field-name-body h6 {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h4,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h4,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h5,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h5,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body h6,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body h6 {
     font-size: 20px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body p,
-.node.node-page .row div.col-sm-12 .field-name-body tbody td {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body p,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body p,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   word-break: break-word;
@@ -10767,95 +10794,122 @@ body.segment_pp table.lektionplan .color-bg-100 {
   hyphens: auto;
 }
 @media screen and (min-width: 39.529411764705884em) {
-  .node.node-page .row div.col-sm-12 .field-name-body p,
-  .node.node-page .row div.col-sm-12 .field-name-body tbody td {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
     font-size: 2.21354167vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body p,
-  .node.node-page .row div.col-sm-12 .field-name-body tbody td {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body p,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body p,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body tbody td,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tbody td {
     font-size: 17px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body a {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body a,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a {
   font-family: 'SohoGothicProRegular', serif;
   font-size: 14px;
   color: #8f2424;
 }
 @media screen and (min-width: 39.529411764705884em) {
-  .node.node-page .row div.col-sm-12 .field-name-body a {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a {
     font-size: 2.21354167vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body a {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body a,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a {
     font-size: 17px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body a:hover,
-.node.node-page .row div.col-sm-12 .field-name-body a:focus {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body a:hover,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a:hover,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body a:focus,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body a:focus {
   color: #cc3333;
   text-decoration: none;
   background: none;
 }
-.node.node-page .row div.col-sm-12 .field-name-body li {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body li,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body li {
   font-family: 'SohoGothicProLight', serif;
   font-size: 14px;
 }
 @media screen and (min-width: 39.529411764705884em) {
-  .node.node-page .row div.col-sm-12 .field-name-body li {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body li {
     font-size: 2.21354167vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body li {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body li,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body li {
     font-size: 17px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body pre,
-.node.node-page .row div.col-sm-12 .field-name-body address {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body pre,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body pre,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body address,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body address {
   font-family: 'SohoGothicProThin' serif;
   font-size: 14px;
 }
 @media screen and (min-width: 39.529411764705884em) {
-  .node.node-page .row div.col-sm-12 .field-name-body pre,
-  .node.node-page .row div.col-sm-12 .field-name-body address {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body address {
     font-size: 2.21354167vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body pre,
-  .node.node-page .row div.col-sm-12 .field-name-body address {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body pre,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body pre,
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body address,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body address {
     font-size: 17px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body table,
-.node.node-page .row div.col-sm-12 .field-name-body tr,
-.node.node-page .row div.col-sm-12 .field-name-body th,
-.node.node-page .row div.col-sm-12 .field-name-body td {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body tr,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tr,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body th,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body th,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body td,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body td {
   border-color: #c9c9c9;
 }
-.node.node-page .row div.col-sm-12 .field-name-body strong {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body strong,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body strong {
   font-family: 'SohoGothicProBold', serif;
   font-size: 16px;
 }
 @media screen and (min-width: 40.421052631578945em) {
-  .node.node-page .row div.col-sm-12 .field-name-body strong {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body strong {
     font-size: 2.47395833vw;
   }
 }
 @media screen and (min-width: 768px) {
-  .node.node-page .row div.col-sm-12 .field-name-body strong {
+  .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body strong,
+  .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body strong {
     font-size: 19px;
   }
 }
-.node.node-page .row div.col-sm-12 .field-name-body hr {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body hr,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body hr {
   border: 0;
   border-bottom: 2px solid #333333;
   background: none;
 }
-.node.node-page .row div.col-sm-12 .field-name-body img {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body img,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body img {
   display: block;
   overflow: hidden;
   margin: 20px auto;
@@ -10863,10 +10917,267 @@ body.segment_pp table.lektionplan .color-bg-100 {
   max-width: 100%;
   height: auto;
 }
-.node.node-page .row div.col-sm-12 .field-name-body embed,
-.node.node-page .row div.col-sm-12 .field-name-body video,
-.node.node-page .row div.col-sm-12 .field-name-body audio,
-.node.node-page .row div.col-sm-12 .field-name-body iframe {
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body embed,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body embed,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body video,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body video,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body audio,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body audio,
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body iframe,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 15px;
+  width: 80% !important;
+  max-width: 100%;
+  height: auto;
+  min-height: 350px;
+}
+@media screen and (min-width: 768px) {
+}
+.node.node-page.view-mode-teaser {
+  cursor: pointer;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-field-icon,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-field-icon {
+  margin: 0 -10px;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-field-icon .field-item img,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-field-icon .field-item img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-title h2,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-title h2 {
+  margin: 0;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.5;
+}
+@media screen and (min-width: 30em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-title h2,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-title h2 {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-title h2,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-title h2 {
+    font-size: 24px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body {
+  color: #494a4f;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h1,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h1,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h2,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h2,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h3,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h3 {
+  font-family: 'SohoGothicProBold';
+  font-size: 17px;
+}
+@media screen and (min-width: 51em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h1,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h1,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h2,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h2,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h3,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h3 {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h1,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h1,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h2,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h2,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h3,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h3 {
+    font-size: 16px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h4,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h4,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h5,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h5,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h6,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h6 {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 15px;
+}
+@media screen and (min-width: 51.42857142857143em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h4,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h4,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h5,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h5,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h6,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h6 {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h4,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h4,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h5,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h5,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body h6,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body h6 {
+    font-size: 14px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body p,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body p,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body tbody td,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body tbody td {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body p,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body p,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body tbody td,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body tbody td {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body p,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body p,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body tbody td,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body tbody td {
+    font-size: 14px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body a,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body a {
+  font-family: 'SohoGothicProRegular', serif;
+  font-size: 14px;
+  color: #8f2424;
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body a,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body a {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body a,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body a {
+    font-size: 14px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body a:hover,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body a:hover,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body a:focus,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body a:focus {
+  color: #cc3333;
+  text-decoration: none;
+  background: none;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body li,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body li {
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body li,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body li {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body li,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body li {
+    font-size: 14px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body pre,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body pre,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body address,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body address {
+  font-family: 'SohoGothicProThin' serif;
+  font-size: 14px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body pre,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body pre,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body address,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body address {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body pre,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body pre,
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body address,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body address {
+    font-size: 14px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body table,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body table,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body tr,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body tr,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body th,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body th,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body td,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body td {
+  border-color: #c9c9c9;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body strong,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body strong {
+  font-family: 'SohoGothicProBold', serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body strong,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body strong {
+    font-size: 2.08333333vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body strong,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body strong {
+    font-size: 16px;
+  }
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body hr,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body hr {
+  border: 0;
+  border-bottom: 2px solid #333333;
+  background: none;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body img,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body img {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body embed,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body embed,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body video,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body video,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body audio,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body audio,
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body iframe,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body iframe {
   display: block;
   overflow: hidden;
   margin: 20px auto;
@@ -13236,8 +13547,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
  *  Node news component
  * --------------------------------------------------*/
 .node.node-news.view-mode-teaser {
+  cursor: pointer;
+  margin-bottom: 30px;
   padding: 10px;
-  border-top: 1px solid #c9c9c9;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-field-picture,
 .node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-field-picture {
@@ -13251,21 +13563,21 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
 .node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-title h2,
 .node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-title h2 {
   margin-top: 0;
-  font-family: 'SohoGothicProBold', serif;
-  font-size: 14px;
+  font-family: 'SohoGothicProLight', serif;
+  font-size: 15px;
   color: #333333;
   line-height: 1.5;
 }
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 30em) {
   .node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-title h2,
   .node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-title h2 {
-    font-size: 2.08333333vw;
+    font-size: 3.125vw;
   }
 }
 @media screen and (min-width: 768px) {
   .node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-title h2,
   .node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-title h2 {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 .node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-body,
@@ -13507,10 +13819,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
 }
 .node.node-news.view-mode-full,
 .node.node-news.view-mode-default {
-  margin-top: 50px;
+  margin: 50px auto 0;
   border-top: 2px solid #c9c9c9;
   max-width: 800px;
-  margin: 0 auto;
 }
 .node.node-news.view-mode-full .row div.col-sm-12,
 .node.node-news.view-mode-default .row div.col-sm-12 {
@@ -16311,7 +16622,7 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node-footer.view-mode-full .row .col-sm-12 .field-name-follow-site {
     position: absolute;
     bottom: 20px;
-    left: 63%;
+    left: calc(60.4% + 15px);
   }
 }
 .node-footer.view-mode-full .row .col-sm-12 .field-name-footer-menu {
@@ -16321,7 +16632,7 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node-footer.view-mode-full .row .col-sm-12 .field-name-footer-menu {
     position: absolute;
     bottom: 20px;
-    left: 26%;
+    left: calc(20.9% + 35px);
   }
 }
 .node-footer.view-mode-full .row .col-sm-12 .field-name-footer-menu ul.menu li {
@@ -17106,6 +17417,9 @@ body.segment_pp .view.view-segment-pages .view-content .views-row a:focus {
   .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .row .col-sm-6 .map-location {
     margin-top: 0;
   }
+  .view-locations.view-display-id-block .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .row .col-sm-6 .map-location a {
+    text-align: left;
+  }
 }
 /*
  *  Contacts view component
@@ -17317,13 +17631,14 @@ body.segment_pp .view.view-courses .view-content .panel-group .main-title h1 {
   }
 }
 .view.view-courses .view-content .panel-group .course-block .course-subject h2 {
-  margin: 30px 0 0;
-  padding: 20px 0 24px;
+  display: block;
+  margin: 50px 0 0;
+  padding: 0;
+  height: 60px;
   font-family: 'SohoGothicProMedium', serif;
   font-size: 18px;
   color: #333333;
   line-height: 1;
-  border-top: 1px solid #c9c9c9;
 }
 .view.view-courses .view-content .panel-group .course-block .panel {
   margin: 0;

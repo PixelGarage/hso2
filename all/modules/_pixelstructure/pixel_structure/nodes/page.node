@@ -1,0 +1,620 @@
+<?php
+$export_time = 1513597860;
+$data = array(
+  'bundles' => array(
+    'page' => (object) array(
+      'type' => 'page',
+      'name' => 'Page',
+      'base' => 'node_content',
+      'module' => 'node',
+      'description' => '',
+      'help' => '',
+      'has_title' => '1',
+      'title_label' => 'Title',
+      'custom' => '1',
+      'modified' => '1',
+      'locked' => '0',
+      'disabled' => '0',
+      'orig_type' => 'page',
+      'disabled_changed' => FALSE,
+      'bc_entity_type' => 'node',
+    ),
+  ),
+  'fields' => array(
+    'body' => array(
+      'entity_types' => array(
+        0 => 'node',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'table' => 'filter_format',
+          'columns' => array(
+            'format' => 'format',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'settings' => array(),
+      'translatable' => '0',
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_body' => array(
+                'value' => 'body_value',
+                'summary' => 'body_summary',
+                'format' => 'body_format',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'field_name' => 'body',
+      'type' => 'text_with_summary',
+      'module' => 'text',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'summary' => array(
+          'type' => 'text',
+          'size' => 'big',
+          'not null' => FALSE,
+        ),
+        'format' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'course',
+          1 => 'course_times',
+          2 => 'webform',
+          3 => 'location',
+          4 => 'video',
+          5 => 'page',
+          6 => 'testimonial',
+          7 => 'course_tabs',
+          8 => 'block',
+          9 => 'news',
+          10 => 'remote_form',
+          11 => 'brochure',
+          12 => 'footer',
+          13 => 'call2action',
+          14 => 'tweet',
+          15 => 'facebook_post',
+          16 => 'instagram',
+          17 => 'benefit',
+        ),
+      ),
+    ),
+    'field_full_content' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_full_content' => array(
+                'value' => 'field_full_content_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_full_content' => array(
+                'value' => 'field_full_content_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'field_name' => 'field_full_content',
+      'type' => 'list_boolean',
+      'module' => 'list',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'page',
+        ),
+      ),
+    ),
+    'field_icon' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'uri_scheme' => 'public',
+        'default_image' => 0,
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_icon' => array(
+                'fid' => 'field_icon_fid',
+                'alt' => 'field_icon_alt',
+                'title' => 'field_icon_title',
+                'width' => 'field_icon_width',
+                'height' => 'field_icon_height',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_icon' => array(
+                'fid' => 'field_icon_fid',
+                'alt' => 'field_icon_alt',
+                'title' => 'field_icon_title',
+                'width' => 'field_icon_width',
+                'height' => 'field_icon_height',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'fid' => array(
+          'table' => 'file_managed',
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'field_name' => 'field_icon',
+      'type' => 'image',
+      'module' => 'image',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'fid' => array(
+          'description' => 'The {file_managed}.fid being referenced in this field.',
+          'type' => 'int',
+          'not null' => FALSE,
+          'unsigned' => TRUE,
+        ),
+        'alt' => array(
+          'description' => 'Alternative image text, for the image\'s \'alt\' attribute.',
+          'type' => 'varchar',
+          'length' => 512,
+          'not null' => FALSE,
+        ),
+        'title' => array(
+          'description' => 'Image title text, for the image\'s \'title\' attribute.',
+          'type' => 'varchar',
+          'length' => 1024,
+          'not null' => FALSE,
+        ),
+        'width' => array(
+          'description' => 'The width of the image in pixels.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+        ),
+        'height' => array(
+          'description' => 'The height of the image in pixels.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'taxonomy_term' => array(
+          0 => 'centers',
+        ),
+        'node' => array(
+          0 => 'call2action',
+          1 => 'benefit',
+          2 => 'page',
+        ),
+      ),
+    ),
+    'field_page_type' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'segment_page_type',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_page_type' => array(
+                'tid' => 'field_page_type_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_page_type' => array(
+                'tid' => 'field_page_type_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_page_type',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'page',
+        ),
+      ),
+    ),
+    'field_segment' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'segments',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_segment' => array(
+                'tid' => 'field_segment_tid',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_segment' => array(
+                'tid' => 'field_segment_tid',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'field_name' => 'field_segment',
+      'type' => 'taxonomy_term_reference',
+      'module' => 'taxonomy',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'tid' => array(
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'contact',
+          1 => 'course',
+          2 => 'banner',
+          3 => 'page',
+        ),
+      ),
+    ),
+  ),
+  'instances' => array(
+    'body' => array(
+      0 => array(
+        'label' => 'Body',
+        'widget' => array(
+          'type' => 'text_textarea_with_summary',
+          'settings' => array(
+            'rows' => 20,
+            'summary_rows' => 5,
+          ),
+          'weight' => '2',
+          'module' => 'text',
+        ),
+        'settings' => array(
+          'display_summary' => TRUE,
+          'text_processing' => 1,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'type' => 'text_default',
+            'weight' => '0',
+            'settings' => array(),
+            'module' => 'text',
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
+            'type' => 'text_summary_or_trimmed',
+            'settings' => array(
+              'trim_length' => 600,
+            ),
+            'module' => 'text',
+            'weight' => 0,
+          ),
+        ),
+        'required' => FALSE,
+        'description' => '',
+        'field_name' => 'body',
+        'entity_type' => 'node',
+        'bundle' => 'page',
+        'deleted' => '0',
+        'default_value' => NULL,
+      ),
+    ),
+    'field_full_content' => array(
+      0 => array(
+        'label' => 'Show full content',
+        'widget' => array(
+          'weight' => '5',
+          'type' => 'options_onoff',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(
+            'display_label' => 1,
+          ),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'list_default',
+            'settings' => array(),
+            'module' => 'list',
+            'weight' => 4,
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Shows full page content, if clicked, or a link to the page otherwise.',
+        'default_value' => array(
+          0 => array(
+            'value' => 0,
+          ),
+        ),
+        'field_name' => 'field_full_content',
+        'entity_type' => 'node',
+        'bundle' => 'page',
+        'deleted' => '0',
+      ),
+    ),
+    'field_icon' => array(
+      0 => array(
+        'label' => 'Icon',
+        'widget' => array(
+          'weight' => '1',
+          'type' => 'image_image',
+          'module' => 'image',
+          'active' => 1,
+          'settings' => array(
+            'progress_indicator' => 'throbber',
+            'preview_image_style' => 'thumbnail',
+          ),
+        ),
+        'settings' => array(
+          'file_directory' => 'icons',
+          'file_extensions' => 'png gif jpg jpeg',
+          'max_filesize' => '',
+          'max_resolution' => '',
+          'min_resolution' => '',
+          'alt_field' => 0,
+          'title_field' => 0,
+          'default_image' => 0,
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'image',
+            'settings' => array(
+              'image_style' => '',
+              'image_link' => '',
+            ),
+            'module' => 'image',
+            'weight' => 5,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'field_name' => 'field_icon',
+        'entity_type' => 'node',
+        'bundle' => 'page',
+        'deleted' => '0',
+      ),
+    ),
+    'field_page_type' => array(
+      0 => array(
+        'label' => 'Page Type',
+        'widget' => array(
+          'weight' => '4',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'taxonomy_term_reference_link',
+            'settings' => array(),
+            'module' => 'taxonomy',
+            'weight' => 3,
+          ),
+        ),
+        'required' => 0,
+        'description' => 'Select the type of information in the page. Defines in which segment header block the page link is added.',
+        'default_value' => array(
+          0 => array(
+            'tid' => '103',
+          ),
+        ),
+        'field_name' => 'field_page_type',
+        'entity_type' => 'node',
+        'bundle' => 'page',
+        'deleted' => '0',
+      ),
+    ),
+    'field_segment' => array(
+      0 => array(
+        'label' => 'Related Segment',
+        'widget' => array(
+          'weight' => '3',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '2',
+            'settings' => array(),
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_segment',
+        'entity_type' => 'node',
+        'bundle' => 'page',
+        'deleted' => '0',
+      ),
+    ),
+  ),
+  'fieldgroups' => array(
+    'group_segment_page|node|page|form' => (object) array(
+      'id' => '4',
+      'identifier' => 'group_segment_page|node|page|form',
+      'group_name' => 'group_segment_page',
+      'entity_type' => 'node',
+      'bundle' => 'page',
+      'mode' => 'form',
+      'parent_name' => '',
+      'table' => 'field_group',
+      'type' => 'Normal',
+      'export_type' => 1,
+      'disabled' => FALSE,
+      'label' => 'Segment page',
+      'weight' => '4',
+      'children' => array(
+        0 => 'field_page_type',
+        1 => 'field_full_content',
+      ),
+      'format_type' => 'fieldset',
+      'format_settings' => array(
+        'formatter' => 'collapsible',
+        'instance_settings' => array(
+          'description' => '',
+          'classes' => 'group-segment-page field-group-fieldset',
+          'required_fields' => 1,
+          'id' => '',
+        ),
+      ),
+    ),
+  ),
+);
