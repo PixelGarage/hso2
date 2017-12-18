@@ -17670,7 +17670,6 @@ body.segment_pp .view.view-courses .view-content .panel-group .main-title h1 {
   position: relative;
   margin-bottom: 5px;
   padding: 0;
-  min-height: 55px;
   font-family: 'SohoGothicProLight', serif;
   line-height: 1;
   -moz-border-radius: 0;
@@ -17685,6 +17684,7 @@ body.segment_pp .view.view-courses .view-content .panel-group .main-title h1 {
 .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .panel-title a {
   display: block;
   width: 100%;
+  min-height: 55px;
   padding: 9px 10px 11px;
   font-size: 14px;
   color: #333333;
