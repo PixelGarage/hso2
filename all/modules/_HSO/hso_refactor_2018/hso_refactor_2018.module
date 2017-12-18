@@ -459,3 +459,22 @@ function __hso_refactor_2018_node_import($bundle, $do_cleanup = false) {
   return $nids;
 }
 
+function __hso_refactor_2018_course_intl_id() {
+  $lang_tid = _segment_mapping(107);
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'course')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->fieldCondition('field_segment', 'tid', $lang_tid);
+  $result = $query->execute();
+
+  if (isset($result['node'])) {
+    $courses = node_load_multiple(array_keys($result['node']));
+    foreach ($courses as $key => $node) {
+      if (empty($node->field_internal_id[LANGUAGE_NONE][0]['value'])) {
+        $node->field_internal_id[LANGUAGE_NONE][0]['value'] = -1;
+      }
+      node_save($node);
+    }
+  }
+}

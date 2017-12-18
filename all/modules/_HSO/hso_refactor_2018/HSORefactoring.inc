@@ -111,7 +111,7 @@ class HSORefactoring extends Refactoring {
     // call parent function
     parent::runAll();
 
-    //__hso_refactor_2018_node_export('benefit');
+    //__hso_refactor_2018_course_intl_id();
     //return true;
 
     // enable new modules
