@@ -12638,6 +12638,9 @@ body.segment_pp .node.node-course .row .col-sm-9 .field-name-body a:focus {
   margin: 0 0 30px;
   padding: 0 15px;
 }
+.node.node-course .row .col-sm-3.course-has-no-info-event .field-name-course-links .field-item ul.menu li.infoevent {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .node.node-course .row .col-sm-3 {
     padding: 0;
@@ -17845,10 +17848,6 @@ body.segment_pp .view.view-courses .view-content .panel-group .main-title h1 {
   }
 }
 @media screen and (min-width: 768px) {
-  .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .panel-title,
-  .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .short-description {
-    display: inline-block;
-  }
   .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .panel-title a,
   .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .short-description a {
     padding: 7px 10px 9px;

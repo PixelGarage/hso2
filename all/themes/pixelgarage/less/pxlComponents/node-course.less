@@ -242,6 +242,18 @@
       margin: 0 0 30px;
       padding: 0 @grid-gutter-width/2;
 
+      &.course-has-no-info-event {
+        .field-name-course-links {
+          .field-item {
+            ul.menu {
+              li.infoevent {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
       @media @tablet {
         padding: 0;
       }
