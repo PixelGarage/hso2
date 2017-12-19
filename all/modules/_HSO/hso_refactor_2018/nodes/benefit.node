@@ -1,5 +1,5 @@
 <?php
-$export_time = 1513345508;
+$export_time = 1513691662;
 $data = array(
   'bundles' => array(
     'benefit' => (object) array(
@@ -111,6 +111,81 @@ $data = array(
         ),
       ),
     ),
+    'field_courses' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'views',
+        'handler_settings' => array(
+          'view' => array(
+            'view_name' => 'courses',
+            'display_name' => 'entityreference_2',
+            'args' => array(),
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 1,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_courses' => array(
+                'target_id' => 'field_courses_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_courses' => array(
+                'target_id' => 'field_courses_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'table' => 'node',
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_courses',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'contact',
+          1 => 'benefit',
+          2 => 'page',
+        ),
+      ),
+    ),
     'field_icon' => array(
       'translatable' => '0',
       'entity_types' => array(),
@@ -203,6 +278,7 @@ $data = array(
         'node' => array(
           0 => 'call2action',
           1 => 'benefit',
+          2 => 'page',
         ),
       ),
     ),
@@ -229,19 +305,58 @@ $data = array(
           'default' => array(
             'label' => 'hidden',
             'type' => 'hidden',
-            'weight' => '2',
+            'weight' => '10',
             'settings' => array(),
           ),
           'teaser' => array(
             'label' => 'hidden',
             'type' => 'hidden',
-            'weight' => '2',
+            'weight' => '10',
             'settings' => array(),
           ),
         ),
         'required' => FALSE,
         'description' => '',
+        'default_value' => NULL,
         'field_name' => 'body',
+        'entity_type' => 'node',
+        'bundle' => 'benefit',
+        'deleted' => '0',
+      ),
+    ),
+    'field_courses' => array(
+      0 => array(
+        'label' => 'Courses',
+        'widget' => array(
+          'type' => 'options_select',
+          'weight' => '3',
+          'settings' => array(),
+          'module' => 'options',
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+              'bypass_access' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 11,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => FALSE,
+        'description' => '',
+        'field_name' => 'field_courses',
         'entity_type' => 'node',
         'bundle' => 'benefit',
         'deleted' => '0',

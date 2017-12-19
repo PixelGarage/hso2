@@ -31,12 +31,56 @@
       padding: 10px 0;
       width: 100%;
 
+      .menu-attach-block-drop-link{
+        display: none;
+      }
+
+      .menu-attach-block-wrapper {
+        display: inline-block;
+
+        &:before {
+          display: inline-block;
+          content: '\f2bc';
+          margin: 0 -2px;
+          font-family: @pxl-icon-font;
+          font-size: 28px;
+          width: 35px;
+        }
+
+        .block {
+          display: inline-block;
+          margin: 0 -2px;
+          padding: 0 0 0 5px;
+          width: 80%;
+          font-family: @pxl-text-font-medium;
+          font-size: 14px;
+          line-height: 1;
+          color: @text-color;
+          vertical-align: text-bottom;
+
+          h2.block-title, .contextual-links-wrapper {
+            display: none;
+          }
+
+          .contact-mail {
+            padding: 0 0 3px;
+            a {
+              padding: 0;
+            }
+          }
+          .contact-phone {
+            padding: 0;
+            white-space: nowrap;
+          }
+        }
+      }
+
       a, span {
         display: inline-block;
         padding: 0;
         width: 100%;
         font-family: @pxl-text-font-medium;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1;
         color: @text-color;
         text-decoration: none;
@@ -49,9 +93,7 @@
           content: '\f274';
           font-family: @pxl-icon-font;
           font-size: 30px;
-          width: 20%;
-          max-width: 40px;
-          padding-right: 10px;
+          width: 35px;
         }
       }
       &.consulting {
@@ -60,9 +102,7 @@
           content: '\f0e6';
           font-family: @pxl-icon-font;
           font-size: 30px;
-          width: 20%;
-          max-width: 40px;
-          padding-right: 10px;
+          width: 35px;
         }
       }
       &.brochures {
@@ -71,9 +111,7 @@
           content: '\f019';
           font-family: @pxl-icon-font;
           font-size: 30px;
-          width: 20%;
-          max-width: 40px;
-          padding-right: 10px;
+          width: 35px;
         }
       }
 
@@ -118,6 +156,9 @@
       padding-right: 50px;
 
       .field-name-body {
+        p {
+          font-family: @pxl-text-font-light;
+        }
         table.aufeinenblock, // legacy
         table.aufeinenblick {
           >p, >caption {
@@ -142,6 +183,10 @@
               }
               td {
                 font-family: @pxl-text-font-light;
+
+                ul {
+                  margin-left: -1.2em;
+                }
               }
 
               &:first-child {
@@ -195,6 +240,11 @@
 
     .col-sm-3 {
       margin: 0 0 30px;
+      padding: 0 @grid-gutter-width/2;
+
+      @media @tablet {
+        padding: 0;
+      }
 
       // sidebar
       .field-name-course-links {
@@ -207,6 +257,11 @@
         margin-bottom: 50px;
         .field-item {
           // see view-benefits.less and node-benefit.less
+        }
+      }
+      .field-name-course-infos {
+        .field-item {
+          // see view-segment-pages.less
         }
       }
     }

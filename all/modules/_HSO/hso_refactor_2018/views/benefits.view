@@ -36,6 +36,15 @@ $handler->display->display_options['fields']['rendered_entity']['bypass_access']
 $handler->display->display_options['sorts']['random']['id'] = 'random';
 $handler->display->display_options['sorts']['random']['table'] = 'views';
 $handler->display->display_options['sorts']['random']['field'] = 'random';
+/* Contextual filter: Content: Courses (field_courses) */
+$handler->display->display_options['arguments']['field_courses_target_id']['id'] = 'field_courses_target_id';
+$handler->display->display_options['arguments']['field_courses_target_id']['table'] = 'field_data_field_courses';
+$handler->display->display_options['arguments']['field_courses_target_id']['field'] = 'field_courses_target_id';
+$handler->display->display_options['arguments']['field_courses_target_id']['default_action'] = 'default';
+$handler->display->display_options['arguments']['field_courses_target_id']['default_argument_type'] = 'node';
+$handler->display->display_options['arguments']['field_courses_target_id']['summary']['number_of_records'] = '0';
+$handler->display->display_options['arguments']['field_courses_target_id']['summary']['format'] = 'default_summary';
+$handler->display->display_options['arguments']['field_courses_target_id']['summary_options']['items_per_page'] = '25';
 /* Filter criterion: Content: Published */
 $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -62,5 +71,6 @@ $translatables['benefits'] = array(
   t('Sort by'),
   t('Asc'),
   t('Desc'),
+  t('All'),
   t('Block'),
 );

@@ -85,13 +85,18 @@ body {
 
         h1.page-header {
           //display: none;
-          margin: 60px 0 30px;
+          margin: 60px auto 30px;
           padding: 0;
+          max-width: @pxl-max-width-page;
           font-family: @pxl-text-font-light;
           #pxl-mixins.font-size-responsive(@font-size-h1);
           color: @pxl-color-hso-main;
           line-height: 1;
           border: none;
+
+          body.node-type-course {
+            max-width: none;
+          }
 
           body.segment_kv & {
             color: @pxl-color-hso-kv;

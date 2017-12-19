@@ -20,6 +20,11 @@
 
     .panel-pane {
       h2.pane-title {
+        margin: 0 0 10px;
+        font-family: @pxl-text-font;
+        #pxl-mixins.font-size-responsive(@font-size-larger);
+        color: @text-color;
+
         a {
           color: @text-color;
 
@@ -44,9 +49,20 @@
 }
 
 .panel-2col-stacked {
+  .panel-col-top, .panel-col-bottom, .center-wrapper {
+    display: block;
+    margin-top: 80px;
+  }
+  .center-wrapper {
+    margin-top: 55px;
+  }
+
   .panel-col-first, .panel-col-last {
-    float: left;
+    display: inline-block;
+    margin: 0 -2px;
+    float: none;
     width: 100%;
+    vertical-align: top;
   }
 
   @media @tablet {
@@ -56,7 +72,7 @@
     }
     .panel-col-last {
       padding-left: 10px;
-      width: 49.9%;
+      width: 50%;
     }
   }
 }

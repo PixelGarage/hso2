@@ -350,7 +350,8 @@ function pixelgarage_preprocess_views_bootstrap_tab_plugin_style(&$vars) {
       $vars['locations'][$key]['postal_code'] = check_plain($address['postal_code']);
       $vars['locations'][$key]['locality'] = check_plain($address['locality']);
       $vars['locations'][$key]['phone_number'] = check_plain($address['phone_number']);
-      $vars['locations'][$key]['email'] = $location->field_field_email[0]['rendered']['#markup'];;
+      $vars['locations'][$key]['email'] = $location->field_field_email[0]['rendered']['#markup'];
+      $vars['locations'][$key]['picture'] = $view->style_plugin->get_field($key, 'field_picture');
       // create map location
       $vars['locations'][$key]['map_location'] = urlencode($address['thoroughfare'] . ', ' . $address['postal_code'] . ' ' . $address['locality']);
     }

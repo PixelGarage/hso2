@@ -1,5 +1,5 @@
 <?php
-$export_time = 1513597860;
+$export_time = 1513693810;
 $data = array(
   'bundles' => array(
     'page' => (object) array(
@@ -108,6 +108,81 @@ $data = array(
           15 => 'facebook_post',
           16 => 'instagram',
           17 => 'benefit',
+        ),
+      ),
+    ),
+    'field_courses' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'node',
+        'handler' => 'views',
+        'handler_settings' => array(
+          'view' => array(
+            'view_name' => 'courses',
+            'display_name' => 'entityreference_2',
+            'args' => array(),
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 1,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_courses' => array(
+                'target_id' => 'field_courses_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_courses' => array(
+                'target_id' => 'field_courses_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'table' => 'node',
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_courses',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'contact',
+          1 => 'benefit',
+          2 => 'page',
         ),
       ),
     ),
@@ -326,73 +401,6 @@ $data = array(
         ),
       ),
     ),
-    'field_segment' => array(
-      'translatable' => '0',
-      'entity_types' => array(),
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'segments',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'storage' => array(
-        'type' => 'field_sql_storage',
-        'settings' => array(),
-        'module' => 'field_sql_storage',
-        'active' => '1',
-        'details' => array(
-          'sql' => array(
-            'FIELD_LOAD_CURRENT' => array(
-              'field_data_field_segment' => array(
-                'tid' => 'field_segment_tid',
-              ),
-            ),
-            'FIELD_LOAD_REVISION' => array(
-              'field_revision_field_segment' => array(
-                'tid' => 'field_segment_tid',
-              ),
-            ),
-          ),
-        ),
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'table' => 'taxonomy_term_data',
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'field_name' => 'field_segment',
-      'type' => 'taxonomy_term_reference',
-      'module' => 'taxonomy',
-      'active' => '1',
-      'locked' => '0',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'columns' => array(
-        'tid' => array(
-          'type' => 'int',
-          'unsigned' => TRUE,
-          'not null' => FALSE,
-        ),
-      ),
-      'bundles' => array(
-        'node' => array(
-          0 => 'contact',
-          1 => 'course',
-          2 => 'banner',
-          3 => 'page',
-        ),
-      ),
-    ),
   ),
   'instances' => array(
     'body' => array(
@@ -423,16 +431,55 @@ $data = array(
           'teaser' => array(
             'label' => 'hidden',
             'type' => 'text_summary_or_trimmed',
+            'weight' => '2',
             'settings' => array(
-              'trim_length' => 600,
+              'trim_length' => '300',
             ),
             'module' => 'text',
-            'weight' => 0,
           ),
         ),
         'required' => FALSE,
         'description' => '',
         'field_name' => 'body',
+        'entity_type' => 'node',
+        'bundle' => 'page',
+        'deleted' => '0',
+        'default_value' => NULL,
+      ),
+    ),
+    'field_courses' => array(
+      0 => array(
+        'label' => 'Courses',
+        'widget' => array(
+          'type' => 'options_select',
+          'weight' => '4',
+          'settings' => array(),
+          'module' => 'options',
+        ),
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+              'bypass_access' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 6,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => FALSE,
+        'description' => '',
+        'field_name' => 'field_courses',
         'entity_type' => 'node',
         'bundle' => 'page',
         'deleted' => '0',
@@ -457,10 +504,16 @@ $data = array(
         'display' => array(
           'default' => array(
             'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '4',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'label' => 'above',
             'type' => 'list_default',
+            'weight' => '12',
             'settings' => array(),
             'module' => 'list',
-            'weight' => 4,
           ),
         ),
         'required' => 0,
@@ -503,13 +556,19 @@ $data = array(
         'display' => array(
           'default' => array(
             'label' => 'above',
+            'type' => 'hidden',
+            'weight' => '5',
+            'settings' => array(),
+          ),
+          'teaser' => array(
+            'label' => 'hidden',
             'type' => 'image',
+            'weight' => '0',
             'settings' => array(
               'image_style' => '',
               'image_link' => '',
             ),
             'module' => 'image',
-            'weight' => 5,
           ),
         ),
         'required' => 0,
@@ -536,10 +595,20 @@ $data = array(
         'display' => array(
           'default' => array(
             'label' => 'above',
-            'type' => 'taxonomy_term_reference_link',
+            'type' => 'hidden',
+            'weight' => '3',
             'settings' => array(),
-            'module' => 'taxonomy',
-            'weight' => 3,
+          ),
+          'teaser' => array(
+            'label' => 'above',
+            'type' => 'entityreference_entity_view',
+            'weight' => '11',
+            'settings' => array(
+              'view_mode' => 'default',
+              'links' => TRUE,
+              'use_content_language' => TRUE,
+            ),
+            'module' => 'entityreference',
           ),
         ),
         'required' => 0,
@@ -550,36 +619,6 @@ $data = array(
           ),
         ),
         'field_name' => 'field_page_type',
-        'entity_type' => 'node',
-        'bundle' => 'page',
-        'deleted' => '0',
-      ),
-    ),
-    'field_segment' => array(
-      0 => array(
-        'label' => 'Related Segment',
-        'widget' => array(
-          'weight' => '3',
-          'type' => 'options_select',
-          'module' => 'options',
-          'active' => 1,
-          'settings' => array(),
-        ),
-        'settings' => array(
-          'user_register_form' => FALSE,
-        ),
-        'display' => array(
-          'default' => array(
-            'label' => 'above',
-            'type' => 'hidden',
-            'weight' => '2',
-            'settings' => array(),
-          ),
-        ),
-        'required' => 0,
-        'description' => '',
-        'default_value' => NULL,
-        'field_name' => 'field_segment',
         'entity_type' => 'node',
         'bundle' => 'page',
         'deleted' => '0',
@@ -600,7 +639,7 @@ $data = array(
       'export_type' => 1,
       'disabled' => FALSE,
       'label' => 'Segment page',
-      'weight' => '4',
+      'weight' => '5',
       'children' => array(
         0 => 'field_page_type',
         1 => 'field_full_content',

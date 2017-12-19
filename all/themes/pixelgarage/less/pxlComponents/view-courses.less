@@ -77,13 +77,13 @@
           h2 {
             display: block;
             margin: 50px 0 0;
-            padding: 0;
+            padding: 10px 0 0;
             height: 60px;
             font-family: @pxl-text-font-medium;
             font-size: @font-size-base + 2;
             color: @text-color;
             line-height: 1;
-            //border-top: 1px solid @pxl-border-color;
+            border-top: 1px solid @pxl-border-color;
           }
         }
 
@@ -95,25 +95,26 @@
 
           .panel-heading {
             position: relative;
-            margin-bottom: 5px;
             padding: 0;
             font-family: @pxl-text-font-light;
             line-height: 1;
             #pxl-mixins.border-radius(0);
             background-color: @pxl-color-hso-sec;
+            border-bottom: 1px solid @pxl-border-color;
 
             .panel-title {
-              display: inline-block;
+              display: table;
               width: 100%;
 
               a {
-                display: block;
+                display: table-cell;
                 width: 100%;
-                min-height: 55px;
+                height: 55px;
                 padding: 9px 10px 11px;
                 font-size: 14px;
                 color: @text-color;
                 text-decoration: none;
+                vertical-align: middle;
               }
             }
 
