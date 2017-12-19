@@ -300,7 +300,6 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
   $title_field = $vars['options']['title_field'];
 
   $vars['classes_array'][] = 'panel-group';
-  $vars['label_short_desc'] = t('In Kürze');
 
   // Get titles with course link.
   if (isset($view->field[$title_field])) {
@@ -309,7 +308,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
       $title = $view->style_plugin->get_field($key, $title_field);
       $vars['titles'][$key] = $title;
       $course_subject = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
-      $course_subject = !empty($course_subject) ? $course_subject : 'Lehrgänge';
+      $course_subject = !empty($course_subject) ? $course_subject : t('Lehrgänge');
 
       if ($active_course_subject != $course_subject) {
         $vars['course_subjects'][$key] = $course_subject;
@@ -317,7 +316,6 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
       } else {
         $vars['course_subjects'][$key] = '';
-        $vars['course_subject_titles'][$key] = '';
       }
     }
   }
