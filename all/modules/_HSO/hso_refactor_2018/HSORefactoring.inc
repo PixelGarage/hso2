@@ -223,6 +223,17 @@ class HSORefactoring extends Refactoring {
       $this->updateTerm('subcategory', 'Level B2');
       $this->updateTerm('subcategory', 'Level C1');
       $this->updateTerm('subcategory', 'Level C2');
+      $this->updateTerm('subcategory', 'Muttersprache');
+      $this->updateTerm('subcategory', 'Reisen');
+      $this->updateTerm('subcategory', 'Seminare');
+      $this->updateTerm('subcategory', 'Deutsch');
+      $this->updateTerm('subcategory', 'Englisch');
+      $this->updateTerm('subcategory', 'Französisch');
+      $this->updateTerm('subcategory', 'Italienisch');
+      $this->updateTerm('subcategory', 'Spanisch');
+      $this->updateTerm('subcategory', 'Russisch');
+      $this->updateTerm('subcategory', 'Chinesisch');
+      $this->updateTerm('subcategory', 'Schweizerdeutsch');
 
 
       // map courses to new segments
