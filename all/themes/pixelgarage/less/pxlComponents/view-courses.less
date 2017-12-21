@@ -125,26 +125,29 @@
             background: none;
 
             .panel-title {
-              display: block;
+              display: table;
               margin: 10px 0 0;
+              width: 100%;
               border-top: 1px solid @pxl-border-color;
 
               a, span {
-                display: block;
-                padding: 10px 0 0;
-                height: 30px;
-                font-family: @pxl-text-font-medium;
+                display: table-cell;
+                padding: 0;
+                height: 55px;
+                font-family: @pxl-text-font;
                 font-size: @font-size-base;
                 color: @text-color;
                 line-height: 1;
+                background: none;
+                vertical-align: middle;
               }
             }
           }
 
           .panel-collapse {
             .panel-body {
-              margin: 10px 0;
-              padding: 10px 10px 20px;
+              margin: 0;
+              padding: 10px 0 20px 10px;
               border: none;
             }
           }

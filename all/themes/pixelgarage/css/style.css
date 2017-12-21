@@ -17815,23 +17815,26 @@ body.segment_pp .view.view-courses .view-content .panel-group .course-block .cou
   background: none;
 }
 .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .panel-title {
-  display: block;
+  display: table;
   margin: 10px 0 0;
+  width: 100%;
   border-top: 1px solid #c9c9c9;
 }
 .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .panel-title a,
 .view.view-courses .view-content .panel-group .course-block .panel .panel-heading .panel-title span {
-  display: block;
-  padding: 10px 0 0;
-  height: 30px;
-  font-family: 'SohoGothicProMedium', serif;
+  display: table-cell;
+  padding: 0;
+  height: 55px;
+  font-family: 'SohoGothicProRegular', serif;
   font-size: 16px;
   color: #333333;
   line-height: 1;
+  background: none;
+  vertical-align: middle;
 }
 .view.view-courses .view-content .panel-group .course-block .panel .panel-collapse .panel-body {
-  margin: 10px 0;
-  padding: 10px 10px 20px;
+  margin: 0;
+  padding: 10px 0 20px 10px;
   border: none;
 }
 /*
