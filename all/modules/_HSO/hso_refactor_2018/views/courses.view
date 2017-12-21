@@ -128,6 +128,18 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+/* Field: Field: Weight */
+$handler->display->display_options['fields']['field_weight']['id'] = 'field_weight';
+$handler->display->display_options['fields']['field_weight']['table'] = 'field_data_field_weight';
+$handler->display->display_options['fields']['field_weight']['field'] = 'field_weight';
+$handler->display->display_options['fields']['field_weight']['label'] = '';
+$handler->display->display_options['fields']['field_weight']['exclude'] = TRUE;
+$handler->display->display_options['fields']['field_weight']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_weight']['type'] = 'number_unformatted';
+$handler->display->display_options['fields']['field_weight']['settings'] = array(
+  'thousand_separator' => '',
+  'prefix_suffix' => 0,
+);
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Content: Course-Category (field_fachgebiet) */
 $handler->display->display_options['sorts']['field_fachgebiet_tid']['id'] = 'field_fachgebiet_tid';
