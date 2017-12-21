@@ -167,6 +167,10 @@ class HSORefactoring extends Refactoring {
       // make sure that newly added fields are completely deleted (also DB tables)
       $this->deleteFields(array('field_text_orientation'));
     }
+    else if ($step_name == 'UpdateCourseLayout') {
+      // make sure that newly added fields are completely deleted (also DB tables)
+      $this->deleteFields(array('field_weight', 'field_course_subcategory'));
+    }
 
   }
 
@@ -209,6 +213,17 @@ class HSORefactoring extends Refactoring {
       $this->updateTerm('menugroup', 'Wirtschaft & Management-Zertifikate');
       $this->updateTerm('menugroup', 'Wirtschaftsinformatik & Informatik-Zertifikate');
       $this->updateTerm('menugroup', 'Firmenkunden');
+
+      // add new course subcategory taxonomy
+      // add study variants
+      $this->updateEntityType('taxonomy_term', 'taxonomy_terms/subcategory.taxo');
+      $this->updateTerm('subcategory', 'Level A1');
+      $this->updateTerm('subcategory', 'Level A2');
+      $this->updateTerm('subcategory', 'Level B1');
+      $this->updateTerm('subcategory', 'Level B2');
+      $this->updateTerm('subcategory', 'Level C1');
+      $this->updateTerm('subcategory', 'Level C2');
+
 
       // map courses to new segments
       $this->_mapCoursesToNewSegmentsAndCategories();

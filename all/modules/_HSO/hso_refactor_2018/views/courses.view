@@ -107,9 +107,18 @@ $handler->display->display_options['fields']['field_fachgebiet']['id'] = 'field_
 $handler->display->display_options['fields']['field_fachgebiet']['table'] = 'field_data_field_fachgebiet';
 $handler->display->display_options['fields']['field_fachgebiet']['field'] = 'field_fachgebiet';
 $handler->display->display_options['fields']['field_fachgebiet']['label'] = '';
-$handler->display->display_options['fields']['field_fachgebiet']['exclude'] = TRUE;
 $handler->display->display_options['fields']['field_fachgebiet']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['field_fachgebiet']['type'] = 'taxonomy_term_reference_plain';
+/* Field: Content: Course Subcategory */
+$handler->display->display_options['fields']['field_course_subcategory']['id'] = 'field_course_subcategory';
+$handler->display->display_options['fields']['field_course_subcategory']['table'] = 'field_data_field_course_subcategory';
+$handler->display->display_options['fields']['field_course_subcategory']['field'] = 'field_course_subcategory';
+$handler->display->display_options['fields']['field_course_subcategory']['label'] = '';
+$handler->display->display_options['fields']['field_course_subcategory']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['field_course_subcategory']['settings'] = array(
+  'bypass_access' => 0,
+  'link' => 0,
+);
 /* Field: Content: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -119,17 +128,6 @@ $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
 $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Field: Content: Teaser Tabs */
-$handler->display->display_options['fields']['field_teaser_tabs']['id'] = 'field_teaser_tabs';
-$handler->display->display_options['fields']['field_teaser_tabs']['table'] = 'field_data_field_teaser_tabs';
-$handler->display->display_options['fields']['field_teaser_tabs']['field'] = 'field_teaser_tabs';
-$handler->display->display_options['fields']['field_teaser_tabs']['label'] = '';
-$handler->display->display_options['fields']['field_teaser_tabs']['element_label_colon'] = FALSE;
-$handler->display->display_options['fields']['field_teaser_tabs']['type'] = 'field_collection_fields';
-$handler->display->display_options['fields']['field_teaser_tabs']['settings'] = array(
-  'view_mode' => 'full',
-);
-$handler->display->display_options['fields']['field_teaser_tabs']['delta_offset'] = '0';
 $handler->display->display_options['defaults']['sorts'] = FALSE;
 /* Sort criterion: Content: Course-Category (field_fachgebiet) */
 $handler->display->display_options['sorts']['field_fachgebiet_tid']['id'] = 'field_fachgebiet_tid';

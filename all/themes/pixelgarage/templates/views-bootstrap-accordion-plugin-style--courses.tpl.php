@@ -1,40 +1,42 @@
 <div id="views-bootstrap-accordion-<?php print $id ?>" class="<?php print $classes ?>">
-  <?php $end_block = false; ?>
-  <?php foreach ($rows as $key => $row): ?>
-    <?php if (!empty($course_subjects[$key])): ?>
-      <?php if ($end_block): ?>
-        </div>
-      <?php endif; ?>
-      <div class="course-block">
-      <div class="course-subject">
-        <h2><?php print $course_subjects[$key] ?></h2>
+  <?php $index = 0; ?>
+  <?php foreach ($course_categories as $category => $subcategories): ?>
+    <div class="course-block">
+      <div class="course-category">
+        <h2><?php print $category ?></h2>
       </div>
-      <?php $end_block = true; ?>
-    <?php endif; ?>
+      <?php foreach ($subcategories as $subcategory => $weights): ?>
+        <?php if ($subcategory != '*'): ?>
+          <?php $index++; ?>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">
+                <a class="accordion-toggle collapsed"
+                   data-toggle="collapse"
+                   href="#collapse-<?php print $id . '-' . $index ?>">
+                  <?php print $subcategory ?>
+                </a>
+              </div>
+            </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <?php print $titles[$key] ?>
-        </h4>
-        <!--span class="button short-description">
-          <a class="accordion-toggle"
-              data-toggle="collapse"
-              href="#collapse<?php print $key ?>">
-             <?php print $label_short_desc ?>
-          </a>
-          <span class="fa fa-angle-down"></span>
-        </span-->
-      </div>
-
-      <div id="collapse<?php print $key ?>" class="panel-collapse collapse">
-        <div class="panel-body">
-          <?php print $row ?>
-        </div>
-      </div>
+            <div id="collapse-<?php print $id . '-' . $index ?>" class="panel-collapse collapse">
+              <div class="panel-body">
+                <?php foreach ($weights as $weight => $key): ?>
+                  <div class="course-title">
+                    <?php print $titles[$key] ?>
+                  </div>
+                <?php endforeach ?>
+              </div>
+            </div>
+          </div>
+        <?php else: ?>
+          <?php foreach ($weights as $weight => $key): ?>
+            <div class="course-title">
+              <?php print $titles[$key] ?>
+            </div>
+          <?php endforeach ?>
+        <?php endif; ?>
+      <?php endforeach ?>
     </div>
   <?php endforeach ?>
-  <?php if ($end_block): ?>
-    </div>
-  <?php endif; ?>
 </div>

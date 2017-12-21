@@ -1,5 +1,5 @@
 <?php
-$export_time = 1513353492;
+$export_time = 1513793746;
 $data = array(
   'bundles' => array(
     'course' => (object) array(
@@ -457,6 +457,80 @@ $data = array(
         ),
       ),
     ),
+    'field_course_subcategory' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(
+        'target_type' => 'taxonomy_term',
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(
+            'subcategory' => 'subcategory',
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 1,
+            ),
+          ),
+        ),
+      ),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_course_subcategory' => array(
+                'target_id' => 'field_course_subcategory_target_id',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_course_subcategory' => array(
+                'target_id' => 'field_course_subcategory_target_id',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(
+        'taxonomy_term_data' => array(
+          'table' => 'taxonomy_term_data',
+          'columns' => array(
+            'target_id' => 'tid',
+          ),
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'field_name' => 'field_course_subcategory',
+      'type' => 'entityreference',
+      'module' => 'entityreference',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'target_id' => array(
+          'description' => 'The id of the target entity.',
+          'type' => 'int',
+          'unsigned' => TRUE,
+          'not null' => TRUE,
+        ),
+      ),
+      'bundles' => array(
+        'node' => array(
+          0 => 'course',
+        ),
+      ),
+    ),
     'field_fachgebiet' => array(
       'translatable' => '0',
       'entity_types' => array(),
@@ -809,101 +883,6 @@ $data = array(
           0 => 'contact',
           1 => 'course',
           2 => 'banner',
-          3 => 'page',
-        ),
-      ),
-    ),
-    'field_sort' => array(
-      'translatable' => '0',
-      'entity_types' => array(),
-      'settings' => array(
-        'allowed_values' => array(
-          -20 => '-20',
-          -19 => '-19',
-          -18 => '-18',
-          -17 => '-17',
-          -16 => '-16',
-          -15 => '-15',
-          -14 => '-14',
-          -13 => '-13',
-          -12 => '-12',
-          -11 => '-11',
-          -10 => '-10',
-          -9 => '-9',
-          -8 => '-8',
-          -7 => '-7',
-          -6 => '-6',
-          -5 => '-5',
-          -4 => '-4',
-          -3 => '-3',
-          -2 => '-2',
-          -1 => '-1',
-          0 => '0',
-          1 => '1',
-          2 => '2',
-          3 => '3',
-          4 => '4',
-          5 => '5',
-          6 => '6',
-          7 => '7',
-          8 => '8',
-          9 => '9',
-          10 => '10',
-          11 => '11',
-          12 => '12',
-          13 => '13',
-          14 => '14',
-          15 => '15',
-          16 => '16',
-          17 => '17',
-          18 => '18',
-          19 => '19',
-          20 => '20',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'storage' => array(
-        'type' => 'field_sql_storage',
-        'settings' => array(),
-        'module' => 'field_sql_storage',
-        'active' => '1',
-        'details' => array(
-          'sql' => array(
-            'FIELD_LOAD_CURRENT' => array(
-              'field_data_field_sort' => array(
-                'value' => 'field_sort_value',
-              ),
-            ),
-            'FIELD_LOAD_REVISION' => array(
-              'field_revision_field_sort' => array(
-                'value' => 'field_sort_value',
-              ),
-            ),
-          ),
-        ),
-      ),
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'field_name' => 'field_sort',
-      'type' => 'list_integer',
-      'module' => 'list',
-      'active' => '1',
-      'locked' => '0',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'columns' => array(
-        'value' => array(
-          'type' => 'int',
-          'not null' => FALSE,
-        ),
-      ),
-      'bundles' => array(
-        'node' => array(
-          0 => 'course',
         ),
       ),
     ),
@@ -971,6 +950,56 @@ $data = array(
         ),
       ),
     ),
+    'field_weight' => array(
+      'translatable' => '0',
+      'entity_types' => array(),
+      'settings' => array(),
+      'storage' => array(
+        'type' => 'field_sql_storage',
+        'settings' => array(),
+        'module' => 'field_sql_storage',
+        'active' => '1',
+        'details' => array(
+          'sql' => array(
+            'FIELD_LOAD_CURRENT' => array(
+              'field_data_field_weight' => array(
+                'value' => 'field_weight_value',
+              ),
+            ),
+            'FIELD_LOAD_REVISION' => array(
+              'field_revision_field_weight' => array(
+                'value' => 'field_weight_value',
+              ),
+            ),
+          ),
+        ),
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'field_name' => 'field_weight',
+      'type' => 'number_integer',
+      'module' => 'number',
+      'active' => '1',
+      'locked' => '0',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'columns' => array(
+        'value' => array(
+          'type' => 'int',
+          'not null' => FALSE,
+        ),
+      ),
+      'bundles' => array(
+        'taxonomy_term' => array(
+          0 => 'menugroup',
+        ),
+        'node' => array(
+          0 => 'call2action',
+          1 => 'banner',
+          2 => 'course',
+        ),
+      ),
+    ),
   ),
   'instances' => array(
     'body' => array(
@@ -982,7 +1011,7 @@ $data = array(
             'rows' => 20,
             'summary_rows' => 5,
           ),
-          'weight' => '5',
+          'weight' => '6',
           'module' => 'text',
         ),
         'settings' => array(
@@ -1249,7 +1278,7 @@ $data = array(
       0 => array(
         'label' => 'Brochure',
         'widget' => array(
-          'weight' => '3',
+          'weight' => '4',
           'type' => 'options_select',
           'module' => 'options',
           'active' => 1,
@@ -1276,6 +1305,51 @@ $data = array(
         'description' => '',
         'default_value' => NULL,
         'field_name' => 'field_brochure',
+        'entity_type' => 'node',
+        'bundle' => 'course',
+        'deleted' => '0',
+      ),
+    ),
+    'field_course_subcategory' => array(
+      0 => array(
+        'label' => 'Course Subcategory',
+        'widget' => array(
+          'weight' => '3',
+          'type' => 'options_select',
+          'module' => 'options',
+          'active' => 1,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'behaviors' => array(
+            'taxonomy-index' => array(
+              'status' => TRUE,
+            ),
+          ),
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'entityreference_label',
+            'settings' => array(
+              'link' => FALSE,
+              'bypass_access' => FALSE,
+            ),
+            'module' => 'entityreference',
+            'weight' => 28,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => NULL,
+        'field_name' => 'field_course_subcategory',
         'entity_type' => 'node',
         'bundle' => 'course',
         'deleted' => '0',
@@ -1449,7 +1523,7 @@ $data = array(
       0 => array(
         'label' => 'Search tags',
         'widget' => array(
-          'weight' => '4',
+          'weight' => '5',
           'type' => 'text_textfield',
           'module' => 'text',
           'active' => 1,
@@ -1525,51 +1599,11 @@ $data = array(
         'deleted' => '0',
       ),
     ),
-    'field_sort' => array(
-      0 => array(
-        'label' => 'Sort',
-        'widget' => array(
-          'weight' => '9',
-          'type' => 'options_select',
-          'module' => 'options',
-          'active' => 1,
-          'settings' => array(),
-        ),
-        'settings' => array(
-          'user_register_form' => FALSE,
-        ),
-        'display' => array(
-          'default' => array(
-            'label' => 'above',
-            'type' => 'hidden',
-            'weight' => '20',
-            'settings' => array(),
-          ),
-          'teaser' => array(
-            'type' => 'hidden',
-            'label' => 'above',
-            'settings' => array(),
-            'weight' => 0,
-          ),
-        ),
-        'required' => 0,
-        'description' => '',
-        'default_value' => array(
-          0 => array(
-            'value' => '0',
-          ),
-        ),
-        'field_name' => 'field_sort',
-        'entity_type' => 'node',
-        'bundle' => 'course',
-        'deleted' => '0',
-      ),
-    ),
     'field_teaser_tabs' => array(
       0 => array(
         'label' => 'Teaser Tabs',
         'widget' => array(
-          'weight' => '6',
+          'weight' => '15',
           'type' => 'field_collection_embed',
           'module' => 'field_collection',
           'active' => 0,
@@ -1603,6 +1637,56 @@ $data = array(
         'description' => '',
         'default_value' => NULL,
         'field_name' => 'field_teaser_tabs',
+        'entity_type' => 'node',
+        'bundle' => 'course',
+        'deleted' => '0',
+      ),
+    ),
+    'field_weight' => array(
+      0 => array(
+        'label' => 'Weight',
+        'widget' => array(
+          'weight' => '9',
+          'type' => 'number',
+          'module' => 'number',
+          'active' => 0,
+          'settings' => array(),
+        ),
+        'settings' => array(
+          'min' => '',
+          'max' => '',
+          'prefix' => '',
+          'suffix' => '',
+          'user_register_form' => FALSE,
+        ),
+        'display' => array(
+          'default' => array(
+            'label' => 'above',
+            'type' => 'number_integer',
+            'settings' => array(
+              'thousand_separator' => '',
+              'decimal_separator' => '.',
+              'scale' => 0,
+              'prefix_suffix' => TRUE,
+            ),
+            'module' => 'number',
+            'weight' => 27,
+          ),
+          'teaser' => array(
+            'type' => 'hidden',
+            'label' => 'above',
+            'settings' => array(),
+            'weight' => 0,
+          ),
+        ),
+        'required' => 0,
+        'description' => '',
+        'default_value' => array(
+          0 => array(
+            'value' => '0',
+          ),
+        ),
+        'field_name' => 'field_weight',
         'entity_type' => 'node',
         'bundle' => 'course',
         'deleted' => '0',

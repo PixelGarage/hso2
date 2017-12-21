@@ -303,19 +303,27 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
 
   // Get titles with course link.
   if (isset($view->field[$title_field])) {
-    $active_course_subject = '';
-    foreach ($vars['view']->result as $key => $field) {
+    $i = 0;
+    foreach ($view->result as $key => $row) {
       $title = $view->style_plugin->get_field($key, $title_field);
       $vars['titles'][$key] = $title;
-      $course_subject = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
-      $course_subject = !empty($course_subject) ? $course_subject : t('Lehrgänge');
+      $category = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
+      $category = !empty($category) ? $category : t('Lehrgänge');
+      $subcategory = strip_tags($view->style_plugin->get_field($key, 'field_course_subcategory'));
+      $subcategory = !empty($subcategory) ? $subcategory : '*';
+      $weight = $view->style_plugin->get_field($key, 'field_weight');
+      $weight = !empty($weight) ? $weight : 'w' . $i++;
+      $vars['course_categories'][$category][$subcategory][$weight] = $key;
+    }
 
-      if ($active_course_subject != $course_subject) {
-        $vars['course_subjects'][$key] = $course_subject;
-        $active_course_subject = $course_subject;
-
-      } else {
-        $vars['course_subjects'][$key] = '';
+    // sort arrays
+    //ksort($vars['course_categories']);
+    foreach ($vars['course_categories'] as $category => $subcategories) {
+      ksort($subcategories);
+      $vars['course_categories'][$category] = $subcategories;
+      foreach ($subcategories as $subcategory => $weights) {
+        ksort($weights);
+        $vars['course_categories'][$category][$subcategory] = $weights;
       }
     }
   }
