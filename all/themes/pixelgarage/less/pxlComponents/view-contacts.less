@@ -162,9 +162,6 @@
             body.segment_hs & {
               .segment-color(@pxl-color-hso-hs);
             }
-            body.segment_wm & {
-              .segment-color(@pxl-color-hso-wm);
-            }
             body.segment_sp & {
               .segment-color(@pxl-color-hso-sp);
             }
@@ -173,6 +170,18 @@
             }
             body.segment_pp & {
               .segment-color(@pxl-color-hso-pp);
+            }
+            body.segment_wm & {
+              .segment-color(@pxl-color-hso-wm);
+            }
+            body.segment_wm.category_hf & {
+              .segment-color(@pxl-color-hso-hf);
+            }
+            body.segment_wm.category_fh & {
+              .segment-color(@pxl-color-hso-fh);
+            }
+            body.segment_wm.category_ex & {
+              .segment-color(@pxl-color-hso-ex);
             }
 
           }  //tab-pane-item

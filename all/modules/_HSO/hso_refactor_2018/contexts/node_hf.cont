@@ -1,0 +1,35 @@
+<?php
+
+$context = new stdClass();
+$context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+$context->api_version = 3;
+$context->name = 'node_hf';
+$context->description = '';
+$context->tag = '';
+$context->conditions = array(
+  'node' => array(
+    'values' => array(
+      'course' => 'course',
+      'course_times' => 'course_times',
+      'page' => 'page',
+      'webform' => 'webform',
+    ),
+    'options' => array(
+      'node_form' => '0',
+    ),
+  ),
+  'node_taxonomy' => array(
+    'values' => array(
+      167 => 167,
+    ),
+    'options' => array(
+      'node_form' => '0',
+    ),
+  ),
+);
+$context->reactions = array(
+  'theme_html' => array(
+    'class' => 'category_hf',
+  ),
+);
+$context->condition_mode = 1;

@@ -112,7 +112,22 @@ class HSORefactoring extends Refactoring {
     parent::runAll();
 
     //__hso_refactor_2018_course_intl_id();
-    //return true;
+    $this->deleteContext('segment_wm');
+    $this->deleteContext('segment_wi');
+    $this->deleteContext('segment_hs');
+    $this->deleteContext('segment_kv');
+    $this->deleteContext('segment_sp');
+    $this->deleteContext('segment_pp');
+    $this->importContext('contexts/node_wm.cont');
+    $this->importContext('contexts/node_wi.cont');
+    $this->importContext('contexts/node_hs.cont');
+    $this->importContext('contexts/node_kv.cont');
+    $this->importContext('contexts/node_pp.cont');
+    $this->importContext('contexts/node_sp.cont');
+    $this->importContext('contexts/node_hf.cont');
+    $this->importContext('contexts/node_fh.cont');
+    $this->importContext('contexts/node_ex.cont');
+    return true;
 
     // enable new modules
     if (!module_exists('views_bulk_operations')) {
@@ -380,17 +395,20 @@ class HSORefactoring extends Refactoring {
       $this->deleteContext('kv-college-home');
 
       // import new contexts
-      $this->importContext('contexts/segment_wm.cont');
+      $this->importContext('contexts/node_wm.cont');
+      $this->importContext('contexts/node_wi.cont');
+      $this->importContext('contexts/node_hs.cont');
+      $this->importContext('contexts/node_kv.cont');
+      $this->importContext('contexts/node_pp.cont');
+      $this->importContext('contexts/node_sp.cont');
+      $this->importContext('contexts/node_hf.cont');
+      $this->importContext('contexts/node_fh.cont');
+      $this->importContext('contexts/node_ex.cont');
       $this->importContext('contexts/segment_wm_home.cont');
-      $this->importContext('contexts/segment_wi.cont');
       $this->importContext('contexts/segment_wi_home.cont');
-      $this->importContext('contexts/segment_hs.cont');
       $this->importContext('contexts/segment_hs_home.cont');
-      $this->importContext('contexts/segment_kv.cont');
       $this->importContext('contexts/segment_kv_home.cont');
-      $this->importContext('contexts/segment_sp.cont');
       $this->importContext('contexts/segment_sp_home.cont');
-      $this->importContext('contexts/segment_pp.cont');
       $this->importContext('contexts/segment_pp_home.cont');
       $this->importContext('contexts/segments_home.cont');
       $this->importContext('contexts/course.cont');

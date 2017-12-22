@@ -96,8 +96,19 @@
           body.segment_hs &:hover {
             background-color: @pxl-color-hso-hs;
           }
-          body.segment_wm &:hover {
-            background-color: @pxl-color-hso-wm;
+          body.segment_wm & {
+            &:hover {
+              background-color: @pxl-color-hso-wm;
+            }
+            &.course-category-fh:hover {
+              background-color: @pxl-color-hso-fh;
+            }
+            &.course-category-hf:hover {
+              background-color: @pxl-color-hso-hf;
+            }
+            &.course-category-ex:hover {
+              background-color: @pxl-color-hso-ex;
+            }
           }
           body.segment_sp &:hover {
             background-color: @pxl-color-hso-sp;

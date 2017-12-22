@@ -306,14 +306,26 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
     $i = 0;
     foreach ($view->result as $key => $row) {
       $title = $view->style_plugin->get_field($key, $title_field);
-      $vars['titles'][$key] = $title;
       $category = strip_tags($view->style_plugin->get_field($key, 'field_fachgebiet'));
       $category = !empty($category) ? $category : t('Lehrgänge');
       $subcategory = strip_tags($view->style_plugin->get_field($key, 'field_course_subcategory'));
       $subcategory = !empty($subcategory) ? $subcategory : '*';
       $weight = $view->style_plugin->get_field($key, 'field_weight');
       $weight = !empty($weight) ? $weight : 'w' . $i++;
+      $vars['titles'][$key] = $title;
       $vars['course_categories'][$category][$subcategory][$weight] = $key;
+      if (stripos($category, 'fachschule') !== false) {
+        $vars['title_classes'][$key] = 'course-category-fh';
+      }
+      else if (stripos($category, 'fachhochschule') !== false) {
+        $vars['title_classes'][$key] = 'course-category-hf';
+      }
+      else if (stripos($category, 'executive') !== false) {
+        $vars['title_classes'][$key] = 'course-category-ex';
+      }
+      else {
+        $vars['title_classes'][$key] = strtolower(drupal_clean_css_identifier($category));
+      }
     }
 
     // sort arrays

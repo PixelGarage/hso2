@@ -136,18 +136,19 @@
    */
 
   /**
-   * Scrolls smoothly to info event tab due to menu click.
+   * Scrolls smoothly to startdaten and info event tab due to menu click.
    */
-  Drupal.behaviors.smoothScrolltoInfoEventTab = {
+  Drupal.behaviors.smoothScrolltoCourseTab = {
     attach: function(context, settings) {
       var $course = $('.node-course'),
         $courseBlockMenu = $course.find('.field-name-course-links'),
-        $infoEventMenu = $courseBlockMenu.find('ul.menu>li.menu.infoevent');
+        $startDatenMenu = $courseBlockMenu.find('ul.menu>li.menu.startdaten'),
+        $infoEventMenu = $courseBlockMenu.find('ul.menu>li.menu.infoevent'),
+        $target = $('#views-bootstrap-tab-course-tabs');
 
       $infoEventMenu.once('clicked', function () {
         $(this).on('click', function () {
-          var $target = $('#views-bootstrap-tab-course-tabs'),
-              $infoTab = $target.find('.tab-info-events > a');
+          var $infoTab = $target.find('.tab-info-events > a');
 
           // click tab
           $infoTab.click();
@@ -161,6 +162,23 @@
           return true;
         });
       });
+      $startDatenMenu.once('clicked', function () {
+        $(this).on('click', function () {
+          var $startdatenTab = $target.find('.tab-startdaten > a');
+
+          // click tab
+          $startdatenTab.click();
+
+          // scroll to tab section
+          if ($target.length > 0) {
+            var topPos = $target.offset().top;
+            $('html, body').animate({scrollTop: topPos-30}, 1000, 'swing');
+            return false;
+          }
+          return true;
+        });
+      });
+
     }
   };
 

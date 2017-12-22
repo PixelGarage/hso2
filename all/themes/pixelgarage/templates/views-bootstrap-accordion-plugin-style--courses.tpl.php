@@ -22,7 +22,7 @@
             <div id="collapse-<?php print $id . '-' . $index ?>" class="panel-collapse collapse">
               <div class="panel-body">
                 <?php foreach ($weights as $weight => $key): ?>
-                  <div class="course-title">
+                  <div class="course-title <?php print $title_classes[$key] ?>">
                     <?php print $titles[$key] ?>
                   </div>
                 <?php endforeach ?>
@@ -31,7 +31,7 @@
           </div>
         <?php else: ?>
           <?php foreach ($weights as $weight => $key): ?>
-            <div class="course-title">
+            <div class="course-title <?php print $title_classes[$key] ?>">
               <?php print $titles[$key] ?>
             </div>
           <?php endforeach ?>

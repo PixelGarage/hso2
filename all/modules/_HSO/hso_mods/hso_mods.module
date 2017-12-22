@@ -80,6 +80,10 @@ function hso_mods_node_view($node, $view_mode, $langcode) {
       context_set('hso', 'current_segment', $tid);
       _hso_mods_trigger_context($tid);
     }
+    if (isset($node_to_check->field_fachgebiet) && !empty($node_to_check->field_fachgebiet)) {
+      $tid = $node_to_check->field_fachgebiet[LANGUAGE_NONE][0]['tid'];
+      _hso_mods_trigger_context($tid);
+    }
   }
 }
 
@@ -96,13 +100,13 @@ function hso_mods_taxonomy_term_view($term, $view_mode, $langcode) {
 }
 
 /**
- * Internal function to set all contexts with a given segment condition.
+ * Internal function to set all contexts with a given segment or course category condition.
  * @param $segment_id
  */
-function _hso_mods_trigger_context($segment_id) {
+function _hso_mods_trigger_context($tid) {
   $contexts = context_enabled_contexts();
   foreach ($contexts as $context_name => $data) {
-    if (array_key_exists('node_taxonomy', $data->conditions) && in_array($segment_id, $data->conditions['node_taxonomy']['values'])) {
+    if (array_key_exists('node_taxonomy', $data->conditions) && in_array($tid, $data->conditions['node_taxonomy']['values'])) {
       context_condition_met($data, 'node_taxonomy');
     }
   }

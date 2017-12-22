@@ -1,5 +1,6 @@
-Kontakt {"url":"<nolink>","hidden":true,"options":{"item_attributes":{"id":"menu-block-course-contacts","class":"menu-block menu-block-course-contacts","style":""}},"weight":"-47"}
-Bildungsweg {"url":"node\/76123","hidden":true,"options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu navigator","style":""}},"weight":"-46"}
-Beratung {"url":"node\/1335","options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu consulting","style":""}},"weight":"-49"}
-Broschüre / Factsheet {"url":"node\/1336","options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu brochures","style":""}},"weight":"-48"}
-Informationsanlässe {"url":"<nolink>","options":{"item_attributes":{"id":"","class":"menu infoevent","style":""}},"weight":"-50"}
+Kontakt {"url":"<block>","options":{"item_attributes":{"id":"menu-block-course-contacts","class":"menu-block menu-block-course-contacts","style":""},"menu_attach_block":{"name":"block|7","use_ajax":0,"no_drop":0,"dropped":0,"on_hover":0,"orientation":"vertical","mlid":"5015","plid":"0"}},"weight":"-46"}
+Bildungsweg {"url":"node\/76123","hidden":true,"options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu navigator","style":""}},"weight":"-45"}
+Beratung {"url":"node\/1335","options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu consulting","style":""}},"weight":"-48"}
+Broschüre / Factsheet {"url":"node\/1336","options":{"attributes":{"target":"_blank"},"item_attributes":{"id":"","class":"menu brochures","style":""}},"weight":"-47"}
+Informationsanlässe {"url":"<nolink>","options":{"item_attributes":{"id":"","class":"menu infoevent","style":""}},"weight":"-49"}
+Startdaten {"url":"<nolink>","options":{"item_attributes":{"id":"","class":"menu startdaten","style":""},"menu_attach_block":{"name":"","use_ajax":0,"no_drop":0,"dropped":0,"on_hover":0,"orientation":"horizontal","mlid":0,"plid":0}},"weight":"-50"}

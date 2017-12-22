@@ -87,6 +87,15 @@
         background: none;
       }
 
+      &.startdaten {
+        a:before, span:before {
+          display: inline-block;
+          content: '\f073';
+          font-family: @pxl-icon-font;
+          font-size: 30px;
+          width: 35px;
+        }
+      }
       &.infoevent {
         a:before, span:before {
           display: inline-block;
@@ -125,9 +134,6 @@
           body.segment_hs & {
             color: @pxl-color-hso-hs;
           }
-          body.segment_wm & {
-            color: @pxl-color-hso-wm;
-          }
           body.segment_sp & {
             color: @pxl-color-hso-sp;
           }
@@ -136,6 +142,18 @@
           }
           body.segment_pp & {
             color: @pxl-color-hso-pp;
+          }
+          body.segment_wm & {
+            color: @pxl-color-hso-wm;
+          }
+          body.segment_wm.category_hf & {
+            color: @pxl-color-hso-hf;
+          }
+          body.segment_wm.category_fh & {
+            color: @pxl-color-hso-fh;
+          }
+          body.segment_wm.category_ex & {
+            color: @pxl-color-hso-ex;
           }
         }
       }
@@ -222,9 +240,6 @@
         body.segment_hs & {
           .links(@pxl-color-hso-hs);
         }
-        body.segment_wm & {
-          .links(@pxl-color-hso-wm);
-        }
         body.segment_sp & {
           .links(@pxl-color-hso-sp);
         }
@@ -233,6 +248,18 @@
         }
         body.segment_pp & {
           .links(@pxl-color-hso-pp);
+        }
+        body.segment_wm & {
+          .links(@pxl-color-hso-wm);
+        }
+        body.segment_wm.category_hf & {
+          .links(@pxl-color-hso-hf);
+        }
+        body.segment_wm.category_fh & {
+          .links(@pxl-color-hso-fh);
+        }
+        body.segment_wm.category_ex & {
+          .links(@pxl-color-hso-ex);
         }
       }
 
