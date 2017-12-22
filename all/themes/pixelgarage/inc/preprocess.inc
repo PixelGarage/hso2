@@ -315,10 +315,10 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
       $vars['titles'][$key] = $title;
       $vars['course_categories'][$category][$subcategory][$weight] = $key;
       if (stripos($category, 'fachschule') !== false) {
-        $vars['title_classes'][$key] = 'course-category-fh';
+        $vars['title_classes'][$key] = 'course-category-hf';
       }
       else if (stripos($category, 'fachhochschule') !== false) {
-        $vars['title_classes'][$key] = 'course-category-hf';
+        $vars['title_classes'][$key] = 'course-category-fh';
       }
       else if (stripos($category, 'executive') !== false) {
         $vars['title_classes'][$key] = 'course-category-ex';

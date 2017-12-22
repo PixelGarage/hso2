@@ -18280,11 +18280,11 @@ body.segment_hs .view.view-courses .view-content .panel-group .course-block .cou
 body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title:hover {
   background-color: #7C0B25;
 }
-body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-fh:hover {
-  background-color: #3f5868;
-}
 body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-hf:hover {
   background-color: #335592;
+}
+body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-fh:hover {
+  background-color: #3f5868;
 }
 body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-ex:hover {
   background-color: #7B6C65;
