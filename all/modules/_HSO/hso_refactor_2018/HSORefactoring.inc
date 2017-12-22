@@ -112,22 +112,7 @@ class HSORefactoring extends Refactoring {
     parent::runAll();
 
     //__hso_refactor_2018_course_intl_id();
-    $this->deleteContext('segment_wm');
-    $this->deleteContext('segment_wi');
-    $this->deleteContext('segment_hs');
-    $this->deleteContext('segment_kv');
-    $this->deleteContext('segment_sp');
-    $this->deleteContext('segment_pp');
-    $this->importContext('contexts/node_wm.cont');
-    $this->importContext('contexts/node_wi.cont');
-    $this->importContext('contexts/node_hs.cont');
-    $this->importContext('contexts/node_kv.cont');
-    $this->importContext('contexts/node_pp.cont');
-    $this->importContext('contexts/node_sp.cont');
-    $this->importContext('contexts/node_hf.cont');
-    $this->importContext('contexts/node_fh.cont');
-    $this->importContext('contexts/node_ex.cont');
-    return true;
+    //return true;
 
     // enable new modules
     if (!module_exists('views_bulk_operations')) {
