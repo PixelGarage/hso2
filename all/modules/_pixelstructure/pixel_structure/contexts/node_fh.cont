@@ -29,7 +29,7 @@ $context->conditions = array(
 );
 $context->reactions = array(
   'theme_html' => array(
-    'class' => 'segment_fh',
+    'class' => 'category_fh',
   ),
 );
 $context->condition_mode = 1;

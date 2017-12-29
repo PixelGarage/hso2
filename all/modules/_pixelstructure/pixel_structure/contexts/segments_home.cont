@@ -27,11 +27,11 @@ $context->reactions = array(
         'region' => 'navigation',
         'weight' => '-10',
       ),
-      'views-testimonial_view-block' => array(
+      'views-call2action-block_1' => array(
         'module' => 'views',
-        'delta' => 'testimonial_view-block',
-        'region' => 'content',
-        'weight' => '10',
+        'delta' => 'call2action-block_1',
+        'region' => 'navigation',
+        'weight' => '-9',
       ),
     ),
   ),
