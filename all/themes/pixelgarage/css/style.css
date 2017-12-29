@@ -11069,9 +11069,17 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
 }
 .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-field-icon .field-item img,
 .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-field-icon .field-item img {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 16%;
   height: auto;
   max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-field-icon .field-item img,
+  .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-field-icon .field-item img {
+    width: 100%;
+  }
 }
 .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-title h2,
 .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-title h2 {
