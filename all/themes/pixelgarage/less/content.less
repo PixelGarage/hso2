@@ -83,23 +83,23 @@ body {
     .row {
       section { // column(s)
 
+        body.node-type-page &,
+        body.node-type-webform &,
+        body.node-type-news & {
+          float: none;
+          margin: 0 auto;
+          max-width: @pxl-max-width-page;
+        }
+
         h1.page-header {
           //display: none;
           margin: 60px auto 30px;
           padding: 0;
-          max-width: @pxl-max-width-page;
           font-family: @pxl-text-font-light;
           #pxl-mixins.font-size-responsive(@font-size-h1);
           color: @pxl-color-hso-main;
           line-height: 1;
           border: none;
-
-          body.segments_home &,
-          body.node-type-course &,
-          body.page-informationsanlaesse &,
-          body.page-coursetimes-search & {
-            max-width: none;
-          }
 
           body.segment_kv & {
             color: @pxl-color-hso-kv;

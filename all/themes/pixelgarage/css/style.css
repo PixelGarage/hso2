@@ -9774,7 +9774,6 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 .panel-display .panel-panel .panel-pane.pane-custom {
   margin: 0 auto;
-  max-width: 800px;
 }
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h1,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content h2,
@@ -10605,8 +10604,9 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
  * --------------------------------------------------*/
 .menu-name-menu-meta-menu.menu-level-2 ul.menu {
   display: block;
-  margin: 50px 0 0;
+  margin: 50px auto 0;
   text-align: center;
+  max-width: 800px;
 }
 .menu-name-menu-meta-menu.menu-level-2 ul.menu li {
   display: inline-block;
@@ -10817,11 +10817,6 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
 /*
  *  Node page component
  * --------------------------------------------------*/
-.node.node-page.view-mode-full,
-.node.node-news.view-mode-default {
-  max-width: 800px;
-  margin: 0 auto;
-}
 .node.node-page.view-mode-full .row div.col-sm-12,
 .node.node-news.view-mode-default .row div.col-sm-12 {
   width: 100%;
@@ -11323,8 +11318,6 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
  *  Node / block webform component
  * --------------------------------------------------*/
 .node-webform {
-  max-width: 800px;
-  margin: 0 auto;
   padding-bottom: 30px;
 }
 .node-webform .row div.col-sm-12 {
@@ -14297,7 +14290,6 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
 .node.node-news.view-mode-default {
   margin: 50px auto 0;
   border-top: 2px solid #c9c9c9;
-  max-width: 800px;
 }
 .node.node-news.view-mode-full .row div.col-sm-12,
 .node.node-news.view-mode-default .row div.col-sm-12 {
@@ -19935,10 +19927,16 @@ body {
   display: none;
   padding-top: 20px;
 }
+body.node-type-page .main-container .container .row section,
+body.node-type-webform .main-container .container .row section,
+body.node-type-news .main-container .container .row section {
+  float: none;
+  margin: 0 auto;
+  max-width: 800px;
+}
 .main-container .container .row section h1.page-header {
   margin: 60px auto 30px;
   padding: 0;
-  max-width: 800px;
   font-family: 'SohoGothicProLight', serif;
   font-size: 22.5px;
   color: #cc3333;
@@ -19954,12 +19952,6 @@ body {
   .main-container .container .row section h1.page-header {
     font-size: 36px;
   }
-}
-body.segments_home .main-container .container .row section h1.page-header,
-body.node-type-course .main-container .container .row section h1.page-header,
-body.page-informationsanlaesse .main-container .container .row section h1.page-header,
-body.page-coursetimes-search .main-container .container .row section h1.page-header {
-  max-width: none;
 }
 body.segment_kv .main-container .container .row section h1.page-header {
   color: #8C9D44;
