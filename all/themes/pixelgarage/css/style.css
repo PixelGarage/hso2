@@ -17889,8 +17889,8 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   color: #333333;
 }
 .view.view-segment-pages .view-content .views-row {
-  display: inline-block;
-  padding-right: 15px;
+  display: block;
+  padding: 0;
 }
 body.segment_kv .view.view-segment-pages .view-content .views-row a {
   color: #8C9D44;
