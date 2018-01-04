@@ -311,7 +311,7 @@ function pixelgarage_preprocess_views_bootstrap_accordion_plugin_style(&$vars) {
       $subcategory = strip_tags($view->style_plugin->get_field($key, 'field_course_subcategory'));
       $subcategory = !empty($subcategory) ? $subcategory : '*';
       $weight = $view->style_plugin->get_field($key, 'field_weight');
-      $weight = !empty($weight) ? $weight : 'w' . $i++;
+      $weight = !empty($weight) ? $weight . '_' . $i++ : 'w' . $i++;
       $vars['titles'][$key] = $title;
       $vars['course_categories'][$category][$subcategory][$weight] = $key;
       if (stripos($category, 'fachschule') !== false) {
