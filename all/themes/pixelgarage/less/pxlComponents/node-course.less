@@ -4,7 +4,8 @@
 
 // Variables
 // -------------------------
-
+@pxl-sidebar-icon-width-small: 35px;
+@pxl-sidebar-icon-width: 45px;
 
 // Mixins
 // -------------------------
@@ -44,14 +45,23 @@
           margin: 0 -2px;
           font-family: @pxl-icon-font;
           font-size: 28px;
-          width: 35px;
+          width: @pxl-sidebar-icon-width;
+
+          @media @tablet {
+            font-size: 23px;
+            width: @pxl-sidebar-icon-width-small;
+          }
+          @media @normal {
+            font-size: 28px;
+            width: @pxl-sidebar-icon-width;
+          }
         }
 
         .block {
           display: inline-block;
           margin: 0 -2px;
           padding: 0 0 0 5px;
-          width: 80%;
+          width: 75%;
           font-family: @pxl-text-font-medium;
           font-size: 14px;
           line-height: 1;
@@ -85,42 +95,50 @@
         color: @text-color;
         text-decoration: none;
         background: none;
+
+        &:before {
+          font-family: @pxl-icon-font;
+          font-size: 30px;
+          width: @pxl-sidebar-icon-width;
+        }
+
+        @media @tablet {
+          font-size: 14px;
+          &:before {
+            font-size: 25px;
+            width: @pxl-sidebar-icon-width-small;
+          }
+        }
+        @media @normal {
+          &:before {
+            font-size: 30px;
+            width: @pxl-sidebar-icon-width;
+          }
+        }
       }
 
       &.startdaten {
         a:before, span:before {
           display: inline-block;
           content: '\f073';
-          font-family: @pxl-icon-font;
-          font-size: 30px;
-          width: 35px;
         }
       }
       &.infoevent {
         a:before, span:before {
           display: inline-block;
           content: '\f274';
-          font-family: @pxl-icon-font;
-          font-size: 30px;
-          width: 35px;
         }
       }
       &.consulting {
         a:before, span:before {
           display: inline-block;
           content: '\f0e6';
-          font-family: @pxl-icon-font;
-          font-size: 30px;
-          width: 35px;
         }
       }
       &.brochures {
         a:before, span:before {
           display: inline-block;
           content: '\f019';
-          font-family: @pxl-icon-font;
-          font-size: 30px;
-          width: 35px;
         }
       }
 
