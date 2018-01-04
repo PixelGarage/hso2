@@ -10606,7 +10606,6 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
   display: block;
   margin: 50px auto 0;
   text-align: center;
-  max-width: 800px;
 }
 .menu-name-menu-meta-menu.menu-level-2 ul.menu li {
   display: inline-block;
@@ -12358,7 +12357,7 @@ form.webform-client-form .webform-component.webform-container-inline label,
 form.webform-client-form .webform-component.webform-container-inline input {
   display: block;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   form.webform-client-form .webform-component.webform-container-inline label,
   form.webform-client-form .webform-component.webform-container-inline input {
     display: inline-block;
@@ -12370,7 +12369,7 @@ form.webform-client-form .webform-component.webform-container-inline select {
   right: auto;
   width: 100%;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   form.webform-client-form .webform-component.webform-container-inline input.form-text,
   form.webform-client-form .webform-component.webform-container-inline select {
     position: absolute;
@@ -12406,7 +12405,7 @@ form.webform-client-form .webform-component.webform-container-inline[class*="dat
   margin: 0 -2px;
   width: 33.33333%;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   form.webform-client-form .webform-component.webform-container-inline[class*="date"] .webform-container-inline {
     position: absolute;
     right: 0;
@@ -18996,6 +18995,7 @@ body.segment_wm.category_ex .view.view-course-times-search .view-filters .views-
   border-radius: 3px;
   background: #ff535d;
   display: inline-block;
+  margin: 3px 5px;
 }
 .view.view-course-times .view-content table tbody tr td.views-field-nothing a:hover,
 .view.view-course-times-search .view-content table tbody tr td.views-field-nothing a:hover {
@@ -19927,12 +19927,16 @@ body {
   display: none;
   padding-top: 20px;
 }
-body.node-type-page .main-container .container .row section,
-body.node-type-webform .main-container .container .row section,
-body.node-type-news .main-container .container .row section {
-  float: none;
-  margin: 0 auto;
-  max-width: 800px;
+.main-container .container .row section {
+  /*
+        body.node-type-page &,
+        body.node-type-webform &,
+        body.node-type-news & {
+          float: none;
+          margin: 0 auto;
+          max-width: @pxl-max-width-page;
+        }
+        */
 }
 .main-container .container .row section h1.page-header {
   margin: 60px auto 30px;
