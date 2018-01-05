@@ -11802,7 +11802,7 @@ body.segment_sp form.webform-client-form a:focus {
   text-decoration: underline;
 }
 body.segment_wi form.webform-client-form a {
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi form.webform-client-form a:hover,
@@ -11811,7 +11811,7 @@ body.segment_wi form.webform-client-form a:focus {
   text-decoration: underline;
 }
 body.segment_wi form.webform-client-form a {
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi form.webform-client-form a:hover,
@@ -11821,7 +11821,7 @@ body.segment_wi form.webform-client-form a:focus {
 }
 body.segment_wi form.webform-client-form a {
   font-size: 15px;
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi form.webform-client-form a:hover,
@@ -11885,88 +11885,88 @@ body.segment_wm form.webform-client-form a.active,
 body.segment_wm form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf form.webform-client-form a {
+body.category_hf form.webform-client-form a {
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf form.webform-client-form a:hover,
-body.segment_wm.category_hf form.webform-client-form a.active,
-body.segment_wm.category_hf form.webform-client-form a:focus {
+body.category_hf form.webform-client-form a:hover,
+body.category_hf form.webform-client-form a.active,
+body.category_hf form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf form.webform-client-form a {
+body.category_hf form.webform-client-form a {
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf form.webform-client-form a:hover,
-body.segment_wm.category_hf form.webform-client-form a.active,
-body.segment_wm.category_hf form.webform-client-form a:focus {
+body.category_hf form.webform-client-form a:hover,
+body.category_hf form.webform-client-form a.active,
+body.category_hf form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf form.webform-client-form a {
+body.category_hf form.webform-client-form a {
   font-size: 15px;
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf form.webform-client-form a:hover,
-body.segment_wm.category_hf form.webform-client-form a.active,
-body.segment_wm.category_hf form.webform-client-form a:focus {
+body.category_hf form.webform-client-form a:hover,
+body.category_hf form.webform-client-form a.active,
+body.category_hf form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh form.webform-client-form a {
+body.category_fh form.webform-client-form a {
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh form.webform-client-form a:hover,
-body.segment_wm.category_fh form.webform-client-form a.active,
-body.segment_wm.category_fh form.webform-client-form a:focus {
+body.category_fh form.webform-client-form a:hover,
+body.category_fh form.webform-client-form a.active,
+body.category_fh form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh form.webform-client-form a {
+body.category_fh form.webform-client-form a {
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh form.webform-client-form a:hover,
-body.segment_wm.category_fh form.webform-client-form a.active,
-body.segment_wm.category_fh form.webform-client-form a:focus {
+body.category_fh form.webform-client-form a:hover,
+body.category_fh form.webform-client-form a.active,
+body.category_fh form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh form.webform-client-form a {
+body.category_fh form.webform-client-form a {
   font-size: 15px;
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh form.webform-client-form a:hover,
-body.segment_wm.category_fh form.webform-client-form a.active,
-body.segment_wm.category_fh form.webform-client-form a:focus {
+body.category_fh form.webform-client-form a:hover,
+body.category_fh form.webform-client-form a.active,
+body.category_fh form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex form.webform-client-form a {
+body.category_ex form.webform-client-form a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex form.webform-client-form a:hover,
-body.segment_wm.category_ex form.webform-client-form a.active,
-body.segment_wm.category_ex form.webform-client-form a:focus {
+body.category_ex form.webform-client-form a:hover,
+body.category_ex form.webform-client-form a.active,
+body.category_ex form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex form.webform-client-form a {
+body.category_ex form.webform-client-form a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex form.webform-client-form a:hover,
-body.segment_wm.category_ex form.webform-client-form a.active,
-body.segment_wm.category_ex form.webform-client-form a:focus {
+body.category_ex form.webform-client-form a:hover,
+body.category_ex form.webform-client-form a.active,
+body.category_ex form.webform-client-form a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex form.webform-client-form a {
+body.category_ex form.webform-client-form a {
   font-size: 15px;
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex form.webform-client-form a:hover,
-body.segment_wm.category_ex form.webform-client-form a.active,
-body.segment_wm.category_ex form.webform-client-form a:focus {
+body.category_ex form.webform-client-form a:hover,
+body.category_ex form.webform-client-form a.active,
+body.category_ex form.webform-client-form a:focus {
   text-decoration: underline;
 }
 form.webform-client-form fieldset.panel {
@@ -12163,9 +12163,9 @@ body.segment_sp form.webform-client-form .webform-component textarea:focus {
 }
 body.segment_wi form.webform-client-form .webform-component input:focus,
 body.segment_wi form.webform-client-form .webform-component textarea:focus {
-  border: 1px solid #335592;
-  -webkit-box-shadow: inset 0 0 3px #335592;
-  box-shadow: inset 0 0 3px #335592;
+  border: 1px solid #7C0B25;
+  -webkit-box-shadow: inset 0 0 3px #7C0B25;
+  box-shadow: inset 0 0 3px #7C0B25;
 }
 body.segment_pp form.webform-client-form .webform-component input:focus,
 body.segment_pp form.webform-client-form .webform-component textarea:focus {
@@ -12179,20 +12179,20 @@ body.segment_wm form.webform-client-form .webform-component textarea:focus {
   -webkit-box-shadow: inset 0 0 3px #7C0B25;
   box-shadow: inset 0 0 3px #7C0B25;
 }
-body.segment_wm.category_hf form.webform-client-form .webform-component input:focus,
-body.segment_wm.category_hf form.webform-client-form .webform-component textarea:focus {
+body.category_hf form.webform-client-form .webform-component input:focus,
+body.category_hf form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #335592;
   -webkit-box-shadow: inset 0 0 3px #335592;
   box-shadow: inset 0 0 3px #335592;
 }
-body.segment_wm.category_fh form.webform-client-form .webform-component input:focus,
-body.segment_wm.category_fh form.webform-client-form .webform-component textarea:focus {
+body.category_fh form.webform-client-form .webform-component input:focus,
+body.category_fh form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #3f5868;
   -webkit-box-shadow: inset 0 0 3px #3f5868;
   box-shadow: inset 0 0 3px #3f5868;
 }
-body.segment_wm.category_ex form.webform-client-form .webform-component input:focus,
-body.segment_wm.category_ex form.webform-client-form .webform-component textarea:focus {
+body.category_ex form.webform-client-form .webform-component input:focus,
+body.category_ex form.webform-client-form .webform-component textarea:focus {
   border: 1px solid #7B6C65;
   -webkit-box-shadow: inset 0 0 3px #7B6C65;
   box-shadow: inset 0 0 3px #7B6C65;
@@ -12241,7 +12241,7 @@ body.segment_sp form.webform-client-form .webform-component select:active {
 }
 body.segment_wi form.webform-client-form .webform-component select:focus,
 body.segment_wi form.webform-client-form .webform-component select:active {
-  border: 1px solid #335592;
+  border: 1px solid #7C0B25;
 }
 body.segment_pp form.webform-client-form .webform-component select:focus,
 body.segment_pp form.webform-client-form .webform-component select:active {
@@ -12251,16 +12251,16 @@ body.segment_wm form.webform-client-form .webform-component select:focus,
 body.segment_wm form.webform-client-form .webform-component select:active {
   border: 1px solid #7C0B25;
 }
-body.segment_wm.category_hf form.webform-client-form .webform-component select:focus,
-body.segment_wm.category_hf form.webform-client-form .webform-component select:active {
+body.category_hf form.webform-client-form .webform-component select:focus,
+body.category_hf form.webform-client-form .webform-component select:active {
   border: 1px solid #335592;
 }
-body.segment_wm.category_fh form.webform-client-form .webform-component select:focus,
-body.segment_wm.category_fh form.webform-client-form .webform-component select:active {
+body.category_fh form.webform-client-form .webform-component select:focus,
+body.category_fh form.webform-client-form .webform-component select:active {
   border: 1px solid #3f5868;
 }
-body.segment_wm.category_ex form.webform-client-form .webform-component select:focus,
-body.segment_wm.category_ex form.webform-client-form .webform-component select:active {
+body.category_ex form.webform-client-form .webform-component select:focus,
+body.category_ex form.webform-client-form .webform-component select:active {
   border: 1px solid #7B6C65;
 }
 form.webform-client-form .webform-component .form-radios .form-item,
@@ -12554,7 +12554,7 @@ body.segment_wi form.webform-client-form div.form-actions button.webform-submit 
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #335592;
+  background: #7C0B25;
   opacity: 1.0;
 }
 body.segment_wi form.webform-client-form div.form-actions button.webform-submit:hover,
@@ -12611,7 +12611,7 @@ body.segment_wm form.webform-client-form div.form-actions button.webform-submit:
 body.segment_wm form.webform-client-form div.form-actions button.webform-submit:focus {
   opacity: 0.7;
 }
-body.segment_wm.category_hf form.webform-client-form div.form-actions button.webform-submit {
+body.category_hf form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -12632,11 +12632,11 @@ body.segment_wm.category_hf form.webform-client-form div.form-actions button.web
   background: #335592;
   opacity: 1.0;
 }
-body.segment_wm.category_hf form.webform-client-form div.form-actions button.webform-submit:hover,
-body.segment_wm.category_hf form.webform-client-form div.form-actions button.webform-submit:focus {
+body.category_hf form.webform-client-form div.form-actions button.webform-submit:hover,
+body.category_hf form.webform-client-form div.form-actions button.webform-submit:focus {
   opacity: 0.7;
 }
-body.segment_wm.category_fh form.webform-client-form div.form-actions button.webform-submit {
+body.category_fh form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -12657,11 +12657,11 @@ body.segment_wm.category_fh form.webform-client-form div.form-actions button.web
   background: #3f5868;
   opacity: 1.0;
 }
-body.segment_wm.category_fh form.webform-client-form div.form-actions button.webform-submit:hover,
-body.segment_wm.category_fh form.webform-client-form div.form-actions button.webform-submit:focus {
+body.category_fh form.webform-client-form div.form-actions button.webform-submit:hover,
+body.category_fh form.webform-client-form div.form-actions button.webform-submit:focus {
   opacity: 0.7;
 }
-body.segment_wm.category_ex form.webform-client-form div.form-actions button.webform-submit {
+body.category_ex form.webform-client-form div.form-actions button.webform-submit {
   display: inline-block;
   margin: 0 auto;
   padding: 13px 0 15px;
@@ -12682,8 +12682,8 @@ body.segment_wm.category_ex form.webform-client-form div.form-actions button.web
   background: #7B6C65;
   opacity: 1.0;
 }
-body.segment_wm.category_ex form.webform-client-form div.form-actions button.webform-submit:hover,
-body.segment_wm.category_ex form.webform-client-form div.form-actions button.webform-submit:focus {
+body.category_ex form.webform-client-form div.form-actions button.webform-submit:hover,
+body.category_ex form.webform-client-form div.form-actions button.webform-submit:focus {
   opacity: 0.7;
 }
 /*
@@ -12838,7 +12838,7 @@ body.segment_sp .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
 body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a {
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a:hover,
@@ -12847,7 +12847,7 @@ body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
 body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a {
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a:hover,
@@ -12857,7 +12857,7 @@ body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a:focus {
 }
 body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a {
   font-size: 15px;
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi .node.node-course .row .col-sm-9 .field-name-body a:hover,
@@ -12921,88 +12921,88 @@ body.segment_wm .node.node-course .row .col-sm-9 .field-name-body a.active,
 body.segment_wm .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a {
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a {
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a {
   font-size: 15px;
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_hf .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_hf .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a {
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a {
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a {
   font-size: 15px;
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_fh .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_fh .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a {
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a {
   font-size: 15px;
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a:hover,
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a.active,
-body.segment_wm.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:hover,
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a.active,
+body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
   text-decoration: underline;
 }
 .node.node-course .row .col-sm-3 {
@@ -13166,7 +13166,7 @@ body.segment_wi .node.node-course .row .col-sm-3 .field-name-course-links .field
 body.segment_wi .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
 body.segment_wi .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
 body.segment_wi .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
-  color: #335592;
+  color: #7C0B25;
 }
 body.segment_pp .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
 body.segment_pp .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
@@ -13180,22 +13180,22 @@ body.segment_wm .node.node-course .row .col-sm-3 .field-name-course-links .field
 body.segment_wm .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
   color: #7C0B25;
 }
-body.segment_wm.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
-body.segment_wm.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
-body.segment_wm.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
-body.segment_wm.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
+body.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
+body.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
+body.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
+body.category_hf .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
   color: #335592;
 }
-body.segment_wm.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
-body.segment_wm.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
-body.segment_wm.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
-body.segment_wm.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
+body.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
+body.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
+body.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
+body.category_fh .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
   color: #3f5868;
 }
-body.segment_wm.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
-body.segment_wm.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
-body.segment_wm.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
-body.segment_wm.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
+body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
+body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
+body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
+body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
   color: #7B6C65;
 }
 .node.node-course .row .col-sm-3 .field-name-course-benefits {
@@ -13706,7 +13706,7 @@ body.segment_wm .call2action-management .node.node-call2action.view-mode-teaser 
 }
 body.segment_wi .call2action-informatik .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title h2,
 .call2action-informatik .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title:hover h2 {
-  color: #335592;
+  color: #7C0B25;
 }
 body.segment_sp .call2action-sprachen .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title h2,
 .call2action-sprachen .node.node-call2action.view-mode-teaser .row .col-sm-12 .field-name-title:hover h2 {
@@ -17977,7 +17977,7 @@ body.segment_sp .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
 body.segment_wi .view.view-segment-pages .view-content .views-row a {
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi .view.view-segment-pages .view-content .views-row a:hover,
@@ -17986,7 +17986,7 @@ body.segment_wi .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
 body.segment_wi .view.view-segment-pages .view-content .views-row a {
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi .view.view-segment-pages .view-content .views-row a:hover,
@@ -17996,7 +17996,7 @@ body.segment_wi .view.view-segment-pages .view-content .views-row a:focus {
 }
 body.segment_wi .view.view-segment-pages .view-content .views-row a {
   font-size: 15px;
-  color: #335592;
+  color: #7C0B25;
   text-decoration: none;
 }
 body.segment_wi .view.view-segment-pages .view-content .views-row a:hover,
@@ -18060,88 +18060,88 @@ body.segment_wm .view.view-segment-pages .view-content .views-row a.active,
 body.segment_wm .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a {
+body.category_hf .view.view-segment-pages .view-content .views-row a {
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a:focus {
+body.category_hf .view.view-segment-pages .view-content .views-row a:hover,
+body.category_hf .view.view-segment-pages .view-content .views-row a.active,
+body.category_hf .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a {
+body.category_hf .view.view-segment-pages .view-content .views-row a {
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a:focus {
+body.category_hf .view.view-segment-pages .view-content .views-row a:hover,
+body.category_hf .view.view-segment-pages .view-content .views-row a.active,
+body.category_hf .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a {
+body.category_hf .view.view-segment-pages .view-content .views-row a {
   font-size: 15px;
   color: #335592;
   text-decoration: none;
 }
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_hf .view.view-segment-pages .view-content .views-row a:focus {
+body.category_hf .view.view-segment-pages .view-content .views-row a:hover,
+body.category_hf .view.view-segment-pages .view-content .views-row a.active,
+body.category_hf .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a {
+body.category_fh .view.view-segment-pages .view-content .views-row a {
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a:focus {
+body.category_fh .view.view-segment-pages .view-content .views-row a:hover,
+body.category_fh .view.view-segment-pages .view-content .views-row a.active,
+body.category_fh .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a {
+body.category_fh .view.view-segment-pages .view-content .views-row a {
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a:focus {
+body.category_fh .view.view-segment-pages .view-content .views-row a:hover,
+body.category_fh .view.view-segment-pages .view-content .views-row a.active,
+body.category_fh .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a {
+body.category_fh .view.view-segment-pages .view-content .views-row a {
   font-size: 15px;
   color: #3f5868;
   text-decoration: none;
 }
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_fh .view.view-segment-pages .view-content .views-row a:focus {
+body.category_fh .view.view-segment-pages .view-content .views-row a:hover,
+body.category_fh .view.view-segment-pages .view-content .views-row a.active,
+body.category_fh .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a {
+body.category_ex .view.view-segment-pages .view-content .views-row a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a:focus {
+body.category_ex .view.view-segment-pages .view-content .views-row a:hover,
+body.category_ex .view.view-segment-pages .view-content .views-row a.active,
+body.category_ex .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a {
+body.category_ex .view.view-segment-pages .view-content .views-row a {
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a:focus {
+body.category_ex .view.view-segment-pages .view-content .views-row a:hover,
+body.category_ex .view.view-segment-pages .view-content .views-row a.active,
+body.category_ex .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a {
+body.category_ex .view.view-segment-pages .view-content .views-row a {
   font-size: 15px;
   color: #7B6C65;
   text-decoration: none;
 }
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a:hover,
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a.active,
-body.segment_wm.category_ex .view.view-segment-pages .view-content .views-row a:focus {
+body.category_ex .view.view-segment-pages .view-content .views-row a:hover,
+body.category_ex .view.view-segment-pages .view-content .views-row a.active,
+body.category_ex .view.view-segment-pages .view-content .views-row a:focus {
   text-decoration: underline;
 }
 /*
@@ -18478,7 +18478,7 @@ body.segment_sp .view.view-contacts .view-content .views-bootstrap-tab-plugin-st
   color: #7BA4B6;
 }
 body.segment_wi .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
-  color: #335592;
+  color: #7C0B25;
 }
 body.segment_pp .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #408C8B;
@@ -18486,13 +18486,13 @@ body.segment_pp .view.view-contacts .view-content .views-bootstrap-tab-plugin-st
 body.segment_wm .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #7C0B25;
 }
-body.segment_wm.category_hf .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.category_hf .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #335592;
 }
-body.segment_wm.category_fh .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.category_fh .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #3f5868;
 }
-body.segment_wm.category_ex .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
+body.category_ex .view.view-contacts .view-content .views-bootstrap-tab-plugin-style .tab-content .tab-pane .tab-pane-item .views-field-title {
   color: #7B6C65;
 }
 /*
@@ -18571,23 +18571,24 @@ body.segment_kv .view.view-courses .view-content .panel-group .course-block .cou
 body.segment_hs .view.view-courses .view-content .panel-group .course-block .course-title:hover {
   background-color: #D09D15;
 }
-body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title:hover {
+body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title:hover,
+body.segment_wi .view.view-courses .view-content .panel-group .course-block .course-title:hover {
   background-color: #7C0B25;
 }
-body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-hf:hover {
+body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-hf:hover,
+body.segment_wi .view.view-courses .view-content .panel-group .course-block .course-title.course-category-hf:hover {
   background-color: #335592;
 }
-body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-fh:hover {
+body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-fh:hover,
+body.segment_wi .view.view-courses .view-content .panel-group .course-block .course-title.course-category-fh:hover {
   background-color: #3f5868;
 }
-body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-ex:hover {
+body.segment_wm .view.view-courses .view-content .panel-group .course-block .course-title.course-category-ex:hover,
+body.segment_wi .view.view-courses .view-content .panel-group .course-block .course-title.course-category-ex:hover {
   background-color: #7B6C65;
 }
 body.segment_sp .view.view-courses .view-content .panel-group .course-block .course-title:hover {
   background-color: #7BA4B6;
-}
-body.segment_wi .view.view-courses .view-content .panel-group .course-block .course-title:hover {
-  background-color: #335592;
 }
 body.segment_pp .view.view-courses .view-content .panel-group .course-block .course-title:hover {
   background-color: #408C8B;
@@ -19068,7 +19069,7 @@ body.segment_wi .view.view-course-times .view-filters .views-exposed-form .views
 body.segment_wi .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
 body.segment_wi .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
 body.segment_wi .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
-  border: 1px solid #335592;
+  border: 1px solid #7C0B25;
 }
 body.segment_pp .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
 body.segment_pp .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
@@ -19082,22 +19083,22 @@ body.segment_wm .view.view-course-times .view-filters .views-exposed-form .views
 body.segment_wm .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #7C0B25;
 }
-body.segment_wm.category_hf .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.segment_wm.category_hf .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.segment_wm.category_hf .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.segment_wm.category_hf .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.category_hf .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.category_hf .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.category_hf .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.category_hf .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #335592;
 }
-body.segment_wm.category_fh .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.segment_wm.category_fh .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.segment_wm.category_fh .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.segment_wm.category_fh .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.category_fh .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.category_fh .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.category_fh .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.category_fh .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #3f5868;
 }
-body.segment_wm.category_ex .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.segment_wm.category_ex .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
-body.segment_wm.category_ex .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
-body.segment_wm.category_ex .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
+body.category_ex .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.category_ex .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:focus,
+body.category_ex .view.view-course-times .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active,
+body.category_ex .view.view-course-times-search .view-filters .views-exposed-form .views-exposed-widget .views-widget .form-item select:active {
   border: 1px solid #7B6C65;
 }
 .view.view-course-times .view-content,
@@ -19668,10 +19669,10 @@ body.page-bildungsnavigator #bildungsnavigator_main_wrapper #bildungsnavigator_w
 }
 #bildungsnavigator_main_wrapper .course_item.tid_109 {
   background-color: #cbc6df;
-  border-top: 7px solid #335592;
+  border-top: 7px solid #7C0B25;
 }
 #bildungsnavigator_main_wrapper .course_item.tid_109 a {
-  background-color: #335592;
+  background-color: #7C0B25;
 }
 #bildungsnavigator_main_wrapper .course_item.tid_4 {
   background-color: #dcd7cd;
@@ -20249,7 +20250,7 @@ body.segment_sp .main-container .container .row section h1.page-header {
   color: #7BA4B6;
 }
 body.segment_wi .main-container .container .row section h1.page-header {
-  color: #335592;
+  color: #7C0B25;
 }
 body.segment_pp .main-container .container .row section h1.page-header {
   color: #408C8B;
@@ -20257,13 +20258,13 @@ body.segment_pp .main-container .container .row section h1.page-header {
 body.segment_wm .main-container .container .row section h1.page-header {
   color: #7C0B25;
 }
-body.segment_wm.category_hf .main-container .container .row section h1.page-header {
+body.category_hf .main-container .container .row section h1.page-header {
   color: #335592;
 }
-body.segment_wm.category_fh .main-container .container .row section h1.page-header {
+body.category_fh .main-container .container .row section h1.page-header {
   color: #3f5868;
 }
-body.segment_wm.category_ex .main-container .container .row section h1.page-header {
+body.category_ex .main-container .container .row section h1.page-header {
   color: #7B6C65;
 }
 .main-container .container .row section .messages {
