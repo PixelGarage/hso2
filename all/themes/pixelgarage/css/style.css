@@ -13009,9 +13009,6 @@ body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
   margin: 0 0 30px;
   padding: 0 15px;
 }
-.node.node-course .row .col-sm-3.course-has-no-info-event .field-name-course-links .field-item ul.menu li.infoevent {
-  display: none;
-}
 @media screen and (min-width: 768px) {
   .node.node-course .row .col-sm-3 {
     padding: 0;
@@ -13142,6 +13139,7 @@ body.category_ex .node.node-course .row .col-sm-9 .field-name-body a:focus {
 .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active a,
 .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
 .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
+  cursor: pointer;
   text-decoration: underline;
 }
 body.segment_kv .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover a,
@@ -13197,6 +13195,9 @@ body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .fiel
 body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li:hover span,
 body.category_ex .node.node-course .row .col-sm-3 .field-name-course-links .field-item ul.menu li.active span {
   color: #7B6C65;
+}
+.node.node-course .row .col-sm-3.course-has-no-info-event .field-name-course-links .field-item ul.menu li.infoevent {
+  display: none;
 }
 .node.node-course .row .col-sm-3 .field-name-course-benefits {
   margin-bottom: 50px;

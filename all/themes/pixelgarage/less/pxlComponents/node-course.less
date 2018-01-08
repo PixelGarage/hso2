@@ -145,6 +145,7 @@
       &:hover,
       &.active {
         a, span {
+          cursor: pointer;
           text-decoration: underline;
           body.segment_kv & {
             color: @pxl-color-hso-kv;
@@ -287,6 +288,17 @@
       margin: 0 0 30px;
       padding: 0 @grid-gutter-width/2;
 
+      @media @tablet {
+        padding: 0;
+      }
+
+      // sidebar
+      .field-name-course-links {
+        margin-bottom: 50px;
+        .field-item {
+          .menu-course-blocks();
+        }
+      }
       &.course-has-no-info-event {
         .field-name-course-links {
           .field-item {
@@ -299,17 +311,6 @@
         }
       }
 
-      @media @tablet {
-        padding: 0;
-      }
-
-      // sidebar
-      .field-name-course-links {
-        margin-bottom: 50px;
-        .field-item {
-          .menu-course-blocks();
-        }
-      }
       .field-name-course-benefits {
         margin-bottom: 50px;
         .field-item {
