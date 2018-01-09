@@ -157,14 +157,6 @@ function pixelgarage_ds_pre_render_alter(&$layout_render_array, $context, &$vars
     // add course tabs to bottom region in course
     $layout_render_array['bottom'][] = $layout_render_array['left'][1];
     unset($layout_render_array['left'][1]);
-
-    //
-    // add info-anlaesse class to course node
-    $node = $vars['node'];
-    $has_info_event = $node->field_has_info_events[LANGUAGE_NONE][0]['value'] == 1;
-    if (!$has_info_event) {
-      $vars['right_classes'] .= ' course-has-no-info-event';
-    }
   }
 }
 

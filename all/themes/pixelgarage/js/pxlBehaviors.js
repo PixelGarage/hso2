@@ -36,13 +36,13 @@
       });
       $news.once('click', function() {
         $(this).on('click', function(ev) {
-          window.location = $(this).find('>a').attr('href');
+          window.location = $(this).parents('.field-content').find('>a').attr('href');
           return false;
         });
       });
       $pages.once('click', function() {
         $(this).on('click', function(ev) {
-          window.location = $(this).find('>a').attr('href');
+          window.location = $(this).parents('.field-content').find('>a').attr('href');
           return false;
         });
       });
