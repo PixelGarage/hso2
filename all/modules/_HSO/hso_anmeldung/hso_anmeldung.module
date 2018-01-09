@@ -698,7 +698,7 @@ function hso_anmeldung_form_alter(&$form, &$form_state, $form_id) {
         $text = '* <strong>Ich habe die ' .
           l('Allgemeinen Geschäftsbedingungen', 'node/' . $agb_nid, array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
           ' sowie die Bestimmungen zu den ' .
-          l('Bundesbeiträge eidg. Prüfungen / ', 'node/15572', array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
+          l('Bundesbeiträge eidg. Prüfungen', 'node/15572', array('html' => TRUE, 'attributes' => array('target' => '_blank'))) . ' / ' .
           l('Kantonsbeiträgen', 'node/49631', array('html' => TRUE, 'attributes' => array('target' => '_blank'))) .
           ' gelesen und bin damit einverstanden.</strong><br />';
 
