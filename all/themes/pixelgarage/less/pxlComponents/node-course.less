@@ -297,13 +297,17 @@
         margin-bottom: 50px;
         .field-item {
           .menu-course-blocks();
-        }
-      }
-      &.course-has-no-info-event {
-        .field-name-course-links {
-          .field-item {
+
+          body.course-has-no-info-event & {
             ul.menu {
               li.infoevent {
+                display: none;
+              }
+            }
+          }
+          body.course-has-no-start-data & {
+            ul.menu {
+              li.startdaten {
                 display: none;
               }
             }

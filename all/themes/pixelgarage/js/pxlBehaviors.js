@@ -144,7 +144,19 @@
         $courseBlockMenu = $course.find('.field-name-course-links'),
         $startDatenMenu = $courseBlockMenu.find('ul.menu>li.menu.startdaten'),
         $infoEventMenu = $courseBlockMenu.find('ul.menu>li.menu.infoevent'),
-        $target = $('#views-bootstrap-tab-course-tabs');
+        $target = $('#views-bootstrap-tab-course-tabs'),
+        $target_tab_content = $target.find('.tab-content'),
+        hasInfoEvents = $target_tab_content.find('#tab-info-events .view-course-times .tab-content .tab-pane').length > 0,
+        hasStartData = $target_tab_content.find('#tab-startdaten .view-course-times .tab-content .tab-pane').length > 0;
+
+      //
+      // add body classes depending on startdaten and info events
+      if (!hasInfoEvents) {
+        $('body').addClass('course-has-no-info-event')
+      }
+      if (!hasStartData) {
+        $('body').addClass('course-has-no-start-data')
+      }
 
       $infoEventMenu.once('clicked', function () {
         $(this).on('click', function () {
@@ -153,8 +165,8 @@
           // click tab
           $infoTab.click();
 
-          // scroll to tab section
-          if ($target.length > 0) {
+          // scroll to info-event tab, if content exist
+          if (hasInfoEvents) {
             var topPos = $target.offset().top;
             $('html, body').animate({scrollTop: topPos-30}, 1000, 'swing');
             return false;
@@ -169,8 +181,8 @@
           // click tab
           $startdatenTab.click();
 
-          // scroll to tab section
-          if ($target.length > 0) {
+          // scroll to startdaten tab, if content exist
+          if (hasStartData) {
             var topPos = $target.offset().top;
             $('html, body').animate({scrollTop: topPos-30}, 1000, 'swing');
             return false;
