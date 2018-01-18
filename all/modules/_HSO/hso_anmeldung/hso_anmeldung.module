@@ -865,12 +865,14 @@ function hso_anmeldung_form_webform_component_edit_form_alter(&$form, &$form_sta
       '#title' => 'Show only for these course ids',
       '#description' => 'Use the internal ID from HSO System. Leave blank to show for every course',
       '#default_value' => '',
+      '#maxlength' => 512,
     );
     $form['hso']['extra']['exclude_course_ids'] = array(
       '#type' => 'textfield',
       '#title' => 'Exclude for these course ids',
       '#description' => 'Use the internal ID from HSO System. Leave blank to show for every course',
       '#default_value' => '',
+      '#maxlength' => 512,
     );
     $form['hso']['extra']['custom_key'] = array(
       '#type' => 'textfield',
