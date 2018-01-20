@@ -111,22 +111,25 @@ fbq('track', 'PageView');
 </noscript>
 <!-- End Facebook Pixel Code -->
 FB_PXL;
-  drupal_add_js($fb_pixel, 'inline');
+  $element = array(
+    '#type' => 'markup',
+    '#markup' => $fb_pixel,
+    '#weight' => 1000,
+  );
+  drupal_add_html_head($element, 'facebook_pixel');
 
   //
   // add HOTJAR tracking code
   $hotjar = <<<HOTJAR
 <!-- Hotjar Tracking Code for www.hso.ch -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:749917,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:749917,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 HOTJAR;
   drupal_add_js($hotjar, 'inline');
 
