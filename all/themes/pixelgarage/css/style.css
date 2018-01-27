@@ -9890,6 +9890,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
     font-size: 17px;
   }
 }
+.panel-display .panel-panel .panel-pane.pane-custom .panel-content table {
+  width: 100% !important;
+}
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content table,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content tr,
 .panel-display .panel-panel .panel-pane.pane-custom .panel-content th,
@@ -10992,6 +10995,10 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
   }
 }
 .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table,
 .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body tr,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tr,
@@ -11049,6 +11056,19 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
   max-width: 100%;
   height: auto;
   min-height: 350px;
+}
+.node.node-page.view-mode-full .row div.col-sm-12 .field-name-body table img,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table img {
+  width: 100% !important;
+  height: auto !important;
+  min-width: 120px;
+}
+body.page-node-75408 .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body table img,
+body.page-node-75408 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table img,
+body.page-node-1460 .node.node-page.view-mode-full .row div.col-sm-12 .field-name-body table img,
+body.page-node-1460 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table img {
+  padding-right: 5px;
+  max-width: 191px;
 }
 @media screen and (min-width: 768px) {
 }
@@ -11253,6 +11273,10 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
   }
 }
 .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body table,
+.node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body table {
+  width: 100% !important;
+}
+.node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body table,
 .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body table,
 .node.node-page.view-mode-teaser .row div.col-sm-2 .field-name-body tr,
 .node.node-page.view-mode-teaser .row div.col-sm-10 .field-name-body tr,
@@ -11439,6 +11463,9 @@ body.segment_wm.category_ex table.lektionplan .color-bg-100 {
   .node-webform .row div.col-sm-12 .field-name-body address {
     font-size: 17px;
   }
+}
+.node-webform .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
 }
 .node-webform .row div.col-sm-12 .field-name-body table,
 .node-webform .row div.col-sm-12 .field-name-body tr,
@@ -11642,6 +11669,9 @@ ul.webform-submission-actions li a:active {
   .webform-confirmation address {
     font-size: 17px;
   }
+}
+.webform-confirmation table {
+  width: 100% !important;
 }
 .webform-confirmation table,
 .webform-confirmation tr,
@@ -12722,6 +12752,14 @@ body.category_ex form.webform-client-form div.form-actions button.webform-submit
   color: #333333;
   vertical-align: top;
 }
+.node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr th img,
+.node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr th img,
+.node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr td img,
+.node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr td img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
 .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr td,
 .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr td {
   font-family: 'SohoGothicProLight', serif;
@@ -13481,6 +13519,9 @@ body.course-has-no-start-data .node.node-course .row .col-sm-3 .field-name-cours
     font-size: 17px;
   }
 }
+.node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item table {
+  width: 100% !important;
+}
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item table,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item tr,
 .node.node-location .row .col-sm-12 .col-right .field-name-field-map-details .field-item th,
@@ -14014,6 +14055,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
     font-size: 17px;
   }
 }
+.node.node-brochure .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
 .node.node-brochure .row div.col-sm-12 .field-name-body table,
 .node.node-brochure .row div.col-sm-12 .field-name-body tr,
 .node.node-brochure .row div.col-sm-12 .field-name-body th,
@@ -14258,6 +14302,10 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-body address {
     font-size: 14px;
   }
+}
+.node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-body table,
+.node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-body table {
+  width: 100% !important;
 }
 .node.node-news.view-mode-teaser .row div.col-sm-4 .field-name-body table,
 .node.node-news.view-mode-teaser .row div.col-sm-8 .field-name-body table,
@@ -14742,6 +14790,14 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
 .node.node-news.view-mode-full .row div.col-sm-8 .field-name-body table,
 .node.node-news.view-mode-default .row div.col-sm-8 .field-name-body table,
 .node.node-news.view-mode-full .row div.col-sm-4 .field-name-body table,
+.node.node-news.view-mode-default .row div.col-sm-4 .field-name-body table {
+  width: 100% !important;
+}
+.node.node-news.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-news.view-mode-default .row div.col-sm-12 .field-name-body table,
+.node.node-news.view-mode-full .row div.col-sm-8 .field-name-body table,
+.node.node-news.view-mode-default .row div.col-sm-8 .field-name-body table,
+.node.node-news.view-mode-full .row div.col-sm-4 .field-name-body table,
 .node.node-news.view-mode-default .row div.col-sm-4 .field-name-body table,
 .node.node-news.view-mode-full .row div.col-sm-12 .field-name-body tr,
 .node.node-news.view-mode-default .row div.col-sm-12 .field-name-body tr,
@@ -15106,6 +15162,10 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   }
 }
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
+.node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body table,
 .node.node-testimonial.view-mode-full .row div.col-sm-12 .field-name-body tr,
 .node.node-testimonial.view-mode-default .row div.col-sm-12 .field-name-body tr,
@@ -15320,6 +15380,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node.node-video.view-mode-teaser .row div.col-sm-6 .field-name-body address {
     font-size: 14px;
   }
+}
+.node.node-video.view-mode-teaser .row div.col-sm-6 .field-name-body table {
+  width: 100% !important;
 }
 .node.node-video.view-mode-teaser .row div.col-sm-6 .field-name-body table,
 .node.node-video.view-mode-teaser .row div.col-sm-6 .field-name-body tr,
@@ -15561,6 +15624,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
     font-size: 17px;
   }
 }
+.node.node-video.view-mode-full .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body tr,
 .node.node-video.view-mode-full .row div.col-sm-12 .field-name-body th,
@@ -15788,6 +15854,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
     font-size: 14px;
   }
 }
+.node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
 .node.node-tweet.view-mode-teaser .row div.col-sm-12 .field-name-body th,
@@ -16001,6 +16070,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body address {
     font-size: 17px;
   }
+}
+.node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
 }
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-tweet.view-mode-full .row div.col-sm-12 .field-name-body tr,
@@ -16220,6 +16292,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body address {
     font-size: 14px;
   }
+}
+.node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
 }
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-facebook-post.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
@@ -16512,6 +16587,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
     font-size: 17px;
   }
 }
+.node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body tr,
 .node.node-facebook-post.view-mode-full .row div.col-sm-12 .field-name-body th,
@@ -16714,6 +16792,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body address {
     font-size: 14px;
   }
+}
+.node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
 }
 .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body table,
 .node.node-instagram.view-mode-teaser .row div.col-sm-12 .field-name-body tr,
@@ -16999,6 +17080,10 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   }
 }
 .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body table,
+.node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
+}
+.node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body table,
 .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body table,
 .node.node-instagram.view-mode-full .row div.col-sm-12 .field-name-body tr,
 .node.node-instagram.view-mode-default .row div.col-sm-12 .field-name-body tr,
@@ -17182,6 +17267,9 @@ body.segment_pp .call2action-programs .node.node-call2action.view-mode-teaser .r
   .node.node-remote-form .row div.col-sm-12 .field-name-body address {
     font-size: 17px;
   }
+}
+.node.node-remote-form .row div.col-sm-12 .field-name-body table {
+  width: 100% !important;
 }
 .node.node-remote-form .row div.col-sm-12 .field-name-body table,
 .node.node-remote-form .row div.col-sm-12 .field-name-body tr,
@@ -18795,6 +18883,9 @@ body.segment_pp .view.view-courses .view-content .panel-group .course-block .cou
   .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body address {
     font-size: 17px;
   }
+}
+.view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body table {
+  width: 100% !important;
 }
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body table,
 .view.view-course-tabs .view-content .tab-content .tab-pane .node-course-tabs .row .col-sm-12 .field-name-body tr,

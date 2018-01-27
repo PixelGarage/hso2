@@ -30,6 +30,19 @@
       .field-name-body {
         #pxl-mixins.wysiwyg-body;
 
+        table {
+          img {
+            width: 100% !important;
+            height: auto !important;
+            min-width: 120px;
+
+            body.page-node-75408 &, body.page-node-1460 & {
+              padding-right: 5px;
+              max-width: 191px;
+            }
+          }
+        }
+
         @media @tablet {
           //.content-columns(2);
         }

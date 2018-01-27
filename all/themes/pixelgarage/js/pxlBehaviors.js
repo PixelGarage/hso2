@@ -6,6 +6,17 @@
 
 (function ($) {
 
+  Drupal.behaviors.makeTableResponsive = {
+    attach: function() {
+      var $pages = $('.node.node-page '),
+        $tables = $pages.find('.field-name-body table'),
+        $table_images = $tables.find('img');
+
+      $tables.wrap('<div class="table-responsive"></div>');
+      $table_images.addClass('img-responsive');
+    }
+  };
+
   Drupal.behaviors.activateMasonryFilters = {
     attach: function () {
       var $exposedForm = $('#views-exposed-form-social-masonry-panel-pane-1'),
