@@ -244,15 +244,20 @@
               }
 
               @media @tablet {
-                th {
+                th, td {
                   display: table-cell;
-                  width: 33% !important;
                   font-size: @font-size-base;
+
+                  img {
+                    width: auto !important;
+                    max-width: 100%;
+                  }
+                }
+                th {
+                  width: 33% !important;
                 }
                 td {
                   display: table-cell;
-                  width: 67% !important;
-                  font-size: @font-size-base;
                 }
               }
             }

@@ -12779,16 +12779,26 @@ body.category_ex form.webform-client-form div.form-actions button.webform-submit
 }
 @media screen and (min-width: 768px) {
   .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr th,
-  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr th {
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr th,
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr td,
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr td {
     display: table-cell;
-    width: 33% !important;
     font-size: 16px;
+  }
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr th img,
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr th img,
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr td img,
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr td img {
+    width: auto !important;
+    max-width: 100%;
+  }
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr th,
+  .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr th {
+    width: 33% !important;
   }
   .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblock tbody tr td,
   .node.node-course .row .col-sm-9 .field-name-body table.aufeinenblick tbody tr td {
     display: table-cell;
-    width: 67% !important;
-    font-size: 16px;
   }
 }
 body.segment_kv .node.node-course .row .col-sm-9 .field-name-body a {
