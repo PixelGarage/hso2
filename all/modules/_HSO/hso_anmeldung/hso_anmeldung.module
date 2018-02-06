@@ -731,18 +731,31 @@ function hso_anmeldung_webform_submission_presave($node, &$submission) {
   if (in_array($submission->nid, array(ANMELDUNG_DEFAULT, ANMELDUNG_RESERVATION, ANMELDUNG_INFO, ANMELDUNG_ECDL))) {
     // get course time nid from form, if any
     $course_time_nid = FALSE;
-    $course_location_key = FALSE;
-    $course_time_price = false;
+    $course_location_info_key = FALSE;
+    $course_title_key = FALSE;
+    $course_time_price_key = FALSE;
+    $course_time_location_key = FALSE;
+    $course_time_start_key = FALSE;
     $webform_components = $node->webform['components'];
+
     foreach ($webform_components as $key => $data) {
       if ($data['form_key'] == 'course_times_nid') {
         $course_time_nid = $submission->data[$key][0];
       }
       else if ($data['form_key'] == 'course_location_info') {
-        $course_location_key = $key;
+        $course_location_info_key = $key;
+      }
+      else if ($data['form_key'] == 'course_title') {
+        $course_title_key = $key;
       }
       else if ($data['form_key'] == 'course_time_price') {
-        $course_time_price = $key;
+        $course_time_price_key = $key;
+      }
+      else if ($data['form_key'] == 'course_time_location') {
+        $course_time_location_key = $key;
+      }
+      else if ($data['form_key'] == 'course_time_start') {
+        $course_time_start_key = $key;
       }
     }
 
@@ -750,14 +763,25 @@ function hso_anmeldung_webform_submission_presave($node, &$submission) {
     if ($course_time_nid) {
       $course_time_node = node_load($course_time_nid);
       if ($course_time_node) {
-        if ($course_location_key) {
-          $course = !empty($course_time_node->field_course) ? node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']) : NULL;
-          $location = !empty($course_time_node->field_location) ? node_load($course_time_node->field_location[LANGUAGE_NONE][0]['target_id']) : NULL;
-          $submission->data[$course_location_key][0] = $course->title . ': ' . $location->title;
+        $course = !empty($course_time_node->field_course) ? node_load($course_time_node->field_course[LANGUAGE_NONE][0]['target_id']) : NULL;
+        $location = !empty($course_time_node->field_location) ? node_load($course_time_node->field_location[LANGUAGE_NONE][0]['target_id']) : NULL;
+
+        if ($course_location_info_key) {
+          $submission->data[$course_location_info_key][0] = $course->title . ': ' . $location->title;
         }
-        if ($course_time_price) {
-          $price = isset($course_time_node->field_brutto_price[LANGUAGE_NONE][0]['value']) ? $course_time_node->field_brutto_price[LANGUAGE_NONE][0]['value'] : '';
-          $submission->data[$course_time_price][0] = $price . ' CHF';
+        if ($course_title_key) {
+          $submission->data[$course_title_key][0] = $course ? $course->title : '';
+        }
+        if ($course_time_price_key) {
+          $price = isset($course_time_node->field_brutto_price[LANGUAGE_NONE][0]['value']) ? $course_time_node->field_brutto_price[LANGUAGE_NONE][0]['value'] : '0';
+          $submission->data[$course_time_price_key][0] = $price . ' CHF';
+        }
+        if ($course_time_location_key) {
+            $submission->data[$course_time_location_key][0] = str_replace('Standort ', '', $location ? $location->title : '');
+        }
+        if ($course_time_start_key) {
+          $start_datetime = strtotime($course_time_node->field_course_date['und'][0]['value']);
+          $submission->data[$course_time_start_key][0] = $start_datetime ? date('d.m.Y H:i', $start_datetime) : '';
         }
       }
     }
